@@ -31,61 +31,72 @@ if [ "$type" = "rhel" ] || [ "$type" = "almalinux" ] || [ "$type" = "eurolinux" 
 elif [ "$type" = "rocky" ]; then
 	release=$(cat /etc/redhat-release | cut -f 1 -d '.' | awk '{print $4}')
 fi
+
+if [ "$release" -lt 7 ]; then
+  echo "Unsupported version of OS"
+fi
 HESTIA_INSTALL_DIR="$HESTIA/install/rpm"
 HESTIA_COMMON_DIR="$HESTIA/install/common"
 VERBOSE='no'
 
 # Define software versions
 HESTIA_INSTALL_VER='1.8.0~alpha'
-# Dependencies
-multiphp_v=("70" "71" "72" "73" "74" "80" "81" "82")
-fpm_v="80"
-mariadb_v="10.11"
 
-software="nginx httpd httpd-tools
-  libapache2-mod-php$fpm_v
-  php$fpm_v php$fpm_v-php-common php$fpm_v-php-cgi php$fpm_v-php-mysql php$fpm_v-php-curl
-  php$fpm_v-php-pgsql php$fpm_v-php-imagick php$fpm_v-php-imap php$fpm_v-php-ldap
-  php$fpm_v-php-apcu php$fpm_v-php-zip php$fpm_v-php-bz2 php$fpm_v-php-cli
-  php$fpm_v-php-gd php$fpm_v-php-intl php$fpm_v-php-mbstring
-  php$fpm_v-php-opcache php$fpm_v-php-pspell php$fpm_v-php-readline php$fpm_v-php-xml
+# Dependencies
+mariadb_v="10.11"
+if [ "$release" -lt 9 ]; then
+multiphp_v=("72" "73" "74" "80" "81" "82")
+else
+multiphp_v=("74" "80" "81" "82")
+fi
+
+# default PHP version
+php_v="80"
+
+software="nginx httpd httpd-tools httpd-itk mod_fcgid mod_suphp
+  php$php_v-php php$php_v-php-common php$php_v-php-cgi php$php_v-php-mysql php$php_v-php-curl
+  php$php_v-php-pgsql php$php_v-php-pecl-imagick php$php_v-php-imap php$php_v-php-ldap
+  php$php_v-php-pecl-apcu php$php_v-php-zip php$php_v-php-bz2 php$php_v-php-cli
+  php$php_v-php-gd php$php_v-php-intl php$php_v-php-mbstring
+  php$php_v-php-opcache php$php_v-php-pspell php$php_v-php-readline php$php_v-php-xml
   awstats perl-Switch vsftpd proftpd-basic bind exim
-  clamav-daemon spamassassin dovecot dovecot-sieve dovecot-managesieved
-  net-tools MariaDB-client MariaDB-common MariaDB-server mysql-client mysql-common mysql-server
-  postgresql15-server mc flex whois git idn2 unzip zip sudo bc ftp lsof
+  clamd spamassassin dovecot dovecot-pigeonhole
+  net-tools MariaDB-client MariaDB-common MariaDB-server mysql mysql-common mysql-server
+  postgresql-server postgresql mc flex whois git idn2 unzip zip sudo bc ftp lsof
   rrdtool quota e2fsprogs curl ImageMagick fail2ban
   dnsutils util-linux cronie hestia hestia-nginx
   hestia-php expect perl-Mail-DKIM unrar-free vim-common acl sysstat
-  rsyslog openssh-server util-linux ipset libapache2-mpm-itk zstd
+  rsyslog openssh-server util-linux ipset zstd
   jq"
-# apache2-suexec-custom apache2-suexec-pristine libapache2-mod-fcgid exim4-daemon-heavy e2fslibs lsb-release
 
-installer_dependencies="curl dirmngr gnupg wget ca-certificates"
+
+installer_dependencies="curl gnupg2 policycoreutils wget ca-certificates"
 
 # Defining help function
 help() {
 	echo "Usage: $0 [OPTIONS]
-  -a, --apache            Install Apache        [yes|no]  default: yes
-  -w, --phpfpm            Install PHP-FPM       [yes|no]  default: yes
-  -o, --multiphp          Install Multi-PHP     [yes|no]  default: no
-  -v, --vsftpd            Install Vsftpd        [yes|no]  default: yes
-  -j, --proftpd           Install ProFTPD       [yes|no]  default: no
-  -k, --named             Install Bind          [yes|no]  default: yes
-  -m, --mysql             Install MariaDB       [yes|no]  default: yes
-  -M, --mysql-classic     Install MySQL         [yes|no]  default: no
-  -g, --postgresql        Install PostgreSQL    [yes|no]  default: no
-  -x, --exim              Install Exim          [yes|no]  default: yes
-  -z, --dovecot           Install Dovecot       [yes|no]  default: yes
-  -Z, --sieve             Install Sieve         [yes|no]  default: no
-  -c, --clamav            Install ClamAV        [yes|no]  default: yes
-  -t, --spamassassin      Install SpamAssassin  [yes|no]  default: yes
-  -i, --iptables          Install Iptables      [yes|no]  default: yes
-  -b, --fail2ban          Install Fail2ban      [yes|no]  default: yes
-  -q, --quota             Filesystem Quota      [yes|no]  default: no
-  -d, --api               Activate API          [yes|no]  default: yes
-  -r, --port              Change Backend Port             default: 8083
-  -l, --lang              Default language                default: en
-  -y, --interactive       Interactive install   [yes|no]  default: yes
+  -a, --apache            Install Apache             [yes|no]   default: yes
+  -w, --phpfpm            Install PHP-FPM            [yes|no]   default: yes
+  -o, --multiphp          Install Multi-PHP          [yes|no]   default: no
+  -v, --vsftpd            Install Vsftpd             [yes|no]   default: yes
+  -j, --proftpd           Install ProFTPD            [yes|no]   default: no
+  -k, --named             Install Bind               [yes|no]   default: yes
+  -m, --mysql             Install MariaDB            [yes|no]   default: yes
+  -M, --mysql-classic     Install MySQL              [yes|no]   default: no
+  -g, --postgresql        Install PostgreSQL         [yes|no]   default: no
+  -x, --exim              Install Exim               [yes|no]   default: yes
+  -z, --dovecot           Install Dovecot            [yes|no]   default: yes
+  -Z, --sieve             Install Sieve              [yes|no]   default: no
+  -c, --clamav            Install ClamAV             [yes|no]   default: yes
+  -t, --spamassassin      Install SpamAssassin       [yes|no]   default: yes
+  -i, --iptables          Install Iptables           [yes|no]   default: yes
+  -b, --fail2ban          Install Fail2ban           [yes|no]   default: yes
+  -q, --quota             Filesystem Quota           [yes|no]   default: no
+  -d, --api               Activate API               [yes|no]   default: yes
+  -X, --raven             Install Raven modular repo [yes|no]   default: no
+  -r, --port              Change Backend Port                   default: 8083
+  -l, --lang              Default language                      default: en
+  -y, --interactive       Interactive install        [yes|no]   default: yes
   -s, --hostname          Set hostname
   -e, --email             Set admin email
   -p, --password          Set admin password
@@ -229,6 +240,7 @@ for arg; do
 		--lang) args="${args}-l " ;;
 		--interactive) args="${args}-y " ;;
 		--api) args="${args}-d " ;;
+		--raven) args="${args}-X " ;;
 		--hostname) args="${args}-s " ;;
 		--email) args="${args}-e " ;;
 		--password) args="${args}-p " ;;
@@ -266,6 +278,7 @@ while getopts "a:w:v:j:k:m:M:g:d:x:z:Z:c:t:i:b:r:o:q:l:y:s:e:p:R:fh" Option; do
 		r) port=$OPTARG ;;         # Backend Port
 		l) lang=$OPTARG ;;         # Language
 		d) api=$OPTARG ;;          # Activate API
+		X) raven=$OPTARG ;;        # Install Raven repo
 		y) interactive=$OPTARG ;;  # Interactive install
 		s) servername=$OPTARG ;;   # Hostname
 		e) email=$OPTARG ;;        # Admin email
@@ -306,6 +319,7 @@ set_default_value 'fail2ban' 'yes'
 set_default_value 'quota' 'no'
 set_default_value 'interactive' 'yes'
 set_default_value 'api' 'yes'
+set_default_value 'raven' 'no'
 set_default_port '8083'
 set_default_lang 'en'
 
@@ -348,13 +362,9 @@ if [ -n "$(grep ^admin: /etc/passwd /etc/group)" ] && [ -z "$force" ]; then
 	check_result 1 "User admin exists"
 fi
 
+
 # Clear the screen once launch permissions have been verified
 clear
-
-# Configure apt to retry downloading on error
-# if [ ! -f /etc/apt/apt.conf.d/80-retries ]; then
-# 	echo "APT::Acquire::Retries \"3\";" > /etc/apt/apt.conf.d/80-retries
-# fi
 
 # Welcome message
 echo "Welcome to the Hestia Control Panel installer!"
@@ -362,9 +372,13 @@ echo
 echo "Please wait, the installer is now checking for missing dependencies..."
 echo
 
+# enable dev repo
+if [ $release -eq 8 ]; then
+  dnf config-manager --set-enabled powertools
+else
+  dnf config-manager --set-enabled crb
+fi
 # Install EPEL Repo
-dnf config-manager --set-enabled crb
-dnf config-manager --set-enabled powertools
 dnf install -y epel-release
 
 # Creating backup directory
@@ -375,12 +389,10 @@ echo "[ * ] Installing dependencies..."
 dnf -y install $installer_dependencies >> $LOG
 check_result $? "Package installation failed, check log file for more details."
 
-# Check if apparmor is installed
-# apparmor is a Debian thing
-
-# Checking repository availability
-# wget --quiet "https://$GPG/deb_signing.key" -O /dev/null
-# check_result $? "Unable to connect to the Hestia RPM repository"
+# Disable SELinux
+sed 's/^SELINUX=.*/SELINUX=disabled/' -i /etc/selinux/config
+grubby --update-kernel ALL --args selinux=0
+setenforce 0
 
 # Check installed packages
 tmpfile=$(mktemp -p /tmp)
@@ -417,53 +429,6 @@ if [ -n "$conflicts" ] && [ -z "$force" ]; then
 		check_result 1 "Hestia Control Panel should be installed on a clean server."
 	fi
 fi
-
-# Check network configuration
-if [ -d /etc/netplan ] && [ -z "$force" ]; then
-	if [ -z "$(ls -A /etc/netplan)" ]; then
-		echo '!!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!!'
-		echo
-		echo 'WARNING: Your network configuration may not be set up correctly.'
-		echo 'Details: The netplan configuration directory is empty.'
-		echo ''
-		echo 'You may have a network configuration file that was created using'
-		echo 'systemd-networkd.'
-		echo ''
-		echo 'It is strongly recommended to migrate to netplan, which is now the'
-		echo 'default network configuration system in newer releases of Ubuntu.'
-		echo ''
-		echo 'While you can leave your configuration as-is, please note that you'
-		echo 'will not be able to use additional IPs properly.'
-		echo ''
-		echo 'If you wish to continue and force the installation,'
-		echo 'run this script with -f option:'
-		echo "Example: bash $0 --force"
-		echo
-		echo '!!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!! !!!'
-		echo
-		check_result 1 "Unable to detect netplan configuration."
-	fi
-fi
-
-# Validate whether installation script matches release version before continuing with install
-# if [ -z "$withrpms" ] || [ ! -d "$withrpms" ]; then
-# 	release_branch_ver=$(curl -s https://raw.githubusercontent.com/hestiacp/hestiacp/release/src/deb/hestia/control |grep "Version:" |awk '{print $2}')
-# 	if [ "$HESTIA_INSTALL_VER" != "$release_branch_ver" ]; then
-# 		echo
-# 		echo -e "\e[91mInstallation aborted\e[0m"
-# 		echo "===================================================================="
-# 		echo -e "\e[33mERROR: Install script version does not match package version!\e[0m"
-# 		echo -e "\e[33mPlease download the installer from the release branch in order to continue:\e[0m"
-# 		echo ""
-# 		echo -e "\e[33mhttps://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh\e[0m"
-# 		echo ""
-# 		echo -e "\e[33mTo test pre-release versions, build the .rpm packages and re-run the installer:\e[0m"
-# 		echo -e "  \e[33m./hst_autocompile.sh \e[1m--hestia branchname no\e[21m\e[0m"
-# 		echo -e "  \e[33m./hst-install.sh .. \e[1m--with-rpms /tmp/hestiacp-src/rpms\e[21m\e[0m"
-# 		echo ""
-# 		check_result 1 "Installation aborted"
-# 	fi
-# fi
 
 case $architecture in
 	x86_64)
@@ -702,6 +667,14 @@ fi
 # Define dnf conf location
 dnf=/etc/dnf/dnf.conf
 
+
+# Installing Raven repository (required for some apache modules)
+if [ "$raven" = 'yes' ] && [ ! -e "/etc/yum.repos.d/raven.repo" ]; then
+    dnf -y localinstall https://pkgs.dyn.su/el${release}/base/x86_64/raven-release.el${release}.noarch.rpm
+    check_result $? "Can't install Raven RPM repository"
+    dnf config-manager --set-enabled raven-modular
+fi
+
 # Create new folder if not all-ready exists
 mkdir -p /root/.gnupg/ && chmod 700 /root/.gnupg/
 
@@ -732,7 +705,9 @@ fi
 # Installing Mysql8 repo
 if [ "$mysqlclassic" = 'yes' ]; then
 	echo "[ * ] Mysql 8"
-	dnf config-manager --add-repo https://raw.githubusercontent.com/hestiacp/hestiacp/main/install/rpm/mysql/mysql.repo
+	if [ "$release" -eq 8 ]; then
+		dnf -y module enable mysql:8.0
+	fi
 fi
 
 # Installing Dovecot repo
@@ -748,13 +723,7 @@ echo "[ * ] Hestia Control Panel"
 # Installing PostgreSQL repo
 if [ "$postgresql" = 'yes' ]; then
 	echo "[ * ] PostgreSQL"
-	if [[ $ARCH == "amd64" ]]; then
-		dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-$release-x86_64/pgdg-redhat-repo-latest.noarch.rpm
-	elif [[ $ARCH == "arm64" ]]; then
-		dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-$release-aarch64/pgdg-redhat-repo-latest.noarch.rpm
-	fi
-	# Disable the built-in PostgreSQL module:
-	dnf -qy module disable postgresql
+	dnf -y module enable postgresql:15
 fi
 
 # Echo for a new line
@@ -849,11 +818,11 @@ rm -rf $HESTIA > /dev/null 2>&1
 #----------------------------------------------------------#
 
 if [ "$phpfpm" = 'yes' ]; then
-	fpm="php$fpm_v php$fpm_v-php-common php$fpm_v-php-bcmath php$fpm_v-php-cli
-			php$fpm_v-php-curl php$fpm_v-php-fpm php$fpm_v-php-gd php$fpm_v-php-intl
-			php$fpm_v-php-mysql php$fpm_v-php-soap php$fpm_v-php-xml php$fpm_v-php-zip
-			php$fpm_v-php-mbstring php$fpm_v-php-bz2 php$fpm_v-php-pspell
-			php$fpm_v-php-imagick"
+	fpm="php$php_v php$php_v-php-common php$php_v-php-bcmath php$php_v-php-cli
+			php$php_v-php-curl php$php_v-php-fpm php$php_v-php-gd php$php_v-php-intl
+			php$php_v-php-mysql php$php_v-php-soap php$php_v-php-xml php$php_v-php-zip
+			php$php_v-php-mbstring php$php_v-php-bz2 php$php_v-php-pspell
+			php$php_v-php-imagick"
 	software="$software $fpm"
 fi
 
@@ -866,13 +835,13 @@ software=$(echo "$software" | sed -e "s/apache2.2-common//")
 
 if [ "$apache" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/httpd //")
-	software=$(echo "$software" | sed -e "s/apache2-bin//")
 	software=$(echo "$software" | sed -e "s/httpd-tools//")
+	software=$(echo "$software" | sed -e "s/httpd-itk //")
 	software=$(echo "$software" | sed -e "s/apache2-suexec-custom//")
 	software=$(echo "$software" | sed -e "s/apache2.2-common//")
-	software=$(echo "$software" | sed -e "s/libapache2-mod-rpaf//")
-	software=$(echo "$software" | sed -e "s/libapache2-mod-fcgid//")
-	software=$(echo "$software" | sed -e "s/libapache2-mod-php$fpm_v//")
+	software=$(echo "$software" | sed -e "s/mod_suphp//")
+	software=$(echo "$software" | sed -e "s/mod_fcgid//")
+	software=$(echo "$software" | sed -e "s/php$php_v-php//")
 fi
 if [ "$vsftpd" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/vsftpd//")
@@ -912,16 +881,16 @@ if [ "$mysql" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/MariaDB-common//")
 fi
 if [ "$mysqlclassic" = 'no' ]; then
+	software=$(echo "$software" | sed -e "s/mysql//")
 	software=$(echo "$software" | sed -e "s/mysql-server//")
-	software=$(echo "$software" | sed -e "s/mysql-client//")
 	software=$(echo "$software" | sed -e "s/mysql-common//")
 fi
 if [ "$mysql" = 'no' ] && [ "$mysqlclassic" = 'no' ]; then
-	software=$(echo "$software" | sed -e "s/php$fpm_v-php-mysql//")
+	software=$(echo "$software" | sed -e "s/php$php_v-php-mysql//")
 fi
 if [ "$postgresql" = 'no' ]; then
-	software=$(echo "$software" | sed -e "s/postgresql15-server//")
-	software=$(echo "$software" | sed -e "s/php$fpm_v-php-pgsql//")
+	software=$(echo "$software" | sed -e "s/postgresql-server//")
+	software=$(echo "$software" | sed -e "s/php$php_v-php-pgsql//")
 	software=$(echo "$software" | sed -e "s/phppgadmin//")
 fi
 if [ "$fail2ban" = 'no' ]; then
@@ -932,10 +901,17 @@ if [ "$iptables" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/fail2ban//")
 fi
 if [ "$phpfpm" = 'yes' ]; then
-	software=$(echo "$software" | sed -e "s/php$fpm_v-php-cgi//")
-	software=$(echo "$software" | sed -e "s/libapache2-mpm-itk//")
-	software=$(echo "$software" | sed -e "s/libapache2-mod-ruid2//")
-	software=$(echo "$software" | sed -e "s/libapache2-mod-php$fpm_v//")
+	software=$(echo "$software" | sed -e "s/php$php_v-php-cgi//")
+	software=$(echo "$software" | sed -e "s/httpd-itk//")
+	software=$(echo "$software" | sed -e "s/mod_ruid2//")
+	software=$(echo "$software" | sed -e "s/mod_suphp//")
+	software=$(echo "$software" | sed -e "s/mod_fcgid//")
+	software=$(echo "$software" | sed -e "s/php$php_v-php//")
+fi
+if [ "$raven" = 'no' ]; then
+	software=$(echo "$software" | sed -e "s/httpd-itk//")
+	software=$(echo "$software" | sed -e "s/mod_ruid2//")
+	software=$(echo "$software" | sed -e "s/mod_suphp//")
 fi
 if [ -d "$withrpms" ]; then
 	software=$(echo "$software" | sed -e "s/hestia-nginx//")
@@ -952,8 +928,8 @@ echo -e '#!/bin/sh\nexit 101' > /usr/sbin/policy-rc.d
 chmod a+x /usr/sbin/policy-rc.d
 
 # Enable PHP 8.0 Module
-dnf module reset php:7.2
-dnf module enable php:8.0
+dnf -y module reset php:7.2
+dnf -y module enable php:8.0
 
 # Installing rpm packages
 echo "The installer is now downloading and installing all required packages."
@@ -981,7 +957,7 @@ echo "========================================================================"
 echo
 
 # Create PHP symlink
-ln -s /usr/bin/php80 /usr/bin/php
+alternatives --install /usr/bin/php php /usr/bin/php80 1
 
 # Install Hestia packages from local folder
 if [ -n "$withrpms" ] && [ -d "$withrpms" ]; then
@@ -1355,8 +1331,7 @@ done
 echo "" >> $CLOUDFLARE_FILE_PATH
 echo "real_ip_header CF-Connecting-IP;" >> $CLOUDFLARE_FILE_PATH
 
-update-rc.d nginx defaults > /dev/null 2>&1
-systemctl start nginx >> $LOG
+systemctl enable nginx --now >> $LOG
 check_result $? "nginx start failed"
 
 #----------------------------------------------------------#
@@ -1371,26 +1346,27 @@ if [ "$apache" = 'yes' ]; then
 
 	# Copy configuration files
 	cp -f $HESTIA_INSTALL_DIR/httpd/httpd.conf /etc/httpd/
-	cp -f $HESTIA_INSTALL_DIR/httpd/status.conf /etc/httpd/conf.modules.d/hestia-status.conf
-	cp -f /etc/httpd/conf.modules.d/status.load /etc/httpd/conf.modules.d/hestia-status.load
+	cp -f $HESTIA_INSTALL_DIR/httpd/status.conf /etc/httpd/conf.d/hestia-status.conf
 	cp -f $HESTIA_INSTALL_DIR/logrotate/httpd /etc/logrotate.d/
 
 	# Enable needed modules
-	# rewrite
-	# suexec
-	dnf install -y mod_ssl
-	# actions
-	a2dismod --quiet status > /dev/null 2>&1
-	cp -f $HESTIA_INSTALL_DIR/httpd/00-hestia-status.conf /etc/httpd/conf.modules.d
+	if [ "$nginx" = "no" ]; then
+		dnf install -y mod_ssl mod_h2
+	fi
+	
+	# IDK why those modules still here, but ok. if they are disabled by default
+	sed 's/^LoadModule suexec_module/#LoadModule suexec_module' -i /etc/httpd/conf.modules.d/01-suexec.conf
+	sed 's/^LoadModule fcgid_module/#LoadModule fcgid_module' -i /etc/httpd/conf.modules.d/10-fcgid.conf
+
+	# Switch status loader to custom one
+	sed 's/^LoadModule status_module/#LoadModule status_module' -i /etc/httpd/conf.modules.d/00-base.conf
+	echo 'LoadModule status_module modules/mod_status.so' > /etc/httpd/conf.modules.d/00-hestia-status.conf
 
 	if [ "$phpfpm" = 'yes' ]; then
 		# Disable prefork and php, enable event
-		a2dismod php$fpm_v > /dev/null 2>&1
-		a2dismod mpm_prefork > /dev/null 2>&1
-		cp -f $HESTIA_INSTALL_DIR/httpd/00-mpm_event.conf /etc/httpd/conf.modules.d
+		sed 's/LoadModule mpm_prefork_module/#LoadModule mpm_prefork_module/' -i /etc/httpd/conf.modules.d/00-mpm.conf
+		sed 's/#LoadModule mpm_event_module/LoadModule mpm_event_module/' -i /etc/httpd/conf.modules.d/00-mpm.conf
 		cp -f $HESTIA_INSTALL_DIR/httpd/hestia-event.conf /etc/httpd/conf.d/
-	else
-		cp -f $HESTIA_INSTALL_DIR/httpd/00-mpm_tik.conf /etc/httpd/conf.modules.d
 	fi
 
 	echo "# Powered by hestia" > /etc/httpd/sites-available/default
@@ -1403,15 +1379,10 @@ if [ "$apache" = 'yes' ]; then
 	chmod 640 /var/log/httpd/access.log /var/log/httpd/error.log
 	chmod 751 /var/log/httpd/domains
 
-	# Prevent remote access to server-status page
-	sed -i '/Allow from all/d' /etc/httpd/conf.modules.d/hestia-status.conf
-
-	chkconfig httpd on > /dev/null 2>&1
-	systemctl start httpd >> $LOG
+	systemctl enable httpd --now >> $LOG
 	check_result $? "httpd start failed"
 else
-	chkconfig httpd disable > /dev/null 2>&1
-	systemctl stop httpd > /dev/null 2>&1
+	systemctl disable httpd --now > /dev/null 2>&1
 fi
 
 #----------------------------------------------------------#
@@ -1425,18 +1396,18 @@ if [ "$phpfpm" = "yes" ]; then
 			$HESTIA/bin/v-add-web-php "$v" > /dev/null 2>&1
 		done
 	else
-		echo "[ * ] Install  PHP $fpm_v..."
-		$HESTIA/bin/v-add-web-php "$fpm_v" > /dev/null 2>&1
+		echo "[ * ] Install  PHP $php_v..."
+		$HESTIA/bin/v-add-web-php "$php_v" > /dev/null 2>&1
 	fi
 
-	echo "[ * ] Configuring PHP $fpm_v..."
+	echo "[ * ] Configuring PHP $php_v..."
 	# Create www.conf for webmail and php(*)admin
-	cp -f $HESTIA_INSTALL_DIR/php-fpm/www.conf /etc/opt/remi/php$fpm_v/php-fpm.d
-	chkconfig php$fpm_v-fpm on > /dev/null 2>&1
-	systemctl start php$fpm_v-php-fpm >> $LOG
+	cp -f $HESTIA_INSTALL_DIR/php-fpm/www.conf /etc/opt/remi/php$php_v/php-fpm.d
+	chkconfig php$php_v-fpm on > /dev/null 2>&1
+	systemctl start php$php_v-php-fpm >> $LOG
 	check_result $? "php-fpm start failed"
-	# Set default php version to $fpm_v
-	update-alternatives --set php /usr/bin/php$fpm_v > /dev/null 2>&1
+	# Set default php version to $php_v
+	alternatives --set php /usr/bin/php$php_v > /dev/null 2>&1
 fi
 
 #----------------------------------------------------------#
@@ -1472,8 +1443,7 @@ if [ "$vsftpd" = 'yes' ]; then
 	touch /var/log/xferlog
 	chown root:adm /var/log/xferlog
 	chmod 640 /var/log/xferlog
-	chkconfig vsftpd on
-	systemctl start vsftpd
+	systemctl enable vsftpd --now
 	check_result $? "vsftpd start failed"
 fi
 
@@ -1487,20 +1457,9 @@ if [ "$proftpd" = 'yes' ]; then
 	cp -f $HESTIA_INSTALL_DIR/proftpd/proftpd.conf /etc/proftpd/
 	cp -f $HESTIA_INSTALL_DIR/proftpd/tls.conf /etc/proftpd/
 
-	if [ "$release" -eq 11 ]; then
-		sed -i 's|IdentLookups                  off|#IdentLookups                  off|g' /etc/proftpd/proftpd.conf
-	fi
-
-	chkconfig proftpd on > /dev/null 2>&1
-	systemctl start proftpd >> $LOG
+	systemctl enable proftpd --now >> $LOG
 	check_result $? "proftpd start failed"
 
-	if [ "$release" -eq 11 ]; then
-		unit_files="$(systemctl list-unit-files | grep proftpd)"
-		if [[ "$unit_files" =~ "disabled" ]]; then
-			systemctl enable proftpd
-		fi
-	fi
 fi
 
 #----------------------------------------------------------#
@@ -1534,19 +1493,9 @@ if [ "$mysql" = 'yes' ] || [ "$mysqlclassic" = 'yes' ]; then
 		sed -i 's|mariadb.conf.d|mysql.conf.d|g' /etc/my.cnf
 	fi
 
-	if [ "$mysql_type" = 'MariaDB' ]; then
-		update-rc.d mariadb defaults > /dev/null 2>&1
-		systemctl -q enable mariadb 2> /dev/null
-		systemctl start mariadb >> $LOG
-		check_result $? "${mysql_type,,} start failed"
-	fi
-
-	if [ "$mysql_type" = 'MySQL' ]; then
-		update-rc.d mysql defaults > /dev/null 2>&1
-		systemctl -q enable mysql 2> /dev/null
-		systemctl start mysql >> $LOG
-		check_result $? "${mysql_type,,} start failed"
-	fi
+	# MariaDB-server package has a compatibility symlink, so there is no need for conditions
+	systemctl enable mysqld --now >> $LOG
+	check_result $? "${mysql_type,,} start failed"
 
 	# Securing MariaDB/MySQL installation
 	mpass=$(gen_pass)
@@ -1683,15 +1632,12 @@ if [ "$named" = 'yes' ]; then
 	chown named:named /var/cache/named
 	chmod 640 /etc/named/named.conf
 	chmod 640 /etc/named/named.conf.options
-	aa-complain /usr/sbin/named 2> /dev/null
-	# apparmor is a debian thing
-	chkconfig named on > /dev/null 2>&1
-	systemctl start named
+	systemctl enable named --now
 	check_result $? "bind start failed"
 
 	# Workaround for OpenVZ/Virtuozzo
 	if [ -e "/proc/vz/veinfo" ] && [ -e "/etc/rc.local" ]; then
-		sed -i "s/^exit 0/service named restart\nexit 0/" /etc/rc.local
+		sed -i "s/^exit 0/systemctl restart named\nexit 0/" /etc/rc.local
 	fi
 fi
 
@@ -1701,7 +1647,7 @@ fi
 
 if [ "$exim" = 'yes' ]; then
 	echo "[ * ] Configuring Exim mail server..."
-	gpasswd -a Debian-exim mail > /dev/null 2>&1
+
 	exim_version=$(exim --version | head -1 | awk '{print $3}' | cut -f -2 -d .)
 	if [ "$exim_version" = "4.94" ]; then
 		cp -f $HESTIA_INSTALL_DIR/exim/exim.conf.4.94.template /etc/exim/exim.conf.template
@@ -1725,14 +1671,12 @@ if [ "$exim" = 'yes' ]; then
 	rm -rf /etc/exim/domains
 	mkdir -p /etc/exim/domains
 
-	rm -f /etc/alternatives/mta
-	ln -s /usr/sbin/exim /etc/alternatives/mta
-	chkconfig -f sendmail remove > /dev/null 2>&1
-	systemctl stop sendmail > /dev/null 2>&1
-	chkconfig -f postfix remove > /dev/null 2>&1
-	systemctl stop postfix > /dev/null 2>&1
-	chkconfig exim on
-	systemctl start exim
+	alternatives --install /usr/sbin/sendmail mta /usr/sbin/exim 1
+	alternatives --set mta /usr/sbin/exim
+
+	systemctl disable sendmail --now > /dev/null 2>&1
+	systemctl disable postfix --now > /dev/null 2>&1
+	systemctl enable exim --now
 	check_result $? "exim start failed"
 fi
 
@@ -1757,8 +1701,7 @@ if [ "$dovecot" = 'yes' ]; then
 		sed -i 's|ssl_min_protocol = TLSv1.2|ssl_protocols = !SSLv3 !TLSv1 !TLSv1.1|g' /etc/dovecot/conf.d/10-ssl.conf
 	fi
 
-	chkconfig dovecot defaults
-	systemctl start dovecot
+	systemctl enable dovecot --now
 	check_result $? "dovecot start failed"
 fi
 
@@ -1768,20 +1711,11 @@ fi
 
 if [ "$clamd" = 'yes' ]; then
 	gpasswd -a clamav mail > /dev/null 2>&1
-	gpasswd -a clamav Debian-exim > /dev/null 2>&1
-	cp -f $HESTIA_INSTALL_DIR/clamav/clamd.conf /etc/clamav/
-	chkconfig clamav-daemon on
-	if [ ! -d "/var/run/clamav" ]; then
-		mkdir /var/run/clamav
-	fi
-	chown -R clamav:clamav /var/run/clamav
-	if [ -e "/lib/systemd/system/clamav-daemon.service" ]; then
-		exec_pre1='ExecStartPre=-/bin/mkdir -p /var/run/clamav'
-		exec_pre2='ExecStartPre=-/bin/chown -R clamav:clamav /var/run/clamav'
-		sed -i "s|\[Service\]/|[Service]\n$exec_pre1\n$exec_pre2|g" \
-			/lib/systemd/system/clamav-daemon.service
-		systemctl daemon-reload
-	fi
+	gpasswd -a clamav exim > /dev/null 2>&1
+	cp -f $HESTIA_INSTALL_DIR/clamav/clamd.conf /etc/clamd.d/daemon.conf
+	cp -f $HESTIA_INSTALL_DIR/clamav/clamd.tmpfiles /etc/tmpfiles.d/clamav.conf
+    systemd-tmpfiles --create
+
 	echo -ne "[ * ] Installing ClamAV anti-virus definitions... "
 	/usr/bin/freshclam >> $LOG &
 	BACK_PID=$!
@@ -1791,7 +1725,7 @@ if [ "$clamd" = 'yes' ]; then
 		sleep 0.5
 	done
 	echo
-	systemctl start clamav-daemon
+	systemctl enable clamd@daemon --now
 	check_result $? "clamav-daemon start failed"
 fi
 
@@ -1801,15 +1735,9 @@ fi
 
 if [ "$spamd" = 'yes' ]; then
 	echo "[ * ] Configuring SpamAssassin..."
-	chkconfig spamassassin on > /dev/null 2>&1
-	sed -i "s/ENABLED=0/ENABLED=1/" /etc/default/spamassassin
-	systemctl start spamassassin >> $LOG
+
+	systemctl enable spamassassin --now >> $LOG
 	check_result $? "spamassassin start failed"
-	unit_files="$(systemctl list-unit-files | grep spamassassin)"
-	if [[ "$unit_files" =~ "disabled" ]]; then
-		systemctl enable spamassassin > /dev/null 2>&1
-	fi
-	sed -i "s/#CRON=1/CRON=1/" /etc/default/spamassassin
 fi
 
 #----------------------------------------------------------#
@@ -1838,17 +1766,11 @@ if [ "$fail2ban" = 'yes' ]; then
 		fline=$(echo "$fline" | grep enabled | tail -n1 | cut -f 1 -d -)
 		sed -i "${fline}s/false/true/" /etc/fail2ban/jail.local
 	fi
-	if [ ! -e /var/log/auth.log ]; then
-		# Debian workaround: auth logging was moved to systemd
-		touch /var/log/auth.log
-		chmod 640 /var/log/auth.log
-		chown root:adm /var/log/auth.log
+
+	if [ -f /etc/fail2ban/jail.d/00-firewalld.conf ]; then
+		cat /dev/null > /etc/fail2ban/jail.d/00-firewalld.conf
 	fi
-	if [ -f /etc/fail2ban/jail.d/defaults-debian.conf ]; then
-		rm -f /etc/fail2ban/jail.d/defaults-debian.conf
-	fi
-	chkconfig fail2ban on
-	systemctl start fail2ban
+	systemctl enable fail2ban --now
 	check_result $? "fail2ban start failed"
 fi
 
@@ -1895,7 +1817,7 @@ if [ "$sieve" = 'yes' ]; then
 	#  10-master.conf
 	sed -i -E -z "s/  }\n  user = dovecot\n}/  \}\n  unix_listener auth-master \{\n    group = mail\n    mode = 0660\n    user = dovecot\n  \}\n  user = dovecot\n\}/g" /etc/dovecot/conf.d/10-master.conf
 	#  15-lda.conf
-	sed -i "s/\#mail_plugins = \\\$mail_plugins/mail_plugins = \$mail_plugins quota sieve\n  auth_socket_path = \/var\/run\/dovecot\/auth-master/g" /etc/dovecot/conf.d/15-lda.conf
+	sed -i "s/\#mail_plugins = \\\$mail_plugins/mail_plugins = \$mail_plugins quota sieve\n  auth_socket_path = \/run\/dovecot\/auth-master/g" /etc/dovecot/conf.d/15-lda.conf
 	#  20-imap.conf
 	sed -i "s/mail_plugins = quota imap_quota/mail_plugins = quota imap_quota imap_sieve/g" /etc/dovecot/conf.d/20-imap.conf
 
@@ -1909,9 +1831,6 @@ if [ "$sieve" = 'yes' ]; then
 	sed -i "s/\stransport = local_delivery/ transport = dovecot_virtual_delivery/" /etc/exim/exim.conf.template
 	sed -i "s/address_pipe:/dovecot_virtual_delivery:\n  driver = pipe\n  command = \/usr\/lib\/dovecot\/dovecot-lda -e -d \$local_part@\$domain -f \$sender_address -a \$original_local_part@\$original_domain\n  delivery_date_add\n  envelope_to_add\n  return_path_add\n  log_output = true\n  log_defer_output = true\n  user = \${extract{2}{:}{\${lookup{\$local_part}lsearch{\/etc\/exim\/domains\/\${lookup{\$domain}dsearch{\/etc\/exim\/domains\/}}\/passwd}}}}\n group = mail\n  return_output\n\naddress_pipe:/g" /etc/exim/exim.conf.template
 
-	# Permission changes
-	chown -R dovecot:mail /var/log/dovecot.log
-	chmod 660 /var/log/dovecot.log
 
 	if [ -d "/var/lib/roundcube" ]; then
 		# Modify Roundcube config
@@ -1987,7 +1906,7 @@ if [ -n "$pub_ip" ] && [ "$pub_ip" != "$ip" ]; then
 	ip=$pub_ip
 fi
 
-# Configuring libapache2-mod-remoteip
+# Configuring mod_remoteip
 if [ "$apache" = 'yes' ] && [ "$nginx" = 'yes' ]; then
 	cd /etc/httpd/conf.modules.d
 	echo "<IfModule mod_remoteip.c>" > remoteip.conf
@@ -2003,7 +1922,6 @@ if [ "$apache" = 'yes' ] && [ "$nginx" = 'yes' ]; then
 	fi
 	echo "</IfModule>" >> remoteip.conf
 	sed -i "s/LogFormat \"%h/LogFormat \"%a/g" /etc/httpd/conf/httpd.conf
-	a2enmod remoteip >> $LOG
 	systemctl restart httpd
 fi
 
@@ -2064,8 +1982,7 @@ BACK_PID=$!
 echo
 
 # Starting Hestia service
-chkconfig hestia on
-systemctl start hestia
+systemctl enable hestia --now
 check_result $? "hestia start failed"
 chown admin:admin $HESTIA/data/sessions
 
