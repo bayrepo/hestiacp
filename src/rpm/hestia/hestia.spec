@@ -8,10 +8,11 @@ Summary:           Hestia Control Panel
 Group:             System Environment/Base
 License:           GPLv3
 URL:               https://www.hestiacp.com
-Source0:           https://github.com/hestiacp/hestiacp/archive/refs/tags/%{version}.tar.gz#hestia-%{version}.tar.gz
+Source0:           https://github.com/hestiacp/hestiacp/archive/refs/tags/%{version}.tar.gz#/hestia-%{version}.tar.gz
 Source1:           hestia.service
 Source2:           hestia.tmpfiles
 Vendor:            hestiacp.com
+BuildArch:         noarch
 
 BuildRequires:     redhat-rpm-config
 BuildRequires:     systemd
