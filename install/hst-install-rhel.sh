@@ -710,15 +710,9 @@ if [ "$mysqlclassic" = 'yes' ]; then
 	fi
 fi
 
-# Installing Dovecot repo
-if [ "$dovecot" = 'yes' ]; then
-	echo "[ * ] Dovecot"
-	# dnf config-manager --add-repo https://raw.githubusercontent.com/hestiacp/hestiacp/main/install/rpm/dovecot/dovecot.repo
-fi
-
 # Installing HestiaCP repo
 echo "[ * ] Hestia Control Panel"
-# dnf config-manager --add-repo https://raw.githubusercontent.com/istiak101/hestiacp/hcp-rhel/install/rpm/hestia/hestia.repo
+dnf config-manager --add-repo https://raw.githubusercontent.com/raven-kg/hestiacp/hcp-rhel-rx/install/rpm/hestia/hestia.repo
 
 # Installing PostgreSQL repo
 if [ "$postgresql" = 'yes' ]; then
