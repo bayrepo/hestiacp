@@ -2,21 +2,32 @@
 %global _prefix         /usr/local/hestia/php
 
 Name:           hestia-php
-Version:        8.2.6
+Version:        8.2.7
 Release:        1%{dist}
 Summary:        Hestia internal PHP
 Group:          System Environment/Base
 URL:            https://www.hestiacp.com
-Source0:        https://www.php.net/distributions/php-%{version}.tar.gz
+Source0:        https://www.php.net/distributions/php-%{version}.tar.xz
 Source1:        hestia-php.service
 Source2:        php-fpm.conf
 Source3:        php.ini
 License:        PHP and Zend and BSD and MIT and ASL 1.0 and NCSA
 Vendor:         hestiacp.com
-Requires:       redhat-release >= 8
-Provides:       hestia-php = %{version}
-BuildRequires:  autoconf, automake, bison, bzip2-devel, gcc, gcc-c++, gnupg2, libtool, make, openssl-devel, re2c
-BuildRequires:  gmp-devel, oniguruma-devel, libzip-devel
+
+BuildRequires:  gcc
+BuildRequires:  gcc-c++
+BuildRequires:  make
+BuildRequires:  libtool
+BuildRequires:  autoconf
+BuildRequires:  automake
+BuildRequires:  bison
+BuildRequires:  gnupg2
+BuildRequires:  bzip2-devel
+BuildRequires:  openssl-devel
+BuildRequires:  re2c
+BuildRequires:  gmp-devel
+BuildRequires:  oniguruma-devel
+BuildRequires:  libzip-devel
 BuildRequires:  pkgconfig(libcurl)  >= 7.61.0
 BuildRequires:  pkgconfig(libxml-2.0)  >= 2.9.7
 BuildRequires:  pkgconfig(sqlite3) >= 3.26.0
@@ -60,16 +71,16 @@ rm -f TSRM/tsrm_win32.h \
 %make_build
 
 %install
-%{__rm} -rf $RPM_BUILD_ROOT
 mkdir -p %{buildroot}%{_unitdir} %{buildroot}/usr/local/hestia/php/{etc,lib}
 mkdir -p %{buildroot}%{_unitdir} %{buildroot}/usr/local/hestia/php/var/{log,run}
+
 %make_install INSTALL_ROOT=$RPM_BUILD_ROOT
-%{__install} -m644 %{SOURCE1} %{buildroot}%{_unitdir}/hestia-php.service
+
+install -m644 %{SOURCE1} %{buildroot}%{_unitdir}/hestia-php.service
 cp %{SOURCE2} %{buildroot}/usr/local/hestia/php/etc/
 cp %{SOURCE3} %{buildroot}/usr/local/hestia/php/lib/
 
 %clean
-%{__rm} -rf $RPM_BUILD_ROOT
 
 %pre
 
@@ -92,6 +103,10 @@ cp %{SOURCE3} %{buildroot}/usr/local/hestia/php/lib/
 %{_unitdir}/hestia-php.service
 
 %changelog
+* Sat Jun  3 2023 Raven <raven@sysadmins.ws> - 8.2.7-1
+- update PHP version to 8.2.7
+- spec file cleanup
+
 * Sun May 14 2023 Istiak Ferdous <hello@istiak.com> - 8.2.6-1
 - HestiaCP RHEL 9 support
 
