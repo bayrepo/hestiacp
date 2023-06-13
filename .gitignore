@@ -3,6 +3,7 @@
 *.zip
 *.gzip
 *.gz
+*.xz
 *.bz2
 *.deb
 

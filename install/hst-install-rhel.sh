@@ -1255,7 +1255,7 @@ chmod 660 $HESTIA/ssl/*
 rm /tmp/hst.pem
 
 # Install dhparam.pem
-cp -f $HESTIA_INSTALL_DIR/ssl/dhparam.pem /etc/ssl
+cp -f $HESTIA_INSTALL_DIR/ssl/dhparam.pem /etc/pki/tls/
 
 # Deleting old admin user
 if [ -n "$(grep ^admin: /etc/passwd)" ] && [ "$force" = 'yes' ]; then
@@ -1697,7 +1697,7 @@ if [ "$dovecot" = 'yes' ]; then
 	if [ "$version" = "2.2" ]; then
 		echo "[ * ] Downgrade dovecot config to sync with 2.2 settings"
 		sed -i 's|#ssl_dh_parameters_length = 4096|ssl_dh_parameters_length = 4096|g' /etc/dovecot/conf.d/10-ssl.conf
-		sed -i 's|ssl_dh = </etc/ssl/dhparam.pem|#ssl_dh = </etc/ssl/dhparam.pem|g' /etc/dovecot/conf.d/10-ssl.conf
+		sed -i 's|ssl_dh = </etc/pki/tls/dhparam.pem|#ssl_dh = </etc/pki/tls/dhparam.pem|g' /etc/dovecot/conf.d/10-ssl.conf
 		sed -i 's|ssl_min_protocol = TLSv1.2|ssl_protocols = !SSLv3 !TLSv1 !TLSv1.1|g' /etc/dovecot/conf.d/10-ssl.conf
 	fi
 

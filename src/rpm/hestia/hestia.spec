@@ -1,21 +1,36 @@
 %define debug_package %{nil}
 %global _hardened_build 1
 
-Name:           hestia
-Version:        1.8.0~alpha
-Release:        1%{dist}
-Summary:        Hestia Control Panel
-Group:          System Environment/Base
-License:        GPLv3
-URL:            https://www.hestiacp.com
-Source0:        hestia-%{version}.tar.gz
-Source1:        hestia.service
-Vendor:         hestiacp.com
-Requires:       redhat-release >= 8
-Requires:       bash, chkconfig, gawk, sed, acl, sysstat, (setpriv or util-linux), zstd, jq
-Conflicts:      vesta
-Provides:       hestia = %{version}
-BuildRequires:  systemd
+Name:              hestia
+Version:           1.8.0~alpha
+Release:           1%{dist}
+Summary:           Hestia Control Panel
+Group:             System Environment/Base
+License:           GPLv3
+URL:               https://www.hestiacp.com
+Source0:           https://github.com/hestiacp/hestiacp/archive/refs/tags/%{version}.tar.gz#hestia-%{version}.tar.gz
+Source1:           hestia.service
+Source2:           hestia.tmpfiles
+Vendor:            hestiacp.com
+
+BuildRequires:     redhat-rpm-config
+BuildRequires:     systemd
+
+Requires:          bash
+Requires:          gawk
+Requires:          sed
+Requires:          acl
+Requires:          sysstat
+Requires:          util-linux
+Requires:          zstd
+Requires:          jq
+Requires(post):    systemd
+Requires(preun):   systemd
+Requires(postun):  systemd
+
+Provides:          hestia = %{version}-%{release}
+Conflicts:         redhat-release < 8
+Conflicts:         vesta
 
 %description
 This package contains the Hestia Control Panel.
@@ -26,16 +41,16 @@ This package contains the Hestia Control Panel.
 %build
 
 %install
-%{__rm} -rf $RPM_BUILD_ROOT
-mkdir -p %{buildroot}%{_unitdir} %{buildroot}/usr/local/hestia
+mkdir -p %{buildroot}%{_unitdir} %{buildroot}%{_tmpfilesdir} %{buildroot}/usr/local/hestia
 cp -R %{_builddir}/hestiacp/* %{buildroot}/usr/local/hestia/
-%{__install} -m644 %{SOURCE1} %{buildroot}%{_unitdir}/hestia.service
+install -m644 %{SOURCE1} %{buildroot}%{_unitdir}/hestia.service
+install -D %SOURCE2 %{buildroot}%{_tmpfilesdir}/%{name}.conf
 
 # Cleanup not required files so package will be smaller
 rm -rf %{buildroot}/usr/local/hestia/src/deb %{buildroot}/usr/local/hestia/src/archive %{buildroot}/usr/local/hestia/test %{buildroot}/usr/local/hestia/docs
 
 %clean
-%{__rm} -rf $RPM_BUILD_ROOT
+
 
 %pre
 # Run triggers only on updates
@@ -48,6 +63,7 @@ if [ -e "/usr/local/hestia/data/users/admin" ]; then
 fi
 
 %post
+%tmpfiles_create_package %{name} %SOURCE2
 %systemd_post hestia.service
 
 if [ ! -e /etc/profile.d/hestia.sh ]; then
@@ -149,6 +165,7 @@ fi
 %defattr(-,root,root)
 %attr(755,root,root) /usr/local/hestia
 %{_unitdir}/hestia.service
+%{_tmpfilesdir}/%{name}.conf
 
 %changelog
 * Sun May 14 2023 Istiak Ferdous <hello@istiak.com> - 1.8.0-1
