@@ -854,7 +854,7 @@ if [ "$exim" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/clamav-daemon//")
 	software=$(echo "$software" | sed -e "s/spamassassin//")
 	software=$(echo "$software" | sed -e "s/dovecot-sieve//")
-	software=$(echo "$software" | sed -e "s/dovecot-managesieved//")
+	software=$(echo "$software" | sed -e "s/dovecot-pigeonhole//")
 fi
 if [ "$clamd" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/clamav-daemon//")
@@ -867,7 +867,7 @@ if [ "$dovecot" = 'no' ]; then
 fi
 if [ "$sieve" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/dovecot-sieve//")
-	software=$(echo "$software" | sed -e "s/dovecot-managesieved//")
+	software=$(echo "$software" | sed -e "s/dovecot-pigeonhole//")
 fi
 if [ "$mysql" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/MariaDB-server//")
@@ -1835,7 +1835,7 @@ if [ "$sieve" = 'yes' ]; then
 		chmod 751 -R $RC_CONFIG_DIR
 		chmod 644 $RC_CONFIG_DIR/*.php
 		chmod 644 $RC_CONFIG_DIR/plugins/managesieve/config.inc.php
-		sed -i "s/'archive'/'archive', 'managesieve'/g" $RC_CONFIG_DIR/config.inc.php
+		sed -i "s/\"archive\"/\"archive\", \"managesieve\"/g" $RC_CONFIG_DIR/config.inc.php
 	fi
 	# Restart Dovecot and exim
 	systemctl restart dovecot > /dev/null 2>&1
