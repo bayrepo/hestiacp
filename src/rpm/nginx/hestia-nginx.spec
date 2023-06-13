@@ -65,7 +65,6 @@ This package contains internal nginx webserver for Hestia Control Panel web inte
     --with-compat \
     --with-file-aio \
     --with-threads \
-    --with-pcre2 \
     --with-http_addition_module \
     --with-http_auth_request_module \
     --with-http_gunzip_module \
