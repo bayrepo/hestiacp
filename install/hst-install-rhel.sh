@@ -64,7 +64,7 @@ software="nginx httpd httpd-tools httpd-itk mod_fcgid mod_suphp
   rrdtool quota e2fsprogs curl ImageMagick fail2ban
   dnsutils util-linux cronie hestia hestia-nginx
   hestia-php expect perl-Mail-DKIM unrar-free vim-common acl sysstat
-  rsyslog openssh-server util-linux ipset zstd
+  rsyslog openssh-server util-linux ipset zstd systemd-timesyncd
   jq"
 
 
@@ -917,14 +917,6 @@ fi
 #----------------------------------------------------------#
 #                     Install packages                     #
 #----------------------------------------------------------#
-
-# Disabling daemon autostart on dnf install
-echo -e '#!/bin/sh\nexit 101' > /usr/sbin/policy-rc.d
-chmod a+x /usr/sbin/policy-rc.d
-
-# Enable PHP 8.0 Module
-dnf -y module reset php:7.2
-dnf -y module enable php:8.0
 
 # Installing rpm packages
 echo "The installer is now downloading and installing all required packages."
