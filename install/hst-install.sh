@@ -60,10 +60,8 @@ if [ -e "/etc/os-release" ] && [ ! -e "/etc/redhat-release" ]; then
 elif [ -e "/etc/os-release" ] && [ -e "/etc/redhat-release" ]; then
 	type=$(grep "^ID=" /etc/os-release | cut -f 2 -d '"')
 	VERSION=$type
-	if [ "$type" = "rhel" ] || [ "$type" = "almalinux" ] || [ "$type" = "eurolinux" ]; then
-		release=$(cat /etc/redhat-release | cut -f 1 -d '.' | awk '{print $3}')
-	elif [ "$type" = "rocky" ]; then
-		release=$(cat /etc/redhat-release | cut -f 1 -d '.' | awk '{print $4}')
+	if [ "$type" =~ $(rhel|almalinux|eurolinux|ol|rocky)$ ]; then
+		release=$(rpm --eval='%rhel')
 	fi
 else
 	type="NoSupport"
@@ -77,7 +75,7 @@ no_support_message() {
 	echo "  Debian 10, 11"
 	echo "  Ubuntu 20.04, 22.04 LTS"
 	# Commenting this out for now
-	# echo "  AlmaLinux, EuroLinux, Red Hat EnterPrise Linux, Rocky Linux 8,9"
+	echo "  Red Hat Enterprise Linux 8,9"
 	echo ""
 	exit 1
 }

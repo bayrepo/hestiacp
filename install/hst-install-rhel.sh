@@ -26,13 +26,11 @@ os='rhel'
 architecture="$(arch)"
 type=$(grep "^ID=" /etc/os-release | cut -f 2 -d '"')
 VERSION=$type
-if [ "$type" = "rhel" ] || [ "$type" = "almalinux" ] || [ "$type" = "eurolinux" ]; then
-	release=$(cat /etc/redhat-release | cut -f 1 -d '.' | awk '{print $3}')
-elif [ "$type" = "rocky" ]; then
-	release=$(cat /etc/redhat-release | cut -f 1 -d '.' | awk '{print $4}')
+if [ "$type" =~ $(rhel|almalinux|eurolinux|ol|rocky)$ ]; then
+	release=$(rpm --eval='%rhel')
 fi
 
-if [ "$release" -lt 7 ]; then
+if [ "$release" -lt 8 ]; then
   echo "Unsupported version of OS"
 fi
 HESTIA_INSTALL_DIR="$HESTIA/install/rpm"
