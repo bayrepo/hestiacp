@@ -26,7 +26,7 @@ os='rhel'
 architecture="$(arch)"
 type=$(grep "^ID=" /etc/os-release | cut -f 2 -d '"')
 VERSION=$type
-if [ "$type" =~ $(rhel|almalinux|eurolinux|ol|rocky)$ ]; then
+if [[ "$type" =~ ^(rhel|almalinux|eurolinux|ol|rocky)$ ]]; then
 	release=$(rpm --eval='%rhel')
 fi
 
