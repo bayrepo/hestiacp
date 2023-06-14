@@ -362,7 +362,7 @@ fi
 
 
 # Clear the screen once launch permissions have been verified
-clear
+#clear
 
 # Welcome message
 echo "Welcome to the Hestia Control Panel installer!"
@@ -371,7 +371,7 @@ echo "Please wait, the installer is now checking for missing dependencies..."
 echo
 
 # DNF config-manager plugin isn't installed by defaut
-dnf -y install dnf-plugins-core
+dnf -qy install dnf-plugins-core
 
 # enable dev repo
 if [ $release -eq 8 ]; then
@@ -484,7 +484,7 @@ install_welcome_message() {
 }
 
 # Printing nice ASCII logo
-clear
+#clear
 install_welcome_message
 
 # Web stack
