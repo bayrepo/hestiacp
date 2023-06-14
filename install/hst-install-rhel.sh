@@ -370,6 +370,9 @@ echo
 echo "Please wait, the installer is now checking for missing dependencies..."
 echo
 
+# DNF config-manager plugin isn't installed by defaut
+dnf -y install dnf-plugins-core
+
 # enable dev repo
 if [ $release -eq 8 ]; then
   dnf config-manager --set-enabled powertools
