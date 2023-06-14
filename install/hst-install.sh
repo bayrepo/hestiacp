@@ -89,7 +89,7 @@ check_wget_curl() {
 	# Check wget
 	if [ -e '/usr/bin/wget' ]; then
 		if [ -e '/etc/redhat-release' ]; then
-			wget -q https://raw.githubusercontent.com/istiak101/hestiacp/hcp-rhel/install/hst-install-rhel.sh -O hst-install-rhel.sh
+			wget -q https://raw.githubusercontent.com/raven-kg/hestiacp/hcp-rhel-rx/install/hst-install-rhel.sh -O hst-install-rhel.sh
 			if [ "$?" -eq '0' ]; then
 				bash hst-install-rhel.sh $*
 				exit
@@ -112,7 +112,7 @@ check_wget_curl() {
 	# Check curl
 	if [ -e '/usr/bin/curl' ]; then
 		if [ -e '/etc/redhat-release' ]; then
-			curl -s -O https://raw.githubusercontent.com/istiak101/hestiacp/hcp-rhel/install/hst-install-rhel.sh
+			curl -s -O https://raw.githubusercontent.com/raven-kg/hestiacp/hcp-rhel-rx/install/hst-install-rhel.sh
 			if [ "$?" -eq '0' ]; then
 				bash hst-install-rhel.sh $*
 				exit
