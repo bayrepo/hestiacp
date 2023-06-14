@@ -75,7 +75,8 @@ no_support_message() {
 	echo "  Debian 10, 11"
 	echo "  Ubuntu 20.04, 22.04 LTS"
 	# Commenting this out for now
-	echo "  Red Hat Enterprise Linux 8,9"
+	echo "  Red Hat Enterprise Linux 8, 9 and related versions of"
+	echo "  AlmaLinux, Rocky Linux, Oracle Linux Server and EuroLinux"
 	echo ""
 	exit 1
 }
