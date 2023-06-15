@@ -4,7 +4,12 @@
     compress
     sharedscripts
     postrotate
-        /sbin/service httpd reload > /dev/null 2>/dev/null || true
+        /bin/systemctl reload httpd.service > /dev/null 2>/dev/null || true
         [ ! -f /run/nginx.pid ] || kill -USR1 `cat /run/nginx.pid`
+    endscript
+    prerotate
+        if [ -d /etc/logrotate.d/httpd-prerotate ]; then \
+            run-parts /etc/logrotate.d/httpd-prerotate; \
+        fi; \
     endscript
 }

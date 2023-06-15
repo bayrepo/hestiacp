@@ -123,13 +123,12 @@ DEB_DIR="$BUILD_DIR/deb"
 if [ -f '/etc/redhat-release' ]; then
 	BUILD_RPM=true
 	BUILD_DEB=false
+	BUILD_ARCH=$(uname -i)
 	OSTYPE='rhel'
 	type=$(grep "^ID=" /etc/os-release | cut -f 2 -d '"')
 	DISTRO=$type
-	if [ "$type" = "rhel" ] || [ "$type" = "almalinux" ] || [ "$type" = "eurolinux" ]; then
-		release=$(cat /etc/redhat-release | cut -f 1 -d '.' | awk '{print $3}')
-	elif [ "$type" = "rocky" ]; then
-		release=$(cat /etc/redhat-release | cut -f 1 -d '.' | awk '{print $4}')
+	if [[ "$type" =~ ^(rhel|almalinux|eurolinux|ol|rocky)$ ]]; then
+		release=$(rpm --eval='%rhel')
 	fi
 else
 	BUILD_RPM=false
@@ -209,14 +208,26 @@ if [ -z $install ]; then
 fi
 
 # Set Version for compiling
-if [ -f "$SRC_DIR/src/deb/hestia/control" ] && [ "$use_src_folder" == 'true' ]; then
-	BUILD_VER=$(cat $SRC_DIR/src/deb/hestia/control | grep "Version:" | cut -d' ' -f2)
-	NGINX_V=$(cat $SRC_DIR/src/deb/nginx/control | grep "Version:" | cut -d' ' -f2)
-	PHP_V=$(cat $SRC_DIR/src/deb/php/control | grep "Version:" | cut -d' ' -f2)
+if [ -e "/etc/redhat-release" ]; then
+	if [ -f "$SRC_DIR/src/rpm/hestia/hestia.spec" ] && [ "$use_src_folder" == 'true' ]; then
+		BUILD_VER=$(cat $SRC_DIR/src/rpm/hestia/hestia.spec | grep "Version:" | awk '{ print $2 }')
+		NGINX_V=$(cat $SRC_DIR/src/rpm/nginx/hestia-nginx.spec | grep "Version:" | awk '{ print $2 }')
+		PHP_V=$(cat $SRC_DIR/src/rpm/php/hestia-php.spec | grep "Version:" | awk '{ print $2 }')
+	else
+		BUILD_VER=$(curl -s https://raw.githubusercontent.com/$REPO/$branch/src/rpm/hestia/hestia.spec | grep "Version:" | awk '{ print $2 }')
+		NGINX_V=$(curl -s https://raw.githubusercontent.com/$REPO/$branch/src/rpm/nginx/hestia-nginx.spec | grep "Version:" | awk '{ print $2 }')
+		PHP_V=$(curl -s https://raw.githubusercontent.com/$REPO/$branch/src/rpm/php/hestia-php.spec | grep "Version:" | awk '{ print $2 }')
+	fi
 else
-	BUILD_VER=$(curl -s https://raw.githubusercontent.com/$REPO/$branch/src/deb/hestia/control | grep "Version:" | cut -d' ' -f2)
-	NGINX_V=$(curl -s https://raw.githubusercontent.com/$REPO/$branch/src/deb/nginx/control | grep "Version:" | cut -d' ' -f2)
-	PHP_V=$(curl -s https://raw.githubusercontent.com/$REPO/$branch/src/deb/php/control | grep "Version:" | cut -d' ' -f2)
+	if [ -f "$SRC_DIR/src/deb/hestia/control" ] && [ "$use_src_folder" == 'true' ]; then
+		BUILD_VER=$(cat $SRC_DIR/src/deb/hestia/control | grep "Version:" | cut -d' ' -f2)
+		NGINX_V=$(cat $SRC_DIR/src/deb/nginx/control | grep "Version:" | cut -d' ' -f2)
+		PHP_V=$(cat $SRC_DIR/src/deb/php/control | grep "Version:" | cut -d' ' -f2)
+	else
+		BUILD_VER=$(curl -s https://raw.githubusercontent.com/$REPO/$branch/src/deb/hestia/control | grep "Version:" | cut -d' ' -f2)
+		NGINX_V=$(curl -s https://raw.githubusercontent.com/$REPO/$branch/src/deb/nginx/control | grep "Version:" | cut -d' ' -f2)
+		PHP_V=$(curl -s https://raw.githubusercontent.com/$REPO/$branch/src/deb/php/control | grep "Version:" | cut -d' ' -f2)
+	fi
 fi
 
 if [ -z "$BUILD_VER" ]; then
@@ -253,21 +264,20 @@ if [ "$dontinstalldeps" != 'true' ]; then
 	# Install needed software
 	if [ "$OSTYPE" = 'rhel' ]; then
 		# Set package dependencies for compiling
-		SOFTWARE='wget tar git curl mock rpm-build rpmdevtools'
+		SOFTWARE='wget tar git mock'
 
 		echo "Updating system DNF repositories..."
-		dnf install -y -q 'dnf-command(config-manager)'
 		dnf install -y -q dnf-plugins-core epel-release
-		dnf config-manager --set-enabled powertools > /dev/null 2>&1
-		dnf config-manager --set-enabled PowerTools > /dev/null 2>&1
-		dnf config-manager --set-enabled crb > /dev/null 2>&1
+		if [ "$release" -eq 8 ]; then
+			dnf config-manager --set-enabled powertools > /dev/null 2>&1
+		else
+			dnf config-manager --set-enabled crb > /dev/null 2>&1
+		fi
 		dnf upgrade -y -q
 		echo "Installing dependencies for compilation..."
 		dnf install -y -q $SOFTWARE
-		rpmdev-setuptree
-		if [ ! -d "/var/lib/mock/rocky+epel-9-$(arch)-bootstrap" ]; then
-			mock -r rocky+epel-9-$(arch) --init
-		fi
+
+		mock -r rhel+epel-${release}-$BUILD_ARCH --clean
 	else
 		# Set package dependencies for compiling
 		SOFTWARE='wget tar git curl build-essential libxml2-dev libz-dev libzip-dev libgmp-dev libcurl4-gnutls-dev unzip openssl libssl-dev pkg-config libsqlite3-dev libonig-dev rpm lsb-release'
@@ -458,19 +468,17 @@ if [ "$NGINX_B" = true ]; then
 
 	if [ "$BUILD_RPM" = true ]; then
 		# Get RHEL package files
-		get_branch_file 'src/rpm/nginx/nginx.conf' "$HOME/rpmbuild/SOURCES/nginx.conf"
-		get_branch_file 'src/rpm/nginx/hestia-nginx.spec' "$HOME/rpmbuild/SPECS/hestia-nginx.spec"
-		get_branch_file 'src/rpm/nginx/hestia-nginx.service' "$HOME/rpmbuild/SOURCES/hestia-nginx.service"
+		get_branch_file 'src/rpm/nginx/nginx.conf' "$BUILD_DIR/nginx.conf"
+		get_branch_file 'src/rpm/nginx/hestia-nginx.spec' "$BUILD_DIR/hestia-nginx.spec"
+		get_branch_file 'src/rpm/nginx/hestia-nginx.service' "$BUILD_DIR/hestia-nginx.service"
 
 		# Download source files
-		download_file $NGINX "$HOME/rpmbuild/SOURCES/"
+		download_file $NGINX $BUILD_DIR
 
 		# Build the package
 		echo Building Nginx RPM
-		rpmbuild -bs ~/rpmbuild/SPECS/hestia-nginx.spec
-		mock -r rocky+epel-$release-$(arch) ~/rpmbuild/SRPMS/hestia-nginx-$NGINX_V-1.el$release.src.rpm
-		cp /var/lib/mock/rocky+epel-$release-$(arch)/result/*.rpm $RPM_DIR
-		rm -rf ~/rpmbuild/SPECS/* ~/rpmbuild/SOURCES/* ~/rpmbuild/SRPMS/*
+		mock -r rhel+epel-${release}-$BUILD_ARCH --sources $BUILD_DIR --spec $BUILD_DIR/hestia-nginx.spec --resultdir $RPM_DIR
+		rm -f $BUILD_DIR/*
 	fi
 fi
 
@@ -597,20 +605,18 @@ if [ "$PHP_B" = true ]; then
 
 	if [ "$BUILD_RPM" = true ]; then
 		# Get RHEL package files
-		get_branch_file 'src/rpm/php/php-fpm.conf' "$HOME/rpmbuild/SOURCES/php-fpm.conf"
-		get_branch_file 'src/rpm/php/php.ini' "$HOME/rpmbuild/SOURCES/php.ini"
-		get_branch_file 'src/rpm/php/hestia-php.spec' "$HOME/rpmbuild/SPECS/hestia-php.spec"
-		get_branch_file 'src/rpm/php/hestia-php.service' "$HOME/rpmbuild/SOURCES/hestia-php.service"
+		get_branch_file 'src/rpm/php/php-fpm.conf' "$BUILD_DIR/php-fpm.conf"
+		get_branch_file 'src/rpm/php/php.ini' "$BUILD_DIR/php.ini"
+		get_branch_file 'src/rpm/php/hestia-php.spec' "$BUILD_DIR/hestia-php.spec"
+		get_branch_file 'src/rpm/php/hestia-php.service' "$BUILD_DIR/hestia-php.service"
 
 		# Download source files
-		download_file $PHP "$HOME/rpmbuild/SOURCES/"
+		download_file $PHP "$BUILD_DIR/"
 
 		# Build RPM package
 		echo Building PHP RPM
-		rpmbuild -bs ~/rpmbuild/SPECS/hestia-php.spec
-		mock -r rocky+epel-$release-$(arch) ~/rpmbuild/SRPMS/hestia-php-$PHP_V-1.el$release.src.rpm
-		cp /var/lib/mock/rocky+epel-$release-$(arch)/result/*.rpm $RPM_DIR
-		rm -rf ~/rpmbuild/SPECS/* ~/rpmbuild/SOURCES/* ~/rpmbuild/SRPMS/*
+		mock -r rhel+epel-${release}-$BUILD_ARCH --sources $BUILD_DIR --spec $BUILD_DIR/hestia-php.spec --resultdir $RPM_DIR
+		rm -f $BUILD_DIR/*
 	fi
 fi
 
@@ -695,22 +701,18 @@ if [ "$HESTIA_B" = true ]; then
 		fi
 
 		if [ "$BUILD_RPM" = true ]; then
-			# Pre-clean
-			rm -rf ~/rpmbuild/SOURCES/*
 
 			# Get RHEL package files
-			get_branch_file 'src/rpm/hestia/hestia.spec' "$HOME/rpmbuild/SPECS/hestia.spec"
-			get_branch_file 'src/rpm/hestia/hestia.service' "$HOME/rpmbuild/SOURCES/hestia.service"
+			get_branch_file 'src/rpm/hestia/hestia.spec' "$BUILD_DIR/hestia.spec"
+			get_branch_file 'src/rpm/hestia/hestia.service' "$BUILD_DIR/hestia.service"
 
 			# Generate source tar.gz
-			tar -czf $HOME/rpmbuild/SOURCES/hestia-$BUILD_VER.tar.gz -C $SRC_DIR/.. hestiacp
+			tar -czf $BUILD_DIR/hestia-$BUILD_VER.tar.gz -C $SRC_DIR/.. hestiacp
 
 			# Build RPM package
 			echo Building Hestia RPM
-			rpmbuild -bs ~/rpmbuild/SPECS/hestia.spec
-			mock -r rocky+epel-$release-$(arch) ~/rpmbuild/SRPMS/hestia-$BUILD_VER-1.el$release.src.rpm
-			cp /var/lib/mock/rocky+epel-$release-$(arch)/result/*.rpm $RPM_DIR
-			rm -rf ~/rpmbuild/SPECS/* ~/rpmbuild/SOURCES/* ~/rpmbuild/SRPMS/*
+			mock -r rhel+epel-${release}-$BUILD_ARCH --sources $BUILD_DIR --spec $BUILD_DIR/hestia.spec --resultdir $RPM_DIR
+			rm -f $BUILD_DIR/*
 		fi
 
 	done
@@ -726,12 +728,14 @@ if [ "$install" = 'yes' ] || [ "$install" = 'y' ] || [ "$install" = 'true' ]; th
 	# Install all available packages
 	echo "Installing packages..."
 	if [ "$OSTYPE" = 'rhel' ]; then
-		for i in $RPM_DIR/*.rpm; do
-			dnf -y install $i
-			if [ $? -ne 0 ]; then
-				exit 1
-			fi
+	    rpms=""
+		for i in $(ls $RPM_DIR/*.rpm | grep -v '\.src\.rpm'); do
+			rpms+="$RPM_DIR/$i "
 		done
+		dnf -y localinstall $rpms
+		if [ $? -ne 0 ]; then
+			exit 1
+		fi
 	else
 		for i in $DEB_DIR/*.deb; do
 			dpkg -i $i

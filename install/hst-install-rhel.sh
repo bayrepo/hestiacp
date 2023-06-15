@@ -6,7 +6,7 @@
 # https://www.hestiacp.com/
 #
 # Currently Supported Versions:
-# Red Hat Enterprise Linux, Rocky Linux, AlmaLinux, EuroLinux 8
+# Red Hat Enterprise Linux based distros
 #
 # ======================================================== #
 
@@ -23,10 +23,12 @@ memory=$(grep 'MemTotal' /proc/meminfo | tr ' ' '\n' | grep [0-9])
 hst_backups="/root/hst_install_backups/$(date +%d%m%Y%H%M)"
 spinner="/-\|"
 os='rhel'
-architecture="$(arch)"
+arch="$(arch)"
 type=$(grep "^ID=" /etc/os-release | cut -f 2 -d '"')
 VERSION=$type
-if [[ "$type" =~ ^(rhel|almalinux|eurolinux|ol|rocky)$ ]]; then
+
+# TODO: Not sure if condition below is required
+if [[ "$type" =~ ^(rhel|almalinux|eurolinux|ol|rocky|centos)$ ]]; then
 	release=$(rpm --eval='%rhel')
 fi
 
@@ -51,24 +53,24 @@ fi
 # default PHP version
 php_v="80"
 
-software="nginx httpd httpd-tools httpd-itk mod_fcgid mod_suphp
-  php$php_v-php php$php_v-php-common php$php_v-php-cgi php$php_v-php-mysql php$php_v-php-curl
-  php$php_v-php-pgsql php$php_v-php-pecl-imagick php$php_v-php-imap php$php_v-php-ldap
-  php$php_v-php-pecl-apcu php$php_v-php-zip php$php_v-php-bz2 php$php_v-php-cli
-  php$php_v-php-gd php$php_v-php-intl php$php_v-php-mbstring
-  php$php_v-php-opcache php$php_v-php-pspell php$php_v-php-readline php$php_v-php-xml
-  awstats perl-Switch vsftpd proftpd-basic bind exim
-  clamd spamassassin dovecot dovecot-pigeonhole
-  net-tools MariaDB-client MariaDB-common MariaDB-server mysql mysql-common mysql-server
-  postgresql-server postgresql mc flex whois git idn2 unzip zip sudo bc ftp lsof
-  rrdtool quota e2fsprogs curl ImageMagick fail2ban
-  dnsutils util-linux cronie hestia hestia-nginx
-  hestia-php expect perl-Mail-DKIM unrar-free vim-common acl sysstat
-  rsyslog openssh-server util-linux ipset zstd systemd-timesyncd
-  jq"
+software="nginx
+  httpd.${arch} httpd-tools httpd-itk mod_fcgid mod_suphp
+  php${php_v}-php.${arch} php${php_v}-php-cgi.${arch} php${php_v}-php-mysqlnd.${arch} php${php_v}-php-pgsql.${arch}
+  php${php_v}-php-pdo php${php_v}-php-common php${php_v}-php-pecl-imagick php${php_v}-php-imap php${php_v}-php-ldap
+  php${php_v}-php-pecl-apcu php${php_v}-php-pecl-zip php${php_v}-php-cli php${php_v}-php-opcache php${php_v}-php-xml
+  php${php_v}-php-gd php${php_v}-php-intl php${php_v}-php-mbstring php${php_v}-php-pspell php${php_v}-php-readline
+  MariaDB-client MariaDB-common MariaDB-server
+  mysql.${arch} mysql-common mysql-server
+  postgresql-server postgresql sqlite.${arch}
+  vsftpd proftpd bind
+  exim clamd spamassassin dovecot dovecot-pigeonhole
+  hestia hestia-nginx hestia-php
+  rrdtool quota e2fsprogs fail2ban dnsutils util-linux cronie expect perl-Mail-DKIM unrar vim acl sysstat
+  rsyslog openssh-clients util-linux ipset zstd systemd-timesyncd jq awstats perl-Switch net-tools mc flex
+  whois git idn2 unzip zip sudo bc ftp lsof"
 
 
-installer_dependencies="curl gnupg2 policycoreutils wget ca-certificates"
+installer_dependencies="gnupg2 policycoreutils wget ca-certificates"
 
 # Defining help function
 help() {
@@ -391,8 +393,10 @@ dnf -y install $installer_dependencies >> $LOG
 check_result $? "Package installation failed, check log file for more details."
 
 # Disable SELinux
-sed 's/^SELINUX=.*/SELINUX=disabled/' -i /etc/selinux/config
-grubby --update-kernel ALL --args selinux=0
+if [ -e /etc/selinux/config ]; then
+    sed 's/^SELINUX=.*/SELINUX=disabled/' -i /etc/selinux/config
+    grubby --update-kernel ALL --args selinux=0
+fi
 setenforce 0
 
 # Check installed packages
@@ -431,7 +435,7 @@ if [ -n "$conflicts" ] && [ -z "$force" ]; then
 	fi
 fi
 
-case $architecture in
+case $arch in
 	x86_64)
 		ARCH="amd64"
 		;;
@@ -442,7 +446,7 @@ case $architecture in
 		echo
 		echo -e "\e[91mInstallation aborted\e[0m"
 		echo "===================================================================="
-		echo -e "\e[33mERROR: $architecture is currently not supported!\e[0m"
+		echo -e "\e[33mERROR: $arch is currently not supported!\e[0m"
 		echo -e "\e[33mPlease verify the achitecture used is currenlty supported\e[0m"
 		echo ""
 		echo -e "\e[33mhttps://github.com/hestiacp/hestiacp/blob/main/README.md\e[0m"
@@ -665,10 +669,6 @@ fi
 #                   Install repository                     #
 #----------------------------------------------------------#
 
-# Define dnf conf location
-dnf=/etc/dnf/dnf.conf
-
-
 # Installing Raven repository (required for some apache modules)
 if [ "$raven" = 'yes' ] && [ ! -e "/etc/yum.repos.d/raven.repo" ]; then
     dnf -y localinstall https://pkgs.dyn.su/el${release}/base/x86_64/raven-release.el${release}.noarch.rpm
@@ -691,11 +691,6 @@ dnf config-manager --add-repo https://raw.githubusercontent.com/hestiacp/hestiac
 # Installing Remi PHP repo
 echo "[ * ] PHP"
 dnf install -y https://rpms.remirepo.net/enterprise/remi-release-$release.rpm
-
-# Installing sury Apache2 repo
-# if [ "$apache" = 'yes' ]; then
-#     echo "[ * ] Apache2"
-# fi
 
 # Installing MariaDB repo
 if [ "$mysql" = 'yes' ]; then
@@ -813,11 +808,10 @@ rm -rf $HESTIA > /dev/null 2>&1
 #----------------------------------------------------------#
 
 if [ "$phpfpm" = 'yes' ]; then
-	fpm="php$php_v php$php_v-php-common php$php_v-php-bcmath php$php_v-php-cli
-			php$php_v-php-curl php$php_v-php-fpm php$php_v-php-gd php$php_v-php-intl
-			php$php_v-php-mysql php$php_v-php-soap php$php_v-php-xml php$php_v-php-zip
-			php$php_v-php-mbstring php$php_v-php-bz2 php$php_v-php-pspell
-			php$php_v-php-imagick"
+	fpm="php${php_v}-php-fpm php${php_v}-php-cgi.${arch} php${php_v}-php-mysqlnd.${arch} php${php_v}-php-pgsql.${arch}
+		php${php_v}-php-pdo php${php_v}-php-common php${php_v}-php-pecl-imagick php${php_v}-php-imap php${php_v}-php-ldap
+		php${php_v}-php-pecl-apcu php${php_v}-php-pecl-zip php${php_v}-php-cli php${php_v}-php-opcache php${php_v}-php-xml
+		php${php_v}-php-gd php${php_v}-php-intl php${php_v}-php-mbstring php${php_v}-php-pspell php${php_v}-php-readline"
 	software="$software $fpm"
 fi
 
@@ -826,39 +820,32 @@ fi
 #----------------------------------------------------------#
 
 # Excluding packages
-software=$(echo "$software" | sed -e "s/apache2.2-common//")
-
 if [ "$apache" = 'no' ]; then
-	software=$(echo "$software" | sed -e "s/httpd //")
+	software=$(echo "$software" | sed -e "s/httpd.${arch}//")
 	software=$(echo "$software" | sed -e "s/httpd-tools//")
-	software=$(echo "$software" | sed -e "s/httpd-itk //")
-	software=$(echo "$software" | sed -e "s/apache2-suexec-custom//")
-	software=$(echo "$software" | sed -e "s/apache2.2-common//")
+	software=$(echo "$software" | sed -e "s/httpd-itk//")
 	software=$(echo "$software" | sed -e "s/mod_suphp//")
 	software=$(echo "$software" | sed -e "s/mod_fcgid//")
-	software=$(echo "$software" | sed -e "s/php$php_v-php//")
+	software=$(echo "$software" | sed -e "s/php${php_v}-php.${arch}//")
 fi
 if [ "$vsftpd" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/vsftpd//")
 fi
 if [ "$proftpd" = 'no' ]; then
-	software=$(echo "$software" | sed -e "s/proftpd-basic//")
-	software=$(echo "$software" | sed -e "s/proftpd-mod-vroot//")
+	software=$(echo "$software" | sed -e "s/proftpd//")
 fi
 if [ "$named" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/bind//")
 fi
 if [ "$exim" = 'no' ]; then
-	software=$(echo "$software" | sed -e "s/exim //")
-	software=$(echo "$software" | sed -e "s/exim4-daemon-heavy//")
+	software=$(echo "$software" | sed -e "s/exim//")
 	software=$(echo "$software" | sed -e "s/dovecot//")
-	software=$(echo "$software" | sed -e "s/clamav-daemon//")
+	software=$(echo "$software" | sed -e "s/clamd//")
 	software=$(echo "$software" | sed -e "s/spamassassin//")
-	software=$(echo "$software" | sed -e "s/dovecot-sieve//")
 	software=$(echo "$software" | sed -e "s/dovecot-pigeonhole//")
 fi
 if [ "$clamd" = 'no' ]; then
-	software=$(echo "$software" | sed -e "s/clamav-daemon//")
+	software=$(echo "$software" | sed -e "s/clamd//")
 fi
 if [ "$spamd" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/spamassassin//")
@@ -867,7 +854,6 @@ if [ "$dovecot" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/dovecot//")
 fi
 if [ "$sieve" = 'no' ]; then
-	software=$(echo "$software" | sed -e "s/dovecot-sieve//")
 	software=$(echo "$software" | sed -e "s/dovecot-pigeonhole//")
 fi
 if [ "$mysql" = 'no' ]; then
@@ -876,16 +862,16 @@ if [ "$mysql" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/MariaDB-common//")
 fi
 if [ "$mysqlclassic" = 'no' ]; then
-	software=$(echo "$software" | sed -e "s/mysql//")
+	software=$(echo "$software" | sed -e "s/mysql.${arch}//")
 	software=$(echo "$software" | sed -e "s/mysql-server//")
 	software=$(echo "$software" | sed -e "s/mysql-common//")
 fi
 if [ "$mysql" = 'no' ] && [ "$mysqlclassic" = 'no' ]; then
-	software=$(echo "$software" | sed -e "s/php$php_v-php-mysql//")
+	software=$(echo "$software" | sed -e "s/php${php_v}-php-mysql.${arch}//")
 fi
 if [ "$postgresql" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/postgresql-server//")
-	software=$(echo "$software" | sed -e "s/php$php_v-php-pgsql//")
+	software=$(echo "$software" | sed -e "s/php${php_v}-php-pgsql.${arch}//")
 	software=$(echo "$software" | sed -e "s/phppgadmin//")
 fi
 if [ "$fail2ban" = 'no' ]; then
@@ -896,12 +882,12 @@ if [ "$iptables" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/fail2ban//")
 fi
 if [ "$phpfpm" = 'yes' ]; then
-	software=$(echo "$software" | sed -e "s/php$php_v-php-cgi//")
+	software=$(echo "$software" | sed -e "s/php${php_v}-php-cgi.${arch}//")
 	software=$(echo "$software" | sed -e "s/httpd-itk//")
-	software=$(echo "$software" | sed -e "s/mod_ruid2//")
+	software=$(echo "$software" | sed -e "s/mod_ruid2 //")
 	software=$(echo "$software" | sed -e "s/mod_suphp//")
 	software=$(echo "$software" | sed -e "s/mod_fcgid//")
-	software=$(echo "$software" | sed -e "s/php$php_v-php//")
+	software=$(echo "$software" | sed -e "s/php${php_v}-php.${arch}//")
 fi
 if [ "$raven" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/httpd-itk//")
@@ -922,7 +908,8 @@ fi
 echo "The installer is now downloading and installing all required packages."
 echo -ne "NOTE: This process may take 10 to 15 minutes to complete, please wait... "
 echo
-dnf -y install $software > $LOG
+
+dnf -y install $software >> $LOG
 BACK_PID=$!
 
 # Check if package installation is done, print a spinner
@@ -944,7 +931,7 @@ echo "========================================================================"
 echo
 
 # Create PHP symlink
-alternatives --install /usr/bin/php php /usr/bin/php80 1
+alternatives --install /usr/bin/php php /opt/remi/php${php_v}/root/usr/bin/php 1
 
 # Install Hestia packages from local folder
 if [ -n "$withrpms" ] && [ -d "$withrpms" ]; then
@@ -969,8 +956,6 @@ if [ -n "$withrpms" ] && [ -d "$withrpms" ]; then
 	fi
 fi
 
-# Restoring autostart policy
-rm -f /usr/sbin/policy-rc.d
 
 #----------------------------------------------------------#
 #                     Configure system                     #
@@ -986,8 +971,6 @@ fi
 
 # Reduce SSH login grace time
 sed -i "s/[#]LoginGraceTime [[:digit:]]m/LoginGraceTime 1m/g" /etc/ssh/sshd_config
-
-# Disable SSH suffix broadcast
 
 # Restart SSH daemon
 systemctl restart sshd
@@ -1229,8 +1212,8 @@ $HESTIA/bin/v-generate-ssl-cert $(hostname) '' 'US' 'California' \
 
 # Parsing certificate file
 crt_end=$(grep -n "END CERTIFICATE-" /tmp/hst.pem | cut -f 1 -d:)
-key_start=$(grep -n "BEGIN RSA" /tmp/hst.pem | cut -f 1 -d:)
-key_end=$(grep -n "END RSA" /tmp/hst.pem | cut -f 1 -d:)
+key_start=$(grep -n "BEGIN PRIVATE KEY" /tmp/hst.pem | cut -f 1 -d:)
+key_end=$(grep -n "END PRIVATE KEY" /tmp/hst.pem | cut -f 1 -d:)
 
 # Adding SSL certificate
 echo "[ * ] Adding SSL certificate to Hestia Control Panel..."
@@ -1340,7 +1323,7 @@ if [ "$apache" = 'yes' ]; then
 	if [ "$nginx" = "no" ]; then
 		dnf install -y mod_ssl mod_h2
 	fi
-	
+
 	# IDK why those modules still here, but ok. if they are disabled by default
 	sed 's/^LoadModule suexec_module/#LoadModule suexec_module' -i /etc/httpd/conf.modules.d/01-suexec.conf
 	sed 's/^LoadModule fcgid_module/#LoadModule fcgid_module' -i /etc/httpd/conf.modules.d/10-fcgid.conf
@@ -1389,9 +1372,8 @@ if [ "$phpfpm" = "yes" ]; then
 
 	echo "[ * ] Configuring PHP $php_v..."
 	# Create www.conf for webmail and php(*)admin
-	cp -f $HESTIA_INSTALL_DIR/php-fpm/www.conf /etc/opt/remi/php$php_v/php-fpm.d
-	chkconfig php$php_v-fpm on > /dev/null 2>&1
-	systemctl start php$php_v-php-fpm >> $LOG
+	cp -f $HESTIA_INSTALL_DIR/php-fpm/www.conf /etc/opt/remi/php${php_v}/php-fpm.d
+	systemctl enable php${php_v}-php-fpm --now >> $LOG
 	check_result $? "php-fpm start failed"
 	# Set default php version to $php_v
 	alternatives --set php /usr/bin/php$php_v > /dev/null 2>&1
