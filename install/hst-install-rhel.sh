@@ -1656,7 +1656,7 @@ fi
 if [ "$dovecot" = 'yes' ]; then
 	echo "[ * ] Configuring Dovecot POP/IMAP mail server..."
 	gpasswd -a dovecot mail > /dev/null 2>&1
-	cp -rf $HESTIA_COMMON_DIR/dovecot /etc/
+	cp -rf $HESTIA_INSTALL_DIR/dovecot /etc/
 	cp -f $HESTIA_INSTALL_DIR/logrotate/dovecot /etc/logrotate.d/
 	chown -R root:root /etc/dovecot*
 	rm -f /etc/dovecot/conf.d/15-mailboxes.conf
