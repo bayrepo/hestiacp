@@ -51,7 +51,7 @@ multiphp_v=("74" "80" "81" "82")
 fi
 
 # default PHP version
-php_v="80"
+php_v="81"
 
 software="nginx
   httpd.${arch} httpd-tools httpd-itk mod_fcgid mod_suphp
