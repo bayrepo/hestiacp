@@ -60,7 +60,8 @@ if [ -e "/etc/os-release" ] && [ ! -e "/etc/redhat-release" ]; then
 elif [ -e "/etc/os-release" ] && [ -e "/etc/redhat-release" ]; then
 	type=$(grep "^ID=" /etc/os-release | cut -f 2 -d '"')
 	VERSION=$type
-	if [[ "$type" =~ ^(rhel|almalinux|eurolinux|ol|rocky)$ ]]; then
+	# TODO: Not sure if this required
+	if [[ "$type" =~ ^(rhel|almalinux|eurolinux|ol|rocky|centos)$ ]]; then
 		release=$(rpm --eval='%rhel')
 	fi
 else

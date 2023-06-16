@@ -127,7 +127,8 @@ if [ -f '/etc/redhat-release' ]; then
 	OSTYPE='rhel'
 	type=$(grep "^ID=" /etc/os-release | cut -f 2 -d '"')
 	DISTRO=$type
-	if [[ "$type" =~ ^(rhel|almalinux|eurolinux|ol|rocky)$ ]]; then
+	# TODO: remove this condition after testing
+	if [[ "$type" =~ ^(rhel|almalinux|eurolinux|ol|rocky|centos)$ ]]; then
 		release=$(rpm --eval='%rhel')
 	fi
 else
