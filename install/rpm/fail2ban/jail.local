@@ -22,7 +22,7 @@ logpath  = /var/log/exim/main.log
 enabled  = true
 filter   = dovecot
 action   = hestia[name=MAIL]
-logpath  = /var/log/dovecot/dovecot.log
+logpath  = /var/log/dovecot.log
 
 [mysqld-iptables]
 enabled  = false

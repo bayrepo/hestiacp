@@ -364,7 +364,7 @@ fi
 
 
 # Clear the screen once launch permissions have been verified
-#clear
+clear
 
 # Welcome message
 echo "Welcome to the Hestia Control Panel installer!"
@@ -488,7 +488,7 @@ install_welcome_message() {
 }
 
 # Printing nice ASCII logo
-#clear
+clear
 install_welcome_message
 
 # Web stack
@@ -677,7 +677,7 @@ if [ "$raven" = 'yes' ] && [ ! -e "/etc/yum.repos.d/raven.repo" ]; then
 fi
 
 if [ "$raven" = 'yes' ] && [ "$multiphp" = 'yes' ]; then
-  multiphp_v=("55" "56" "70" "71" "72" "73" "74" "80" "81" "82" "83")
+  multiphp_v=("56" "70" "71" "72" "73" "74" "80" "81" "82" "83")
 fi
 
 # Create new folder if not all-ready exists
@@ -1622,11 +1622,7 @@ if [ "$exim" = 'yes' ]; then
 	echo "[ * ] Configuring Exim mail server..."
 
 	exim_version=$(exim --version | head -1 | awk '{print $3}' | cut -f -2 -d .)
-	if [ "$exim_version" = "4.94" ]; then
-		cp -f $HESTIA_INSTALL_DIR/exim/exim.conf.4.94.template /etc/exim/exim.conf.template
-	else
-		cp -f $HESTIA_INSTALL_DIR/exim/exim.conf.template /etc/exim/
-	fi
+	cp -f $HESTIA_INSTALL_DIR/exim/exim.conf.template /etc/exim/
 	cp -f $HESTIA_INSTALL_DIR/exim/dnsbl.conf /etc/exim/
 	cp -f $HESTIA_INSTALL_DIR/exim/spam-blocks.conf /etc/exim/
 	cp -f $HESTIA_INSTALL_DIR/exim/limit.conf /etc/exim/
@@ -1665,14 +1661,6 @@ if [ "$dovecot" = 'yes' ]; then
 	chown -R root:root /etc/dovecot*
 	rm -f /etc/dovecot/conf.d/15-mailboxes.conf
 
-	#Alter config for 2.2
-	version=$(dovecot --version | cut -f -2 -d .)
-	if [ "$version" = "2.2" ]; then
-		echo "[ * ] Downgrade dovecot config to sync with 2.2 settings"
-		sed -i 's|#ssl_dh_parameters_length = 4096|ssl_dh_parameters_length = 4096|g' /etc/dovecot/conf.d/10-ssl.conf
-		sed -i 's|ssl_dh = </etc/pki/tls/dhparam.pem|#ssl_dh = </etc/pki/tls/dhparam.pem|g' /etc/dovecot/conf.d/10-ssl.conf
-		sed -i 's|ssl_min_protocol = TLSv1.2|ssl_protocols = !SSLv3 !TLSv1 !TLSv1.1|g' /etc/dovecot/conf.d/10-ssl.conf
-	fi
 
 	systemctl enable dovecot --now
 	check_result $? "dovecot start failed"
