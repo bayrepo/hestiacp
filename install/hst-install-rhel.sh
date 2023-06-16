@@ -45,9 +45,9 @@ HESTIA_INSTALL_VER='1.8.0~alpha'
 # Dependencies
 mariadb_v="10.11"
 if [ "$release" -lt 9 ]; then
-multiphp_v=("72" "73" "74" "80" "81" "82")
+multiphp_v=("72" "73" "74" "80" "81" "82" "83")
 else
-multiphp_v=("74" "80" "81" "82")
+multiphp_v=("74" "80" "81" "82" "83")
 fi
 
 # default PHP version
@@ -669,11 +669,15 @@ fi
 #                   Install repository                     #
 #----------------------------------------------------------#
 
-# Installing Raven repository (required for some apache modules)
+# Installing Raven repository (required for some apache modules and old PHP versions)
 if [ "$raven" = 'yes' ] && [ ! -e "/etc/yum.repos.d/raven.repo" ]; then
     dnf -y localinstall https://pkgs.dyn.su/el${release}/base/x86_64/raven-release.el${release}.noarch.rpm
     check_result $? "Can't install Raven RPM repository"
     dnf config-manager --set-enabled raven-modular
+fi
+
+if [ "$raven" = 'yes' ] && [ "$multiphp" = 'yes' ]; then
+  multiphp_v=("55" "56" "70" "71" "72" "73" "74" "80" "81" "82" "83")
 fi
 
 # Create new folder if not all-ready exists

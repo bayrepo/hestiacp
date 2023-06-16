@@ -35,10 +35,18 @@ fi
 php_fpm="/etc/init.d/php$version-fpm"
 
 # Verify php version format
-if [[ ! $version =~ ^[0-9]\.[0-9]+ ]]; then
-	echo "The specified PHP version format is invalid, it should look like [0-9].[0-9]."
-	echo "Example: 7.0, 7.4, 8.0"
-	exit "$E_INVALID"
+if [ -f /etc/redhat-release ]; then
+	if [[ ! $version =~ ^[0-9][0-9]+ ]]; then
+		echo "The specified PHP version format is invalid, it should look like [0-9][0-9]."
+		echo "Example: 70, 74, 80"
+		exit "$E_INVALID"
+	fi
+else
+	if [[ ! $version =~ ^[0-9].[0-9]+ ]]; then
+		echo "The specified PHP version format is invalid, it should look like [0-9].[0-9]."
+		echo "Example: 7.0, 7.4, 8.0"
+		exit "$E_INVALID"
+	fi
 fi
 
 # Check if php version already exists
@@ -71,6 +79,9 @@ if [ -f /etc/redhat-release ]; then
        php$version-php-ldap php$version-php-pecl-apcu php$version-php-pecl-zip php$version-php-cli
        php$version-php-opcache php$version-php-xml php$version-php-gd php$version-php-intl
        php$version-php-mbstring php$version-php-pspell php$version-php-readline"
+	   if [ "$version" = "56" ]; then
+           mph=$(sed -e "s/php$version-php-pecl-apcu//")
+       fi
 fi
 
 # Check is version is 7.1 or below to add mcrypt
