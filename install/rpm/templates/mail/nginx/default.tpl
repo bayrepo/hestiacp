@@ -1,6 +1,6 @@
 server {
     listen      %ip%:%proxy_port%;
-    server_name %domain% %alias%;
+    server_name %domain_idn% %alias_idn%;
     root        /var/lib/roundcube;
     index       index.php index.html index.htm;
     access_log /var/log/nginx/domains/%domain%.log combined;
@@ -25,14 +25,6 @@ server {
         location ~* ^.+\.(ogg|ogv|svg|svgz|swf|eot|otf|woff|woff2|mov|mp3|mp4|webm|flv|ttf|rss|atom|jpg|jpeg|gif|png|webp|ico|bmp|mid|midi|wav|rtf|css|js|jar)$ {
             expires 7d;
             fastcgi_hide_header "Set-Cookie";
-        }
-
-        location ~ ^/(.*\.php)$ {
-            alias /var/lib/roundcube/$1;
-            fastcgi_pass 127.0.0.1:9000;
-            fastcgi_index index.php;
-            include fastcgi_params;
-            fastcgi_param SCRIPT_FILENAME $request_filename;
         }
     }
 

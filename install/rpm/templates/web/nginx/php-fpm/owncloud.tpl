@@ -1,3 +1,9 @@
+#=========================================================================#
+# Default Web Domain Template                                             #
+# DO NOT MODIFY THIS FILE! CHANGES WILL BE LOST WHEN REBUILDING DOMAINS   #
+# https://hestiacp.com/docs/server-administration/web-templates.html      #
+#=========================================================================#
+
 server {
     listen      %ip%:%web_port%;
     server_name %domain_idn% %alias_idn%;
@@ -28,8 +34,13 @@ server {
     error_page 404 = /core/templates/404.php;
     error_page 500 502 503 504 /error/50x.html;
 
-    location ~ ^/(?:\.htaccess|data|config|db_structure\.xml|README){
+    location ~ ^/(?:\data|config|db_structure\.xml|README){
         deny all;
+    }
+
+    location ~ /\.(?!well-known\/|file) {
+       deny all;
+       return 404;
     }
 
     location / {
@@ -48,6 +59,8 @@ server {
             fastcgi_param PATH_INFO $fastcgi_path_info;
             #fastcgi_param HTTPS on;
             fastcgi_pass    %backend_lsnr%;
+            include /etc/nginx/fastcgi_params;
+            include     %home%/%user%/conf/web/%domain%/nginx.fastcgi_cache.conf*;
         }
     }
 
@@ -61,11 +74,6 @@ server {
 
     location /error/ {
         alias   %home%/%user%/web/%domain%/document_errors/;
-    }
-
-    location ~* "/\.(htaccess|htpasswd)$" {
-        deny    all;
-        return  404;
     }
 
     location ^~ /vstats/ {

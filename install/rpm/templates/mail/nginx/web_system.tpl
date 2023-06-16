@@ -1,6 +1,6 @@
 server {
     listen      %ip%:%web_port%;
-    server_name %domain% %alias%;
+    server_name %domain_idn% %alias_idn%;
     root        /var/lib/roundcube;
     index       index.php index.html index.htm;
     access_log /var/log/nginx/domains/%domain%.log combined;
@@ -26,7 +26,6 @@ server {
         }
 
         location ~ ^/(.*\.php)$ {
-            alias /var/lib/roundcube/$1;
             fastcgi_pass 127.0.0.1:9000;
             fastcgi_index index.php;
             include fastcgi_params;

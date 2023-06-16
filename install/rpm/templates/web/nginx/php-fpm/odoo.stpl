@@ -1,3 +1,9 @@
+#=========================================================================#
+# Default Web Domain Template                                             #
+# DO NOT MODIFY THIS FILE! CHANGES WILL BE LOST WHEN REBUILDING DOMAINS   #
+# https://hestiacp.com/docs/server-administration/web-templates.html      #
+#=========================================================================#
+
 server {
     listen      %ip%:%web_ssl_port% ssl http2;
     server_name %domain_idn% %alias_idn%;
@@ -28,8 +34,9 @@ server {
     send_timeout            720;
 
     # Allow "Well-Known URIs" as per RFC 5785
-    location ~* ^/.well-known/ {
-        allow all;
+    location ~ /\.(?!well-known\/) {
+       deny all;
+       return 404;
     }
 
     location / {
@@ -51,15 +58,12 @@ server {
         alias   %home%/%user%/web/%domain%/document_errors/;
     }
 
-    location ~* "/\.(htaccess|htpasswd)$" {
-        deny    all;
-        return  404;
-    }
-
     location /vstats/ {
         alias   %home%/%user%/web/%domain%/stats/;
         include %home%/%user%/web/%domain%/stats/auth.conf*;
     }
+
+    proxy_hide_header Upgrade;
 
     include     /etc/nginx/conf.d/phpmyadmin.inc*;
     include     /etc/nginx/conf.d/phppgadmin.inc*;

@@ -1,3 +1,9 @@
+#=========================================================================#
+# Default Web Domain Template                                             #
+# DO NOT MODIFY THIS FILE! CHANGES WILL BE LOST WHEN REBUILDING DOMAINS   #
+# https://hestiacp.com/docs/server-administration/web-templates.html      #
+#=========================================================================#
+
 server {
     listen      %ip%:%web_port%;
     server_name %domain_idn% %alias_idn%;
@@ -23,7 +29,8 @@ server {
             fastcgi_pass   %backend_lsnr%;
             fastcgi_index  index.php;
             fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
-            include        /etc/nginx/fastcgi_params;
+            include /etc/nginx/fastcgi_params;
+            include     %home%/%user%/conf/web/%domain%/nginx.fastcgi_cache.conf*;
         }
 
         location ~ ^/setup/(?!pub/). {
@@ -45,7 +52,8 @@ server {
             fastcgi_index  index.php;
             fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
             fastcgi_param  PATH_INFO        $fastcgi_path_info;
-            include        /etc/nginx/fastcgi_params;
+            include /etc/nginx/fastcgi_params;
+            include     %home%/%user%/conf/web/%domain%/nginx.fastcgi_cache.conf*;
         }
 
         # Deny everything but index.php
@@ -154,7 +162,8 @@ server {
 
         fastcgi_index  index.php;
         fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
-        include        /etc/nginx/fastcgi_params;
+        include /etc/nginx/fastcgi_params;
+        include     %home%/%user%/conf/web/%domain%/nginx.fastcgi_cache.conf*;
     }
 
     gzip on;
@@ -179,8 +188,9 @@ server {
     gzip_vary on;
 
     # Banned locations (only reached if the earlier PHP entry point regexes don't match)
-    location ~* (\.php$|\.htaccess$|\.git) {
-        deny all;
+    location ~ /\.(?!well-known\/) {
+       deny all;
+       return 404;
     }
 
     location /vstats/ {

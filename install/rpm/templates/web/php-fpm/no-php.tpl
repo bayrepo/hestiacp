@@ -1,9 +1,14 @@
-; origin-src: rhel/templates/web/php-fpm/no-php.tpl
+; origin-src: deb/templates/web/php-fpm/no-php.tpl
+;#=========================================================================#
+;# Default Web Domain Template                                             #
+;# DO NOT MODIFY THIS FILE! CHANGES WILL BE LOST WHEN REBUILDING DOMAINS   #
+;# https://hestiacp.com/docs/server-administration/web-templates.html      #
+;#=========================================================================#
 
 ;[%backend%]
 ;listen = /run/php/%backend%.sock
 ;listen.owner = %user%
-;listen.group = apache
+;listen.group = www-data
 ;listen.mode = 0660
 
 ;user = %user%
@@ -17,7 +22,7 @@
 
 ;php_admin_value[upload_tmp_dir] = /home/%user%/tmp
 ;php_admin_value[session.save_path] = /home/%user%/tmp
-;php_admin_value[open_basedir] = /home/%user%/web/%domain%/public_html:/home/%user%/web/%domain%/public_shtml:/home/%user%/tmp:/var/www/html:/etc/phpmyadmin:/var/lib/phpmyadmin:/etc/roundcube:/var/lib/roundcube:/tmp:/bin:/usr/bin:/usr/local/bin:/usr/share:/opt
+;php_admin_value[open_basedir] = /home/%user%/web/%domain%/public_html:/home/%user%/web/%domain%/public_shtml:/home/%user%/tmp:/tmp:/bin:/usr/bin:/usr/local/bin:/usr/share:/opt
 ;php_admin_value[sendmail_path] = /usr/sbin/sendmail -t -i -f admin@%domain%
 
 ;env[HOSTNAME] = $HOSTNAME
