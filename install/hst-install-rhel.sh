@@ -1333,11 +1333,11 @@ if [ "$apache" = 'yes' ]; then
 	fi
 
 	# IDK why those modules still here, but ok. if they are disabled by default
-	sed 's/^LoadModule suexec_module/#LoadModule suexec_module' -i /etc/httpd/conf.modules.d/01-suexec.conf
-	sed 's/^LoadModule fcgid_module/#LoadModule fcgid_module' -i /etc/httpd/conf.modules.d/10-fcgid.conf
+	sed 's/^LoadModule suexec_module/#LoadModule suexec_module/' -i /etc/httpd/conf.modules.d/01-suexec.conf
+	sed 's/^LoadModule fcgid_module/#LoadModule fcgid_module/' -i /etc/httpd/conf.modules.d/10-fcgid.conf
 
 	# Switch status loader to custom one
-	sed 's/^LoadModule status_module/#LoadModule status_module' -i /etc/httpd/conf.modules.d/00-base.conf
+	sed 's/^LoadModule status_module/#LoadModule status_module/' -i /etc/httpd/conf.modules.d/00-base.conf
 	echo 'LoadModule status_module modules/mod_status.so' > /etc/httpd/conf.modules.d/00-hestia-status.conf
 
 	if [ "$phpfpm" = 'yes' ]; then
@@ -1347,10 +1347,13 @@ if [ "$apache" = 'yes' ]; then
 		cp -f $HESTIA_INSTALL_DIR/httpd/hestia-event.conf /etc/httpd/conf.d/
 	fi
 
+	if [ ! -d /etc/httpd/sites-available ]; then
+	    mkdir -p /etc/httpd/sites-available
+	fi
 	echo "# Powered by hestia" > /etc/httpd/sites-available/default
 	echo "# Powered by hestia" > /etc/httpd/sites-available/default-ssl
 	echo "# Powered by hestia" > /etc/httpd/ports.conf
-	echo -e "/home\npublic_html/cgi-bin" > /etc/httpd/suexec/www-data
+	# echo -e "/home\npublic_html/cgi-bin" > /etc/httpd/suexec/www-data
 	touch /var/log/httpd/access.log /var/log/httpd/error.log
 	mkdir -p /var/log/httpd/domains
 	chmod a+x /var/log/httpd
@@ -1396,7 +1399,7 @@ ZONE=$(timedatectl > /dev/null 2>&1 | grep Timezone | awk '{print $2}')
 if [ -z "$ZONE" ]; then
 	ZONE='UTC'
 fi
-for pconf in $(find /etc/php* -name php.ini); do
+for pconf in $(find /etc/opt/remi/php* -name php.ini); do
 	sed -i "s%;date.timezone =%date.timezone = $ZONE%g" $pconf
 	sed -i 's%_open_tag = Off%_open_tag = On%g' $pconf
 done
@@ -1606,7 +1609,6 @@ if [ "$named" = 'yes' ]; then
 	cp -f $HESTIA_INSTALL_DIR/bind/named.conf.options /etc/named/
 	chown root:named /etc/named/named.conf
 	chown root:named /etc/named/named.conf.options
-	chown named:named /var/cache/named
 	chmod 640 /etc/named/named.conf
 	chmod 640 /etc/named/named.conf.options
 	systemctl enable named --now
