@@ -40,7 +40,7 @@ HESTIA_COMMON_DIR="$HESTIA/install/common"
 VERBOSE='no'
 
 # Define software versions
-HESTIA_INSTALL_VER='1.8.0~alpha'
+HESTIA_INSTALL_VER='1.9.0~alpha'
 
 # Dependencies
 mariadb_v="10.11"
@@ -51,7 +51,7 @@ multiphp_v=("74" "80" "81" "82" "83")
 fi
 
 # default PHP version
-php_v="81"
+php_v="82"
 
 software="nginx
   httpd.${arch} httpd-tools httpd-itk mod_fcgid mod_suphp
