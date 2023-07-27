@@ -6,7 +6,7 @@
 %global _prefix /usr/local/hestia/nginx
 
 Name:           hestia-nginx
-Version:        1.24.0
+Version:        1.25.1
 Release:        1%{dist}
 Summary:        Hestia internal nginx web server
 Group:          System Environment/Base
@@ -115,6 +115,9 @@ mv %{buildroot}/usr/local/hestia/nginx/sbin/nginx %{buildroot}/usr/local/hestia/
 
 
 %changelog
+* Sat Jul 22 2023 Raven <raven@sysadmins.ws> - 1.25.1-1
+- 1.25.1
+
 * Sun May 14 2023 Istiak Ferdous <hello@istiak.com> - 1.24.0-1
 - 1.24.0-1
 

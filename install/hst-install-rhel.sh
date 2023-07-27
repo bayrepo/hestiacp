@@ -82,7 +82,7 @@ help() {
   -j, --proftpd           Install ProFTPD            [yes|no]   default: no
   -k, --named             Install Bind               [yes|no]   default: yes
   -m, --mysql             Install MariaDB            [yes|no]   default: yes
-  -M, --mysql-classic     Install MySQL              [yes|no]   default: no
+  -M, --mysql-classic     Install MySQL 8            [yes|no]   default: no
   -g, --postgresql        Install PostgreSQL         [yes|no]   default: no
   -x, --exim              Install Exim               [yes|no]   default: yes
   -z, --dovecot           Install Dovecot            [yes|no]   default: yes
@@ -150,7 +150,7 @@ set_default_lang() {
 	if [ -z "$lang" ]; then
 		eval lang=$1
 	fi
-	lang_list="ar az bg bn bs ckb cs da de el en es fa fi fr hr hu id it ja ka ko nl no pl pt pt-br ro ru sk sr sv th tr uk ur vi zh-cn zh-tw"
+	lang_list="ar az bg bn bs ca cs da de el en es fa fi fr hr hu id it ja ka ku ko nl no pl pt pt-br ro ru sk sr sv th tr uk ur vi zh-cn zh-tw"
 	if ! (echo $lang_list | grep -w $lang > /dev/null 2>&1); then
 		eval lang=$1
 	fi
@@ -341,7 +341,7 @@ fi
 if [ "$apache" = 'no' ]; then
 	phpfpm='yes'
 fi
-if [ "$mysql" = 'yes' ] && [ "$mysqlclassic" = 'yes' ]; then
+if [ "$mysql" = 'yes' ] && [ "$mysql8" = 'yes' ]; then
 	mysql='no'
 fi
 
@@ -543,7 +543,7 @@ echo
 if [ "$mysql" = 'yes' ]; then
 	echo '   - MariaDB Database Server'
 fi
-if [ "$mysqlclassic" = 'yes' ]; then
+if [ "$mysql8" = 'yes' ]; then
 	echo '   - MySQL8 Database Server'
 fi
 if [ "$postgresql" = 'yes' ]; then
@@ -703,7 +703,7 @@ if [ "$mysql" = 'yes' ]; then
 fi
 
 # Installing Mysql8 repo
-if [ "$mysqlclassic" = 'yes' ]; then
+if [ "$mysql8" = 'yes' ]; then
 	echo "[ * ] Mysql 8"
 	if [ "$release" -eq 8 ]; then
 		dnf -y module enable mysql:8.0
@@ -865,12 +865,12 @@ if [ "$mysql" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/MariaDB-client//")
 	software=$(echo "$software" | sed -e "s/MariaDB-common//")
 fi
-if [ "$mysqlclassic" = 'no' ]; then
+if [ "$mysql8" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/mysql.${arch}//")
 	software=$(echo "$software" | sed -e "s/mysql-server//")
 	software=$(echo "$software" | sed -e "s/mysql-common//")
 fi
-if [ "$mysql" = 'no' ] && [ "$mysqlclassic" = 'no' ]; then
+if [ "$mysql" = 'no' ] && [ "$mysql8" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/php${php_v}-php-mysql.${arch}//")
 fi
 if [ "$postgresql" = 'no' ]; then
@@ -1089,7 +1089,7 @@ if [ "$phpfpm" = 'yes' ]; then
 fi
 
 # Database stack
-if [ "$mysql" = 'yes' ] || [ "$mysqlclassic" = 'yes' ]; then
+if [ "$mysql" = 'yes' ] || [ "$mysql8" = 'yes' ]; then
 	installed_db_types='mysql'
 fi
 if [ "$postgresql" = 'yes' ]; then
@@ -1243,13 +1243,13 @@ if [ -n "$(grep ^admin: /etc/group)" ] && [ "$force" = 'yes' ]; then
 	groupdel admin > /dev/null 2>&1
 fi
 
-# Enable sftp jail
+# Enabling sftp jail
 echo "[ * ] Enable SFTP jail..."
 $HESTIA/bin/v-add-sys-sftp-jail > /dev/null 2>&1
 check_result $? "can't enable sftp jail"
 
 # Adding Hestia admin account
-echo "[ * ] Create admin account..."
+echo "[ * ] Create default admin account..."
 $HESTIA/bin/v-add-user admin $vpass $email "system" "System Administrator"
 check_result $? "can't create admin user"
 $HESTIA/bin/v-change-user-shell admin nologin
@@ -1267,6 +1267,7 @@ echo "[ * ] Configuring NGINX..."
 rm -f /etc/nginx/conf.d/*.conf
 cp -f $HESTIA_INSTALL_DIR/nginx/nginx.conf /etc/nginx/
 cp -f $HESTIA_INSTALL_DIR/nginx/status.conf /etc/nginx/conf.d/
+cp -f $HESTIA_INSTALL_DIR/nginx/0rtt-anti-replay.conf /etc/nginx/conf.d/
 cp -f $HESTIA_INSTALL_DIR/nginx/agents.conf /etc/nginx/conf.d/
 cp -f $HESTIA_INSTALL_DIR/nginx/phpmyadmin.inc /etc/nginx/conf.d/
 cp -f $HESTIA_INSTALL_DIR/nginx/phppgadmin.inc /etc/nginx/conf.d/
@@ -1274,17 +1275,20 @@ cp -f $HESTIA_INSTALL_DIR/logrotate/nginx /etc/logrotate.d/
 mkdir -p /etc/nginx/conf.d/domains
 mkdir -p /etc/nginx/modules-enabled
 mkdir -p /var/log/nginx/domains
+mkdir -p /etc/nginx/conf.d/main
 
 # Update dns servers in nginx.conf
-dns_resolver=$(cat /etc/resolv.conf | grep -i '^nameserver' | cut -d ' ' -f2 | tr '\r\n' ' ' | xargs)
-for ip in $dns_resolver; do
-	if [[ $ip =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-		resolver="$ip $resolver"
+for nameserver in $(grep -is '^nameserver' /etc/resolv.conf | cut -d' ' -f2 | tr '\r\n' ' ' | xargs); do
+	if [[ "$nameserver" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}$ ]]; then
+		if [ -z "$resolver" ]; then
+			resolver="$nameserver"
+		else
+			resolver="$resolver $nameserver"
+		fi
 	fi
 done
 if [ -n "$resolver" ]; then
 	sed -i "s/1.1.1.1 8.8.8.8/$resolver/g" /etc/nginx/nginx.conf
-	sed -i "s/1.1.1.1 8.8.8.8/$resolver/g" /usr/local/hestia/nginx/conf/nginx.conf
 fi
 
 # https://github.com/ergin/nginx-cloudflare-real-ip/
@@ -1366,11 +1370,11 @@ fi
 if [ "$phpfpm" = "yes" ]; then
 	if [ "$multiphp" = 'yes' ]; then
 		for v in "${multiphp_v[@]}"; do
-			echo "[ * ] Install PHP $v..."
+			echo "[ * ] Installing PHP $v..."
 			$HESTIA/bin/v-add-web-php "$v" > /dev/null 2>&1
 		done
 	else
-		echo "[ * ] Install  PHP $php_v..."
+		echo "[ * ] Installing  PHP $php_v..."
 		$HESTIA/bin/v-add-web-php "$php_v" > /dev/null 2>&1
 	fi
 
@@ -1439,7 +1443,7 @@ fi
 #               Configure MariaDB / MySQL                  #
 #----------------------------------------------------------#
 
-if [ "$mysql" = 'yes' ] || [ "$mysqlclassic" = 'yes' ]; then
+if [ "$mysql" = 'yes' ] || [ "$mysql8" = 'yes' ]; then
 	[ "$mysql" = 'yes' ] && mysql_type="MariaDB" || mysql_type="MySQL"
 	echo "[ * ] Configuring $mysql_type database server..."
 	mycnf="my-small.cnf"
@@ -1502,7 +1506,7 @@ fi
 # shellcheck source=/usr/local/hestia/install/upgrade/upgrade.conf
 source $HESTIA/install/upgrade/upgrade.conf
 
-if [ "$mysql" = 'yes' ] || [ "$mysqlclassic" = 'yes' ]; then
+if [ "$mysql" = 'yes' ] || [ "$mysql8" = 'yes' ]; then
 	# Display upgrade information
 	echo "[ * ] Installing phpMyAdmin version v$pma_v..."
 
@@ -1736,7 +1740,7 @@ if [ "$fail2ban" = 'yes' ]; then
 fi
 
 # Configuring MariaDB/MySQL host
-if [ "$mysql" = 'yes' ] || [ "$mysqlclassic" = 'yes' ]; then
+if [ "$mysql" = 'yes' ] || [ "$mysql8" = 'yes' ]; then
 	$HESTIA/bin/v-add-database-host mysql localhost root $mpass
 fi
 
@@ -1750,7 +1754,7 @@ fi
 #----------------------------------------------------------#
 
 # Min requirements Dovecot + Exim + Mysql
-if ([ "$mysql" == 'yes' ] || [ "$mysqlclassic" == 'yes' ]) && [ "$dovecot" == "yes" ]; then
+if ([ "$mysql" == 'yes' ] || [ "$mysql8" == 'yes' ]) && [ "$dovecot" == "yes" ]; then
 	echo "[ * ] Install Roundcube..."
 	$HESTIA/bin/v-add-sys-roundcube
 	write_config_value "WEBMAIL_ALIAS" "webmail"
@@ -1790,7 +1794,7 @@ if [ "$sieve" = 'yes' ]; then
 
 	# exim install
 	sed -i "s/\stransport = local_delivery/ transport = dovecot_virtual_delivery/" /etc/exim/exim.conf.template
-	sed -i "s/address_pipe:/dovecot_virtual_delivery:\n  driver = pipe\n  command = \/usr\/lib\/dovecot\/dovecot-lda -e -d \$local_part@\$domain -f \$sender_address -a \$original_local_part@\$original_domain\n  delivery_date_add\n  envelope_to_add\n  return_path_add\n  log_output = true\n  log_defer_output = true\n  user = \${extract{2}{:}{\${lookup{\$local_part}lsearch{\/etc\/exim\/domains\/\${lookup{\$domain}dsearch{\/etc\/exim\/domains\/}}\/passwd}}}}\n group = mail\n  return_output\n\naddress_pipe:/g" /etc/exim/exim.conf.template
+	sed -i "s/address_pipe:/dovecot_virtual_delivery:\n driver = pipe\n command = \/usr\/libexec\/dovecot\/dovecot-lda -e -d \${extract{1}{:}{\${lookup{\$local_part}lsearch{\/etc\/exim4\/domains\/\${lookup{\$domain}dsearch{\/etc\/exim4\/domains\/}}\/accounts}}}}@\${lookup{\$domain}dsearch{\/etc\/exim4\/domains\/}}\n delivery_date_add\n envelope_to_add\n return_path_add\n log_output = true\n log_defer_output = true\n user = \${extract{2}{:}{\${lookup{\$local_part}lsearch{\/etc\/exim4\/domains\/\${lookup{\$domain}dsearch{\/etc\/exim4\/domains\/}}\/passwd}}}}\n group = mail\n return_output\n\naddress_pipe:/g" /etc/exim4/exim4.conf.template
 
 
 	if [ -d "/var/lib/roundcube" ]; then
@@ -1839,7 +1843,7 @@ $HESTIA/bin/v-add-sys-filemanager quiet
 echo "[ * ] Configuring PHP dependencies..."
 $HESTIA/bin/v-add-sys-dependencies quiet
 
-echo "[ * ] Install Rclone"
+echo "[ * ] Installing Rclone"
 curl -s https://rclone.org/install.sh | bash > /dev/null 2>&1
 
 #----------------------------------------------------------#
@@ -1850,9 +1854,15 @@ curl -s https://rclone.org/install.sh | bash > /dev/null 2>&1
 echo "[ * ] Configuring System IP..."
 $HESTIA/bin/v-update-sys-ip > /dev/null 2>&1
 
-# Get main IP
-ip=$(ip addr | grep 'inet ' | grep global | head -n1 | awk '{print $2}' | cut -f1 -d/)
-local_ip=$ip
+# Get primary IP
+default_nic="$(ip -d -j route show | jq -r '.[] | if .dst == "default" then .dev else empty end')"
+# IPv4
+primary_ipv4="$(ip -4 -d -j addr show "$default_nic" | jq -r '.[] | select(length > 0) | .addr_info[] | if .scope == "global" then .local else empty end' | head -n1)"
+# IPv6
+#primary_ipv6="$(ip -6 -d -j addr show "$default_nic" | jq -r '.[] | select(length > 0) | .addr_info[] | if .scope == "global" then .local else empty end' | head -n1)"
+ip="$primary_ipv4"
+local_ip="$primary_ipv4"
+
 
 # Configuring firewall
 if [ "$iptables" = 'yes' ]; then
@@ -2024,9 +2034,8 @@ we hope that you enjoy using it as much as we do!
 Please feel free to contact us at any time if you have any questions,
 or if you encounter any bugs or problems:
 
-Documentation:  https://hestiacp.com/docs/introduction/getting-started.html
+Documentation:  https://docs.hestiacp.com/
 Forum:          https://forum.hestiacp.com/
-Discord:        https://discord.gg/nXRUZch
 GitHub:         https://www.github.com/hestiacp/hestiacp
 
 Note: Automatic updates are enabled by default. If you would like to disable them,
@@ -2051,7 +2060,7 @@ cat $tmpfile
 rm -f $tmpfile
 
 # Add welcome message to notification panel
-$HESTIA/bin/v-add-user-notification admin 'Welcome to Hestia Control Panel!' '<br>You are now ready to begin <a href="/add/user/">adding user accounts</a> and <a href="/add/web/">domains</a>. For help and assistance, view the <a href="https://hestiacp.com/docs/introduction/getting-started.html" target="_blank">documentation</a> or visit our <a href="https://forum.hestiacp.com/" target="_blank">user forum</a>.<br><br>Please report any bugs or issues via <a href="https://github.com/hestiacp/hestiacp/issues" target="_blank"><i class="fab fa-github"></i> GitHub</a>.<br><br><b>Have a wonderful day!</b><br><br><i class="fas fa-heart icon-red"></i> The Hestia Control Panel development team'
+$HESTIA/bin/v-add-user-notification admin 'Welcome to Hestia Control Panel!' '<p>You are now ready to begin adding <a href="/add/user/">user accounts</a> and <a href="/add/web/">domains</a>. For help and assistance, <a href="https://hestiacp.com/docs/" target="_blank">view the documentation</a> or <a href="https://forum.hestiacp.com/" target="_blank">visit our forum</a>.</p><p>Please <a href="https://github.com/hestiacp/hestiacp/issues" target="_blank">report any issues via GitHub</a>.</p><p class="u-text-bold">Have a wonderful day!</p><p><i class="fas fa-heart icon-red"></i> The Hestia Control Panel development team</p>'
 
 # Clean-up
 # Sort final configuration file
