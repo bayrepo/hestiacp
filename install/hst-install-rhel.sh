@@ -54,7 +54,7 @@ fi
 php_v="82"
 
 software="nginx
-  httpd.${arch} httpd-tools httpd-itk mod_fcgid mod_suphp
+  httpd.${arch} httpd-tools httpd-itk mod_fcgid mod_suphp mod_ssl
   php${php_v}-php.${arch} php${php_v}-php-cgi.${arch} php${php_v}-php-mysqlnd.${arch} php${php_v}-php-pgsql.${arch}
   php${php_v}-php-pdo php${php_v}-php-common php${php_v}-php-pecl-imagick php${php_v}-php-imap php${php_v}-php-ldap
   php${php_v}-php-pecl-apcu php${php_v}-php-pecl-zip php${php_v}-php-cli php${php_v}-php-opcache php${php_v}-php-xml
@@ -830,6 +830,7 @@ if [ "$apache" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/httpd-itk//")
 	software=$(echo "$software" | sed -e "s/mod_suphp//")
 	software=$(echo "$software" | sed -e "s/mod_fcgid//")
+	software=$(echo "$software" | sed -e "s/mod_ssl//")
 	software=$(echo "$software" | sed -e "s/php${php_v}-php.${arch}//")
 fi
 if [ "$vsftpd" = 'no' ]; then
@@ -982,6 +983,7 @@ systemctl restart sshd
 # Disable AWStats cron
 rm -f /etc/cron.d/awstats
 # Replace awstatst function
+mkdir -p /etc/logrotate.d/httpd-prerotate
 cp -f $HESTIA_INSTALL_DIR/logrotate/httpd-prerotate/* /etc/logrotate.d/httpd-prerotate/
 
 # Set directory color
