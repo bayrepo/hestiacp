@@ -37,6 +37,7 @@ Requires:          util-linux
 Requires:          zstd
 Requires:          jq
 Requires:          hestia-php
+Requires:          hestia
 Requires(post):    systemd
 Requires(preun):   systemd
 Requires(postun):  systemd

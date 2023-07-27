@@ -2,7 +2,7 @@
 %global _prefix         /usr/local/hestia/php
 
 Name:           hestia-php
-Version:        8.2.7
+Version:        8.2.8
 Release:        1%{dist}
 Summary:        Hestia internal PHP
 Group:          System Environment/Base
@@ -59,7 +59,7 @@ rm -f TSRM/tsrm_win32.h \
 %define _lto_cflags %{nil}
 %endif
 %configure --sysconfdir=%{_prefix}%{_sysconfdir} \
-		--with-libdir=lib/$(arch)-linux-gnu \
+		--with-libdir=%{_libdir} \
 		--enable-fpm --with-fpm-user=admin --with-fpm-group=admin \
 		--with-openssl \
 		--with-mysqli \
@@ -103,6 +103,9 @@ cp %{SOURCE3} %{buildroot}/usr/local/hestia/php/lib/
 %{_unitdir}/hestia-php.service
 
 %changelog
+* Sat Jul 22 2023 Raven <raven@sysadmins.ws> - 8.2.8-1
+- update PHP version to 8.2.8
+
 * Sat Jun  3 2023 Raven <raven@sysadmins.ws> - 8.2.7-1
 - update PHP version to 8.2.7
 - spec file cleanup

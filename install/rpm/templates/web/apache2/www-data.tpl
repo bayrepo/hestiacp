@@ -4,7 +4,7 @@
 # https://hestiacp.com/docs/server-administration/web-templates.html      #
 #=========================================================================#
 
-# phpMyAdmin and phpPgAdmin require access as www-data instead of user for security reasons
+# phpMyAdmin and phpPgAdmin require access as apache instead of user for security reasons
 <VirtualHost %ip%:%web_port%>
 
     ServerName %domain_idn%
@@ -34,5 +34,5 @@
     </Directory>
 
     IncludeOptional %home%/%user%/conf/web/%domain%/%web_system%.conf_*
-    IncludeOptional /etc/apache2/conf.d/*.inc
+    IncludeOptional /etc/httpd/conf.d/*.inc
 </VirtualHost>

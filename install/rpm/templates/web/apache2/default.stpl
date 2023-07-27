@@ -38,12 +38,12 @@
     <IfModule mod_ruid2.c>
         RMode config
         RUidGid %user% %group%
-        RGroups www-data
+        RGroups apache
     </IfModule>
     <IfModule mpm_itk.c>
         AssignUserID %user% %group%
     </IfModule>
 
     IncludeOptional %home%/%user%/conf/web/%domain%/%web_system%.ssl.conf_*
-    IncludeOptional /etc/apache2/conf.d/*.inc
+    IncludeOptional /etc/httpd/conf.d/*.inc
 </VirtualHost>

@@ -299,7 +299,7 @@ set_default_value 'vsftpd' 'yes'
 set_default_value 'proftpd' 'no'
 set_default_value 'named' 'yes'
 set_default_value 'mysql' 'yes'
-set_default_value 'mysqlclassic' 'no'
+set_default_value 'mysql8' 'no'
 set_default_value 'postgresql' 'no'
 set_default_value 'exim' 'yes'
 set_default_value 'dovecot' 'yes'
@@ -702,9 +702,9 @@ if [ "$mysql" = 'yes' ]; then
 	dnf config-manager --add-repo https://raw.githubusercontent.com/hestiacp/hestiacp/main/install/rpm/mysql/mariadb-$(arch).repo
 fi
 
-# Installing Mysql8 repo
+# Enabling MySQL module
 if [ "$mysql8" = 'yes' ]; then
-	echo "[ * ] Mysql 8"
+	echo "[ * ] MySQL 8"
 	if [ "$release" -eq 8 ]; then
 		dnf -y module enable mysql:8.0
 	fi
