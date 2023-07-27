@@ -2,12 +2,12 @@
 <div class="toolbar">
 	<div class="toolbar-inner">
 		<div class="toolbar-buttons">
-			<a href="/list/server/" class="button button-secondary" id="btn-back">
+			<a href="/edit/server/" class="button button-secondary" id="btn-back">
 				<i class="fas fa-arrow-left icon-blue"></i><?= _("Back") ?>
 			</a>
 		</div>
 		<div class="toolbar-buttons">
-			<button type="submit" class="button" form="vstobjects">
+			<button type="submit" class="button" form="main-form">
 				<i class="fas fa-floppy-disk icon-purple"></i><?= _("Save") ?>
 			</button>
 		</div>
@@ -16,12 +16,12 @@
 <!-- End toolbar -->
 
 <!-- Begin form -->
-<div class="container animate__animated animate__fadeIn">
+<div class="container">
 	<form
 		x-data="{
 			hide_docs: '<?= $v_hide_docs ?? "no" ?>',
 		}"
-		id="vstobjects"
+		id="main-form"
 		name="v_configure_server"
 		method="post"
 	>
@@ -29,7 +29,7 @@
 		<input type="hidden" name="save" value="save">
 
 		<div class="form-container">
-			<h1 class="form-title">
+			<h1 class="u-mb20">
 				<?= _("White Label Options") ?>
 			</h1>
 			<?php show_alert_message($_SESSION); ?>

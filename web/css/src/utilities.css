@@ -1,16 +1,6 @@
 /* Utilities
    ========================================================================== */
 
-.clearfix::before,
-.clearfix::after {
-	content: " ";
-	display: table;
-}
-
-.clearfix::after {
-	clear: both;
-}
-
 .u-block {
 	display: block !important;
 }
@@ -41,21 +31,31 @@
 	text-align: center !important;
 }
 
-.u-text-small {
-	font-size: 0.75rem !important;
+.u-text-center-desktop {
+	@media (--viewport-large) {
+		text-align: center !important;
+	}
 }
 
-.u-text-italic {
-	font-style: italic !important;
+.u-text-small {
+	font-size: 0.75rem !important;
 }
 
 .u-text-bold {
 	font-weight: bold !important;
 }
 
-.u-truncate {
+.u-text-truncate {
 	overflow: hidden !important;
 	text-overflow: ellipsis !important;
+	white-space: nowrap !important;
+}
+
+.u-text-break {
+	word-break: break-word !important;
+}
+
+.u-text-no-wrap {
 	white-space: nowrap !important;
 }
 
@@ -111,12 +111,12 @@
 	padding-top: 10px !important;
 }
 
-.u-pt18 {
-	padding-top: 18px !important;
-}
-
 .u-pl30 {
 	padding-left: 30px !important;
+}
+
+.u-pr30 {
+	padding-right: 30px !important;
 }
 
 .u-pos-relative {
@@ -137,6 +137,14 @@
 
 .u-min-height600 {
 	min-height: 600px !important;
+}
+
+.u-max-width200 {
+	max-width: 200px !important;
+}
+
+.u-max-width300 {
+	max-width: 300px !important;
 }
 
 .u-max-height300 {

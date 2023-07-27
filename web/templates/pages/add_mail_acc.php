@@ -7,7 +7,7 @@
 			</a>
 		</div>
 		<div class="toolbar-buttons">
-			<button type="submit" class="button" form="vstobjects">
+			<button type="submit" class="button" form="main-form">
 				<i class="fas fa-floppy-disk icon-purple"></i><?= _("Save") ?>
 			</button>
 		</div>
@@ -15,13 +15,13 @@
 </div>
 <!-- End toolbar -->
 
-<div class="container animate__animated animate__fadeIn">
+<div class="container">
 
 	<form
 		x-data="{
 			showAdvanced: <?= empty($v_adv) ? "false" : "true" ?>
 		}"
-		id="vstobjects"
+		id="main-form"
 		name="v_add_mail_acc"
 		method="post"
 	>
@@ -29,7 +29,7 @@
 		<input type="hidden" name="ok_acc" value="add">
 
 		<div class="form-container form-container-wide">
-			<h1 class="form-title"><?= _("Add Mail Account") ?></h1>
+			<h1 class="u-mb20"><?= _("Add Mail Account") ?></h1>
 			<?php show_alert_message($_SESSION); ?>
 			<div class="sidebar-right-grid">
 				<div class="sidebar-right-grid-content">
@@ -57,16 +57,14 @@
 						</div>
 					</div>
 					<p class="u-mb10"><?= _("Your password must have at least") ?>:</p>
-					<ul class="u-list-bulleted">
+					<ul class="u-list-bulleted u-mb20">
 						<li><?= _("8 characters long") ?></li>
 						<li><?= _("1 uppercase & 1 lowercase character") ?></li>
 						<li><?= _("1 number") ?></li>
 					</ul>
-					<div class="u-pt18 u-mb20">
-						<button x-on:click="showAdvanced = !showAdvanced" type="button" class="button button-secondary">
-							<?= _("Advanced Options") ?>
-						</button>
-					</div>
+					<button x-on:click="showAdvanced = !showAdvanced" type="button" class="button button-secondary u-mb20">
+						<?= _("Advanced Options") ?>
+					</button>
 					<div x-cloak x-show="showAdvanced" id="advtable">
 						<div class="u-mb10">
 							<label for="v_quota" class="form-label">
@@ -89,7 +87,7 @@
 							<label for="v_fwd" class="form-label">
 								<?= _("Forward to") ?> <span class="optional">(<?= _("One or more email addresses") ?>)</span>
 							</label>
-							<textarea class="form-control js-forward-to-textarea" name="v_fwd" id="v_fwd" <?php if($v_blackhole == 'yes') echo "disabled";?>><?=htmlentities(trim($v_fwd, "'"))?></textarea>
+							<textarea class="form-control js-forward-to-textarea" name="v_fwd" id="v_fwd" <?php if ($v_blackhole == 'yes') echo "disabled"; ?>><?= htmlentities(trim($v_fwd, "'")) ?></textarea>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input js-discard-all-mail" type="checkbox" name="v_blackhole" id="v_blackhole" <?php if ($v_blackhole == 'yes') echo 'checked' ?>>
@@ -107,7 +105,7 @@
 							<label for="v_rate" class="form-label">
 								<?= _("Rate Limit") ?> <span class="optional">(<?= _("email / hour") ?>)</span>
 							</label>
-							<input type="text" class="form-control" name="v_rate" id="v_rate" value="<?=htmlentities(trim($v_rate, "'"))?>" <?php if($_SESSION['userContext'] != "admin"){ echo "disabled";}?>>
+							<input type="text" class="form-control" name="v_rate" id="v_rate" value="<?= htmlentities(trim($v_rate, "'")) ?>" <?php if ($_SESSION['userContext'] != "admin"){ echo "disabled"; }?>>
 						</div>
 					</div>
 					<div class="u-mt15 u-mb20">

@@ -1,7 +1,8 @@
-#=======================================================================#
-# Default Web Domain Template                                           #
-# DO NOT MODIFY THIS FILE! CHANGES WILL BE LOST WHEN REBUILDING DOMAINS #
-#=======================================================================#
+#=========================================================================#
+# Default Web Domain Template                                             #
+# DO NOT MODIFY THIS FILE! CHANGES WILL BE LOST WHEN REBUILDING DOMAINS   #
+# https://hestiacp.com/docs/server-administration/web-templates.html      #
+#=========================================================================#
 
 server {
 	listen      %ip%:%web_port%;
@@ -18,13 +19,13 @@ server {
 		rewrite ^(.*) https://%domain%$1 permanent;
 	}
 
-	location /error/ {
-		alias   %home%/%user%/web/%domain%/document_errors/;
+	location ~* "/\.(htaccess|htpasswd)$" {
+		deny all;
+		return 404;
 	}
 
-	location ~* "/\.(htaccess|htpasswd)$" {
-		deny    all;
-		return  404;
+	location /error/ {
+		alias %home%/%user%/web/%domain%/document_errors/;
 	}
 
 	location /vstats/ {
@@ -32,7 +33,7 @@ server {
 		include %home%/%user%/web/%domain%/stats/auth.conf*;
 	}
 
-	include     /etc/nginx/conf.d/phpmyadmin.inc*;
-	include     /etc/nginx/conf.d/phppgadmin.inc*;
-	include     %home%/%user%/conf/web/%domain%/nginx.conf_*;
+	include /etc/nginx/conf.d/phpmyadmin.inc*;
+	include /etc/nginx/conf.d/phppgadmin.inc*;
+	include %home%/%user%/conf/web/%domain%/nginx.conf_*;
 }

@@ -7,21 +7,23 @@
 			</a>
 		</div>
 		<div class="toolbar-buttons">
-			<button type="submit" class="button" form="vstobjects">
-				<i class="fas fa-floppy-disk icon-purple"></i><?= _("Save") ?>
-			</button>
+			<?php if (($user_plain == "admin" && $accept === "true") || $user_plain !== "admin") { ?>
+				<button type="submit" class="button" form="main-form">
+					<i class="fas fa-floppy-disk icon-purple"></i><?= _("Save") ?>
+				</button>
+			<?php } ?>
 		</div>
 	</div>
 </div>
 <!-- End toolbar -->
 
-<div class="container animate__animated animate__fadeIn">
+<div class="container">
 
 	<form
 		x-data="{
 			hasSmtpRelay: <?= $v_smtp_relay == "true" ? "true" : "false" ?>
 		}"
-		id="vstobjects"
+		id="main-form"
 		name="v_add_mail"
 		method="post"
 	>
@@ -29,7 +31,7 @@
 		<input type="hidden" name="ok" value="Add">
 
 		<div class="form-container">
-			<h1 class="form-title"><?= _("Add Mail Domain") ?></h1>
+			<h1 class="u-mb20"><?= _("Add Mail Domain") ?></h1>
 			<?php show_alert_message($_SESSION); ?>
 			<?php if ($user_plain == "admin" && $accept !== "true") { ?>
 				<div class="alert alert-danger" role="alert">
@@ -38,7 +40,7 @@
 				</div>
 			<?php } ?>
 			<?php if ($user_plain == "admin" && empty($accept)) { ?>
-				<div class="u-side-by-side u-pt18">
+				<div class="u-side-by-side u-mt20">
 					<a href="/add/user/" class="button u-width-full u-mr10"><?= _("Add User") ?></a>
 					<a href="/add/mail/?accept=true" class="button button-danger u-width-full u-ml10"><?= _("Continue") ?></a>
 				</div>
@@ -60,7 +62,7 @@
 								echo ">".htmlentities(ucfirst($client))."</option>\n";
 								}
 							?>
-							<option value="" <?php if (empty($v_webmail) || $v_webmail == 'disabled' ){ echo "selected";}?>><?= _("Disabled") ?></option>
+							<option value="" <?php if (empty($v_webmail) || $v_webmail == 'disabled' ){ echo "selected"; }?>><?= _("Disabled") ?></option>
 						</select>
 					</div>
 				<?php } ?>
@@ -78,7 +80,7 @@
 						</label>
 					</div>
 				<?php } ?>
-				<?php if (!empty($_SESSION['ANTIVIRUS_SYSTEM'])) {?>
+				<?php if (!empty($_SESSION['ANTIVIRUS_SYSTEM'])) { ?>
 					<div class="form-check u-mb10">
 						<input class="form-check-input" type="checkbox" name="v_antivirus" id="v_antivirus" <?php if ((empty($v_antivirus)) || ($v_antivirus == 'yes')) echo 'checked'; ?>>
 						<label for="v_antivirus">

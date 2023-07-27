@@ -12,11 +12,6 @@
 	--alert-text-shadow: none;
 }
 
-b,
-strong {
-	font-weight: 600;
-}
-
 /* Top bar
    ========================================================================== */
 
@@ -29,9 +24,11 @@ strong {
 	text-shadow: none;
 }
 
-.top-bar-notifications-list {
-	box-shadow: none;
-	border: 1px solid #ccc;
+.top-bar-notifications-panel {
+	@media (--viewport-small) {
+		box-shadow: none;
+		border-color: #ccc;
+	}
 }
 
 .top-bar-menu-link {
@@ -57,31 +54,6 @@ strong {
 	background-color: #fff;
 }
 
-.units-header {
-	box-shadow: none;
-	background: #fafafa;
-}
-
-.l-unit:hover {
-	box-shadow: none;
-}
-
-.l-unit__stat-col--left {
-	& a,
-	& a:visited {
-		color: #5f7eb3;
-	}
-
-	& a:hover {
-		color: #5f7eb3;
-	}
-}
-
-.l-unit:hover,
-.units .l-unit:hover {
-	box-shadow: none;
-}
-
 /* Units table
    ========================================================================== */
 
@@ -103,6 +75,12 @@ strong {
 	}
 }
 
+.units-table-badge {
+	@media (--viewport-large) {
+		box-shadow: none;
+	}
+}
+
 /* Statistics
    ========================================================================== */
 
@@ -121,13 +99,6 @@ strong {
 	& .fas {
 		box-shadow: 0 2px 11px 0 rgb(0 0 0 / 50%);
 	}
-}
-
-/* Badge component
-   ========================================================================== */
-
-.badge {
-	box-shadow: none;
 }
 
 /* Collapse component

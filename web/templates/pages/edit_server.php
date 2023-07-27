@@ -13,7 +13,7 @@
 			</a>
 		</div>
 		<div class="toolbar-buttons">
-			<button type="submit" class="button" form="vstobjects">
+			<button type="submit" class="button" form="main-form">
 				<i class="fas fa-floppy-disk icon-purple"></i><?= _("Save") ?>
 			</button>
 		</div>
@@ -22,7 +22,7 @@
 <!-- End toolbar -->
 
 <!-- Begin form -->
-<div class="container animate__animated animate__fadeIn">
+<div class="container">
 	<form
 		x-data="{
 			timezone: '<?= $v_timezone ?? "" ?>',
@@ -38,7 +38,7 @@
 			showProtectionOptions: false,
 			showPolicyOptions: false,
 		}"
-		id="vstobjects"
+		id="main-form"
 		name="v_configure_server"
 		method="post"
 	>
@@ -46,7 +46,7 @@
 		<input type="hidden" name="save" value="save">
 
 		<div class="form-container">
-			<h1 class="form-title">
+			<h1 class="u-mb20">
 				<?= _("Configure Server") ?>
 			</h1>
 			<?php show_alert_message($_SESSION); ?>
@@ -115,7 +115,7 @@
 							<?php } ?>
 						</select>
 					</div>
-					<div class="form-check">
+					<div class="form-check u-mb10">
 						<input
 							class="form-check-input"
 							type="checkbox"
@@ -124,6 +124,18 @@
 						>
 						<label for="v_language_update">
 							<?= _("Set as default language for all users") ?>
+						</label>
+					</div>
+					<div class="form-check">
+						<input
+							class="form-check-input"
+							type="checkbox"
+							name="v_debug_mode"
+							id="v_debug_mode"
+							<?= $_SESSION["DEBUG_MODE"] == "true" ? "checked" : "" ?>
+						>
+						<label for="v_debug_mode">
+							<?= _("Enable debug mode") ?>
 						</label>
 					</div>
 				</div>
@@ -152,18 +164,6 @@
 					<p class="u-mb5">
 						<?= _("Options") ?>
 					</p>
-					<div class="form-check">
-						<input
-							class="form-check-input"
-							type="checkbox"
-							name="v_debug_mode"
-							id="v_debug_mode"
-							<?= $_SESSION["DEBUG_MODE"] == "true" ? "checked" : "" ?>
-						>
-						<label for="v_debug_mode">
-							<?= _("Enable debug mode") ?>
-						</label>
-					</div>
 					<div class="form-check">
 						<input
 							class="form-check-input"
@@ -238,7 +238,7 @@
 					<?php } ?>
 					<?php if (!empty($_SESSION["WEB_BACKEND"])) { ?>
 						<p>
-							<?= _("Backend Server") ?>:
+							<?= _("PHP Interpreter") ?>:
 							<span class="u-ml5">
 								<?= $_SESSION["WEB_BACKEND"] ?>
 							</span>
@@ -1183,26 +1183,6 @@
 						<h3 class="u-mt20 u-mb10">
 							<?= _("Users") ?>
 						</h3>
-						<?php if ($_SESSION["POLICY_SYSTEM_ENABLE_BACON"] === "true") { ?>
-							<div class="u-mb10">
-								<label for="v_policy_user_view_suspended" class="form-label">
-									<?= _("Allow suspended users to log in with read-only access") ?>
-									<span class="hint">(<?= _("Preview") ?>)</span>
-								</label>
-								<select
-									class="form-select"
-									name="v_policy_user_view_suspended"
-									id="v_policy_user_view_suspended"
-								>
-									<option value="yes">
-										<?= _("Yes") ?>
-									</option>
-									<option value="no" <?= $_SESSION["POLICY_USER_VIEW_SUSPENDED"] == "no" ? "selected" : "" ?>>
-										<?= _("No") ?>
-									</option>
-								</select>
-							</div>
-						<?php } ?>
 						<div class="u-mb10">
 							<label for="v_policy_user_edit_details" class="form-label">
 								<?= _("Allow users to edit their account details") ?>
@@ -1251,40 +1231,6 @@
 							</select>
 						</div>
 						<div class="u-mb10">
-							<label for="v_policy_sync_error_documents" class="form-label">
-								<?= _("Sync Error document templates on user rebuild") ?>
-							</label>
-							<select
-								class="form-select"
-								name="v_policy_sync_error_documents"
-								id="v_policy_sync_error_documents"
-							>
-								<option value="yes">
-									<?= _("Yes") ?>
-								</option>
-								<option value="no" <?= $_SESSION["POLICY_SYNC_ERROR_DOCUMENTS"] == "no" ? "selected" : "" ?>>
-									<?= _("No") ?>
-								</option>
-							</select>
-						</div>
-						<div class="u-mb10">
-							<label for="v_policy_sync_skeleton" class="form-label">
-								<?= _("Sync Skeleton templates") ?>
-							</label>
-							<select
-								class="form-select"
-								name="v_policy_sync_skeleton"
-								id="v_policy_sync_skeleton"
-							>
-								<option value="yes">
-									<?= _("Yes") ?>
-								</option>
-								<option value="no" <?= $_SESSION["POLICY_SYNC_SKELETON"] == "no" ? "selected" : "" ?>>
-									<?= _("No") ?>
-								</option>
-							</select>
-						</div>
-						<div class="u-mb10">
 							<label for="v_policy_user_view_logs" class="form-label">
 								<?= _("Allow users to view action and login history logs") ?>
 							</label>
@@ -1314,6 +1260,77 @@
 									<?= _("Yes") ?>
 								</option>
 								<option value="no" <?= $_SESSION["POLICY_USER_DELETE_LOGS"] == "no" ? "selected" : "" ?>>
+									<?= _("No") ?>
+								</option>
+							</select>
+						</div>
+						<?php if ($_SESSION["POLICY_SYSTEM_ENABLE_BACON"] === "true") { ?>
+							<div class="u-mb10">
+								<label for="v_policy_user_view_suspended" class="form-label">
+									<?= _("Allow suspended users to log in with read-only access") ?>
+									<span class="hint">(<?= _("Preview") ?>)</span>
+								</label>
+								<select
+									class="form-select"
+									name="v_policy_user_view_suspended"
+									id="v_policy_user_view_suspended"
+								>
+									<option value="yes">
+										<?= _("Yes") ?>
+									</option>
+									<option value="no" <?= $_SESSION["POLICY_USER_VIEW_SUSPENDED"] == "no" ? "selected" : "" ?>>
+										<?= _("No") ?>
+									</option>
+								</select>
+							</div>
+						<?php } ?>
+						<div class="u-mb10">
+							<label for="v_policy_backup_suspended_users" class="form-label">
+								<?= _("Allow suspended users to create new backups") ?>
+							</label>
+							<select
+								class="form-select"
+								name="v_policy_backup_suspended_users"
+								id="v_policy_backup_suspended_users"
+							>
+								<option value="yes">
+									<?= _("Yes") ?>
+								</option>
+								<option value="no" <?= $_SESSION["POLICY_BACKUP_SUSPENDED_USERS"] == "no" ? "selected" : "" ?>>
+									<?= _("No") ?>
+								</option>
+							</select>
+						</div>
+						<div class="u-mb10">
+							<label for="v_policy_sync_error_documents" class="form-label">
+								<?= _("Sync Error document templates on user rebuild") ?>
+							</label>
+							<select
+								class="form-select"
+								name="v_policy_sync_error_documents"
+								id="v_policy_sync_error_documents"
+							>
+								<option value="yes">
+									<?= _("Yes") ?>
+								</option>
+								<option value="no" <?= $_SESSION["POLICY_SYNC_ERROR_DOCUMENTS"] == "no" ? "selected" : "" ?>>
+									<?= _("No") ?>
+								</option>
+							</select>
+						</div>
+						<div class="u-mb10">
+							<label for="v_policy_sync_skeleton" class="form-label">
+								<?= _("Sync Skeleton templates") ?>
+							</label>
+							<select
+								class="form-select"
+								name="v_policy_sync_skeleton"
+								id="v_policy_sync_skeleton"
+							>
+								<option value="yes">
+									<?= _("Yes") ?>
+								</option>
+								<option value="no" <?= $_SESSION["POLICY_SYNC_SKELETON"] == "no" ? "selected" : "" ?>>
 									<?= _("No") ?>
 								</option>
 							</select>

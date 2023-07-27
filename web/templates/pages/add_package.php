@@ -7,7 +7,7 @@
 			</a>
 		</div>
 		<div class="toolbar-buttons">
-			<button type="submit" class="button" form="vstobjects">
+			<button type="submit" class="button" form="main-form">
 				<i class="fas fa-floppy-disk icon-purple"></i><?= _("Save") ?>
 			</button>
 		</div>
@@ -15,7 +15,7 @@
 </div>
 <!-- End toolbar -->
 
-<div class="container animate__animated animate__fadeIn">
+<div class="container">
 
 	<form
 		x-data="{
@@ -25,7 +25,7 @@
 			showDatabaseOptions: false,
 			showSystemOptions: false,
 		}"
-		id="vstobjects"
+		id="main-form"
 		name="v_add_package"
 		method="post"
 	>
@@ -33,7 +33,7 @@
 		<input type="hidden" name="ok" value="Add">
 
 		<div class="form-container">
-			<h1 class="form-title"><?= _("Add Package") ?></h1>
+			<h1 class="u-mb20"><?= _("Add Package") ?></h1>
 			<?php show_alert_message($_SESSION); ?>
 			<div class="u-mb10">
 				<label for="v_package" class="form-label"><?= _("Package Name") ?></label>
@@ -200,46 +200,46 @@
 						<input type="text" class="form-control" name="v_ns2" value="<?= htmlentities(trim($v_ns2, "'")) ?>">
 					</div>
 					<?php
-						if($v_ns3) {
+						if ($v_ns3) {
 							echo '<div class="u-side-by-side u-mb5">
 								<input type="text" class="form-control" name="v_ns3" value="'.htmlentities(trim($v_ns3, "'")).'">
 								<span class="u-ml10 js-remove-ns"><i class="fas fa-trash icon-dim icon-red"></i></span>
 							</div>';
 						}
-						if($v_ns4) {
+						if ($v_ns4) {
 							echo '<div class="u-side-by-side u-mb5">
 								<input type="text" class="form-control" name="v_ns4" value="'.htmlentities(trim($v_ns4, "'")).'">
 								<span class="u-ml10 js-remove-ns"><i class="fas fa-trash icon-dim icon-red"></i></span>
 							</div>';
 						}
-						if($v_ns5) {
+						if ($v_ns5) {
 							echo '<div class="u-side-by-side u-mb5">
 								<input type="text" class="form-control" name="v_ns5" value="'.htmlentities(trim($v_ns5, "'")).'">
 								<span class="u-ml10 js-remove-ns"><i class="fas fa-trash icon-dim icon-red"></i></span>
 							</div>';
 						}
-						if($v_ns6) {
+						if ($v_ns6) {
 							echo '<div class="u-side-by-side u-mb5">
 								<input type="text" class="form-control" name="v_ns6" value="'.htmlentities(trim($v_ns6, "'")).'">
 								<span class="u-ml10 js-remove-ns"><i class="fas fa-trash icon-dim icon-red"></i></span>
 							</div>';
 						}
-						if($v_ns7) {
+						if ($v_ns7) {
 							echo '<div class="u-side-by-side u-mb5">
 								<input type="text" class="form-control" name="v_ns7" value="'.htmlentities(trim($v_ns7, "'")).'">
 								<span class="u-ml10 js-remove-ns"><i class="fas fa-trash icon-dim icon-red"></i></span>
 							</div>';
 						}
-						if($v_ns8) {
+						if ($v_ns8) {
 							echo '<div class="u-side-by-side u-mb5">
 								<input type="text" class="form-control" name="v_ns8" value="'.htmlentities(trim($v_ns8, "'")).'">
 								<span class="u-ml10 js-remove-ns"><i class="fas fa-trash icon-dim icon-red"></i></span>
 							</div>';
 						}
 					?>
-					<div class="u-pt18 js-add-ns" <?php if ($v_ns8) echo 'style="display:none;"'; ?>>
-						<span class="form-link"><?= _("Add Name Server") ?></span>
-					</div>
+					<button type="button" class="form-link u-mt20 js-add-ns" <?php if ($v_ns8) echo 'style="display:none;"'; ?>>
+						<?= _("Add Name Server") ?>
+					</button>
 				<?php } ?>
 			</div>
 			<h2 x-on:click="showMailOptions = !showMailOptions" class="section-title">

@@ -36,6 +36,8 @@
 
 <div class="container">
 
+	<h1 class="u-text-center u-hide-desktop u-mt20 u-pr30 u-mb20 u-pl30"><?= _("Backups") ?></h1>
+
 	<div class="units-table js-units-container">
 		<div class="units-table-header">
 			<div class="units-table-cell">
@@ -43,10 +45,10 @@
 			</div>
 			<div class="units-table-cell"><?= _("File Name") ?></div>
 			<div class="units-table-cell"></div>
-			<div class="units-table-cell"><?= _("Date") ?></div>
-			<div class="units-table-cell"><?= _("Size") ?></div>
-			<div class="units-table-cell"><?= _("Type") ?></div>
-			<div class="units-table-cell"><?= _("Runtime") ?></div>
+			<div class="units-table-cell u-text-center"><?= _("Date") ?></div>
+			<div class="units-table-cell u-text-center"><?= _("Size") ?></div>
+			<div class="units-table-cell u-text-center"><?= _("Type") ?></div>
+			<div class="units-table-cell u-text-center"><?= _("Runtime") ?></div>
 		</div>
 
 		<!-- Begin user backup list item loop -->
@@ -67,14 +69,14 @@
 				if (!empty($data[$key]['CRON'])) $cron = _('Yes');
 				if (!empty($data[$key]['UDIR'])) $udir = _('Yes');
 		?>
-			<div class="units-table-row animate__animated animate__fadeIn js-unit">
+			<div class="units-table-row js-unit">
 				<div class="units-table-cell">
 					<div>
 						<input id="check<?= $i ?>" class="js-unit-checkbox" type="checkbox" title="<?= _("Select") ?>" name="backup[]" value="<?= $key ?>" <?= $display_mode ?>>
 						<label for="check<?= $i ?>" class="u-hide-desktop"><?= _("Select") ?></label>
 					</div>
 				</div>
-				<div class="units-table-cell u-text-bold">
+				<div class="units-table-cell units-table-heading-cell u-text-bold">
 					<span class="u-hide-desktop"><?= _("File Name") ?>:</span>
 					<?php if ($read_only === "true") { ?>
 						<?= $key ?>
@@ -90,18 +92,18 @@
 							<li class="units-table-row-action shortcut-d" data-key-action="href">
 								<a
 									class="units-table-row-action-link"
-									href="/download/backup/?backup=<?=$key?>&token=<?=$_SESSION['token']?>"
+									href="/download/backup/?backup=<?= $key ?>&token=<?= $_SESSION["token"] ?>"
 									title="<?= _("Download") ?>"
 								>
 									<i class="fas fa-file-arrow-down icon-lightblue"></i>
 									<span class="u-hide-desktop"><?= _("Download") ?></span>
 								</a>
 							</li>
-							<?php if ($read_only !== 'true') { ?>
+							<?php if ($read_only !== "true") { ?>
 								<li class="units-table-row-action shortcut-enter" data-key-action="href">
 									<a
 										class="units-table-row-action-link data-controls"
-										href="/list/backup/?backup=<?=$key?>&token=<?=$_SESSION['token']?>"
+										href="/list/backup/?backup=<?= $key ?>&token=<?= $_SESSION["token"] ?>"
 										title="<?= _("Restore") ?>"
 									>
 										<i class="fas fa-arrow-rotate-left icon-green"></i>
@@ -124,13 +126,13 @@
 						</ul>
 					<?php } ?>
 				</div>
-				<div class="units-table-cell">
+				<div class="units-table-cell u-text-center-desktop">
 					<span class="u-hide-desktop u-text-bold"><?= _("Date") ?>:</span>
 					<span class="u-text-bold">
 						<?= translate_date($data[$key]["DATE"]) ?>
 					</span>
 				</div>
-				<div class="units-table-cell">
+				<div class="units-table-cell u-text-center-desktop">
 					<span class="u-hide-desktop u-text-bold"><?= _("Size") ?>:</span>
 					<span class="u-text-bold">
 						<?= humanize_usage_size($data[$key]["SIZE"]) ?>
@@ -139,11 +141,11 @@
 						<?= humanize_usage_measure($data[$key]["SIZE"]) ?>
 					</span>
 				</div>
-				<div class="units-table-cell">
+				<div class="units-table-cell u-text-center-desktop">
 					<span class="u-hide-desktop u-text-bold"><?= _("Type") ?>:</span>
 					<?= $data[$key]["TYPE"] ?>
 				</div>
-				<div class="units-table-cell">
+				<div class="units-table-cell u-text-center-desktop">
 					<span class="u-hide-desktop u-text-bold"><?= _("Runtime") ?>:</span>
 					<?= humanize_time($data[$key]["RUNTIME"]) ?>
 				</div>

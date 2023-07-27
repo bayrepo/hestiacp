@@ -7,7 +7,7 @@
 			</a>
 		</div>
 		<div class="toolbar-buttons">
-			<button type="submit" class="button" form="vstobjects">
+			<button type="submit" class="button" form="main-form">
 				<i class="fas fa-floppy-disk icon-purple"></i><?= _("Save") ?>
 			</button>
 		</div>
@@ -15,13 +15,13 @@
 </div>
 <!-- End toolbar -->
 
-<div class="container animate__animated animate__fadeIn">
+<div class="container">
 
 	<form
 		x-data="{
 			hasAutoReply: <?= $v_autoreply == "yes" ? "true" : "false" ?>
 		}"
-		id="vstobjects"
+		id="main-form"
 		name="v_edit_mail_acc"
 		method="post"
 		class="<?= $v_status ?>"
@@ -30,7 +30,7 @@
 		<input type="hidden" name="save" value="save">
 
 		<div class="form-container form-container-wide">
-			<h1 class="form-title"><?= _("Edit Mail Account") ?></h1>
+			<h1 class="u-mb20"><?= _("Edit Mail Account") ?></h1>
 			<?php show_alert_message($_SESSION); ?>
 			<div class="sidebar-right-grid">
 				<div class="sidebar-right-grid-content">
@@ -55,12 +55,12 @@
 						</div>
 					</div>
 					<p class="u-mb10"><?= _("Your password must have at least") ?>:</p>
-					<ul class="u-list-bulleted">
+					<ul class="u-list-bulleted u-mb20">
 						<li><?= _("8 characters long") ?></li>
 						<li><?= _("1 uppercase & 1 lowercase character") ?></li>
 						<li><?= _("1 number") ?></li>
 					</ul>
-					<div class="u-pt18 u-mb10">
+					<div class="u-mb10">
 						<label for="v_send_email" class="form-label">
 							<?= _("Email login credentials to:") ?>
 						</label>
@@ -99,7 +99,7 @@
 						<label for="v_fwd" class="form-label">
 							<?= _("Forward to") ?> <span class="optional">(<?= _("one or more email addresses") ?>)</span>
 						</label>
-						<textarea class="form-control" name="v_fwd" id="v_fwd" <?php if($v_blackhole == 'yes') echo "disabled";?>><?=htmlentities(trim($v_fwd, "'"))?></textarea>
+						<textarea class="form-control" name="v_fwd" id="v_fwd" <?php if ($v_blackhole == 'yes') echo "disabled"; ?>><?= htmlentities(trim($v_fwd, "'")) ?></textarea>
 					</div>
 					<div class="form-check u-mb10">
 						<input x-model="hasAutoReply" class="form-check-input" type="checkbox" name="v_autoreply" id="v_autoreply">
@@ -117,7 +117,7 @@
 						<label for="v_rate" class="form-label">
 							<?= _("Rate Limit") ?> <span class="optional">(<?= _("email / hour") ?>)</span>
 						</label>
-						<input type="text" class="form-control" name="v_rate" id="v_rate" value="<?=htmlentities(trim($v_rate, "'"))?>" <?php if($_SESSION['userContext'] != "admin"){ echo "disabled";}?>>
+						<input type="text" class="form-control" name="v_rate" id="v_rate" value="<?= htmlentities(trim($v_rate, "'")) ?>" <?php if ($_SESSION['userContext'] != "admin"){ echo "disabled"; }?>>
 					</div>
 				</div>
 				<div class="sidebar-right-grid-sidebar">

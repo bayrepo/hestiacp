@@ -116,8 +116,9 @@ mv %{buildroot}/usr/local/hestia/nginx/sbin/nginx %{buildroot}/usr/local/hestia/
 
 
 %changelog
-* Sat Jul 22 2023 Raven <raven@sysadmins.ws> - 1.25.1-1
-- 1.25.1
+* Fri Jun 16 2023 myrevery <github@myrevery.com> - 1.25.1-1
+- Upgrade to NGINX 1.25.1 mainline version
+- Implement TLS 1.3 0-RTT anti-replay
 
 * Sun May 14 2023 Istiak Ferdous <hello@istiak.com> - 1.24.0-1
 - 1.24.0-1

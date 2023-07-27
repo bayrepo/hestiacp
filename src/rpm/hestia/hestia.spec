@@ -33,6 +33,7 @@ Provides:          hestia = %{version}-%{release}
 Conflicts:         redhat-release < 8
 Conflicts:         vesta
 
+
 %description
 This package contains the Hestia Control Panel.
 
