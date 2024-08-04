@@ -42,6 +42,16 @@ fi
 
 for service in $service_list; do
 	if [ "$service" = "iptables" ]; then
+		if [ -f /etc/redhat-release ]; then
+			RES=$(systemctl is-enabled nftables | grep enabled)
+			if [ -z "$RES" ]; then
+				systemctl enable nftables --now
+			fi
+			systemctl status nftables
+			if [ $? -ne 0 ]; then
+				systemctl start nftables
+			fi
+		fi
 		$BIN/v-update-firewall
 	else
 		systemctl start "$service"

@@ -36,6 +36,21 @@ systemctl restart apache2
 IncludeOptional /etc/apache2/conf.d/*.inc
 ```
 
+### For httpd
+
+```bash
+nano /etc/httpd/conf.h.d/ip.conf
+
+# Add the following code before both </VirtualHost> closing tags
+IncludeOptional /etc/httpd/conf.h.d/*.inc
+
+# Restart apache2
+systemctl restart httpd
+
+# You can also add the following in /etc/apache2.conf instead
+IncludeOptional /etc/httpd/conf.h.d/*.inc
+```
+
 ### For Nginx
 
 ```bash

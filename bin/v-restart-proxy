@@ -70,13 +70,20 @@ if [ -f "$HESTIA/web/inc/nginx_proxy" ]; then
 	if [ "$1" = 'background' ]; then
 		# Restart system
 		sleep 15
-
 		# Preform a check if Nginx is valid as reload doesn't throw an error / exit
 		if [ "$DEBUG_MODE" = "true" ]; then
 			echo "[ $date | $PROXY_SYSTEM ]" >> /var/log/hestia/debug.log 2>&1
-			service $PROXY_SYSTEM configtest >> /var/log/hestia/debug.log 2>&1
+			if [ -f /etc/redhat-release ]; then
+				$BIN/v-check-service-config "$PROXY_SYSTEM" /var/log/hestia/debug.log
+			else
+				service $PROXY_SYSTEM configtest >> /var/log/hestia/debug.log 2>&1
+			fi
 		else
-			service $PROXY_SYSTEM configtest > /dev/null 2>&1
+			if [ -f /etc/redhat-release ]; then
+				$BIN/v-check-service-config "$PROXY_SYSTEM" /dev/null
+			else
+				service $PROXY_SYSTEM configtest > /dev/null 2>&1
+			fi
 		fi
 		if [ $? -ne 0 ]; then
 			send_email_report
@@ -100,9 +107,17 @@ else
 	# Preform a check if Nginx is valid as reload doesn't throw an error / exit
 	if [ "$DEBUG_MODE" = "true" ]; then
 		echo "[ $date | $PROXY_SYSTEM ]" >> /var/log/hestia/debug.log 2>&1
-		service $PROXY_SYSTEM configtest >> /var/log/hestia/debug.log 2>&1
+		if [ -f /etc/redhat-release ]; then
+			$BIN/v-check-service-config "$PROXY_SYSTEM" /var/log/hestia/debug.log
+		else
+			service $PROXY_SYSTEM configtest >> /var/log/hestia/debug.log 2>&1
+		fi
 	else
-		service $PROXY_SYSTEM configtest > /dev/null 2>&1
+		if [ -f /etc/redhat-release ]; then
+			$BIN/v-check-service-config "$PROXY_SYSTEM" /dev/null
+		else
+			service $PROXY_SYSTEM configtest > /dev/null 2>&1
+		fi
 	fi
 	if [ $? -ne 0 ]; then
 		send_email_report

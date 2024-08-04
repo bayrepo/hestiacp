@@ -8,7 +8,7 @@ else
 	apt -y install curl wget
 fi
 
-curl https://raw.githubusercontent.com/hestiacp/hestiacp/$branch/src/hst_autocompile.sh > /tmp/hst_autocompile.sh
+curl https://dev.putey.net/bayrepo/hestiacp/raw/branch/master/src/hst_autocompile.sh > /tmp/hst_autocompile.sh
 chmod +x /tmp/hst_autocompile.sh
 
 mkdir -p /opt/hestiacp

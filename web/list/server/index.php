@@ -125,7 +125,11 @@ unset($output);
 $phpfpm = [];
 foreach ($php as $version) {
 	$phpfpm[] = "php" . $version . "-fpm";
+	$phpfpm[] = "php" . $version . "-php-fpm";
 }
+$clamav_names = [];
+$clamav_names[] = "clamav-daemon";
+$clamav_names[] = "clamd";
 
 exec(HESTIA_CMD . "v-list-sys-services json", $output, $return_var);
 $data = json_decode(implode("", $output), true);

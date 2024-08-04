@@ -65,6 +65,12 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 		ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf.d/phpmyadmin.conf
 	fi
 
+	if [ "$WEB_SYSTEM" == "httpd" ]; then
+		cp -f $HESTIA_INSTALL_DIR/pma/apache.conf /etc/phpmyadmin/
+		rm /etc/httpd/conf.h.d/phpmyadmin.conf
+		ln -s /etc/phpmyadmin/apache.conf /etc/httpd/conf.h.d/phpmyadmin.conf
+	fi
+
 	PASS=$(generate_password)
 
 	echo "[ * ] Installing phpMyAdmin version v$pma_v..."

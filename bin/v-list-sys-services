@@ -86,13 +86,23 @@ get_srv_state() {
 	rtime="0"
 
 	# Searching related pids
-	if [ -z $3 ]; then
-		pids=$(pidof $name | tr ' ' '|')
+	if [ -f /etc/redhat-release ] && [ "$name" = "php-fpm" ]; then
+		pids=''
+		for php_pid in $(pidof php-fpm); do
+			process_info=$(ps -p "$php_pid" -o args | tail -n1 | grep "$srv")
+			if [ -n "$process_info" ]; then
+				pids="${pids}|${php_pid}"
+			fi
+		done
 	else
-		pids=$(pidof -x $name | tr ' ' '|')
-	fi
-	if [ -z "$pids" ] && [ "$name" != 'nginx' ]; then
-		pids=$(pgrep $name | tr '\n' '|')
+		if [ -z $3 ]; then
+			pids=$(pidof $name | tr ' ' '|')
+		else
+			pids=$(pidof -x $name | tr ' ' '|')
+		fi
+		if [ -z "$pids" ] && [ "$name" != 'nginx' ]; then
+			pids=$(pgrep $name | tr '\n' '|')
+		fi
 	fi
 
 	# Prevent from an SSH false positive when there is a TTY or SFTP connection but service is down
@@ -164,14 +174,25 @@ fi
 
 # Checking PHP intepreter
 if [ -n "$WEB_BACKEND" ] && [ "$WEB_BACKEND" != 'remote' ]; then
-	php_versions=$(ls /usr/sbin/php*fpm* | cut -d'/' -f4 | sed 's|php-fpm||')
-	for version in $php_versions; do
-		proc_name="php-fpm${version}"
-		service_name="php${version}-fpm"
-		get_srv_state "$proc_name"
-		data="$data\nNAME='$service_name' SYSTEM='php interpreter' STATE='$state'"
-		data="$data CPU='$cpu' MEM='$mem' RTIME='$rtime'"
-	done
+	if [ -f /etc/redhat-release ]; then
+		php_versions=$(ls /opt/remi/php*/root/sbin/php-fpm | cut -d'/' -f4 | sed 's|php||')
+		for version in $php_versions; do
+			proc_name="php-fpm"
+			service_name="php${version}"
+			get_srv_state "$proc_name"
+			data="$data\nNAME='$service_name-php-fpm' SYSTEM='php interpreter' STATE='$state'"
+			data="$data CPU='$cpu' MEM='$mem' RTIME='$rtime'"
+		done
+	else
+		php_versions=$(ls /usr/sbin/php*fpm* | cut -d'/' -f4 | sed 's|php-fpm||')
+		for version in $php_versions; do
+			proc_name="php-fpm${version}"
+			service_name="php${version}-fpm"
+			get_srv_state "$service_name" "$proc_name"
+			data="$data\nNAME='$service_name' SYSTEM='php interpreter' STATE='$state'"
+			data="$data CPU='$cpu' MEM='$mem' RTIME='$rtime'"
+		done
+	fi
 fi
 
 # Checking WEB Proxy
@@ -209,6 +230,11 @@ if [ -n "$ANTIVIRUS_SYSTEM" ] && [ "$ANTIVIRUS_SYSTEM" != 'remote' ]; then
 	if [ -d "/etc/sysconfig" ]; then
 		if [ "$ANTIVIRUS_SYSTEM" == 'clamav' ]; then
 			ANTIVIRUS_SYSTEM='clamd'
+		fi
+		if [ -f /etc/redhat-release ]; then
+			if [ "$ANTIVIRUS_SYSTEM" == 'clamav-daemon' ]; then
+				ANTIVIRUS_SYSTEM='clamd'
+			fi
 		fi
 		get_srv_state "$ANTIVIRUS_SYSTEM"
 	else
@@ -302,8 +328,15 @@ fi
 # Checking FIREWALL system
 if [ -n "$FIREWALL_SYSTEM" ] && [ "$FIREWALL_SYSTEM" != 'remote' ]; then
 	state="stopped"
-	if $(iptables -S INPUT | grep -qx '\-P INPUT DROP'); then
-		state="running"
+	if [ -f /etc/redhat-release ]; then
+		RES=$(systemctl is-active nftables | grep -E "^active")
+		if [ -n "$RES" ]; then
+			state="running"
+		fi
+	else
+		if $(iptables -S INPUT | grep -qx '\-P INPUT DROP'); then
+			state="running"
+		fi
 	fi
 	data="$data\nNAME='$FIREWALL_SYSTEM' SYSTEM='firewall'"
 	data="$data STATE='$state' CPU='0' MEM='0' RTIME='0'"

@@ -35,7 +35,7 @@ maxretry = 5
 enabled  = true
 filter   = hestia
 action   = hestia[name=HESTIA]
-logpath  = /var/log/hestia/secure
+logpath  = /var/log/messages
 maxretry = 5
 
 [roundcube-auth]

@@ -85,9 +85,9 @@ shell_list() {
 
 # Checking official latest version
 if [ -f '/etc/redhat-release' ]; then
-	hestia_v=$(dnf list hestia | grep hestia | awk '{print $2}' | cut -f 1 -d '-')
-	nginx_v=$(dnf list hestia-nginx | grep hestia-nginx | awk '{print $2}' | cut -f 1 -d '-')
-	php_v=$(dnf list hestia-php | grep hestia-php | awk '{print $2}' | cut -f 1 -d '-')
+	hestia_v=$(dnf list hestia --available | grep -v '.src' | grep hestia | awk '{print $2}' | cut -f 1 -d '-')
+	nginx_v=$(dnf list hestia-nginx --available | grep -v '.src' | grep hestia-nginx | awk '{print $2}' | cut -f 1 -d '-')
+	php_v=$(dnf list hestia-php --available | grep -v '.src' | grep hestia-php | awk '{print $2}' | cut -f 1 -d '-')
 else
 	hestia_v=$(apt-cache policy hestia | grep Candidate | cut -d ':' -f 2 | xargs)
 	nginx_v=$(apt-cache policy hestia-nginx | grep Candidate | cut -d ':' -f 2 | xargs)

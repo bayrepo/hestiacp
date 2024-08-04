@@ -9,6 +9,9 @@
 restart=$1
 # For backward compatibility might change in the feature
 version=$2
+if [ -f "/etc/redhat-release" ]; then
+	version="${version//./}"
+fi
 
 #----------------------------------------------------------#
 #                Variables & Functions                     #
@@ -55,10 +58,21 @@ tmpfile=$(mktemp)
 if [ -z "$version" ]; then
 	# Substitute php-fpm service name formats
 	for version in $($BIN/v-list-sys-php plain); do
-		v_php="php$version-fpm"
-		if [ ! -f "/etc/php/${version}/fpm/pool.d/dummy.conf" ]; then
-			cp -f "$HESTIA_INSTALL_DIR/php-fpm/dummy.conf" "/etc/php/${version}/fpm/pool.d/"
-			sed -i "s/9999/99${version//./}/g" "/etc/php/${version}/fpm/pool.d/dummy.conf"
+		if [ -f /etc/redhat-release ]; then
+			v_php="php$version-php-fpm"
+		else
+			v_php="php$version-fpm"
+		fi
+		if [ -f /etc/redhat-release ]; then
+			if [ ! -f "/etc/opt/remi/php${version}/php-fpm.d/dummy.conf" ]; then
+				cp -f $HESTIA_INSTALL_DIR/php-fpm/dummy.conf /etc/opt/remi/php${version}/php-fpm.d/
+				sed -i "s/9999/99$v_tpl/g" /etc/opt/remi/php${version}/php-fpm.d/dummy.conf
+			fi
+		else
+			if [ ! -f "/etc/php/${version}/fpm/pool.d/dummy.conf" ]; then
+				cp -f "$HESTIA_INSTALL_DIR/php-fpm/dummy.conf" "/etc/php/${version}/fpm/pool.d/"
+				sed -i "s/9999/99${version//./}/g" "/etc/php/${version}/fpm/pool.d/dummy.conf"
+			fi
 		fi
 
 		$BIN/v-restart-service "$v_php" "$restart"
@@ -68,7 +82,11 @@ if [ -z "$version" ]; then
 		fi
 	done
 else
-	v_php="php$version-fpm"
+	if [ -f /etc/redhat-release ]; then
+		v_php="php$version-php-fpm"
+	else
+		v_php="php$version-fpm"
+	fi
 	$BIN/v-restart-service "$v_php" "$restart"
 	if [ $? -ne 0 ]; then
 		send_email_report

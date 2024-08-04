@@ -13,7 +13,7 @@ export default {
 		return {
 			pageloader: false,
 			hestia_wget:
-				"wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh",
+				"wget https://dev.putey.net/bayrepo/hestiacp/raw/branch/master/install/hst-install.sh",
 			hestia_install: "sudo bash hst-install.sh",
 			installStr: "",
 		};

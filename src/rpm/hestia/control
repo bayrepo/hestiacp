@@ -1,0 +1,14 @@
+Source: hestia
+Package: hestia
+Priority: optional
+Version: 1.9.0~alpha
+Section: admin
+Maintainer: HestiaCP <info@hestiacp.com>
+Homepage: https://www.hestiacp.com
+Architecture: amd64
+Depends: bash, awk, sed, acl, sysstat, setpriv | util-linux (>= 2.33), zstd, lsb-release, idn2, jq
+Description: hestia
+ hestia is an open source hosting control panel.
+ hestia has a clean and focused interface without the clutter.
+ hestia has the latest of very innovative technologies.
+ hestia is a fork from VestaCP, special thanks to vestacp.com and Serghey Rodin

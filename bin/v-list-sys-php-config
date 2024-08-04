@@ -63,10 +63,18 @@ csv_list() {
 #----------------------------------------------------------#
 
 # Defining config path
-config_path=$(find /etc/php* -name php.ini)
+if [ -f /etc/redhat-release ]; then
+	config_path=$(find /etc/opt/remi/php* -name php.ini)
+else
+	config_path=$(find /etc/php* -name php.ini)
+fi
 config_count=$(echo "$config_path" | wc -l)
 if [ "$config_count" -gt 1 ]; then
-	multiphp_versions=$(ls -d /etc/php/*/fpm/pool.d 2> /dev/null | wc -l)
+	if [ -f /etc/redhat-release ]; then
+		multiphp_versions=$(ls -d /etc/opt/remi/php*/php-fpm.d 2> /dev/null | wc -l)
+	else
+		multiphp_versions=$(ls -d /etc/php/*/fpm/pool.d 2> /dev/null | wc -l)
+	fi
 	if [ "$WEB_BACKEND" = 'php-fpm' ] || [ "$multiphp_versions" -gt 0 ]; then
 		config_path=$(echo "$config_path" | grep fpm)
 	else

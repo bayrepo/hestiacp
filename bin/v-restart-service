@@ -38,6 +38,10 @@ if [ "$DEBUG_MODE" = "true" ]; then
 	log="/var/log/hestia/debug.log"
 fi
 
+if [ "$service" = "cron" ] && [ -f /etc/redhat-release ]; then
+	service="crond"
+fi
+
 # Multi-instance service restart request handling
 if [ "$service" = "php-fpm" ]; then
 	service_list=''

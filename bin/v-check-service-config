@@ -1,0 +1,51 @@
+#!/bin/bash
+# info: check service config
+# options: [SERVICE NAME]
+#
+# example: v-restart-web
+#
+# This function return status of service check config.
+
+#----------------------------------------------------------#
+#                Variables & Functions                     #
+#----------------------------------------------------------#
+
+# Includes
+# shellcheck source=/etc/hestiacp/hestia.conf
+source /etc/hestiacp/hestia.conf
+# shellcheck source=/usr/local/hestia/func/main.sh
+source $HESTIA/func/main.sh
+# load config file
+source_conf "$HESTIA/conf/hestia.conf"
+
+date=$(date +"%Y-%m-%d %H:%M:%S")
+DEBUG_LOG_FILE="/var/log/hestia/debug.log"
+
+[[ -f /etc/redhat-release ]] || exit 0
+
+[[ -n "$1" ]] || exit 1
+
+[[ -n "$2" ]] || DEBUG_LOG_FILE="$2"
+
+SERVICE_NAME="$1"
+
+case "$SERVICE_NAME" in
+nginx )
+    /usr/sbin/nginx -t >> "$DEBUG_LOG_FILE" 2>&1
+    V_RESULT=$?
+    exit $V_RESULT
+;;
+httpd )
+    /usr/sbin/httpd -t >> "$DEBUG_LOG_FILE" 2>&1
+    V_RESULT=$?
+    exit $V_RESULT
+;;
+* )
+    exit 0
+;;
+esac
+
+# Something like error, we shouldn't be here
+exit 1
+
+

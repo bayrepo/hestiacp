@@ -1,0 +1,26 @@
+#!/bin/bash
+# info: script for rpm package hook for correct rights checking
+# options: [NONE]
+#
+# This function check needed rights for stndar5d service configurations
+
+#----------------------------------------------------------#
+#                Variables & Functions                     #
+#----------------------------------------------------------#
+
+# Includes
+# shellcheck source=/etc/hestiacp/hestia.conf
+source /etc/hestiacp/hestia.conf
+# shellcheck source=/usr/local/hestia/func/main.sh
+source $HESTIA/func/main.sh
+# load config file
+source_conf "$HESTIA/conf/hestia.conf"
+# load config file
+source_conf "$HESTIA/install/upgrade/upgrade.conf"
+
+if [ -e /etc/ssh/sshd_config ]; then
+    stat -c "%a" /etc/ssh/sshd_config | grep -E "[0-9][4-7][4-7]"
+    if [ $? -ne 0 ]; then
+        chmod go+r /etc/ssh/sshd_config
+    fi
+fi

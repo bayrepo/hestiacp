@@ -221,13 +221,27 @@ rebuild_user_conf() {
 
 # WEB domain rebuild
 rebuild_web_domain_conf() {
-
-	# Ensure that global domain folders are available
-	if [ ! -d /etc/$WEB_SYSTEM/conf.d/domains ]; then
-		mkdir -p /etc/$WEB_SYSTEM/conf.d/domains
+	WWW_USER="www-data"
+	if [ -f /etc/redhat-release ]; then
+    	WWW_USER="apache"
 	fi
-	if [ ! -d /etc/$PROXY_SYSTEM/conf.d/domains ]; then
-		mkdir -p /etc/$PROXY_SYSTEM/conf.d/domains
+
+	if [ "$WEB_SYSTEM" = "httpd" ]; then
+		confd="conf.h.d"
+	else
+		confd="conf.d"
+	fi
+	if [ "$PROXY_SYSTEM" = "httpd" ]; then
+		pconfd="conf.h.d"
+	else
+		pconfd="conf.d"
+	fi
+	# Ensure that global domain folders are available
+	if [ ! -d /etc/$WEB_SYSTEM/$confd/domains ]; then
+		mkdir -p /etc/$WEB_SYSTEM/$confd/domains
+	fi
+	if [ ! -d /etc/$PROXY_SYSTEM/$pconfd/domains ]; then
+		mkdir -p /etc/$PROXY_SYSTEM/$pconfd/domains
 	fi
 
 	syshealth_repair_web_config
@@ -236,11 +250,11 @@ rebuild_web_domain_conf() {
 	prepare_web_domain_values
 
 	# Remove old web configuration files
-	if [ -f /etc/$WEB_SYSTEM/conf.d/$domain.conf ]; then
-		rm -f /etc/$WEB_SYSTEM/conf.d/$domain*.conf
+	if [ -f /etc/$WEB_SYSTEM/$confd/$domain.conf ]; then
+		rm -f /etc/$WEB_SYSTEM/$confd/$domain*.conf
 	fi
-	if [ -f /etc/$PROXY_SYSTEM/conf.d/$domain.conf ]; then
-		rm -f /etc/$PROXY_SYSTEM/conf.d/$domain*.conf
+	if [ -f /etc/$PROXY_SYSTEM/$pconfd/$domain.conf ]; then
+		rm -f /etc/$PROXY_SYSTEM/$pconfd/$domain*.conf
 	fi
 
 	# Temporary allow write permissions to owner
@@ -469,7 +483,7 @@ rebuild_web_domain_conf() {
 		$HOMEDIR/$user/web/$domain/document_errors
 	chmod 640 /var/log/$WEB_SYSTEM/domains/$domain.*
 
-	chown --no-dereference $user:www-data $HOMEDIR/$user/web/$domain/public_*html
+	chown --no-dereference $user:$WWW_USER $HOMEDIR/$user/web/$domain/public_*html
 }
 # DNS domain rebuild
 rebuild_dns_domain_conf() {

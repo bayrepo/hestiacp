@@ -14,7 +14,11 @@ BACKUP_DISK_LIMIT=95
 BACKUP_LA_LIMIT=$(cat /proc/cpuinfo | grep processor | wc -l)
 RRD_STEP=300
 BIN=$HESTIA/bin
-HESTIA_INSTALL_DIR="$HESTIA/install/deb"
+if [ -f /etc/redhat-release ]; then
+	HESTIA_INSTALL_DIR="$HESTIA/install/rpm"
+else
+	HESTIA_INSTALL_DIR="$HESTIA/install/deb"
+fi
 HESTIA_COMMON_DIR="$HESTIA/install/common"
 HESTIA_BACKUP="/root/hst_backups/$(date +%d%m%Y%H%M)"
 HESTIA_PHP="$HESTIA/php/bin/php"
@@ -24,7 +28,7 @@ MAILTPL=$HESTIA/data/templates/mail
 DNSTPL=$HESTIA/data/templates/dns
 RRD=$HESTIA/web/rrd
 SENDMAIL="$HESTIA/web/inc/mail-wrapper.php"
-HESTIA_GIT_REPO="https://raw.githubusercontent.com/hestiacp/hestiacp"
+HESTIA_GIT_REPO="https://dev.putey.net/bayrepo/hestiacp"
 HESTIA_THEMES="$HESTIA/web/css/themes"
 HESTIA_THEMES_CUSTOM="$HESTIA/web/css/themes/custom"
 SCRIPT="$(basename $0)"
@@ -1711,4 +1715,19 @@ search_command_arg_position() {
 	done <<< "$command_options"
 
 	echo "$position"
+}
+
+# Convert version X.X to XX
+convert_dot_version_to_non_dot() {
+	version="$1"
+	echo "${version//./}"
+}
+
+# Get conf,d name according to web system
+get_conf_d_name(){
+	if [ "$1" = "httpd" ]; then
+		echo "conf.h.d"
+	else
+		echo "conf.d"
+	fi
 }

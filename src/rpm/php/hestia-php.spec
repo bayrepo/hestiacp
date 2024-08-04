@@ -7,7 +7,7 @@ Release:        1%{dist}
 Summary:        Hestia internal PHP
 Group:          System Environment/Base
 URL:            https://www.hestiacp.com
-Source0:        https://www.php.net/distributions/php-%{version}.tar.xz
+Source0:        https://www.php.net/distributions/php-%{version}.tar.gz
 Source1:        hestia-php.service
 Source2:        php-fpm.conf
 Source3:        php.ini

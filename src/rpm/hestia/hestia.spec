@@ -2,8 +2,8 @@
 %global _hardened_build 1
 
 Name:              hestia
-Version:           1.8.0~alpha
-Release:           1%{dist}
+Version:           1.8.4
+Release:           1%{dist}.bayrepo.1
 Summary:           Hestia Control Panel
 Group:             System Environment/Base
 License:           GPLv3
@@ -25,6 +25,7 @@ Requires:          sysstat
 Requires:          util-linux
 Requires:          zstd
 Requires:          jq
+Requires:          util-linux-user
 Requires(post):    systemd
 Requires(preun):   systemd
 Requires(postun):  systemd
@@ -83,6 +84,7 @@ if [ -e "/usr/local/hestia/data/users/admin" ]; then
     ###############################################################
 
     # Load upgrade functions and refresh variables/configuration
+    source /usr/local/hestia/func/main.sh
     source /usr/local/hestia/func/upgrade.sh
     upgrade_refresh_config
 
@@ -145,7 +147,7 @@ if [ -e "/usr/local/hestia/data/users/admin" ]; then
 	update_whitelabel_logo | tee -a $LOG
 
     # Set new version number in hestia.conf
-    upgrade_set_version
+    upgrade_set_version $new_version
 
     # Perform account and domain rebuild to ensure configuration files are correct
     upgrade_rebuild_users
@@ -163,6 +165,12 @@ fi
 %postun
 %systemd_postun_with_restart hestia.service
 
+%triggerin -- openssh-server
+/usr/local/hestia/bin/v-package-hook-checks
+
+%posttrans
+/usr/local/hestia/bin/v-package-hook-checks
+
 %files
 %defattr(-,root,root)
 %attr(755,root,root) /usr/local/hestia
@@ -170,6 +178,10 @@ fi
 %{_tmpfilesdir}/%{name}.conf
 
 %changelog
+* Fri Apr 5 2024 Alexey Berezhok <a@bayrepo.ru> - 1.8.1-1.bayrepo.2
+- Added fixes in rpm based installation
+- Added MSVSphere 9/8 support
+
 * Sun May 14 2023 Istiak Ferdous <hello@istiak.com> - 1.8.0-1
 - HestiaCP RHEL 9 support
 

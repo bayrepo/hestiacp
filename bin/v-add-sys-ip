@@ -128,9 +128,12 @@ TIME='$time'
 DATE='$date'" > $HESTIA/data/ips/$ip
 chmod 660 $HESTIA/data/ips/$ip
 
+confd=$(get_conf_d_name "$WEB_SYSTEM")
+pconfd=$(get_conf_d_name "$PROXY_SYSTEM")
+
 # WEB support
 if [ -n "$WEB_SYSTEM" ]; then
-	web_conf="/etc/$WEB_SYSTEM/conf.d/$ip.conf"
+	web_conf="/etc/$WEB_SYSTEM/$confd/$ip.conf"
 	rm -f "$web_conf"
 
 	if [ "$WEB_SYSTEM" = 'httpd' ] || [ "$WEB_SYSTEM" = 'apache2' ]; then
@@ -164,12 +167,12 @@ if [ -n "$PROXY_SYSTEM" ]; then
 			-e "s/%web_port%/$WEB_PORT/g" \
 			-e "s/%proxy_port%/$PROXY_PORT/g" \
 			-e "s/%proxy_ssl_port%/$PROXY_SSL_PORT/g" \
-			> /etc/$PROXY_SYSTEM/conf.d/$ip.conf
+			> /etc/$PROXY_SYSTEM/$pconfd/$ip.conf
 
-	process_http2_directive "/etc/$PROXY_SYSTEM/conf.d/$ip.conf"
+	process_http2_directive "/etc/$PROXY_SYSTEM/$pconfd/$ip.conf"
 
 	# mod_extract_forwarded
-	fw_conf="/etc/$WEB_SYSTEM/conf.d/mod_extract_forwarded.conf"
+	fw_conf="/etc/$WEB_SYSTEM/$confd/mod_extract_forwarded.conf"
 	if [ -e "$fw_conf" ]; then
 		ips=$(grep 'MEFaccept ' "$fw_conf" | grep -v '#' | head -n1)
 		sed -i "s/$ips/$ips $ip/g" "$fw_conf"

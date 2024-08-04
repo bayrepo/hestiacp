@@ -53,7 +53,7 @@ BACKEND="$template"
 
 # Defining pool directory
 if [ -f "/etc/redhat-release" ]; then
-	pool=$(find -L /etc/opt/remi/php80/ -name "$domain.conf" -exec dirname {} \;)
+	pool=$(find -L /etc/opt/remi/ -name "$domain.conf" -exec dirname {} \;)
 else
 	pool=$(find -L /etc/php/ -name "$domain.conf" -exec dirname {} \;)
 fi

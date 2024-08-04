@@ -1,0 +1,48 @@
+#!/bin/bash
+# info: prepare actions befor whole system will start
+# options: NONE
+#
+# example: v-oneshot-service
+#
+# This function prepares dir structure for such things
+# wich deleted on system shoutdown, run as root only
+
+# Includes
+# shellcheck source=/etc/hestiacp/hestia.conf
+source /etc/hestiacp/hestia.conf
+# shellcheck source=/usr/local/hestia/func/main.sh
+source $HESTIA/func/main.sh
+# load config file
+source_conf "$HESTIA/conf/hestia.conf"
+
+# Checking root permissions
+if [ "$(id -u)" != '0' ]; then
+	echo "Error: Script can be run executed only by root"
+	exit 10
+fi
+
+php_DIR="/run/php"
+#make php directory in /var/run/directory for php-fpm and for hestia-php
+if [ -f /etc/redhat-release ]; then
+	if [ ! -e "$php_DIR" ]; then
+		user_apache=$(cat $HESTIA_INSTALL_DIR/php-fpm/multiphp.tpl | grep listen.group | cut -d= -f2 | xargs)
+		if [ -n "$user_apache" ]; then
+			if grep -q "$user_apache" /etc/passwd; then
+				if grep -q "$user_apache" /etc/group; then
+					mkdir "$php_DIR"
+					chmod 755 "$php_DIR"
+					chown "$user_apache":"$user_apache" "$php_DIR"
+				fi
+			fi
+		fi
+	fi
+	if [ ! -e /run/hestia ]; then
+		mkdir /run/hestia
+		chown admin:admin /run/hestia
+	else
+		own=$(stat -c "%U:%G" /run/hestia)
+		if [ "$own" != "admin:admin" ]; then
+			chown admin:admin /run/hestia
+		fi
+	fi
+fi

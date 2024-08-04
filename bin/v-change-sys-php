@@ -21,10 +21,18 @@ source_conf "$HESTIA/conf/hestia.conf"
 check_args '1' "$#" 'VERSION'
 
 # Verify php version format
-if [[ ! $version =~ ^[0-9]\.[0-9]+ ]]; then
-	echo "The specified PHP version format is invalid, it should look like [0-9].[0-9]."
-	echo "Example: 7.0, 7.4, 8.0"
-	exit "$E_INVALID"
+if [ -f /etc/redhat-release ]; then
+	if [[ ! $version =~ ^[0-9][0-9]+ ]]; then
+		echo "The specified PHP version format is invalid, it should look like [0-9][0-9]."
+		echo "Example: 70, 74, 80"
+		exit "$E_INVALID"
+	fi
+else
+	if [[ ! $version =~ ^[0-9].[0-9]+ ]]; then
+		echo "The specified PHP version format is invalid, it should look like [0-9].[0-9]."
+		echo "Example: 7.0, 7.4, 8.0"
+		exit "$E_INVALID"
+	fi
 fi
 
 # Check if php version exists
@@ -42,10 +50,19 @@ check_hestia_demo_mode
 #----------------------------------------------------------#
 
 # Set file locations
-php_fpm="/etc/init.d/php$version-fpm"
+if [ -f /etc/redhat-release ]; then
+	php_fpm="/usr/lib/systemd/system/php$version-php-fpm.service"
+else
+	php_fpm="/etc/init.d/php$version-fpm"
+fi
 
-rm -f /etc/php/*/fpm/pool.d/www.conf
-cp -f $HESTIA/install/deb/php-fpm/www.conf /etc/php/$version/fpm/pool.d/www.conf
+if [ -f /etc/redhat-release ]; then
+	rm -f /etc/opt/remi/php*/php-fpm.d/www.conf
+	cp -f $HESTIA/install/rpm/php-fpm/www.conf /etc/opt/remi/php$version/php-fpm.d/www.conf
+else
+	rm -f /etc/php/*/fpm/pool.d/www.conf
+	cp -f $HESTIA/install/deb/php-fpm/www.conf /etc/php/$version/fpm/pool.d/www.conf
+fi
 
 for user in $($BIN/v-list-sys-users plain); do
 	$BIN/v-rebuild-web-domains "$user" 'no' > /dev/null 2>&1
@@ -57,6 +74,13 @@ $BIN/v-restart-web-backend '' $(multiphp_default_version)
 $BIN/v-restart-web-backend
 $BIN/v-restart-web
 $BIN/v-restart-proxy
+
+if [ -f '/etc/redhat-release' ]; then
+	result_alt_php=$(alternatives --display php | grep /usr/bin/php$version)
+	if [ -z "$result_alt_php" ]; then
+		alternatives --install /usr/bin/php php /usr/bin/php$version 1 > /dev/null 2>&1
+	fi
+fi
 
 update-alternatives --set php /usr/bin/php$version
 

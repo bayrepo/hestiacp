@@ -1,6 +1,6 @@
 #!/bin/bash
 # info: update system firewall rules
-# options: NONE
+# options: no opts
 #
 # example: v-update-firewall
 #
@@ -46,18 +46,26 @@ if [ ! -e "$rules" ]; then
 	exit
 fi
 
-# Checking conntrack module avaiabilty
-$modprobe nf_conntrack > /dev/null 2>&1
-if [ $? -ne 0 ]; then
-	$sysctl net.netfilter.nf_conntrack_max > /dev/null 2>&1
+if [ -f /etc/redhat-release ]; then
+	conntrack='yes'
+else
+	# Checking conntrack module avaiabilty
+	$modprobe nf_conntrack > /dev/null 2>&1
 	if [ $? -ne 0 ]; then
-		conntrack='no'
+		$sysctl net.netfilter.nf_conntrack_max > /dev/null 2>&1
+		if [ $? -ne 0 ]; then
+			conntrack='no'
+		fi
 	fi
 fi
 
-$modprobe nf_conntrack_ftp > /dev/null 2>&1
-if [ $? -ne 0 ]; then
-	conntrack_ftp='no'
+if [ -f /etc/redhat-release ]; then
+	conntrack_ftp='yes'
+else
+	$modprobe nf_conntrack_ftp > /dev/null 2>&1
+	if [ $? -ne 0 ]; then
+		conntrack_ftp='no'
+	fi
 fi
 
 # Checking custom OpenSSH  port

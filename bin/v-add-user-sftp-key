@@ -44,7 +44,7 @@ AUTHKEY_FILE="$HOMEDIR/$user/.ssh/authorized_keys"
 [ -z "$(readlink -f "$AUTHKEY_FILE" | egrep "^$HOMEDIR/$user/.ssh/")" ] && check_result "$E_FORBIDEN" "Invalid authorized keys path"
 
 if [ ! -f "${PRVKEY_FILE}" ]; then
-	ssh-keygen -q -b 1024 -t rsa -f "${PRVKEY_FILE}" -N ""
+	ssh-keygen -q -t rsa-sha2-512 -b 4096 -f "${PRVKEY_FILE}" -N ""
 	rm "${PUBKEY_FILE}"
 	new_privkey=true
 fi

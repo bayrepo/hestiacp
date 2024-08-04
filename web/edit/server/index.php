@@ -29,6 +29,10 @@ exec(HESTIA_CMD . "v-list-web-templates-backend json", $output, $return_var);
 $backend_templates = json_decode(implode("", $output), true);
 unset($output);
 
+exec(HESTIA_CMD . "v-check-rhel-utility", $output, $return_var);
+$is_rhel = str_contains(implode("", $output), "+");
+unset($output);
+
 $v_php_versions = [
 	"php-5.6",
 	"php-7.0",
@@ -40,6 +44,21 @@ $v_php_versions = [
 	"php-8.1",
 	"php-8.2",
 ];
+
+if ($is_rhel){
+	$v_php_versions = [
+		"php-56",
+		"php-70",
+		"php-71",
+		"php-72",
+		"php-73",
+		"php-74",
+		"php-80",
+		"php-81",
+		"php-82",
+	];
+}
+
 sort($v_php_versions);
 
 if (empty($backend_templates)) {

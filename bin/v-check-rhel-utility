@@ -1,0 +1,11 @@
+#!/bin/bash
+# info: Check rehel or not
+# options: none
+
+# example: v-check-rhel-utility
+
+if [ -f '/etc/redhat-release' ]; then
+    echo -n "+"
+else
+    echo -n "-"
+fi

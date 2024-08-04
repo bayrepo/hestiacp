@@ -36,6 +36,9 @@ check_hestia_demo_mode
 #                       Action                             #
 #----------------------------------------------------------#
 
+confd=$(get_conf_d_name "$WEB_SYSTEM")
+pconfd=$(get_conf_d_name "$PROXY_SYSTEM")
+
 # Listing system IP addresses
 nics="$(ip -d -j link show | jq -r '.[] | if .link_type == "loopback" then empty else .ifname end')"
 
@@ -83,7 +86,7 @@ if [ -n "$old_ip" ]; then
 
 	# Updating PROXY
 	if [ -n "$PROXY_SYSTEM" ]; then
-		cd /etc/$PROXY_SYSTEM/conf.d
+		cd /etc/$PROXY_SYSTEM/$pconfd
 		if [ -e "$old_ip.conf" ]; then
 			mv $old_ip.conf $new_ip.conf
 			sed -i "s/$old_ip/$new_ip/g" $new_ip.conf
@@ -92,7 +95,7 @@ if [ -n "$old_ip" ]; then
 
 	# Updating WEB
 	if [ -n "$WEB_SYSTEM" ]; then
-		cd /etc/$WEB_SYSTEM/conf.d
+		cd /etc/$WEB_SYSTEM/$confd
 
 		if [ -e "$old_ip.conf" ]; then
 			mv $old_ip.conf $new_ip.conf
@@ -164,11 +167,16 @@ for ip in $ips; do
 done
 
 # Updating NAT
-pub_ipv4="$(curl -fsLm5 --retry 2 --ipv4 https://ip.hestiacp.com/)"
-if [ ! -e "$HESTIA/data/ips/$pub_ipv4" ]; then
-	if [ -z "$(grep -R "$pub_ipv4" $HESTIA/data/ips/)" ]; then
-		ip="$(ls -t $HESTIA/data/ips/ | head -n1)"
-		$BIN/v-change-sys-ip-nat "$ip" "$pub_ipv4"
+if [ -e $HESTIA/conf/nopublickip ]; then
+	ip="$(ls -t $HESTIA/data/ips/ | head -n1)"
+	$BIN/v-change-sys-ip-nat "$ip" "$ip"
+else
+	pub_ipv4="$(curl -fsLm5 --retry 2 --ipv4 https://ip.hestiacp.com/)"
+	if [ ! -e "$HESTIA/data/ips/$pub_ipv4" ]; then
+		if [ -z "$(grep -R "$pub_ipv4" $HESTIA/data/ips/)" ]; then
+			ip="$(ls -t $HESTIA/data/ips/ | head -n1)"
+			$BIN/v-change-sys-ip-nat "$ip" "$pub_ipv4"
+		fi
 	fi
 fi
 

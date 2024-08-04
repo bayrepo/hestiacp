@@ -6,10 +6,11 @@ PartOf=hestia.service
 [Service]
 Type=forking
 PIDFile=/run/hestia/php.pid
-ExecStart=/usr/local/hestia/php/sbin/hestia-php --fpm-config /usr/local/hestia/php/etc/php-fpm.conf
+ExecStart=/usr/local/hestia/php/sbin/php-fpm --fpm-config /usr/local/hestia/php/etc/php-fpm.conf
 ExecReload=/bin/kill -USR2 $MAINPID
 ExecStop=/bin/kill -TERM $MAINPID
 ExecStartPre=/bin/bash -c "/bin/systemctl set-environment HOSTNAME=$(/usr/bin/hostname)"
+ExecStartPre=/bin/bash -c "[ -e /usr/local/hestia/bin/v-oneshot-service ] && /usr/local/hestia/bin/v-oneshot-service"
 Environment="HESTIA=/usr/local/hestia"
 
 [Install]

@@ -96,6 +96,7 @@ usage() {
 	echo "    --keepbuild     Don't delete downloaded source and build folders"
 	echo "    --cross         Compile hestia package for both AMD64 and ARM64"
 	echo "    --debug         Debug mode"
+	echo "    --npm           Rebuild nmp command"
 	echo ""
 	echo "For automated builds and installations, you may specify the branch"
 	echo "after one of the above flags. To install the packages, specify 'Y'"
@@ -105,6 +106,59 @@ usage() {
 	echo "This would install a Hestia Control Panel package compiled with the"
 	echo "develop branch code."
 }
+
+hestiacp_vercomp () {
+    if [[ $1 == $2 ]]
+    then
+        return 0
+    fi
+    local IFS=.
+    local i ver1=($1) ver2=($2)
+    for ((i=${#ver1[@]}; i<${#ver2[@]}; i++))
+    do
+        ver1[i]=0
+    done
+    for ((i=0; i<${#ver1[@]}; i++))
+    do
+        if [[ -z ${ver2[i]} ]]
+        then
+            ver2[i]=0
+        fi
+        if ((10#${ver1[i]} > 10#${ver2[i]}))
+        then
+            return 1
+        fi
+        if ((10#${ver1[i]} < 10#${ver2[i]}))
+        then
+            return 2
+        fi
+    done
+    return 0
+}
+
+hestiacp_check_package_version () {
+    if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
+        return 1
+    fi
+	IS_RPM="$1"
+	if [ "$IS_RPM" = true ]; then
+	    # Check for rmp based
+		pack_version=$(rpm -q --queryformat="%{VERSION}" "$2")
+		if [ $? -eq 0 ]; then
+			hestiacp_vercomp "$pack_version" "$3"
+			RESULT_OF_COMPARISON=$?
+			case "$RESULT_OF_COMPARISON" in
+				0 ) return 0 ;;
+				1 ) return 0 ;;
+			esac
+		fi
+		return 1
+	else
+	    # Debian based not yet implemented
+		return 0
+	fi
+}
+
 
 # Set compiling directory
 REPO='hestiacp/hestiacp'
@@ -128,7 +182,7 @@ if [ -f '/etc/redhat-release' ]; then
 	type=$(grep "^ID=" /etc/os-release | cut -f 2 -d '"')
 	DISTRO=$type
 	# TODO: remove this condition after testing
-	if [[ "$type" =~ ^(rhel|almalinux|eurolinux|ol|rocky|centos)$ ]]; then
+	if [[ "$type" =~ ^(rhel|almalinux|eurolinux|ol|rocky|centos|msvsphere)$ ]]; then
 		release=$(rpm --eval='%rhel')
 	fi
 else
@@ -175,6 +229,9 @@ for i in $*; do
 			;;
 		--dontinstalldeps)
 			dontinstalldeps='true'
+			;;
+		--npm)
+			NPM_REBUILD='true'
 			;;
 		*)
 			branch="$i"
@@ -278,7 +335,7 @@ if [ "$dontinstalldeps" != 'true' ]; then
 		echo "Installing dependencies for compilation..."
 		dnf install -y -q $SOFTWARE
 
-		mock -r almalinux+rhel-${release}-$BUILD_ARCH --clean
+		mock -r msvsphere+epel-${release}-$BUILD_ARCH --clean
 	else
 		# Set package dependencies for compiling
 		SOFTWARE='wget tar git curl build-essential libxml2-dev libz-dev libzip-dev libgmp-dev libcurl4-gnutls-dev unzip openssl libssl-dev pkg-config libsqlite3-dev libonig-dev rpm lsb-release'
@@ -302,7 +359,7 @@ NUM_CPUS=$(grep "^cpu cores" /proc/cpuinfo | uniq | awk '{print $4}')
 
 if [ "$HESTIA_DEBUG" ]; then
 	if [ "$OSTYPE" = 'rhel' ]; then
-		echo "OS type          : RHEL / Rocky Linux / AlmaLinux / EuroLinux"
+		echo "OS type          : RHEL / Rocky Linux / AlmaLinux / EuroLinux / MSVSphere"
 	else
 		echo "OS type          : Debian / Ubuntu"
 	fi
@@ -479,7 +536,7 @@ if [ "$NGINX_B" = true ]; then
 
 		# Build the package
 		echo Building Nginx RPM
-		mock -r almalinux+rhel-${release}-$BUILD_ARCH --sources $BUILD_DIR --spec $BUILD_DIR/hestia-nginx.spec --resultdir $RPM_DIR
+		mock -r msvsphere+epel-${release}-$BUILD_ARCH --sources $BUILD_DIR --spec $BUILD_DIR/hestia-nginx.spec --resultdir $RPM_DIR
 		rm -f $BUILD_DIR/*
 	fi
 fi
@@ -617,7 +674,7 @@ if [ "$PHP_B" = true ]; then
 
 		# Build RPM package
 		echo Building PHP RPM
-		mock -r almalinux+rhel-${release}-$BUILD_ARCH --sources $BUILD_DIR --spec $BUILD_DIR/hestia-php.spec --resultdir $RPM_DIR
+		mock -r msvsphere+epel-${release}-$BUILD_ARCH --sources $BUILD_DIR --spec $BUILD_DIR/hestia-php.spec --resultdir $RPM_DIR
 		rm -f $BUILD_DIR/*
 	fi
 fi
@@ -707,13 +764,30 @@ if [ "$HESTIA_B" = true ]; then
 			# Get RHEL package files
 			get_branch_file 'src/rpm/hestia/hestia.spec' "$BUILD_DIR/hestia.spec"
 			get_branch_file 'src/rpm/hestia/hestia.service' "$BUILD_DIR/hestia.service"
+			get_branch_file 'src/rpm/hestia/hestia.tmpfiles' "$BUILD_DIR/hestia.tmpfiles"
+
+			#Get nodejs 20.x version
+			if [ "$NPM_REBUILD" = true ]; then
+				echo "Update nodejs up to 20.x version"
+				hestiacp_check_package_version $BUILD_RPM "nodejs" "20.0"
+				IS_NEEDED_NODEJS=$?
+				if [ "$IS_NEEDED_NODEJS" = "1" ]; then
+					dnf erase nodejs -y
+					curl -fsSL https://rpm.nodesource.com/setup_20.x | bash -
+					dnf install nodejs -y
+				fi
+				pushd "$SRC_DIR" || { echo "Can't change directory to $SRC_DIR, javascript rebuild aborted"; exit 1; }
+				npm install
+				npm run build
+				popd || { echo "Can't restore directory from $SRC_DIR, javascript rebuild aborted"; exit 1; }
+			fi
 
 			# Generate source tar.gz
-			tar -czf $BUILD_DIR/hestia-$BUILD_VER.tar.gz -C $SRC_DIR/.. hestiacp
+			tar -h --exclude=".git" --exclude=".github" --exclude=".husky" --exclude=".vscode" --exclude="node_modules" --exclude="src/archive" -czf $BUILD_DIR/hestia-$BUILD_VER.tar.gz -C $SRC_DIR/.. hestiacp
 
 			# Build RPM package
 			echo Building Hestia RPM
-			mock -r almalinux+rhel-${release}-$BUILD_ARCH --sources $BUILD_DIR --spec $BUILD_DIR/hestia.spec --resultdir $RPM_DIR
+			mock -r msvsphere+epel-${release}-$BUILD_ARCH --sources $BUILD_DIR --spec $BUILD_DIR/hestia.spec --resultdir $RPM_DIR
 			rm -f $BUILD_DIR/*
 		fi
 

@@ -103,7 +103,7 @@ prepare_web_backend() {
 	local backend_template=${1:-$template}
 
 	if [ -f "/etc/redhat-release" ]; then
-		pool=$(find -L /etc/opt/remi/php80/ -name "$domain.conf" -exec dirname {} \;)
+		pool=$(find -L /etc/opt/remi/php80/ -name "$domain.conf" -exec dirname {} \; 2>/dev/null)
 	else
 		pool=$(find -L /etc/php/ -name "$domain.conf" -exec dirname {} \;)
 	fi
@@ -121,7 +121,8 @@ prepare_web_backend() {
 		backend_version=$(multiphp_default_version)
 		if [ -z "$pool" ] || [ -z "$BACKEND" ]; then
 			if [ -f "/etc/redhat-release" ]; then
-				pool=$(find -L /etc/opt/remi/php80 -type d \( -name "pool.d" -o -name "*fpm.d" \))
+				m_backend_version="${backend_version//./}"
+				pool=$(find -L /etc/opt/remi/php$m_backend_version -type d \( -name "pool.d" -o -name "*fpm.d" \))
 			else
 				pool=$(find -L /etc/php/$backend_version -type d \( -name "pool.d" -o -name "*fpm.d" \))
 			fi
@@ -146,7 +147,11 @@ prepare_web_backend() {
 
 # Delete web backend
 delete_web_backend() {
+if [ -f "/etc/redhat-release" ]; then
+	find -L /etc/opt/remi/ -name "$backend_type.conf" -exec rm -f {} \;
+else
 	find -L /etc/php/ -type f -name "$backend_type.conf" -exec rm -f {} \;
+fi
 }
 
 # Prepare web aliases
@@ -248,6 +253,12 @@ prepare_web_domain_values() {
 # Add web config
 add_web_config() {
 	# Check if folder already exists
+	if [ "$1" = "httpd" ]; then
+		confd="conf.h.d"
+	else
+		confd="conf.d"
+	fi
+
 	if [ ! -d "$HOMEDIR/$user/conf/web/$domain" ]; then
 		mkdir -p "$HOMEDIR/$user/conf/web/$domain/"
 	fi
@@ -308,8 +319,8 @@ add_web_config() {
 	chmod 640 $conf
 
 	if [[ "$2" =~ stpl$ ]]; then
-		rm -f /etc/$1/conf.d/domains/$domain.ssl.conf
-		ln -s $conf /etc/$1/conf.d/domains/$domain.ssl.conf
+		rm -f /etc/$1/$confd/domains/$domain.ssl.conf
+		ln -s $conf /etc/$1/$confd/domains/$domain.ssl.conf
 
 		# Rename/Move extra SSL config files
 		find=$(find $HOMEDIR/$user/conf/web/*.$domain.org* 2> /dev/null)
@@ -325,8 +336,8 @@ add_web_config() {
 			fi
 		done
 	else
-		rm -f /etc/$1/conf.d/domains/$domain.conf
-		ln -s $conf /etc/$1/conf.d/domains/$domain.conf
+		rm -f /etc/$1/$confd/domains/$domain.conf
+		ln -s $conf /etc/$1/$confd/domains/$domain.conf
 		# Rename/Move extra config files
 		find=$(find $HOMEDIR/$user/conf/web/*.$domain.org* 2> /dev/null)
 		for f in $find; do
@@ -393,6 +404,11 @@ replace_web_config() {
 
 # Delete web configuration
 del_web_config() {
+	if [ "$1" = "httpd" ]; then
+		confd="conf.h.d"
+	else
+		confd="conf.d"
+	fi
 	conf="$HOMEDIR/$user/conf/web/$domain/$1.conf"
 	local confname="$domain.conf"
 	if [[ "$2" =~ stpl$ ]]; then
@@ -409,17 +425,17 @@ del_web_config() {
 		rm -f $legacyconf
 
 		# Remove old global includes file
-		rm -f /etc/$1/conf.d/hestia.conf
+		rm -f /etc/$1/$confd/hestia.conf
 	fi
 
 	# Remove domain configuration files and clean up symbolic links
 	rm -f "$conf"
 
 	if [ -n "$WEB_SYSTEM" ] && [ "$WEB_SYSTEM" = "$1" ]; then
-		rm -f "/etc/$WEB_SYSTEM/conf.d/domains/$confname"
+		rm -f "/etc/$WEB_SYSTEM/$confd/domains/$confname"
 	fi
 	if [ -n "$PROXY_SYSTEM" ] && [ "$PROXY_SYSTEM" = "$1" ]; then
-		rm -f "/etc/$PROXY_SYSTEM/conf.d/domains/$confname"
+		rm -f "/etc/$PROXY_SYSTEM/$confd/domains/$confname"
 	fi
 }
 
@@ -786,6 +802,16 @@ add_mail_ssl_config() {
 
 # Delete SSL support for mail domain
 del_mail_ssl_config() {
+	if [ "$WEB_SYSTEM" = "httpd" ]; then
+		confd="conf.h.d"
+	else
+		confd="conf.d"
+	fi
+	if [ "$PROXY_SYSTEM" = "httpd" ]; then
+		pconfd="conf.h.d"
+	else
+		pconfd="conf.d"
+	fi
 	# Check to prevent accidental removal of mismatched certificate
 	wildcard_domain="\\*.$(echo "$domain" | cut -f 1 -d . --complement)"
 	mail_cert_match=$($BIN/v-list-mail-domain-ssl $user $domain | awk '/SUBJECT|ALIASES/' | grep -wE " $domain| $wildcard_domain")
@@ -798,8 +824,8 @@ del_mail_ssl_config() {
 
 	# Remove SSL vhost configuration
 	rm -f $HOMEDIR/$user/conf/mail/$domain/*.*ssl.conf
-	rm -f /etc/$WEB_SYSTEM/conf.d/domains/$WEBMAIL_ALIAS.$domain.ssl.conf
-	rm -f /etc/$PROXY_SYSTEM/conf.d/domains/$WEBMAIL_ALIAS.$domain.ssl.conf
+	rm -f /etc/$WEB_SYSTEM/$confd/domains/$WEBMAIL_ALIAS.$domain.ssl.conf
+	rm -f /etc/$PROXY_SYSTEM/$pconfd/domains/$WEBMAIL_ALIAS.$domain.ssl.conf
 
 	# Remove SSL certificates
 	rm -f $HOMEDIR/$user/conf/mail/$domain/ssl/*
@@ -820,6 +846,11 @@ del_mail_ssl_certificates() {
 
 # Add webmail config
 add_webmail_config() {
+	if [ "$1" = "httpd" ]; then
+		confd="conf.h.d"
+	else
+		confd="conf.d"
+	fi
 	mkdir -p "$HOMEDIR/$user/conf/mail/$domain"
 	conf="$HOMEDIR/$user/conf/mail/$domain/$1.conf"
 	if [[ "$2" =~ stpl$ ]]; then
@@ -882,13 +913,13 @@ add_webmail_config() {
 	if [[ "$2" =~ stpl$ ]]; then
 		if [ -n "$WEB_SYSTEM" ]; then
 			forcessl="$HOMEDIR/$user/conf/mail/$domain/$WEB_SYSTEM.forcessl.conf"
-			rm -f /etc/$1/conf.d/domains/$WEBMAIL_ALIAS.$domain.ssl.conf
-			ln -s $conf /etc/$1/conf.d/domains/$WEBMAIL_ALIAS.$domain.ssl.conf
+			rm -f /etc/$1/$confd/domains/$WEBMAIL_ALIAS.$domain.ssl.conf
+			ln -s $conf /etc/$1/$confd/domains/$WEBMAIL_ALIAS.$domain.ssl.conf
 		fi
 		if [ -n "$PROXY_SYSTEM" ]; then
 			forcessl="$HOMEDIR/$user/conf/mail/$domain/$PROXY_SYSTEM.forcessl.conf"
-			rm -f /etc/$1/conf.d/domains/$WEBMAIL_ALIAS.$domain.ssl.conf
-			ln -s $conf /etc/$1/conf.d/domains/$WEBMAIL_ALIAS.$domain.ssl.conf
+			rm -f /etc/$1/$confd/domains/$WEBMAIL_ALIAS.$domain.ssl.conf
+			ln -s $conf /etc/$1/$confd/domains/$WEBMAIL_ALIAS.$domain.ssl.conf
 		fi
 
 		# Add rewrite rules to force HTTPS/SSL connections
@@ -903,12 +934,12 @@ add_webmail_config() {
 		find $HOMEDIR/$user/conf/mail/ -maxdepth 1 -type f \( -name "$domain.*" -o -name "ssl.$domain.*" -o -name "*nginx.$domain.*" \) -exec rm {} \;
 	else
 		if [ -n "$WEB_SYSTEM" ]; then
-			rm -f /etc/$1/conf.d/domains/$WEBMAIL_ALIAS.$domain.conf
-			ln -s $conf /etc/$1/conf.d/domains/$WEBMAIL_ALIAS.$domain.conf
+			rm -f /etc/$1/$confd/domains/$WEBMAIL_ALIAS.$domain.conf
+			ln -s $conf /etc/$1/$confd/domains/$WEBMAIL_ALIAS.$domain.conf
 		fi
 		if [ -n "$PROXY_SYSTEM" ]; then
-			rm -f /etc/$1/conf.d/domains/$WEBMAIL_ALIAS.$domain.conf
-			ln -s $conf /etc/$1/conf.d/domains/$WEBMAIL_ALIAS.$domain.conf
+			rm -f /etc/$1/$confd/domains/$WEBMAIL_ALIAS.$domain.conf
+			ln -s $conf /etc/$1/$confd/domains/$WEBMAIL_ALIAS.$domain.conf
 		fi
 		# Clear old configurations
 		find $HOMEDIR/$user/conf/mail/ -maxdepth 1 -type f \( -name "$domain.*" \) -exec rm {} \;
@@ -917,27 +948,47 @@ add_webmail_config() {
 
 # Delete webmail support
 del_webmail_config() {
+	if [ "$WEB_SYSTEM" = "httpd" ]; then
+		confd="conf.h.d"
+	else
+		confd="conf.d"
+	fi
+	if [ "$PROXY_SYSTEM" = "httpd" ]; then
+		pconfd="conf.h.d"
+	else
+		pconfd="conf.d"
+	fi
 	if [ -n "$WEB_SYSTEM" ]; then
-		rm -f $HOMEDIR/$user/conf/mail/$domain/$WEB_SYSTEM.conf
-		rm -f /etc/$WEB_SYSTEM/conf.d/domains/$WEBMAIL_ALIAS.$domain.conf
+		rm -f $HOMEDIR/$user/$confd/mail/$domain/$WEB_SYSTEM.conf
+		rm -f /etc/$WEB_SYSTEM/$confd/domains/$WEBMAIL_ALIAS.$domain.conf
 	fi
 
 	if [ -n "$PROXY_SYSTEM" ]; then
 		rm -f $HOMEDIR/$user/conf/mail/$domain/$PROXY_SYSTEM.*conf
-		rm -f /etc/$PROXY_SYSTEM/conf.d/domains/$WEBMAIL_ALIAS.$domain.conf
+		rm -f /etc/$PROXY_SYSTEM/$pconfd/domains/$WEBMAIL_ALIAS.$domain.conf
 	fi
 }
 
 # Delete SSL webmail support
 del_webmail_ssl_config() {
+	if [ "$WEB_SYSTEM" = "httpd" ]; then
+		confd="conf.h.d"
+	else
+		confd="conf.d"
+	fi
+	if [ "$PROXY_SYSTEM" = "httpd" ]; then
+		pconfd="conf.h.d"
+	else
+		pconfd="conf.d"
+	fi
 	if [ -n "$WEB_SYSTEM" ]; then
 		rm -f $HOMEDIR/$user/conf/mail/$domain/$WEB_SYSTEM.*ssl.conf
-		rm -f /etc/$WEB_SYSTEM/conf.d/domains/$WEBMAIL_ALIAS.$domain.ssl.conf
+		rm -f /etc/$WEB_SYSTEM/$confd/domains/$WEBMAIL_ALIAS.$domain.ssl.conf
 	fi
 
 	if [ -n "$PROXY_SYSTEM" ]; then
 		rm -f $HOMEDIR/$user/conf/mail/$domain/$PROXY_SYSTEM.*ssl.conf
-		rm -f /etc/$PROXY_SYSTEM/conf.d/domains/$WEBMAIL_ALIAS.$domain.ssl.conf
+		rm -f /etc/$PROXY_SYSTEM/$pconfd/domains/$WEBMAIL_ALIAS.$domain.ssl.conf
 	fi
 }
 

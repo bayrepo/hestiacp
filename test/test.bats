@@ -635,13 +635,25 @@ function check_ip_not_banned(){
     assert_success
     refute_output
 
-    assert_file_exist /etc/$WEB_SYSTEM/conf.d/$ip.conf
+    if [ "$WEB_SYSTEM" = "httpd" ]; then
+		confd="conf.h.d"
+	else
+		confd="conf.d"
+	fi
+
+    if [ "$PROXY_SYSTEM" = "httpd" ]; then
+		pconfd="conf.h.d"
+	else
+		pconfd="conf.d"
+	fi
+
+    assert_file_exist /etc/$WEB_SYSTEM/$confd/$ip.conf
     assert_file_exist $HESTIA/data/ips/$ip
     assert_file_contains $HESTIA/data/ips/$ip "OWNER='$user'"
     assert_file_contains $HESTIA/data/ips/$ip "INTERFACE='$interface'"
 
     if [ -n "$PROXY_SYSTEM" ]; then
-        assert_file_exist /etc/$PROXY_SYSTEM/conf.d/$ip.conf
+        assert_file_exist /etc/$PROXY_SYSTEM/$pconfd/$ip.conf
         [ -f "$a2_rpaf" ] && assert_file_contains "$a2_rpaf" "RPAFproxy_ips.*$ip\b"
         [ -f "$a2_remoteip" ] && assert_file_contains "$a2_remoteip" "RemoteIPInternalProxy $ip\$"
     fi
@@ -683,13 +695,25 @@ function check_ip_not_banned(){
     assert_success
     refute_output
 
-    assert_file_exist /etc/$WEB_SYSTEM/conf.d/$ip.conf
+    if [ "$WEB_SYSTEM" = "httpd" ]; then
+		confd="conf.h.d"
+	else
+		confd="conf.d"
+	fi
+
+    if [ "$PROXY_SYSTEM" = "httpd" ]; then
+		pconfd="conf.h.d"
+	else
+		pconfd="conf.d"
+	fi
+
+    assert_file_exist /etc/$WEB_SYSTEM/$confd/$ip.conf
     assert_file_exist $HESTIA/data/ips/$ip
     assert_file_contains $HESTIA/data/ips/$ip "OWNER='$user'"
     assert_file_contains $HESTIA/data/ips/$ip "INTERFACE='$interface'"
 
     if [ -n "$PROXY_SYSTEM" ]; then
-        assert_file_exist /etc/$PROXY_SYSTEM/conf.d/$ip.conf
+        assert_file_exist /etc/$PROXY_SYSTEM/$pconfd/$ip.conf
         local a2_rpaf="/etc/$WEB_SYSTEM/mods-enabled/rpaf.conf"
         [ -f "$a2_rpaf" ] && assert_file_contains "$a2_rpaf" "RPAFproxy_ips.*$ip\b"
 
@@ -704,7 +728,19 @@ function check_ip_not_banned(){
     assert_success
     refute_output
 
-    assert_file_not_exist /etc/$WEB_SYSTEM/conf.d/$ip.conf
+    if [ "$WEB_SYSTEM" = "httpd" ]; then
+		confd="conf.h.d"
+	else
+		confd="conf.d"
+	fi
+
+    if [ "$PROXY_SYSTEM" = "httpd" ]; then
+		pconfd="conf.h.d"
+	else
+		pconfd="conf.d"
+	fi
+
+    assert_file_not_exist /etc/$WEB_SYSTEM/$confd/$ip.conf
     assert_file_not_exist $HESTIA/data/ips/$ip
 
 
@@ -713,11 +749,11 @@ function check_ip_not_banned(){
     assert_success
     refute_output
 
-    assert_file_not_exist /etc/$WEB_SYSTEM/conf.d/$ip.conf
+    assert_file_not_exist /etc/$WEB_SYSTEM/$confd/$ip.conf
     assert_file_not_exist $HESTIA/data/ips/$ip
 
     if [ -n "$PROXY_SYSTEM" ]; then
-        assert_file_not_exist /etc/$PROXY_SYSTEM/conf.d/$ip.conf
+        assert_file_not_exist /etc/$PROXY_SYSTEM/$pconfd/$ip.conf
     fi
 
     # remoteip and rpaf config hashes must match the initial one
@@ -739,13 +775,25 @@ function check_ip_not_banned(){
     assert_success
     refute_output
 
-    assert_file_exist /etc/$WEB_SYSTEM/conf.d/$ip.conf
+    if [ "$WEB_SYSTEM" = "httpd" ]; then
+		confd="conf.h.d"
+	else
+		confd="conf.d"
+	fi
+
+    if [ "$PROXY_SYSTEM" = "httpd" ]; then
+		pconfd="conf.h.d"
+	else
+		pconfd="conf.d"
+	fi
+
+    assert_file_exist /etc/$WEB_SYSTEM/$confd/$ip.conf
     assert_file_exist $HESTIA/data/ips/$ip
     assert_file_contains $HESTIA/data/ips/$ip "OWNER='$user'"
     assert_file_contains $HESTIA/data/ips/$ip "INTERFACE='$interface'"
 
     if [ -n "$PROXY_SYSTEM" ]; then
-        assert_file_exist /etc/$PROXY_SYSTEM/conf.d/$ip.conf
+        assert_file_exist /etc/$PROXY_SYSTEM/$pconfd/$ip.conf
         local a2_rpaf="/etc/$WEB_SYSTEM/mods-enabled/rpaf.conf"
         [ -f "$a2_rpaf" ] && assert_file_contains "$a2_rpaf" "RPAFproxy_ips.*$ip\b"
 

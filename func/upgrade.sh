@@ -606,6 +606,10 @@ upgrade_phppgadmin() {
 }
 
 upgrade_phpmyadmin() {
+	WWW_USER="www-data"
+	if [ -f /etc/redhat-release ]; then
+    	WWW_USER="apache"
+	fi
 	# Check if MariaDB/MySQL is installed on the server before attempting to install or upgrade phpMyAdmin
 	if [ -n "$(echo $DB_SYSTEM | grep -w 'mysql')" ]; then
 		pma_version=$(jq -r .version /usr/share/phpmyadmin/package.json)
@@ -613,7 +617,7 @@ upgrade_phpmyadmin() {
 			echo "[ * ] phpMyAdmin is up to date (${pma_version})..."
 			# Update permissions
 			if [ -e /var/lib/phpmyadmin/blowfish_secret.inc.php ]; then
-				chown root:www-data /var/lib/phpmyadmin/blowfish_secret.inc.php
+				chown root:$WWW_USER /var/lib/phpmyadmin/blowfish_secret.inc.php
 				chmod 0640 /var/lib/phpmyadmin/blowfish_secret.inc.php
 			fi
 		else
@@ -639,13 +643,13 @@ upgrade_phpmyadmin() {
 			# Create temporary folder and change permissions
 			if [ ! -d /usr/share/phpmyadmin/tmp ]; then
 				mkdir /usr/share/phpmyadmin/tmp
-				chown root:www-data /usr/share/phpmyadmin/tmp
+				chown root:$WWW_USER /usr/share/phpmyadmin/tmp
 				chmod 0770 /usr/share/phpmyadmin/tmp
 
 			fi
 
 			if [ -e /var/lib/phpmyadmin/blowfish_secret.inc.php ]; then
-				chown root:www-data /var/lib/phpmyadmin/blowfish_secret.inc.php
+				chown root:$WWW_USER /var/lib/phpmyadmin/blowfish_secret.inc.php
 				chmod 0640 /var/lib/phpmyadmin/blowfish_secret.inc.php
 			fi
 

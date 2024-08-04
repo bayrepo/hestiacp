@@ -128,6 +128,11 @@
 				} else {
 					$edit_url=$key;
 				}
+				if (in_array($key, $clamav_names)){
+					$edit_url="clamav-daemon";
+				} else {
+					$edit_url=$key;
+				}
 
 				$cpu = $data[$key]['CPU'] / 10;
 				$cpu = number_format($cpu, 1);

@@ -58,7 +58,10 @@ else
 		config_path='/etc/clamd.conf'
 	fi
 	if [ -e '/etc/clamd.d/clamd.conf' ]; then
-		config_path='/etc/clamav/clamd.conf'
+		config_path='/etc/clamd.d/clamd.conf'
+	fi
+	if [ -e '/etc/clamd.d/daemon.conf' ]; then
+		config_path='/etc/clamd.d/daemon.conf'
 	fi
 fi
 

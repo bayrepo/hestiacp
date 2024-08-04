@@ -26,6 +26,12 @@ nodejs_ver="20"
 # Perform verification if read-only mode is enabled
 check_hestia_demo_mode
 
+#TODO
+#Temporary disable for RPM
+if [ -f /etc/redhat-release ]; then
+	exit 0
+fi
+
 # Detect and install NodeJS if necessary
 if [ -z $(which "node") ]; then
 	read -p "NodeJS not found. Install now to proceed? [Y/n] " answer

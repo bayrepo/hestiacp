@@ -256,10 +256,10 @@ function lxc_run($args, &$rc) {
 function getHestiaVersion($branch) {
 	$control_file = "";
 	if ($branch === "~localsrc") {
-		$control_file = file_get_contents(SHARED_HOST_FOLDER . "/hestiacp/src/deb/hestia/control");
+		$control_file = file_get_contents(SHARED_HOST_FOLDER . "/hestiacp/src/rpm/hestia/control");
 	} else {
 		$control_file = file_get_contents(
-			"https://raw.githubusercontent.com/hestiacp/hestiacp/${branch}/src/deb/hestia/control",
+			"https://dev.putey.net/bayrepo/hestiacp/raw/branch/master/src/rpm/hestia/control",
 		);
 	}
 

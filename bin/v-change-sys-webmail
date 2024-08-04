@@ -55,6 +55,10 @@ if [ -d /etc/apache2/ ]; then
 	sed -i "s/IncludeOptional conf.d\/domains\/$WEBMAIL_ALIAS.*.conf/IncludeOptional conf.d\/domains\/$NEW_ALIAS.*.conf/g" /etc/apache2/apache2.conf
 fi
 
+if [ -d /etc/httpd/ ]; then
+	sed -i "s/IncludeOptional conf.h.d\/domains\/$WEBMAIL_ALIAS.*.conf/IncludeOptional conf.h.d\/domains\/$NEW_ALIAS.*.conf/g" /etc/httpd/conf/htpd.conf
+fi
+
 #----------------------------------------------------------#
 #                       Hestia                             #
 #----------------------------------------------------------#

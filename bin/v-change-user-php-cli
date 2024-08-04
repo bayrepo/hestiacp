@@ -27,7 +27,11 @@ source_conf "$HESTIA/conf/hestia.conf"
 #                    Verifications                         #
 #----------------------------------------------------------#
 
-FILE=$HOMEDIR/$user/.bash_aliases
+if [ -f /etc/redhat-release ];then
+	FILE=$HOMEDIR/$user/.bashrc.d/bash_aliases
+else
+	FILE=$HOMEDIR/$user/.bash_aliases
+fi
 
 check_args '2' "$#" 'USER PHPVERSION'
 is_format_valid 'user'
@@ -55,6 +59,10 @@ fi
 
 # Create .bash_aliases is not exsists
 if [ ! -f "$FILE" ]; then
+	if [ -f /etc/redhat-release ];then
+		mkdir -p $HOMEDIR/$user/.bashrc.d
+		chown -R $user:$user $HOMEDIR/$user/.bashrc.d
+	fi
 	touch $FILE
 	chown $user:$user $FILE
 fi

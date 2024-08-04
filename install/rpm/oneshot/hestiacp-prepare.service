@@ -1,0 +1,11 @@
+[Unit]
+Description=Prepare some actions on system boot for HestiaCP rpm
+Before=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/hestia/bin/v-oneshot-service
+
+[Install]
+WantedBy=multi-user.target
