@@ -1,0 +1,1125 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hestiacp\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-06 11:26\n"
+"Last-Translator: \n"
+"Language-Team: Kurdish\n"
+"Language: ku_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: hestiacp\n"
+"X-Crowdin-Project-ID: 587405\n"
+"X-Crowdin-Language: ku\n"
+"X-Crowdin-File: hestiacp.pot\n"
+"X-Crowdin-File-ID: 3\n"
+
+msgid "%d DNS record"
+msgid_plural "%d DNS records"
+msgstr[0] "%d تۆماری DNS"
+msgstr[1] " %d تۆمارەکانی DNS"
+
+msgid "%d DNS zone"
+msgid_plural "%d DNS zones"
+msgstr[0] " %d ناوچەی DNS"
+msgstr[1] " %d ناوچەکانی DNS"
+
+msgid "%d IP address"
+msgid_plural "%d IP addresses"
+msgstr[0] "%d ناونیشانی ئایپی"
+msgstr[1] "%d ناونیشانی ئایپی"
+
+msgid "%d backup"
+msgid_plural "%d backups"
+msgstr[0] "%d پاشەکەوت"
+msgstr[1] "%d پاشەکەوتەکان"
+
+msgid "%d banned IP address"
+msgid_plural "%d banned IP addresses"
+msgstr[0] " %d ناونیشانی IP قەدەغەکراوە"
+msgstr[1] "%d ناونیشانی IP قەدەغەکراو"
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d ڕۆژ"
+msgstr[1] "%d ڕۆژ"
+
+msgid "%d firewall rule"
+msgid_plural "%d firewall rules"
+msgstr[0] "تاک: یاسای دیواری ئاگری %d"
+msgstr[1] "فرەیی: %d یاساکانی دیواری ئاگر"
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d کاتژمێر"
+msgstr[1] "%d کاتژمێر"
+
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] " %d بابەتی"
+msgstr[1] " %d بابەتەکان"
+
+msgid "%d log record"
+msgid_plural "%d log records"
+msgstr[0] "تاک: تۆماری گوزارش %d"
+msgstr[1] "فرەیی: %d تۆمارەکانی گوزارش "
+
+msgid "%d mail account"
+msgid_plural "%d mail accounts"
+msgstr[0] "ئەژمێری پۆستی %d"
+msgstr[1] "%d ئەژمێری پۆست"
+
+msgid "%d mail domain"
+msgid_plural "%d mail domains"
+msgstr[0] "%d دۆمەینی پۆست"
+msgstr[1] "%d دۆمەینی پۆست"
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d خولەک"
+msgstr[1] " %d خولەک"
+
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] " %d مانگ"
+msgstr[1] "%d مانگ"
+
+msgid "%d object"
+msgid_plural "%d objects"
+msgstr[0] "%d ته‌ن"
+msgstr[1] "%d ته‌ن"
+
+msgid "%d package"
+msgid_plural "%d packages"
+msgstr[0] "پاکێجی %d"
+msgstr[1] "%d پاکێجەکان"
+
+msgid "%d user account"
+msgid_plural "%d user accounts"
+msgstr[0] "%d ئەژمێری بەکارهێنەر"
+msgstr[1] " %d ئەژمێری بەکارهێنەر"
+
+msgid "%d web domain"
+msgid_plural "%d web domains"
+msgstr[0] " %dو دۆمەینی وێب"
+msgstr[1] "%d دۆمەینی وێب"
+
+msgid "1 number"
+msgstr "١ ژمارە"
+
+msgid "1 uppercase & 1 lowercase character"
+msgstr "١ پیتی گەورە و ١ پیتی بچووک"
+
+msgid "2FA Reset Code"
+msgstr "کۆدی گەڕانەوەی ئەکاونت"
+
+msgid "2FA Token"
+msgstr "پینی OTP"
+
+msgid "8 characters long"
+msgstr "درێژییەکەی ٨ پیتە"
+
+msgid "ACCEPT"
+msgstr "پەسەندکردن"
+
+msgid "Access Key"
+msgstr "كلیلی دەستپێگەیشتن "
+
+msgid "Access Keys"
+msgstr "کلیلی دەستگەیشتن"
+
+msgid "Access Log"
+msgstr "لۆگی دەستڕاگەیشتن"
+
+msgid "Account"
+msgstr "هەژمارە"
+
+msgid "Account has been suspended"
+msgstr "هەژمارە ڕاگیراوە"
+
+msgid "Accounts"
+msgstr "هەژمارەکان"
+
+msgid "Action"
+msgstr "کردار"
+
+msgid "Add Access Key"
+msgstr "کلیلی دەستگەیشتن زیاد بکە"
+
+msgid "Add Cron Job"
+msgstr "زیادکردنی Cron Job"
+
+msgid "Add DNS Domain"
+msgstr "زیادکردنی دۆمەینی DNS"
+
+msgid "Add DNS Record"
+msgstr "زیادکردنی تۆماری DNS"
+
+msgid "Add Database"
+msgstr "زیادکردنی بنکەدراوە"
+
+msgid "Add IP list"
+msgstr "زیادکردنی لیستی IP"
+
+msgid "Add Mail Account"
+msgstr "زیادکردنی هەژمارەی مەیل "
+
+msgid "Add Mail Domain"
+msgstr "زیادکردنی دۆمەینی پۆست"
+
+msgid "Add Package"
+msgstr "زیادکردنی پاکێج"
+
+msgid "Add Record"
+msgstr "زیادکردنی تۆمار"
+
+msgid "Add Rule"
+msgstr "زیادکردنی یاسا"
+
+msgid "Add SSH Key"
+msgstr "کلیلی SSH زیاد بکە"
+
+msgid "Add User"
+msgstr "زیادکردنی بەکارهێنەر"
+
+msgid "Add Web Domain"
+msgstr "زیادکردنی دۆمەینی وێب"
+
+msgid "Administrator"
+msgstr "بەڕێوەبەر"
+
+msgid "Aliases"
+msgstr "خوازناو"
+
+msgid "All ports: 0, Range: 80-82, List: 80,443,8080,8443"
+msgstr "هەموو دەروازەکان: 0، مەودا: 80-82، لیست: 80,443,8080,8443"
+
+msgid "Allow suspended users to log in with read-only access"
+msgstr ""
+"ڕێگە بە بەکارهێنەرانی هەڵپەسێردراو بدە بچنە ژوورەوە بە دەستگەیشتن بە تەنها "
+"خوێندنەوە"
+
+msgid "Allow users to change templates when editing DNS zones"
+msgstr ""
+"ڕێگە بە بەکارهێنەران بدە لە کاتی دەستکاریکردنی ناوچەکانی DNS قاڵبەکان بگۆڕن"
+
+msgid "Allow users to change templates when editing web domains"
+msgstr ""
+"ڕێگە بە بەکارهێنەران بدە لە کاتی دەستکاریکردنی دۆمەینەکانی وێبدا قاڵبەکان "
+"بگۆڕن"
+
+msgid "Allow users to delete log history"
+msgstr "ڕێگە بە بەکارهێنەران بدە مێژووی لۆگ بسڕنەوە"
+
+msgid "Allow users to edit their account details"
+msgstr "ڕێگە بە بەکارهێنەران بدە دەستکاری وردەکارییەکانی ئەکاونتەکەیان بکەن"
+
+msgid "Allow users to reset their passwords"
+msgstr "ڕێگە بە بەکارهێنەران بدە وشەی نهێنی خۆیان ڕێست بکەنەوە"
+
+msgid "Allow users to view action and login history logs"
+msgstr ""
+"ڕێگە بە بەکارهێنەران بدە سەیری لۆگەکانی مێژووی کردار و چوونەژوورەوە بکەن"
+
+msgid "Allowed IP addresses for API"
+msgstr "ناونیشانی IP ڕێگەپێدراو بۆ API"
+
+msgid "An internal error occurred"
+msgstr "هەڵەیەکی ناوخۆیی ڕوویدا"
+
+msgid "Apr"
+msgstr "مانگی ٤"
+
+msgid "Aug"
+msgstr "مانگی ٨"
+
+msgid "BLACKLIST"
+msgstr "لیستی ڕەش"
+
+msgid "Back"
+msgstr "گەڕانەوە"
+
+msgid "Backend Pool Mode"
+msgstr "دۆخی حەوزەی پاشەکەوتو hhhhh"
+
+msgid "Backend Server"
+msgstr "داشبۆردی ڕاژەکار"
+
+msgid "Backend Template"
+msgstr "ڕووکاری تەختەی بەڕێوەبرایەتی"
+
+msgid "Backups"
+msgstr "پاشەکەوتەکان"
+
+msgid "Ban IP Address"
+msgstr "ناونیشانی ئایپی قەدەغە بکە"
+
+msgid "Bandwidth"
+msgstr "پانایی باند"
+
+msgid "Banlist"
+msgstr "پێرستی قەدەغە"
+
+msgid "Browser"
+msgstr "وێبگەڕ"
+
+msgid "CPU"
+msgstr "سی‌پی‌یوو‌"
+
+msgid "Cache Duration"
+msgstr "ماوەی کاش"
+
+msgid "Category"
+msgstr "هاوپۆله‌کان"
+
+msgid "Charset"
+msgstr "چارسێت"
+
+msgid "City"
+msgstr "شار"
+
+msgid "City / Locality"
+msgstr "شار / ناوچە"
+
+msgid "Code has been expired"
+msgstr "کۆدەکە بەسەرچووە"
+
+msgid "Command"
+msgstr "فەرمان"
+
+msgid "Comment"
+msgstr "سەرنج"
+
+msgid "Compression"
+msgstr "پاڵەپەستۆ"
+
+msgid "Configure"
+msgstr "ڕێکخستن"
+
+msgid "Confirm"
+msgstr "دڵنیاکردنەوە"
+
+msgid "Confirm Password"
+msgstr "ووشەی نھێنی  دووبارە  بكەوە"
+
+msgid "Continue"
+msgstr "بەردەوام بوون"
+
+msgid "Country"
+msgstr "وڵات"
+
+msgid "Create Backup"
+msgstr "دروستکردنی پاشەکەوت"
+
+msgid "Cron Jobs"
+msgstr "کرۆن جۆبس"
+
+msgid "Custom document root"
+msgstr "ڕەگی بەڵگەنامەی تایبەتمەند"
+
+msgid "DKIM Support"
+msgstr "پشتگیری DKIM"
+
+msgid "DNS Cluster"
+msgstr "هێشووی DNA"
+
+msgid "DNS Records"
+msgstr "تۆمارەکانی DNS"
+
+msgid "DNS Server"
+msgstr "ڕاژەکاری DNS"
+
+msgid "DNS Support"
+msgstr "پشتگیری DNS"
+
+msgid "DNS Template"
+msgstr "چوارچێوەی DNS"
+
+msgid "DROP"
+msgstr "فڕێدان"
+
+msgid "Daily"
+msgstr "ڕۆژانە"
+
+msgid "Data Source"
+msgstr "سەرچاوەی داتا"
+
+msgid "Database"
+msgstr "بنکەدراوە"
+
+msgid "Databases"
+msgstr "بنکەدراوە"
+
+msgid "Date"
+msgstr "ڕێکەوت"
+
+msgid "Day"
+msgstr "ڕۆژ"
+
+msgid "Dec"
+msgstr "مانگی ١٢"
+
+msgid "Default"
+msgstr "بنەڕەتی"
+
+msgid "Default Language"
+msgstr "زمانی پێشوەختە"
+
+msgid "Default Name Servers"
+msgstr "ڕاژەکارەکانی ناوی پێشوەختە"
+
+msgid "Delete"
+msgstr "سڕینەوە"
+
+msgid "Description"
+msgstr "وەسف"
+
+msgid "Details"
+msgstr "ووردەکاریەکان"
+
+msgid "Directory"
+msgstr "بەڕێوەبەرایەتی"
+
+msgid "Disabled"
+msgstr "ناچالاک"
+
+msgid "Discard all mail"
+msgstr "هەموو پۆستەکان فڕێ بدە"
+
+msgid "Disk"
+msgstr "دیسک"
+
+msgid "Do not allow other administrators to access Server Settings"
+msgstr "ڕێگە مەدە بەڕێوەبەرانی تر بچنە ناو ڕێکخستنەکانی ڕاژەکار"
+
+msgid "Do not allow user to log in to Control Panel"
+msgstr "ڕێگە مەدە بەکارهێنەر بچێتە ژوورەوە بۆ تەختەی چاودێری"
+
+msgid "Do not store forwarded mail"
+msgstr "مەیل  پێشکەشکراو هەڵمەگرە"
+
+msgid "Domain"
+msgstr "دۆمەین"
+
+msgid "Domains"
+msgstr "دۆمەینەکان"
+
+msgid "Download"
+msgstr "دابەزاندن"
+
+msgid "Edit Package"
+msgstr "دەستکاری پاکێجەکە بکە"
+
+msgid "Email"
+msgstr "ئیمەیڵ"
+
+msgid "Enable API access"
+msgstr "دەستڕاگەیشتن بە API چالاک بکە"
+
+msgid "Enable debug mode"
+msgstr "دۆخی debug چالاک بکە"
+
+msgid "Enable domain redirection"
+msgstr "ئاڕاستەکردنەوەی دۆمەین چالاک بکە"
+
+msgid "Enable legacy API access"
+msgstr "دەستڕاگەیشتن بە APIی میراتی چالاک بکە"
+
+msgid "Enable preview features"
+msgstr "تایبەتمەندیەکانی پێشبینی چالاک بکە"
+
+msgid "Enabled"
+msgstr "چالاک کراوە"
+
+msgid "Enabled for admin"
+msgstr "بۆ بەڕێوەبەر چالاک کراوە"
+
+msgid "Enabled for all users"
+msgstr "بۆ هەموو بەکارهێنەران چالاک کراوە"
+
+msgid "Enforce subdomain ownership"
+msgstr "خاوەندارێتی ژێر دۆمەین جێبەجێ بکە"
+
+msgid "Enter focused element"
+msgstr "توخمێکی فۆکەسکراو دابنێ"
+
+msgid "Error Log"
+msgstr "گوزارشی هەڵە"
+
+msgid "Error: Hestia did not return any output."
+msgstr "هەڵە: Hestia هیچ بەرهەمێکی نەگەڕاندەوە."
+
+msgid "Expiration Date"
+msgstr "بەرواری بەسەرچوون"
+
+msgid "Expire"
+msgstr "بەسەرچوون"
+
+msgid "Feb"
+msgstr "مانگی ٢"
+
+msgid "Field \"%s\" can not be blank."
+msgstr "مەیدانی \"%s\" ناتوانێت سپی بێت."
+
+msgid "File Name"
+msgstr "ناوی پەڕگە"
+
+msgid "Firewall"
+msgstr "دیواری ئاگرین"
+
+msgid "Focus on search"
+msgstr "تەرکیز لەسەر گەڕان بکە"
+
+msgid "Forgot Password"
+msgstr "وشەی نهێنی لەبیر کردووە"
+
+msgid "Forward to"
+msgstr "بەرەوپێش"
+
+msgid "Forwarding"
+msgstr "پێشکەشکردن"
+
+msgid "Friday"
+msgstr "هەینی"
+
+msgid "Global SMTP Relay"
+msgstr "رێلەی جیهانی SMTP"
+
+msgid "Go to BACKUP list"
+msgstr "بڕۆ بۆ لیستی BACKUP"
+
+msgid "Go to CRON list"
+msgstr "بڕۆ بۆ لیستی CRON"
+
+msgid "Go to DB list"
+msgstr "بڕۆ بۆ لیستی DB"
+
+msgid "Go to DNS list"
+msgstr "بڕۆ بۆ لیستی DNS"
+
+msgid "Go to MAIL list"
+msgstr "بڕۆ بۆ لیستی MAIL"
+
+msgid "Go to WEB list"
+msgstr "بڕۆ بۆ لیستی WEB"
+
+msgid "HESTIA"
+msgstr "هێستیا(HESTIA)"
+
+msgid "Help"
+msgstr "یارمەتیدان"
+
+msgid "Hestia Control Panel"
+msgstr "تەختەی بەڕێوەبردنی هێستیا(Hestia)"
+
+msgid "Hide account from other administrators"
+msgstr "هەژمارە لە بەڕێوەبەرانی تر بشارەوە"
+
+msgid "Host"
+msgstr "خانه‌خوێ(هۆست)"
+
+msgid "Hostname"
+msgstr "ناوی ڕاژەکار"
+
+msgid "Hour"
+msgstr "کاتژمێر"
+
+msgid "Hourly"
+msgstr "کاتژمێر بە کاتژمێر"
+
+msgid "IP Address"
+msgstr "ناونیشانی ئایپی"
+
+msgid "IP or Value"
+msgstr "IP یان بەها"
+
+msgid "IPs"
+msgstr "ئایپییەکان"
+
+msgid "Inactive session timeout"
+msgstr "کاتی تەواوبوونی دانیشتنی ناچالاك"
+
+msgid "Interface"
+msgstr "ڕووکار"
+
+msgid "Invalid or missing 2FA token"
+msgstr "تۆکنی 2FA نادروستە یان نەماوە"
+
+msgid "Invalid username or code"
+msgstr "ناوی بەکارهێنەر یان کۆدی نادروست"
+
+msgid "Invalid username or password"
+msgstr "ناو یان ژمارەنی نهێنی هەلەیە"
+
+msgid "Jan"
+msgstr "مانگی ١"
+
+msgid "Jul"
+msgstr "مانگی ٧"
+
+msgid "Jun"
+msgstr "مانگی ٦"
+
+msgid "Language"
+msgstr "زمان"
+
+msgid "Last 70 lines of %s.%s.log"
+msgstr "کۆتا ٧٠ دێڕی %s.%s.گوزارش"
+
+msgid "Limit"
+msgstr "سنوور"
+
+msgid "Load Average"
+msgstr "تێکڕای بار"
+
+msgid "Log in"
+msgstr "چونه‌ ژووره‌وه‌"
+
+msgid "Log out"
+msgstr "چوونە دەرەوە"
+
+msgid "Logged in as"
+msgstr "چوونەژورەوە بە"
+
+msgid "Login"
+msgstr "چونه‌ ژووره‌وه‌"
+
+msgid "Login screen style"
+msgstr "شێوازی شاشەی چوونەژوورەوە"
+
+msgid "Logs"
+msgstr "لۆگەکان"
+
+msgid "Mail"
+msgstr "پۆست"
+
+msgid "Mail Accounts"
+msgstr "ئەکاونتی مەیل"
+
+msgid "Mail Domains"
+msgstr "دۆمەینەکانی مەیل"
+
+msgid "Mail Server"
+msgstr "ڕاژەکاری مەیل"
+
+msgid "Mail Support"
+msgstr "مەیل بۆ ئەم دۆمەینە چالاک بکە"
+
+msgid "Mar"
+msgstr "مانگی ٣"
+
+msgid "May"
+msgstr "مانگی ٥"
+
+msgid "Memory"
+msgstr "بیرگه‌"
+
+msgid "Message"
+msgstr "نامە"
+
+msgid "Minute"
+msgstr "خولەک"
+
+msgid "Minutes"
+msgstr "خولەکەکان"
+
+msgid "Monday"
+msgstr "دوو شەمە"
+
+msgid "Month"
+msgstr "مانگ"
+
+msgid "Monthly"
+msgstr "مانگانە"
+
+msgid "More info"
+msgstr "زانیاری زیاتر"
+
+msgid "Move backward through top menu"
+msgstr "لە ڕێگەی مینیوی سەرەوەوە بەرەو دواوە بچۆ"
+
+msgid "Move down through elements list"
+msgstr "لە ڕێگەی لیستی توخمەکانەوە بچۆ خوارەوە"
+
+msgid "Move forward through top menu"
+msgstr "لە ڕێگەی مینیوی سەرەوە بەرەو پێشەوە بڕۆ"
+
+msgid "Move up through elements list"
+msgstr "لە ڕێگەی لیستی توخمەکانەوە بەرەو سەرەوە بڕۆ"
+
+msgid "MySQL Support"
+msgstr "پشتگیری MySQL"
+
+msgid "Name"
+msgstr "ناو"
+
+msgid "Netmask"
+msgstr "نێتماسک"
+
+msgid "Network"
+msgstr "تۆڕ"
+
+msgid "New Password"
+msgstr "تێپەڕەوشەی نوێ"
+
+msgid "Next"
+msgstr "دواتر"
+
+msgid "No"
+msgstr "نەخێر"
+
+msgid "No encryption"
+msgstr "بێ نهێنیکردن"
+
+msgid "Normal password"
+msgstr "وشەی نهێنی ئاسایی"
+
+msgid "Notifications"
+msgstr "ئاگادارکردنەوەکان"
+
+msgid "Nov"
+msgstr "مانگی ١١"
+
+msgid "Oct"
+msgstr "مانگی ١٠"
+
+msgid "Old Style"
+msgstr "شێوازی کۆن"
+
+msgid "Operating System"
+msgstr "سیستمی هەڵسوڕاندن"
+
+msgid "Options"
+msgstr "بژاردەکان"
+
+msgid "Organization"
+msgstr "ڕێکخراو"
+
+msgid "Overall Statistics"
+msgstr "ئاماری گشتی"
+
+msgid "Owner"
+msgstr "خاوەن"
+
+msgid "PHP CLI Version"
+msgstr "وەشانی PHP CLI"
+
+msgid "Package"
+msgstr "پاکەت"
+
+msgid "Package Name"
+msgstr "ناوی پاکێج"
+
+msgid "Packages"
+msgstr "پاکێجەکان"
+
+msgid "Password"
+msgstr "نهێنوشە"
+
+msgid "Path"
+msgstr "ڕێڕەو"
+
+msgid "Permissions"
+msgstr "مۆڵەتەکان"
+
+msgid "Please make sure ~/web/%s/public_html is empty!"
+msgstr "تکایە دڵنیابە کە ~/web/%s/public_html بەتاڵە!"
+
+msgid "Point to"
+msgstr "ئاماژە بە..."
+
+msgid "Policies"
+msgstr "سیاسەتەکان"
+
+msgid "Policy"
+msgstr "سیاسەت"
+
+msgid "Port"
+msgstr "دەرگا"
+
+msgid "PostgreSQL Support"
+msgstr "پشتگیری PostgreSQL"
+
+msgid "Prefix %s will be added to username automatically"
+msgstr "پێشگر %s بە شێوەیەکی ئۆتۆماتیکی زیاد دەکرێت بۆ ناوی بەکارهێنەر"
+
+msgid ""
+"Prefix %s will be automatically added to database name and database user"
+msgstr ""
+"پێشگر %s بە شێوەیەکی ئۆتۆماتیکی زیاد دەکرێت بۆ ناوی بنکەدراوە و بەکارهێنەری "
+"بنکەدراوە"
+
+msgid "Prevent CSRF"
+msgstr "ڕێگری لە CSRF بکە"
+
+msgid "Preview"
+msgstr "پێشبینی"
+
+msgid "Priority"
+msgstr "پێشه‌نگی"
+
+msgid "Protocol"
+msgstr "پرۆتۆکۆڵ"
+
+msgid "Proxy Extensions"
+msgstr "مەوداکانی پرۆکسی"
+
+msgid "Proxy Server"
+msgstr "پرۆکسی سێرڤەر"
+
+msgid "Proxy Support"
+msgstr "پشتگیری پرۆکسی"
+
+msgid "Proxy Template"
+msgstr "چوارچێوەی پرۆکسی"
+
+msgid "Quick App Installer"
+msgstr "دامەزرێنەری خێرا ئەپ"
+
+msgid "Quick Install App"
+msgstr "ئەپی دامەزراندنی خێرا"
+
+msgid "Quota"
+msgstr "به‌ش"
+
+msgid "RAM"
+msgstr "ڕام"
+
+msgid "Record"
+msgstr "تۆمارکردن"
+
+msgid "Records"
+msgstr "تۆمارەکان"
+
+msgid "Redirect visitors to %s"
+msgstr "سەردانکەران ئاڕاستە بکەرەوە بۆ %s"
+
+msgid "Redirect visitors to a custom domain or web address"
+msgstr "سەردانکەران ئاڕاستە بکەرەوە بۆ دۆمەینێک یان ناونیشانی وێبی تایبەت"
+
+msgid "Refresh"
+msgstr "نوێ بکەرەوە"
+
+msgid "Release"
+msgstr "وشانی نوێ"
+
+msgid "Reset"
+msgstr "ڕێکخستنه‌وه‌"
+
+msgid "Reset Code"
+msgstr "ڕێکخستنه‌وه‌ کۆد"
+
+msgid "Restart"
+msgstr "ده‌ستپێكردنه‌وه‌"
+
+msgid "Restart \"%s\" failed"
+msgstr "دووبارە دەستپێکردنەوەی \"%s\" شکستی هێنا"
+
+msgid "Restore"
+msgstr "گەڕاندنەوە"
+
+msgid "Restore All"
+msgstr "هەموو بهێنەرەوە"
+
+msgid "Restrict access to read-only for other administrators"
+msgstr "دەستڕاگەیشتن بە تەنها خوێندنەوە بۆ بەڕێوەبەرانی تر سنووردار بکە"
+
+msgid "Role"
+msgstr "ئەرک"
+
+msgid "Run Command"
+msgstr "بڕۆ بۆ فەرمان"
+
+msgid "Runtime"
+msgstr "کاتی جێبەجێکردن"
+
+msgid "SMTP Relay"
+msgstr "رێلەیSMTP "
+
+msgid "SSH Access"
+msgstr "دەستڕاگەیشتن بە SSH"
+
+msgid "SSL Certificate"
+msgstr "بڕوانامەی SSL"
+
+msgid "SSL Certificate Authority / Intermediate"
+msgstr "دەسەڵاتی بڕوانامەی SSL / مامناوەند"
+
+msgid "SSL Domains"
+msgstr "دۆمەینەکانی SSL"
+
+msgid "Saturday"
+msgstr "شەممە"
+
+msgid "Save"
+msgstr "پاشکەتکردن"
+
+msgid "Search"
+msgstr "گەڕان"
+
+msgid "Search Results"
+msgstr "ئەنجامەکانی گەڕان"
+
+msgid "Secret Key"
+msgstr "کلیلی نهێنی"
+
+msgid "Security"
+msgstr "ئاسایش"
+
+msgid "Select"
+msgstr "دەسنیاشنکردن"
+
+msgid "Select all"
+msgstr "هەموویان هەڵبژێره"
+
+msgid "Send FTP credentials to email"
+msgstr "ناردنی ناسنامەی FTP بۆ ئیمەیڵ"
+
+msgid "Send welcome email"
+msgstr "ئیمەیڵی بەخێرهاتن بنێرە"
+
+msgid "Sep"
+msgstr "مانگی ٩"
+
+msgid "Service"
+msgstr "خزمەتگوزاری"
+
+msgid "Set as default language for all users"
+msgstr "وەک زمانی پێشوەختە بۆ هەموو بەکارهێنەران دابنێ"
+
+msgid "Set as selected theme for all users"
+msgstr "وەک تەوەرێکی هەڵبژێردراو بۆ هەموو بەکارهێنەران دابنێ"
+
+msgid "Setup"
+msgstr "دامەزراند"
+
+msgid "Shared"
+msgstr "هاوبەش"
+
+msgid "Shell"
+msgstr "شێڵ"
+
+msgid "Shortcuts"
+msgstr "کورتە ڕێگاکان"
+
+msgid "Show Certificate"
+msgstr "بڕوانامە پیشان بدە"
+
+msgid "Size"
+msgstr "قەبارە"
+
+msgid "Sort items"
+msgstr "ڕیزکردنی شتەکان"
+
+msgid "Start \"%s\" failed"
+msgstr "دەستپێکردنی \"%s\" شکستی هێنا"
+
+msgid "State"
+msgstr "دۆخ"
+
+msgid "State / Province"
+msgstr "ویلایەت / پارێزگا"
+
+msgid "Statistics"
+msgstr "ئامار"
+
+msgid "Statistics Authorization"
+msgstr "ڕێگەپێدانی ئامار"
+
+msgid "Status"
+msgstr "دۆخ"
+
+msgid "Status code"
+msgstr "کۆدی دۆخ"
+
+msgid "Stop \"%s\" failed"
+msgstr "وەستاندنی \"%s\" شکستی هێنا"
+
+msgid "Strict"
+msgstr "تەواو"
+
+msgid "Submit"
+msgstr "پێشکەشکردن"
+
+msgid "Sunday"
+msgstr "یەک شەمە"
+
+msgid "Suspended"
+msgstr "هەڵپەساردن"
+
+msgid "System"
+msgstr "سیستەم"
+
+msgid "System Administrator account"
+msgstr "ئەژمێری بەڕێوەبەری سیستەم"
+
+msgid "System Protection"
+msgstr "پاراستنی سیستەم"
+
+msgid "Target domain or URL"
+msgstr "دۆمەین یان URLی ئامانج"
+
+msgid "Template"
+msgstr "ڕووکار"
+
+msgid "The system is going down for reboot NOW!"
+msgstr "سیستەمەکە دەچێتە خوارەوە بۆ دووبارە هەڵکردنەوە ئێستا!"
+
+msgid "Theme"
+msgstr "ڕووخسار"
+
+msgid "There are currently no IP lists defined."
+msgstr "لە ئێستادا هیچ لیستێکی IP پێناسە نەکراوە."
+
+msgid "There are currently no banned IP addresses."
+msgstr "لە ئێستادا هیچ ئایپی ناونیشانێکی قەدەغەکراو نییە."
+
+msgid "Thursday"
+msgstr "پێنجشەممە"
+
+msgid "Time"
+msgstr "کات"
+
+msgid "Time Zone"
+msgstr "کاتی ناوچەی جوگرافی"
+
+msgid ""
+"To enable Let's Encrypt SSL, ensure that DNS records exist for mail.%s and "
+"%s!"
+msgstr ""
+"بۆ چالاککردنی Let's Encrypt SSL، دڵنیابە لەوەی کە تۆمارەکانی DNS بۆ mail.%s "
+"و %s بوونیان هەیە!"
+
+msgid "Top"
+msgstr "سەروو"
+
+msgid "Tuesday"
+msgstr "سێشەممە"
+
+msgid "Type"
+msgstr "جۆر"
+
+msgid "USER"
+msgstr "بەکارهێنەر"
+
+msgid "Unable to add database!"
+msgstr "ناتوانرێت بنکەدراوە زیاد بکرێت!"
+
+msgid "Unable to add database! Limit reached!"
+msgstr "ناتوانرێت بنکەدراوە زیاد بکرێت! سنوورێک گەیشت!"
+
+msgid "Unlimited"
+msgstr "بێ سنوور"
+
+msgid "Unsupported hash method"
+msgstr "شێوازی هاش کە پشتگیری نەکراوە"
+
+msgid "Updates"
+msgstr "نوێکارییەکان"
+
+msgid "Uptime"
+msgstr "کاتی کارکردن"
+
+msgid "Use IP address allow list for login attempts"
+msgstr "بۆ هەوڵەکانی چوونەژوورەوە لیستی ڕێگەپێدانی ناونیشانی IP بەکاربهێنە"
+
+msgid "User"
+msgstr "بەکارهێنەر"
+
+msgid "Username"
+msgstr "ناوی بەکارهێنەر"
+
+msgid "Users"
+msgstr "بەکارهێنەران"
+
+msgid "Value"
+msgstr "نرخ"
+
+msgid "Version"
+msgstr "وه‌شان"
+
+msgid "View"
+msgstr "دیمەن"
+
+msgid "Web"
+msgstr "وێب"
+
+msgid "Web Aliases"
+msgstr "خوازناوەکانی وێب"
+
+msgid "Web Domains"
+msgstr "وێب دۆمەینەکان"
+
+msgid "Web Server"
+msgstr "ڕاژەکاری وێب"
+
+msgid "Web Statistics"
+msgstr "ئاماری وێب"
+
+msgid "Web Template"
+msgstr "ڕووکاری وێب"
+
+msgid "Webmail Client"
+msgstr "وێبمەیڵ ڕاژەخواز"
+
+msgid "Wednesday"
+msgstr "چوار شەمە"
+
+msgid "Weekly"
+msgstr "هەفتانە"
+
+msgid "Welcome"
+msgstr "بەخێربێیت"
+
+msgid "Yearly"
+msgstr "ساڵانە"
+
+msgid "Yes"
+msgstr "بەڵێ"
+
+msgid "Your password must have at least"
+msgstr "پێویستە وشەی نهێنیەکەت لانیکەم هەبێت"
+
+msgid "backend server"
+msgstr "داشبۆردی ڕاژەکار"
+
+msgid "database server"
+msgstr "ڕاژەکاری بنکەدراوە"
+
+msgid "dns server"
+msgstr "ڕاژەکاری dns"
+
+msgid "firewall"
+msgstr "دیواری ئاگرین"
+
+msgid "ftp server"
+msgstr "ڕاژەکاری ftp"
+
+msgid "job scheduler"
+msgstr "خشتەی کار"
+
+msgid "mail server"
+msgstr "ڕاژەکاری پۆست"
+
+msgid "one or more email addresses"
+msgstr "یەک یان چەند ناونیشانی ئیمەیڵ"
+
+msgid "per domain"
+msgstr "بۆ هەر دۆمەینێک"
+
+msgid "phpMyAdmin Single Sign On"
+msgstr "چالاکی phpMyAdmin تاکە چوونەژوورەوە"
+
+msgid "reverse proxy"
+msgstr "پرۆکسی پێچەوانە"
+
+msgid "url, script or file"
+msgstr "url، سکریپت یان فایل"
+
+msgid "web server"
+msgstr "ڕاژەکاری وێب"
+
+msgid "zstd only"
+msgstr "تەنها zstd"

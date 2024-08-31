@@ -1,0 +1,1401 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hestiacp\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-06 11:26\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Traditional\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: hestiacp\n"
+"X-Crowdin-Project-ID: 587405\n"
+"X-Crowdin-Language: zh-TW\n"
+"X-Crowdin-File: hestiacp.pot\n"
+"X-Crowdin-File-ID: 3\n"
+
+msgid "%d DNS record"
+msgid_plural "%d DNS records"
+msgstr[0] "%d 個DNS紀錄"
+
+msgid "%d DNS zone"
+msgid_plural "%d DNS zones"
+msgstr[0] "%d 個DNS網域"
+
+msgid "%d IP address"
+msgid_plural "%d IP addresses"
+msgstr[0] "%d IP地址"
+
+msgid "%d backup"
+msgid_plural "%d backups"
+msgstr[0] "%d 個備份"
+
+msgid "%d banned IP address"
+msgid_plural "%d banned IP addresses"
+msgstr[0] "%d 條已禁止IP地址"
+
+msgid "%d cron job"
+msgid_plural "%d cron jobs"
+msgstr[0] "%d 個任務排程"
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d 天"
+
+msgid "%d firewall rule"
+msgid_plural "%d firewall rules"
+msgstr[0] "%d 條防火牆規則"
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d 小時"
+
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d 個項目"
+
+msgid "%d log record"
+msgid_plural "%d log records"
+msgstr[0] "%d 條記錄"
+
+msgid "%d mail account"
+msgid_plural "%d mail accounts"
+msgstr[0] "%d 個信箱帳號"
+
+msgid "%d mail domain"
+msgid_plural "%d mail domains"
+msgstr[0] "%d 個信箱網域"
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d 分鐘"
+
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d 個月"
+
+msgid "%d object"
+msgid_plural "%d objects"
+msgstr[0] "%d 個結果"
+
+msgid "%d package"
+msgid_plural "%d packages"
+msgstr[0] "%d個套件"
+
+msgid "%d user account"
+msgid_plural "%d user accounts"
+msgstr[0] "%d 個使用者帳號"
+
+msgid "%d web domain"
+msgid_plural "%d web domains"
+msgstr[0] "%d 個網站網域"
+
+msgid "1 number"
+msgstr "1 個數字"
+
+msgid "1 uppercase & 1 lowercase character"
+msgstr "1 個大寫字母與 1 個小寫字母"
+
+msgid "2FA QR Code"
+msgstr "雙重驗證QR碼"
+
+msgid "2FA Reset Code"
+msgstr "帳戶復原代碼"
+
+msgid "2FA Token"
+msgstr "雙重驗證碼"
+
+msgid "8 characters long"
+msgstr "8 個字元"
+
+msgid "Access Log"
+msgstr "訪問日誌"
+
+msgid "Account"
+msgstr "帳號"
+
+msgid "Accounts"
+msgstr "帳號"
+
+msgid "Action"
+msgstr "動作"
+
+msgid "Add Cron Job"
+msgstr "新增任務排程"
+
+msgid "Add DNS Domain"
+msgstr "新增 DNS 網域"
+
+msgid "Add DNS Record"
+msgstr "新增 DNS 紀錄"
+
+msgid "Add Database"
+msgstr "新增資料庫"
+
+msgid "Add Firewall Rule"
+msgstr "新增防火牆規則"
+
+msgid "Add IP Address"
+msgstr "新增IP地址"
+
+msgid "Add IP list"
+msgstr "新增IP清單"
+
+msgid "Add Mail Account"
+msgstr "新增信箱帳號"
+
+msgid "Add Mail Domain"
+msgstr "新增信箱網域"
+
+msgid "Add Name Server"
+msgstr "新增Name Server"
+
+msgid "Add Package"
+msgstr "新增方案"
+
+msgid "Add Record"
+msgstr "新增紀錄"
+
+msgid "Add Rule"
+msgstr "新增規則"
+
+msgid "Add SSH Key"
+msgstr "新增SSH金鑰"
+
+msgid "Add User"
+msgstr "新增使用者"
+
+msgid "Add Web Domain"
+msgstr "新增網站網域"
+
+msgid "Administrator"
+msgstr "系統管理員"
+
+msgid "Aliases"
+msgstr "子網域"
+
+msgid "All ports: 0, Range: 80-82, List: 80,443,8080,8443"
+msgstr "所有連結埠: 0, 範圍: 80-82, 列表: 80,443,8080,8443"
+
+msgid "Allow suspended users to log in with read-only access"
+msgstr "允許已停用之使用者已無法修改的權限登入"
+
+msgid "Allow users to change templates when editing DNS zones"
+msgstr "允許使用者自行編輯 DNS zones 範本"
+
+msgid "Allow users to change templates when editing web domains"
+msgstr "允許使用者自行編輯網站範本"
+
+msgid "Allow users to delete log history"
+msgstr "允許使用者刪除歷史紀錄"
+
+msgid "Allow users to edit their account details"
+msgstr "允許使用者編輯帳號詳細資料"
+
+msgid "Allow users to reset their passwords"
+msgstr "允許使用者自行重設密碼"
+
+msgid "Allow users to view action and login history logs"
+msgstr "允許使用者查看登入與作業紀錄"
+
+msgid "Allowed IP addresses for API"
+msgstr "允許存取API之IP列表"
+
+msgid "An internal error occurred"
+msgstr "發生內部錯誤"
+
+msgid "Application Name"
+msgstr "應用程式名稱"
+
+msgid "Apply to selected"
+msgstr "套用至所選"
+
+msgid "Apr"
+msgstr "四月"
+
+msgid "Are you sure you want to delete package %s?"
+msgstr "確定要刪除%s方案嗎?"
+
+msgid "Are you sure you want to delete user %s?"
+msgstr "確定要刪除%s使用者嗎?"
+
+msgid "Are you sure you want to suspend user %s?"
+msgstr "確定要中止%s使用者嗎?"
+
+msgid "Are you sure you want to unsuspend user %s?"
+msgstr "確定要解除中止%s使用者嗎?"
+
+msgid "Aug"
+msgstr "八月"
+
+msgid "Auto Reply"
+msgstr "自動回覆"
+
+msgid "Auto Update"
+msgstr "自動更新"
+
+msgid "BACKUP"
+msgstr "備份"
+
+msgid "BLACKLIST"
+msgstr "黑名單"
+
+msgid "Back"
+msgstr "返回"
+
+msgid "Backend Pool Mode"
+msgstr "Backend Pool 模式"
+
+msgid "Backend Server"
+msgstr "Backend 伺服器"
+
+msgid "Backend Template"
+msgstr "Backend 範本"
+
+msgid "Backup Details"
+msgstr "備份細節"
+
+msgid "Backups"
+msgstr "備份"
+
+msgid "Ban IP Address"
+msgstr "封鎖 IP"
+
+msgid "Bandwidth"
+msgstr "流量"
+
+msgid "Banlist"
+msgstr "封鎖清單"
+
+msgid "Banned IP Addresses"
+msgstr "已封鎖IP地址"
+
+msgid "Block Malicious IPs"
+msgstr "阻擋惡意IPs"
+
+msgid "Browser"
+msgstr "瀏覽器"
+
+msgid "CPU"
+msgstr "處理器負載"
+
+msgid "CRON"
+msgstr "任務排程"
+
+msgid "Cache Duration"
+msgstr "快取保留時間"
+
+msgid "Category"
+msgstr "類別"
+
+msgid "Charset"
+msgstr "編碼"
+
+msgid "City"
+msgstr "城市"
+
+msgid "City / Locality"
+msgstr "市 / 地區"
+
+msgid "Clear"
+msgstr "清除"
+
+msgid "Close debug panel"
+msgstr "關閉除蟲面板"
+
+msgid "Close menu"
+msgstr "關閉選單"
+
+msgid "Code has been expired"
+msgstr "代碼已過期"
+
+msgid "Collapse main menu"
+msgstr "收起主選單"
+
+msgid "Command"
+msgstr "指令"
+
+msgid "Comment"
+msgstr "備註"
+
+msgid "Compression"
+msgstr "壓縮類型"
+
+msgid "Configure"
+msgstr "設定"
+
+msgid "Confirm"
+msgstr "確認"
+
+msgid "Confirm Password"
+msgstr "確認密碼"
+
+msgid "Continue"
+msgstr "繼續"
+
+msgid "Country"
+msgstr "國家"
+
+msgid "Create Backup"
+msgstr "建立備份"
+
+msgid "Cron Jobs"
+msgstr "任務排程"
+
+msgid "Custom Logo"
+msgstr "自訂標誌"
+
+msgid "Custom document root"
+msgstr "自訂網站目錄"
+
+msgid "Custom logo"
+msgstr "自訂標誌"
+
+msgid "DB"
+msgstr "資料庫"
+
+msgid "DKIM Support"
+msgstr "DKIM 支援"
+
+msgid "DNS"
+msgstr "DNS 管理"
+
+msgid "DNS Cluster"
+msgstr "DNS 叢集"
+
+msgid "DNS Records"
+msgstr "DNS紀錄"
+
+msgid "DNS Server"
+msgstr "DNS 伺服器"
+
+msgid "DNS Support"
+msgstr "DNS 支援"
+
+msgid "DNS Template"
+msgstr "DNS 範本"
+
+msgid "DNS Zone"
+msgstr "DNS區域"
+
+msgid "DNS Zones"
+msgstr "DNS區域"
+
+msgid "Daily"
+msgstr "每天"
+
+msgid "Data Source"
+msgstr "資料來源"
+
+msgid "Database"
+msgstr "資料庫"
+
+msgid "Databases"
+msgstr "資料庫"
+
+msgid "Date"
+msgstr "日期"
+
+msgid "Day"
+msgstr "日"
+
+msgid "Day of Week"
+msgstr "星期幾"
+
+msgid "Dec"
+msgstr "十二月"
+
+msgid "Default"
+msgstr "預設"
+
+msgid "Default Language"
+msgstr "預設語言"
+
+msgid "Default Name Servers"
+msgstr "預設域名伺服器"
+
+msgid "Delete"
+msgstr "刪除"
+
+msgid "Delete all notifications"
+msgstr "刪除所有通知"
+
+msgid "Delete notification"
+msgstr "刪除通知"
+
+msgid "Description"
+msgstr "描述"
+
+msgid "Details"
+msgstr "細節"
+
+msgid "Directory"
+msgstr "路徑"
+
+msgid "Disable Notifications"
+msgstr "停用通知"
+
+msgid "Disabled"
+msgstr "已停用"
+
+msgid "Discard all mail"
+msgstr "放棄所有郵件"
+
+msgid "Disk"
+msgstr "磁碟空間"
+
+msgid "Do not allow other administrators to access Server Settings"
+msgstr "限制其他管理員存取伺服器設定"
+
+msgid "Do not allow user to log in to Control Panel"
+msgstr "禁止使用者登入控制台"
+
+msgid "Do not store forwarded mail"
+msgstr "不保留已轉發的郵件"
+
+msgid "Domain"
+msgstr "網域"
+
+msgid "Domains"
+msgstr "網域"
+
+msgid "Download"
+msgstr "下載"
+
+msgid "Edit"
+msgstr "編輯"
+
+msgid "Edit Backup Exclusions"
+msgstr "編輯備份排除項"
+
+msgid "Edit Cron Job"
+msgstr "編輯任務排程"
+
+msgid "Edit DNS Domain"
+msgstr "編輯DNS網域"
+
+msgid "Edit Database"
+msgstr "編輯資料庫"
+
+msgid "Edit Firewall Rule"
+msgstr "編輯防火牆規則"
+
+msgid "Edit Package"
+msgstr "編輯方案"
+
+msgid "Edit User"
+msgstr "編輯使用者"
+
+msgid "Email"
+msgstr "電子信箱"
+
+msgid "Email Subject"
+msgstr "電子郵件主題"
+
+msgid "Enable API access"
+msgstr "允許使用API"
+
+msgid "Enable DNSSEC"
+msgstr "允許DNSSEC"
+
+msgid "Enable Notifications"
+msgstr "允許通知"
+
+msgid "Enable debug mode"
+msgstr "啟動除錯模式"
+
+msgid "Enable domain redirection"
+msgstr "啟用網域轉址"
+
+msgid "Enable preview features"
+msgstr "啟動預覽功能"
+
+msgid "Enabled"
+msgstr "已啟動"
+
+msgid "Enforce subdomain ownership"
+msgstr "確保子網域所有權"
+
+msgid "Enter focused element"
+msgstr "進入選擇的選項"
+
+msgid "Error"
+msgstr "錯誤"
+
+msgid "Error Log"
+msgstr "錯誤日誌"
+
+msgid "Error code: %s"
+msgstr "錯誤代號: %s"
+
+msgid "Error: Hestia did not return any output."
+msgstr "錯誤: Hestia 沒有返回任何輸出。"
+
+msgid "Every %s days"
+msgstr "每%s天"
+
+msgid "Every %s hours"
+msgstr "每%s小時"
+
+msgid "Every %s minutes"
+msgstr "每%s分鐘"
+
+msgid "Every %s months"
+msgstr "每個%s月"
+
+msgid "Every day"
+msgstr "每日"
+
+msgid "Every even day"
+msgstr "每偶數日"
+
+msgid "Every even month"
+msgstr "每個偶數月"
+
+msgid "Every hour"
+msgstr "每小時"
+
+msgid "Every minute"
+msgstr "每分鐘"
+
+msgid "Every month"
+msgstr "每月"
+
+msgid "Every odd day"
+msgstr "每單數日"
+
+msgid "Every odd month"
+msgstr "每個單數月"
+
+msgid "Expand main menu"
+msgstr "展開主選單"
+
+msgid "Expiration Date"
+msgstr "到期日期"
+
+msgid "Expire"
+msgstr "過期"
+
+msgid "Feb"
+msgstr "二月"
+
+msgid "Field \"%s\" can not be blank."
+msgstr "\"%s\" 欄位不能空白"
+
+msgid "File Name"
+msgstr "檔案名稱"
+
+msgid "File manager"
+msgstr "檔案管理器"
+
+msgid "Firewall"
+msgstr "防火牆"
+
+msgid "Firewall Rules"
+msgstr "防火牆規則"
+
+msgid "Focus on search"
+msgstr "搜尋"
+
+msgid "Forgot Password"
+msgstr "忘記密碼"
+
+msgid "Forward to"
+msgstr "轉寄到"
+
+msgid "Forwarding"
+msgstr "轉寄"
+
+msgid "Friday"
+msgstr "星期五"
+
+msgid "General"
+msgstr "一般"
+
+msgid "Go to BACKUP list"
+msgstr "回到備份列表"
+
+msgid "Go to CRON list"
+msgstr "回到任務排程列表"
+
+msgid "Go to DB list"
+msgstr "回到資料庫列表"
+
+msgid "Go to DNS list"
+msgstr "回到 DNS 列表"
+
+msgid "Go to MAIL list"
+msgstr "回到郵件列表"
+
+msgid "Go to WEB list"
+msgstr "回到網站列表"
+
+msgid ""
+"Hello {{name}},\n"
+"\n"
+"To reset your {{appname}} password, please follow this link:\n"
+"https://{{hostname}}/reset/?action=confirm&user={{user}}&code={{resetcode}}\n"
+"\n"
+"Alternatively, you may go to https://{{hostname}}/reset/?"
+"action=code&user={{user}} and enter the following reset code:\n"
+"{{resetcode}}\n"
+"\n"
+"If you did not request password reset, please ignore this message and accept "
+"our apologies.\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"您好 {{name}},\n"
+"\n"
+"要初始化您的 {{appname}} 密碼, 請點擊此處的超連結:\n"
+"https://{{hostname}}/reset/?action=confirm&user={{user}}&code={{resetcode}}\n"
+"\n"
+"或者, 您可以前往 https://{{hostname}}/reset/?action=code&user={{user}} 並輸入"
+"以下初始化代號:\n"
+"{{resetcode}}\n"
+"\n"
+"如果您沒有要求密碼初始化時, 請無視此訊息並接受我們的道歉.\n"
+"\n"
+"最好的問候,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Hestia core package"
+msgstr "Hestia核心方案"
+
+msgid "Hide Certificate"
+msgstr "隱藏憑證"
+
+msgid "Hide account from other administrators"
+msgstr "限制其他管理員看到此帳號"
+
+msgid "Host"
+msgstr "主機"
+
+msgid "Hostname"
+msgstr "主機名稱"
+
+msgid "Hour"
+msgstr "時"
+
+msgid "Hourly"
+msgstr "小時"
+
+msgid "IP Address"
+msgstr "IP 位置"
+
+msgid "IP Addresses"
+msgstr "IP地址"
+
+msgid "IP List Name"
+msgstr "IP清單名稱"
+
+msgid "IP Version"
+msgstr "IP版本"
+
+msgid "IP or Value"
+msgstr "IP 或值"
+
+msgid "Inactive session timeout"
+msgstr "閒置登入超時時間"
+
+msgid "Information"
+msgstr "資訊"
+
+msgid "Install %s"
+msgstr "安裝 %s"
+
+msgid "Interface"
+msgstr "介面卡"
+
+msgid "Invalid or missing 2FA token"
+msgstr "無效或缺少雙重驗證令牌"
+
+msgid "Invalid username or code"
+msgstr "無效的使用者名稱或驗證碼."
+
+msgid "Invalid username or password"
+msgstr "無效的使用者名稱或密碼"
+
+msgid "Jan"
+msgstr "一月"
+
+msgid "Jobs"
+msgstr "任務"
+
+msgid "Jul"
+msgstr "七月"
+
+msgid "Jun"
+msgstr "六月"
+
+msgid "Language"
+msgstr "語言"
+
+msgid "Last 70 lines of %s.%s.log"
+msgstr "%s.%s.log 的最後 70 行"
+
+msgid "Limit"
+msgstr "限額"
+
+msgid "Load Average"
+msgstr "平均負載量"
+
+msgid "Loading..."
+msgstr "載入中..."
+
+msgid "Log in"
+msgstr "登入"
+
+msgid "Log out"
+msgstr "登出"
+
+msgid "Logged in as"
+msgstr "目前登入身份"
+
+msgid "Login"
+msgstr "登入"
+
+msgid "Login screen style"
+msgstr "登入介面風格"
+
+msgid "Logs"
+msgstr "紀錄"
+
+msgid "MAIL"
+msgstr "信箱管理"
+
+msgid "Mail"
+msgstr "信箱"
+
+msgid "Mail Accounts"
+msgstr "信箱使用者"
+
+msgid "Mail Domain"
+msgstr "郵件網域"
+
+msgid "Mail Domains"
+msgstr "信箱網域"
+
+msgid "Mail Server"
+msgstr "郵件伺服器"
+
+msgid "Mail Support"
+msgstr "信箱支援"
+
+msgid "Mar"
+msgstr "三月"
+
+msgid "May"
+msgstr "五月"
+
+msgid "Memory"
+msgstr "記憶體"
+
+msgid "Message"
+msgstr "訊息"
+
+msgid "Minute"
+msgstr "分鐘"
+
+msgid "Minutes"
+msgstr "分鐘"
+
+msgid "Monday"
+msgstr "星期一"
+
+msgid "Month"
+msgstr "月"
+
+msgid "Monthly"
+msgstr "每月"
+
+msgid "More info"
+msgstr "更多資訊"
+
+msgid "Move backward through top menu"
+msgstr "在頂部選單中向左移動"
+
+msgid "Move down through elements list"
+msgstr "往下檢視列表"
+
+msgid "Move forward through top menu"
+msgstr "在頂部選單中向右移動"
+
+msgid "Move up through elements list"
+msgstr "往上檢視列表"
+
+msgid "MySQL Support"
+msgstr "MySQL 支援"
+
+msgid "Name"
+msgstr "名稱"
+
+msgid "Netmask"
+msgstr "子網路遮罩"
+
+msgid "Network"
+msgstr "網路"
+
+msgid "New Password"
+msgstr "新密碼"
+
+msgid "Next"
+msgstr "下一步"
+
+msgid "No"
+msgstr "否"
+
+msgid "No encryption"
+msgstr "不加密"
+
+msgid "No exclusions"
+msgstr "無排除項"
+
+msgid "Normal password"
+msgstr "普通密碼"
+
+msgid "Notifications"
+msgstr "通知"
+
+msgid "Nov"
+msgstr "十一月"
+
+msgid "Oct"
+msgstr "十月"
+
+msgid "Old Style"
+msgstr "舊風格"
+
+msgid "Open debug panel"
+msgstr "打開除蟲面板"
+
+msgid "Open menu"
+msgstr "打開選單"
+
+msgid "Operating System"
+msgstr "操作系統"
+
+msgid "Optional"
+msgstr "選項"
+
+msgid "Options"
+msgstr "選項"
+
+msgid "Organization"
+msgstr "組織名稱"
+
+msgid "Overall Statistics"
+msgstr "整理統計資料"
+
+msgid "Owner"
+msgstr "擁有者"
+
+msgid "PHP CLI Version"
+msgstr "PHP 命令列預設版本"
+
+msgid "POP3 Settings"
+msgstr "POP3設定值"
+
+msgid "Package"
+msgstr "方案"
+
+msgid "Package Name"
+msgstr "方案名稱"
+
+msgid "Package Names"
+msgstr "方案名稱"
+
+msgid "Packages"
+msgstr "方案設定"
+
+msgid "Password"
+msgstr "密碼"
+
+msgid "Password Reset at %s"
+msgstr "密碼初始化在 %s"
+
+msgid "Password does not match the minimum requirements."
+msgstr "密碼不符合最低需求."
+
+msgid ""
+"Password reset instructions have been sent to the email address associated "
+"with this account."
+msgstr "密碼重設說明已寄出到與此帳號關聯的電子郵件地址."
+
+msgid "Passwords do not match"
+msgstr "密碼不符合"
+
+msgid "Path"
+msgstr "路徑"
+
+msgid "Please wait 15 minutes before sending a new request."
+msgstr "請等待 15 分鐘後再發送新請求。"
+
+msgid "Point to"
+msgstr "指向"
+
+msgid "Policies"
+msgstr "策略"
+
+msgid "Policy"
+msgstr "規則"
+
+msgid "Port"
+msgstr "連線埠"
+
+msgid "PostgreSQL Support"
+msgstr "PostgreSQL 支援"
+
+msgid "Prefix %s will be added to username automatically"
+msgstr "使用者名稱將自動新增 %s 前綴"
+
+msgid "Prevent CSRF"
+msgstr "CSRF防範"
+
+msgid "Preview"
+msgstr "預覽"
+
+msgid "Preview Features"
+msgstr "預覽功能"
+
+msgid "Priority"
+msgstr "優先順序"
+
+msgid "Protocol"
+msgstr "協定"
+
+msgid "Proxy Extensions"
+msgstr "Proxy 擴充"
+
+msgid "Proxy Server"
+msgstr "Proxy 伺服器"
+
+msgid "Proxy Support"
+msgstr "Proxy 支援"
+
+msgid "Proxy Template"
+msgstr "Proxy 範本"
+
+msgid "Public Key"
+msgstr "公開金鑰"
+
+msgid "Quick App Installer"
+msgstr "網站快速安裝器"
+
+msgid "Quick Install App"
+msgstr "簡易安裝App"
+
+msgid "Quota"
+msgstr "配額"
+
+msgid "RAM"
+msgstr "記憶體"
+
+msgid "Rebuild"
+msgstr "重組"
+
+msgid "Rebuild All"
+msgstr "重組所有"
+
+msgid "Rebuild Cron Jobs"
+msgstr "重組任務時間表"
+
+msgid "Rebuild DNS Zones"
+msgstr "重組DNS區域"
+
+msgid "Rebuild Databases"
+msgstr "重組資料庫"
+
+msgid "Rebuild Mail Domains"
+msgstr "重組郵件網域"
+
+msgid "Rebuild User Profile"
+msgstr "重組使用者簡介"
+
+msgid "Rebuild Web Domains"
+msgstr "重組網站網域"
+
+msgid "Record"
+msgstr "紀錄"
+
+msgid "Records"
+msgstr "紀錄"
+
+msgid "Redirect visitors to %s"
+msgstr "將訪問者轉址至 %s"
+
+msgid "Redirect visitors to a custom domain or web address"
+msgstr "將訪問者轉址至自定義的網域或網址"
+
+msgid "Refresh"
+msgstr "重新整理"
+
+msgid "Refresh IP Addresses"
+msgstr "重新整理IP地址"
+
+msgid "Release"
+msgstr "發佈號碼"
+
+msgid "Reset"
+msgstr "重設"
+
+msgid "Reset Code"
+msgstr "重設代碼"
+
+msgid "Restart"
+msgstr "重新啟動"
+
+msgid "Restart \"%s\" failed"
+msgstr "重新啟動 \"%s\" 失敗"
+
+msgid "Restore"
+msgstr "還原"
+
+msgid "Restore All"
+msgstr "全部還原"
+
+msgid "Restrict access to read-only for other administrators"
+msgstr "限制其他管理員之修改權限"
+
+msgid "Role"
+msgstr "角色"
+
+msgid "Run Command"
+msgstr "執行指令"
+
+msgid "Runtime"
+msgstr "執行時間"
+
+msgid "SMTP Settings"
+msgstr "SMTP設定值"
+
+msgid "SOA"
+msgstr "SOA"
+
+msgid "SSH Access"
+msgstr "SSH 權限"
+
+msgid "SSH Keys"
+msgstr "SSH金鑰"
+
+msgid "SSL CSR"
+msgstr "SSL 憑證簽署請求 (CSR)"
+
+msgid "SSL Certificate"
+msgstr "SSL 憑證"
+
+msgid "SSL Certificate Authority / Intermediate"
+msgstr "SSL 中繼憑證"
+
+msgid "SSL Domains"
+msgstr "SSL 網域"
+
+msgid "Saturday"
+msgstr "星期六"
+
+msgid "Save"
+msgstr "儲存"
+
+msgid "Search"
+msgstr "搜尋"
+
+msgid "Search Results"
+msgstr "搜尋結果"
+
+msgid "Security"
+msgstr "安全性"
+
+msgid "Select"
+msgstr "選擇"
+
+msgid "Select all"
+msgstr "選擇全部"
+
+msgid "Send FTP credentials to email"
+msgstr "將 FTP 登入資訊傳送到使用者信箱"
+
+msgid "Send welcome email"
+msgstr "寄出歡迎電子郵件"
+
+msgid "Sep"
+msgstr "九月"
+
+msgid "Server settings"
+msgstr "伺服器設定值"
+
+msgid "Service"
+msgstr "服務"
+
+msgid "Services"
+msgstr "服務"
+
+msgid "Set as default language for all users"
+msgstr "設定為所有使用者的預設語言"
+
+msgid "Set as selected theme for all users"
+msgstr "設定為所有使用者的佈景主題"
+
+msgid "Setup"
+msgstr "建立"
+
+msgid "Shared"
+msgstr "共享"
+
+msgid "Shortcuts"
+msgstr "快捷鍵"
+
+msgid "Show Certificate"
+msgstr "顯示憑證"
+
+msgid "Size"
+msgstr "大小"
+
+msgid "Sort items"
+msgstr "排序"
+
+msgid "Spam Filter"
+msgstr "垃圾郵件篩選器"
+
+msgid "Start \"%s\" failed"
+msgstr "啟動 \"%s\" 失敗"
+
+msgid "State"
+msgstr "州(區)"
+
+msgid "State / Province"
+msgstr "州 / 省"
+
+msgid "Statistics"
+msgstr "統計資料"
+
+msgid "Statistics Authorization"
+msgstr "統計授權"
+
+msgid "Status"
+msgstr "狀態"
+
+msgid "Status code"
+msgstr "狀態碼"
+
+msgid "Stop \"%s\" failed"
+msgstr "停止 \"%s\" 失敗"
+
+msgid "Strict"
+msgstr "嚴謹"
+
+msgid "Submit"
+msgstr "送出"
+
+msgid "Sunday"
+msgstr "星期日"
+
+msgid "Support CIDR format"
+msgstr "支援CIDR格式"
+
+msgid "Suspend"
+msgstr "中止"
+
+msgid "Suspend All"
+msgstr "中止所有"
+
+msgid "Suspended"
+msgstr "停用"
+
+msgid "System"
+msgstr "系統"
+
+msgid "System Administrator account"
+msgstr "系統管理員帳號"
+
+msgid "System Protection"
+msgstr "系統防護"
+
+msgid "TTL"
+msgstr "TTL"
+
+msgid "Target domain or URL"
+msgstr "目標網域或網址"
+
+msgid "Template"
+msgstr "範本"
+
+msgid "The system is going down for reboot NOW!"
+msgstr "系統要馬上重新啟動了！"
+
+msgid "Theme"
+msgstr "主題風格"
+
+msgid "There are currently no IP lists defined."
+msgstr "目前沒有自訂IP清單。"
+
+msgid "There are currently no banned IP addresses."
+msgstr "目前沒有任何被禁止的IP地址。"
+
+msgid "Thursday"
+msgstr "星期四"
+
+msgid "Time"
+msgstr "時間"
+
+msgid "Time Zone"
+msgstr "時區"
+
+msgid "Title"
+msgstr "標題"
+
+msgid "Top"
+msgstr "頂端"
+
+msgid "Tuesday"
+msgstr "星期二"
+
+msgid "Type"
+msgstr "類型"
+
+msgid "USER"
+msgstr "使用者管理"
+
+msgid "Unlimited"
+msgstr "無限"
+
+msgid "Unsuspend"
+msgstr "解除中止"
+
+msgid "Unsuspend All"
+msgstr "解除中止所有"
+
+msgid "Update logo"
+msgstr "更新標誌"
+
+msgid "Updates"
+msgstr "系統更新"
+
+msgid "Uptime"
+msgstr "已啟動時間"
+
+msgid "Use IP address allow list for login attempts"
+msgstr "僅允許下列白名單中的IP登入"
+
+msgid "User"
+msgstr "使用者"
+
+msgid "Username"
+msgstr "使用者名稱"
+
+msgid "Users"
+msgstr "使用者"
+
+msgid "Value"
+msgstr "值"
+
+msgid "Version"
+msgstr "版本"
+
+msgid "View"
+msgstr "查看"
+
+msgid "WEB"
+msgstr "網站管理"
+
+msgid "Warning"
+msgstr "警告"
+
+msgid "Web"
+msgstr "網站"
+
+msgid "Web Aliases"
+msgstr "網站子網域"
+
+msgid "Web Domain"
+msgstr "網站網域"
+
+msgid "Web Domains"
+msgstr "網站網域"
+
+msgid "Web Server"
+msgstr "Web 伺服器"
+
+msgid "Web Statistics"
+msgstr "網站統計"
+
+msgid "Web Template"
+msgstr "Apache 範本"
+
+msgid "Webmail Client"
+msgstr "網路信箱系統"
+
+msgid "Wednesday"
+msgstr "星期三"
+
+msgid "Weekdays (5 days)"
+msgstr "平日 (5天)"
+
+msgid "Weekend (2 days)"
+msgstr "假日 (2天)"
+
+msgid "Weekly"
+msgstr "每週"
+
+msgid "Welcome"
+msgstr "歡迎"
+
+msgid "YYYY-MM-DD"
+msgstr "YYYY-MM-DD"
+
+msgid "Yearly"
+msgstr "每年"
+
+msgid "Yes"
+msgstr "是"
+
+msgid "Your password must have at least"
+msgstr "您的密碼須至少"
+
+msgid "backend server"
+msgstr "後端伺服器"
+
+msgid "database server"
+msgstr "資料庫伺服器"
+
+msgid "dns server"
+msgstr "dns伺服器"
+
+msgid "firewall"
+msgstr "防火牆"
+
+msgid "ftp server"
+msgstr "ftp伺服器"
+
+msgid "job scheduler"
+msgstr "任務排程"
+
+msgid "mail server"
+msgstr "郵件伺服器"
+
+msgid "one or more email addresses"
+msgstr "一個或更多電子郵件信箱"
+
+msgid "per domain"
+msgstr "(每個網域)"
+
+msgid "phpMyAdmin Single Sign On"
+msgstr "phpMyAdmin 單一簽入"
+
+msgid "reverse proxy"
+msgstr "反向代理"
+
+msgid "url, script or file"
+msgstr "超連結, 腳本或檔案"
+
+msgid "web server"
+msgstr "網站伺服器"
+
+msgid "zstd only"
+msgstr "僅支援 zstd"

@@ -11,11 +11,11 @@ os=$3
 
 # Download specified installer and compiler
 if [ -f "/etc/redhat-release" ]; then
-	wget https://dev.putey.net/bayrepo/hestiacp/raw/branch/master/install/hst-install-rhel.sh
+	wget https://dev.brepo.ru/bayrepo/hestiacp/raw/branch/master/install/hst-install-rhel.sh
 else
-	wget https://dev.putey.net/bayrepo/hestiacp/raw/branch/master/install/hst-install-$os.sh
+	wget https://dev.brepo.ru/bayrepo/hestiacp/raw/branch/master/install/hst-install-$os.sh
 fi
-wget https://dev.putey.net/bayrepo/hestiacp/raw/branch/master/src/hst_autocompile.sh
+wget https://dev.brepo.ru/bayrepo/hestiacp/raw/branch/master/src/hst_autocompile.sh
 
 # Execute compiler and build hestia core package
 chmod +x hst_autocompile.sh

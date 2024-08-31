@@ -10,6 +10,7 @@
 		"docs:dev": "vitepress dev docs",
 		"docs:build": "vitepress build docs",
 		"docs:serve": "vitepress serve docs",
+		"docs:preview": "vitepress preview docs --port=5173 --host=127.0.0.1",
 		"build": "node build.js",
 		"lint": "prettier --cache --check . && eslint --cache . && stylelint web/css/src/**/*.css && markdownlint-cli2 *.md docs/**/*.md",
 		"lint-staged": "lint-staged",

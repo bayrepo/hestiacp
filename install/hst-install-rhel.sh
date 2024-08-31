@@ -679,7 +679,7 @@ echo
 # Installing Nginx repo
 
 echo "[ * ] NGINX"
-dnf config-manager --add-repo https://dev.putey.net/bayrepo/hestiacp/raw/branch/master/install/rpm/nginx/nginx.repo
+dnf config-manager --add-repo https://dev.brepo.ru/bayrepo/hestiacp/raw/branch/master/install/rpm/nginx/nginx.repo
 
 # Installing Remi PHP repo
 echo "[ * ] PHP"
@@ -688,7 +688,7 @@ dnf install -y https://rpms.remirepo.net/enterprise/remi-release-$release.rpm
 # Installing MariaDB repo
 if [ "$mysql" = 'yes' ]; then
 	echo "[ * ] MariaDB"
-	dnf config-manager --add-repo https://dev.putey.net/bayrepo/hestiacp/raw/branch/master/install/rpm/mysql/mariadb-$(arch).repo
+	dnf config-manager --add-repo https://dev.brepo.ru/bayrepo/hestiacp/raw/branch/master/install/rpm/mysql/mariadb-$(arch).repo
 fi
 
 # Enabling MySQL module
@@ -701,9 +701,9 @@ fi
 
 # Installing HestiaCP repo
 echo "[ * ] Hestia Control Panel"
-dnf config-manager --add-repo https://dev.putey.net/bayrepo/hestiacp/raw/branch/master/install/rpm/hestia/hestia.repo
-rpm --import https://repo.putey.net/repo/gpgkeys/repo.putey.net.pub
-check_result $? "rpm import putey.net GPG key failed"
+dnf config-manager --add-repo https://dev.brepo.ru/bayrepo/hestiacp/raw/branch/master/install/rpm/hestia/hestia.repo
+rpm --import https://repo.brepo.ru/repo/gpgkeys/repo.brepo.ru.pub
+check_result $? "rpm import brepo.ru GPG key failed"
 mkdir /var/cache/hestia-nginx/
 chown admin:admin /var/cache/hestia-nginx/
 
@@ -1892,7 +1892,7 @@ fi
 # Get public IP
 pub_ip=$ip
 if [ "$nopublicip" = 'no' ]; then
-	pub_ip=$(curl --ipv4 -s https://ip.hestiacp.com/)
+	pub_ip=$(curl -fsLm5 --retry 2 --ipv4 -H "Simple-Hestiacp: yes" https://hestiaip.brepo.ru/)
 
 	if [ -n "$pub_ip" ] && [ "$pub_ip" != "$ip" ]; then
 		$HESTIA/bin/v-change-sys-ip-nat $ip $pub_ip > /dev/null 2>&1

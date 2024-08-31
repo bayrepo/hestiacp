@@ -1,0 +1,629 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hestiacp\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-06 11:26\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: hestiacp\n"
+"X-Crowdin-Project-ID: 587405\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: hestiacp.pot\n"
+"X-Crowdin-File-ID: 3\n"
+
+msgid "2FA Reset Code"
+msgstr "アカウント復旧コード"
+
+msgid "2FA Token"
+msgstr "OTP PIN"
+
+msgid "ACCEPT"
+msgstr "許可"
+
+msgid "Account"
+msgstr "アカウント"
+
+msgid "Accounts"
+msgstr "アカウント"
+
+msgid "Action"
+msgstr "アクション"
+
+msgid "Add Cron Job"
+msgstr "Cronジョブを追加"
+
+msgid "Add DNS Domain"
+msgstr "DNSドメインを追加"
+
+msgid "Add DNS Record"
+msgstr "DNSレコードを追加"
+
+msgid "Add Database"
+msgstr "データベースを追加"
+
+msgid "Add IP list"
+msgstr "IPリストを追加"
+
+msgid "Add Mail Account"
+msgstr "メールアカウントを追加"
+
+msgid "Add Mail Domain"
+msgstr "メールドメインを追加"
+
+msgid "Add Package"
+msgstr "パッケージを追加"
+
+msgid "Add Record"
+msgstr "レコードを追加"
+
+msgid "Add Rule"
+msgstr "規則を追加"
+
+msgid "Add SSH Key"
+msgstr "SSHキーを追加"
+
+msgid "Add User"
+msgstr "ユーザーを追加"
+
+msgid "Add Web Domain"
+msgstr "ウェブドメインを追加"
+
+msgid "Aliases"
+msgstr "エイリアス"
+
+msgid "Apr"
+msgstr "4月"
+
+msgid "Aug"
+msgstr "8月"
+
+msgid "BACKUP"
+msgstr "バックアップ"
+
+msgid "Back"
+msgstr "戻る"
+
+msgid "Backend Pool Mode"
+msgstr "バックエンドプールモード"
+
+msgid "Backend Server"
+msgstr "バックエンドサーバー"
+
+msgid "Backend Template"
+msgstr "バックエンド テンプレート"
+
+msgid "Backups"
+msgstr "バックアップ"
+
+msgid "Ban IP Address"
+msgstr "IPアドレスをBANリストに追加"
+
+msgid "Bandwidth"
+msgstr "帯域幅"
+
+msgid "Banlist"
+msgstr "BANリスト"
+
+msgid "CRON"
+msgstr "Cron"
+
+msgid "Charset"
+msgstr "文字セット"
+
+msgid "City / Locality"
+msgstr "市区町村"
+
+msgid "Command"
+msgstr "コマンド"
+
+msgid "Comment"
+msgstr "コメント"
+
+msgid "Configure"
+msgstr "設定"
+
+msgid "Confirm"
+msgstr "確認"
+
+msgid "Confirm Password"
+msgstr "パスワードを再入力"
+
+msgid "Country"
+msgstr "国"
+
+msgid "Create Backup"
+msgstr "バックアップを作成"
+
+msgid "Cron Jobs"
+msgstr "Cronジョブ"
+
+msgid "DB"
+msgstr "データベース"
+
+msgid "DKIM Support"
+msgstr "DKIMのサポート"
+
+msgid "DNS Cluster"
+msgstr "DNSクラスタ"
+
+msgid "DNS Server"
+msgstr "DNSサーバー"
+
+msgid "DNS Support"
+msgstr "DNSのサポート"
+
+msgid "DNS Template"
+msgstr "DNSテンプレート"
+
+msgid "DROP"
+msgstr "拒否"
+
+msgid "Daily"
+msgstr "日毎"
+
+msgid "Data Source"
+msgstr "情報源"
+
+msgid "Database"
+msgstr "データベース"
+
+msgid "Databases"
+msgstr "データベース"
+
+msgid "Date"
+msgstr "日付"
+
+msgid "Day"
+msgstr "日"
+
+msgid "Dec"
+msgstr "12月"
+
+msgid "Default Language"
+msgstr "規定の言語"
+
+msgid "Default Name Servers"
+msgstr "規定のネームサーバー"
+
+msgid "Delete"
+msgstr "削除"
+
+msgid "Description"
+msgstr "説明文"
+
+msgid "Directory"
+msgstr "ディレクトリ"
+
+msgid "Disk"
+msgstr "ディスク"
+
+msgid "Do not store forwarded mail"
+msgstr "転送されたメールを保存しない"
+
+msgid "Domain"
+msgstr "ドメイン"
+
+msgid "Domains"
+msgstr "ドメイン"
+
+msgid "Email"
+msgstr "メールアドレス"
+
+msgid "Enter focused element"
+msgstr "フォーカスされた項目に入る"
+
+msgid "Expiration Date"
+msgstr "有効期限"
+
+msgid "Expire"
+msgstr "有効期限"
+
+msgid "Feb"
+msgstr "2月"
+
+msgid "Field \"%s\" can not be blank."
+msgstr "\"%s\" を入力してください"
+
+msgid "File Name"
+msgstr "ファイル名"
+
+msgid "Firewall"
+msgstr "ファイアウォール"
+
+msgid "Focus on search"
+msgstr "検索欄にフォーカスする"
+
+msgid "Forgot Password"
+msgstr "パスワードを再設定する"
+
+msgid "Forward to"
+msgstr "転送先"
+
+msgid "Friday"
+msgstr "金曜日"
+
+msgid "Go to BACKUP list"
+msgstr "バックアップの一覧に移動する"
+
+msgid "Go to CRON list"
+msgstr "Cronの一覧に移動する"
+
+msgid "Go to DB list"
+msgstr "データベースの一覧に移動する"
+
+msgid "Go to DNS list"
+msgstr "DNSの一覧に移動する"
+
+msgid "Go to MAIL list"
+msgstr "メールの一覧に移動する"
+
+msgid "Go to WEB list"
+msgstr "ウェブの一覧に移動する"
+
+msgid "Hestia Control Panel"
+msgstr "ヘスティアコントロールパネル"
+
+msgid "Hostname"
+msgstr "ホスト名"
+
+msgid "Hour"
+msgstr "時"
+
+msgid "Hourly"
+msgstr "時間毎"
+
+msgid "IP Address"
+msgstr "IPアドレス"
+
+msgid "IP or Value"
+msgstr "IPアドレスまたは値"
+
+msgid "Interface"
+msgstr "インターフェイス"
+
+msgid "Invalid username or code"
+msgstr "ユーザー名またはコードが無効です"
+
+msgid "Invalid username or password"
+msgstr "ユーザー名またはパスワードが無効です"
+
+msgid "Jan"
+msgstr "1月"
+
+msgid "Jul"
+msgstr "7月"
+
+msgid "Jun"
+msgstr "6月"
+
+msgid "Language"
+msgstr "言語"
+
+msgid "Last 70 lines of %s.%s.log"
+msgstr "%s.%s.log の最終70行"
+
+msgid "Load Average"
+msgstr "ロードアベレージ"
+
+msgid "Log in"
+msgstr "ログイン"
+
+msgid "Log out"
+msgstr "ログアウト"
+
+msgid "MAIL"
+msgstr "メール"
+
+msgid "Mail"
+msgstr "メール"
+
+msgid "Mail Accounts"
+msgstr "メールアカウント"
+
+msgid "Mail Domains"
+msgstr "メールドメイン"
+
+msgid "Mail Server"
+msgstr "メールサーバー"
+
+msgid "Mail Support"
+msgstr "メールのサポート"
+
+msgid "Mar"
+msgstr "3月"
+
+msgid "May"
+msgstr "5月"
+
+msgid "Memory"
+msgstr "メモリ"
+
+msgid "Message"
+msgstr "メッセージ"
+
+msgid "Minute"
+msgstr "分"
+
+msgid "Minutes"
+msgstr "分毎"
+
+msgid "Monday"
+msgstr "月曜日"
+
+msgid "Month"
+msgstr "月"
+
+msgid "Monthly"
+msgstr "月毎"
+
+msgid "Move backward through top menu"
+msgstr "上部のメニューにおいて後方の項目に移動する"
+
+msgid "Move down through elements list"
+msgstr "リストの1つ下の項目を選択する"
+
+msgid "Move forward through top menu"
+msgstr "上部のメニューにおいて前方の項目に移動する"
+
+msgid "Move up through elements list"
+msgstr "リストの1つ上の項目を選択する"
+
+msgid "MySQL Support"
+msgstr "MySQLのサポート"
+
+msgid "Netmask"
+msgstr "ネットマスク"
+
+msgid "New Password"
+msgstr "新しいパスワード"
+
+msgid "No encryption"
+msgstr "暗号化しない"
+
+msgid "Normal password"
+msgstr "通常のパスワード認証"
+
+msgid "Nov"
+msgstr "11月"
+
+msgid "Oct"
+msgstr "10月"
+
+msgid "Operating System"
+msgstr "オペレーティング システム"
+
+msgid "Organization"
+msgstr "組織"
+
+msgid "Overall Statistics"
+msgstr "全統計"
+
+msgid "Owner"
+msgstr "所有者"
+
+msgid "PHP CLI Version"
+msgstr "PHPコマンドラインバージョン"
+
+msgid "Package"
+msgstr "パッケージ"
+
+msgid "Package Name"
+msgstr "パッケージ名"
+
+msgid "Packages"
+msgstr "パッケージ"
+
+msgid "Password"
+msgstr "パスワード"
+
+msgid "Path"
+msgstr "パス"
+
+msgid "Port"
+msgstr "ポート"
+
+msgid "PostgreSQL Support"
+msgstr "PostgreSQLのサポート"
+
+msgid "Priority"
+msgstr "優先度"
+
+msgid "Protocol"
+msgstr "プロトコル"
+
+msgid "Proxy Extensions"
+msgstr "プロキシ対象拡張子"
+
+msgid "Proxy Server"
+msgstr "プロキシサーバー"
+
+msgid "Proxy Support"
+msgstr "プロキシのサポート"
+
+msgid "Proxy Template"
+msgstr "プロキシ テンプレート"
+
+msgid "Quick Install App"
+msgstr "アプリをインストール"
+
+msgid "Quota"
+msgstr "割り当て量"
+
+msgid "Record"
+msgstr "レコード"
+
+msgid "Records"
+msgstr "レコード"
+
+msgid "Refresh"
+msgstr "リフレッシュ"
+
+msgid "Release"
+msgstr "リリース"
+
+msgid "Reset"
+msgstr "リセット"
+
+msgid "Reset Code"
+msgstr "リセットコード"
+
+msgid "Restart"
+msgstr "再起動"
+
+msgid "Restore All"
+msgstr "すべて復元"
+
+msgid "Run Command"
+msgstr "実行時"
+
+msgid "Runtime"
+msgstr "ランタイム"
+
+msgid "SSH Access"
+msgstr "SSHアクセス"
+
+msgid "SSL CSR"
+msgstr "SSL証明書署名要求"
+
+msgid "SSL Certificate"
+msgstr "SSL証明書"
+
+msgid "SSL Certificate Authority / Intermediate"
+msgstr "SSL（中間）認証局"
+
+msgid "Saturday"
+msgstr "土曜日"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Search Results"
+msgstr "検索結果"
+
+msgid "Send FTP credentials to email"
+msgstr "FTPアカウント情報をメールアドレスに送信"
+
+msgid "Sep"
+msgstr "9月"
+
+msgid "Service"
+msgstr "サービス"
+
+msgid "Setup"
+msgstr "セットアップ"
+
+msgid "Shared"
+msgstr "共有"
+
+msgid "Shortcuts"
+msgstr "ショートカット"
+
+msgid "Size"
+msgstr "サイズ"
+
+msgid "State / Province"
+msgstr "州 / 都道府県"
+
+msgid "Statistics"
+msgstr "統計"
+
+msgid "Statistics Authorization"
+msgstr "統計の認証"
+
+msgid "Status"
+msgstr "状態"
+
+msgid "Submit"
+msgstr "送信"
+
+msgid "Sunday"
+msgstr "日曜日"
+
+msgid "Template"
+msgstr "テンプレート"
+
+msgid "Theme"
+msgstr "外観"
+
+msgid "There are currently no IP lists defined."
+msgstr "現在、定義されているIPリストはありません。"
+
+msgid "Thursday"
+msgstr "木曜日"
+
+msgid "Time"
+msgstr "時間"
+
+msgid "Time Zone"
+msgstr "タイムゾーン"
+
+msgid "Tuesday"
+msgstr "火曜日"
+
+msgid "Type"
+msgstr "種類"
+
+msgid "USER"
+msgstr "ユーザー"
+
+msgid "Updates"
+msgstr "更新"
+
+msgid "Uptime"
+msgstr "稼働時間"
+
+msgid "User"
+msgstr "ユーザー"
+
+msgid "Username"
+msgstr "ユーザー名"
+
+msgid "Value"
+msgstr "値"
+
+msgid "Version"
+msgstr "バージョン"
+
+msgid "WEB"
+msgstr "ウェブ"
+
+msgid "Web"
+msgstr "ウェブ"
+
+msgid "Web Aliases"
+msgstr "ウェブエイリアス"
+
+msgid "Web Domains"
+msgstr "ウェブドメイン"
+
+msgid "Web Server"
+msgstr "ウェブサーバー"
+
+msgid "Web Statistics"
+msgstr "ウェブアクセス統計"
+
+msgid "Web Template"
+msgstr "ウェブ テンプレート"
+
+msgid "Wednesday"
+msgstr "水曜日"
+
+msgid "Weekly"
+msgstr "週毎"
+
+msgid "Welcome"
+msgstr "ようこそ"
+
+msgid "Yearly"
+msgstr "年別"
+
+msgid "one or more email addresses"
+msgstr "1つ以上のメールアドレス"
+
+msgid "per domain"
+msgstr "ドメインごと"

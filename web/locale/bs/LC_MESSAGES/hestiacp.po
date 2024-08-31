@@ -1,0 +1,474 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hestiacp\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-06 11:25\n"
+"Last-Translator: \n"
+"Language-Team: Bosnian\n"
+"Language: bs_BA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Crowdin-Project: hestiacp\n"
+"X-Crowdin-Project-ID: 587405\n"
+"X-Crowdin-Language: bs\n"
+"X-Crowdin-File: hestiacp.pot\n"
+"X-Crowdin-File-ID: 3\n"
+
+msgid "2FA Reset Code"
+msgstr "Kôd za povrat računa"
+
+msgid "2FA Token"
+msgstr "OTP PIN"
+
+msgid "ACCEPT"
+msgstr "PRIHVATITI"
+
+msgid "Account"
+msgstr "Račun"
+
+msgid "Accounts"
+msgstr "Računi"
+
+msgid "Action"
+msgstr "Akcija"
+
+msgid "Add Cron Job"
+msgstr "Dodaj cron job"
+
+msgid "Add DNS Domain"
+msgstr "Dodaj DNS domenu"
+
+msgid "Add DNS Record"
+msgstr "Dodaj DNS record"
+
+msgid "Add Database"
+msgstr "Dodaj database"
+
+msgid "Add IP list"
+msgstr "Dodajte IP listu"
+
+msgid "Add Mail Account"
+msgstr "Dodaj mail račun"
+
+msgid "Add Mail Domain"
+msgstr "Dodaj mail domenu"
+
+msgid "Add Package"
+msgstr "Dodaj paket"
+
+msgid "Add Record"
+msgstr "Dodaj zapis"
+
+msgid "Add Rule"
+msgstr "Dodati pravilo"
+
+msgid "Add SSH Key"
+msgstr "Dodajte SSH ključ"
+
+msgid "Add User"
+msgstr "Dodaj korisnika"
+
+msgid "Add Web Domain"
+msgstr "Dodaj web domenu"
+
+msgid "Aliases"
+msgstr "Aliasi"
+
+msgid "Aug"
+msgstr "Avg"
+
+msgid "Back"
+msgstr "Nazad"
+
+msgid "Backend Template"
+msgstr "Backend šablon"
+
+msgid "Ban IP Address"
+msgstr "Zabrani IP adresu"
+
+msgid "Bandwidth"
+msgstr "Protok"
+
+msgid "Banlist"
+msgstr "Lista banovanih"
+
+msgid "City / Locality"
+msgstr "Grad / Mjesto"
+
+msgid "Command"
+msgstr "Komanda"
+
+msgid "Comment"
+msgstr "Komentar"
+
+msgid "Configure"
+msgstr "Za konfiguriranje"
+
+msgid "Confirm"
+msgstr "Potvrditi"
+
+msgid "Confirm Password"
+msgstr "Potvrdi šifru"
+
+msgid "Country"
+msgstr "Zemlja"
+
+msgid "Create Backup"
+msgstr "Napravi Backup"
+
+msgid "Cron Jobs"
+msgstr "Cron Jobi"
+
+msgid "DKIM Support"
+msgstr "DKIM "
+
+msgid "DNS Support"
+msgstr "DNS podrška"
+
+msgid "DNS Template"
+msgstr "DNS šablon"
+
+msgid "Daily"
+msgstr "Dnevno"
+
+msgid "Data Source"
+msgstr "Izvor podataka"
+
+msgid "Database"
+msgstr "Baza podataka"
+
+msgid "Databases"
+msgstr "Baze podataka"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Day"
+msgstr "Dan"
+
+msgid "Default Language"
+msgstr "Jezik"
+
+msgid "Default Name Servers"
+msgstr "Osnovni Name serveri"
+
+msgid "Delete"
+msgstr "Izbrisati"
+
+msgid "Description"
+msgstr "Opis"
+
+msgid "Directory"
+msgstr "Direktorij"
+
+msgid "Do not store forwarded mail"
+msgstr "Proslijeđen mail se ne pohranjue"
+
+msgid "Domain"
+msgstr "Domena"
+
+msgid "Domains"
+msgstr "Domene"
+
+msgid "Expiration Date"
+msgstr "Datum isteka"
+
+msgid "Expire"
+msgstr "Istek"
+
+msgid "Field \"%s\" can not be blank."
+msgstr "Polja \"%s\" ne smiju biti prazna."
+
+msgid "File Name"
+msgstr "Ime dokumenta"
+
+msgid "Forgot Password"
+msgstr "Zaboravili ste lozinku"
+
+msgid "Forward to"
+msgstr "Proslijediti za"
+
+msgid "Forwarding"
+msgstr "Prosleđivanje"
+
+msgid "Friday"
+msgstr "Petak"
+
+msgid "Host"
+msgstr "Domaćin"
+
+msgid "Hour"
+msgstr "Sat"
+
+msgid "Hourly"
+msgstr "Sahati"
+
+msgid "IP or Value"
+msgstr "IP ili vrijednost"
+
+msgid "Invalid username or code"
+msgstr "Pogrešano korisničko ime ili kod"
+
+msgid "Invalid username or password"
+msgstr "Pogrešani login podaci"
+
+msgid "Language"
+msgstr "Jezik"
+
+msgid "Last 70 lines of %s.%s.log"
+msgstr "Zadnjih 70. redova od %s.%s.log"
+
+msgid "Load Average"
+msgstr "Prosječno opterećenje"
+
+msgid "Log in"
+msgstr "Ulaz"
+
+msgid "Log out"
+msgstr "Izlaz"
+
+msgid "Mail Accounts"
+msgstr "Mail računi"
+
+msgid "Mail Domains"
+msgstr "Mail domene"
+
+msgid "Mail Server"
+msgstr "server za poštu"
+
+msgid "Mail Support"
+msgstr "Mail podrška"
+
+msgid "May"
+msgstr "Maj"
+
+msgid "Memory"
+msgstr "Memorija"
+
+msgid "Message"
+msgstr "Poruka"
+
+msgid "Minutes"
+msgstr "Minuta"
+
+msgid "Monday"
+msgstr "Ponedjeljak"
+
+msgid "Month"
+msgstr "Mjesec"
+
+msgid "Monthly"
+msgstr "Mjesečno"
+
+msgid "Name"
+msgstr "Ime"
+
+msgid "New Password"
+msgstr "Nova šifra"
+
+msgid "No encryption"
+msgstr "Bez enkripcije"
+
+msgid "Notifications"
+msgstr "Obavijesti"
+
+msgid "Oct"
+msgstr "Okt"
+
+msgid "Operating System"
+msgstr "Operativni sistem"
+
+msgid "Organization"
+msgstr "Organizacija"
+
+msgid "Overall Statistics"
+msgstr "Globalna statistika"
+
+msgid "Owner"
+msgstr "Vlasnik"
+
+msgid "PHP CLI Version"
+msgstr "PHP CLI verzija"
+
+msgid "Package"
+msgstr "Paket"
+
+msgid "Package Name"
+msgstr "Ime paketa"
+
+msgid "Packages"
+msgstr "Paketi"
+
+msgid "Password"
+msgstr "Šifra"
+
+msgid "Priority"
+msgstr "Prioritet"
+
+msgid "Protocol"
+msgstr "Protokol"
+
+msgid "Proxy Extensions"
+msgstr "Proxy ekstenzije"
+
+msgid "Proxy Support"
+msgstr "Proxy podrška"
+
+msgid "Proxy Template"
+msgstr "Proxy šablon"
+
+msgid "Quick Install App"
+msgstr "Brza instalacija aplikacije"
+
+msgid "Quota"
+msgstr "Kvota"
+
+msgid "Record"
+msgstr "Zapis"
+
+msgid "Records"
+msgstr "Zapisi"
+
+msgid "Refresh"
+msgstr "Osvježiti"
+
+msgid "Release"
+msgstr "Distribucija"
+
+msgid "Reset Code"
+msgstr "Resetuj kod"
+
+msgid "Restart"
+msgstr "Ponovo pokreni"
+
+msgid "Restore All"
+msgstr "Vrati sve"
+
+msgid "Run Command"
+msgstr "Pokreni komandu"
+
+msgid "SSH Access"
+msgstr "SSH pristup"
+
+msgid "SSL Certificate"
+msgstr "SSL certifikat"
+
+msgid "Saturday"
+msgstr "Subota"
+
+msgid "Save"
+msgstr "Sačuvaj"
+
+msgid "Search Results"
+msgstr "Rezultati pretrage"
+
+msgid "Send FTP credentials to email"
+msgstr "Poslati  FTP podatke na mail adresu"
+
+msgid "Service"
+msgstr "Usluga"
+
+msgid "Setup"
+msgstr "Postaviti"
+
+msgid "Shared"
+msgstr "Šerovano"
+
+msgid "Shortcuts"
+msgstr "Prečice"
+
+msgid "Size"
+msgstr "Veličina"
+
+msgid "State / Province"
+msgstr "Država / Predio"
+
+msgid "Statistics"
+msgstr "Statistika"
+
+msgid "Statistics Authorization"
+msgstr "Ovlaštenje za statistiku"
+
+msgid "Submit"
+msgstr "Potvrdi"
+
+msgid "Sunday"
+msgstr "Nedjelja"
+
+msgid "Template"
+msgstr "Šablon"
+
+msgid "Theme"
+msgstr "Izgled"
+
+msgid "There are currently no IP lists defined."
+msgstr "Trenutno nisu definisane IP liste."
+
+msgid "Thursday"
+msgstr "Četvrtak"
+
+msgid "Time"
+msgstr "Vreme"
+
+msgid "Time Zone"
+msgstr "Vremenska zona"
+
+msgid "Tuesday"
+msgstr "Utorak"
+
+msgid "Type"
+msgstr "Tip"
+
+msgid "USER"
+msgstr "KORISNIK"
+
+msgid "Updates"
+msgstr "Novo"
+
+msgid "Uptime"
+msgstr "Vrijeme rada"
+
+msgid "User"
+msgstr "Korisnik"
+
+msgid "Username"
+msgstr "Korisničko ime"
+
+msgid "Value"
+msgstr "Vrijednost"
+
+msgid "Version"
+msgstr "Verzija"
+
+msgid "Web Aliases"
+msgstr "Web aliasi"
+
+msgid "Web Domains"
+msgstr "Web domena"
+
+msgid "Web Statistics"
+msgstr "Web statistika"
+
+msgid "Web Template"
+msgstr "Web šablon"
+
+msgid "Wednesday"
+msgstr "Srijeda"
+
+msgid "Weekly"
+msgstr "Sedmično"
+
+msgid "Welcome"
+msgstr "Dobrodošli"
+
+msgid "Yearly"
+msgstr "Godišnje"
+
+msgid "one or more email addresses"
+msgstr "jedna ili više mail adresa"
+
+msgid "per domain"
+msgstr "po domeni"

@@ -1,0 +1,2416 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hestiacp\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-06 11:26\n"
+"Last-Translator: \n"
+"Language-Team: Hungarian\n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: hestiacp\n"
+"X-Crowdin-Project-ID: 587405\n"
+"X-Crowdin-Language: hu\n"
+"X-Crowdin-File: hestiacp.pot\n"
+"X-Crowdin-File-ID: 3\n"
+
+msgid "%d DNS record"
+msgid_plural "%d DNS records"
+msgstr[0] "%d DNS rekord"
+msgstr[1] "%d DNS rekord"
+
+msgid "%d DNS zone"
+msgid_plural "%d DNS zones"
+msgstr[0] "%d DNS zóna"
+msgstr[1] "%d DNS zóna"
+
+msgid "%d IP address"
+msgid_plural "%d IP addresses"
+msgstr[0] "%d IP"
+msgstr[1] "%d IP"
+
+msgid "%d IP list"
+msgid_plural "%d IP lists"
+msgstr[0] "%d IP címlista"
+msgstr[1] "%d IP címlista"
+
+msgid "%d SSH key"
+msgid_plural "%d SSH keys"
+msgstr[0] "%d SSH kulcs"
+msgstr[1] "%d SSH kulcs"
+
+msgid "%d access key"
+msgid_plural "%d access keys"
+msgstr[0] "%d hozzáférési kulcs"
+msgstr[1] "%d hozzáférési kulcs"
+
+msgid "%d backup"
+msgid_plural "%d backups"
+msgstr[0] "%d mentés"
+msgstr[1] "%d mentés"
+
+msgid "%d banned IP address"
+msgid_plural "%d banned IP addresses"
+msgstr[0] "%d kitiltott IP cím"
+msgstr[1] "%d kitiltott IP cím"
+
+msgid "%d cron job"
+msgid_plural "%d cron jobs"
+msgstr[0] "%d ütemezett feladat"
+msgstr[1] "%d ütemezett feladat"
+
+msgid "%d database"
+msgid_plural "%d databases"
+msgstr[0] "%d adatbázis"
+msgstr[1] "%d adatbázis"
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d nap"
+msgstr[1] "%d nap"
+
+msgid "%d firewall rule"
+msgid_plural "%d firewall rules"
+msgstr[0] "%d tűzfal szabály"
+msgstr[1] "%d tűzfal szabály"
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d óra"
+msgstr[1] "%d óra"
+
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d elem"
+msgstr[1] "%d elem"
+
+msgid "%d log record"
+msgid_plural "%d log records"
+msgstr[0] "%d naplóbejegyzés"
+msgstr[1] "%d naplóbejegyzés"
+
+msgid "%d mail account"
+msgid_plural "%d mail accounts"
+msgstr[0] "%d e-mail fiók"
+msgstr[1] "%d e-mail fiók"
+
+msgid "%d mail domain"
+msgid_plural "%d mail domains"
+msgstr[0] "%d mail domain"
+msgstr[1] "%d mail domain"
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d perc"
+msgstr[1] "%d perc"
+
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d hónap"
+msgstr[1] "%d hónap"
+
+msgid "%d object"
+msgid_plural "%d objects"
+msgstr[0] "%d objektum"
+msgstr[1] "%d objektum"
+
+msgid "%d package"
+msgid_plural "%d packages"
+msgstr[0] "%d csomag"
+msgstr[1] "%d csomag"
+
+msgid "%d user account"
+msgid_plural "%d user accounts"
+msgstr[0] "%d ügyfél"
+msgstr[1] "%d ügyfél"
+
+msgid "%d web domain"
+msgid_plural "%d web domains"
+msgstr[0] "%d web domain"
+msgstr[1] "%d web domain"
+
+msgid "%s installed successfully."
+msgstr "A(z) %s sikeresen telepítésre került."
+
+msgid "%s installer missing."
+msgstr "A(z) %s telepítőállománya hiányzik."
+
+msgid "1 number"
+msgstr "1 szám"
+
+msgid "1 uppercase & 1 lowercase character"
+msgstr "1 nagybetűs & 1 kisbetűs karakter"
+
+msgid "2FA QR Code"
+msgstr "Helyreállítási QR kód"
+
+msgid "2FA Reset Code"
+msgstr "Fiók-helyreállítási kód"
+
+msgid "2FA Token"
+msgstr "Biztonsági Kód"
+
+msgid "8 characters long"
+msgstr "Legalább 8 karakter"
+
+msgid "ACCEPT"
+msgstr "ACCEPT"
+
+msgid "API"
+msgstr "API"
+
+msgid "Access Key"
+msgstr "Hozzáférési kulcs"
+
+msgid "Access Key ID"
+msgstr "Hozzáférési Kulcs ID"
+
+msgid "Access Keys"
+msgstr "Hozzáférési kulcsok"
+
+msgid "Access Log"
+msgstr "Hozzáférési Napló"
+
+msgid "Access key {%s} has been created successfully."
+msgstr "A hozzáférési kulcs ({%s}) sikeresen létre lett hozva."
+
+msgid "Account"
+msgstr "Fiók"
+
+msgid "Account Recovery Code"
+msgstr "Fiókhelyreállítási Kód"
+
+msgid "Account Unlocked"
+msgstr "Fiók Feloldva"
+
+msgid "Account has been suspended"
+msgstr "A fiók fel van függesztve."
+
+msgid "Accounts"
+msgstr "Fiók"
+
+msgid "Action"
+msgstr "Művelet"
+
+msgid "Add Access Key"
+msgstr "Új Hozzáférési Kulcs"
+
+msgid "Add Cron Job"
+msgstr "Új Ütemezett Feladat"
+
+msgid "Add DNS Domain"
+msgstr "Új Domain DNS"
+
+msgid "Add DNS Record"
+msgstr "Új DNS Rekord"
+
+msgid "Add DNS Zone"
+msgstr "DNS Zóna Hozzáadása"
+
+msgid "Add Database"
+msgstr "Új Adatbázis"
+
+msgid "Add FTP account"
+msgstr "Új FTP fiók"
+
+msgid "Add Firewall Rule"
+msgstr "Tűzfalszabály Hozzáadása"
+
+msgid "Add IP Address"
+msgstr "IP Cím Hozzáadása"
+
+msgid "Add IP Address to Banlist"
+msgstr "IP Cím Tiltólistához Adása"
+
+msgid "Add IP list"
+msgstr "Új IP Lista"
+
+msgid "Add IPset IP List for Firewall"
+msgstr "IPSet Címlista Hozzáadása"
+
+msgid "Add Mail Account"
+msgstr "Új Mail Fiók"
+
+msgid "Add Mail Domain"
+msgstr "Új Mail Domain"
+
+msgid "Add Name Server"
+msgstr "Névszerver hozzáadása"
+
+msgid "Add Package"
+msgstr "Új Csomag"
+
+msgid "Add Record"
+msgstr "Új Rekord"
+
+msgid "Add Rule"
+msgstr "Új Szabály"
+
+msgid "Add SSH Key"
+msgstr "Új SSH Kulcs"
+
+msgid "Add User"
+msgstr "Új Felhasználó"
+
+msgid "Add Web Domain"
+msgstr "Új Web Domain"
+
+msgid "Add new object"
+msgstr "Új objektum"
+
+msgid "Additional FTP account(s)"
+msgstr "További FTP fiókok létrehozása"
+
+msgid "Administrator"
+msgstr "Adminisztrátor"
+
+msgid "Advanced Details"
+msgstr "Részletes Információk"
+
+msgid "Advanced Options"
+msgstr "Haladó Beállítások"
+
+msgid "Algorithm"
+msgstr "Algoritmus"
+
+msgid "Aliases"
+msgstr "Alias"
+
+msgid "Aliases used"
+msgstr "Használt aliasok"
+
+msgid "All ports: 0, Range: 80-82, List: 80,443,8080,8443"
+msgstr "Össz. port: 0, Tartomány: 80-82, Lista: 80, 443, 8080, 8443"
+
+msgid "Allow suspended users to create new backups"
+msgstr ""
+"Biztonsági mentések készítésének engedélyezése a felfüggesztett felhasználók "
+"számára"
+
+msgid "Allow suspended users to log in with read-only access"
+msgstr ""
+"Felfüggesztett felhasználók belépésének engedélyezése a panelbe csak "
+"olvasható hozzáféréssel"
+
+msgid "Allow users to change templates when editing DNS zones"
+msgstr "A felhasználók megválaszthatják a DNS zóna sablonját"
+
+msgid "Allow users to change templates when editing web domains"
+msgstr "A felhasználók megválaszthatják a WEB domain sablonját"
+
+msgid "Allow users to delete log history"
+msgstr "A felhasználók törölhetik a naplózott tevékenységeiket"
+
+msgid "Allow users to edit their account details"
+msgstr "A felhasználók szerkeszthetik a saját adataikat"
+
+msgid "Allow users to reset their passwords"
+msgstr "Jelszó helyreállításának engedélyezése a felhasználóknak"
+
+msgid "Allow users to view action and login history logs"
+msgstr "A felhasználók megnézhetik a naplózott tevékenységeiket"
+
+msgid "Allowed IP addresses for API"
+msgstr "Engedélyezett IP címek"
+
+msgid "Alternate"
+msgstr "Álnevek"
+
+msgid ""
+"An existing backup task is already running, please wait for it to complete."
+msgstr ""
+"Egy biztonsági mentés már folyamatban van. Kérlek várd meg, hogy "
+"befejeződjön a művelet."
+
+msgid ""
+"An existing restoration task is already running. Please wait for it to "
+"finish before launching it again."
+msgstr ""
+"Egy újjáépítési művelet már folyamatban van. Kérlek várd meg, hogy "
+"befejeződjön a művelet."
+
+msgid "An internal error occurred"
+msgstr "Belső hiba lépett fel."
+
+msgid "Anti-Virus"
+msgstr "Víruskereső"
+
+msgid "Application Name"
+msgstr "Alkalmazás Neve"
+
+msgid "Apply to selected"
+msgstr "Művelet a kijelöltekkel"
+
+msgid "Apr"
+msgstr "április"
+
+msgid "Are you sure you want to delete %s?"
+msgstr "Biztosan törölni akarod (%s)?"
+
+msgid "Are you sure you want to delete IP address %s?"
+msgstr "Biztosan törölni akarod a(z) %s IP címet?"
+
+msgid "Are you sure you want to delete IP list %s?"
+msgstr "Biztosan törölni akarod a(z) %s IP listát?"
+
+msgid "Are you sure you want to delete SSH key %s?"
+msgstr "Biztosan törölni akarod a(z) %s SSH kulcsot?"
+
+msgid "Are you sure you want to delete access key %s?"
+msgstr "Biztosan törölni akarod a(z) %s hozzáférési kulcsot?"
+
+msgid "Are you sure you want to delete backup %s?"
+msgstr "Biztosan törölni akarod a(z) %s biztonsági mentést?"
+
+msgid "Are you sure you want to delete database %s?"
+msgstr "Biztosan törölni akarod a(z) %s adatbázist?"
+
+msgid "Are you sure you want to delete domain %s?"
+msgstr "Biztosan törölni akarod a(z) %s domaint?"
+
+msgid "Are you sure you want to delete package %s?"
+msgstr "Biztosan törölni akarod a(z) %s csomagot?"
+
+msgid "Are you sure you want to delete record %s?"
+msgstr "Biztosan törölni akarod a(z) %s rekordot?"
+
+msgid "Are you sure you want to delete rule %s"
+msgstr "Biztosan törölni akarod a(z) %s tűzfalszabályt?"
+
+msgid "Are you sure you want to delete the logs?"
+msgstr "Biztosan törölni akarod a naplóbejegyzéseket?"
+
+msgid "Are you sure you want to delete this cron job?"
+msgstr "Biztosan törölni akarod az ütemezett feladatot?"
+
+msgid "Are you sure you want to delete user %s?"
+msgstr "Biztosan törölni akarod a(z) %s fiókot?"
+
+msgid "Are you sure you want to leave the page?"
+msgstr "Biztos, hogy el akarod hagyni az oldalt?"
+
+msgid "Are you sure you want to restart %s?"
+msgstr "Biztosan újra akarod indítani a(z) %s folyamatot?"
+
+msgid "Are you sure you want to start service %s?"
+msgstr "Biztosan el akarod indítani a(z) %s folyamatot?"
+
+msgid "Are you sure you want to stop service %s?"
+msgstr "Biztosan le akarod állítani a(z) %s folyamatot?"
+
+msgid "Are you sure you want to suspend %s?"
+msgstr "Biztosan fel akarod függeszteni (%s)?"
+
+msgid "Are you sure you want to suspend database %s?"
+msgstr "Biztosan fel akarod függeszteni a(z) %s adatbázist?"
+
+msgid "Are you sure you want to suspend domain %s?"
+msgstr "Biztosan fel akarod függeszteni a(z) %s domaint?"
+
+msgid "Are you sure you want to suspend rule #%s?"
+msgstr "Biztosan fel akarod függeszteni a #%s tűzfalszabályt?"
+
+msgid "Are you sure you want to suspend this cron job?"
+msgstr "Biztosan fel akarod függeszteni az ütemezett feladatot?"
+
+msgid "Are you sure you want to suspend user %s?"
+msgstr "Biztosan fel akarod függeszteni a(z) %s fiókot?"
+
+msgid "Are you sure you want to unsuspend %s?"
+msgstr "Biztosan fel akarod oldani a felfüggesztését (%s)?"
+
+msgid "Are you sure you want to unsuspend database %s?"
+msgstr "Biztosan fel akarod oldani a(z) %s adatbázist?"
+
+msgid "Are you sure you want to unsuspend domain %s?"
+msgstr "Biztosan fel akarod oldani a(z) %s domain felfüggesztését?"
+
+msgid "Are you sure you want to unsuspend rule #%s?"
+msgstr "Biztosan fel akarod oldani a #%s tűzfalszabály felfüggesztését?"
+
+msgid "Are you sure you want to unsuspend this cron job?"
+msgstr "Biztosan fel akarod oldani az ütemezett feladat felfüggesztését?"
+
+msgid "Are you sure you want to unsuspend user %s?"
+msgstr "Biztosan fel akarod oldani a(z) %s fiók felfüggesztését?"
+
+msgid "Assigned Domain"
+msgstr "Hozzárendelt Domain"
+
+msgid "Assigned User"
+msgstr "Hozzárendelt Felhasználó"
+
+msgid "Aug"
+msgstr "augusztus"
+
+msgid "Auth Log"
+msgstr "Hitelesítési Napló"
+
+msgid "Authentication"
+msgstr "Hitelesítés"
+
+msgid "Auto Reply"
+msgstr "Automatikus Válasz"
+
+msgid "Auto Update"
+msgstr "Automatikus Frissítés"
+
+msgid "BACKUP"
+msgstr "MENTÉS"
+
+msgid "BLACKLIST"
+msgstr "FEKETELISTA"
+
+msgid "Back"
+msgstr "Vissza"
+
+msgid "Backend Pool Mode"
+msgstr "Backend pool mód"
+
+msgid "Backend Server"
+msgstr "Backend Szerver"
+
+msgid "Backend Template"
+msgstr "Backend sablon"
+
+msgid "Backup Details"
+msgstr "Biztonsági Mentés Részletei"
+
+msgid "Backup Exclusions"
+msgstr "Mentési Kizárások"
+
+msgid "Backups"
+msgstr "Mentés"
+
+msgid "Ban IP Address"
+msgstr "IP Kitiltása"
+
+msgid "Bandwidth"
+msgstr "Adatforgalom"
+
+msgid "Banlist"
+msgstr "Tiltólista"
+
+msgid "Banned IP Addresses"
+msgstr "Tiltott IP Címek"
+
+msgid "Basic Options"
+msgstr "Alapvető Beállítások"
+
+msgid "Biennially"
+msgstr "Kétévente"
+
+msgid "Block Malicious IPs"
+msgstr "Megbízhatatlan IP Címek"
+
+msgid "Browser"
+msgstr "Böngésző"
+
+msgid "CPU"
+msgstr "CPU"
+
+msgid "CRON"
+msgstr "CRON"
+
+msgid "Cache Duration"
+msgstr "Cache időtartama"
+
+msgid "Catch-All Email"
+msgstr "Catch-All Email Cím"
+
+msgid "Category"
+msgstr "Kategória"
+
+msgid "Certificate has been generated successfully."
+msgstr "A tanúsítvány létrehozása sikeresen megtörtént."
+
+msgid "Changes have been saved."
+msgstr "A módosítások mentésre kerültek."
+
+msgid "Charset"
+msgstr "Karakterkódolás"
+
+msgid "City"
+msgstr "Város"
+
+msgid "City / Locality"
+msgstr "Város"
+
+msgid "Clear"
+msgstr "Töröl"
+
+msgid "Close debug panel"
+msgstr "Debug panel elrejtése"
+
+msgid "Close menu"
+msgstr "Menü elrejtése"
+
+msgid "Code has been expired"
+msgstr "Az érvényesítő kód lejárt."
+
+msgid "Collapse main menu"
+msgstr "Főmenü becsukása"
+
+msgid "Command"
+msgstr "Parancs"
+
+msgid "Comment"
+msgstr "Megjegyzés"
+
+msgid "Common Account Settings"
+msgstr "Általános Fiókbeállítások"
+
+msgid "Compression"
+msgstr "Tömörítés"
+
+msgid "Compression Level"
+msgstr "Tömörítés Szintje"
+
+msgid "Configure"
+msgstr "Beállítás"
+
+msgid "Configure Server"
+msgstr "Kiszolgáló Konfigurálása"
+
+msgid "Confirm"
+msgstr "Megerősít"
+
+msgid "Confirm Password"
+msgstr "Jelszó megerősítése"
+
+msgid "Contact Name"
+msgstr "Név"
+
+msgid "Continue"
+msgstr "Folytatás"
+
+msgid "Country"
+msgstr "Ország"
+
+msgid "Create Backup"
+msgstr "Mentés Készítése"
+
+msgid "Cron Jobs"
+msgstr "Cron feladat"
+
+msgid "Cron job email reporting has been successfully disabled."
+msgstr "Az ütemezett feladatok email jelentése sikeresen ki lett kapcsolva."
+
+msgid "Cron job email reporting has been successfully enabled."
+msgstr "Az ütemezett feladatok email jelentése sikeresen be lett kapcsolva."
+
+msgid "Cron job has been created successfully."
+msgstr "Az ütemezett feladat sikeresen létre lett hozva."
+
+msgid "Current Number of Databases"
+msgstr "Adatbázisok Jelenlegi Száma"
+
+msgid "Custom Logo"
+msgstr "Egyedi Logó"
+
+msgid "Custom document root"
+msgstr "Egyedi root könyvtár használata"
+
+msgid "Custom logo"
+msgstr "Egyedi logó"
+
+msgid "DB"
+msgstr "ADATBÁZIS"
+
+msgid "DKIM"
+msgstr "DKIM"
+
+msgid "DKIM Support"
+msgstr "DKIM"
+
+msgid "DNS"
+msgstr "DNS"
+
+msgid "DNS Cluster"
+msgstr "DNS Klaszter"
+
+msgid "DNS Records"
+msgstr "DNS rekord"
+
+msgid "DNS Server"
+msgstr "DNS Szerver"
+
+msgid "DNS Support"
+msgstr "DNS támogatás"
+
+msgid "DNS Sync User"
+msgstr "DNS Sync Fiók"
+
+msgid "DNS Template"
+msgstr "DNS sablon"
+
+msgid "DNS Zone"
+msgstr "DNS Zóna"
+
+msgid "DNS Zones"
+msgstr "DNS Zónák"
+
+msgid "DNS zone {%s} has been created successfully."
+msgstr "A DNS zóna ({%s}) sikeresen létre lett hozva."
+
+msgid "DNSKEY Record"
+msgstr "DNSKEY Rekord"
+
+msgid "DNSSEC"
+msgstr "DNSSEC"
+
+msgid "DROP"
+msgstr "DROP"
+
+msgid "DS Record"
+msgstr "DS Rekord"
+
+msgid "Daily"
+msgstr "Naponta"
+
+msgid "Data Loss Warning!"
+msgstr "Adatvesztés lehetséges!"
+
+msgid "Data Source"
+msgstr "Adat forrása"
+
+msgid "Database"
+msgstr "Adatbázis"
+
+msgid "Database Credentials: %s"
+msgstr "Adatbázis Hitelesítő Adatai: %s"
+
+msgid ""
+"Database has been created.\n"
+"\n"
+"Database: {{database}}\n"
+"Username: {{username}}\n"
+"Password: {{password}}\n"
+"SQL Manager: {{dbadmin}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"Adatbázisa elkészült.\n"
+"\n"
+"Adatbázis: {{database}}\n"
+"Felhasználónév: {{username}}\n"
+"Jelszó: {{password}}\n"
+"SQL Kezelőfelület: {{dbadmin}}\n"
+"\n"
+"Üdvözlettel,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Database {%s} has been created successfully. / {Open %s}"
+msgstr "Az adatbázis ({%s}) sikeresen létre lett hozva.  / {%s Megnyitása}"
+
+msgid "Databases"
+msgstr "Adatbázis"
+
+msgid "Date"
+msgstr "Dátum"
+
+msgid "Day"
+msgstr "Nap"
+
+msgid "Day of Week"
+msgstr "Hét Napja"
+
+msgid "Dec"
+msgstr "december"
+
+msgid "Default"
+msgstr "Alapértelmezett"
+
+msgid "Default Language"
+msgstr "Alapértelmezett nyelv"
+
+msgid "Default List Sort Order"
+msgstr "Alapértelmezett Listarendezési Elv"
+
+msgid "Default Name Servers"
+msgstr "Alapértelmezett névszerverek"
+
+msgid "Delete"
+msgstr "Törlés"
+
+msgid "Delete all notifications"
+msgstr "Összes értesítés törlése"
+
+msgid "Delete notification"
+msgstr "Értesítés törlése"
+
+msgid "Description"
+msgstr "Leírás"
+
+msgid "Details"
+msgstr "Tartalom"
+
+msgid "Directory"
+msgstr "Könyvtár"
+
+msgid "Disable Automatic Updates"
+msgstr "Automatikus Frissítés Kikapcsolása"
+
+msgid "Disable Notifications"
+msgstr "Értesítések Kikapcsolása"
+
+msgid "Disabled"
+msgstr "Nem engedélyezett"
+
+msgid "Discard all mail"
+msgstr "Összes beérkező levél eldobása"
+
+msgid "Disk"
+msgstr "Lemezterület"
+
+msgid "Display / Hide shortcuts"
+msgstr "Gyorsbillentyűk mutatása/elrejtése"
+
+msgid "Do not allow other administrators to access Server Settings"
+msgstr "A többi adminisztrátor ne érhesse el a rendszerbeállításokat"
+
+msgid "Do not allow user to log in to Control Panel"
+msgstr "A felhasználó nem férhet hozzá a vezérlőpulthoz"
+
+msgid "Do not store forwarded mail"
+msgstr "Továbbított e-mailek eltárolásának tiltása"
+
+msgid "Domain"
+msgstr "Domain"
+
+msgid "Domain {%s} has been created successfully."
+msgstr "A(z) {%s} domain sikeresen létre lett hozva."
+
+msgid "Domains"
+msgstr "Domain"
+
+msgid "Download"
+msgstr "Letöltés"
+
+msgid "Download Database"
+msgstr "Adatbázis Letöltése"
+
+msgid "Download of remote backup file has been scheduled."
+msgstr "A távoli biztonsági mentés letöltése ütemezésre került."
+
+msgid "Duplicate"
+msgstr "Megkettőzés"
+
+msgid "Edit"
+msgstr "Szerkesztés"
+
+msgid "Edit Backup Exclusions"
+msgstr "Mentési Kizárások Szerkesztése"
+
+msgid "Edit Cron Job"
+msgstr "Ütemezett Feladat Szerkesztése"
+
+msgid "Edit DNS Domain"
+msgstr "DNS Domain Szerkesztése"
+
+msgid "Edit DNS Record"
+msgstr "DNS Rekord Szerkesztése"
+
+msgid "Edit Database"
+msgstr "Adatbázis Szerkesztése"
+
+msgid "Edit Domain"
+msgstr "Domain Szerkesztése"
+
+msgid "Edit Firewall Rule"
+msgstr "Tűzfalszabály Szerkesztése"
+
+msgid "Edit IP Address"
+msgstr "IP Cím Szerkesztése"
+
+msgid "Edit Mail Account"
+msgstr "Mail Fiók Szerkesztése"
+
+msgid "Edit Mail Domain"
+msgstr "Mail Domain Szerkesztése"
+
+msgid "Edit Package"
+msgstr "Csomag szerkesztése"
+
+msgid "Edit User"
+msgstr "Fiók Szerkesztése"
+
+msgid "Edit Web Domain"
+msgstr "Web Domain Szerkesztése"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Email Credentials: %s@%s"
+msgstr "Email Fiók Hitelesítő Adatai: %s@%s"
+
+msgid "Email Subject"
+msgstr "Email Tárgya"
+
+msgid "Email login credentials to:"
+msgstr "Hitelesítő adatok elküldése a következő email címre:"
+
+msgid "Enable API access"
+msgstr "API hozzáférés engedélyezése"
+
+msgid "Enable Automatic Updates"
+msgstr "Automatikus Frissítés Bekapcsolása"
+
+msgid "Enable DNSSEC"
+msgstr "DNSSEC bekapcsolása"
+
+msgid "Enable FastCGI cache"
+msgstr "FastCGI gyorsítótárazásának bekapcsolása"
+
+msgid "Enable HTTP Strict Transport Security (HSTS)"
+msgstr "HTTP Strict Transport Security (HSTS) bekapcsolása"
+
+msgid "Enable Notifications"
+msgstr "Értesítések Bekapcsolása"
+
+msgid "Enable SSL for this domain"
+msgstr "SSL engedélyezése a domainhez"
+
+msgid "Enable automatic HTTPS redirection"
+msgstr "Automatikus HTTPS átirányítás bekapcsolása"
+
+msgid "Enable debug mode"
+msgstr "Hibakereső mód engedélyezése"
+
+msgid "Enable domain redirection"
+msgstr "Domain átirányítás engedélyezése"
+
+msgid "Enable legacy API access"
+msgstr "Legacy API hozzáférés engedélyezése"
+
+msgid "Enable preview features"
+msgstr "Előnézeti funkciók engedélyezése"
+
+msgid "Enable two-factor authentication"
+msgstr "Kétfaktoros hitelesítés engedélyezése"
+
+msgid "Enabled"
+msgstr "Engedélyezett"
+
+msgid "Enabled PHP Versions"
+msgstr "Engedélyezett PHP Verziók"
+
+msgid "Enabled for admin"
+msgstr "Engedélyezés az admin számára"
+
+msgid "Enabled for all users"
+msgstr "Engedélyezés az összes felhasználó számára"
+
+msgid "Enforce subdomain ownership"
+msgstr "Aldomaint csak a fő domain tulajdonosa hozhatja létre"
+
+msgid "Enter focused element"
+msgstr "Fókuszban lévő elem megnyitása"
+
+msgid "Error"
+msgstr "Hiba"
+
+msgid "Error Log"
+msgstr "Hiba Napló"
+
+msgid "Error code: %s"
+msgstr "Hibakód: %s"
+
+msgid "Error: %s update failed."
+msgstr "Hiba történt: A(z) %s frissítése nem sikerült."
+
+msgid "Error: Hestia did not return any output."
+msgstr "Hiba: Hestia nem adott vissza kimeneti adatot."
+
+msgid "Error: unable to copy package."
+msgstr "Hiba történt: Nem sikerült lemásolni a csomagot."
+
+msgid "Error: unknown record ID."
+msgstr "Hiba történt: Ismeretlen rekord ID."
+
+msgid "Every %s days"
+msgstr "Minden %s. napon"
+
+msgid "Every %s hours"
+msgstr "Minden %s. órában"
+
+msgid "Every %s minutes"
+msgstr "Minden %s. percben"
+
+msgid "Every %s months"
+msgstr "Minden %s. hónapban"
+
+msgid "Every day"
+msgstr "Minden nap"
+
+msgid "Every even day"
+msgstr "Minden páros napon"
+
+msgid "Every even month"
+msgstr "Minden páros hónapban"
+
+msgid "Every hour"
+msgstr "Minden órában"
+
+msgid "Every minute"
+msgstr "Minden percben"
+
+msgid "Every month"
+msgstr "Minden hónapban"
+
+msgid "Every odd day"
+msgstr "Minden páratlan napon"
+
+msgid "Every odd month"
+msgstr "Minden páratlan hónapban"
+
+msgid "Expand main menu"
+msgstr "Főmenü kinyitása"
+
+msgid "Expiration Date"
+msgstr "Lejárati dátum"
+
+msgid "Expire"
+msgstr "Lejár"
+
+msgid "FTP"
+msgstr "FTP"
+
+msgid "FTP Account Credentials: %s"
+msgstr "FTP Fiók Hitelesítő Adatai: %s"
+
+msgid ""
+"FTP account has been created and ready to use.\n"
+"\n"
+"Hostname: {{domain}}\n"
+"Username: {{username}}\n"
+"Password: {{password}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"FTP fiókja elkészült és készen áll a használatra.\n"
+"\n"
+"Kiszolgáló: {{domain}}\n"
+"Felhasználónév: {{username}}\n"
+"Jelszó: {{password}}\n"
+"\n"
+"Üdvözlettel,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Failed"
+msgstr "Sikertelen"
+
+msgid "Feb"
+msgstr "február"
+
+msgid "Field \"%s\" can not be blank."
+msgstr "A(z) \"%s\" mező nem lehet üres."
+
+msgid "File Manager"
+msgstr "Fájlkezelő"
+
+msgid "File Name"
+msgstr "Fájlnév"
+
+msgid "File System Disk Quota"
+msgstr "Fájlrendszer Lemezkvóta"
+
+msgid "File manager"
+msgstr "Fájlkezelő"
+
+msgid "Firewall"
+msgstr "Tűzfal"
+
+msgid "Firewall Rules"
+msgstr "Tűzfalszabályok"
+
+msgid "Flag"
+msgstr "Jelölő"
+
+msgid "Focus on search"
+msgstr "Fókuszpont a keresőmezőre"
+
+msgid "For example"
+msgstr "Például"
+
+msgid "Forgot Password"
+msgstr "Elfelejtett Jelszó"
+
+msgid "Forgot Token"
+msgstr "Elfelejtett Biztonsági Kód"
+
+msgid "Forward to"
+msgstr "Továbbítás"
+
+msgid "Forwarding"
+msgstr "Továbbítás"
+
+msgid "Friday"
+msgstr "péntek"
+
+msgid "General"
+msgstr "Általános"
+
+msgid "Generate"
+msgstr "Generál"
+
+msgid "Generate Self-Signed SSL Certificate"
+msgstr "Self-Signed SSL tanúsítvány generálása"
+
+msgid "Global SMTP Relay"
+msgstr "Globális SMTP Relay használata"
+
+msgid "Go to BACKUP list"
+msgstr "Ugrás a MENTÉS menübe"
+
+msgid "Go to CRON list"
+msgstr "Ugrás a CRON menübe"
+
+msgid "Go to DB list"
+msgstr "Ugrás az ADATBÁZIS menübe"
+
+msgid "Go to DNS list"
+msgstr "Ugrás a DNS menübe"
+
+msgid "Go to MAIL list"
+msgstr "Ugrás az E-MAIL menübe"
+
+msgid "Go to WEB list"
+msgstr "Ugrás a WEB menübe"
+
+msgid "HESTIA"
+msgstr "HESTIA"
+
+msgid ""
+"Hello {{name}},\n"
+"\n"
+"To reset your {{appname}} password, please follow this link:\n"
+"https://{{hostname}}/reset/?action=confirm&user={{user}}&code={{resetcode}}\n"
+"\n"
+"Alternatively, you may go to https://{{hostname}}/reset/?"
+"action=code&user={{user}} and enter the following reset code:\n"
+"{{resetcode}}\n"
+"\n"
+"If you did not request password reset, please ignore this message and accept "
+"our apologies.\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"Kedves {{name}},\n"
+"\n"
+"A {{appname}} jelszavad helyreállításához kérlek kattints az alábbi linkre:\n"
+"https://{{hostname}}/reset/?action=confirm&user={{user}}&code={{resetcode}}\n"
+"\n"
+"Alternatív lehetőségként látogasd meg a https://{{hostname}}/reset/?"
+"action=code&user={{user}} oldalt és add meg az alábbi helyreállítási kódot:\n"
+"{{resetcode}}\n"
+"\n"
+"Ha nem te kérted a jelszó helyreállítását, akkor kérlek, hagyd figyelmen "
+"kívül ezt az üzenetet és fogadd elnézésünket a zavarásért.\n"
+"\n"
+"Üdvözlettel,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid ""
+"Hello {{name}},\n"
+"\n"
+"Your account has been created and ready to use.\n"
+"\n"
+"https://{{hostname}}/login/\n"
+"Username: {{user}}\n"
+"Password: {{password}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"Kedves {{name}},\n"
+"\n"
+"A felhasználói fiókod létrejött és készen áll a használatra.\n"
+"\n"
+"https://{{hostname}}/login/\n"
+"Felhasználónév: {{user}}\n"
+"Jelszó: {{password}}\n"
+"\n"
+"Üdvözlettel,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Help"
+msgstr "Súgó"
+
+msgid "Hestia Control Panel"
+msgstr "Hestia Vezérlőpult"
+
+msgid "Hestia core package"
+msgstr "Hestia alapcsomag"
+
+msgid "Hestia internal php interpreter"
+msgstr "Hestia php értelmezőprogram"
+
+msgid "Hestia internal web server"
+msgstr "Hestia webkiszolgáló szoftver"
+
+msgid "Hide Certificate"
+msgstr "Tanúsítvány elrejtése"
+
+msgid "Hide account from other administrators"
+msgstr "Fiók elrejtése a többi adminisztrátor elől"
+
+msgid "Hide link to Documentation"
+msgstr "Dokumentációhoz vezető link elrejtése"
+
+msgid "Host"
+msgstr "Kiszolgáló"
+
+msgid "Hostname"
+msgstr "Kiszolgálónév"
+
+msgid "Hour"
+msgstr "Óra"
+
+msgid "Hourly"
+msgstr "Óránként"
+
+msgid "IMAP Settings"
+msgstr "IMAP Beállítások"
+
+msgid "IP Address"
+msgstr "IP cím"
+
+msgid "IP Address / IPset IP List"
+msgstr "IP Cím / IPSet Címlista"
+
+msgid "IP Addresses"
+msgstr "IP Címek"
+
+msgid "IP List Name"
+msgstr "IP Címlista Neve"
+
+msgid "IP Version"
+msgstr "IP Verzió"
+
+msgid "IP address has been banned successfully."
+msgstr "Az IP cím sikeresen kitiltásra került."
+
+msgid "IP address {%s} has been created successfully."
+msgstr "Az IP cím (%s) sikeresen létre lett hozva."
+
+msgid "IP list has been created successfully."
+msgstr "Az IP címlista sikeresen létre lett hozva."
+
+msgid "IP or Value"
+msgstr "Bejegyzés"
+
+msgid "IPVERSE"
+msgstr "IPVERSE"
+
+msgid "IPs"
+msgstr "IP"
+
+msgid "IPset IP Lists"
+msgstr "IPSet Címlisták"
+
+msgid "ISO 3166-1 alpha-2 two-letter code"
+msgstr "ISO 3166-1 alpha-2 kétbetűs kód"
+
+msgid ""
+"If the aliases changes, Let's Encrypt will obtain a new SSL certificate."
+msgstr ""
+"Amennyiben az aliasok megváltoznak, a Let's Encrypt új SSL tanúsítványt fog "
+"igényelni a domainhez."
+
+msgid "Inactive session timeout"
+msgstr "Inaktív munkamenet lejárata"
+
+msgid "Inactive session timeout can not lower than 1 minute."
+msgstr "A munkamenet inaktivitásának időkorlátja nem lehet kevesebb 1 percnél."
+
+msgid "Info (read-only mode): Crontab can only be edited via SSH."
+msgstr "Infó (read-only mód): A crontab csak SSH-n keresztül szerkeszthető."
+
+msgid "Information"
+msgstr "Információ"
+
+msgid "Install %s"
+msgstr "%s telepítése"
+
+msgid "Interface"
+msgstr "Interfész"
+
+msgid "Invalid or missing 2FA token"
+msgstr "Érvénytelen vagy hiányzó biztonsági kód."
+
+msgid "Invalid username or code"
+msgstr "Hibás felhasználónév vagy érvényesítő kód."
+
+msgid "Invalid username or password"
+msgstr "Hibás felhasználónév vagy jelszó."
+
+msgid "Issued By"
+msgstr "Kiállító"
+
+msgid "Issued To"
+msgstr "Kiállítva"
+
+msgid ""
+"It is strongly advised to {create a standard user account} before adding %s "
+"to the server due to the increased privileges the admin account possesses "
+"and potential security risks."
+msgstr ""
+"Erősen ajánlott, hogy {hozz létre normál fiókot} %s hozzáadása előtt az "
+"admin fiók privilegizált szintjével járó biztonsági kockázatok elkerülése "
+"végett!"
+
+msgid ""
+"It may take a few minutes to save your changes. Please wait until the "
+"process has completed and do not refresh the page."
+msgstr ""
+"A módosítások elmentése több percet is igénybe vehet. Kérlek várd meg, hogy "
+"befejeződjön a folyamat és ne töltsd újra az oldalt."
+
+msgid "Jan"
+msgstr "január"
+
+msgid "Jobs"
+msgstr "Feladat"
+
+msgid "Jul"
+msgstr "július"
+
+msgid "Jun"
+msgstr "június"
+
+msgid "Key Size"
+msgstr "Kulcs Méret"
+
+msgid "Key Tag"
+msgstr "Kulcscímke"
+
+msgid "Key Type / Flag"
+msgstr "Kulcscímke / Jelölő"
+
+msgid "Language"
+msgstr "Nyelv"
+
+msgid "Last 70 lines of %s.%s.log"
+msgstr "A(z) %s.%s.log utolsó 70 sora"
+
+msgid "Limit"
+msgstr "Korlát"
+
+msgid "Load Average"
+msgstr "Átlagos terhelés"
+
+msgid "Loading..."
+msgstr "Betöltés..."
+
+msgid "Local Backup"
+msgstr "Helyi Biztonsági Mentés"
+
+msgid "Log in"
+msgstr "Belépés"
+
+msgid "Log in as"
+msgstr "Bejelentkezés, mint"
+
+msgid "Log out"
+msgstr "Kilépés"
+
+msgid "Logged in as"
+msgstr "Bejelentkezve, mint"
+
+msgid "Login"
+msgstr "Bejelentkezés"
+
+msgid "Login History"
+msgstr "Belépési Napló"
+
+msgid "Login screen style"
+msgstr "Bejelentkezési képernyő stílusa"
+
+msgid "Logs"
+msgstr "Naplók"
+
+msgid "MAIL"
+msgstr "E-MAIL"
+
+msgid "MB"
+msgstr "MB"
+
+msgid "Mail"
+msgstr "E-mail"
+
+msgid "Mail Accounts"
+msgstr "Mail fiók"
+
+msgid "Mail Domain"
+msgstr "Mail Domain"
+
+msgid "Mail Domains"
+msgstr "Mail domain"
+
+msgid "Mail Server"
+msgstr "Mail Szerver"
+
+msgid "Mail Support"
+msgstr "E-Mail támogatás"
+
+msgid ""
+"Mail account has been created.\n"
+"\n"
+"Common Account Settings:\n"
+"Username: {{account}}@{{domain}}\n"
+"Password: {{password}}\n"
+"Webmail: {{webmail}}\n"
+"Hostname: {{hostname}}\n"
+"\n"
+"IMAP Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 993\n"
+"STARTTLS: Port 143\n"
+"No encryption: Port 143\n"
+"\n"
+"POP3 Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 995\n"
+"STARTTLS: Port 110\n"
+"No encryption: Port 110\n"
+"\n"
+"SMTP Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 465\n"
+"STARTTLS: Port 587\n"
+"No encryption: Port 25\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"Email fiókja elkészült.\n"
+"\n"
+"Általános fiókbeállítások\n"
+"Felhasználónév: {{account}}@{{domain}}\n"
+"Jelszó: {{password}}\n"
+"Webmail: {{webmail}}\n"
+"Kiszolgáló: {{hostname}}\n"
+"\n"
+"IMAP Beállítások\n"
+"Hitelesítés: Normál Jelszó\n"
+"SSL/TLS Port: 993\n"
+"STARTTLS Port: 143\n"
+"Titkosítás Nélküli Port: 143\n"
+"\n"
+"POP3 Beállítások\n"
+"Hitelesítés: Normál Jelszó\n"
+"SSL/TLS Port: 995\n"
+"STARTTLS Port: 110\n"
+"Titkosítás Nélküli Port: 110\n"
+"\n"
+"SMTP Beállítások\n"
+"Hitelesítés: Normál Jelszó\n"
+"SSL/TLS Port: 465\n"
+"STARTTLS Port: 587\n"
+"Titkosítás Nélküli Port: 25\n"
+"\n"
+"Üdvözlettel,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Mail account {%s@%s} has been created successfully."
+msgstr "A(z) {%s@%s} e-mail fiók sikeresen létre lett hozva."
+
+msgid "Mail domain {%s} has been created successfully."
+msgstr "A(z) {%s} mail domain sikeresen létre lett hozva."
+
+msgid "Manage SSH Keys"
+msgstr "SSH Kulcsok Kezelése"
+
+msgid "Mar"
+msgstr "március"
+
+msgid "Maximum %s characters length, including prefix"
+msgstr "Legfeljebb %s karakter, prefixet is beleértve"
+
+msgid "Maximum Number of Databases"
+msgstr "Adatbázisok Maximális Száma"
+
+msgid "May"
+msgstr "május"
+
+msgid "Memory"
+msgstr "Memória"
+
+msgid "Message"
+msgstr "Üzenet"
+
+msgid "Minute"
+msgstr "Perc"
+
+msgid "Minutes"
+msgstr "perc"
+
+msgid "Monday"
+msgstr "hétfő"
+
+msgid "Month"
+msgstr "Hónap"
+
+msgid "Monthly"
+msgstr "Havonta"
+
+msgid "More info"
+msgstr "További információ"
+
+msgid "Move backward through top menu"
+msgstr "Mozgás a felső menüben vissza"
+
+msgid "Move down through elements list"
+msgstr "Mozgás az elemek között lefelé"
+
+msgid "Move forward through top menu"
+msgstr "Mozgás a felső menüben előre"
+
+msgid "Move up through elements list"
+msgstr "Mozgás az elemek között felfelé"
+
+msgid "MySQL Support"
+msgstr "MySQL Támogatás"
+
+msgid "NAT IP Association"
+msgstr "Társított NAT IP"
+
+msgid "NGINX cache has been purged successfully."
+msgstr "Az NGINX gyorsítótára sikeresen ki lett ürítve."
+
+msgid "Name"
+msgstr "Név"
+
+msgid "Name Servers"
+msgstr "Névkiszolgálók"
+
+msgid "Nameserver 1"
+msgstr "Névkiszolgáló 1"
+
+msgid "Nameserver 2"
+msgstr "Névkiszolgáló 2"
+
+msgid "Netmask"
+msgstr "Netmaszk"
+
+msgid "Network"
+msgstr "Hálózat"
+
+msgid "New Password"
+msgstr "Új jelszó"
+
+msgid "Next"
+msgstr "Következő"
+
+msgid "No"
+msgstr "Nem"
+
+msgid "No aliases"
+msgstr "Nincsenek aliasok"
+
+msgid "No encryption"
+msgstr "Titkosítás mellőzése"
+
+msgid "No exclusions"
+msgstr "Nincsenek kizárások"
+
+msgid "No notifications"
+msgstr "Nincsenek értesítések"
+
+msgid "Normal password"
+msgstr "Normál jelszó"
+
+msgid "Not After"
+msgstr "Lejár"
+
+msgid "Not Before"
+msgstr "Érvényes"
+
+msgid "Notifications"
+msgstr "Értesítések"
+
+msgid "Nov"
+msgstr "november"
+
+msgid "Oct"
+msgstr "október"
+
+msgid "Old Style"
+msgstr "Régimódi"
+
+msgid "One or more email addresses"
+msgstr "Egy vagy több email cím"
+
+msgid "Open Webmail"
+msgstr "Webmail Megnyitása"
+
+msgid "Open debug panel"
+msgstr "Debug panel mutatása"
+
+msgid "Open menu"
+msgstr "Menü mutatása"
+
+msgid "Operating System"
+msgstr "Operációs rendszer"
+
+msgid "Optional"
+msgstr "Opcionális"
+
+msgid "Options"
+msgstr "Beállítások"
+
+msgid "Organization"
+msgstr "Szervezet"
+
+msgid "Overall Statistics"
+msgstr "Átfogó Statisztikák"
+
+msgid "Owner"
+msgstr "Tulajdonos"
+
+msgid "PHP CLI Version"
+msgstr "PHP CLI verzió"
+
+msgid "POP3 Settings"
+msgstr "POP3 Beállítások"
+
+msgid "Package"
+msgstr "Csomag"
+
+msgid "Package Name"
+msgstr "Csomag neve"
+
+msgid "Package Names"
+msgstr "Csomag Neve"
+
+msgid "Package {%s} has been created successfully."
+msgstr "A csomag ({%s}) sikeresen létre lett hozva."
+
+msgid "Packages"
+msgstr "Csomagok"
+
+msgid "Partially implemented"
+msgstr "Részlegesen implementált"
+
+msgid "Password"
+msgstr "Jelszó"
+
+msgid "Password Reset at %s"
+msgstr "Jelszóhelyreállítás ekkor: %s"
+
+msgid "Password does not match the minimum requirements."
+msgstr "A jelszó nem felel meg a minimális követelményeknek."
+
+msgid "Password reset code has been sent to your email address"
+msgstr ""
+"A jelszó helyreállításához szükséges kód el lett küldve az email címedre"
+
+msgid ""
+"Password reset instructions have been sent to the email address associated "
+"with this account."
+msgstr ""
+"A jelszó helyreállításához szükséges információk el lettek küldve a fiókhoz "
+"társított email címre."
+
+msgid "Passwords do not match"
+msgstr "A jelszavak nem egyeznek"
+
+msgid "Path"
+msgstr "Útvonal"
+
+msgid "Permissions"
+msgstr "Jogosultságok"
+
+msgid "Please enter a valid contact name."
+msgstr "Kérlek valós nevet adj meg!"
+
+msgid "Please enter a valid email address."
+msgstr "Kérlek valós email címet adj meg!"
+
+msgid "Please make sure ~/web/%s/public_html is empty!"
+msgstr "Kérlek győzödj meg róla, hogy a ~/web/%s/public_html könyvtár üres-e!"
+
+msgid "Please scan the code below in your 2FA application"
+msgstr ""
+"Kérlek olvasd be az alábbi kódot a kétfaktoros hitelesítő alkalmazásban"
+
+msgid "Please wait 15 minutes before sending a new request."
+msgstr "Kérlek várj 15 percet új kérelem elküldése előtt!"
+
+msgid "Plugins"
+msgstr "Bővítmények"
+
+msgid "Point to"
+msgstr "Az alábbi domain root könyvtárára mutat"
+
+msgid "Policies"
+msgstr "Korlátozások"
+
+msgid "Policy"
+msgstr "Korlátozás"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "PostgreSQL Support"
+msgstr "PostgreSQL Támogatás"
+
+msgid "Prefix %s will be added to username automatically"
+msgstr "A %s prefix hozzá lesz adva a felhasználó nevéhez"
+
+msgid ""
+"Prefix %s will be automatically added to database name and database user"
+msgstr ""
+"A %s prefix automatikusan hozzáadódik az adatbázis és a felhasználó nevéhez"
+
+msgid "Prevent CSRF"
+msgstr "CSRF támadások megelőzése"
+
+msgid "Preview"
+msgstr "Előnézet"
+
+msgid "Preview Features"
+msgstr "Előnézeti Funkciók"
+
+msgid "Priority"
+msgstr "Prioritás"
+
+msgid "Production Release"
+msgstr "Általános Elérhetőségű Kiadás"
+
+msgid "Protocol"
+msgstr "Protokoll"
+
+msgid "Proxy Extensions"
+msgstr "Proxy kiterjesztések"
+
+msgid "Proxy Server"
+msgstr "Proxy Szerver"
+
+msgid "Proxy Support"
+msgstr "Proxy támogatás"
+
+msgid "Proxy Template"
+msgstr "Proxy sablon"
+
+msgid "Public Key"
+msgstr "Publikus Kulcs"
+
+msgid "Purge NGINX Cache"
+msgstr "NGINX Gyorsítótár Kiürítése"
+
+msgid "Quick App Installer"
+msgstr "Gyors App Telepítő"
+
+msgid "Quick Install App"
+msgstr "Gyors App Telepítő"
+
+msgid "Quota"
+msgstr "Kvóta"
+
+msgid "RAM"
+msgstr "RAM"
+
+msgid "Ranges and lists are acceptable"
+msgstr "Tartomány és lista is támogatott"
+
+msgid "Rate Limit"
+msgstr "Forgalmi Korlát"
+
+msgid "Rebuild"
+msgstr "Újjáépítés"
+
+msgid "Rebuild All"
+msgstr "Összes Újjáépítése"
+
+msgid "Rebuild Cron Jobs"
+msgstr "Ütemezett Feladatok Újjáépítése"
+
+msgid "Rebuild DNS Zones"
+msgstr "DNS Zónák Újjáépítése"
+
+msgid "Rebuild Databases"
+msgstr "Adatbázisok Újjáépítése"
+
+msgid "Rebuild Mail Domains"
+msgstr "Mail Domainek Újjáépítése"
+
+msgid "Rebuild User Profile"
+msgstr "Fiók Újjáépítése"
+
+msgid "Rebuild Web Domains"
+msgstr "Web Domainek Újjáépítése"
+
+msgid "Record"
+msgstr "Rekord"
+
+msgid "Record {%s.%s} has been created successfully."
+msgstr "A(z) {%s.%s} rekord sikeresen létre lett hozva."
+
+msgid "Records"
+msgstr "Rekordok"
+
+msgid "Redirect visitors to %s"
+msgstr "Látogatók átirányítása a(z) %s webcímre"
+
+msgid "Redirect visitors to a custom domain or web address"
+msgstr "Látogatók átirányítása egyedi domainre vagy webcímre"
+
+msgid "Refresh"
+msgstr "Frissítés"
+
+msgid "Refresh IP Addresses"
+msgstr "IP Címek Frissítése"
+
+msgid "Reject Spam"
+msgstr "Kéretlen levelek elutasítása"
+
+msgid "Release"
+msgstr "Kiadás"
+
+msgid "Remote Backup"
+msgstr "Távoli Biztonsági Mentés"
+
+msgid "Reset"
+msgstr "Visszaállít"
+
+msgid "Reset Code"
+msgstr "Megerősítő kód"
+
+msgid "Restart"
+msgstr "Újraindítás"
+
+msgid "Restart \"%s\" failed"
+msgstr "\"%s\" újraindítása sikertelen."
+
+msgid "Restore"
+msgstr "Visszaállítás"
+
+msgid "Restore All"
+msgstr "Összes Visszaállítása"
+
+msgid "Restrict access to read-only for other administrators"
+msgstr "A többi adminisztrátor csak olvasható módban férhet hozzá"
+
+msgid "Role"
+msgstr "Szerepkör"
+
+msgid "Rule has been created successfully."
+msgstr "A szabály sikeresen létre lett hozva."
+
+msgid "Run Command"
+msgstr "Futtatás ekkor"
+
+msgid "Runtime"
+msgstr "Futási idő"
+
+msgid "SMTP Relay"
+msgstr "SMTP Relay"
+
+msgid "SMTP Settings"
+msgstr "SMTP Beállítások"
+
+msgid "SOA"
+msgstr "SOA"
+
+msgid "SSH"
+msgstr "SSH"
+
+msgid "SSH Access"
+msgstr "SSH hozzáférés"
+
+msgid "SSH ID"
+msgstr "SSH Azonosító"
+
+msgid "SSH Key"
+msgstr "SSH Kulcs"
+
+msgid "SSH Key already exists."
+msgstr "Az SSH Kulcs már létezik."
+
+msgid "SSH Key has been created successfully."
+msgstr "Az SSH Kulcs sikeresen létre lett hozva."
+
+msgid "SSH Keys"
+msgstr "SSH Kulcsok"
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "SSL CSR"
+msgstr "SSL CSR"
+
+msgid "SSL Certificate"
+msgstr "SSL Tanúsítvány"
+
+msgid "SSL Certificate Authority / Intermediate"
+msgstr "SSL Certificate Authority / Intermediate"
+
+msgid "SSL Domains"
+msgstr "SSL domain"
+
+msgid "SSL Private Key"
+msgstr "SSL Privát Kulcs"
+
+msgid "Saturday"
+msgstr "szombat"
+
+msgid "Save"
+msgstr "Mentés"
+
+msgid "Save form"
+msgstr "Űrlap mentése"
+
+msgid "Search"
+msgstr "Keresés"
+
+msgid "Search Results"
+msgstr "Keresési találatok"
+
+msgid "Secret Key"
+msgstr "Titkos kulcs"
+
+msgid "Security"
+msgstr "Biztonság"
+
+msgid "Select"
+msgstr "Kiválasztás"
+
+msgid "Select all"
+msgstr "Összes kijelölése"
+
+msgid "Send FTP credentials to email"
+msgstr "FTP adatok elküldése e-mailben"
+
+msgid "Send email notification when an update has been installed"
+msgstr "Email értesítés küldése, miután egy frissítés telepítésre került"
+
+msgid "Send update installation log by email"
+msgstr "Frissítési napló elküldése emailben"
+
+msgid "Send welcome email"
+msgstr "Üdvözlő e-mail üzenet küldése"
+
+msgid "Sender Email Address"
+msgstr "Küldő Email Címe"
+
+msgid "Sender Name"
+msgstr "Küldő Neve"
+
+msgid "Sep"
+msgstr "szeptember"
+
+msgid "Server settings"
+msgstr "Szerver beállítások"
+
+msgid "Service"
+msgstr "Szolgáltatás"
+
+msgid "Services"
+msgstr "Szolgáltatások"
+
+msgid "Set as default language for all users"
+msgstr "Beállítás alapértelmezett nyelvként az összes felhasználó számára"
+
+msgid "Set as selected theme for all users"
+msgstr "Beállítás alapértelmezett megjelenésként az összes felhasználó számára"
+
+msgid "Setup"
+msgstr "Telepítés"
+
+msgid "Shared"
+msgstr "Megosztott"
+
+msgid "Shell"
+msgstr "Shell"
+
+msgid "Shortcuts"
+msgstr "Gyorsbillentyűk"
+
+msgid "Show Certificate"
+msgstr "Tanúsítvány megtekintése"
+
+msgid "Show Per User"
+msgstr "Fiókonként Összesítve"
+
+msgid "Signature"
+msgstr "Ujjlenyomat"
+
+msgid "Size"
+msgstr "Méret"
+
+msgid "Sort by"
+msgstr "Rendezés"
+
+msgid "Sort items"
+msgstr "Adatok rendezése"
+
+msgid "Spam Filter"
+msgstr "Spam Szűrés"
+
+msgid "Start"
+msgstr "Elindítás"
+
+msgid "Start \"%s\" failed"
+msgstr "\"%s\" indítása sikertelen."
+
+msgid "State"
+msgstr "Állam / Megye"
+
+msgid "State / Province"
+msgstr "Megye"
+
+msgid "Statistics"
+msgstr "Statisztikák"
+
+msgid "Statistics Authorization"
+msgstr "Statisztika engedélyezése"
+
+msgid "Status"
+msgstr "Státusz"
+
+msgid "Status code"
+msgstr "Státuszkód"
+
+msgid "Stop"
+msgstr "Leállítás"
+
+msgid "Stop \"%s\" failed"
+msgstr "\"%s\" leállítása sikertelen."
+
+msgid "Strict"
+msgstr "Szigorú"
+
+msgid "Submit"
+msgstr "OK"
+
+msgid "Success"
+msgstr "Sikeres"
+
+msgid "Sunday"
+msgstr "vasárnap"
+
+msgid "Support CIDR format"
+msgstr "CIDR formátum támogatott"
+
+msgid "Supported variables"
+msgstr "Támogatott változók"
+
+msgid "Suspend"
+msgstr "Felfüggesztés"
+
+msgid "Suspend All"
+msgstr "Összes Felfüggesztése"
+
+msgid "Suspended"
+msgstr "Felfüggesztett"
+
+msgid "Sync Error document templates on user rebuild"
+msgstr ""
+"Hibaoldalak sablonjainak szinkronizálása felhasználói fiók újjáépítésekor"
+
+msgid "Sync Skeleton templates"
+msgstr "Skeleton sablonok szinkronizálása"
+
+msgid "System"
+msgstr "Rendszer"
+
+msgid "System Administrator account"
+msgstr "Rendszer Adminisztrátor fiók"
+
+msgid "System PHP Version"
+msgstr "Rendszer PHP Verziója"
+
+msgid "System Protection"
+msgstr "Rendszervédelem"
+
+msgid "TTL"
+msgstr "TTL"
+
+msgid "Target domain or URL"
+msgstr "Cél domain vagy URL"
+
+msgid "Task Monitor"
+msgstr "Feladatfigyelő"
+
+msgid ""
+"Task has been added to the queue. You will receive an email notification "
+"when your backup is ready for download."
+msgstr ""
+"A kért művelet hozzá lett adva a várólistához. Emailben értesítést fogsz "
+"kapni, amint a biztonsági mentés készen áll a letöltésre."
+
+msgid ""
+"Task has been added to the queue. You will receive an email notification "
+"when your restore has been completed."
+msgstr ""
+"A kért művelet hozzá lett adva a várólistához. Emailben értesítést fogsz "
+"kapni, amint a helyreállítási művelet befejeződött."
+
+msgid "Template"
+msgstr "Sablon"
+
+msgid "The system is going down for reboot NOW!"
+msgstr "A rendszer leáll az újraindításhoz. MOST!"
+
+msgid "Theme"
+msgstr "Megjelenés"
+
+msgid "There are currently no IP lists defined."
+msgstr "Jelenleg nincsenek IP listák meghatározva."
+
+msgid "There are currently no banned IP addresses."
+msgstr "Jelenleg nincsenek kitiltott IP címek."
+
+msgid "Thursday"
+msgstr "csütörtök"
+
+msgid "Time"
+msgstr "Időpont"
+
+msgid "Time Zone"
+msgstr "Időzóna"
+
+msgid "Title"
+msgstr "Címsor"
+
+msgid ""
+"To enable Let's Encrypt SSL, ensure that DNS records exist for mail.%s and "
+"%s!"
+msgstr ""
+"A Let's Encrypt SSL engedélyezése előtt bizonyosodj meg róla, hogy létre van "
+"hozva a mail.%s és %s DNS rekord!"
+
+msgid "Top"
+msgstr "Fel"
+
+msgid "Triennially"
+msgstr "Háromévente"
+
+msgid "Tuesday"
+msgstr "kedd"
+
+msgid "Two-factor Authentication"
+msgstr "Kétfaktoros Hitelesítés"
+
+msgid ""
+"Two-factor authentication is now turned off for your account.<br><br>You may "
+"now proceed to log in."
+msgstr ""
+"A kétfaktoros hitelesítés ki lett kapcsolva a fiókodon.<br><br>Most már "
+"folytathatod a bejelentkezést."
+
+msgid "Type"
+msgstr "Típus"
+
+msgid "Type directory name, one per line. To exlude all dirs use *"
+msgstr ""
+"Soronként egy könyvtár. Az összes könyvtár kizárásához használd a *-ot."
+
+msgid ""
+"Type domain name, one per line. To exclude all domains use *. To exclude "
+"specific accounts use following format: domain.tld:info:support:postmaster"
+msgstr ""
+"Soronként egy domain név. Az összes domain kizárásához használd a *-ot. "
+"Bizonyos fiókok kizárásához használd a következő formátumot: domain.tld:info:"
+"support:postmaster"
+
+msgid ""
+"Type domain name, one per line. To exclude all domains use *. To exclude "
+"specific dirs use following format: domain.tld:public_html/cache:public_html/"
+"tmp"
+msgstr ""
+"Soronként egy domain név. Az összes domain kizárásához használd a *-ot. "
+"Bizonyos könyvtárak kizárásához használd a következő formátumot: domain.tld:"
+"public_html/cache:public_html/tmp"
+
+msgid "Type full database name, one per line. To exclude all databases use *"
+msgstr ""
+"Soronként egy adatbázis. Az összes adatbázis kizárásához használd a *-ot."
+
+msgid "USER"
+msgstr "ÜGYFÉL"
+
+msgid "Unable to add database!"
+msgstr "Nem sikerült létrehozni az adatbázist!"
+
+msgid "Unable to add database! Limit reached!"
+msgstr "Nem sikerült létrehozni az adatbázist! A korlát betelt!"
+
+msgid "Unable to install %s, %s is not available."
+msgstr "Nem sikerült telepíteni az alkalmazást (%s), mert a %s nem érhető el."
+
+msgid "Unlimited"
+msgstr "Korlátlan"
+
+msgid "Unlock Account"
+msgstr "Fiók Feloldása"
+
+msgid "Unsave form"
+msgstr "Űrlap visszavonása"
+
+msgid "Unsupported hash method"
+msgstr "Nem támogatott hash metódus"
+
+msgid "Unsuspend"
+msgstr "Felfüggesztés Feloldása"
+
+msgid "Unsuspend All"
+msgstr "Összes Felfüggesztésének Megszüntetése"
+
+msgid "Update Usage Counters"
+msgstr "Számlálók Frissítése"
+
+msgid "Update logo"
+msgstr "Logó frissítése"
+
+msgid "Updates"
+msgstr "Frissítések"
+
+msgid "Upload the files to %s"
+msgstr "A fájlokat az alábbi mappába töltsd fel: %s"
+
+msgid "Uptime"
+msgstr "Üzemidő"
+
+msgid "Use IP address allow list for login attempts"
+msgstr "Fehérlistás korlátozás használata a bejelentkezéshez"
+
+msgid "Use Let's Encrypt to obtain SSL certificate"
+msgstr "Let's Encrypt használata az SSL tanúsítvány beszerzéséhez"
+
+msgid "Use local-part without domain name"
+msgstr "Használd a fióknevet, domain név nélkül"
+
+msgid "User"
+msgstr "Felhasználó"
+
+msgid "User Directory"
+msgstr "Felhasználói Könyvtár"
+
+msgid "User {%s} has been created successfully. / {Log in as %s}"
+msgstr ""
+"A fehasználói fiók ({%s}) sikeresen létre lett hozva. / {Bejelentkezés, mint "
+"%s}"
+
+msgid "Username"
+msgstr "Felhasználónév"
+
+msgid "Users"
+msgstr "Felhasználók"
+
+msgid "Value"
+msgstr "Érték"
+
+msgid "Version"
+msgstr "Verzió"
+
+msgid "View"
+msgstr "Megtekintés"
+
+msgid "View Public DNSSEC Key"
+msgstr "Publikus DNSSEC Kulcs Megtekintése"
+
+msgid "Visit"
+msgstr "Ugrás"
+
+msgid "WEB"
+msgstr "WEB"
+
+msgid "Warning"
+msgstr "Figyelmeztetés"
+
+msgid "Warning! Last chance to save secret key!"
+msgstr "Figyelem! Utolsó esély, hogy elmentsd a titkos kulcsot!"
+
+msgid "Web"
+msgstr "Web"
+
+msgid "Web Aliases"
+msgstr "Web alias"
+
+msgid "Web Domain"
+msgstr "Web Domain"
+
+msgid "Web Domains"
+msgstr "Web domain"
+
+msgid "Web Server"
+msgstr "Web Szerver"
+
+msgid "Web Statistics"
+msgstr "Web statisztika"
+
+msgid "Web Template"
+msgstr "Web sablon"
+
+msgid "Webmail"
+msgstr "Webmail"
+
+msgid "Webmail Alias"
+msgstr "Webmail Alias"
+
+msgid "Webmail Client"
+msgstr "Webmail kliens"
+
+msgid "Wednesday"
+msgstr "szerda"
+
+msgid "Weekdays (5 days)"
+msgstr "Hétköznap (mind az öt napon)"
+
+msgid "Weekend (2 days)"
+msgstr "Hétvégén (mindkét napon)"
+
+msgid "Weekly"
+msgstr "Hetente"
+
+msgid "Welcome"
+msgstr "Üdvözöljük"
+
+msgid "Welcome to %s"
+msgstr "Köszönti a %s!"
+
+msgid "White Label"
+msgstr "Márkaépítés"
+
+msgid "White Label Options"
+msgstr "Márkaépítési Beállítások"
+
+msgid "YYYY-MM-DD"
+msgstr "ÉÉÉÉ-HH-NN"
+
+msgid "Yearly"
+msgstr "Évente"
+
+msgid "Yes"
+msgstr "Igen"
+
+msgid "You are logged out, please log in again."
+msgstr "Ki vagy jelentkezve, kérlek jelentkezz be újra!"
+
+msgid "Your password must have at least"
+msgstr "A jelszónak tartalmaznia kell a következőket"
+
+msgid ""
+"Your web folder already has files uploaded to it. The installer will "
+"overwrite your files and/or the installation might fail."
+msgstr ""
+"A web könyvtár feltöltött állományokat tartalmaz. A telepítő felül fogja "
+"írni ezeket az állományokat és/vagy a telepítés meghiúsulhat."
+
+msgid "Zones"
+msgstr "Zónák"
+
+msgid "a database"
+msgstr "adatbázis"
+
+msgid "a dns domain"
+msgstr "domain dns"
+
+msgid "a mail domain"
+msgstr "mail domain"
+
+msgid "a web domain"
+msgstr "web domain"
+
+msgid "backend server"
+msgstr "backend szerver"
+
+msgid "brute-force protection"
+msgstr "brute force védelem"
+
+msgid "database server"
+msgstr "adatbázis szerver"
+
+msgid "dns server"
+msgstr "dns szerver"
+
+msgid "email / hour"
+msgstr "email / óra"
+
+msgid "email / hour / account"
+msgstr "email / óra / fiók"
+
+msgid "email anti-virus"
+msgstr "email víruskereső"
+
+msgid "email spam filter"
+msgstr "email spamszűrő"
+
+msgid "firewall"
+msgstr "tűzfal"
+
+msgid "ftp server"
+msgstr "ftp szerver"
+
+msgid "imap/pop3 server"
+msgstr "imap/pop3 kiszolgáló"
+
+msgid "in MB"
+msgstr "MB"
+
+msgid "job scheduler"
+msgstr "feladat ütemező"
+
+msgid "mail server"
+msgstr "mail szerver"
+
+msgid "one or more email addresses"
+msgstr "egy vagy több e-mail cím"
+
+msgid "per account / hour"
+msgstr "fiók / óra"
+
+msgid "per domain"
+msgstr "domainenként"
+
+msgid "phpMyAdmin Alias"
+msgstr "phpMyAdmin Alias"
+
+msgid "phpMyAdmin Single Sign On"
+msgstr "phpMyAdmin SSO bejelentkezés"
+
+msgid "phpPgAdmin Alias"
+msgstr "phpPgAdmin Alias"
+
+msgid "reverse proxy"
+msgstr "reverse proxy"
+
+msgid "ssh server"
+msgstr "ssh kiszolgáló"
+
+msgid "url, script or file"
+msgstr "url, szkript vagy fájl"
+
+msgid "web server"
+msgstr "web szerver"
+
+msgid "zstd only"
+msgstr "zstd esetén"

@@ -1,0 +1,2452 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hestiacp\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-18 14:20\n"
+"Last-Translator: \n"
+"Language-Team: Ukrainian\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 "
+"&& n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 "
+"&& n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
+"X-Crowdin-Project: hestiacp\n"
+"X-Crowdin-Project-ID: 587405\n"
+"X-Crowdin-Language: uk\n"
+"X-Crowdin-File: hestiacp.pot\n"
+"X-Crowdin-File-ID: 3\n"
+
+msgid "%d DNS record"
+msgid_plural "%d DNS records"
+msgstr[0] "%d DNS запис"
+msgstr[1] "%d DNS записи"
+msgstr[2] "%d DNS записів"
+msgstr[3] "%d DNS записів"
+
+msgid "%d DNS zone"
+msgid_plural "%d DNS zones"
+msgstr[0] "%d DNS зона"
+msgstr[1] "%d DNS зони"
+msgstr[2] "%d DNS зон"
+msgstr[3] "%d DNS зон"
+
+msgid "%d IP address"
+msgid_plural "%d IP addresses"
+msgstr[0] "%d  IP адреса"
+msgstr[1] "%d  IP адреси"
+msgstr[2] "%d  IP адрес"
+msgstr[3] "%d IP адрес"
+
+msgid "%d IP list"
+msgid_plural "%d IP lists"
+msgstr[0] "%d список IP"
+msgstr[1] "%d списки IP"
+msgstr[2] "%d списків IP"
+msgstr[3] "%d списків IP"
+
+msgid "%d SSH key"
+msgid_plural "%d SSH keys"
+msgstr[0] "%d SSH ключ"
+msgstr[1] "%d SSH ключі"
+msgstr[2] "%d SSH ключів"
+msgstr[3] "%d SSH ключів"
+
+msgid "%d access key"
+msgid_plural "%d access keys"
+msgstr[0] "%d ключ доступу"
+msgstr[1] "%d ключі доступу"
+msgstr[2] "%d ключів доступу"
+msgstr[3] "%d ключів доступу"
+
+msgid "%d backup"
+msgid_plural "%d backups"
+msgstr[0] "%d резервна копія"
+msgstr[1] "%d резервні копії"
+msgstr[2] "%d резервних копій"
+msgstr[3] "%d резервних копій"
+
+msgid "%d banned IP address"
+msgid_plural "%d banned IP addresses"
+msgstr[0] "%d заблокована IP адреса"
+msgstr[1] "%d заблоковані IP адреси"
+msgstr[2] "%d заблокованих IP адрес"
+msgstr[3] "%d заблокованих IP адрес"
+
+msgid "%d cron job"
+msgid_plural "%d cron jobs"
+msgstr[0] "%d cron завдання"
+msgstr[1] "%d cron завдання"
+msgstr[2] "%d cron завдань"
+msgstr[3] "%d cron завдань"
+
+msgid "%d database"
+msgid_plural "%d databases"
+msgstr[0] "%d база даних"
+msgstr[1] "%d бази даних"
+msgstr[2] "%d баз даних"
+msgstr[3] "%d баз даних"
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d день"
+msgstr[1] "%d дні"
+msgstr[2] "%d днів"
+msgstr[3] "%d днів"
+
+msgid "%d firewall rule"
+msgid_plural "%d firewall rules"
+msgstr[0] "%d правило файрволу"
+msgstr[1] "%d правила файрволу"
+msgstr[2] "%d правил файрволу"
+msgstr[3] "%d правил файрволу"
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d година"
+msgstr[1] "%d години"
+msgstr[2] "%d годин"
+msgstr[3] "%d годин"
+
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d елемент"
+msgstr[1] "%d елемента"
+msgstr[2] "%d елементів"
+msgstr[3] "%d елементів"
+
+msgid "%d log record"
+msgid_plural "%d log records"
+msgstr[0] "%d запис журналу"
+msgstr[1] "%d записи журналу"
+msgstr[2] "%d записів журналу"
+msgstr[3] "%d записів журналу"
+
+msgid "%d mail account"
+msgid_plural "%d mail accounts"
+msgstr[0] "%d поштовий акаунт"
+msgstr[1] "%d поштових акаунта"
+msgstr[2] "%d поштових акаунтів"
+msgstr[3] "%d поштових акаунтів"
+
+msgid "%d mail domain"
+msgid_plural "%d mail domains"
+msgstr[0] "%d поштовий домен"
+msgstr[1] "%d поштові домени"
+msgstr[2] "%d поштових доменів"
+msgstr[3] "%d поштових доменів"
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d хвилина"
+msgstr[1] "%d хвилини"
+msgstr[2] "%d хвилин"
+msgstr[3] "%d хвилин"
+
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d місяць"
+msgstr[1] "%d місяці"
+msgstr[2] "%d місяців"
+msgstr[3] "%d місяців"
+
+msgid "%d object"
+msgid_plural "%d objects"
+msgstr[0] "%d об'єкт"
+msgstr[1] "%d об'єкта"
+msgstr[2] "%d об'єктів"
+msgstr[3] "%d об'єктів"
+
+msgid "%d package"
+msgid_plural "%d packages"
+msgstr[0] "%d пакет"
+msgstr[1] "%d пакети"
+msgstr[2] "%d пакетів"
+msgstr[3] "%d пакетів"
+
+msgid "%d user account"
+msgid_plural "%d user accounts"
+msgstr[0] "%d акаунт"
+msgstr[1] "%d акаунта"
+msgstr[2] "%d акаунтів"
+msgstr[3] "%d акаунтів"
+
+msgid "%d web domain"
+msgid_plural "%d web domains"
+msgstr[0] "%d веб домен"
+msgstr[1] "%d веб домени"
+msgstr[2] "%d веб доменів"
+msgstr[3] "%d веб доменів"
+
+msgid "%s installed successfully."
+msgstr "%s установлено успішно"
+
+msgid "%s installer missing."
+msgstr "%s інсталятор відсутній."
+
+msgid "1 number"
+msgstr "1 цифру"
+
+msgid "1 uppercase & 1 lowercase character"
+msgstr "1 велику та 1 малу літеру"
+
+msgid "2FA QR Code"
+msgstr "2FA QR Code"
+
+msgid "2FA Reset Code"
+msgstr "Код скидання ДФА"
+
+msgid "2FA Token"
+msgstr "OTP PIN"
+
+msgid "8 characters long"
+msgstr "8 символів"
+
+msgid "ACCEPT"
+msgstr "ACCEPT"
+
+msgid "API"
+msgstr "API"
+
+msgid "Access Key"
+msgstr "Ключ доступу"
+
+msgid "Access Key ID"
+msgstr "ID ключа доступу"
+
+msgid "Access Keys"
+msgstr "Ключі доступу"
+
+msgid "Access Log"
+msgstr "Журнал доступу"
+
+msgid "Access key {%s} has been created successfully."
+msgstr "Ключ доступу {%s} створено успішно."
+
+msgid "Account"
+msgstr "Акаунт"
+
+msgid "Account Recovery Code"
+msgstr "Код відновлення акаунту"
+
+msgid "Account Unlocked"
+msgstr "Акаунт розблоковано"
+
+msgid "Account has been suspended"
+msgstr "Акаунт відключено"
+
+msgid "Accounts"
+msgstr "Акаунти"
+
+msgid "Action"
+msgstr "Дія"
+
+msgid "Add Access Key"
+msgstr "Додати ключ доступу"
+
+msgid "Add Cron Job"
+msgstr "Додати Cron завдання"
+
+msgid "Add DNS Domain"
+msgstr "Додати DNS домен"
+
+msgid "Add DNS Record"
+msgstr "Додати DNS запис"
+
+msgid "Add DNS Zone"
+msgstr "Додати DNS-зону"
+
+msgid "Add Database"
+msgstr "Додати БД"
+
+msgid "Add FTP account"
+msgstr "Додати FTP акаунт"
+
+msgid "Add Firewall Rule"
+msgstr "Додати правило файрволу"
+
+msgid "Add IP Address"
+msgstr "Додати IP"
+
+msgid "Add IP Address to Banlist"
+msgstr "Додати IP в бан лист"
+
+msgid "Add IP list"
+msgstr "Додати список IP"
+
+msgid "Add IPset IP List for Firewall"
+msgstr "Додати список IPset у фаєрвол"
+
+msgid "Add Mail Account"
+msgstr "Додати поштовий акаунт"
+
+msgid "Add Mail Domain"
+msgstr "Додати поштовий домен"
+
+msgid "Add Name Server"
+msgstr "Додати сервер імен"
+
+msgid "Add Package"
+msgstr "Додати пакет"
+
+msgid "Add Record"
+msgstr "Додати запис"
+
+msgid "Add Rule"
+msgstr "Додати правило"
+
+msgid "Add SSH Key"
+msgstr "Додати SSH ключ"
+
+msgid "Add User"
+msgstr "Додати Користувача"
+
+msgid "Add Web Domain"
+msgstr "Додати WEB домен"
+
+msgid "Add new object"
+msgstr "Додати новий об'єкт"
+
+msgid "Additional FTP account(s)"
+msgstr "Додаткові FTP акаунти"
+
+msgid "Administrator"
+msgstr "Адміністратор"
+
+msgid "Advanced Details"
+msgstr "Додаткові подробиці"
+
+msgid "Advanced Options"
+msgstr "Додаткові Опції"
+
+msgid "Algorithm"
+msgstr "Алгоритм"
+
+msgid "Aliases"
+msgstr "Аліаси"
+
+msgid "Aliases used"
+msgstr "Використані Аліаси"
+
+msgid "All ports: 0, Range: 80-82, List: 80,443,8080,8443"
+msgstr "Усі порти: 0, Діапазон: 80-82, Список: 80,443,8080,8443"
+
+msgid "Allow suspended users to create new backups"
+msgstr "Дозволити призупиненому користувачам створювати нові бекапи"
+
+msgid "Allow suspended users to log in with read-only access"
+msgstr "Дозволити вхід в систему заблокованим юзерам в режимі read only"
+
+msgid "Allow users to change templates when editing DNS zones"
+msgstr "Дозволити юзерам змінювати шаблони при правці DNS зон"
+
+msgid "Allow users to change templates when editing web domains"
+msgstr "Дозволити юзерам правити шаблони при правці веб доменів"
+
+msgid "Allow users to delete log history"
+msgstr "Дозволити юзерам видаляти історію журналів"
+
+msgid "Allow users to edit their account details"
+msgstr "Дозволити юзерам редагувати їх акаунти"
+
+msgid "Allow users to reset their passwords"
+msgstr "Дозволити юзерам скидати свої паролі"
+
+msgid "Allow users to view action and login history logs"
+msgstr "Дозволити юзерам доступ до журналів дій та входів у систему"
+
+msgid "Allowed IP addresses for API"
+msgstr "Дозволені IP адреси для API"
+
+msgid "Alternate"
+msgstr "Альтернативний"
+
+msgid ""
+"An existing backup task is already running, please wait for it to complete."
+msgstr ""
+"Поточне завдання зі створення бекапу вже запущене, будь ласка, зачекайте "
+"поки воно буде завершено."
+
+msgid ""
+"An existing restoration task is already running. Please wait for it to "
+"finish before launching it again."
+msgstr ""
+"Завдання на відновлення вже запущене. Будь ласка, дочекайтесь завершення, "
+"перед повторним запуском"
+
+msgid "An internal error occurred"
+msgstr "Сталася внутрішня помилка"
+
+msgid "Anti-Virus"
+msgstr "Антивірус"
+
+msgid "Application Name"
+msgstr "Ім'я додатку"
+
+msgid "Apply to selected"
+msgstr "Застосувати до обраного"
+
+msgid "Apr"
+msgstr "Квіт"
+
+msgid "Are you sure you want to delete %s?"
+msgstr "Ви дійсно хочете видалити %s?"
+
+msgid "Are you sure you want to delete IP address %s?"
+msgstr "Ви дійсно хочете видалити  IP адресу %s?"
+
+msgid "Are you sure you want to delete IP list %s?"
+msgstr "Ви дійсно хочете видалити IP зі списку %s?"
+
+msgid "Are you sure you want to delete SSH key %s?"
+msgstr "Ви дійсно хочете видалити SSH ключ %s?"
+
+msgid "Are you sure you want to delete access key %s?"
+msgstr "Ви дійсно хочете видалити ключ доступу  %s?"
+
+msgid "Are you sure you want to delete backup %s?"
+msgstr "Ви дійсно хочете видалити бекап %s?"
+
+msgid "Are you sure you want to delete database %s?"
+msgstr "Ви дійсно хочете видалити БД %s?"
+
+msgid "Are you sure you want to delete domain %s?"
+msgstr "Ви дійсно хочете видалити домен %s?"
+
+msgid "Are you sure you want to delete package %s?"
+msgstr "Ви дійсно хочете видалити пакет %s?"
+
+msgid "Are you sure you want to delete record %s?"
+msgstr "Ви дійсно хочете видалити запис %s?"
+
+msgid "Are you sure you want to delete rule %s"
+msgstr "Ви дійсно хочете видалити правило %s"
+
+msgid "Are you sure you want to delete the logs?"
+msgstr "Ви дійсно хочете видалити логи?"
+
+msgid "Are you sure you want to delete this cron job?"
+msgstr "Ви дійсно хочете видалити крон завдання?"
+
+msgid "Are you sure you want to delete user %s?"
+msgstr "Ви дійсно хочете видалити користувача %s?"
+
+msgid "Are you sure you want to leave the page?"
+msgstr "Ви дійсно хочете покинути сторінку"
+
+msgid "Are you sure you want to restart %s?"
+msgstr "Ви дійсно хочете перезапустити %s?"
+
+msgid "Are you sure you want to start service %s?"
+msgstr "Ви дійсно хочете запустити сервіс %s?"
+
+msgid "Are you sure you want to stop service %s?"
+msgstr "Ви дійсно хочете зупинити сервіс %s?"
+
+msgid "Are you sure you want to suspend %s?"
+msgstr "Ви дійсно хочете призупинити %s?"
+
+msgid "Are you sure you want to suspend database %s?"
+msgstr "Ви дійсно хочете призупинити БД %s?"
+
+msgid "Are you sure you want to suspend domain %s?"
+msgstr "Ви дійсно хочете призупинити домен %s?"
+
+msgid "Are you sure you want to suspend rule #%s?"
+msgstr "Ви дійсно хочете призупинити правило #%s?"
+
+msgid "Are you sure you want to suspend this cron job?"
+msgstr "Ви впевнені, що хочете призупинити цей акаунт?"
+
+msgid "Are you sure you want to suspend user %s?"
+msgstr "Ви дійсно хочете вимкнути користувача %s?"
+
+msgid "Are you sure you want to unsuspend %s?"
+msgstr "Ви дійсно хочете активувати %s?"
+
+msgid "Are you sure you want to unsuspend database %s?"
+msgstr "Ви дійсно хочете активувати %s?"
+
+msgid "Are you sure you want to unsuspend domain %s?"
+msgstr "Ви дійсно хочете активувати домен %s?"
+
+msgid "Are you sure you want to unsuspend rule #%s?"
+msgstr "Ви дійсно хочете активувати правило #%s?"
+
+msgid "Are you sure you want to unsuspend this cron job?"
+msgstr "Ви дійсно хочете активувати користувача %s?"
+
+msgid "Are you sure you want to unsuspend user %s?"
+msgstr "Ви дійсно хочете активувати користувача %s?"
+
+msgid "Assigned Domain"
+msgstr "Асоційований домен"
+
+msgid "Assigned User"
+msgstr "Прив'язаний користувач"
+
+msgid "Aug"
+msgstr "Серп"
+
+msgid "Auth Log"
+msgstr "Журнал авторизації"
+
+msgid "Authentication"
+msgstr "Аутентифікація"
+
+msgid "Auto Reply"
+msgstr "Автовідповідач"
+
+msgid "Auto Update"
+msgstr "Автоматичне оновлення"
+
+msgid "BACKUP"
+msgstr "БЕКАП"
+
+msgid "BLACKLIST"
+msgstr "Чорний список"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Backend Pool Mode"
+msgstr "Режим пулу PHP Backend"
+
+msgid "Backend Server"
+msgstr "Backend сервер"
+
+msgid "Backend Template"
+msgstr "Шаблон Backend"
+
+msgid "Backup Details"
+msgstr "Відомості про бекап"
+
+msgid "Backup Exclusions"
+msgstr "Винятки з бекапу"
+
+msgid "Backups"
+msgstr "Бекапи"
+
+msgid "Ban IP Address"
+msgstr "Заблокувати IP"
+
+msgid "Bandwidth"
+msgstr "Трафік"
+
+msgid "Banlist"
+msgstr "Чорний список"
+
+msgid "Banned IP Addresses"
+msgstr "Заблоковані IP адреси"
+
+msgid "Basic Options"
+msgstr "Базові опції"
+
+msgid "Biennially"
+msgstr "Що 2 роки"
+
+msgid "Block Malicious IPs"
+msgstr "Блокувати шкідливі IP"
+
+msgid "Browser"
+msgstr "Браузер"
+
+msgid "CPU"
+msgstr "Процесор"
+
+msgid "CRON"
+msgstr "CRON"
+
+msgid "Cache Duration"
+msgstr "Тривалість кешування"
+
+msgid "Catch-All Email"
+msgstr "Catch-All скринька"
+
+msgid "Category"
+msgstr "Категорія"
+
+msgid "Certificate has been generated successfully."
+msgstr "Сертифікат успішно створено."
+
+msgid "Changes have been saved."
+msgstr "Зміни збережено."
+
+msgid "Charset"
+msgstr "Кодування"
+
+msgid "City"
+msgstr "Місто"
+
+msgid "City / Locality"
+msgstr "Місто / Населений пункт"
+
+msgid "Clear"
+msgstr "Очистити"
+
+msgid "Close debug panel"
+msgstr "Закрити debug панель"
+
+msgid "Close menu"
+msgstr "Закрити меню"
+
+msgid "Code has been expired"
+msgstr "Строк дії коду збіг"
+
+msgid "Collapse main menu"
+msgstr "Згорнути головне меню"
+
+msgid "Command"
+msgstr "Команда"
+
+msgid "Comment"
+msgstr "Нотатка"
+
+msgid "Common Account Settings"
+msgstr "Загальні налаштування акаунту"
+
+msgid "Compression"
+msgstr "Стиснення"
+
+msgid "Compression Level"
+msgstr "Ступінь стиснення"
+
+msgid "Configure"
+msgstr "Налаштувати"
+
+msgid "Configure Server"
+msgstr "Налаштування серверу"
+
+msgid "Confirm"
+msgstr "Підтвердити"
+
+msgid "Confirm Password"
+msgstr "Підтвердження паролю"
+
+msgid "Contact Name"
+msgstr "Контактне ім'я"
+
+msgid "Continue"
+msgstr "Продовжити"
+
+msgid "Country"
+msgstr "Країна"
+
+msgid "Create Backup"
+msgstr "Створити архів"
+
+msgid "Cron Jobs"
+msgstr "Cron завдання"
+
+msgid "Cron job email reporting has been successfully disabled."
+msgstr "Сповіщення про крон таски на email були вимкнені"
+
+msgid "Cron job email reporting has been successfully enabled."
+msgstr "Сповіщення про крон таски на email були увімкнені"
+
+msgid "Cron job has been created successfully."
+msgstr "Cron таск успішно створено."
+
+msgid "Current Number of Databases"
+msgstr "Поточна кількість БД"
+
+msgid "Custom Logo"
+msgstr "Користувацький логотип"
+
+msgid "Custom document root"
+msgstr "Довільний document root"
+
+msgid "Custom logo"
+msgstr "Користувацький логотип"
+
+msgid "DB"
+msgstr "DB"
+
+msgid "DKIM"
+msgstr "DKIM"
+
+msgid "DKIM Support"
+msgstr "Підтримка DKIM"
+
+msgid "DNS"
+msgstr "DNS"
+
+msgid "DNS Cluster"
+msgstr "DNS кластер"
+
+msgid "DNS Records"
+msgstr "Записи DNS"
+
+msgid "DNS Server"
+msgstr "DNS сервер"
+
+msgid "DNS Support"
+msgstr "Підтримка DNS"
+
+msgid "DNS Sync User"
+msgstr "DNS Sync Cluster"
+
+msgid "DNS Template"
+msgstr "Шаблон DNS"
+
+msgid "DNS Zone"
+msgstr "DNS-зона"
+
+msgid "DNS Zones"
+msgstr "DNS Зони"
+
+msgid "DNS zone {%s} has been created successfully."
+msgstr "DNS зону {%s} створено успішно."
+
+msgid "DNSKEY Record"
+msgstr "DNSKEY запис"
+
+msgid "DNSSEC"
+msgstr "DNSSEC"
+
+msgid "DROP"
+msgstr "DROP"
+
+msgid "DS Record"
+msgstr "DS запис"
+
+msgid "Daily"
+msgstr "Щоденний"
+
+msgid "Data Loss Warning!"
+msgstr "Попередження про втрату даних!"
+
+msgid "Data Source"
+msgstr "Джерело даних"
+
+msgid "Database"
+msgstr "База даних"
+
+msgid "Database Credentials: %s"
+msgstr "Доступи до БД: %s"
+
+msgid ""
+"Database has been created.\n"
+"\n"
+"Database: {{database}}\n"
+"Username: {{username}}\n"
+"Password: {{password}}\n"
+"SQL Manager: {{dbadmin}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"База даних створена.\n"
+"\n"
+"База даних: {{database}}\n"
+"Ім'я користувача: {{username}}\n"
+"Пароль: {{password}}\n"
+"SQL менеджер: {{dbadmin}}\n"
+"\n"
+"На все добре,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Database {%s} has been created successfully. / {Open %s}"
+msgstr "База даних {%s} створена успішно. / {Відкрити %s}"
+
+msgid "Databases"
+msgstr "Бази даних"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Day"
+msgstr "День"
+
+msgid "Day of Week"
+msgstr "День тижня"
+
+msgid "Dec"
+msgstr "Груд"
+
+msgid "Default"
+msgstr "За замовчуванням"
+
+msgid "Default Language"
+msgstr "Мова за замовчуванням"
+
+msgid "Default List Sort Order"
+msgstr "Порядок сортування списку за замовчуванням"
+
+msgid "Default Name Servers"
+msgstr "DNS сервери за замовчуванням"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "Delete all notifications"
+msgstr "Видалити всі сповіщення"
+
+msgid "Delete notification"
+msgstr "Видалити сповіщення"
+
+msgid "Description"
+msgstr "Опис"
+
+msgid "Details"
+msgstr "Деталі"
+
+msgid "Directory"
+msgstr "Папка"
+
+msgid "Disable Automatic Updates"
+msgstr "Вимкнути автоматичне оновлення"
+
+msgid "Disable Notifications"
+msgstr "Вимкнути сповіщення"
+
+msgid "Disabled"
+msgstr "Вимкнено"
+
+msgid "Discard all mail"
+msgstr "Відмінити усю пошту"
+
+msgid "Disk"
+msgstr "Диск"
+
+msgid "Display / Hide shortcuts"
+msgstr "Показати/сховати шорткати"
+
+msgid "Do not allow other administrators to access Server Settings"
+msgstr "Заборонити адміністраторам доступ до налаштувань серверу"
+
+msgid "Do not allow user to log in to Control Panel"
+msgstr "Заборонити юзеру вхід до Панелі"
+
+msgid "Do not store forwarded mail"
+msgstr "Не зберігати перенаправлені листи"
+
+msgid "Domain"
+msgstr "Домен"
+
+msgid "Domain {%s} has been created successfully."
+msgstr "Домен {%s} створено успішно."
+
+msgid "Domains"
+msgstr "Домени"
+
+msgid "Download"
+msgstr "Завантажити"
+
+msgid "Download Database"
+msgstr "Завантажити базу даних"
+
+msgid "Download of remote backup file has been scheduled."
+msgstr "Скачування віддаленого бекапу заплановано."
+
+msgid "Duplicate"
+msgstr "Дублікат"
+
+msgid "Edit"
+msgstr "Редагувати"
+
+msgid "Edit Backup Exclusions"
+msgstr "Редагувати виключення з бекапу"
+
+msgid "Edit Cron Job"
+msgstr "Редагувати задачу Cron"
+
+msgid "Edit DNS Domain"
+msgstr "Редагувати DNS домен"
+
+msgid "Edit DNS Record"
+msgstr "Редагувати DNS запис"
+
+msgid "Edit Database"
+msgstr "Редагувати БД"
+
+msgid "Edit Domain"
+msgstr "Редагувати домен"
+
+msgid "Edit Firewall Rule"
+msgstr "Редагувати правило файрволу"
+
+msgid "Edit IP Address"
+msgstr "Редагувати IP адресу"
+
+msgid "Edit Mail Account"
+msgstr "Редагувати поштовий акаунт"
+
+msgid "Edit Mail Domain"
+msgstr "Редагувати поштовий домен"
+
+msgid "Edit Package"
+msgstr "Редагувати пакет"
+
+msgid "Edit User"
+msgstr "Редагувати користувача"
+
+msgid "Edit Web Domain"
+msgstr "Редагувати веб домен"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Email Credentials: %s@%s"
+msgstr "Email доступи: %s@%s"
+
+msgid "Email Subject"
+msgstr "Тема EMail"
+
+msgid "Email login credentials to:"
+msgstr "Відправити доступи на email:"
+
+msgid "Enable API access"
+msgstr "Ввімкнути API"
+
+msgid "Enable Automatic Updates"
+msgstr "Увімкнути автоматичне оновлення"
+
+msgid "Enable DNSSEC"
+msgstr "Включити DNSSEC"
+
+msgid "Enable FastCGI cache"
+msgstr "Увімкнути FastCGI кеш"
+
+msgid "Enable HTTP Strict Transport Security (HSTS)"
+msgstr "Увімкнути HSTS"
+
+msgid "Enable Notifications"
+msgstr "Увімкнути сповіщення"
+
+msgid "Enable SSL for this domain"
+msgstr "Увімкнути SSL для цього домену"
+
+msgid "Enable automatic HTTPS redirection"
+msgstr "Увімкнути автоматичний HTTPS редирект"
+
+msgid "Enable debug mode"
+msgstr "Увімкнути режим debug"
+
+msgid "Enable domain redirection"
+msgstr "Включити редирект для домену"
+
+msgid "Enable legacy API access"
+msgstr "Увімкнути доступ до застарілих API"
+
+msgid "Enable preview features"
+msgstr "Увімкнути попередній перегляд"
+
+msgid "Enable two-factor authentication"
+msgstr "Включити двофакторну аутентифікацію"
+
+msgid "Enabled"
+msgstr "Увімкнено"
+
+msgid "Enabled PHP Versions"
+msgstr "Активні версії PHP"
+
+msgid "Enabled for admin"
+msgstr "Увімкнено для адміністратора"
+
+msgid "Enabled for all users"
+msgstr "Увімкнено для всіх користувачів"
+
+msgid "Enforce subdomain ownership"
+msgstr "Володіти всіма піддоменами"
+
+msgid "Enter focused element"
+msgstr "Перейти до активного пункту меню"
+
+msgid "Error"
+msgstr "Помилка"
+
+msgid "Error Log"
+msgstr "Журнал помилок"
+
+msgid "Error code: %s"
+msgstr "Код помилки: %s"
+
+msgid "Error: %s update failed."
+msgstr "Помилка: %s оновлення невдале."
+
+msgid "Error: Hestia did not return any output."
+msgstr "Помилка: Hestia не вернула ніякого результату"
+
+msgid "Error: unable to copy package."
+msgstr "Помилка: неможливо скопіювати пакет"
+
+msgid "Error: unknown record ID."
+msgstr "Помилка: невідомий ID запису."
+
+msgid "Every %s days"
+msgstr "Кожних %s днів"
+
+msgid "Every %s hours"
+msgstr "Кожних %s годин"
+
+msgid "Every %s minutes"
+msgstr "Кожні %s хвилин"
+
+msgid "Every %s months"
+msgstr "Кожних %s місяців"
+
+msgid "Every day"
+msgstr "Щодня"
+
+msgid "Every even day"
+msgstr "Кожного парного дня"
+
+msgid "Every even month"
+msgstr "Кожного парного місяця"
+
+msgid "Every hour"
+msgstr "Щогодни"
+
+msgid "Every minute"
+msgstr "Щохвилини"
+
+msgid "Every month"
+msgstr "Щомісяця"
+
+msgid "Every odd day"
+msgstr "Кожного непарного дня"
+
+msgid "Every odd month"
+msgstr "Кожного непарного місяця"
+
+msgid "Expand main menu"
+msgstr "Розгорнути головне меню"
+
+msgid "Expiration Date"
+msgstr "Діє до"
+
+msgid "Expire"
+msgstr "Спливає"
+
+msgid "FTP"
+msgstr "FTP"
+
+msgid "FTP Account Credentials: %s"
+msgstr "Доступи для FTP: %s"
+
+msgid ""
+"FTP account has been created and ready to use.\n"
+"\n"
+"Hostname: {{domain}}\n"
+"Username: {{username}}\n"
+"Password: {{password}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"FTP створений і готовий до використання.\n"
+"\n"
+"Hostname: {{domain}}\n"
+"Користувач: {{username}}\n"
+"Пароль: {{password}}\n"
+"\n"
+"На все добре,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Failed"
+msgstr "Невдало"
+
+msgid "Feb"
+msgstr "Лют"
+
+msgid "Field \"%s\" can not be blank."
+msgstr "Поле \"%s\" не може бути пустим."
+
+msgid "File Manager"
+msgstr "Файловий Менеджер"
+
+msgid "File Name"
+msgstr "Ім`я файлу"
+
+msgid "File System Disk Quota"
+msgstr "Квота файлової системи"
+
+msgid "File manager"
+msgstr "Файловий менеджер"
+
+msgid "Firewall"
+msgstr "Файрвол"
+
+msgid "Firewall Rules"
+msgstr "Правил файрволу"
+
+msgid "Flag"
+msgstr "Флаг"
+
+msgid "Focus on search"
+msgstr "Фокус на пошуку"
+
+msgid "For example"
+msgstr "Наприклад"
+
+msgid "Forgot Password"
+msgstr "Забули пароль?"
+
+msgid "Forgot Token"
+msgstr "Забути токен"
+
+msgid "Forward to"
+msgstr "Перенаправляти на"
+
+msgid "Forwarding"
+msgstr "Перенаправлення"
+
+msgid "Friday"
+msgstr "П'ятниця"
+
+msgid "General"
+msgstr "Основне"
+
+msgid "Generate"
+msgstr "Створити"
+
+msgid "Generate Self-Signed SSL Certificate"
+msgstr "Створити самопідписаний сертифікат SSL"
+
+msgid "Global SMTP Relay"
+msgstr "Загальний рілей SMTP"
+
+msgid "Go to BACKUP list"
+msgstr "Перейти до списку BACKUP"
+
+msgid "Go to CRON list"
+msgstr "Перейти до списку CRON"
+
+msgid "Go to DB list"
+msgstr "Перейти до списку DB"
+
+msgid "Go to DNS list"
+msgstr "Перейти до списку DNS"
+
+msgid "Go to MAIL list"
+msgstr "Перейти до списку MAIL"
+
+msgid "Go to WEB list"
+msgstr "Перейти до списку WEB"
+
+msgid "HESTIA"
+msgstr "HESTIA"
+
+msgid ""
+"Hello {{name}},\n"
+"\n"
+"To reset your {{appname}} password, please follow this link:\n"
+"https://{{hostname}}/reset/?action=confirm&user={{user}}&code={{resetcode}}\n"
+"\n"
+"Alternatively, you may go to https://{{hostname}}/reset/?"
+"action=code&user={{user}} and enter the following reset code:\n"
+"{{resetcode}}\n"
+"\n"
+"If you did not request password reset, please ignore this message and accept "
+"our apologies.\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"Вітаємо {{name}},\n"
+"\n"
+"Щоб скинути пароль для {{appname}}, будь ласка перейдіть по лінку:\n"
+"https://{{hostname}}/reset/?action=confirm&user={{user}}&code={{resetcode}}\n"
+"\n"
+"Також Ви можете перейти сюди   https://{{hostname}}/reset/?"
+"action=code&user={{user}} і ввести код скидання:\n"
+"{{resetcode}}\n"
+"\n"
+"Якщо Ви не запитували скидання паролю, будь ласка проігноруйте дане "
+"повідомлення та прийміть наші вибачення.\n"
+"\n"
+"На все добре,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid ""
+"Hello {{name}},\n"
+"\n"
+"Your account has been created and ready to use.\n"
+"\n"
+"https://{{hostname}}/login/\n"
+"Username: {{user}}\n"
+"Password: {{password}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"Вітаємо {{name}},\n"
+"\n"
+"Ваш акаунт успішно створений і готовий до використання.\n"
+"\n"
+"https://{{hostname}}/login/\n"
+"Користувач: {{user}}\n"
+"Пароль: {{password}}\n"
+"\n"
+"На все добре,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Help"
+msgstr "Допомога"
+
+msgid "Hestia Control Panel"
+msgstr "Hestia Control Panel"
+
+msgid "Hestia core package"
+msgstr "Головний пакет Hestia"
+
+msgid "Hestia internal php interpreter"
+msgstr "внутрішній php Hestia"
+
+msgid "Hestia internal web server"
+msgstr "внутрішній веб-сервер Hestia"
+
+msgid "Hide Certificate"
+msgstr "Приховати сертифікат"
+
+msgid "Hide account from other administrators"
+msgstr "Сховати акаунт від інших адміністраторів"
+
+msgid "Hide link to Documentation"
+msgstr "Приховати лінк на Документацію"
+
+msgid "Host"
+msgstr "Хост"
+
+msgid "Hostname"
+msgstr "Ім'я хоста"
+
+msgid "Hour"
+msgstr "Година"
+
+msgid "Hourly"
+msgstr "Щогодиний"
+
+msgid "IMAP Settings"
+msgstr "Налаштування IMAP"
+
+msgid "IP Address"
+msgstr "IP адреса"
+
+msgid "IP Address / IPset IP List"
+msgstr "IP адреса / IPset список IP"
+
+msgid "IP Addresses"
+msgstr "IP-адреси"
+
+msgid "IP List Name"
+msgstr "Ім'я списку IP"
+
+msgid "IP Version"
+msgstr "Версія IP"
+
+msgid "IP address has been banned successfully."
+msgstr "IP адресу заблоковано успішно."
+
+msgid "IP address {%s} has been created successfully."
+msgstr "IP адресу {%s} створено успішно."
+
+msgid "IP list has been created successfully."
+msgstr "Список IP створено успішно"
+
+msgid "IP or Value"
+msgstr "IP адреса або Значення"
+
+msgid "IPVERSE"
+msgstr "IPVERSE"
+
+msgid "IPs"
+msgstr "IP(и)"
+
+msgid "IPset IP Lists"
+msgstr "Списки IP (IPset)"
+
+msgid "ISO 3166-1 alpha-2 two-letter code"
+msgstr "Двобуквений код ISO 3166-1 alpha-2"
+
+msgid ""
+"If the aliases changes, Let's Encrypt will obtain a new SSL certificate."
+msgstr ""
+"Якщо аліаси домена змінилися Let's Encrypt створить нові SSL сертифікати"
+
+msgid "Inactive session timeout"
+msgstr "Таймаут неактивної сесії"
+
+msgid "Inactive session timeout can not lower than 1 minute."
+msgstr "Таймаут неактивної сесії не може бути менший 1 хвилини."
+
+msgid "Info (read-only mode): Crontab can only be edited via SSH."
+msgstr ""
+"Інформація (в режимі read-only): Crontab можна редагувати тільки по SSH"
+
+msgid "Information"
+msgstr "Інформація"
+
+msgid "Install %s"
+msgstr "Інсталювати %s"
+
+msgid "Interface"
+msgstr "Інтерфейс"
+
+msgid "Invalid or missing 2FA token"
+msgstr "Токен 2FA невірний чи відсутній"
+
+msgid "Invalid username or code"
+msgstr "Некоректний логін або код зміни паролю"
+
+msgid "Invalid username or password"
+msgstr "Некоректний логін або пароль"
+
+msgid "Issued By"
+msgstr "Видавець"
+
+msgid "Issued To"
+msgstr "Виданий для"
+
+msgid ""
+"It is strongly advised to {create a standard user account} before adding %s "
+"to the server due to the increased privileges the admin account possesses "
+"and potential security risks."
+msgstr ""
+"Переконливо рекомендується {створити звичайний акаунт} перш ніж створювати "
+"%s на сервері, позаяк акаунт admin має підвищені привілеї в системі."
+
+msgid ""
+"It may take a few minutes to save your changes. Please wait until the "
+"process has completed and do not refresh the page."
+msgstr ""
+"Збереження ваших змін може тривати кілька хвилин. Будь ласка зачекайте "
+"завершення і не оновлюйте сторінку."
+
+msgid "Jan"
+msgstr "Січ"
+
+msgid "Jobs"
+msgstr "Завдання"
+
+msgid "Jul"
+msgstr "Лип"
+
+msgid "Jun"
+msgstr "Черв"
+
+msgid "Key Size"
+msgstr "Розмір ключа"
+
+msgid "Key Tag"
+msgstr "Тег ключа"
+
+msgid "Key Type / Flag"
+msgstr "Ключовий тег / Флаг"
+
+msgid "Language"
+msgstr "Мова"
+
+msgid "Last 70 lines of %s.%s.log"
+msgstr "Останні 70 рядків файлу %s.%s.log"
+
+msgid "Limit"
+msgstr "Ліміт"
+
+msgid "Load Average"
+msgstr "Середне навантаження"
+
+msgid "Loading..."
+msgstr "Завантаження..."
+
+msgid "Local Backup"
+msgstr "Локальний бекап"
+
+msgid "Log in"
+msgstr "Увійти"
+
+msgid "Log in as"
+msgstr "Увійти як"
+
+msgid "Log out"
+msgstr "Вийти"
+
+msgid "Logged in as"
+msgstr "Увійшли як"
+
+msgid "Login"
+msgstr "Увійти"
+
+msgid "Login History"
+msgstr "Історія входів"
+
+msgid "Login screen style"
+msgstr "Стиль сторінки входу"
+
+msgid "Logs"
+msgstr "Логи"
+
+msgid "MAIL"
+msgstr "MAIL"
+
+msgid "MB"
+msgstr "Мб"
+
+msgid "Mail"
+msgstr "Пошта"
+
+msgid "Mail Accounts"
+msgstr "Поштові акаунти"
+
+msgid "Mail Domain"
+msgstr "Поштовий домен"
+
+msgid "Mail Domains"
+msgstr "Поштові домени"
+
+msgid "Mail Server"
+msgstr "Поштовий сервер"
+
+msgid "Mail Support"
+msgstr "Підтримка пошти"
+
+msgid ""
+"Mail account has been created.\n"
+"\n"
+"Common Account Settings:\n"
+"Username: {{account}}@{{domain}}\n"
+"Password: {{password}}\n"
+"Webmail: {{webmail}}\n"
+"Hostname: {{hostname}}\n"
+"\n"
+"IMAP Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 993\n"
+"STARTTLS: Port 143\n"
+"No encryption: Port 143\n"
+"\n"
+"POP3 Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 995\n"
+"STARTTLS: Port 110\n"
+"No encryption: Port 110\n"
+"\n"
+"SMTP Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 465\n"
+"STARTTLS: Port 587\n"
+"No encryption: Port 25\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"Поштовий акаунт створено успішно.\n"
+"\n"
+"Загальні налаштування:\n"
+"Користувач: {{account}}@{{domain}}\n"
+"Пароль: {{password}}\n"
+"Веб пошта: {{webmail}}\n"
+"Hostname: {{hostname}}\n"
+"\n"
+"Доступи IMAP \n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 993\n"
+"STARTTLS: Port 143\n"
+"No encryption: Port 143\n"
+"\n"
+"Доступи POP3 \n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 995\n"
+"STARTTLS: Port 110\n"
+"No encryption: Port 110\n"
+"\n"
+"Доступи SMTP \n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 465\n"
+"STARTTLS: Port 587\n"
+"No encryption: Port 25\n"
+"\n"
+"На все добре,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Mail account {%s@%s} has been created successfully."
+msgstr "Поштовий акаунт {%s@%s} створено успішно."
+
+msgid "Mail domain {%s} has been created successfully."
+msgstr "Поштовий домен {%s} створено успішно."
+
+msgid "Manage SSH Keys"
+msgstr "Управління ключами SSH"
+
+msgid "Mar"
+msgstr "Бер"
+
+msgid "Maximum %s characters length, including prefix"
+msgstr "Максимальна довжина %s символів, включно з префіксом"
+
+msgid "Maximum Number of Databases"
+msgstr "Максимальна кількість БД"
+
+msgid "May"
+msgstr "Трав"
+
+msgid "Memory"
+msgstr "Пам'ять"
+
+msgid "Message"
+msgstr "Повідомлення"
+
+msgid "Minute"
+msgstr "Хвилина"
+
+msgid "Minutes"
+msgstr "Щохвилини"
+
+msgid "Monday"
+msgstr "Понеділок"
+
+msgid "Month"
+msgstr "Місяць"
+
+msgid "Monthly"
+msgstr "Щомісячний"
+
+msgid "More info"
+msgstr "Більше інфо"
+
+msgid "Move backward through top menu"
+msgstr "Перейти до попереднього пункту меню"
+
+msgid "Move down through elements list"
+msgstr "Перейти до наступного елементу списку"
+
+msgid "Move forward through top menu"
+msgstr "Перейти до наступного пункту меню"
+
+msgid "Move up through elements list"
+msgstr "Перейти до попереднього елементу списку"
+
+msgid "MySQL Support"
+msgstr "Підтримка MySQL"
+
+msgid "NAT IP Association"
+msgstr "Прив'язка NAT IP"
+
+msgid "NGINX cache has been purged successfully."
+msgstr "Кеш NGINX успішно очищено"
+
+msgid "Name"
+msgstr "Ім'я"
+
+msgid "Name Servers"
+msgstr "Сервери імен"
+
+msgid "Nameserver 1"
+msgstr "Сервер імен 1"
+
+msgid "Nameserver 2"
+msgstr "Сервер імен 2"
+
+msgid "Netmask"
+msgstr "Маска підмережі"
+
+msgid "Network"
+msgstr "Мережа"
+
+msgid "New Password"
+msgstr "Новий пароль"
+
+msgid "Next"
+msgstr "Далі"
+
+msgid "No"
+msgstr "Ні"
+
+msgid "No aliases"
+msgstr "Немає псевдонімів"
+
+msgid "No encryption"
+msgstr "Без шифрування"
+
+msgid "No exclusions"
+msgstr "Без виключень"
+
+msgid "No notifications"
+msgstr "Немає сповіщень"
+
+msgid "Normal password"
+msgstr "Нормальний пароль"
+
+msgid "Not After"
+msgstr "Не пізніше"
+
+msgid "Not Before"
+msgstr "Не раніше"
+
+msgid "Notifications"
+msgstr "Сповіщення"
+
+msgid "Nov"
+msgstr "Лист"
+
+msgid "Oct"
+msgstr "Жовт"
+
+msgid "Old Style"
+msgstr "Старий стиль"
+
+msgid "One or more email addresses"
+msgstr "Одна або більше email адрес"
+
+msgid "Open Webmail"
+msgstr "Відкрити Webmail"
+
+msgid "Open debug panel"
+msgstr "Відкрити debug панель"
+
+msgid "Open menu"
+msgstr "Відкрити меню"
+
+msgid "Operating System"
+msgstr "Операційна Система"
+
+msgid "Optional"
+msgstr "Опціональний"
+
+msgid "Options"
+msgstr "Опції"
+
+msgid "Organization"
+msgstr "Організація"
+
+msgid "Overall Statistics"
+msgstr "Загальна Статистика"
+
+msgid "Owner"
+msgstr "Власник"
+
+msgid "PHP CLI Version"
+msgstr "Версія PHP CLI"
+
+msgid "POP3 Settings"
+msgstr "Налаштування POP3"
+
+msgid "Package"
+msgstr "Пакет"
+
+msgid "Package Name"
+msgstr "Назва Пакету"
+
+msgid "Package Names"
+msgstr "Ім'я пакету"
+
+msgid "Package {%s} has been created successfully."
+msgstr "Пакет {%s} створено успішно."
+
+msgid "Packages"
+msgstr "Пакети"
+
+msgid "Partially implemented"
+msgstr "Частково реалізований"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Password Reset at %s"
+msgstr "Скидання паролю для %s"
+
+msgid "Password does not match the minimum requirements."
+msgstr "Пароль не відповідає мінімальним вимогам."
+
+msgid "Password reset code has been sent to your email address"
+msgstr "Код скидання паролю був надісланий на ваш email"
+
+msgid ""
+"Password reset instructions have been sent to the email address associated "
+"with this account."
+msgstr "Інструкції зі скидання пароля були надіслані на e-mail цього акаунту"
+
+msgid "Passwords do not match"
+msgstr "Паролі не збігаються"
+
+msgid "Path"
+msgstr "Шлях"
+
+msgid "Permissions"
+msgstr "Дозволи"
+
+msgid "Please enter a valid contact name."
+msgstr "Введіть дійсне ім'я (контактні дані)"
+
+msgid "Please enter a valid email address."
+msgstr "Будь ласка введіть коректний email."
+
+msgid "Please make sure ~/web/%s/public_html is empty!"
+msgstr "Переконайтесь, що ~/web/%s/public_html пуста!"
+
+msgid "Please scan the code below in your 2FA application"
+msgstr "Скануйте, будь ласка, код нижче у вашому 2FA додатку"
+
+msgid "Please wait 15 minutes before sending a new request."
+msgstr "Будь ласка, зачекайте 15 хвилин перш ніж створювати новий запит."
+
+msgid "Plugins"
+msgstr "Плагіни"
+
+msgid "Point to"
+msgstr "Вказує на"
+
+msgid "Policies"
+msgstr "Політики"
+
+msgid "Policy"
+msgstr "Політика"
+
+msgid "Port"
+msgstr "Порт"
+
+msgid "PostgreSQL Support"
+msgstr "Підтримка PostgreSQL"
+
+msgid "Prefix %s will be added to username automatically"
+msgstr "Префікс %s буде автоматично додано до назви акаунту"
+
+msgid ""
+"Prefix %s will be automatically added to database name and database user"
+msgstr ""
+"Префікс %s буде автоматично додано до Бази даних та користувача Бази даних"
+
+msgid "Prevent CSRF"
+msgstr "Унеможливити CSRF"
+
+msgid "Preview"
+msgstr "Прев'ю"
+
+msgid "Preview Features"
+msgstr "Перегляд"
+
+msgid "Priority"
+msgstr "Пріоритет"
+
+msgid "Production Release"
+msgstr "Версія продукту"
+
+msgid "Protocol"
+msgstr "Протокол"
+
+msgid "Proxy Extensions"
+msgstr "Розширення Proxy"
+
+msgid "Proxy Server"
+msgstr "Proxy сервер"
+
+msgid "Proxy Support"
+msgstr "Підтримка Proxy"
+
+msgid "Proxy Template"
+msgstr "Шаблон Proxy"
+
+msgid "Public Key"
+msgstr "Відкритий ключ"
+
+msgid "Purge NGINX Cache"
+msgstr "Очистити кеш NGINX"
+
+msgid "Quick App Installer"
+msgstr "Інсталятор Quick App"
+
+msgid "Quick Install App"
+msgstr "Встановити додаток"
+
+msgid "Quota"
+msgstr "Квота"
+
+msgid "RAM"
+msgstr "ОЗП"
+
+msgid "Ranges and lists are acceptable"
+msgstr "Можна вказувати в форматі списку та діапазону"
+
+msgid "Rate Limit"
+msgstr "Частота запитів"
+
+msgid "Rebuild"
+msgstr "Перебілдити"
+
+msgid "Rebuild All"
+msgstr "Перебілдити всі"
+
+msgid "Rebuild Cron Jobs"
+msgstr "Ребілд Cron Jobs"
+
+msgid "Rebuild DNS Zones"
+msgstr "Ребілд DNS-зон"
+
+msgid "Rebuild Databases"
+msgstr "Ребілд БД"
+
+msgid "Rebuild Mail Domains"
+msgstr "Ребілд поштових доменів"
+
+msgid "Rebuild User Profile"
+msgstr "Ребілд профілю користувача"
+
+msgid "Rebuild Web Domains"
+msgstr "Ребілд веб доменів"
+
+msgid "Record"
+msgstr "Запис"
+
+msgid "Record {%s.%s} has been created successfully."
+msgstr "Запис {%s.%s} створено успішно."
+
+msgid "Records"
+msgstr "Записи"
+
+msgid "Redirect visitors to %s"
+msgstr "Редирект відвідувачів на %s"
+
+msgid "Redirect visitors to a custom domain or web address"
+msgstr "Перенаправляти відвідувачів на заданий домен чи адресу"
+
+msgid "Refresh"
+msgstr "Оновити"
+
+msgid "Refresh IP Addresses"
+msgstr "Оновити IP-адреси"
+
+msgid "Reject Spam"
+msgstr "Відхиляти спам"
+
+msgid "Release"
+msgstr "Реліз"
+
+msgid "Remote Backup"
+msgstr "Віддалений бекап"
+
+msgid "Reset"
+msgstr "Скинути"
+
+msgid "Reset Code"
+msgstr "Код Скидання"
+
+msgid "Restart"
+msgstr "Рестарт"
+
+msgid "Restart \"%s\" failed"
+msgstr "Перезапуск %s невдалий"
+
+msgid "Restore"
+msgstr "Відновити"
+
+msgid "Restore All"
+msgstr "Відновити Усе"
+
+msgid "Restrict access to read-only for other administrators"
+msgstr "Обмежити доступ до read-only для інших адмінів"
+
+msgid "Role"
+msgstr "Роль"
+
+msgid "Rule has been created successfully."
+msgstr "Правило створено успішно."
+
+msgid "Run Command"
+msgstr "Виконати Команду"
+
+msgid "Runtime"
+msgstr "Витрачено часу"
+
+msgid "SMTP Relay"
+msgstr "Рілей SMTP"
+
+msgid "SMTP Settings"
+msgstr "Налаштування SMTP"
+
+msgid "SOA"
+msgstr "SOA"
+
+msgid "SSH"
+msgstr "SSH"
+
+msgid "SSH Access"
+msgstr "SSH доступ"
+
+msgid "SSH ID"
+msgstr "SSH ID"
+
+msgid "SSH Key"
+msgstr "Ключ SSH"
+
+msgid "SSH Key already exists."
+msgstr "Ключ SSH вже існує."
+
+msgid "SSH Key has been created successfully."
+msgstr "SSH ключ успішно створено"
+
+msgid "SSH Keys"
+msgstr "Ключі SSH"
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "SSL CSR"
+msgstr "SSL CSR запит"
+
+msgid "SSL Certificate"
+msgstr "SSL сертификат"
+
+msgid "SSL Certificate Authority / Intermediate"
+msgstr "Центр сертифікації SSL / Проміжний"
+
+msgid "SSL Domains"
+msgstr "SSL Домени"
+
+msgid "SSL Private Key"
+msgstr "Приватний Ключ SSL"
+
+msgid "Saturday"
+msgstr "Субота"
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "Save form"
+msgstr "Зберегти форму"
+
+msgid "Search"
+msgstr "Пошук"
+
+msgid "Search Results"
+msgstr "Результати пошуку"
+
+msgid "Secret Key"
+msgstr "Секретний ключ"
+
+msgid "Security"
+msgstr "Безпека"
+
+msgid "Select"
+msgstr "Обрати"
+
+msgid "Select all"
+msgstr "Обрати все"
+
+msgid "Send FTP credentials to email"
+msgstr "Відправити дані FTP акаунту за адресою"
+
+msgid "Send email notification when an update has been installed"
+msgstr "Повідомляти на email, коли буде оновлення буде установлено"
+
+msgid "Send update installation log by email"
+msgstr "Надіслати лог оновлення на email"
+
+msgid "Send welcome email"
+msgstr "Надіслати лист-привітання"
+
+msgid "Sender Email Address"
+msgstr "EMail відправника"
+
+msgid "Sender Name"
+msgstr "Ім'я відправника"
+
+msgid "Sep"
+msgstr "Вер"
+
+msgid "Server settings"
+msgstr "Налаштування серверу"
+
+msgid "Service"
+msgstr "Сервіс"
+
+msgid "Services"
+msgstr "Сервіси"
+
+msgid "Set as default language for all users"
+msgstr "Встановити мову дефолтною для всіх юзерів"
+
+msgid "Set as selected theme for all users"
+msgstr "Встановити обрану тему для всіх юзерів"
+
+msgid "Setup"
+msgstr "Встановлення"
+
+msgid "Shared"
+msgstr "Загальний"
+
+msgid "Shell"
+msgstr "Shell"
+
+msgid "Shortcuts"
+msgstr "Скорочення"
+
+msgid "Show Certificate"
+msgstr "Показати сертифікат"
+
+msgid "Show Per User"
+msgstr "Показувати на користувача"
+
+msgid "Signature"
+msgstr "Підпис"
+
+msgid "Size"
+msgstr "Розмір"
+
+msgid "Sort by"
+msgstr "Сортувати за"
+
+msgid "Sort items"
+msgstr "Сортувати елементи"
+
+msgid "Spam Filter"
+msgstr "Антиспам"
+
+msgid "Start"
+msgstr "Старт"
+
+msgid "Start \"%s\" failed"
+msgstr "Запуск %s невдалий"
+
+msgid "State"
+msgstr "Область"
+
+msgid "State / Province"
+msgstr "Область / Провінція"
+
+msgid "Statistics"
+msgstr "Статистика"
+
+msgid "Statistics Authorization"
+msgstr "Обмежений доступ до статистики"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Status code"
+msgstr "Код редиректу"
+
+msgid "Stop"
+msgstr "Стоп"
+
+msgid "Stop \"%s\" failed"
+msgstr "Зупинка %s невдала"
+
+msgid "Strict"
+msgstr "строга політика"
+
+msgid "Submit"
+msgstr "Відправити"
+
+msgid "Success"
+msgstr "Успішно"
+
+msgid "Sunday"
+msgstr "Неділя"
+
+msgid "Support CIDR format"
+msgstr "Підтримується формат CIDR"
+
+msgid "Supported variables"
+msgstr "Доступні змінні"
+
+msgid "Suspend"
+msgstr "Призупинити"
+
+msgid "Suspend All"
+msgstr "Зупинити Всі"
+
+msgid "Suspended"
+msgstr "Заблоковані"
+
+msgid "Sync Error document templates on user rebuild"
+msgstr "Синхронізація шаблонів документів помилок при ребілді юзера"
+
+msgid "Sync Skeleton templates"
+msgstr "Синхронізувати шаблони каркаса"
+
+msgid "System"
+msgstr "Система"
+
+msgid "System Administrator account"
+msgstr "Акаунт системного адміністратора"
+
+msgid "System PHP Version"
+msgstr "Системна версія PHP"
+
+msgid "System Protection"
+msgstr "Захист Системи"
+
+msgid "TTL"
+msgstr "TTL"
+
+msgid "Target domain or URL"
+msgstr "Цільовий домен чи URL"
+
+msgid "Task Monitor"
+msgstr "Монітор процесів"
+
+msgid ""
+"Task has been added to the queue. You will receive an email notification "
+"when your backup is ready for download."
+msgstr ""
+"Завдання додане в чергу. Ви отримаєте повідомлення на email, коли бекап буде "
+"готовий"
+
+msgid ""
+"Task has been added to the queue. You will receive an email notification "
+"when your restore has been completed."
+msgstr ""
+"Завдання було додане в чергу. Ви отримаєте сповіщення на email, коли "
+"відновлення буде завершено."
+
+msgid "Template"
+msgstr "Шаблон"
+
+msgid "The system is going down for reboot NOW!"
+msgstr "Зараз сервер буде перезавантажено!"
+
+msgid "Theme"
+msgstr "Зовнішній вигляд"
+
+msgid "There are currently no IP lists defined."
+msgstr "Не задано жодного списку IP."
+
+msgid "There are currently no banned IP addresses."
+msgstr "Наразі немає заблокованих IP-адрес."
+
+msgid "Thursday"
+msgstr "Четвер"
+
+msgid "Time"
+msgstr "Час"
+
+msgid "Time Zone"
+msgstr "Часовий пояс"
+
+msgid "Title"
+msgstr "Заголовок"
+
+msgid ""
+"To enable Let's Encrypt SSL, ensure that DNS records exist for mail.%s and "
+"%s!"
+msgstr ""
+"Щоб увімкнути Let's Encrypt SSL, переконайтеся, що існують записи DNS для "
+"mail.%s and %s!"
+
+msgid "Top"
+msgstr "Вгору"
+
+msgid "Triennially"
+msgstr "Що 3 роки"
+
+msgid "Tuesday"
+msgstr "Вівторок"
+
+msgid "Two-factor Authentication"
+msgstr "Двофакторна аутентифікація"
+
+msgid ""
+"Two-factor authentication is now turned off for your account.<br><br>You may "
+"now proceed to log in."
+msgstr "Двофакторну аутентифікацію вимкнено.<br><br>Ви можете увійти в Панель."
+
+msgid "Type"
+msgstr "Тип"
+
+msgid "Type directory name, one per line. To exlude all dirs use *"
+msgstr ""
+"Вкажіть ім'я папки по одному на рядок. Щоб виключити всі папки "
+"використовуйте *"
+
+msgid ""
+"Type domain name, one per line. To exclude all domains use *. To exclude "
+"specific accounts use following format: domain.tld:info:support:postmaster"
+msgstr ""
+"Вкажіть ім'я домену, по одному на рядок. Щоб виключити всі домени "
+"використовуйте * . Щоб конкретні акаунти, використовуйте формат: domain.tld:"
+"info:support:postmaster"
+
+msgid ""
+"Type domain name, one per line. To exclude all domains use *. To exclude "
+"specific dirs use following format: domain.tld:public_html/cache:public_html/"
+"tmp"
+msgstr ""
+"Вкажіть ім'я домену, по одному на рядок. Щоб виключити всі домени "
+"використовуйте *. Щоб виключити окремі каталоги використовуйте формат: "
+"domain.tld:public_html/cache:public_html/tmp"
+
+msgid "Type full database name, one per line. To exclude all databases use *"
+msgstr ""
+"Вкажіть повне ім'я БД, по одному на рядок. Щоб виключити всі БД "
+"використовуйте *"
+
+msgid "USER"
+msgstr "Користувач"
+
+msgid "Unable to add database!"
+msgstr "Неможливо додати БД!"
+
+msgid "Unable to add database! Limit reached!"
+msgstr "Неможливо додати БД! Ліміт вичерпано!"
+
+msgid "Unable to install %s, %s is not available."
+msgstr "Неможливо установити %s, %s недоступний."
+
+msgid "Unlimited"
+msgstr "Необмежено"
+
+msgid "Unlock Account"
+msgstr "Розблокувати акаунт"
+
+msgid "Unsave form"
+msgstr "Не зберігати форму"
+
+msgid "Unsupported hash method"
+msgstr "Непідтримуваний хеш-метод"
+
+msgid "Unsuspend"
+msgstr "Активувати"
+
+msgid "Unsuspend All"
+msgstr "Активувати Всі"
+
+msgid "Update Usage Counters"
+msgstr "Оновити показники використання"
+
+msgid "Update logo"
+msgstr "Оновити логотип"
+
+msgid "Updates"
+msgstr "Оновлення"
+
+msgid "Upload the files to %s"
+msgstr "Вивантаження файлів в %s"
+
+msgid "Uptime"
+msgstr "Uptime"
+
+msgid "Use IP address allow list for login attempts"
+msgstr "Список IP, яким дозволений вхід в Панель"
+
+msgid "Use Let's Encrypt to obtain SSL certificate"
+msgstr "Використовувати Let's Encrypt для отримання SSL сертифікату"
+
+msgid "Use local-part without domain name"
+msgstr "Використовувати локальну частину без імені домену"
+
+msgid "User"
+msgstr "Користувач"
+
+msgid "User Directory"
+msgstr "Каталог користувача"
+
+msgid "User {%s} has been created successfully. / {Log in as %s}"
+msgstr "Користувача {%s} створено успішно. / {Увійти як %s}"
+
+msgid "Username"
+msgstr "Акаунт"
+
+msgid "Users"
+msgstr "Юзери"
+
+msgid "Value"
+msgstr "Значення"
+
+msgid "Version"
+msgstr "Версія"
+
+msgid "View"
+msgstr "Вид"
+
+msgid "View Public DNSSEC Key"
+msgstr "Подивитися Public DNSSEC Key"
+
+msgid "Visit"
+msgstr "Відкрити"
+
+msgid "WEB"
+msgstr "WEB"
+
+msgid "Warning"
+msgstr "Увага"
+
+msgid "Warning! Last chance to save secret key!"
+msgstr "Увага! Остання можливість зберегти секретний ключ"
+
+msgid "Web"
+msgstr "Веб"
+
+msgid "Web Aliases"
+msgstr "Web аліаси"
+
+msgid "Web Domain"
+msgstr "Веб домен"
+
+msgid "Web Domains"
+msgstr "Web домени"
+
+msgid "Web Server"
+msgstr "Web сервер"
+
+msgid "Web Statistics"
+msgstr "Веб статистика"
+
+msgid "Web Template"
+msgstr "Шаблон Web"
+
+msgid "Webmail"
+msgstr "Webmail"
+
+msgid "Webmail Alias"
+msgstr "Аліас Веб Пошти"
+
+msgid "Webmail Client"
+msgstr "Вебклієнт пошти"
+
+msgid "Wednesday"
+msgstr "Середа"
+
+msgid "Weekdays (5 days)"
+msgstr "У будні (5 днів)"
+
+msgid "Weekend (2 days)"
+msgstr "На вихідних (2 дні)"
+
+msgid "Weekly"
+msgstr "Щотижневий"
+
+msgid "Welcome"
+msgstr "Ласкаво просимо"
+
+msgid "Welcome to %s"
+msgstr "Ласкаво просимо до %s"
+
+msgid "White Label"
+msgstr "White Label (кастомізація зовнішнього вигляду)"
+
+msgid "White Label Options"
+msgstr "Опції White Label"
+
+msgid "YYYY-MM-DD"
+msgstr "РРРР-ММ-ДД"
+
+msgid "Yearly"
+msgstr "Щорічний"
+
+msgid "Yes"
+msgstr "Так"
+
+msgid "You are logged out, please log in again."
+msgstr "Ви вийшли з панелі, будь ласка, зайдіть знову"
+
+msgid "Your password must have at least"
+msgstr "Ваш пароль обов'язково повинен містити"
+
+msgid ""
+"Your web folder already has files uploaded to it. The installer will "
+"overwrite your files and/or the installation might fail."
+msgstr ""
+"У вашій веб директорії вже є файли. Інсталятор перезапише файли та/або "
+"установка може завершитись невдало."
+
+msgid "Zones"
+msgstr "Зони"
+
+msgid "a database"
+msgstr "база даних"
+
+msgid "a dns domain"
+msgstr "dns домен"
+
+msgid "a mail domain"
+msgstr "поштовий домен"
+
+msgid "a web domain"
+msgstr "web домен"
+
+msgid "backend server"
+msgstr "бекенд-сервер"
+
+msgid "brute-force protection"
+msgstr "Захист від брутфорсу"
+
+msgid "database server"
+msgstr "БД сервер"
+
+msgid "dns server"
+msgstr "DNS сервер"
+
+msgid "email / hour"
+msgstr "листів/на годину"
+
+msgid "email / hour / account"
+msgstr "листів/на годину/акаунт"
+
+msgid "email anti-virus"
+msgstr "поштовий антивірус"
+
+msgid "email spam filter"
+msgstr "спам-фільтр"
+
+msgid "firewall"
+msgstr "файрвол"
+
+msgid "ftp server"
+msgstr "FTP сервер"
+
+msgid "imap/pop3 server"
+msgstr "imap/pop3 сервер"
+
+msgid "in MB"
+msgstr "в MB"
+
+msgid "job scheduler"
+msgstr "планувальник завдань"
+
+msgid "mail server"
+msgstr "поштовий сервер"
+
+msgid "one or more email addresses"
+msgstr "одна або кілька email-адрес"
+
+msgid "per account / hour"
+msgstr "на акаунт/год"
+
+msgid "per domain"
+msgstr "на домен"
+
+msgid "phpMyAdmin Alias"
+msgstr "phpMyAdmin аліас"
+
+msgid "phpMyAdmin Single Sign On"
+msgstr "phpMyAdmin SSO"
+
+msgid "phpPgAdmin Alias"
+msgstr "phpPgAdmin аліас"
+
+msgid "reverse proxy"
+msgstr "реверс-проксі"
+
+msgid "ssh server"
+msgstr "сервер ssh"
+
+msgid "url, script or file"
+msgstr "url, скрипт чи файл"
+
+msgid "web server"
+msgstr "веб-сервер"
+
+msgid "zstd only"
+msgstr "тільки zstd"

@@ -1,0 +1,590 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hestiacp\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-06 11:25\n"
+"Last-Translator: \n"
+"Language-Team: Azerbaijani\n"
+"Language: az_AZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: hestiacp\n"
+"X-Crowdin-Project-ID: 587405\n"
+"X-Crowdin-Language: az\n"
+"X-Crowdin-File: hestiacp.pot\n"
+"X-Crowdin-File-ID: 3\n"
+
+msgid "2FA Reset Code"
+msgstr "Hesabın bərpası koduHesab bərpa proqramı"
+
+msgid "2FA Token"
+msgstr "OTP PIN"
+
+msgid "Account"
+msgstr "Hesab"
+
+msgid "Accounts"
+msgstr "Hesablar"
+
+msgid "Action"
+msgstr "Fəaliyyət"
+
+msgid "Add Cron Job"
+msgstr "Cron əlavə et"
+
+msgid "Add DNS Domain"
+msgstr "DNS domeni əlavə edin"
+
+msgid "Add DNS Record"
+msgstr "DNS qeydləri əlavə edin"
+
+msgid "Add Database"
+msgstr "Verilənlər bazası əlavə edin"
+
+msgid "Add IP list"
+msgstr "IP siyahısını əlavə edin"
+
+msgid "Add Mail Account"
+msgstr "E-poçt hesabı əlavə edin"
+
+msgid "Add Mail Domain"
+msgstr "E-poçt domeni əlavə edin"
+
+msgid "Add Package"
+msgstr "Paket əlavə edin"
+
+msgid "Add Record"
+msgstr "Qeyd əlavə edin"
+
+msgid "Add Rule"
+msgstr "Qayda əlavə edin"
+
+msgid "Add SSH Key"
+msgstr "SSH düyməsini əlavə edin"
+
+msgid "Add User"
+msgstr "İstifadəçi əlavə edin"
+
+msgid "Add Web Domain"
+msgstr "Domen əlavə edin"
+
+msgid "Aliases"
+msgstr "Ləqəblər (Alias)"
+
+msgid "Aug"
+msgstr "Avq"
+
+msgid "BACKUP"
+msgstr "NÜSXƏ"
+
+msgid "BLACKLIST"
+msgstr "QARABAQ"
+
+msgid "Back"
+msgstr "Ləğv edin"
+
+msgid "Backend Pool Mode"
+msgstr "Backend pul rejimi"
+
+msgid "Backend Template"
+msgstr "Backend şablonu"
+
+msgid "Backups"
+msgstr "Nüsxələr"
+
+msgid "Ban IP Address"
+msgstr "IP ünvanını ban edin"
+
+msgid "Bandwidth"
+msgstr "Traffik"
+
+msgid "Banlist"
+msgstr "Ban siyahısı"
+
+msgid "Charset"
+msgstr "Kodlaşdırma"
+
+msgid "City / Locality"
+msgstr "Şəhər / Yerləşmə"
+
+msgid "Command"
+msgstr "Əmr"
+
+msgid "Comment"
+msgstr "Rəy"
+
+msgid "Configure"
+msgstr "Konfiqurasiya"
+
+msgid "Confirm"
+msgstr "Təstiqlə"
+
+msgid "Confirm Password"
+msgstr "Şifrəni təstiqlə"
+
+msgid "Country"
+msgstr "Ölkə"
+
+msgid "Create Backup"
+msgstr "Nüsxə yarat"
+
+msgid "Cron Jobs"
+msgstr "Cron-lar"
+
+msgid "DKIM Support"
+msgstr "DKIM dəstəyi"
+
+msgid "DNS Server"
+msgstr "DNS server"
+
+msgid "DNS Support"
+msgstr "DNS dəstəyi"
+
+msgid "DNS Template"
+msgstr "DNS şablonu"
+
+msgid "Daily"
+msgstr "Günlük"
+
+msgid "Data Source"
+msgstr "Verilənlər mənbəyi"
+
+msgid "Database"
+msgstr "Verilənlər bazası"
+
+msgid "Databases"
+msgstr "Verilənlər bazası"
+
+msgid "Date"
+msgstr "Tarix"
+
+msgid "Day"
+msgstr "Gün"
+
+msgid "Dec"
+msgstr "Dek"
+
+msgid "Default Language"
+msgstr "Default dil"
+
+msgid "Default Name Servers"
+msgstr "Default neymserver"
+
+msgid "Delete"
+msgstr "Sil"
+
+msgid "Description"
+msgstr "Təsvir"
+
+msgid "Directory"
+msgstr "Kataloq"
+
+msgid "Do not store forwarded mail"
+msgstr "Göndərilən poçtu saxlamayın"
+
+msgid "Domain"
+msgstr "Domen"
+
+msgid "Domains"
+msgstr "Domenlər"
+
+msgid "Email"
+msgstr "E-poçt"
+
+msgid "Enter focused element"
+msgstr "Fokuslanmış elementi gör"
+
+msgid "Expiration Date"
+msgstr "Bitmə tarixi"
+
+msgid "Expire"
+msgstr "Sona çatdırın"
+
+msgid "Feb"
+msgstr "Fev"
+
+msgid "Field \"%s\" can not be blank."
+msgstr "\"%s\" sahəni boş saxlaya bilməzsiniz."
+
+msgid "File Name"
+msgstr "Fayl adı"
+
+msgid "Focus on search"
+msgstr "Axtarışa fokuslan"
+
+msgid "Forgot Password"
+msgstr "Şifrəni unutmusunuz"
+
+msgid "Forward to"
+msgstr "Buraya yönləndir"
+
+msgid "Forwarding"
+msgstr "İstiqamətləndirmə"
+
+msgid "Friday"
+msgstr "Cümə"
+
+msgid "Go to BACKUP list"
+msgstr "Nüsxə siyahısına get"
+
+msgid "Go to CRON list"
+msgstr "CRON siyahısına get"
+
+msgid "Go to DB list"
+msgstr "DB siyahısına get"
+
+msgid "Go to DNS list"
+msgstr "DNS siyahısına get"
+
+msgid "Go to MAIL list"
+msgstr "MAIL siyahısına get"
+
+msgid "Go to WEB list"
+msgstr "Veb siyahısına get"
+
+msgid "Host"
+msgstr "Ev sahibi"
+
+msgid "Hour"
+msgstr "Saat"
+
+msgid "Hourly"
+msgstr "Saatlıq"
+
+msgid "IP Address"
+msgstr "IP ünvan"
+
+msgid "IP or Value"
+msgstr "IP və ya qiymət"
+
+msgid "Interface"
+msgstr "İnterfeys"
+
+msgid "Invalid username or code"
+msgstr "Doğru olmayan istifadəçi adı və ya kod"
+
+msgid "Invalid username or password"
+msgstr "Doğru olmayan istifadəçi adı və ya şifrə"
+
+msgid "Jan"
+msgstr "Yan"
+
+msgid "Jul"
+msgstr "İyl"
+
+msgid "Jun"
+msgstr "İyn"
+
+msgid "Language"
+msgstr "Dil"
+
+msgid "Last 70 lines of %s.%s.log"
+msgstr "%s.%s.log faylının son 70 sətri"
+
+msgid "Load Average"
+msgstr "Sistem yükü"
+
+msgid "Log in"
+msgstr "Hesab yarat"
+
+msgid "Log out"
+msgstr "Çıxış"
+
+msgid "MAIL"
+msgstr "Poçt"
+
+msgid "Mail"
+msgstr "E-poçt"
+
+msgid "Mail Accounts"
+msgstr "E-poçt hesabları"
+
+msgid "Mail Domains"
+msgstr "E-poçt domenləri"
+
+msgid "Mail Server"
+msgstr "e-poçt serveri"
+
+msgid "Mail Support"
+msgstr "E-poçt dəstəyi"
+
+msgid "Memory"
+msgstr "Yaddaş"
+
+msgid "Message"
+msgstr "Mesaj"
+
+msgid "Minute"
+msgstr "Dəqiqə"
+
+msgid "Minutes"
+msgstr "Dəqiqəlik"
+
+msgid "Monday"
+msgstr "Bazar ertəsi"
+
+msgid "Month"
+msgstr "Ay"
+
+msgid "Monthly"
+msgstr "Aylıq"
+
+msgid "Move backward through top menu"
+msgstr "Üst menyu arasında geriyə get"
+
+msgid "Move down through elements list"
+msgstr "Elementlər siyahısına keçin"
+
+msgid "Move forward through top menu"
+msgstr "Üst menyu arasında iləriyə get"
+
+msgid "Move up through elements list"
+msgstr "Elementlər siyahısına keçin"
+
+msgid "MySQL Support"
+msgstr "MySQL dəstək"
+
+msgid "Name"
+msgstr "Adı"
+
+msgid "New Password"
+msgstr "Yeni şifrə"
+
+msgid "No encryption"
+msgstr "Şifrələnməsiz"
+
+msgid "Normal password"
+msgstr "Normal şifrə"
+
+msgid "Notifications"
+msgstr "Bildirişlər"
+
+msgid "Nov"
+msgstr "Noy"
+
+msgid "Oct"
+msgstr "Okt"
+
+msgid "Operating System"
+msgstr "Əməliyyat sistemi"
+
+msgid "Organization"
+msgstr "Orqanizasiya"
+
+msgid "Overall Statistics"
+msgstr "Bütün statistikalar"
+
+msgid "Owner"
+msgstr "Sahib"
+
+msgid "PHP CLI Version"
+msgstr "PHP CLI versiyası"
+
+msgid "Package"
+msgstr "Paket"
+
+msgid "Package Name"
+msgstr "Paket adı"
+
+msgid "Packages"
+msgstr "Paketlər"
+
+msgid "Password"
+msgstr "Şifrə"
+
+msgid "PostgreSQL Support"
+msgstr "PostgreSQL dəstəyi"
+
+msgid "Priority"
+msgstr "Prioritet"
+
+msgid "Protocol"
+msgstr "Protokol"
+
+msgid "Proxy Extensions"
+msgstr "Proxy əlavələri"
+
+msgid "Proxy Server"
+msgstr "Proxy server"
+
+msgid "Proxy Support"
+msgstr "Proxy dəstəyi"
+
+msgid "Proxy Template"
+msgstr "Proxy şablonu"
+
+msgid "Quick Install App"
+msgstr "Tez Quraşdırma Tətbiqi"
+
+msgid "Quota"
+msgstr "Norma"
+
+msgid "Record"
+msgstr "Qeydiyyat"
+
+msgid "Records"
+msgstr "Qeydlər"
+
+msgid "Refresh"
+msgstr "təzələmək"
+
+msgid "Release"
+msgstr "Buraxın"
+
+msgid "Reset"
+msgstr "Sıfırla"
+
+msgid "Reset Code"
+msgstr "Sıfırlama Kodu"
+
+msgid "Restart"
+msgstr "Yenidən başlamaq"
+
+msgid "Restore All"
+msgstr "Hamısını bərpa edin"
+
+msgid "Run Command"
+msgstr "Əmri aktivləşdir"
+
+msgid "Runtime"
+msgstr "İş vaxtı"
+
+msgid "SSH Access"
+msgstr "SSH giriş"
+
+msgid "SSL Certificate"
+msgstr "SSL sertifikatı"
+
+msgid "SSL Certificate Authority / Intermediate"
+msgstr "SSL sertifikat eyniləşdirməsi / köməkçi)"
+
+msgid "Saturday"
+msgstr "Şənbə"
+
+msgid "Save"
+msgstr "Yadda saxla"
+
+msgid "Search Results"
+msgstr "Axtarış nəticələri"
+
+msgid "Send FTP credentials to email"
+msgstr "FTP məlumatlarını e-poçt ile göndər"
+
+msgid "Sep"
+msgstr "Sent"
+
+msgid "Service"
+msgstr "Xidmət"
+
+msgid "Setup"
+msgstr "Qurmaq"
+
+msgid "Shared"
+msgstr "Paylaşılan"
+
+msgid "Shortcuts"
+msgstr "Qısayollar"
+
+msgid "Size"
+msgstr "Ölçüsü"
+
+msgid "State / Province"
+msgstr "Dövlət / Əyalət"
+
+msgid "Statistics"
+msgstr "Statistikalar"
+
+msgid "Statistics Authorization"
+msgstr "Statistikanın avtorizasiyası"
+
+msgid "Submit"
+msgstr "Göndər"
+
+msgid "Sunday"
+msgstr "Bazar"
+
+msgid "Template"
+msgstr "Şablon"
+
+msgid "Theme"
+msgstr "Görünüş"
+
+msgid "There are currently no IP lists defined."
+msgstr "Hal-hazırda müəyyən edilmiş IP siyahıları yoxdur."
+
+msgid "Thursday"
+msgstr "Cümə axşamı"
+
+msgid "Time"
+msgstr "Vaxt"
+
+msgid "Time Zone"
+msgstr "Vaxt qurşağı"
+
+msgid "Tuesday"
+msgstr "Çərşənbə axşamı"
+
+msgid "Type"
+msgstr "Tip"
+
+msgid "USER"
+msgstr "İstifadəsi"
+
+msgid "Updates"
+msgstr "Yeniləmələr"
+
+msgid "User"
+msgstr "İstifadəçi"
+
+msgid "Username"
+msgstr "İstifadəçi adı"
+
+msgid "Value"
+msgstr "Dəyər"
+
+msgid "Version"
+msgstr "Versiya"
+
+msgid "WEB"
+msgstr "Veb"
+
+msgid "Web"
+msgstr "Veb"
+
+msgid "Web Aliases"
+msgstr "Veb aliasları"
+
+msgid "Web Domains"
+msgstr "Veb domenləri"
+
+msgid "Web Server"
+msgstr "Veb server"
+
+msgid "Web Statistics"
+msgstr "Veb statistikaları"
+
+msgid "Web Template"
+msgstr "Veb Şablonu"
+
+msgid "Wednesday"
+msgstr "Çərşənbə"
+
+msgid "Weekly"
+msgstr "Həftəlik"
+
+msgid "Welcome"
+msgstr "XOŞ GƏLDİNİZ"
+
+msgid "YYYY-MM-DD"
+msgstr "YYYY-AA-GG"
+
+msgid "Yearly"
+msgstr "İllik"
+
+msgid "one or more email addresses"
+msgstr "bir və ya daha çox e-poçt ünvanı"
+
+msgid "per domain"
+msgstr "domen başına"

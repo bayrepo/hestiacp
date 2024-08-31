@@ -6,7 +6,7 @@
 %global _prefix /usr/local/hestia/nginx
 
 Name:           hestia-nginx
-Version:        1.25.1
+Version:        1.27.1
 Release:        1%{dist}
 Summary:        Hestia internal nginx web server
 Group:          System Environment/Base

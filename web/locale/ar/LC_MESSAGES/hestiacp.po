@@ -1,0 +1,2441 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hestiacp\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-18 14:20\n"
+"Last-Translator: \n"
+"Language-Team: Arabic\n"
+"Language: ar_SA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Crowdin-Project: hestiacp\n"
+"X-Crowdin-Project-ID: 587405\n"
+"X-Crowdin-Language: ar\n"
+"X-Crowdin-File: hestiacp.pot\n"
+"X-Crowdin-File-ID: 3\n"
+
+msgid "%d DNS record"
+msgid_plural "%d DNS records"
+msgstr[0] "%d سجل نظام أسماء النطاقات"
+msgstr[1] "%d سجل نظام أسماء النطاقات"
+msgstr[2] "%d سجل نظام أسماء النطاقات"
+msgstr[3] "%d سجل نظام أسماء النطاقات"
+msgstr[4] "%d سجل نظام أسماء النطاقات"
+msgstr[5] "%d سجل نظام أسماء النطاقات"
+
+msgid "%d DNS zone"
+msgid_plural "%d DNS zones"
+msgstr[0] "%d منطقة نظام أسماء النطاقات"
+msgstr[1] "%d منطقة نظام أسماء النطاقات"
+msgstr[2] "%d منطقة نظام أسماء النطاقات"
+msgstr[3] "%d منطقة نظام أسماء النطاقات"
+msgstr[4] "%d منطقة نظام أسماء النطاقات"
+msgstr[5] "%d منطقة نظام أسماء النطاقات"
+
+msgid "%d IP address"
+msgid_plural "%d IP addresses"
+msgstr[0] "%d عنوان بروتوكول الإنترنت"
+msgstr[1] "%d عنوان بروتوكول الإنترنت"
+msgstr[2] "%d عنوان بروتوكول الإنترنت"
+msgstr[3] "%d عنوان بروتوكول الإنترنت"
+msgstr[4] "%d عنوان بروتوكول الإنترنت"
+msgstr[5] "%d عنوان بروتوكول الإنترنت"
+
+msgid "%d IP list"
+msgid_plural "%d IP lists"
+msgstr[0] "%d قائمة بروتوكولات الإنترنت"
+msgstr[1] "قائمة بروتوكولات الإنترنت"
+msgstr[2] "قائمتا بروتوكولات الإنترنت"
+msgstr[3] "%d قوائم بروتوكولات الإنترنت"
+msgstr[4] "%d قائمة بروتوكولات الإنترنت"
+msgstr[5] "%d قائمة بروتوكولات الإنترنت"
+
+msgid "%d SSH key"
+msgid_plural "%d SSH keys"
+msgstr[0] "%d مفتاح بروتوكول النقل الآمن"
+msgstr[1] "%d مفتاح بروتوكول النقل الآمن"
+msgstr[2] "%d مفتاح بروتوكول النقل الآمن"
+msgstr[3] "%d مفاتيح بروتوكول النقل الآمن"
+msgstr[4] "%d مفتاح بروتوكول النقل الآمن"
+msgstr[5] "%d مفتاح بروتوكول النقل الآمن"
+
+msgid "%d access key"
+msgid_plural "%d access keys"
+msgstr[0] "%d مفتاح الوصول"
+msgstr[1] "%d مفتاح الوصول"
+msgstr[2] "%d مفتاح الوصول"
+msgstr[3] "%d مفتاح الوصول"
+msgstr[4] "%d مفتاح الوصول"
+msgstr[5] "%d مفتاح الوصول"
+
+msgid "%d backup"
+msgid_plural "%d backups"
+msgstr[0] "%d نسخ احتياطية"
+msgstr[1] "%d نسخة احتياطية"
+msgstr[2] "%d نسخة احتياطية"
+msgstr[3] "%d نسخ احتياطية"
+msgstr[4] "%d نسخة احتياطية"
+msgstr[5] "%d نسخة احتياطية"
+
+msgid "%d banned IP address"
+msgid_plural "%d banned IP addresses"
+msgstr[0] "%d عنوان IP المحظور"
+msgstr[1] "%d عنوان IP المحظور"
+msgstr[2] "%d عنوان IP المحظور"
+msgstr[3] "%d عنوان IP المحظور"
+msgstr[4] "%d عنوان IP المحظور"
+msgstr[5] "%d عنوان IP المحظور"
+
+msgid "%d cron job"
+msgid_plural "%d cron jobs"
+msgstr[0] "%d وظيفة كرون"
+msgstr[1] "%d وظيفة كرون"
+msgstr[2] "%d وظيفة كرون"
+msgstr[3] "%d وظائف كرون"
+msgstr[4] "%d وظائف كرون"
+msgstr[5] "%d وظائف كرون"
+
+msgid "%d database"
+msgid_plural "%d databases"
+msgstr[0] "%d قاعدة بيانات"
+msgstr[1] "%d قاعدة بيانات"
+msgstr[2] "%d قاعدة بيانات"
+msgstr[3] "%d قواعد بيانات"
+msgstr[4] "%d قاعدة بيانات"
+msgstr[5] "%d قاعدة بيانات"
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d يوم"
+msgstr[1] "%d يوم"
+msgstr[2] "%d يوم"
+msgstr[3] "%d يوم"
+msgstr[4] "%d يوم"
+msgstr[5] "%d يوم"
+
+msgid "%d firewall rule"
+msgid_plural "%d firewall rules"
+msgstr[0] "%d  قاعدة جدار الحماية"
+msgstr[1] "%d  قاعدة جدار الحماية"
+msgstr[2] "%d  قاعدة جدار الحماية"
+msgstr[3] "%d  قاعدة جدار الحماية"
+msgstr[4] "%d  قاعدة جدار الحماية"
+msgstr[5] "%d  قاعدة جدار الحماية"
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d ساعة"
+msgstr[1] "%d ساعة"
+msgstr[2] "%d ساعة"
+msgstr[3] "%d ساعة"
+msgstr[4] "%d ساعة"
+msgstr[5] "%d ساعة"
+
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d عنصر"
+msgstr[1] "%d عنصر"
+msgstr[2] "%d عنصر"
+msgstr[3] "%d عناصر"
+msgstr[4] "%d عنصر"
+msgstr[5] "%d عنصر"
+
+msgid "%d log record"
+msgid_plural "%d log records"
+msgstr[0] "%d سجل السجل"
+msgstr[1] "%d سجل السجل"
+msgstr[2] "%d سجل السجل"
+msgstr[3] "%d سجل السجل"
+msgstr[4] "%d سجل السجل"
+msgstr[5] "%d سجل السجل"
+
+msgid "%d mail account"
+msgid_plural "%d mail accounts"
+msgstr[0] "%d حساب البريد"
+msgstr[1] "%d حساب البريد"
+msgstr[2] "%d حساب البريد"
+msgstr[3] "%d حساب البريد"
+msgstr[4] "%d حساب البريد"
+msgstr[5] "%d حساب البريد"
+
+msgid "%d mail domain"
+msgid_plural "%d mail domains"
+msgstr[0] "%d مجال البريد"
+msgstr[1] "%d مجال البريد"
+msgstr[2] "%d مجال البريد"
+msgstr[3] "%d مجال البريد"
+msgstr[4] "%d مجال البريد"
+msgstr[5] "%d مجال البريد"
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d دقيقة"
+msgstr[1] "%d دقيقة"
+msgstr[2] "%d دقيقة"
+msgstr[3] "%d دقائق"
+msgstr[4] "%d دقيقة"
+msgstr[5] "%d دقيقة"
+
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d شهر"
+msgstr[1] "%d شهر"
+msgstr[2] "%d شهر"
+msgstr[3] "%d شهر"
+msgstr[4] "%d شهر"
+msgstr[5] "%d شهر"
+
+msgid "%d object"
+msgid_plural "%d objects"
+msgstr[0] "%d كائن"
+msgstr[1] "%d كائن"
+msgstr[2] "%d كائن"
+msgstr[3] "%d كائن"
+msgstr[4] "%d كائن"
+msgstr[5] "%d كائن"
+
+msgid "%d package"
+msgid_plural "%d packages"
+msgstr[0] "%d حزمة"
+msgstr[1] "%d حزمة"
+msgstr[2] "%d حزمة"
+msgstr[3] "%d حزمة"
+msgstr[4] "%d حزمة"
+msgstr[5] "%d حزمة"
+
+msgid "%d user account"
+msgid_plural "%d user accounts"
+msgstr[0] "%d حساب"
+msgstr[1] "%d حساب"
+msgstr[2] "%d حساب"
+msgstr[3] "%d حسابات"
+msgstr[4] "%d حساب"
+msgstr[5] "%d حساب"
+
+msgid "%d web domain"
+msgid_plural "%d web domains"
+msgstr[0] "%d نطاق ويب"
+msgstr[1] "%d نطاق ويب"
+msgstr[2] "%d نطاق ويب"
+msgstr[3] "%d نطاق ويب"
+msgstr[4] "%d نطاق ويب"
+msgstr[5] "%d نطاق ويب"
+
+msgid "%s installed successfully."
+msgstr "%s تم التثبيت بنجاح."
+
+msgid "%s installer missing."
+msgstr "%s المثبت مفقود."
+
+msgid "1 number"
+msgstr "رقم 1"
+
+msgid "1 uppercase & 1 lowercase character"
+msgstr "حرف 1 كبير و حرف 1 صغير"
+
+msgid "2FA QR Code"
+msgstr "2FA رمز الاستجابة السريعة"
+
+msgid "2FA Reset Code"
+msgstr "رمز استعادة الحساب"
+
+msgid "2FA Token"
+msgstr "رمز المصادقة الثنائية (2FA)"
+
+msgid "8 characters long"
+msgstr "الطول 8 أحرف"
+
+msgid "ACCEPT"
+msgstr "موافق"
+
+msgid "API"
+msgstr "واجهة برمجة التطبيقات"
+
+msgid "Access Key"
+msgstr "مفتاح الوصول"
+
+msgid "Access Key ID"
+msgstr "معرف مفتاح الوصول"
+
+msgid "Access Keys"
+msgstr "مفاتيح الوصول"
+
+msgid "Access Log"
+msgstr "سجل الوصول"
+
+msgid "Access key {%s} has been created successfully."
+msgstr "تم إنشاء مفتاح الوصول {%s} بنجاح."
+
+msgid "Account"
+msgstr "حساب"
+
+msgid "Account Recovery Code"
+msgstr "رمز استرداد الحساب"
+
+msgid "Account Unlocked"
+msgstr "الحساب مفتوح"
+
+msgid "Account has been suspended"
+msgstr "تم تعليق الحساب"
+
+msgid "Accounts"
+msgstr "حسابات"
+
+msgid "Action"
+msgstr "إجراء"
+
+msgid "Add Access Key"
+msgstr "إضافة مفتاح وصول"
+
+msgid "Add Cron Job"
+msgstr "إضافة وظيفة مجدولة"
+
+msgid "Add DNS Domain"
+msgstr "تسجيل نطاق في DNS"
+
+msgid "Add DNS Record"
+msgstr "إضافة سجل DNS"
+
+msgid "Add DNS Zone"
+msgstr "إضافة منطقة DNS"
+
+msgid "Add Database"
+msgstr "إضافة قاعدة بيانات"
+
+msgid "Add FTP account"
+msgstr "إضافة حساب بروتوكول نقل الملفات FTP"
+
+msgid "Add Firewall Rule"
+msgstr "إضافة قاعدة جدار الحماية"
+
+msgid "Add IP Address"
+msgstr "إضافة عنوان بروتوكول الإنترنت IP"
+
+msgid "Add IP Address to Banlist"
+msgstr "إضافة عنوان IP إلى قائمة الحظر"
+
+msgid "Add IP list"
+msgstr "أضف قائمة IP"
+
+msgid "Add IPset IP List for Firewall"
+msgstr "إضافة قائمة بروتوكولات الإنترنت IPset لجدار الحماية"
+
+msgid "Add Mail Account"
+msgstr "إضافة حساب بريدي"
+
+msgid "Add Mail Domain"
+msgstr "إضافة نطاق للبريد"
+
+msgid "Add Name Server"
+msgstr "إضافة اسم الخادم"
+
+msgid "Add Package"
+msgstr "إضافة حزمة"
+
+msgid "Add Record"
+msgstr "قم بإضافة سجل"
+
+msgid "Add Rule"
+msgstr "إضافة قاعدة"
+
+msgid "Add SSH Key"
+msgstr "تمت إضافة مفتاح SSH"
+
+msgid "Add User"
+msgstr "إضافة مستخدم"
+
+msgid "Add Web Domain"
+msgstr "إضافة نطاق"
+
+msgid "Add new object"
+msgstr "إضافة كائن جديد"
+
+msgid "Additional FTP account(s)"
+msgstr "حساب بروتوكول نقل الملفات FTP إضافية"
+
+msgid "Administrator"
+msgstr "المسؤول"
+
+msgid "Advanced Details"
+msgstr "تفاصيل متقدمة"
+
+msgid "Advanced Options"
+msgstr "الخيارات المتقدمة"
+
+msgid "Algorithm"
+msgstr "الخوارزمية"
+
+msgid "Aliases"
+msgstr "الأسماء البديلة (تعمل عمل الاسم الرئيسي)"
+
+msgid "All ports: 0, Range: 80-82, List: 80,443,8080,8443"
+msgstr "جميع المنافذ: 0 أومدى: 80-82 أوقائمة: 80,443,8080,8443"
+
+msgid "Allow suspended users to create new backups"
+msgstr "السماح للمستخدمين المعلقين بإنشاء نسخ احتياطية جديدة"
+
+msgid "Allow suspended users to log in with read-only access"
+msgstr ""
+"السماح للمستخدمين المعلقين بتسجيل الدخول باستخدام حق الوصول للقراءة فقط"
+
+msgid "Allow users to change templates when editing DNS zones"
+msgstr "السماح للمستخدمين بتغيير القوالب عند تعديل مناطق نظام أسماء النطاقات"
+
+msgid "Allow users to change templates when editing web domains"
+msgstr "السماح للمستخدمين بتغيير القوالب عند تعديل نطاقات الويب"
+
+msgid "Allow users to delete log history"
+msgstr "السماح للمستخدمين بحذف سجل السجلات القديمة"
+
+msgid "Allow users to edit their account details"
+msgstr "السماح للمستخدمين بتعديل تفاصيل حساباتهم"
+
+msgid "Allow users to reset their passwords"
+msgstr "السماح للمستخدمين بإعادة ضبط كلمات المرور الخاصة بهم"
+
+msgid "Allow users to view action and login history logs"
+msgstr "السماح للمستخدمين بعرض سجلات سجل الإجراءات وتسجيل الدخول"
+
+msgid "Allowed IP addresses for API"
+msgstr "عناوين بروتوكول الإنترنت IP المسموح بها لواجهة برمجة التطبيقات API"
+
+msgid "Alternate"
+msgstr "البديل"
+
+msgid ""
+"An existing backup task is already running, please wait for it to complete."
+msgstr ""
+"مهمة النسخ الاحتياطي الحالية قيد التشغيل بالفعل ، يرجى الانتظار حتى تكتمل."
+
+msgid ""
+"An existing restoration task is already running. Please wait for it to "
+"finish before launching it again."
+msgstr ""
+"مهمة استعادة البيانات قيد التشغيل. يرجى الانتظار حتى ينتهي قبل إطلاق مهمة "
+"استعادة مرة أخرى."
+
+msgid "An internal error occurred"
+msgstr "حدث خطأ داخلي"
+
+msgid "Anti-Virus"
+msgstr "مكافحة الفيروسات"
+
+msgid "Application Name"
+msgstr "اسم التطبيق"
+
+msgid "Apply to selected"
+msgstr "تنطبق على محدد"
+
+msgid "Apr"
+msgstr "نيسان"
+
+msgid "Are you sure you want to delete %s?"
+msgstr "هل أنت متأكد من أنك تريد حذف %s؟"
+
+msgid "Are you sure you want to delete IP address %s?"
+msgstr "هل أنت متأكد من أنك تريد حذف عنوان IP %s؟"
+
+msgid "Are you sure you want to delete IP list %s?"
+msgstr "هل أنت متأكد من أنك تريد حذف قائمة IP %s؟"
+
+msgid "Are you sure you want to delete SSH key %s?"
+msgstr "هل أنت متأكد من أنك تريد حذف مفتاح بروتوكول النقل الآمن SSH %s؟"
+
+msgid "Are you sure you want to delete access key %s?"
+msgstr "هل أنت متأكد من أنك تريد حذف مفتاح الوصول %s ؟"
+
+msgid "Are you sure you want to delete backup %s?"
+msgstr "هل أنت متأكد من أنك تريد حذف النسخة الاحتياطية%s ؟"
+
+msgid "Are you sure you want to delete database %s?"
+msgstr "هل أنت متأكد من أنك تريد حذف قاعدة البيانات %s ؟"
+
+msgid "Are you sure you want to delete domain %s?"
+msgstr "هل أنت متأكد من أنك تريد حذف النطاق %s؟"
+
+msgid "Are you sure you want to delete package %s?"
+msgstr "هل أنت متأكد من أنك تريد حذف الحزمة %s ؟"
+
+msgid "Are you sure you want to delete record %s?"
+msgstr "هل أنت متأكد من أنك تريد حذف السجل %s؟"
+
+msgid "Are you sure you want to delete rule %s"
+msgstr "هل أنت متأكد من أنك تريد حذف القاعدة %s"
+
+msgid "Are you sure you want to delete the logs?"
+msgstr "هل أنت متأكد من أنك تريد حذف السجلات؟"
+
+msgid "Are you sure you want to delete this cron job?"
+msgstr "هل أنت متأكد من أنك تريد حذف وظيفة cron هذه؟"
+
+msgid "Are you sure you want to delete user %s?"
+msgstr "هل أنت متأكد من أنك تريد حذف المستخدم %s؟"
+
+msgid "Are you sure you want to leave the page?"
+msgstr "هل أنت متأكد أنك تريد مغادرة الصفحة؟"
+
+msgid "Are you sure you want to restart %s?"
+msgstr "هل أنت متأكد من أنك تريد إعادة تشغيل %s؟"
+
+msgid "Are you sure you want to start service %s?"
+msgstr "هل أنت متأكد من أنك تريد بدء الخدمة %s؟"
+
+msgid "Are you sure you want to stop service %s?"
+msgstr "هل أنت متأكد من أنك تريد إيقاف الخدمة %s ؟"
+
+msgid "Are you sure you want to suspend %s?"
+msgstr "هل أنت متأكد من أنك تريد تعليق %s؟"
+
+msgid "Are you sure you want to suspend database %s?"
+msgstr "هل أنت متأكد من أنك تريد تعليق قاعدة البيانات %s ؟"
+
+msgid "Are you sure you want to suspend domain %s?"
+msgstr "هل أنت متأكد من رغبتك في تعليق المجال %s ؟"
+
+msgid "Are you sure you want to suspend rule #%s?"
+msgstr "هل أنت متأكد من أنك تريد تعليق قاعدة الجدار الناري #%s ؟"
+
+msgid "Are you sure you want to suspend this cron job?"
+msgstr "هل أنت متأكد من أنك تريد تعليق وظيفة كرون هذه؟"
+
+msgid "Are you sure you want to suspend user %s?"
+msgstr "هل أنت متأكد من أنك تريد تعليق المستخدم %s ؟"
+
+msgid "Are you sure you want to unsuspend %s?"
+msgstr "هل أنت متأكد من أنك تريد إلغاء تعليق %s؟"
+
+msgid "Are you sure you want to unsuspend database %s?"
+msgstr "هل أنت متأكد من أنك تريد إلغاء تعليق قاعدة البيانات %s ؟"
+
+msgid "Are you sure you want to unsuspend domain %s?"
+msgstr "هل أنت متأكد من أنك تريد إلغاء تعليق المجال %s؟"
+
+msgid "Are you sure you want to unsuspend rule #%s?"
+msgstr "هل أنت متأكد من أنك تريد إلغاء تعليق قاعدة الجدار الناري  #%s ؟"
+
+msgid "Are you sure you want to unsuspend this cron job?"
+msgstr "هل أنت متأكد من أنك تريد إلغاء تعليق وظيفة cron هذه؟"
+
+msgid "Are you sure you want to unsuspend user %s?"
+msgstr "هل أنت متأكد من أنك تريد إلغاء تعليق %s للمستخدم؟"
+
+msgid "Assigned Domain"
+msgstr "المجال المخصص"
+
+msgid "Assigned User"
+msgstr "المستخدم المعين"
+
+msgid "Aug"
+msgstr "آب"
+
+msgid "Authentication"
+msgstr "المصادقه"
+
+msgid "Auto Reply"
+msgstr "الرد التلقائي"
+
+msgid "Auto Update"
+msgstr "التحديث التلقائي"
+
+msgid "BACKUP"
+msgstr "النسخ الإحتياطية"
+
+msgid "BLACKLIST"
+msgstr "القائمة السوداء"
+
+msgid "Back"
+msgstr "رجوع"
+
+msgid "Backend Pool Mode"
+msgstr "نمط المخدم النهائي"
+
+msgid "Backend Server"
+msgstr "المخدم النهائي"
+
+msgid "Backend Template"
+msgstr "Backend نموذج"
+
+msgid "Backup Details"
+msgstr "تفاصيل النسخ الاحتياطي"
+
+msgid "Backup Exclusions"
+msgstr "استثناءات النسخ الاحتياطي"
+
+msgid "Backups"
+msgstr "نسخ احتياطية"
+
+msgid "Ban IP Address"
+msgstr "العناوين المحجوبة"
+
+msgid "Bandwidth"
+msgstr "تبادل البيانات"
+
+msgid "Banlist"
+msgstr "قائمة الحجب"
+
+msgid "Banned IP Addresses"
+msgstr "عناوين IP المحظورة"
+
+msgid "Basic Options"
+msgstr "الخيارات الأساسية"
+
+msgid "Biennially"
+msgstr "كل سنتين"
+
+msgid "Block Malicious IPs"
+msgstr "حظر عناوين بروتوكولات الإنترنت IP الضارة"
+
+msgid "Browser"
+msgstr "المستعرض"
+
+msgid "CPU"
+msgstr "المعالج"
+
+msgid "CRON"
+msgstr "مجدول الوظائف"
+
+msgid "Cache Duration"
+msgstr "مدة ذاكرة التخزين المؤقت"
+
+msgid "Catch-All Email"
+msgstr "البريد الإلكتروني الشامل"
+
+msgid "Category"
+msgstr "فئة"
+
+msgid "Certificate has been generated successfully."
+msgstr "تم إنشاء الشهادة بنجاح."
+
+msgid "Changes have been saved."
+msgstr "تم حفظ التغييرات."
+
+msgid "Charset"
+msgstr "تنسيق النص"
+
+msgid "City"
+msgstr "المدينة"
+
+msgid "City / Locality"
+msgstr "المدينة / المنطقة"
+
+msgid "Clear"
+msgstr "مسح"
+
+msgid "Close debug panel"
+msgstr "إغلاق لوحة التصحيح"
+
+msgid "Close menu"
+msgstr "إغلاق القائمة"
+
+msgid "Code has been expired"
+msgstr "انتهت صلاحية الرمز"
+
+msgid "Collapse main menu"
+msgstr "طي القائمة الرئيسية"
+
+msgid "Command"
+msgstr "أمر"
+
+msgid "Comment"
+msgstr "تعليق"
+
+msgid "Common Account Settings"
+msgstr "إعدادات الحساب الشائعة"
+
+msgid "Compression"
+msgstr "الضغط "
+
+msgid "Compression Level"
+msgstr "مستوى الضغط"
+
+msgid "Configure"
+msgstr "إعداد"
+
+msgid "Configure Server"
+msgstr "تكوين الخادم"
+
+msgid "Confirm"
+msgstr "تأكيد"
+
+msgid "Confirm Password"
+msgstr "تأكيد كلمة المرور"
+
+msgid "Contact Name"
+msgstr "اسم جهة الاتصال"
+
+msgid "Continue"
+msgstr "استمر"
+
+msgid "Country"
+msgstr "البلد"
+
+msgid "Create Backup"
+msgstr "إنشاء نسخة احتياطية"
+
+msgid "Cron Jobs"
+msgstr "الوظائق المجدولة"
+
+msgid "Cron job email reporting has been successfully disabled."
+msgstr "تم تعطيل إعداد جدولة تقارير البريد الإلكتروني بنجاح."
+
+msgid "Cron job email reporting has been successfully enabled."
+msgstr "تم تمكين إعداد جدولة تقارير البريد الإلكتروني بنجاح."
+
+msgid "Cron job has been created successfully."
+msgstr "تم إنشاء وظيفة Cron بنجاح."
+
+msgid "Current Number of Databases"
+msgstr "العدد الحالي لقواعد البيانات"
+
+msgid "Custom Logo"
+msgstr "شعار مخصص"
+
+msgid "Custom document root"
+msgstr "جذر المستند المخصص"
+
+msgid "Custom logo"
+msgstr "شعار مخصص"
+
+msgid "DB"
+msgstr "قواعد بيانات"
+
+msgid "DKIM Support"
+msgstr "دعم مفاتيح DKIM لمحاربة السبام"
+
+msgid "DNS"
+msgstr "بيانات DNS"
+
+msgid "DNS Cluster"
+msgstr "عناقيد DNS"
+
+msgid "DNS Records"
+msgstr "سجلات نظام أسماء النطاقات DNS"
+
+msgid "DNS Server"
+msgstr "مخدم DNS"
+
+msgid "DNS Support"
+msgstr "إضافةإلى  بيانات DNS (افتراضي)"
+
+msgid "DNS Sync User"
+msgstr "مستخدم مزامنة نظام أسماء النطاقات DNS"
+
+msgid "DNS Template"
+msgstr "نموذج DNS"
+
+msgid "DNS Zone"
+msgstr "مناطق نظام أسماء النطاقاتDNS"
+
+msgid "DNS Zones"
+msgstr "مناطق نظام أسماء النطاقات"
+
+msgid "DNS zone {%s} has been created successfully."
+msgstr "تم إنشاء منطقة DNS {%s} بنجاح."
+
+msgid "DNSKEY Record"
+msgstr "سجل DNSKEY"
+
+msgid "DNSSEC"
+msgstr "الامتداد الآمن لنظام أسماء النطاقات (DNSSEC)"
+
+msgid "DROP"
+msgstr "حذف"
+
+msgid "DS Record"
+msgstr "سجل DS"
+
+msgid "Daily"
+msgstr "يومي"
+
+msgid "Data Loss Warning!"
+msgstr "تحذير فقدان البيانات!"
+
+msgid "Data Source"
+msgstr "مصدر البيانات"
+
+msgid "Database"
+msgstr "قاعدة البيانات"
+
+msgid "Database Credentials: %s"
+msgstr "بيانات الدخول لقاعدة البيانات: %s"
+
+msgid ""
+"Database has been created.\n"
+"\n"
+"Database: {{database}}\n"
+"Username: {{username}}\n"
+"Password: {{password}}\n"
+"SQL Manager: {{dbadmin}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"تم إنشاء قاعدة البيانات.\n"
+"\n"
+"قاعدة البيانات: {{database}}\n"
+"اسم المستخدم: {{username}}\n"
+"كلمة المرور: {{password}}\n"
+"مدير SQL: {{dbadmin}}\n"
+"\n"
+"مع خالص تحياتي\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Database {%s} has been created successfully. / {Open %s}"
+msgstr "قاعدة البيانات {%s} تم إنشاؤها بنجاح.  / {Open %s}"
+
+msgid "Databases"
+msgstr "قواعد البيانات"
+
+msgid "Date"
+msgstr "التاريخ"
+
+msgid "Day"
+msgstr "يوم"
+
+msgid "Day of Week"
+msgstr "يوم من أيام الأسبوع"
+
+msgid "Dec"
+msgstr "كانون الأول"
+
+msgid "Default"
+msgstr "الافتراضي"
+
+msgid "Default Language"
+msgstr "اللغة الافتراضية"
+
+msgid "Default List Sort Order"
+msgstr "ترتيب فرز القائمة الافتراضي"
+
+msgid "Default Name Servers"
+msgstr "أسماء خوادم(NS) الافتراضية"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Delete all notifications"
+msgstr "حذف جميع الإشعارات"
+
+msgid "Delete notification"
+msgstr "حذف الإشعار"
+
+msgid "Description"
+msgstr "وصف"
+
+msgid "Details"
+msgstr "التفاصيل"
+
+msgid "Directory"
+msgstr "المجلد"
+
+msgid "Disable Automatic Updates"
+msgstr "تعطيل التحديثات التلقائية"
+
+msgid "Disable Notifications"
+msgstr "تعطيل اﻹشعارات"
+
+msgid "Disabled"
+msgstr "تعطيل"
+
+msgid "Discard all mail"
+msgstr "تجاهل كل البريد"
+
+msgid "Disk"
+msgstr "التخزين"
+
+msgid "Display / Hide shortcuts"
+msgstr "عرض أو إخفاء الاختصارات"
+
+msgid "Do not allow other administrators to access Server Settings"
+msgstr "عدم السماح للمسؤولين الآخرين بالوصول إلى إعدادات الخادم"
+
+msgid "Do not allow user to log in to Control Panel"
+msgstr "لا تسمح للمستخدم بتسجيل الدخول إلى لوحة التحكم"
+
+msgid "Do not store forwarded mail"
+msgstr "عدم الاحتفاظ بنسخة البريد المعاد توجيهه"
+
+msgid "Domain"
+msgstr "النطاق (الدومين)"
+
+msgid "Domain {%s} has been created successfully."
+msgstr "تم إنشاء النطاق {%s} بنجاح."
+
+msgid "Domains"
+msgstr "نطاقات"
+
+msgid "Download"
+msgstr "تحميل"
+
+msgid "Download Database"
+msgstr "تحميل قاعدة البيانات"
+
+msgid "Download of remote backup file has been scheduled."
+msgstr "تمت جدولة تنزيل ملف النسخ الاحتياطي عن بعد."
+
+msgid "Duplicate"
+msgstr "كَرر"
+
+msgid "Edit"
+msgstr "التحرير"
+
+msgid "Edit Backup Exclusions"
+msgstr "تحرير استثناءات النسخ الاحتياطي"
+
+msgid "Edit Cron Job"
+msgstr "تحرير أعمال مجدول الأعمال"
+
+msgid "Edit DNS Domain"
+msgstr "تحرير مجال نظام أسماء النطاقات DNS"
+
+msgid "Edit DNS Record"
+msgstr "تحرير سجل DNS"
+
+msgid "Edit Database"
+msgstr "تحرير قاعدة البيانات"
+
+msgid "Edit Domain"
+msgstr "تعديل أسماء النطاقات"
+
+msgid "Edit Firewall Rule"
+msgstr "تحرير قاعدة جدار الحماية"
+
+msgid "Edit IP Address"
+msgstr "تحرير عنوان IP"
+
+msgid "Edit Mail Account"
+msgstr "تحرير حساب البريد"
+
+msgid "Edit Mail Domain"
+msgstr "تحرير مجال البريد"
+
+msgid "Edit Package"
+msgstr "تحرير الحزمة"
+
+msgid "Edit User"
+msgstr "تحرير المستخدم"
+
+msgid "Edit Web Domain"
+msgstr "تحرير مجال الويب"
+
+msgid "Email"
+msgstr "البريد الالكتروني"
+
+msgid "Email Credentials: %s@%s"
+msgstr "بيانات البريد الإلكتروني: %s@%s"
+
+msgid "Email Subject"
+msgstr "موضوع البريد الإلكتروني"
+
+msgid "Email login credentials to:"
+msgstr "إرسال بيانات اعتماد تسجيل الدخول بالبريد الإلكتروني إلى:"
+
+msgid "Enable API access"
+msgstr "تمكين الوصول إلى واجهة برمجة التطبيقات"
+
+msgid "Enable Automatic Updates"
+msgstr "تمكين التحديثات التلقائية"
+
+msgid "Enable DNSSEC"
+msgstr "تفيل الامتداد الآمن لنظام أسماء النطاقات (DNSSEC)"
+
+msgid "Enable FastCGI cache"
+msgstr "تمكين ذاكرة التخزين المؤقت FastCGI"
+
+msgid "Enable HTTP Strict Transport Security (HSTS)"
+msgstr "تمكين أمان النقل المشدد لبروتوكول نقل النص الفائق HTTP (HSTS)"
+
+msgid "Enable Notifications"
+msgstr "تمكين الإشعارات"
+
+msgid "Enable SSL for this domain"
+msgstr "تمكين طبقة المقابس الآمنة لهذا المجال"
+
+msgid "Enable automatic HTTPS redirection"
+msgstr "تمكين إعادة توجيه لبروتوكول نقل النص الفائق الآمن HTTPS التلقائي"
+
+msgid "Enable debug mode"
+msgstr "تمكين وضع التصحيح"
+
+msgid "Enable domain redirection"
+msgstr "تمكين إعادة توجيه المجال"
+
+msgid "Enable legacy API access"
+msgstr "تمكين الوصول إلى واجهة برمجة التطبيقات API القديمة "
+
+msgid "Enable preview features"
+msgstr "تمكين ميزات المعاينة"
+
+msgid "Enable two-factor authentication"
+msgstr "تمكين المصادقة الثنائية"
+
+msgid "Enabled"
+msgstr "تمكين"
+
+msgid "Enabled PHP Versions"
+msgstr "إصدارات PHP الممكّنة"
+
+msgid "Enabled for admin"
+msgstr "مفعل للمسؤول"
+
+msgid "Enabled for all users"
+msgstr "مفعل لجميع المستخدمين"
+
+msgid "Enforce subdomain ownership"
+msgstr "فرض ملكية النطاق الفرعي"
+
+msgid "Enter focused element"
+msgstr "إذهب إلى العنصر المحدد"
+
+msgid "Error"
+msgstr "خطأ"
+
+msgid "Error Log"
+msgstr "سجل الأخطاء"
+
+msgid "Error code: %s"
+msgstr "رمز الخطأ: %s"
+
+msgid "Error: %s update failed."
+msgstr "خطأ : %s فشل التحديث."
+
+msgid "Error: Hestia did not return any output."
+msgstr "خطأ: هيستيا لم يرجع أي إخراج."
+
+msgid "Error: unable to copy package."
+msgstr "خطأ: غير قادر على نسخ الحزمة."
+
+msgid "Error: unknown record ID."
+msgstr "خطأ: معرف سجل غير معروف."
+
+msgid "Every %s days"
+msgstr "كل %s يوم"
+
+msgid "Every %s hours"
+msgstr "كل %s ساعة"
+
+msgid "Every %s minutes"
+msgstr "كل %s دقيقة"
+
+msgid "Every %s months"
+msgstr "كل %s شهر"
+
+msgid "Every day"
+msgstr "كل يوم"
+
+msgid "Every even day"
+msgstr "كل يوم زوجي"
+
+msgid "Every even month"
+msgstr "كل شهر زوجي"
+
+msgid "Every hour"
+msgstr "كل ساعة"
+
+msgid "Every minute"
+msgstr "كل دقيقة"
+
+msgid "Every month"
+msgstr "كل شهر"
+
+msgid "Every odd day"
+msgstr "كل يوم فردي"
+
+msgid "Every odd month"
+msgstr "كل شهر فردي"
+
+msgid "Expand main menu"
+msgstr "توسيع القائمة الرئيسية"
+
+msgid "Expiration Date"
+msgstr "تاريخ الانتهاء"
+
+msgid "Expire"
+msgstr "تنقضي"
+
+msgid "FTP Account Credentials: %s"
+msgstr "بيانات اعتماد حساب FTP: %s"
+
+msgid ""
+"FTP account has been created and ready to use.\n"
+"\n"
+"Hostname: {{domain}}\n"
+"Username: {{username}}\n"
+"Password: {{password}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"تم إنشاء حساب FTP وجاهز للاستخدام.\n"
+"\n"
+"اسم المضيف: {{domain}}\n"
+"اسم المستخدم: {{username}}\n"
+"كلمة المرور: {{password}}\n"
+"\n"
+"مع أطيب التحيات،\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Failed"
+msgstr "فشل"
+
+msgid "Feb"
+msgstr "شباط"
+
+msgid "Field \"%s\" can not be blank."
+msgstr "العنصر \"%s\" لا يمكن أن يبقى فارغا."
+
+msgid "File Manager"
+msgstr "مدير الملفات"
+
+msgid "File Name"
+msgstr "اسم الملف"
+
+msgid "File System Disk Quota"
+msgstr "حصة مساحة نظام الملفات"
+
+msgid "File manager"
+msgstr "مدير الملفات"
+
+msgid "Firewall"
+msgstr "جدار الحماية"
+
+msgid "Firewall Rules"
+msgstr "قواعد جدار الحماية (Firewall )"
+
+msgid "Focus on search"
+msgstr "ضع التحديد على البحث"
+
+msgid "For example"
+msgstr "على سبيل المثال"
+
+msgid "Forgot Password"
+msgstr "لقد نسيت كلمة المرور"
+
+msgid "Forgot Token"
+msgstr "نسيت الرمز المميز"
+
+msgid "Forward to"
+msgstr "إعادة توجيه إلى"
+
+msgid "Forwarding"
+msgstr "الشحن"
+
+msgid "Friday"
+msgstr "الجمعة"
+
+msgid "General"
+msgstr "عام"
+
+msgid "Generate"
+msgstr "ولًد"
+
+msgid "Generate Self-Signed SSL Certificate"
+msgstr "إنشاء شهادة بروتوكول طبقة المقابس الآمنة SSL موقعة ذاتيا"
+
+msgid "Global SMTP Relay"
+msgstr "وسيط بروتوكول نقل البريد البسيط SMTP العام"
+
+msgid "Go to BACKUP list"
+msgstr "إذهب إلى قائمة النسخ الاحتياطي"
+
+msgid "Go to CRON list"
+msgstr "إذهب إلى قائمة مجدول الأعمال"
+
+msgid "Go to DB list"
+msgstr "إذهب إلى قائمة قواعد البيانات"
+
+msgid "Go to DNS list"
+msgstr "إذهب إلى قائمة DNS"
+
+msgid "Go to MAIL list"
+msgstr "إذهب إلى قائمة البريد"
+
+msgid "Go to WEB list"
+msgstr "إذهب إلى قائمة الويب"
+
+msgid "HESTIA"
+msgstr "فيستا"
+
+msgid ""
+"Hello {{name}},\n"
+"\n"
+"To reset your {{appname}} password, please follow this link:\n"
+"https://{{hostname}}/reset/?action=confirm&user={{user}}&code={{resetcode}}\n"
+"\n"
+"Alternatively, you may go to https://{{hostname}}/reset/?"
+"action=code&user={{user}} and enter the following reset code:\n"
+"{{resetcode}}\n"
+"\n"
+"If you did not request password reset, please ignore this message and accept "
+"our apologies.\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"مرحبا {{name}},↵\n"
+"↵\n"
+"لإعادة تعيين كلمة مرور {{appname}}، يرجى اتباع هذا الرابط:↵\n"
+"https://{{hostname}}/reset/?action=confirm&user={{user}}&code={{resetcode}}"
+"↵\n"
+"↵\n"
+"بدلا من ذلك ، يمكنك الانتقال إلىhttps://{{hostname}}/reset/?"
+"action=code&user={{user}} وإدخال رمز إعادة التعيين التالي:↵\n"
+"{{resetcode}}↵\n"
+"↵\n"
+"إذا لم تطلب إعادة تعيين كلمة المرور، فيرجى تجاهل هذه الرسالة وقبول اعتذارنا."
+"↵\n"
+"↵\n"
+"مع أطيب التحيات،↵\n"
+"↵\n"
+"--↵\n"
+"{{appname}}"
+
+msgid ""
+"Hello {{name}},\n"
+"\n"
+"Your account has been created and ready to use.\n"
+"\n"
+"https://{{hostname}}/login/\n"
+"Username: {{user}}\n"
+"Password: {{password}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"مرحبا {{name}} ،\n"
+"\n"
+"تم إنشاء حسابك وجاهز للاستخدام.\n"
+"\n"
+"https://{{hostname}}/login/\n"
+"اسم المستخدم: {{user}}\n"
+"كلمة المرور: {{password}}\n"
+"\n"
+"مع خالص تحياتي\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Help"
+msgstr "مساعدة"
+
+msgid "Hestia core package"
+msgstr "حزمة هيستيا الأساسية"
+
+msgid "Hestia internal php interpreter"
+msgstr "معالج بي إتش بي الداخلي لهيستيا "
+
+msgid "Hestia internal web server"
+msgstr "خادم الويب الداخلي لهيستيا"
+
+msgid "Hide Certificate"
+msgstr "إخفاء الشهادة"
+
+msgid "Hide account from other administrators"
+msgstr "إخفاء الحساب عن المسؤولين الآخرين"
+
+msgid "Hide link to Documentation"
+msgstr "إخفاء الرابط إلى الوثائق"
+
+msgid "Host"
+msgstr "مضيف"
+
+msgid "Hostname"
+msgstr "اسم المضيف (host)"
+
+msgid "Hour"
+msgstr "ساعة"
+
+msgid "Hourly"
+msgstr "ساعي"
+
+msgid "IMAP Settings"
+msgstr "إعدادات بروتوكول الوصول إلى رسائل الإنترنت IMAP"
+
+msgid "IP Address"
+msgstr "عناوين الأي بي"
+
+msgid "IP Address / IPset IP List"
+msgstr "عنوان بروتوكول الإنترنت IP أو قائمة بروتوكولات الإنترنت IPset"
+
+msgid "IP Addresses"
+msgstr "عناوين IP"
+
+msgid "IP List Name"
+msgstr "اسم قائمة IP"
+
+msgid "IP Version"
+msgstr "نسخة IP"
+
+msgid "IP address has been banned successfully."
+msgstr "تم حظر عنوان بروتوكول الإنترنت IP بنجاح."
+
+msgid "IP address {%s} has been created successfully."
+msgstr "تم إنشاء عنوان IP {%s} بنجاح."
+
+msgid "IP list has been created successfully."
+msgstr "تم إنشاء قائمة IP بنجاح."
+
+msgid "IP or Value"
+msgstr "عنوان IP أو القيمة"
+
+msgid "IPs"
+msgstr "عناوين أي بي IP"
+
+msgid "IPset IP Lists"
+msgstr "قوائم بروتوكول الإنترنت IP"
+
+msgid "ISO 3166-1 alpha-2 two-letter code"
+msgstr "ISO 3166-1 alpha-2 رمز مكون من حرفين"
+
+msgid ""
+"If the aliases changes, Let's Encrypt will obtain a new SSL certificate."
+msgstr ""
+"إذا تغيرت الأسماء المستعارة ، فسيحصل Let's Encrypt على شهادة SSL جديدة."
+
+msgid "Inactive session timeout"
+msgstr "مهلة الجلسة غير النشطة"
+
+msgid "Inactive session timeout can not lower than 1 minute."
+msgstr "مهلة الجلسة غير النشطة لا يمكن أن تقل عن دقيقة واحدة."
+
+msgid "Info (read-only mode): Crontab can only be edited via SSH."
+msgstr ""
+"المعلومات (وضع القراءة فقط): لا يمكن تحرير مجدول الأعمال Crontab إلا عبر SSH."
+
+msgid "Information"
+msgstr "معلومات"
+
+msgid "Install %s"
+msgstr "تركيب %s"
+
+msgid "Interface"
+msgstr "واجهة"
+
+msgid "Invalid or missing 2FA token"
+msgstr "رمز المصادقة الثنائية (2FA) غير صالح أو مفقود"
+
+msgid "Invalid username or code"
+msgstr "خطأ في اسم المستخدم أو في الكود"
+
+msgid "Invalid username or password"
+msgstr "خطأ في اسم المستخدم أو كلمة المرور"
+
+msgid "Issued By"
+msgstr "صادر من"
+
+msgid "Issued To"
+msgstr "تم إصداره لـ"
+
+msgid ""
+"It is strongly advised to {create a standard user account} before adding %s "
+"to the server due to the increased privileges the admin account possesses "
+"and potential security risks."
+msgstr ""
+"ينصح بشدة {إنشاء حساب مستخدم قياسي} قبل إضافة %s إلى الخادم بسبب الامتيازات "
+"المتزايدة التي يمتلكها حساب المسؤول والمخاطر الأمنية المحتملة."
+
+msgid ""
+"It may take a few minutes to save your changes. Please wait until the "
+"process has completed and do not refresh the page."
+msgstr ""
+"قد يستغرق حفظ التغييرات بضع دقائق. يرجى الانتظار حتى تكتمل العملية وعدم "
+"تحديث الصفحة."
+
+msgid "Jan"
+msgstr "كانون الثاني"
+
+msgid "Jobs"
+msgstr "الوظائف"
+
+msgid "Jul"
+msgstr "تموز"
+
+msgid "Jun"
+msgstr "حزيران"
+
+msgid "Key Size"
+msgstr "حجم المفتاح"
+
+msgid "Language"
+msgstr "اللغة"
+
+msgid "Last 70 lines of %s.%s.log"
+msgstr "آخر 70 سطر في %s.%s.log"
+
+msgid "Limit"
+msgstr "حد"
+
+msgid "Load Average"
+msgstr "متوسط التحميل"
+
+msgid "Loading..."
+msgstr "جاري التحميل..."
+
+msgid "Local Backup"
+msgstr "النسخ الاحتياطي المحلي"
+
+msgid "Log in"
+msgstr "تسجيل الدخول"
+
+msgid "Log in as"
+msgstr "تسجيل الدخول باسم"
+
+msgid "Log out"
+msgstr "تسجيل الخروج"
+
+msgid "Logged in as"
+msgstr "تم تسجيل الدخول باسم"
+
+msgid "Login"
+msgstr "تسجيل الدخول "
+
+msgid "Login History"
+msgstr "سجل تسجيل الدخول"
+
+msgid "Login screen style"
+msgstr "نمط شاشة تسجيل الدخول"
+
+msgid "Logs"
+msgstr "السجلات"
+
+msgid "MAIL"
+msgstr "البريد"
+
+msgid "MB"
+msgstr "ميجابايت"
+
+msgid "Mail"
+msgstr "البريد"
+
+msgid "Mail Accounts"
+msgstr "حسابات البريد"
+
+msgid "Mail Domain"
+msgstr "مجال البريد"
+
+msgid "Mail Domains"
+msgstr "نطاقات البريد"
+
+msgid "Mail Server"
+msgstr "خادم البريد"
+
+msgid "Mail Support"
+msgstr "إضافة إلى نطاقات البريد (افتراضي)"
+
+msgid ""
+"Mail account has been created.\n"
+"\n"
+"Common Account Settings:\n"
+"Username: {{account}}@{{domain}}\n"
+"Password: {{password}}\n"
+"Webmail: {{webmail}}\n"
+"Hostname: {{hostname}}\n"
+"\n"
+"IMAP Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 993\n"
+"STARTTLS: Port 143\n"
+"No encryption: Port 143\n"
+"\n"
+"POP3 Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 995\n"
+"STARTTLS: Port 110\n"
+"No encryption: Port 110\n"
+"\n"
+"SMTP Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 465\n"
+"STARTTLS: Port 587\n"
+"No encryption: Port 25\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"تم إنشاء حساب بريد.\n"
+"\n"
+"إعدادات الحساب الشائعة:\n"
+"اسم المستخدم: {{account}}@{{domain}}\n"
+"كلمة المرور:  {{password}}\n"
+"بريد الويب: {{webmail}}\n"
+"اسم المضيف: {{hostname}}\n"
+"\n"
+"إعدادات IMAP\n"
+"المصادقة: كلمة المرور العادية\n"
+"SSL/TLS: المنفذ 993\n"
+"ستارتلس: المنفذ 143 \n"
+"لا يوجد تشفير: المنفذ 143 \n"
+"\n"
+"إعدادات POP3\n"
+"المصادقة: كلمة المرور العادية\n"
+"SSL/TLS: المنفذ 995\n"
+"ستارتلس: المنفذ 110 \n"
+"لا يوجد تشفير: المنفذ 110 \n"
+"\n"
+"إعدادات SMTP\n"
+"المصادقة: كلمة المرور العادية\n"
+"SSL / TLS: المنفذ 465 \n"
+"STARTTLS: المنفذ 587 \n"
+"لا يوجد تشفير: المنفذ 25 \n"
+"\n"
+"مع أطيب التحيات،\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Mail account {%s@%s} has been created successfully."
+msgstr "تم إنشاء حساب البريد {%s@%s} بنجاح."
+
+msgid "Mail domain {%s} has been created successfully."
+msgstr "تم إنشاء مجال البريد {%s} بنجاح."
+
+msgid "Manage SSH Keys"
+msgstr "إدارة مفاتيح بروتوكول النقل الآمن SSH"
+
+msgid "Mar"
+msgstr "آذار"
+
+msgid "Maximum %s characters length, including prefix"
+msgstr "الحد الأقصى لطول الأحرف %s ، بما في ذلك البادئة"
+
+msgid "Maximum Number of Databases"
+msgstr "الحد الأقصى لعدد قواعد البيانات"
+
+msgid "May"
+msgstr "أيار"
+
+msgid "Memory"
+msgstr "الذاكرة"
+
+msgid "Message"
+msgstr "رسالة"
+
+msgid "Minute"
+msgstr "دقيقة"
+
+msgid "Minutes"
+msgstr "دقائق"
+
+msgid "Monday"
+msgstr "الإثنين"
+
+msgid "Month"
+msgstr "شهر"
+
+msgid "Monthly"
+msgstr "شهري"
+
+msgid "More info"
+msgstr "المزيد"
+
+msgid "Move backward through top menu"
+msgstr "التحرك للخلف في القائمة العلوية"
+
+msgid "Move down through elements list"
+msgstr "انتقل للأسفل خلال لائحة العناصر"
+
+msgid "Move forward through top menu"
+msgstr "التحرك للأمام في القائمة العلوية"
+
+msgid "Move up through elements list"
+msgstr "انتقل للأعلى خلال لائحة العناصر"
+
+msgid "MySQL Support"
+msgstr "دعم MySQL"
+
+msgid "NAT IP Association"
+msgstr "ربط ترجمة عنوان الشبكةNAT مع بروتوكول الإنترنت IP"
+
+msgid "NGINX cache has been purged successfully."
+msgstr "تم تنظيف ذاكرة التخزين المؤقت NGINX بنجاح."
+
+msgid "Name"
+msgstr "اسم"
+
+msgid "Name Servers"
+msgstr "خوادم أسماء النطاقات"
+
+msgid "Nameserver 1"
+msgstr "نيم سرفر 1"
+
+msgid "Nameserver 2"
+msgstr "نيم سرفر 2"
+
+msgid "Netmask"
+msgstr "قناع الشبكة"
+
+msgid "Network"
+msgstr "الشبكة"
+
+msgid "New Password"
+msgstr "كلمة مرور جديدة"
+
+msgid "Next"
+msgstr "التالي"
+
+msgid "No"
+msgstr "لا"
+
+msgid "No encryption"
+msgstr "بلا تشفير"
+
+msgid "No exclusions"
+msgstr "لا استثناءات"
+
+msgid "No notifications"
+msgstr "لا توجد إشعارات"
+
+msgid "Normal password"
+msgstr "كلمة مرور طبيعية"
+
+msgid "Not After"
+msgstr "ليس بعد"
+
+msgid "Not Before"
+msgstr "ليس قبل"
+
+msgid "Notifications"
+msgstr "إشعارات"
+
+msgid "Nov"
+msgstr "تشرين الثاني"
+
+msgid "Oct"
+msgstr "تشرين الأول"
+
+msgid "Old Style"
+msgstr "الطراز القديم"
+
+msgid "One or more email addresses"
+msgstr "عنوان بريد إلكتروني واحد أو أكثر"
+
+msgid "Open Webmail"
+msgstr "فتح عميل بريد الويب"
+
+msgid "Open debug panel"
+msgstr "افتح لوحة التصحيح"
+
+msgid "Open menu"
+msgstr "افتح القائمة"
+
+msgid "Operating System"
+msgstr "نظام التشغيل"
+
+msgid "Optional"
+msgstr "اختياري"
+
+msgid "Options"
+msgstr "الخيارات"
+
+msgid "Organization"
+msgstr "مؤسسة"
+
+msgid "Overall Statistics"
+msgstr "إحصائيات عامة"
+
+msgid "Owner"
+msgstr "مالك"
+
+msgid "PHP CLI Version"
+msgstr "إصدار سطر أوامر PHP"
+
+msgid "POP3 Settings"
+msgstr "إعدادات بروتوكول مكتب البريد3 POP3"
+
+msgid "Package"
+msgstr "حزمة الاستضافة"
+
+msgid "Package Name"
+msgstr "إسم الحزمة"
+
+msgid "Package Names"
+msgstr "أسماء الحزم"
+
+msgid "Package {%s} has been created successfully."
+msgstr "تم إنشاء الحزمة {%s} بنجاح."
+
+msgid "Packages"
+msgstr "حزم الاستضافة"
+
+msgid "Partially implemented"
+msgstr "نُِفَذت جزئيا"
+
+msgid "Password"
+msgstr "كلمة المرور"
+
+msgid "Password Reset at %s"
+msgstr "إعادة تعيين كلمة المرور في %s"
+
+msgid "Password does not match the minimum requirements."
+msgstr "كلمة المرور لا تتطابق مع الحد الأدنى من المتطلبات."
+
+msgid "Password reset code has been sent to your email address"
+msgstr "تم إرسال رمز إعادة تعيين كلمة المرور إلى عنوان بريدك الإلكتروني"
+
+msgid ""
+"Password reset instructions have been sent to the email address associated "
+"with this account."
+msgstr ""
+"تم إرسال تعليمات إعادة تعيين كلمة المرور إلى عنوان البريد الإلكتروني المرتبط "
+"بهذا الحساب."
+
+msgid "Passwords do not match"
+msgstr "كلمات المرور غير متطابقة"
+
+msgid "Path"
+msgstr "المسار"
+
+msgid "Permissions"
+msgstr "الصلاحيات"
+
+msgid "Please enter a valid contact name."
+msgstr "الرجاء إدخال اسم جهة اتصال صالح."
+
+msgid "Please enter a valid email address."
+msgstr "الرجاء إدخال عنوان بريد إلكتروني صالح."
+
+msgid "Please make sure ~/web/%s/public_html is empty!"
+msgstr "يرجى التأكد من أن المجلد ~/web/%s/public_html فارغ!"
+
+msgid "Please scan the code below in your 2FA application"
+msgstr "يرجى مسح الرمز أدناه في تطبيق المصادقة الثنائية (2FA) الخاص بك"
+
+msgid "Please wait 15 minutes before sending a new request."
+msgstr "يرجى الانتظار لمدة 15 دقيقة قبل إرسال طلب جديد."
+
+msgid "Plugins"
+msgstr "الإضافات"
+
+msgid "Point to"
+msgstr "يشير إلى"
+
+msgid "Policies"
+msgstr "السياسات"
+
+msgid "Policy"
+msgstr "السياسات"
+
+msgid "Port"
+msgstr "منفذ"
+
+msgid "PostgreSQL Support"
+msgstr "دعم PostgreSQL"
+
+msgid "Prefix %s will be added to username automatically"
+msgstr "ستتم إضافة %s إلى اسم المستخدم تلقائيا"
+
+msgid ""
+"Prefix %s will be automatically added to database name and database user"
+msgstr ""
+"ستتم إضافة البادئة %s تلقائيا إلى اسم قاعدة البيانات ومستخدم قاعدة البيانات"
+
+msgid "Prevent CSRF"
+msgstr "منع التلاعب بملفات تعريف الارتباط CSRF"
+
+msgid "Preview"
+msgstr "معاينه"
+
+msgid "Priority"
+msgstr "أولوية"
+
+msgid "Production Release"
+msgstr "الإصدار"
+
+msgid "Protocol"
+msgstr "بروتوكول"
+
+msgid "Proxy Extensions"
+msgstr "توسعات بروكسي"
+
+msgid "Proxy Server"
+msgstr "المخدم الوكيل (بروكسي)"
+
+msgid "Proxy Support"
+msgstr "دغم بروكسي"
+
+msgid "Proxy Template"
+msgstr "Proxy نموذج"
+
+msgid "Public Key"
+msgstr "المفتاح العام"
+
+msgid "Purge NGINX Cache"
+msgstr "حذف ذاكرة التخزين المؤقت لـNGINX"
+
+msgid "Quick App Installer"
+msgstr "مثبت التطبيق السريع"
+
+msgid "Quick Install App"
+msgstr "ثبّت تطبيقًا"
+
+msgid "Quota"
+msgstr "الحجم المخصص"
+
+msgid "RAM"
+msgstr "ذاكرة الوصول العشوائي"
+
+msgid "Ranges and lists are acceptable"
+msgstr "النطاقات والقوائم مقبولة"
+
+msgid "Rate Limit"
+msgstr "حد السرعة"
+
+msgid "Rebuild"
+msgstr "اعاده"
+
+msgid "Rebuild All"
+msgstr "إعادة بناء الكل"
+
+msgid "Rebuild Cron Jobs"
+msgstr "إعادة بناء وظائف مجدول الأعمال كرون"
+
+msgid "Rebuild DNS Zones"
+msgstr "إعادة بناء مناطق نظام أسماء النطاقاتDNS"
+
+msgid "Rebuild Databases"
+msgstr "إعادة إنشاء قواعد البيانات"
+
+msgid "Rebuild Mail Domains"
+msgstr "إعادة إنشاء مجالات البريد"
+
+msgid "Rebuild User Profile"
+msgstr "إعادة بناء ملف تعريف المستخدم"
+
+msgid "Rebuild Web Domains"
+msgstr "إعادة بناء نطاقات الويب"
+
+msgid "Record"
+msgstr "سجل"
+
+msgid "Record {%s.%s} has been created successfully."
+msgstr "تم إنشاء السجل {%s.%s} بنجاح."
+
+msgid "Records"
+msgstr "سجلات"
+
+msgid "Redirect visitors to %s"
+msgstr "إعادة توجيه الزوار إلى %s"
+
+msgid "Redirect visitors to a custom domain or web address"
+msgstr "إعادة توجيه الزوار إلى مجال مخصص أو عنوان ويب"
+
+msgid "Refresh"
+msgstr "تحديث"
+
+msgid "Refresh IP Addresses"
+msgstr "تحديث عناوين IP"
+
+msgid "Reject Spam"
+msgstr "رفض البريد العشوائي"
+
+msgid "Release"
+msgstr "نسخة"
+
+msgid "Remote Backup"
+msgstr "النسخ الاحتياطي عن بعد"
+
+msgid "Reset"
+msgstr "إعادة تعيين"
+
+msgid "Reset Code"
+msgstr "كود إعادة تعيين"
+
+msgid "Restart"
+msgstr "اعادة البدء"
+
+msgid "Restart \"%s\" failed"
+msgstr "فشل إعادة تشغيل \"%s\""
+
+msgid "Restore"
+msgstr "اﻹستعادة"
+
+msgid "Restore All"
+msgstr "استرجاع الكل"
+
+msgid "Restrict access to read-only for other administrators"
+msgstr "تقييد الوصول للقراءة فقط للمسؤولين الآخرين"
+
+msgid "Role"
+msgstr "دور"
+
+msgid "Rule has been created successfully."
+msgstr "تم إنشاء القاعدة جدار الحماية بنجاح."
+
+msgid "Run Command"
+msgstr "أمر التنفيذ"
+
+msgid "Runtime"
+msgstr "المدة الزمنية"
+
+msgid "SMTP Relay"
+msgstr "مرحل SMTP"
+
+msgid "SMTP Settings"
+msgstr "إعدادات SMTP"
+
+msgid "SSH Access"
+msgstr "دخول SSH"
+
+msgid "SSH ID"
+msgstr "معرف بروتوكول النقل الآمنSSH"
+
+msgid "SSH Key"
+msgstr "مفتاح بروتوكول النقل الآمن SSH"
+
+msgid "SSH Key already exists."
+msgstr "مفتاح بروتوكول النقل الآمن SSH موجود بالفعل."
+
+msgid "SSH Key has been created successfully."
+msgstr "تم إنشاء مفتاح SSH بنجاح."
+
+msgid "SSH Keys"
+msgstr "مفاتيح SSH"
+
+msgid "SSL"
+msgstr "بروتوكول طبقة المقابس الآمنة"
+
+msgid "SSL CSR"
+msgstr "طلب توقيع شهادة باستخدام شهادة أمان SSL"
+
+msgid "SSL Certificate"
+msgstr "شهادة أمان SSL"
+
+msgid "SSL Certificate Authority / Intermediate"
+msgstr "سلطة / متوسط شهادة شهادة أمان SSL "
+
+msgid "SSL Domains"
+msgstr "نطاقات بروتوكول طبقة المقابس الآمنة SSL"
+
+msgid "SSL Private Key"
+msgstr "مفتاح بروتوكول طبقة المقابس الآمنة SSL الخاص"
+
+msgid "Saturday"
+msgstr "السبت"
+
+msgid "Save"
+msgstr "حفظ"
+
+msgid "Save form"
+msgstr "حفظ النموذج"
+
+msgid "Search"
+msgstr "بحث"
+
+msgid "Search Results"
+msgstr "نتائج البحث"
+
+msgid "Secret Key"
+msgstr "المفتاح السري"
+
+msgid "Security"
+msgstr "أمن"
+
+msgid "Select"
+msgstr "تحديد"
+
+msgid "Select all"
+msgstr "حدد الكل"
+
+msgid "Send FTP credentials to email"
+msgstr "إرسال معلومات اعتماد FTP للبريد الالكتروني"
+
+msgid "Send email notification when an update has been installed"
+msgstr "إرسال إشعار بالبريد الإلكتروني عند تثبيت تحديث"
+
+msgid "Send update installation log by email"
+msgstr "إرسال سجل تثبيت التحديث عبر البريد الإلكتروني"
+
+msgid "Send welcome email"
+msgstr "إرسال بريد إلكتروني ترحيبي"
+
+msgid "Sender Email Address"
+msgstr "عنوان البريد الإلكتروني للمرسل"
+
+msgid "Sender Name"
+msgstr "اسم المرسل"
+
+msgid "Sep"
+msgstr "أيلول"
+
+msgid "Server settings"
+msgstr "إعدادات الخادم"
+
+msgid "Service"
+msgstr "اسم الخدمة"
+
+msgid "Services"
+msgstr "خدمات"
+
+msgid "Set as default language for all users"
+msgstr "تعيين كلغة افتراضية لجميع المستخدمين"
+
+msgid "Set as selected theme for all users"
+msgstr "تعيين النسق كنسق لجميع المستخدمين"
+
+msgid "Setup"
+msgstr "اقامة"
+
+msgid "Shared"
+msgstr "مشارَك"
+
+msgid "Shell"
+msgstr "شل"
+
+msgid "Shortcuts"
+msgstr "اختصارات"
+
+msgid "Show Certificate"
+msgstr "إظهار الشهادة"
+
+msgid "Show Per User"
+msgstr "عرض لكل مستخدم"
+
+msgid "Signature"
+msgstr "التوقيع"
+
+msgid "Size"
+msgstr "بحجم"
+
+msgid "Sort by"
+msgstr "ترتيب حسب"
+
+msgid "Sort items"
+msgstr "فرز العناصر"
+
+msgid "Spam Filter"
+msgstr "تصفية البريد العشوائي"
+
+msgid "Start"
+msgstr "بدء"
+
+msgid "Start \"%s\" failed"
+msgstr "فشل بدء تشغيل خدمة \"%s\""
+
+msgid "State"
+msgstr "الولاية"
+
+msgid "State / Province"
+msgstr "ولاية / مقاطعة"
+
+msgid "Statistics"
+msgstr "إحصائيات"
+
+msgid "Statistics Authorization"
+msgstr "الدخول للإحصائيات بكلمة مرور"
+
+msgid "Status"
+msgstr "حالة"
+
+msgid "Status code"
+msgstr "رمز الحالة"
+
+msgid "Stop"
+msgstr "وقف"
+
+msgid "Stop \"%s\" failed"
+msgstr "فشل في إيقاف الخدمة \"%s\""
+
+msgid "Strict"
+msgstr "صارم"
+
+msgid "Submit"
+msgstr "موافق"
+
+msgid "Success"
+msgstr "نجاح"
+
+msgid "Sunday"
+msgstr "الأحد"
+
+msgid "Support CIDR format"
+msgstr "دعم تنسيق  التوجيه غير الصنفي بين النطاقات CIDR"
+
+msgid "Supported variables"
+msgstr "المتغيرات المدعومة"
+
+msgid "Suspend"
+msgstr "تعليق"
+
+msgid "Suspend All"
+msgstr "تعليق الكل"
+
+msgid "Suspended"
+msgstr "معلق"
+
+msgid "System"
+msgstr "نظام"
+
+msgid "System Administrator account"
+msgstr "حساب مسؤول النظام"
+
+msgid "System PHP Version"
+msgstr "إصدار بي إتش بي للنظام"
+
+msgid "System Protection"
+msgstr "حماية النظام"
+
+msgid "Target domain or URL"
+msgstr "النطاق أو عنوان محدد موقع الموارد الموحد URL المستهدف"
+
+msgid "Task Monitor"
+msgstr "مراقب المهام"
+
+msgid ""
+"Task has been added to the queue. You will receive an email notification "
+"when your backup is ready for download."
+msgstr ""
+"تمت إضافة المهمة إلى قائمة الانتظار. ستتلقى إشعارا بالبريد الإلكتروني عندما "
+"تكون النسخة الاحتياطية جاهزة للتنزيل."
+
+msgid ""
+"Task has been added to the queue. You will receive an email notification "
+"when your restore has been completed."
+msgstr ""
+"تمت إضافة المهمة إلى قائمة الانتظار. ستتلقى إشعارا بالبريد الإلكتروني عند "
+"اكتمال الاستعادة."
+
+msgid "Template"
+msgstr "نموذج"
+
+msgid "The system is going down for reboot NOW!"
+msgstr "النظام سيتم إعادة تشغيلة الآن!"
+
+msgid "Theme"
+msgstr "مظهر"
+
+msgid "There are currently no IP lists defined."
+msgstr "لا توجد قوائم IP محددة حاليًا."
+
+msgid "There are currently no banned IP addresses."
+msgstr "لا توجد حاليا عناوين IP محظورة."
+
+msgid "Thursday"
+msgstr "الخميس"
+
+msgid "Time"
+msgstr "زمن"
+
+msgid "Time Zone"
+msgstr "المنطقة الزمنية"
+
+msgid "Title"
+msgstr "العنوان"
+
+msgid ""
+"To enable Let's Encrypt SSL, ensure that DNS records exist for mail.%s and "
+"%s!"
+msgstr "لتمكين Let's Encrypt SSL ، تأكد من وجود سجلات DNS للبريد.%s و %s!"
+
+msgid "Top"
+msgstr "العلوي"
+
+msgid "Triennially"
+msgstr "كل ثلاث سنوات"
+
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+msgid "Two-factor Authentication"
+msgstr "المصادقة الثنائية"
+
+msgid ""
+"Two-factor authentication is now turned off for your account.<br><br>You may "
+"now proceed to log in."
+msgstr ""
+"تم الآن إيقاف تشغيل المصادقة ذات العاملين لحسابك.<br><br> يمكنك الآن "
+"المتابعة لتسجيل الدخول."
+
+msgid "Type"
+msgstr "نوع"
+
+msgid "Type directory name, one per line. To exlude all dirs use *"
+msgstr "اكتب اسم الدليل ، واحد لكل سطر. لاستبعاد جميع اﻷدلة استخدم *"
+
+msgid ""
+"Type domain name, one per line. To exclude all domains use *. To exclude "
+"specific accounts use following format: domain.tld:info:support:postmaster"
+msgstr ""
+"اكتب اسم المجال ، واحد لكل سطر. لاستبعاد جميع النطاقات ، استخدم *. لاستبعاد "
+"حسابات محددة، استخدم التنسيق التالي: domain.tld:info:support:postmaster"
+
+msgid ""
+"Type domain name, one per line. To exclude all domains use *. To exclude "
+"specific dirs use following format: domain.tld:public_html/cache:public_html/"
+"tmp"
+msgstr ""
+"اكتب اسم المجال ، واحد لكل سطر. لاستبعاد جميع النطاقات ، استخدم *. لاستبعاد "
+"مجلدات معينة ، استخدم التنسيق التالي: domain.tld: public_html / cache: "
+"public_html / tmp"
+
+msgid "Type full database name, one per line. To exclude all databases use *"
+msgstr ""
+"اكتب اسم قاعدة البيانات الكامل، اسما واحدا لكل سطر. لاستبعاد جميع قواعد "
+"البيانات ، استخدم *"
+
+msgid "USER"
+msgstr "المستخدم"
+
+msgid "Unable to add database!"
+msgstr "غير قادر على إضافة قاعدة بيانات!"
+
+msgid "Unable to add database! Limit reached!"
+msgstr "غير قادر على إضافة قاعدة بيانات! تم الوصول إلى حد حسابك!"
+
+msgid "Unable to install %s, %s is not available."
+msgstr "غير قادر على تثبيت %s ، %s غير متوفر."
+
+msgid "Unlimited"
+msgstr "مطلق"
+
+msgid "Unlock Account"
+msgstr "فتح الحساب"
+
+msgid "Unsave form"
+msgstr "نموذج إلغاء الحفظ"
+
+msgid "Unsupported hash method"
+msgstr "طريقة تجزئة غير مدعومة"
+
+msgid "Unsuspend"
+msgstr "إلغاء التعليق"
+
+msgid "Unsuspend All"
+msgstr "إلغاء تعليق الكل"
+
+msgid "Update Usage Counters"
+msgstr "تحديث عدادات الاستخدام"
+
+msgid "Update logo"
+msgstr "تحديث الشعار"
+
+msgid "Updates"
+msgstr "تحديثات"
+
+msgid "Upload the files to %s"
+msgstr "قم بتحميل الملفات إلى %s"
+
+msgid "Uptime"
+msgstr "وقت التشغيل"
+
+msgid "Use IP address allow list for login attempts"
+msgstr "استخدام قائمة السماح بعنوان IP لمحاولات تسجيل الدخول"
+
+msgid "Use Let's Encrypt to obtain SSL certificate"
+msgstr "استخدم Let's Encrypt للحصول على شهادة SSL"
+
+msgid "Use local-part without domain name"
+msgstr "استخدم الجزء المحلي بدون اسم المجال"
+
+msgid "User"
+msgstr "المستخدم"
+
+msgid "User Directory"
+msgstr "دليل المستخدم"
+
+msgid "User {%s} has been created successfully. / {Log in as %s}"
+msgstr "تم إنشاء المستخدم {%s} بنجاح.{تسجيل الدخول باسم%s}"
+
+msgid "Username"
+msgstr "اسم المستخدم"
+
+msgid "Users"
+msgstr "المستخدمين"
+
+msgid "Value"
+msgstr "القيمة"
+
+msgid "Version"
+msgstr "إصدار"
+
+msgid "View"
+msgstr "طريقة العرض"
+
+msgid "View Public DNSSEC Key"
+msgstr "عرض مفتاح الامتداد الآمن لنظام أسماء النطاقات (DNSSEC) العام"
+
+msgid "WEB"
+msgstr "نطاقات الويب"
+
+msgid "Warning"
+msgstr "تحذير"
+
+msgid "Warning! Last chance to save secret key!"
+msgstr "تحذير! آخر فرصة لحفظ المفتاح السري!"
+
+msgid "Web"
+msgstr "الويب"
+
+msgid "Web Aliases"
+msgstr "الأسماء البديلة"
+
+msgid "Web Domain"
+msgstr "نطاق الويب"
+
+msgid "Web Domains"
+msgstr "نطاقات ويب"
+
+msgid "Web Server"
+msgstr "مخدم الويب"
+
+msgid "Web Statistics"
+msgstr "إحصائيات الوب"
+
+msgid "Web Template"
+msgstr "أباتشي نموذج"
+
+msgid "Webmail"
+msgstr "مستعض ويب البريد الإلكتروني"
+
+msgid "Webmail Alias"
+msgstr "الاسم المستعار لبريد الويب"
+
+msgid "Webmail Client"
+msgstr "عميل بريد الويب"
+
+msgid "Wednesday"
+msgstr "الأربعاء"
+
+msgid "Weekdays (5 days)"
+msgstr "أيام الأسبوع (5 أيام)"
+
+msgid "Weekend (2 days)"
+msgstr "نهاية الأسبوع (2 أيام)"
+
+msgid "Weekly"
+msgstr "اسبوعي"
+
+msgid "Welcome"
+msgstr "أهلا وسهلا"
+
+msgid "Welcome to %s"
+msgstr "مرحبا بكم في %s"
+
+msgid "White Label"
+msgstr "العلامة البيضاء (العلامة التجارية)"
+
+msgid "White Label Options"
+msgstr "خيارات العلامة البيضاء (العلامة التجارية)"
+
+msgid "Yearly"
+msgstr "سنوي"
+
+msgid "Yes"
+msgstr "نعم"
+
+msgid "You are logged out, please log in again."
+msgstr "لقد قمت بتسجيل الخروج ، يرجى تسجيل الدخول مرة أخرى."
+
+msgid "Your password must have at least"
+msgstr "يجب أن تحتوي كلمة المرور الخاصة بك على الأقل"
+
+msgid ""
+"Your web folder already has files uploaded to it. The installer will "
+"overwrite your files and/or the installation might fail."
+msgstr ""
+"يحتوي مجلد الويب الخاص بك بالفعل على ملفات تم تحميلها إليه. سيقوم المثبت "
+"بالكتابة فوق ملفاتك أو قد يفشل التثبيت."
+
+msgid "Zones"
+msgstr "المناطق"
+
+msgid "a database"
+msgstr "قاعدة بيانات"
+
+msgid "a dns domain"
+msgstr "مجال نظام أسماء النطاقات DNS"
+
+msgid "a mail domain"
+msgstr "مجال البريد"
+
+msgid "a web domain"
+msgstr "مجال الويب"
+
+msgid "backend server"
+msgstr "خادم الواجهة الخلفية"
+
+msgid "brute-force protection"
+msgstr "الحماية من هجوم القوة العمياء"
+
+msgid "database server"
+msgstr "خادم قاعدة البيانات"
+
+msgid "dns server"
+msgstr "خادم نظام أسماء النطاقات DNS"
+
+msgid "email / hour"
+msgstr "البريد الإلكتروني / الساعة"
+
+msgid "email anti-virus"
+msgstr "مكافحة فيروسات البريد الإلكتروني"
+
+msgid "email spam filter"
+msgstr "تصفية البريد الإلكتروني العشوائي"
+
+msgid "firewall"
+msgstr "جدار الحمايه"
+
+msgid "ftp server"
+msgstr "خادم بروتوكول نقل الملفات FTP"
+
+msgid "imap/pop3 server"
+msgstr ""
+"خادم بروتوكول الوصول إلى رسائل الإنترنت أو بروتوكول مكتب البريد imap/pop3"
+
+msgid "in MB"
+msgstr "بالميجابايت"
+
+msgid "job scheduler"
+msgstr "مجدول الأعمال"
+
+msgid "mail server"
+msgstr "خادم البريد"
+
+msgid "one or more email addresses"
+msgstr "عنوان بريدي واحد أو أكثر"
+
+msgid "per account / hour"
+msgstr "لكل حساب / ساعة"
+
+msgid "per domain"
+msgstr "لكل نطاق"
+
+msgid "phpMyAdmin Alias"
+msgstr "الاسم المستعار لبي إتش بي ماي آدمن"
+
+msgid "phpMyAdmin Single Sign On"
+msgstr "تسجيل الدخول الأحادي لبي إتش بي ماي آدمن"
+
+msgid "phpPgAdmin Alias"
+msgstr "الاسم المستعار لـphpPgAdmin"
+
+msgid "reverse proxy"
+msgstr "الوكيل المعاكس"
+
+msgid "ssh server"
+msgstr "خدمة بروتوكول النقل الآمن SSH"
+
+msgid "url, script or file"
+msgstr "عنوان URL أو برنامج نصي أو ملف"
+
+msgid "web server"
+msgstr "خادم الويب"
+
+msgid "zstd only"
+msgstr "الضغط بصيغة ZSTD فقط"

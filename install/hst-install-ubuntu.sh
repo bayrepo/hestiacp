@@ -434,7 +434,7 @@ fi
 
 # Validate whether installation script matches release version before continuing with install
 if [ -z "$withdebs" ] || [ ! -d "$withdebs" ]; then
-	release_branch_ver=$(curl -s https://dev.putey.net/bayrepo/hestiacp/raw/branch/master/src/deb/hestia/control | grep "Version:" | awk '{print $2}')
+	release_branch_ver=$(curl -s https://dev.brepo.ru/bayrepo/hestiacp/raw/branch/master/src/deb/hestia/control | grep "Version:" | awk '{print $2}')
 	if [ "$HESTIA_INSTALL_VER" != "$release_branch_ver" ]; then
 		echo
 		echo -e "\e[91mInstallation aborted\e[0m"
@@ -442,7 +442,7 @@ if [ -z "$withdebs" ] || [ ! -d "$withdebs" ]; then
 		echo -e "\e[33mERROR: Install script version does not match package version!\e[0m"
 		echo -e "\e[33mPlease download the installer from the release branch in order to continue:\e[0m"
 		echo ""
-		echo -e "\e[33mhttps://dev.putey.net/bayrepo/hestiacp/raw/branch/master/install/hst-install.sh\e[0m"
+		echo -e "\e[33mhttps://dev.brepo.ru/bayrepo/hestiacp/raw/branch/master/install/hst-install.sh\e[0m"
 		echo ""
 		echo -e "\e[33mTo test pre-release versions, build the .deb packages and re-run the installer:\e[0m"
 		echo -e "  \e[33m./hst_autocompile.sh \e[1m--hestia branchname no\e[21m\e[0m"
@@ -2064,7 +2064,7 @@ if [ "$iptables" = 'yes' ]; then
 fi
 
 # Get public IP
-pub_ipv4="$(curl -fsLm5 --retry 2 --ipv4 https://ip.hestiacp.com/)"
+pub_ipv4="$(curl -fsLm5 --retry 2 --ipv4 -H "Simple-Hestiacp: yes" https://hestiaip.brepo.ru/)"
 if [ -n "$pub_ipv4" ] && [ "$pub_ipv4" != "$ip" ]; then
 	if [ -e /etc/rc.local ]; then
 		sed -i '/exit 0/d' /etc/rc.local

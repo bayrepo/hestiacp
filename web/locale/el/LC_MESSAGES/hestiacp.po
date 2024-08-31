@@ -1,0 +1,827 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hestiacp\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-06 11:26\n"
+"Last-Translator: \n"
+"Language-Team: Greek\n"
+"Language: el_GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: hestiacp\n"
+"X-Crowdin-Project-ID: 587405\n"
+"X-Crowdin-Language: el\n"
+"X-Crowdin-File: hestiacp.pot\n"
+"X-Crowdin-File-ID: 3\n"
+
+msgid "%d IP address"
+msgid_plural "%d IP addresses"
+msgstr[0] "%d διεύθυνση IP"
+msgstr[1] "%d διευθύνσεις IP"
+
+msgid "%d banned IP address"
+msgid_plural "%d banned IP addresses"
+msgstr[0] "%d απαγορευμένη διεύθυνση IP"
+msgstr[1] "%d απαγορευμένες διευθύνσεις IP"
+
+msgid "%d cron job"
+msgid_plural "%d cron jobs"
+msgstr[0] "%d εργασία cron"
+msgstr[1] "%d εργασίες cron"
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d ημέρα"
+msgstr[1] "%d ημέρες"
+
+msgid "%d firewall rule"
+msgid_plural "%d firewall rules"
+msgstr[0] "%d κανόνας τείχους προστασίας"
+msgstr[1] "%d κανόνες τείχους προστασίας"
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d ώρα"
+msgstr[1] "%d ώρες"
+
+msgid "%d log record"
+msgid_plural "%d log records"
+msgstr[0] "%d αρχείο καταγραφής"
+msgstr[1] "%d αρχεία καταγραφής"
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d λεπτό"
+msgstr[1] "%d λεπτά"
+
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d μήνα"
+msgstr[1] "%d μήνες"
+
+msgid "%d object"
+msgid_plural "%d objects"
+msgstr[0] "%d αντικείμενο"
+msgstr[1] "%d αντικείμενα"
+
+msgid "%d package"
+msgid_plural "%d packages"
+msgstr[0] "%d πακέτo"
+msgstr[1] "%d πακέτα"
+
+msgid "%d user account"
+msgid_plural "%d user accounts"
+msgstr[0] "%d λογαριασμός χρήστη"
+msgstr[1] "%d λογαριασμοί χρηστών"
+
+msgid "1 number"
+msgstr "1 αριθμός"
+
+msgid "1 uppercase & 1 lowercase character"
+msgstr "1 κεφαλαίο & 1 πεζό χαρακτήρα"
+
+msgid "2FA Reset Code"
+msgstr "Κωδικός ανάκτησης λογαριασμού"
+
+msgid "2FA Token"
+msgstr "OTP PIN"
+
+msgid "8 characters long"
+msgstr "8 χαρακτήρες"
+
+msgid "ACCEPT"
+msgstr "ΑΠΟΔΟΧΗ"
+
+msgid "Access Key"
+msgstr "Κλειδί πρόσβασης"
+
+msgid "Access Keys"
+msgstr "Κλειδιά πρόσβασης"
+
+msgid "Account"
+msgstr "Λογαριασμός"
+
+msgid "Accounts"
+msgstr "Λογαριασμοί"
+
+msgid "Action"
+msgstr "Ενέργεια"
+
+msgid "Add Access Key"
+msgstr "Προσθήκη κλειδιού πρόσβασης"
+
+msgid "Add Cron Job"
+msgstr "Προσθήκη Εργασίας Cron"
+
+msgid "Add DNS Domain"
+msgstr "Προσθήκη DNS Domain"
+
+msgid "Add DNS Record"
+msgstr "Προσθήκη Εγγραφής DNS"
+
+msgid "Add Database"
+msgstr "Προσθήκη Βάσης Δεδομένων"
+
+msgid "Add IP list"
+msgstr "Προσθήκη λίστας IP"
+
+msgid "Add Mail Account"
+msgstr "Προσθήκη Λογαριασμού Ταχυδρομείου"
+
+msgid "Add Mail Domain"
+msgstr "Προσθήκη Domain Ταχυδρομείου"
+
+msgid "Add Package"
+msgstr "Προσθήκη Πακέτου"
+
+msgid "Add Record"
+msgstr "Προσθήκη εγγραφής"
+
+msgid "Add Rule"
+msgstr "Προσθήκη Κανόνα"
+
+msgid "Add SSH Key"
+msgstr "Προσθήκη κλειδιού SSH"
+
+msgid "Add User"
+msgstr "Προσθήκη Χρήστη"
+
+msgid "Add Web Domain"
+msgstr "Προσθήκη Domain Ιστοσελίδας"
+
+msgid "Administrator"
+msgstr "Διαχειριστής"
+
+msgid "Aliases"
+msgstr "Ψευδώνυμα"
+
+msgid "An internal error occurred"
+msgstr "Παρουσιάστηκε ένα εσωτερικό σφάλμα"
+
+msgid "Apr"
+msgstr "Απρ"
+
+msgid "Aug"
+msgstr "Αυγ"
+
+msgid "BACKUP"
+msgstr "ΑΝΤΙΓΡΑΦΟ ΑΣΦΑΛΕΙΑΣ"
+
+msgid "Back"
+msgstr "Πίσω"
+
+msgid "Backend Template"
+msgstr "Πρότυπο Παρασκηνίου"
+
+msgid "Backups"
+msgstr "Αντίγραφα Ασφαλείας"
+
+msgid "Ban IP Address"
+msgstr "Αποκλεισμός Διεύθυνσης IP"
+
+msgid "Bandwidth"
+msgstr "Eύρος Zώνης"
+
+msgid "Banlist"
+msgstr "Λίστα απαγόρευσης"
+
+msgid "Browser"
+msgstr "Φυλλομετρητής"
+
+msgid "CPU"
+msgstr "Επεξεργαστής"
+
+msgid "Category"
+msgstr "Κατηγορία"
+
+msgid "City"
+msgstr "Πόλη"
+
+msgid "City / Locality"
+msgstr "Πόλη / Περιοχή"
+
+msgid "Command"
+msgstr "Εντολή"
+
+msgid "Comment"
+msgstr "Σχόλιο"
+
+msgid "Compression"
+msgstr "Συμπίεση"
+
+msgid "Configure"
+msgstr "Ρύθμιση"
+
+msgid "Confirm"
+msgstr "Επιβεβαίωση"
+
+msgid "Confirm Password"
+msgstr "Επιβεβαίωση κωδικού πρόσβασης"
+
+msgid "Continue"
+msgstr "Συνέχεια"
+
+msgid "Country"
+msgstr "Χώρα"
+
+msgid "Create Backup"
+msgstr "Δημιουργία Αντίγραφου Ασφαλείας"
+
+msgid "Cron Jobs"
+msgstr "Εργασίες Cron"
+
+msgid "DKIM Support"
+msgstr "Υποστήριξη DKIM"
+
+msgid "DNS Support"
+msgstr "Υποστήριξη DNS"
+
+msgid "DNS Template"
+msgstr "Πρότυπο DNS"
+
+msgid "DROP"
+msgstr "ΑΠΟΡΡΙΨΗ"
+
+msgid "Daily"
+msgstr "Καθημερινά"
+
+msgid "Data Source"
+msgstr "Πηγή δεδομένων"
+
+msgid "Database"
+msgstr "Βάση Δεδομένων"
+
+msgid "Databases"
+msgstr "Βάσεις Δεδομένων"
+
+msgid "Date"
+msgstr "Ημερομηνία"
+
+msgid "Day"
+msgstr "Ημέρα"
+
+msgid "Dec"
+msgstr "Δεκ"
+
+msgid "Default"
+msgstr "Προκαθορισμένο"
+
+msgid "Default Language"
+msgstr "Προεπιλεγμένη Γλώσσα"
+
+msgid "Default Name Servers"
+msgstr "Προεπιλεγμένοι Διακομιστές Ονομάτων"
+
+msgid "Delete"
+msgstr "Διαγραφή"
+
+msgid "Description"
+msgstr "περιγραφή"
+
+msgid "Details"
+msgstr "Λεπτομέρειες"
+
+msgid "Directory"
+msgstr "Ευρετήριο"
+
+msgid "Disabled"
+msgstr "Απενεργοποιημένο"
+
+msgid "Disk"
+msgstr "Δίσκος"
+
+msgid "Do not store forwarded mail"
+msgstr "Μη αποθήκευση προωθημένων μηνυμάτων ταχυδρομείου"
+
+msgid "Download"
+msgstr "Κατέβασμα"
+
+msgid "Edit Package"
+msgstr "Επεξεργασία Πακέτου"
+
+msgid "Email"
+msgstr "Ηλεκτρονικό Ταχυδρομείο"
+
+msgid "Enable debug mode"
+msgstr "Ενεργοποίηση κατάστασης απασφαλμάτωσης"
+
+msgid "Enable domain redirection"
+msgstr "Ενεργοποίηση ανακατεύθυνσης τομέα"
+
+msgid "Enabled"
+msgstr "Ενεργοποιημένο"
+
+msgid "Error Log"
+msgstr "Καταγραφές Σφαλμάτων"
+
+msgid "Expiration Date"
+msgstr "Ημερομηνία Λήξης"
+
+msgid "Expire"
+msgstr "Λήγει"
+
+msgid "Feb"
+msgstr "Φεβ"
+
+msgid "Field \"%s\" can not be blank."
+msgstr "Το πεδίο \"%s\" δεν επιτρέπεται να είναι κενό."
+
+msgid "File Name"
+msgstr "Ονομα αρχείου"
+
+msgid "Firewall"
+msgstr "Τείχος Προστασίας"
+
+msgid "Forgot Password"
+msgstr "Ξεχάσατε τον κωδικό πρόσβασης"
+
+msgid "Forward to"
+msgstr "Προώθηση σε"
+
+msgid "Forwarding"
+msgstr "Προώθηση"
+
+msgid "Friday"
+msgstr "Παρασκευή"
+
+msgid "Hestia Control Panel"
+msgstr "Πίνακας Ελέγχου Hestia"
+
+msgid "Hide account from other administrators"
+msgstr "Απόκρυψη λογαριασμού από άλλους διαχειριστές"
+
+msgid "Host"
+msgstr "Πλήθος"
+
+msgid "Hour"
+msgstr "Ώρα"
+
+msgid "IP Address"
+msgstr "Διεύθυνση IP"
+
+msgid "IP or Value"
+msgstr "IP ή Τιμή"
+
+msgid "Interface"
+msgstr "Διεπαφή"
+
+msgid "Invalid username or code"
+msgstr "Λάθος όνομα χρήστη ή κωδικός."
+
+msgid "Invalid username or password"
+msgstr "Λάθος όνομα χρήστη ή κωδικός πρόσβασης."
+
+msgid "Jan"
+msgstr "Ιαν"
+
+msgid "Jobs"
+msgstr "Εργασίες"
+
+msgid "Jul"
+msgstr "Ιουλ"
+
+msgid "Jun"
+msgstr "Ιουν"
+
+msgid "Language"
+msgstr "Γλώσσα"
+
+msgid "Last 70 lines of %s.%s.log"
+msgstr "Τελευταίες 70 γραμμές του %s.%s.log"
+
+msgid "Limit"
+msgstr "Όριο"
+
+msgid "Load Average"
+msgstr "Μέσος Όρος Φόρτου"
+
+msgid "Log in"
+msgstr "Σύνδεση"
+
+msgid "Log out"
+msgstr "Αποσύνδεση"
+
+msgid "Logged in as"
+msgstr "Συνδεδεμένος ως"
+
+msgid "Login"
+msgstr "Σύνδεση"
+
+msgid "Logs"
+msgstr "Αρχεία καταγραφής"
+
+msgid "MAIL"
+msgstr "ΤΑΧΥΔΡΟΜΕΙΟ"
+
+msgid "Mail"
+msgstr "Ταχυδρομείο"
+
+msgid "Mail Accounts"
+msgstr "Λογαριασμοί Ταχυδρομείου"
+
+msgid "Mail Domains"
+msgstr "Domains Ταχυδρομείου"
+
+msgid "Mail Server"
+msgstr "Διακομιστής αλληλογραφίας"
+
+msgid "Mail Support"
+msgstr "Υποστήριξη Ταχυδρομείου"
+
+msgid "Mar"
+msgstr "Μαρ"
+
+msgid "May"
+msgstr "Μαι"
+
+msgid "Memory"
+msgstr "Μνήμη"
+
+msgid "Message"
+msgstr "Μήνυμα"
+
+msgid "Minute"
+msgstr "Λεπτό"
+
+msgid "Minutes"
+msgstr "Λεπτά"
+
+msgid "Monday"
+msgstr "Δευτέρα"
+
+msgid "Month"
+msgstr "Μήνας"
+
+msgid "Monthly"
+msgstr "Μηνιαία"
+
+msgid "More info"
+msgstr "Περισσότερες πληροφορίιες"
+
+msgid "Name"
+msgstr "Ονομα"
+
+msgid "Netmask"
+msgstr "Μάσκα Δικτύου"
+
+msgid "Network"
+msgstr "Δίκτυο"
+
+msgid "New Password"
+msgstr "Νέος κωδικός πρόσβασης"
+
+msgid "Next"
+msgstr "Επόμενο"
+
+msgid "No"
+msgstr "Όχι"
+
+msgid "No encryption"
+msgstr "Χωρίς κρυπτογράφηση"
+
+msgid "Normal password"
+msgstr "Κωδικός πρόσβασης"
+
+msgid "Notifications"
+msgstr "Ειδοποιήσεις"
+
+msgid "Nov"
+msgstr "Νοε"
+
+msgid "Oct"
+msgstr "Οκτ"
+
+msgid "Old Style"
+msgstr "Παλιό Στυλ"
+
+msgid "Operating System"
+msgstr "Λειτουργικό σύστημα"
+
+msgid "Options"
+msgstr "Επιλογές"
+
+msgid "Organization"
+msgstr "Οργανισμός"
+
+msgid "Overall Statistics"
+msgstr "Συγκεντρωτικά Στατιστικά"
+
+msgid "Owner"
+msgstr "Ιδιοκτήτης"
+
+msgid "PHP CLI Version"
+msgstr "Έκδοση γραμμής εντολών PHP"
+
+msgid "Package"
+msgstr "Πακέτο"
+
+msgid "Package Name"
+msgstr "Όνομα Πακέτου"
+
+msgid "Packages"
+msgstr "Πακέτα"
+
+msgid "Password"
+msgstr "Κωδικός"
+
+msgid "Path"
+msgstr "Μονοπάτι"
+
+msgid "Policies"
+msgstr "Πρακτικές"
+
+msgid "Policy"
+msgstr "Πρακτική"
+
+msgid "Port"
+msgstr "Θύρα"
+
+msgid "Preview"
+msgstr "Προεπισκόπιση"
+
+msgid "Priority"
+msgstr "Προτεραιότητα"
+
+msgid "Protocol"
+msgstr "Πρωτόκολλο"
+
+msgid "Proxy Extensions"
+msgstr "Πρόσθετα Διαμεσολαβητή"
+
+msgid "Proxy Support"
+msgstr "Υποστήριξη Διαμεσολαβητή"
+
+msgid "Proxy Template"
+msgstr "Πρότυπο Διαμεσολαβητή"
+
+msgid "Quick Install App"
+msgstr "Εγκατάσταση εφαρμογής"
+
+msgid "Quota"
+msgstr "Ποσοστό"
+
+msgid "RAM"
+msgstr "Μνήμη"
+
+msgid "Record"
+msgstr "Εγγραφή"
+
+msgid "Records"
+msgstr "Εγγραφές"
+
+msgid "Redirect visitors to %s"
+msgstr "Ανακατεύθυνση επισκεπτών στο %s"
+
+msgid "Refresh"
+msgstr "Φρεσκάρω"
+
+msgid "Release"
+msgstr "Κυκλοφορία"
+
+msgid "Reset"
+msgstr "Επαναφορά"
+
+msgid "Reset Code"
+msgstr "Επαναφορά κωδικού"
+
+msgid "Restart"
+msgstr "επανεκκίνηση"
+
+msgid "Restore"
+msgstr "Επαναφορά"
+
+msgid "Restore All"
+msgstr "Επαναφορά Όλων"
+
+msgid "Role"
+msgstr "Ρόλος"
+
+msgid "Run Command"
+msgstr "Εκτελέστε την εντολή"
+
+msgid "Runtime"
+msgstr "Χρόνος εκτέλεσης"
+
+msgid "SSH Access"
+msgstr "Πρόσβαση SSH"
+
+msgid "SSL Certificate"
+msgstr "Πιστοποιητικό SSL"
+
+msgid "SSL Certificate Authority / Intermediate"
+msgstr "Αρχή Πιστοποιητικού SSL / Ενδιάμεσος"
+
+msgid "Saturday"
+msgstr "Σάββατο"
+
+msgid "Save"
+msgstr "Αποθήκευση"
+
+msgid "Search"
+msgstr "Αναζήτηση"
+
+msgid "Search Results"
+msgstr "Αναζήτηση Αποτελεσμάτων"
+
+msgid "Secret Key"
+msgstr "Μυστικό Κλειδί"
+
+msgid "Security"
+msgstr "Ασφάλεια"
+
+msgid "Select"
+msgstr "Επιλογή"
+
+msgid "Select all"
+msgstr "Επιλογή όλων"
+
+msgid "Send FTP credentials to email"
+msgstr "Αποστολή διαπιστευτηρίων FTP στη διεύθυνση ηλεκτρονικού ταχυδρομείου"
+
+msgid "Send welcome email"
+msgstr "Αποστολή email καλωσορίσματος"
+
+msgid "Sep"
+msgstr "Σεπ"
+
+msgid "Service"
+msgstr "Υπηρεσία"
+
+msgid "Setup"
+msgstr "στήσετε"
+
+msgid "Shared"
+msgstr "Κοινόχρηστα"
+
+msgid "Show Certificate"
+msgstr "Προβολή πιστοποιητικού"
+
+msgid "Size"
+msgstr "Μέγεθος"
+
+msgid "Sort items"
+msgstr "Ταξινόμηση στοιχείων"
+
+msgid "Start \"%s\" failed"
+msgstr "Η έναρξη του \"%s\" απέτυχε"
+
+msgid "State"
+msgstr "Κατάσταση"
+
+msgid "State / Province"
+msgstr "Πολιτεία / Επαρχία"
+
+msgid "Statistics"
+msgstr "Στατιστικά"
+
+msgid "Statistics Authorization"
+msgstr "Εξουσιοδότηση Στατιστικών"
+
+msgid "Status"
+msgstr "Κατάσταση"
+
+msgid "Status code"
+msgstr "Κωδικός κατάστασης"
+
+msgid "Strict"
+msgstr "Αυστηρό"
+
+msgid "Submit"
+msgstr "Υποβολή"
+
+msgid "Sunday"
+msgstr "Κυριακή"
+
+msgid "System"
+msgstr "Σύστημα"
+
+msgid "System Administrator account"
+msgstr "Λογαριασμός Διαχειριστή Συστήματος"
+
+msgid "System Protection"
+msgstr "Προστασία Συστήματος"
+
+msgid "Template"
+msgstr "Πρότυπο"
+
+msgid "The system is going down for reboot NOW!"
+msgstr "Το σύστημα θα επανεκκινήσει ΤΩΡΑ!"
+
+msgid "Theme"
+msgstr "Εμφάνιση"
+
+msgid "There are currently no IP lists defined."
+msgstr "Προς το παρόν δεν έχουν καθοριστεί λίστες IP."
+
+msgid "Thursday"
+msgstr "Πέμπτη"
+
+msgid "Time"
+msgstr "χρόνος"
+
+msgid "Time Zone"
+msgstr "Ζώνη Ώρας"
+
+msgid "Top"
+msgstr "Επάνω"
+
+msgid "Tuesday"
+msgstr "Τρίτη"
+
+msgid "Type"
+msgstr "Τύπος"
+
+msgid "USER"
+msgstr "ΧΡΗΣΤΗΣ"
+
+msgid "Unlimited"
+msgstr "Απεριόριστο"
+
+msgid "Updates"
+msgstr "Ενημερώσεις"
+
+msgid "Uptime"
+msgstr "Χρόνος λειτουργίας"
+
+msgid "User"
+msgstr "Χρήστης"
+
+msgid "Username"
+msgstr "Όνομα Χρήστη"
+
+msgid "Users"
+msgstr "Χρήστες"
+
+msgid "Value"
+msgstr "Ρεκόρ"
+
+msgid "Version"
+msgstr "Έκδοση"
+
+msgid "View"
+msgstr "Προβολή"
+
+msgid "WEB"
+msgstr "ΙΣΤΟΣΕΛΙΔΑ"
+
+msgid "Web"
+msgstr "Ιστοσελίδα"
+
+msgid "Web Aliases"
+msgstr "Ψευδώνυμα Ιστοσελίδας"
+
+msgid "Web Domains"
+msgstr "Domains Ιστοσελίδας"
+
+msgid "Web Statistics"
+msgstr "Στατιστικά Ιστοσελίδας"
+
+msgid "Web Template"
+msgstr "Πρότυπο Ιστοσελίδας"
+
+msgid "Wednesday"
+msgstr "Τετάρτη"
+
+msgid "Weekly"
+msgstr "Εβδομαδιαία"
+
+msgid "Welcome"
+msgstr "Καλωσήρθατε"
+
+msgid "YYYY-MM-DD"
+msgstr "ΕΕΕΕ-MM-ΗΗ"
+
+msgid "Yearly"
+msgstr "Ετήσια"
+
+msgid "Yes"
+msgstr "Ναι"
+
+msgid "Your password must have at least"
+msgstr "Ο κωδικός πρέπει να περιλαμβάνει τουλάχιστον"
+
+msgid "database server"
+msgstr "Διακομιστής Βάσης Δεδομένων"
+
+msgid "dns server"
+msgstr "Διακομιστής DNS"
+
+msgid "ftp server"
+msgstr "Διακομιστής ftp"
+
+msgid "mail server"
+msgstr "Διακομιστής αλληλογραφίας"
+
+msgid "one or more email addresses"
+msgstr "μία ή περισσότερες διευθύνσεις ηλεκτρονικού ταχυδρομείου"
+
+msgid "per domain"
+msgstr "ανά domain"
+
+msgid "web server"
+msgstr "Διακομιστής"
+
+msgid "zstd only"
+msgstr "μόνο zstd"

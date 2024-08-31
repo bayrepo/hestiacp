@@ -108,6 +108,12 @@ $v_php_versions = array_map(function ($php_version) use ($backend_templates, $ba
 	return $phpinfo;
 }, $v_php_versions);
 
+if (!empty($_SESSION["PHP_SELECTOR"])) {
+	$v_php_selector = $_SESSION["PHP_SELECTOR"];
+} else {
+	$v_php_selector = "";
+}
+
 // List languages
 exec(HESTIA_CMD . "v-list-sys-languages json", $output, $return_var);
 $language = json_decode(implode("", $output), true);
@@ -362,6 +368,23 @@ if (!empty($_POST["save"])) {
 				unset($output);
 				//force reload
 				$require_refresh = true;
+			}
+			//Check php selector
+			$t_v_php_selector = $_POST["v_use_php_selector"] == "on"?"yes":"no";
+			if ($_POST["v_use_php_selector"] != $v_php_selector){
+				$v_set_flag = "no";
+				if ($_POST["v_use_php_selector"] == "on"){
+					$v_set_flag = "yes";
+				}
+				exec(
+					HESTIA_CMD .
+						"v-change-selector-state " .
+						$v_set_flag,
+					$output,
+					$return_var,
+				);
+				check_return_code($return_var, $output);
+				unset($output);
 			}
 		}
 	}

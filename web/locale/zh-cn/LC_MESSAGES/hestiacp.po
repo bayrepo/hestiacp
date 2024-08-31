@@ -1,0 +1,2123 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hestiacp\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-18 14:20\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: hestiacp\n"
+"X-Crowdin-Project-ID: 587405\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: hestiacp.pot\n"
+"X-Crowdin-File-ID: 3\n"
+
+msgid "%d DNS record"
+msgid_plural "%d DNS records"
+msgstr[0] "%d 条DNS记录"
+
+msgid "%d DNS zone"
+msgid_plural "%d DNS zones"
+msgstr[0] "%d 个DNS域名"
+
+msgid "%d IP address"
+msgid_plural "%d IP addresses"
+msgstr[0] "%d 个IP地址"
+
+msgid "%d IP list"
+msgid_plural "%d IP lists"
+msgstr[0] ""
+"One\n"
+"%d IP 列表\n"
+"Other\n"
+"%d IP 列表"
+
+msgid "%d SSH key"
+msgid_plural "%d SSH keys"
+msgstr[0] "%d SSH 密钥"
+
+msgid "%d backup"
+msgid_plural "%d backups"
+msgstr[0] "%d 个数据备份"
+
+msgid "%d banned IP address"
+msgid_plural "%d banned IP addresses"
+msgstr[0] "%d 个IP地址被封锁"
+
+msgid "%d cron job"
+msgid_plural "%d cron jobs"
+msgstr[0] "%d 个定时任务"
+
+msgid "%d database"
+msgid_plural "%d databases"
+msgstr[0] "%d 数据库"
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d 天"
+
+msgid "%d firewall rule"
+msgid_plural "%d firewall rules"
+msgstr[0] "%d 条防火墙规则"
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d 小时"
+
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d 个项目"
+
+msgid "%d log record"
+msgid_plural "%d log records"
+msgstr[0] "%d 条日志记录"
+
+msgid "%d mail account"
+msgid_plural "%d mail accounts"
+msgstr[0] "%d 个邮箱账户"
+
+msgid "%d mail domain"
+msgid_plural "%d mail domains"
+msgstr[0] "%d 个邮箱域名"
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d 分钟"
+
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d 个月"
+
+msgid "%d object"
+msgid_plural "%d objects"
+msgstr[0] "%d 个对象"
+
+msgid "%d package"
+msgid_plural "%d packages"
+msgstr[0] "%d 个用户方案"
+
+msgid "%d user account"
+msgid_plural "%d user accounts"
+msgstr[0] "%d 个用户账户"
+
+msgid "%d web domain"
+msgid_plural "%d web domains"
+msgstr[0] "%d 个网站域名"
+
+msgid "%s installed successfully."
+msgstr "%s 安装成功。"
+
+msgid "%s installer missing."
+msgstr "缺少 %s 安装程序。"
+
+msgid "1 number"
+msgstr "数字至少1个"
+
+msgid "1 uppercase & 1 lowercase character"
+msgstr "大小写字母至少各1个"
+
+msgid "2FA QR Code"
+msgstr "双因素认证QR码"
+
+msgid "2FA Reset Code"
+msgstr "恢复代码"
+
+msgid "2FA Token"
+msgstr "OTP 验证码"
+
+msgid "8 characters long"
+msgstr "字符至少8个"
+
+msgid "ACCEPT"
+msgstr "放行"
+
+msgid "Access Key"
+msgstr "API访问密钥"
+
+msgid "Access Keys"
+msgstr "API访问密钥"
+
+msgid "Access Log"
+msgstr "访问日志"
+
+msgid "Access key {%s} has been created successfully."
+msgstr "访问密钥 {%s} 已成功创建。"
+
+msgid "Account"
+msgstr "账户"
+
+msgid "Account Recovery Code"
+msgstr "账号恢复代码"
+
+msgid "Account has been suspended"
+msgstr "帐户已被暂停"
+
+msgid "Accounts"
+msgstr "账户"
+
+msgid "Action"
+msgstr "操作"
+
+msgid "Add Access Key"
+msgstr "添加API访问密钥"
+
+msgid "Add Cron Job"
+msgstr "添加定时任务"
+
+msgid "Add DNS Domain"
+msgstr "添加DNS域名"
+
+msgid "Add DNS Record"
+msgstr "添加DNS记录"
+
+msgid "Add Database"
+msgstr "添加数据库"
+
+msgid "Add FTP account"
+msgstr "添加 FTP 帐户"
+
+msgid "Add Firewall Rule"
+msgstr "添加防火墙规则"
+
+msgid "Add IP Address"
+msgstr "添加IP地址"
+
+msgid "Add IP Address to Banlist"
+msgstr "将 IP 地址添加到黑名单"
+
+msgid "Add IP list"
+msgstr "添加IP列表"
+
+msgid "Add Mail Account"
+msgstr "添加邮箱账户"
+
+msgid "Add Mail Domain"
+msgstr "添加邮箱域名"
+
+msgid "Add Name Server"
+msgstr "增加DNS服务器"
+
+msgid "Add Package"
+msgstr "添加用户方案"
+
+msgid "Add Record"
+msgstr "添加DNS记录"
+
+msgid "Add Rule"
+msgstr "添加防火墙规则"
+
+msgid "Add SSH Key"
+msgstr "添加SSH密钥"
+
+msgid "Add User"
+msgstr "添加用户账户"
+
+msgid "Add Web Domain"
+msgstr "添加网站域名"
+
+msgid "Add new object"
+msgstr "新增对象"
+
+msgid "Administrator"
+msgstr "管理员"
+
+msgid "Advanced Details"
+msgstr "高级详情"
+
+msgid "Advanced Options"
+msgstr "高级选项"
+
+msgid "Algorithm"
+msgstr "算法"
+
+msgid "Aliases"
+msgstr "别名"
+
+msgid "Aliases used"
+msgstr "使用的别名"
+
+msgid "All ports: 0, Range: 80-82, List: 80,443,8080,8443"
+msgstr "所有端口: 0, 范围: 80-82, 列表: 80,443,8080,8443"
+
+msgid "Allow suspended users to create new backups"
+msgstr "允许暂停用户创建新备份"
+
+msgid "Allow suspended users to log in with read-only access"
+msgstr "允许已暂停的用户以只读权限登录"
+
+msgid "Allow users to change templates when editing DNS zones"
+msgstr "允许用户编辑DNS域名时更改模板"
+
+msgid "Allow users to change templates when editing web domains"
+msgstr "允许用户编辑网站域名时更改模板"
+
+msgid "Allow users to delete log history"
+msgstr "允许用户删除日志历史记录"
+
+msgid "Allow users to edit their account details"
+msgstr "允许用户编辑其用户帐户详细信息"
+
+msgid "Allow users to reset their passwords"
+msgstr "允许用户重置密码"
+
+msgid "Allow users to view action and login history logs"
+msgstr "允许用户查看操作和登录历史记录"
+
+msgid "Allowed IP addresses for API"
+msgstr "允许访问API的IP地址"
+
+msgid "Alternate"
+msgstr "备用"
+
+msgid ""
+"An existing backup task is already running, please wait for it to complete."
+msgstr "现有备份任务已在运行，请等待完成。"
+
+msgid ""
+"An existing restoration task is already running. Please wait for it to "
+"finish before launching it again."
+msgstr "一个现有的恢复任务已在运行。请等待它完成后再重新启动。"
+
+msgid "An internal error occurred"
+msgstr "发生了内部错误"
+
+msgid "Anti-Virus"
+msgstr "病毒防护"
+
+msgid "Application Name"
+msgstr "应用名称"
+
+msgid "Apply to selected"
+msgstr "应用到所选的"
+
+msgid "Apr"
+msgstr "04月"
+
+msgid "Are you sure you want to delete %s?"
+msgstr "你确定要删除 %s？"
+
+msgid "Are you sure you want to delete IP address %s?"
+msgstr "您确定要删除IP地址 %s？"
+
+msgid "Are you sure you want to delete IP list %s?"
+msgstr "您确定要删除 IP 列表 %s？"
+
+msgid "Are you sure you want to delete SSH key %s?"
+msgstr "您确定要删除SSH密钥 %s 吗？"
+
+msgid "Are you sure you want to delete backup %s?"
+msgstr "您确定要删除备份%s？"
+
+msgid "Are you sure you want to delete database %s?"
+msgstr "您确定要删除数据库 %s？"
+
+msgid "Are you sure you want to delete domain %s?"
+msgstr "您确定要删除域%s？"
+
+msgid "Are you sure you want to delete record %s?"
+msgstr "您确定要删除记录%s吗？"
+
+msgid "Are you sure you want to delete rule %s"
+msgstr "您确定要删除规则 %s"
+
+msgid "Are you sure you want to delete the logs?"
+msgstr "您确定要删除日志？"
+
+msgid "Are you sure you want to delete user %s?"
+msgstr "你确定要删除用户 %s 吗？"
+
+msgid "Are you sure you want to suspend %s?"
+msgstr "您确定要暂停 %s ？"
+
+msgid "Are you sure you want to suspend database %s?"
+msgstr "您确定要暂停数据库 %s？"
+
+msgid "Are you sure you want to suspend domain %s?"
+msgstr "您确定要暂停域%s？"
+
+msgid "Are you sure you want to suspend rule #%s?"
+msgstr "你确定要暂停规则 #%s?"
+
+msgid "Are you sure you want to suspend user %s?"
+msgstr "您确定要暂停用户 %s？"
+
+msgid "Are you sure you want to unsuspend %s?"
+msgstr "您确定要取消暂停 %s?"
+
+msgid "Are you sure you want to unsuspend database %s?"
+msgstr "您确定要取消暂停数据库 %s？"
+
+msgid "Are you sure you want to unsuspend domain %s?"
+msgstr "您确定要取消暂停域%s？"
+
+msgid "Are you sure you want to unsuspend rule #%s?"
+msgstr "你确定你想要取消暂停规则 #%s?"
+
+msgid "Are you sure you want to unsuspend user %s?"
+msgstr "您确定要取消对用户 %s 的暂停？"
+
+msgid "Assigned Domain"
+msgstr "已分配域"
+
+msgid "Assigned User"
+msgstr "指定用户"
+
+msgid "Aug"
+msgstr "08月"
+
+msgid "Auth Log"
+msgstr "认证日志"
+
+msgid "Authentication"
+msgstr "认证"
+
+msgid "Auto Reply"
+msgstr "自动回复"
+
+msgid "Auto Update"
+msgstr "自动更新"
+
+msgid "BACKUP"
+msgstr "数据备份"
+
+msgid "BLACKLIST"
+msgstr "内置黑名单"
+
+msgid "Back"
+msgstr "返回"
+
+msgid "Backend Pool Mode"
+msgstr "后端池模式"
+
+msgid "Backend Server"
+msgstr "后端服务器"
+
+msgid "Backend Template"
+msgstr "后端模板"
+
+msgid "Backup Details"
+msgstr "备份详情"
+
+msgid "Backup Exclusions"
+msgstr "备份排除项"
+
+msgid "Backups"
+msgstr "数据备份"
+
+msgid "Ban IP Address"
+msgstr "封锁IP地址"
+
+msgid "Bandwidth"
+msgstr "流量"
+
+msgid "Banlist"
+msgstr "需封锁"
+
+msgid "Banned IP Addresses"
+msgstr "被禁止的IP地址"
+
+msgid "Basic Options"
+msgstr "基本选项"
+
+msgid "Biennially"
+msgstr "两年"
+
+msgid "Block Malicious IPs"
+msgstr "屏蔽恶意IP"
+
+msgid "Browser"
+msgstr "浏览器"
+
+msgid "CPU"
+msgstr "CPU"
+
+msgid "CRON"
+msgstr "定时任务"
+
+msgid "Cache Duration"
+msgstr "缓存持续时间"
+
+msgid "Catch-All Email"
+msgstr "Catch-All 电子邮件"
+
+msgid "Category"
+msgstr "类别"
+
+msgid "Certificate has been generated successfully."
+msgstr "证书已成功生成。"
+
+msgid "Changes have been saved."
+msgstr "更改已保存。"
+
+msgid "Charset"
+msgstr "编码"
+
+msgid "City"
+msgstr "市"
+
+msgid "City / Locality"
+msgstr "市 / 地区"
+
+msgid "Clear"
+msgstr "清除"
+
+msgid "Close debug panel"
+msgstr "关闭调试面板"
+
+msgid "Close menu"
+msgstr "关闭菜单"
+
+msgid "Code has been expired"
+msgstr "重置代码已过期"
+
+msgid "Collapse main menu"
+msgstr "收起主菜单"
+
+msgid "Command"
+msgstr "指令"
+
+msgid "Comment"
+msgstr "备注"
+
+msgid "Common Account Settings"
+msgstr "通用账户设置"
+
+msgid "Compression"
+msgstr "压缩类型"
+
+msgid "Configure"
+msgstr "配置"
+
+msgid "Configure Server"
+msgstr "配置服务器"
+
+msgid "Confirm"
+msgstr "确认"
+
+msgid "Confirm Password"
+msgstr "确认密码"
+
+msgid "Contact Name"
+msgstr "联系人姓名"
+
+msgid "Continue"
+msgstr "继续"
+
+msgid "Country"
+msgstr "国家地区"
+
+msgid "Create Backup"
+msgstr "创建数据备份"
+
+msgid "Cron Jobs"
+msgstr "定时任务"
+
+msgid "Cron job email reporting has been successfully disabled."
+msgstr "Cron 作业电子邮件报告已成功禁用。"
+
+msgid "Cron job email reporting has been successfully enabled."
+msgstr "Cron 作业电子邮件报告已成功启用。"
+
+msgid "Cron job has been created successfully."
+msgstr "Cron 作业已成功创建。"
+
+msgid "Custom Logo"
+msgstr "自定义 Logo"
+
+msgid "Custom document root"
+msgstr "自定义网站主目录"
+
+msgid "Custom logo"
+msgstr "自定义 Logo"
+
+msgid "DB"
+msgstr "数据库"
+
+msgid "DKIM"
+msgstr "DKIM"
+
+msgid "DKIM Support"
+msgstr "DKIM支持"
+
+msgid "DNS"
+msgstr "DNS 服务"
+
+msgid "DNS Cluster"
+msgstr "DNS 集群"
+
+msgid "DNS Records"
+msgstr "DNS记录"
+
+msgid "DNS Server"
+msgstr "DNS 服务器"
+
+msgid "DNS Support"
+msgstr "DNS支持"
+
+msgid "DNS Template"
+msgstr "DNS模板"
+
+msgid "DNS Zone"
+msgstr "DNS 区域"
+
+msgid "DNS Zones"
+msgstr "DNS 区域"
+
+msgid "DNS zone {%s} has been created successfully."
+msgstr "DNS 区域 {%s} 已成功创建。"
+
+msgid "DNSKEY Record"
+msgstr "DNSKey 记录"
+
+msgid "DROP"
+msgstr "阻止"
+
+msgid "DS Record"
+msgstr "DS 记录"
+
+msgid "Daily"
+msgstr "按天"
+
+msgid "Data Loss Warning!"
+msgstr "数据丢失警告！"
+
+msgid "Data Source"
+msgstr "数据来源"
+
+msgid "Database"
+msgstr "数据库名称"
+
+msgid "Database Credentials: %s"
+msgstr "数据库凭据：%s"
+
+msgid ""
+"Database has been created.\n"
+"\n"
+"Database: {{database}}\n"
+"Username: {{username}}\n"
+"Password: {{password}}\n"
+"SQL Manager: {{dbadmin}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"数据库已创建。\n"
+"\n"
+"数据库：{{database}}\n"
+"用户名： {{username}}\n"
+"密码：{{password}}\n"
+"SQL Manager： {{dbadmin}}\n"
+"\n"
+"此致敬意\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Database {%s} has been created successfully. / {Open %s}"
+msgstr "数据库 {%s} 创建成功。/ {打开%s｝"
+
+msgid "Databases"
+msgstr "数据库"
+
+msgid "Date"
+msgstr "日期"
+
+msgid "Day"
+msgstr "日"
+
+msgid "Day of Week"
+msgstr "星期"
+
+msgid "Dec"
+msgstr "12月"
+
+msgid "Default"
+msgstr "默认"
+
+msgid "Default Language"
+msgstr "默认语言"
+
+msgid "Default List Sort Order"
+msgstr "默认排列顺序"
+
+msgid "Default Name Servers"
+msgstr "默认DNS服务器"
+
+msgid "Delete"
+msgstr "删除"
+
+msgid "Delete all notifications"
+msgstr "删除所有通知"
+
+msgid "Delete notification"
+msgstr "删除通知"
+
+msgid "Description"
+msgstr "描述"
+
+msgid "Details"
+msgstr "详细信息"
+
+msgid "Directory"
+msgstr "目录"
+
+msgid "Disable Automatic Updates"
+msgstr "禁用自动更新"
+
+msgid "Disable Notifications"
+msgstr "停用通知"
+
+msgid "Disabled"
+msgstr "停用"
+
+msgid "Discard all mail"
+msgstr "丢弃所有邮件"
+
+msgid "Disk"
+msgstr "磁盘"
+
+msgid "Display / Hide shortcuts"
+msgstr "显示 / 隐藏快捷方式"
+
+msgid "Do not allow other administrators to access Server Settings"
+msgstr "不允许其他管理员访问服务器设置"
+
+msgid "Do not allow user to log in to Control Panel"
+msgstr "不允许此用户登录至管理系统"
+
+msgid "Do not store forwarded mail"
+msgstr "不保留已转发邮件"
+
+msgid "Domain"
+msgstr "域名"
+
+msgid "Domain {%s} has been created successfully."
+msgstr "域名{%s} 已成功创建。"
+
+msgid "Domains"
+msgstr "域名"
+
+msgid "Download"
+msgstr "下载"
+
+msgid "Download Database"
+msgstr "下载数据库"
+
+msgid "Download of remote backup file has been scheduled."
+msgstr "已安排下载远程备份文件。"
+
+msgid "Edit"
+msgstr "编辑"
+
+msgid "Edit Backup Exclusions"
+msgstr "编辑备份排除项"
+
+msgid "Edit Cron Job"
+msgstr "编辑定时任务"
+
+msgid "Edit DNS Domain"
+msgstr "编辑 DNS 域名"
+
+msgid "Edit DNS Record"
+msgstr "编辑DNS记录"
+
+msgid "Edit Database"
+msgstr "编辑数据库"
+
+msgid "Edit Firewall Rule"
+msgstr "编辑防火墙规则"
+
+msgid "Edit IP Address"
+msgstr "编辑 IP 地址"
+
+msgid "Edit Mail Account"
+msgstr "编辑邮箱账户"
+
+msgid "Edit Mail Domain"
+msgstr "编辑邮箱域名"
+
+msgid "Edit Package"
+msgstr "编辑用户方案"
+
+msgid "Edit User"
+msgstr "编辑用户"
+
+msgid "Email"
+msgstr "电子邮箱"
+
+msgid "Email Credentials: %s@%s"
+msgstr "电子邮件凭据： %s@%s"
+
+msgid "Email Subject"
+msgstr "邮件主题"
+
+msgid "Email login credentials to:"
+msgstr "将登录凭据发送到："
+
+msgid "Enable API access"
+msgstr "启用API访问权限"
+
+msgid "Enable Automatic Updates"
+msgstr "启用自动更新"
+
+msgid "Enable DNSSEC"
+msgstr "启用 DNSSEC"
+
+msgid "Enable Notifications"
+msgstr "启用通知"
+
+msgid "Enable SSL for this domain"
+msgstr "为该域启用SSL"
+
+msgid "Enable debug mode"
+msgstr "启用调试模式"
+
+msgid "Enable domain redirection"
+msgstr "启用域名重定向"
+
+msgid "Enable legacy API access"
+msgstr "旧版API访问权限"
+
+msgid "Enable preview features"
+msgstr "启用预览功能"
+
+msgid "Enable two-factor authentication"
+msgstr "启用双重验证"
+
+msgid "Enabled"
+msgstr "启用"
+
+msgid "Enabled for admin"
+msgstr "仅为管理员启用"
+
+msgid "Enabled for all users"
+msgstr "为所有用户启用"
+
+msgid "Enforce subdomain ownership"
+msgstr "强制子域名所有权"
+
+msgid "Enter focused element"
+msgstr "转到光标定位的菜单项"
+
+msgid "Error"
+msgstr "错误"
+
+msgid "Error Log"
+msgstr "错误日志"
+
+msgid "Error code: %s"
+msgstr "错误代码：%s"
+
+msgid "Error: Hestia did not return any output."
+msgstr "错误: Hestia 没有返回任何输出"
+
+msgid "Error: unknown record ID."
+msgstr "错误：未知记录 ID。"
+
+msgid "Every %s days"
+msgstr "每 %s 天"
+
+msgid "Every %s hours"
+msgstr "每 %s 小时"
+
+msgid "Every %s minutes"
+msgstr "每 %s 分钟"
+
+msgid "Every %s months"
+msgstr "每 %s 月"
+
+msgid "Every day"
+msgstr "每天"
+
+msgid "Every even day"
+msgstr "每个偶数日"
+
+msgid "Every even month"
+msgstr "每个偶数月"
+
+msgid "Every hour"
+msgstr "每小时"
+
+msgid "Every minute"
+msgstr "每分钟"
+
+msgid "Every month"
+msgstr "每月"
+
+msgid "Every odd day"
+msgstr "每个奇数日"
+
+msgid "Every odd month"
+msgstr "每个奇数月"
+
+msgid "Expand main menu"
+msgstr "展开主菜单"
+
+msgid "Expiration Date"
+msgstr "到期日期"
+
+msgid "Expire"
+msgstr "过期"
+
+msgid "FTP"
+msgstr "FTP"
+
+msgid "FTP Account Credentials: %s"
+msgstr "FTP 帐户凭据: %s"
+
+msgid ""
+"FTP account has been created and ready to use.\n"
+"\n"
+"Hostname: {{domain}}\n"
+"Username: {{username}}\n"
+"Password: {{password}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"FTP 帐户已创建并可供使用。\n"
+"\n"
+"主机名： {{domain}}\n"
+"用户名： {{username}}\n"
+"密码：{{password}}\n"
+"\n"
+"此致敬意\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Feb"
+msgstr "02月"
+
+msgid "Field \"%s\" can not be blank."
+msgstr "\"%s\" 不能为空"
+
+msgid "File Name"
+msgstr "文件名称"
+
+msgid "File manager"
+msgstr "文件管理器"
+
+msgid "Firewall"
+msgstr "防火墙"
+
+msgid "Firewall Rules"
+msgstr "防火墙规则"
+
+msgid "Flag"
+msgstr "标志"
+
+msgid "Focus on search"
+msgstr "搜索"
+
+msgid "For example"
+msgstr "例如"
+
+msgid "Forgot Password"
+msgstr "忘记密码"
+
+msgid "Forward to"
+msgstr "转发到"
+
+msgid "Forwarding"
+msgstr "转发"
+
+msgid "Friday"
+msgstr "周五 "
+
+msgid "General"
+msgstr "常规"
+
+msgid "Generate"
+msgstr "生成"
+
+msgid "Generate Self-Signed SSL Certificate"
+msgstr "生成自签名SSL证书"
+
+msgid "Global SMTP Relay"
+msgstr "全局SMTP中继"
+
+msgid "Go to BACKUP list"
+msgstr "转到数据备份"
+
+msgid "Go to CRON list"
+msgstr "转到定时任务"
+
+msgid "Go to DB list"
+msgstr "转到数据库"
+
+msgid "Go to DNS list"
+msgstr "转到DNS服务"
+
+msgid "Go to MAIL list"
+msgstr "转到邮箱服务"
+
+msgid "Go to WEB list"
+msgstr "转到Web服务"
+
+msgid "HESTIA"
+msgstr "Hestia"
+
+msgid ""
+"Hello {{name}},\n"
+"\n"
+"To reset your {{appname}} password, please follow this link:\n"
+"https://{{hostname}}/reset/?action=confirm&user={{user}}&code={{resetcode}}\n"
+"\n"
+"Alternatively, you may go to https://{{hostname}}/reset/?"
+"action=code&user={{user}} and enter the following reset code:\n"
+"{{resetcode}}\n"
+"\n"
+"If you did not request password reset, please ignore this message and accept "
+"our apologies.\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"您好 {{name}},\n"
+"\n"
+"要重置您的 {{appname}} 密码, 请点击此链接:\n"
+"https://{{hostname}}/reset/? ction=confirm&user={{user}}&code={{resetcode}}\n"
+"\n"
+"或者，您可以访问 https://{{hostname}}/reset/？ ction=code&user={{user}} 并输"
+"入以下重置代码：\n"
+"{{resetcode}}\n"
+"\n"
+"如果您没有请求重置密码， 请忽略此消息并接受我们的道歉。\n"
+"\n"
+"最好的问候，\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid ""
+"Hello {{name}},\n"
+"\n"
+"Your account has been created and ready to use.\n"
+"\n"
+"https://{{hostname}}/login/\n"
+"Username: {{user}}\n"
+"Password: {{password}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"您好 {{name}},\n"
+"\n"
+"您的账户已经创建并可以使用。\n"
+"\n"
+"https://{{hostname}}/login/\n"
+"\n"
+"用户名: {{user}}\n"
+"\n"
+"密码: {{password}}\n"
+"\n"
+"\n"
+"此致敬意\n"
+"\n"
+"--\n"
+"\n"
+"{{appname}}"
+
+msgid "Help"
+msgstr "寻求帮助"
+
+msgid "Hestia Control Panel"
+msgstr "Hestia 管理系统"
+
+msgid "Hide Certificate"
+msgstr "隐藏证书"
+
+msgid "Hide account from other administrators"
+msgstr "对其他管理员隐藏内置 admin 帐户"
+
+msgid "Hide link to Documentation"
+msgstr "隐藏文档链接"
+
+msgid "Host"
+msgstr "主机名称"
+
+msgid "Hostname"
+msgstr "主机名称"
+
+msgid "Hour"
+msgstr "时"
+
+msgid "Hourly"
+msgstr "小时"
+
+msgid "IMAP Settings"
+msgstr "IMAP 设置"
+
+msgid "IP Address"
+msgstr "IP地址"
+
+msgid "IP Address / IPset IP List"
+msgstr "IP 地址/ IPset IP 列表"
+
+msgid "IP Addresses"
+msgstr "IP 地址"
+
+msgid "IP List Name"
+msgstr "IP列表名称"
+
+msgid "IP Version"
+msgstr "IP 版本"
+
+msgid "IP address has been banned successfully."
+msgstr "IP地址已被成功禁止。"
+
+msgid "IP address {%s} has been created successfully."
+msgstr "IP地址{%s} 已成功创建。"
+
+msgid "IP list has been created successfully."
+msgstr "IP列表已成功创建。"
+
+msgid "IP or Value"
+msgstr "IP或值"
+
+msgid "IPVERSE"
+msgstr "由 IPverse 提供"
+
+msgid "IPs"
+msgstr "IP"
+
+msgid "IPset IP Lists"
+msgstr "IPset IP 列表"
+
+msgid "Inactive session timeout"
+msgstr "闲置会话超时"
+
+msgid "Inactive session timeout can not lower than 1 minute."
+msgstr "非活动会话超时不能低于1分钟。"
+
+msgid "Info (read-only mode): Crontab can only be edited via SSH."
+msgstr "信息 (只读模式)：Crontab 只能通过 SSH 编辑。"
+
+msgid "Information"
+msgstr "信息"
+
+msgid "Install %s"
+msgstr "安装 %s"
+
+msgid "Interface"
+msgstr "网络接口"
+
+msgid "Invalid or missing 2FA token"
+msgstr "无效或缺少 OTP 验证码"
+
+msgid "Invalid username or code"
+msgstr "无效的用户名称或重置代码"
+
+msgid "Invalid username or password"
+msgstr "无效的用户名称或密码"
+
+msgid "Issued By"
+msgstr "签发者"
+
+msgid "Issued To"
+msgstr "颁发给"
+
+msgid ""
+"It is strongly advised to {create a standard user account} before adding %s "
+"to the server due to the increased privileges the admin account possesses "
+"and potential security risks."
+msgstr ""
+"由于管理员帐户拥有更多的权限和潜在的安全风险，在将 %s 添加到服务器之前强烈建"
+"议 {create a standard user account}。"
+
+msgid "Jan"
+msgstr "01月"
+
+msgid "Jobs"
+msgstr "任务"
+
+msgid "Jul"
+msgstr "07月"
+
+msgid "Jun"
+msgstr "06月"
+
+msgid "Key Size"
+msgstr "密钥大小"
+
+msgid "Key Tag"
+msgstr "密钥标签"
+
+msgid "Key Type / Flag"
+msgstr "密钥类型 / 标志"
+
+msgid "Language"
+msgstr "语言"
+
+msgid "Last 70 lines of %s.%s.log"
+msgstr "%s.%s.log 的最新 70 行记录"
+
+msgid "Limit"
+msgstr "限制"
+
+msgid "Load Average"
+msgstr "平均负载"
+
+msgid "Loading..."
+msgstr "正在加载..."
+
+msgid "Log in"
+msgstr "登录"
+
+msgid "Log in as"
+msgstr "登录为"
+
+msgid "Log out"
+msgstr "登出"
+
+msgid "Logged in as"
+msgstr "已登录为"
+
+msgid "Login"
+msgstr "登录"
+
+msgid "Login History"
+msgstr "登录历史"
+
+msgid "Login screen style"
+msgstr "登录界面风格"
+
+msgid "Logs"
+msgstr "日志"
+
+msgid "MAIL"
+msgstr "邮箱服务"
+
+msgid "Mail"
+msgstr "邮箱"
+
+msgid "Mail Accounts"
+msgstr "邮箱账户"
+
+msgid "Mail Domain"
+msgstr "邮箱域名"
+
+msgid "Mail Domains"
+msgstr "邮箱域名"
+
+msgid "Mail Server"
+msgstr "邮箱服务器"
+
+msgid "Mail Support"
+msgstr "邮箱支持"
+
+msgid ""
+"Mail account has been created.\n"
+"\n"
+"Common Account Settings:\n"
+"Username: {{account}}@{{domain}}\n"
+"Password: {{password}}\n"
+"Webmail: {{webmail}}\n"
+"Hostname: {{hostname}}\n"
+"\n"
+"IMAP Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 993\n"
+"STARTTLS: Port 143\n"
+"No encryption: Port 143\n"
+"\n"
+"POP3 Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 995\n"
+"STARTTLS: Port 110\n"
+"No encryption: Port 110\n"
+"\n"
+"SMTP Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 465\n"
+"STARTTLS: Port 587\n"
+"No encryption: Port 25\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"邮件帐户已创建。\n"
+"\n"
+"通用账户设置：\n"
+"用户名： {{account}}@{{domain}}\n"
+"密码： {{password}}\n"
+"Webmail： {{webmail}}\n"
+"主机名： {{hostname}}\n"
+"\n"
+"IMAP 设置\n"
+"身份验证：普通密码\n"
+"SSL/TLS：端口 993\n"
+"STARTTLS：端口 143\n"
+"无加密：端口 143\n"
+"\n"
+"POP3 设置\n"
+"身份验证：普通密码\n"
+"SSL/TLS：端口 995\n"
+"STARTTLS：端口 110\n"
+"无加密：端口110\n"
+"\n"
+"SMTP 设置\n"
+"身份验证：普通密码\n"
+"SSL/TLS：端口 465\n"
+"STARTLS：端口587\n"
+"无加密：端口25\n"
+"\n"
+"致以最诚挚的问候，\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Mail account {%s@%s} has been created successfully."
+msgstr "邮件帐户{%s@%s} 已成功创建。"
+
+msgid "Mail domain {%s} has been created successfully."
+msgstr "邮件域名{%s} 已成功创建。"
+
+msgid "Manage SSH Keys"
+msgstr "管理 SSH 密钥"
+
+msgid "Mar"
+msgstr "03月"
+
+msgid "Maximum %s characters length, including prefix"
+msgstr "最大 %s 个字符长度，包括前缀"
+
+msgid "May"
+msgstr "05月"
+
+msgid "Memory"
+msgstr "内存"
+
+msgid "Message"
+msgstr "信息"
+
+msgid "Minute"
+msgstr "分"
+
+msgid "Minutes"
+msgstr "分钟"
+
+msgid "Monday"
+msgstr "周一 "
+
+msgid "Month"
+msgstr "月"
+
+msgid "Monthly"
+msgstr "按月"
+
+msgid "More info"
+msgstr "更多信息"
+
+msgid "Move backward through top menu"
+msgstr "在顶部菜单向前移动光标"
+
+msgid "Move down through elements list"
+msgstr "在当前列表向下移动光标"
+
+msgid "Move forward through top menu"
+msgstr "在顶部菜单向后移动光标"
+
+msgid "Move up through elements list"
+msgstr "在当前列表向上移动光标"
+
+msgid "MySQL Support"
+msgstr "MySQL 支持"
+
+msgid "NAT IP Association"
+msgstr "NAT IP Association"
+
+msgid "NGINX cache has been purged successfully."
+msgstr "NGINX 缓存已成功清除。"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Name Servers"
+msgstr "名称服务器"
+
+msgid "Nameserver 1"
+msgstr "域名服务器1"
+
+msgid "Nameserver 2"
+msgstr "域名服务器2"
+
+msgid "Netmask"
+msgstr "子网掩码"
+
+msgid "Network"
+msgstr "网络"
+
+msgid "New Password"
+msgstr "新密码"
+
+msgid "Next"
+msgstr "下一步"
+
+msgid "No"
+msgstr "否"
+
+msgid "No aliases"
+msgstr "无别名"
+
+msgid "No encryption"
+msgstr "不加密"
+
+msgid "No exclusions"
+msgstr "没有排除项"
+
+msgid "Normal password"
+msgstr "普通密码"
+
+msgid "Not Before"
+msgstr "以前没有"
+
+msgid "Notifications"
+msgstr "系统通知"
+
+msgid "Nov"
+msgstr "11月"
+
+msgid "Oct"
+msgstr "10月"
+
+msgid "Old Style"
+msgstr "旧版"
+
+msgid "Open Webmail"
+msgstr "打开网络邮件"
+
+msgid "Open debug panel"
+msgstr "打开调试面板"
+
+msgid "Open menu"
+msgstr "打开菜单"
+
+msgid "Operating System"
+msgstr "操作系统"
+
+msgid "Optional"
+msgstr "选项"
+
+msgid "Options"
+msgstr "选项"
+
+msgid "Organization"
+msgstr "组织名称"
+
+msgid "Overall Statistics"
+msgstr "整体统计信息"
+
+msgid "Owner"
+msgstr "归属"
+
+msgid "PHP CLI Version"
+msgstr "默认PHP-CLI版本"
+
+msgid "POP3 Settings"
+msgstr "POP3 设置"
+
+msgid "Package"
+msgstr "方案"
+
+msgid "Package Name"
+msgstr "方案名称"
+
+msgid "Package Names"
+msgstr "方案名称"
+
+msgid "Package {%s} has been created successfully."
+msgstr "包 {%s} 已成功创建。"
+
+msgid "Packages"
+msgstr "用户方案"
+
+msgid "Partially implemented"
+msgstr "部分已执行"
+
+msgid "Password"
+msgstr "密码"
+
+msgid "Password Reset at %s"
+msgstr "密码重置在 %s"
+
+msgid "Password does not match the minimum requirements."
+msgstr "密码不符合最低要求。"
+
+msgid ""
+"Password reset instructions have been sent to the email address associated "
+"with this account."
+msgstr "重置说明已发送到账户关联邮箱"
+
+msgid "Passwords do not match"
+msgstr "密码不匹配"
+
+msgid "Path"
+msgstr "路径"
+
+msgid "Permissions"
+msgstr "权限"
+
+msgid "Please enter a valid contact name."
+msgstr "请输入有效的联系人姓名。"
+
+msgid "Please enter a valid email address."
+msgstr "请输入一个有效的电子邮件地址。"
+
+msgid "Please make sure ~/web/%s/public_html is empty!"
+msgstr "请确保 Web 目录为空 ~/web/%s/public_html"
+
+msgid "Please scan the code below in your 2FA application"
+msgstr "请使用您的双重验证应用程序扫描下面的代码"
+
+msgid "Please wait 15 minutes before sending a new request."
+msgstr "请等待15分钟后再发送新请求。"
+
+msgid "Point to"
+msgstr "指向"
+
+msgid "Policies"
+msgstr "策略控制"
+
+msgid "Policy"
+msgstr "策略"
+
+msgid "Port"
+msgstr "端口"
+
+msgid "PostgreSQL Support"
+msgstr "PostgreSQL 支持"
+
+msgid "Prefix %s will be added to username automatically"
+msgstr "用户名称将自动添加 %s 前缀"
+
+msgid ""
+"Prefix %s will be automatically added to database name and database user"
+msgstr "数据库名称及用户名称将自动添加 %s 前缀"
+
+msgid "Prevent CSRF"
+msgstr "防止跨站请求伪造"
+
+msgid "Preview"
+msgstr "预览"
+
+msgid "Preview Features"
+msgstr "功能预览"
+
+msgid "Priority"
+msgstr "优先级"
+
+msgid "Protocol"
+msgstr "协议"
+
+msgid "Proxy Extensions"
+msgstr "需代理的文件扩展名"
+
+msgid "Proxy Server"
+msgstr "代理服务器"
+
+msgid "Proxy Support"
+msgstr "反向代理"
+
+msgid "Proxy Template"
+msgstr "代理模板"
+
+msgid "Public Key"
+msgstr "Public Key"
+
+msgid "Quick App Installer"
+msgstr "快捷安装应用"
+
+msgid "Quick Install App"
+msgstr "快捷安装应用"
+
+msgid "Quota"
+msgstr "配额"
+
+msgid "RAM"
+msgstr "内存"
+
+msgid "Rate Limit"
+msgstr "速率限制"
+
+msgid "Rebuild"
+msgstr "重建"
+
+msgid "Rebuild All"
+msgstr "重建全部"
+
+msgid "Rebuild Cron Jobs"
+msgstr "重建Cron任务"
+
+msgid "Rebuild DNS Zones"
+msgstr "重建DNS区域"
+
+msgid "Rebuild Databases"
+msgstr "重建数据库"
+
+msgid "Rebuild Mail Domains"
+msgstr "重建邮箱域名"
+
+msgid "Rebuild User Profile"
+msgstr "重建用户配置"
+
+msgid "Rebuild Web Domains"
+msgstr "重建网站域名"
+
+msgid "Record"
+msgstr "记录"
+
+msgid "Record {%s.%s} has been created successfully."
+msgstr "记录 {%s.%s} 已成功创建。"
+
+msgid "Records"
+msgstr "记录"
+
+msgid "Redirect visitors to %s"
+msgstr "将访问者重定向到 %s"
+
+msgid "Redirect visitors to a custom domain or web address"
+msgstr "将访问者重定向到自定义域名或网址"
+
+msgid "Refresh"
+msgstr "刷新"
+
+msgid "Refresh IP Addresses"
+msgstr "刷新IP地址"
+
+msgid "Reject Spam"
+msgstr "拒绝垃圾邮件"
+
+msgid "Release"
+msgstr "发行分支"
+
+msgid "Reset"
+msgstr "重置"
+
+msgid "Reset Code"
+msgstr "重置代码"
+
+msgid "Restart"
+msgstr "重启"
+
+msgid "Restart \"%s\" failed"
+msgstr "重新启动 \"%s\" 失败"
+
+msgid "Restore"
+msgstr "恢复"
+
+msgid "Restore All"
+msgstr "全部恢复"
+
+msgid "Restrict access to read-only for other administrators"
+msgstr "对其他管理员限制只读 admin 账户"
+
+msgid "Role"
+msgstr "角色"
+
+msgid "Rule has been created successfully."
+msgstr "规则已成功创建。"
+
+msgid "Run Command"
+msgstr "运行指令于"
+
+msgid "Runtime"
+msgstr "耗时"
+
+msgid "SMTP Relay"
+msgstr "SMTP中继"
+
+msgid "SMTP Settings"
+msgstr "SMTP 设置"
+
+msgid "SOA"
+msgstr "SOA"
+
+msgid "SSH"
+msgstr "SSH"
+
+msgid "SSH Access"
+msgstr "SSH访问控制"
+
+msgid "SSH ID"
+msgstr "SSH ID"
+
+msgid "SSH Key"
+msgstr "SSH密钥"
+
+msgid "SSH Key already exists."
+msgstr "SSH 密钥已经存在。"
+
+msgid "SSH Key has been created successfully."
+msgstr "SSH 密钥已成功创建。"
+
+msgid "SSH Keys"
+msgstr "SSH 密钥"
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "SSL CSR"
+msgstr "SSL CSR"
+
+msgid "SSL Certificate"
+msgstr "SSL证书"
+
+msgid "SSL Certificate Authority / Intermediate"
+msgstr "SSL CA证书 / 中级证书"
+
+msgid "SSL Domains"
+msgstr "SSL域名"
+
+msgid "SSL Private Key"
+msgstr "SSL 私钥"
+
+msgid "Saturday"
+msgstr "周六 "
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Save form"
+msgstr "保存表单"
+
+msgid "Search"
+msgstr "搜索"
+
+msgid "Search Results"
+msgstr "搜索结果"
+
+msgid "Secret Key"
+msgstr "私密密钥"
+
+msgid "Security"
+msgstr "Hestia 安全"
+
+msgid "Select"
+msgstr "选中"
+
+msgid "Select all"
+msgstr "全选"
+
+msgid "Send FTP credentials to email"
+msgstr "将FTP登录信息发送到邮箱"
+
+msgid "Send welcome email"
+msgstr "发送欢迎电子邮件"
+
+msgid "Sender Email Address"
+msgstr "发件人邮箱"
+
+msgid "Sender Name"
+msgstr "发送者名称"
+
+msgid "Sep"
+msgstr "09月"
+
+msgid "Server settings"
+msgstr "服务器设置"
+
+msgid "Service"
+msgstr "服务"
+
+msgid "Services"
+msgstr "服务"
+
+msgid "Set as default language for all users"
+msgstr "设置为所有用户的默认语言"
+
+msgid "Set as selected theme for all users"
+msgstr "为所有用户设置选定的风格"
+
+msgid "Setup"
+msgstr "安装"
+
+msgid "Shared"
+msgstr "共享"
+
+msgid "Shell"
+msgstr "Shell"
+
+msgid "Shortcuts"
+msgstr "快捷键"
+
+msgid "Show Certificate"
+msgstr "显示证书"
+
+msgid "Show Per User"
+msgstr "显示每个用户"
+
+msgid "Signature"
+msgstr "签名"
+
+msgid "Size"
+msgstr "大小"
+
+msgid "Sort by"
+msgstr "排序"
+
+msgid "Sort items"
+msgstr "项目排序"
+
+msgid "Spam Filter"
+msgstr "垃圾邮件过滤"
+
+msgid "Start \"%s\" failed"
+msgstr "启动 \"%s\" 失败"
+
+msgid "State"
+msgstr "州"
+
+msgid "State / Province"
+msgstr "州 / 省级"
+
+msgid "Statistics"
+msgstr "统计信息"
+
+msgid "Statistics Authorization"
+msgstr "统计授权"
+
+msgid "Status"
+msgstr "状态"
+
+msgid "Status code"
+msgstr "状态码"
+
+msgid "Stop \"%s\" failed"
+msgstr "停止 \"%s\" 失败"
+
+msgid "Strict"
+msgstr "严格"
+
+msgid "Submit"
+msgstr "提交"
+
+msgid "Sunday"
+msgstr "周日 "
+
+msgid "Support CIDR format"
+msgstr "支持 CIDR 格式"
+
+msgid "Supported variables"
+msgstr "支持的变量："
+
+msgid "Suspend"
+msgstr "暂停"
+
+msgid "Suspend All"
+msgstr "全部暂停"
+
+msgid "Suspended"
+msgstr "暂停"
+
+msgid "System"
+msgstr "系统"
+
+msgid "System Administrator account"
+msgstr "系统管理员帐户"
+
+msgid "System Protection"
+msgstr "系统保护"
+
+msgid "TTL"
+msgstr "TTL"
+
+msgid "Target domain or URL"
+msgstr "目标域名或URL"
+
+msgid ""
+"Task has been added to the queue. You will receive an email notification "
+"when your backup is ready for download."
+msgstr "任务已添加到队列。当备份准备好下载时，您将收到一封电子邮件通知。"
+
+msgid ""
+"Task has been added to the queue. You will receive an email notification "
+"when your restore has been completed."
+msgstr "任务已添加到队列。当恢复完成后，您将收到电子邮件通知。"
+
+msgid "Template"
+msgstr "模板"
+
+msgid "The system is going down for reboot NOW!"
+msgstr "系统正在关闭以立即重新启动！"
+
+msgid "Theme"
+msgstr "界面风格"
+
+msgid "There are currently no IP lists defined."
+msgstr "目前没有定义IP列表"
+
+msgid "There are currently no banned IP addresses."
+msgstr "目前没有被封锁的IP地址"
+
+msgid "Thursday"
+msgstr "周四 "
+
+msgid "Time"
+msgstr "时间"
+
+msgid "Time Zone"
+msgstr "系统时区"
+
+msgid "Title"
+msgstr "标题"
+
+msgid ""
+"To enable Let's Encrypt SSL, ensure that DNS records exist for mail.%s and "
+"%s!"
+msgstr "要启用Let's Encrypt SSL，请确保mail.%s和%s的DNS记录存在！"
+
+msgid "Top"
+msgstr "回到顶部"
+
+msgid "Triennially"
+msgstr "三年"
+
+msgid "Tuesday"
+msgstr "周二 "
+
+msgid "Type"
+msgstr "类型"
+
+msgid "Type directory name, one per line. To exlude all dirs use *"
+msgstr "输入目录名称，每行一个。要提取所有目录，请使用*"
+
+msgid ""
+"Type domain name, one per line. To exclude all domains use *. To exclude "
+"specific accounts use following format: domain.tld:info:support:postmaster"
+msgstr ""
+"输入域名，每行一个。要排除所有域名，请使用*。要排除特定的目录，请使用以下格"
+"式：domain.tld:info:support:postmaster"
+
+msgid ""
+"Type domain name, one per line. To exclude all domains use *. To exclude "
+"specific dirs use following format: domain.tld:public_html/cache:public_html/"
+"tmp"
+msgstr ""
+"输入域名，每行一个。要排除所有域名，请使用*。要排除特定的目录，请使用以下格"
+"式：domain.tld:public_html/cache:public_html/tmp"
+
+msgid "Type full database name, one per line. To exclude all databases use *"
+msgstr "输入完整的数据库名称，每行一个。要排除所有数据库，请使用*"
+
+msgid "USER"
+msgstr "用户账户"
+
+msgid "Unable to add database!"
+msgstr "无法添加数据库！ "
+
+msgid "Unable to add database! Limit reached!"
+msgstr "无法添加数据库，达到限制！"
+
+msgid "Unable to install %s, %s is not available."
+msgstr "无法安装 %s，%s 不可用。"
+
+msgid "Unlimited"
+msgstr "无限"
+
+msgid "Unsave form"
+msgstr "取消保存表单"
+
+msgid "Unsupported hash method"
+msgstr "不支持的哈希方法"
+
+msgid "Unsuspend"
+msgstr "取消暂停"
+
+msgid "Unsuspend All"
+msgstr "取消所有暂停"
+
+msgid "Update Usage Counters"
+msgstr "更新使用情况统计表"
+
+msgid "Update logo"
+msgstr "更新 Logo"
+
+msgid "Updates"
+msgstr "系统更新"
+
+msgid "Upload the files to %s"
+msgstr "上传文件到 %s"
+
+msgid "Uptime"
+msgstr "已运行时间"
+
+msgid "Use IP address allow list for login attempts"
+msgstr "对登录尝试使用IP地址白名单"
+
+msgid "Use Let's Encrypt to obtain SSL certificate"
+msgstr "使用Let's Encrypt获取SSL证书"
+
+msgid "User"
+msgstr "用户"
+
+msgid "User Directory"
+msgstr "用户目录"
+
+msgid "User {%s} has been created successfully. / {Log in as %s}"
+msgstr "用户{%s} 已成功创建。/ {以%s身份登录｝"
+
+msgid "Username"
+msgstr "用户名称"
+
+msgid "Users"
+msgstr "用户"
+
+msgid "Value"
+msgstr "记录值"
+
+msgid "Version"
+msgstr "版本"
+
+msgid "View"
+msgstr "查看"
+
+msgid "View Public DNSSEC Key"
+msgstr "查看公共DNSSEC 密钥"
+
+msgid "WEB"
+msgstr "Web 服务"
+
+msgid "Warning"
+msgstr "警告"
+
+msgid "Warning! Last chance to save secret key!"
+msgstr "警告! 保存密匙的最后机会!"
+
+msgid "Web"
+msgstr "网站"
+
+msgid "Web Aliases"
+msgstr "网站别名"
+
+msgid "Web Domain"
+msgstr "网站域名"
+
+msgid "Web Domains"
+msgstr "网站域名"
+
+msgid "Web Server"
+msgstr "Web 服务器"
+
+msgid "Web Statistics"
+msgstr "网站统计"
+
+msgid "Web Template"
+msgstr "Web模板"
+
+msgid "Webmail"
+msgstr "网页邮箱"
+
+msgid "Webmail Client"
+msgstr "网页邮箱客户端"
+
+msgid "Wednesday"
+msgstr "周三 "
+
+msgid "Weekdays (5 days)"
+msgstr "工作日(5天)"
+
+msgid "Weekend (2 days)"
+msgstr "周末(2天)"
+
+msgid "Weekly"
+msgstr "按周"
+
+msgid "Welcome"
+msgstr "欢迎您"
+
+msgid "Welcome to %s"
+msgstr "欢迎访问 %s"
+
+msgid "White Label Options"
+msgstr "白色标签选项"
+
+msgid "YYYY-MM-DD"
+msgstr "YYYY-MM-DD"
+
+msgid "Yearly"
+msgstr "按年"
+
+msgid "Yes"
+msgstr "是"
+
+msgid "You are logged out, please log in again."
+msgstr "您已注销，请重新登录。"
+
+msgid "Your password must have at least"
+msgstr "你的密码必须包含"
+
+msgid "a mail domain"
+msgstr "邮箱域名"
+
+msgid "a web domain"
+msgstr "网页域名"
+
+msgid "backend server"
+msgstr "后端服务"
+
+msgid "database server"
+msgstr "数据库服务"
+
+msgid "dns server"
+msgstr "DNS服务"
+
+msgid "email / hour"
+msgstr "封电邮/小时"
+
+msgid "email / hour / account"
+msgstr "邮件 / 小时 / 帐户"
+
+msgid "firewall"
+msgstr "防火墙服务"
+
+msgid "ftp server"
+msgstr "FTP服务"
+
+msgid "in MB"
+msgstr "MB"
+
+msgid "job scheduler"
+msgstr "执行定时任务"
+
+msgid "mail server"
+msgstr "邮箱服务"
+
+msgid "one or more email addresses"
+msgstr "一个或多个邮箱"
+
+msgid "per account / hour"
+msgstr "每账户每小时发信量"
+
+msgid "per domain"
+msgstr "每域名"
+
+msgid "phpMyAdmin Single Sign On"
+msgstr "phpMyAdmin 单点登录"
+
+msgid "reverse proxy"
+msgstr "反向代理"
+
+msgid "url, script or file"
+msgstr "URL, 脚本 \"script:/path/to/script.sh\" 或文件 \"file:/path/to/file\""
+
+msgid "web server"
+msgstr "Web服务"
+
+msgid "zstd only"
+msgstr "仅限ZSTD"

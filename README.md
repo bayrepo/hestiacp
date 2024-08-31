@@ -70,7 +70,7 @@ ssh root@your.server
 Download the installation script for the latest release:
 
 ```bash
-wget https://dev.putey.net/bayrepo/hestiacp/raw/branch/master/install/hst-install.sh
+wget https://dev.brepo.ru/bayrepo/hestiacp/raw/branch/master/install/hst-install.sh
 ```
 
 If the download fails due to an SSL validation error, please be sure you've installed the ca-certificate package on your system - you can do this with the following command:

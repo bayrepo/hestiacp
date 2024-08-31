@@ -1,7 +1,7 @@
 [hestiacp]
-name=msvsphere9 repo on repo.putey.net
-comment=msvsphere9 repo on repo.putey.net
-baseurl=https://repo.putey.net/repo/msvsphere9_preprod
+name=msvsphere9 repo on repo.brepo.ru
+comment=msvsphere9 repo on repo.brepo.ru
+baseurl=https://repo.brepo.ru/repo/msvsphere9_preprod
 enabled=1
-gpgkey=https://repo.putey.net/repo/gpgkeys/repo.putey.net.pub
+gpgkey=https://repo.brepo.ru/repo/gpgkeys/repo.brepo.ru.pub
 gpgcheck=1

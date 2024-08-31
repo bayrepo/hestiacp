@@ -1,0 +1,1075 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hestiacp\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-06 11:25\n"
+"Last-Translator: \n"
+"Language-Team: Bulgarian\n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: hestiacp\n"
+"X-Crowdin-Project-ID: 587405\n"
+"X-Crowdin-Language: bg\n"
+"X-Crowdin-File: hestiacp.pot\n"
+"X-Crowdin-File-ID: 3\n"
+
+msgid "%d DNS record"
+msgid_plural "%d DNS records"
+msgstr[0] "%d DNS запис"
+msgstr[1] "%d DNS записи"
+
+msgid "%d DNS zone"
+msgid_plural "%d DNS zones"
+msgstr[0] "%d DNS зона"
+msgstr[1] "%d DNS зони"
+
+msgid "%d IP address"
+msgid_plural "%d IP addresses"
+msgstr[0] "%d IP адрес"
+msgstr[1] "%d IP адреси"
+
+msgid "%d backup"
+msgid_plural "%d backups"
+msgstr[0] "%d архив"
+msgstr[1] "%d архиви"
+
+msgid "%d banned IP address"
+msgid_plural "%d banned IP addresses"
+msgstr[0] "%d забранени IP адреса"
+msgstr[1] "%d забранени IP адреси"
+
+msgid "%d cron job"
+msgid_plural "%d cron jobs"
+msgstr[0] "%d автоматична задача"
+msgstr[1] "%d автоматични задачи"
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d ден"
+msgstr[1] "%d дни"
+
+msgid "%d firewall rule"
+msgid_plural "%d firewall rules"
+msgstr[0] "%d правило за защитна стена"
+msgstr[1] "%d правила за защитна стена"
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d час"
+msgstr[1] "%d часове"
+
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d артикул"
+msgstr[1] "%d артикули"
+
+msgid "%d log record"
+msgid_plural "%d log records"
+msgstr[0] "%d запис на лог"
+msgstr[1] "%d записи на логове"
+
+msgid "%d mail account"
+msgid_plural "%d mail accounts"
+msgstr[0] "%d имейл потребител"
+msgstr[1] "%d имейл потребители"
+
+msgid "%d mail domain"
+msgid_plural "%d mail domains"
+msgstr[0] "%d имейл домейн"
+msgstr[1] "%d имейл домейни"
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d минута"
+msgstr[1] "%d минути"
+
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d месец"
+msgstr[1] "%d месеци"
+
+msgid "%d object"
+msgid_plural "%d objects"
+msgstr[0] "%d цел"
+msgstr[1] "%d цели"
+
+msgid "%d package"
+msgid_plural "%d packages"
+msgstr[0] "%d пакет"
+msgstr[1] "%d пакети"
+
+msgid "%d user account"
+msgid_plural "%d user accounts"
+msgstr[0] "%d потребителски име"
+msgstr[1] "%d потребителски имена"
+
+msgid "%d web domain"
+msgid_plural "%d web domains"
+msgstr[0] "%d Уеб Домейн"
+msgstr[1] "%d Уеб Домейни"
+
+msgid "1 number"
+msgstr "1 число"
+
+msgid "1 uppercase & 1 lowercase character"
+msgstr "1 главна буква и 1 малка буква"
+
+msgid "2FA Reset Code"
+msgstr "Код за възстановяване на акаунта"
+
+msgid "2FA Token"
+msgstr "OTP ПИН"
+
+msgid "8 characters long"
+msgstr "8 знака"
+
+msgid "ACCEPT"
+msgstr "ПРИЕМИ"
+
+msgid "API"
+msgstr "АПИ"
+
+msgid "Access Log"
+msgstr "Дневник за достъп"
+
+msgid "Account"
+msgstr "Акаунт"
+
+msgid "Accounts"
+msgstr "Акаунти"
+
+msgid "Action"
+msgstr "Начало"
+
+msgid "Add Cron Job"
+msgstr "Добави задача"
+
+msgid "Add DNS Domain"
+msgstr "Добави DNS домейн"
+
+msgid "Add DNS Record"
+msgstr "Добави DNS запис"
+
+msgid "Add Database"
+msgstr "Добави база данни"
+
+msgid "Add IP list"
+msgstr "Добавяне на IP списък"
+
+msgid "Add Mail Account"
+msgstr "Добави пощенски акаунт"
+
+msgid "Add Mail Domain"
+msgstr "Добави пощенски домейн"
+
+msgid "Add Package"
+msgstr "Добави пакет"
+
+msgid "Add Record"
+msgstr "Добавяне на запис"
+
+msgid "Add Rule"
+msgstr "Добави правило"
+
+msgid "Add SSH Key"
+msgstr "Добавете SSH ключ"
+
+msgid "Add User"
+msgstr "Добави потребител"
+
+msgid "Add Web Domain"
+msgstr "Добави уеб домейн"
+
+msgid "Administrator"
+msgstr "Администратор"
+
+msgid "Aliases"
+msgstr "Псевдоними"
+
+msgid "All ports: 0, Range: 80-82, List: 80,443,8080,8443"
+msgstr "Всички портове:0, Обхват:80-82, Списък: 80,443,8080,8443"
+
+msgid "Allow suspended users to log in with read-only access"
+msgstr ""
+"Позволете на преустановените потребители да влязат с достъп само за четене"
+
+msgid "Allow users to change templates when editing DNS zones"
+msgstr ""
+"Позволете на потребителите да променят шаблоните при редактиране на DNS зони"
+
+msgid "Allow users to change templates when editing web domains"
+msgstr ""
+"Позволете на потребителите да променят шаблоните при редактиране на уеб "
+"домейни"
+
+msgid "Allow users to delete log history"
+msgstr "Позволете на потребителите да изтриват историята си"
+
+msgid "Allow users to edit their account details"
+msgstr "Позволете на потребителите да редактират данните си за профила си"
+
+msgid "Allow users to reset their passwords"
+msgstr "Позволете на потребителите да възстановяват паролите си"
+
+msgid "Allow users to view action and login history logs"
+msgstr "Позволете на потребителите да преглеждат историята за действия и вход"
+
+msgid "Allowed IP addresses for API"
+msgstr "Разрешени IP адреси за API"
+
+msgid "An internal error occurred"
+msgstr "Възникна вътрешна грешка"
+
+msgid "Apr"
+msgstr "Април"
+
+msgid "Aug"
+msgstr "Август"
+
+msgid "BACKUP"
+msgstr "РЕЗЕРВНО КОПИЕ"
+
+msgid "BLACKLIST"
+msgstr "черен списък"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Backend Pool Mode"
+msgstr "Backend Pool режим"
+
+msgid "Backend Server"
+msgstr "Бекенд сървър"
+
+msgid "Backend Template"
+msgstr "Готов шаблон"
+
+msgid "Backups"
+msgstr "Резервни копия"
+
+msgid "Ban IP Address"
+msgstr "Блокирай IP адрес"
+
+msgid "Bandwidth"
+msgstr "Трафик"
+
+msgid "Banlist"
+msgstr "Черен списък"
+
+msgid "Browser"
+msgstr "Браузър"
+
+msgid "CPU"
+msgstr "Процесор"
+
+msgid "Cache Duration"
+msgstr "Продължителност на кеша"
+
+msgid "Category"
+msgstr "Категория"
+
+msgid "Charset"
+msgstr "Символи"
+
+msgid "City"
+msgstr "Град"
+
+msgid "City / Locality"
+msgstr "Град / Местност"
+
+msgid "Code has been expired"
+msgstr "Кодът е изтекъл"
+
+msgid "Command"
+msgstr "Команда"
+
+msgid "Comment"
+msgstr "Коментар"
+
+msgid "Compression"
+msgstr "Компресия"
+
+msgid "Configure"
+msgstr "Конфигурирай"
+
+msgid "Confirm"
+msgstr "Потвърди"
+
+msgid "Confirm Password"
+msgstr "Потвърди паролата"
+
+msgid "Continue"
+msgstr "Продължи"
+
+msgid "Country"
+msgstr "Страна"
+
+msgid "Create Backup"
+msgstr "Създай резервно копие"
+
+msgid "Cron Jobs"
+msgstr "Автоматични задачи"
+
+msgid "Custom document root"
+msgstr "Персонализиран път на уебдиректорията"
+
+msgid "DKIM Support"
+msgstr "DKIM поддръжка"
+
+msgid "DNS Cluster"
+msgstr "DNS клъстър"
+
+msgid "DNS Records"
+msgstr "DNS записи"
+
+msgid "DNS Server"
+msgstr "DNS сървър"
+
+msgid "DNS Support"
+msgstr "DNS поддръжка"
+
+msgid "DNS Template"
+msgstr "DNS шаблон"
+
+msgid "DROP"
+msgstr "ПУСНИ"
+
+msgid "Daily"
+msgstr "Всеки ден "
+
+msgid "Data Source"
+msgstr "Източник на данни"
+
+msgid "Database"
+msgstr "База данни"
+
+msgid "Databases"
+msgstr "Бази данни"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Day"
+msgstr "Ден"
+
+msgid "Dec"
+msgstr "Декември"
+
+msgid "Default"
+msgstr "По подразбиране"
+
+msgid "Default Language"
+msgstr "Език по подразбиране"
+
+msgid "Default Name Servers"
+msgstr "Име на сървър по подразбиране"
+
+msgid "Delete"
+msgstr "Изтрий"
+
+msgid "Description"
+msgstr "описание"
+
+msgid "Details"
+msgstr "Детайли"
+
+msgid "Directory"
+msgstr "Директория"
+
+msgid "Disabled"
+msgstr "Неактивен"
+
+msgid "Discard all mail"
+msgstr "Отказ от всички пощенски кутии"
+
+msgid "Disk"
+msgstr "Диск"
+
+msgid "Do not allow other administrators to access Server Settings"
+msgstr ""
+"Не позволявайте на други администратори да имат достъп до сървърните "
+"настройки"
+
+msgid "Do not allow user to log in to Control Panel"
+msgstr "Не позволява на потребителя да влезе в Контролния Панел"
+
+msgid "Do not store forwarded mail"
+msgstr "Не съхранявай препратена поща"
+
+msgid "Domain"
+msgstr "Домейн"
+
+msgid "Domains"
+msgstr "Домейни"
+
+msgid "Download"
+msgstr "Сваляне"
+
+msgid "Edit Package"
+msgstr "Редактиране на пакет"
+
+msgid "Email"
+msgstr "Имейл"
+
+msgid "Enable API access"
+msgstr "Активиране на API достъп"
+
+msgid "Enable debug mode"
+msgstr "Разрешаване на режим за отстраняване на грешки"
+
+msgid "Enable domain redirection"
+msgstr "Активиране на пренасочването на домейна"
+
+msgid "Enable preview features"
+msgstr "Активиране на функцията за предварителен преглед"
+
+msgid "Enabled"
+msgstr "Активиран"
+
+msgid "Enforce subdomain ownership"
+msgstr "Прилагане на собствеността на поддомейн"
+
+msgid "Enter focused element"
+msgstr "Добави елемент на фокус"
+
+msgid "Error Log"
+msgstr "Дренвик на грешки"
+
+msgid "Error: Hestia did not return any output."
+msgstr "Грешка: Hestia не върна отговор."
+
+msgid "Expiration Date"
+msgstr "Крайна дата"
+
+msgid "Expire"
+msgstr "Изтича"
+
+msgid "Feb"
+msgstr "Февруари"
+
+msgid "Field \"%s\" can not be blank."
+msgstr "Поле \"%s\" е задължително."
+
+msgid "File Name"
+msgstr "Име на файл"
+
+msgid "Firewall"
+msgstr "Защитна стена"
+
+msgid "Focus on search"
+msgstr "Фокус при търсене"
+
+msgid "Forgot Password"
+msgstr "Забравена парола"
+
+msgid "Forward to"
+msgstr "Препрати до"
+
+msgid "Forwarding"
+msgstr "Препращане"
+
+msgid "Friday"
+msgstr "Петък"
+
+msgid "Global SMTP Relay"
+msgstr "Глобални SMTP Relay настройки"
+
+msgid "Go to BACKUP list"
+msgstr "Отиди в  BACKUP списъка"
+
+msgid "Go to CRON list"
+msgstr "Отиди в CRON списъка"
+
+msgid "Go to DB list"
+msgstr "Отиди в DB списъка"
+
+msgid "Go to DNS list"
+msgstr "Отиди в DNS списъка"
+
+msgid "Go to MAIL list"
+msgstr "Отиди в MAIL списъка"
+
+msgid "Go to WEB list"
+msgstr "Отиди в WEB списъка"
+
+msgid "Hide account from other administrators"
+msgstr "Скриване на потребител от другите администратори"
+
+msgid "Host"
+msgstr "Домакин"
+
+msgid "Hostname"
+msgstr "Име на хост"
+
+msgid "Hour"
+msgstr "Час"
+
+msgid "Hourly"
+msgstr "Всеки час"
+
+msgid "IP Address"
+msgstr "IP адрес"
+
+msgid "IP or Value"
+msgstr "IP или стойност"
+
+msgid "IPs"
+msgstr "ИП–та"
+
+msgid "Inactive session timeout"
+msgstr "Времето за неактивност изтече"
+
+msgid "Interface"
+msgstr "Интерфейс"
+
+msgid "Invalid or missing 2FA token"
+msgstr "Невалиден или писващ 2FA token"
+
+msgid "Invalid username or code"
+msgstr "Невалидно потребителско име или код."
+
+msgid "Invalid username or password"
+msgstr "Невалидно потребителско име или парола."
+
+msgid "Jan"
+msgstr "Януари"
+
+msgid "Jobs"
+msgstr "Автоматични задачи"
+
+msgid "Jul"
+msgstr "Юли"
+
+msgid "Jun"
+msgstr "Юни"
+
+msgid "Language"
+msgstr "Език"
+
+msgid "Limit"
+msgstr "Лимит"
+
+msgid "Load Average"
+msgstr "Общи данни"
+
+msgid "Log in"
+msgstr "Вход"
+
+msgid "Log out"
+msgstr "Изход"
+
+msgid "Logged in as"
+msgstr "Влезли сте като"
+
+msgid "Login"
+msgstr "Вход"
+
+msgid "Login screen style"
+msgstr "Стил за потребителски вход"
+
+msgid "Logs"
+msgstr "логове"
+
+msgid "MAIL"
+msgstr "ПОЩА"
+
+msgid "Mail"
+msgstr "Поща"
+
+msgid "Mail Accounts"
+msgstr "Пощенски акаунти"
+
+msgid "Mail Domains"
+msgstr "Пощенски домейни"
+
+msgid "Mail Server"
+msgstr "Сървър за електронна поща"
+
+msgid "Mail Support"
+msgstr "Поддръжка на поща"
+
+msgid "Mar"
+msgstr "Март"
+
+msgid "May"
+msgstr "Май"
+
+msgid "Memory"
+msgstr "Памет"
+
+msgid "Message"
+msgstr "Съобщение"
+
+msgid "Minute"
+msgstr "Минута"
+
+msgid "Minutes"
+msgstr "Минути"
+
+msgid "Monday"
+msgstr "Понеделник"
+
+msgid "Month"
+msgstr "Месец"
+
+msgid "Monthly"
+msgstr "Всеки месец"
+
+msgid "Move backward through top menu"
+msgstr "Върни се назад в главното меню"
+
+msgid "Move down through elements list"
+msgstr "Придвижи се надолу в списъка с елементи"
+
+msgid "Move forward through top menu"
+msgstr "Напред към следващото меню"
+
+msgid "Move up through elements list"
+msgstr "Придвижи се нагоре в списъка с елементи"
+
+msgid "MySQL Support"
+msgstr "MySQL поддръжкс"
+
+msgid "Name"
+msgstr "Име"
+
+msgid "Network"
+msgstr "Мрежа"
+
+msgid "New Password"
+msgstr "Нова парола"
+
+msgid "Next"
+msgstr "Следващ"
+
+msgid "No"
+msgstr "Не"
+
+msgid "No encryption"
+msgstr "Без криптиране"
+
+msgid "Normal password"
+msgstr "Нормална парола"
+
+msgid "Notifications"
+msgstr "Известия"
+
+msgid "Nov"
+msgstr "Ноември"
+
+msgid "Oct"
+msgstr "Октомври"
+
+msgid "Old Style"
+msgstr "Стара Версия"
+
+msgid "Operating System"
+msgstr "Операционна система"
+
+msgid "Options"
+msgstr "Опции"
+
+msgid "Organization"
+msgstr "Организация"
+
+msgid "Overall Statistics"
+msgstr "Обща статистика"
+
+msgid "Owner"
+msgstr "Собственик"
+
+msgid "PHP CLI Version"
+msgstr "PHP CLI версия"
+
+msgid "Package"
+msgstr "Пакет"
+
+msgid "Package Name"
+msgstr "Номер на пакет"
+
+msgid "Packages"
+msgstr "Пакети"
+
+msgid "Password"
+msgstr "Парола"
+
+msgid "Path"
+msgstr "Път"
+
+msgid "Point to"
+msgstr "Сочи към"
+
+msgid "Policies"
+msgstr "Политики"
+
+msgid "Policy"
+msgstr "Правила"
+
+msgid "Port"
+msgstr "Порт"
+
+msgid "PostgreSQL Support"
+msgstr "PostgreSQL поддръжка"
+
+msgid "Prefix %s will be added to username automatically"
+msgstr "Приставката %s ще бъде добавен към потребитя автоматично"
+
+msgid ""
+"Prefix %s will be automatically added to database name and database user"
+msgstr ""
+"Префиксът %s ще бъде автоматично добавен към името на базата данни и "
+"потребителя на базата данни"
+
+msgid "Prevent CSRF"
+msgstr "Предотвратяване на CSRF"
+
+msgid "Preview"
+msgstr "Предварителен преглед"
+
+msgid "Priority"
+msgstr "Приоритет"
+
+msgid "Protocol"
+msgstr "Протокол"
+
+msgid "Proxy Extensions"
+msgstr "Прокси разширения"
+
+msgid "Proxy Server"
+msgstr "Прокси сървър"
+
+msgid "Proxy Support"
+msgstr "Прокси поддръжка"
+
+msgid "Proxy Template"
+msgstr "Прокси шаблон"
+
+msgid "Quick App Installer"
+msgstr "Бърза инсталация на APP"
+
+msgid "Quick Install App"
+msgstr "Приложение за бързо инсталиране"
+
+msgid "Quota"
+msgstr "Квота"
+
+msgid "RAM"
+msgstr "Рам Памет"
+
+msgid "Record"
+msgstr "Запис"
+
+msgid "Records"
+msgstr "Записи"
+
+msgid "Redirect visitors to %s"
+msgstr "Пренасочване на посетителите към %s"
+
+msgid "Redirect visitors to a custom domain or web address"
+msgstr "Пренасочете посетителите към персонализиран домейн или уеб адрес"
+
+msgid "Refresh"
+msgstr "Обновяване"
+
+msgid "Release"
+msgstr "Рилийз"
+
+msgid "Reset"
+msgstr "Възстанови"
+
+msgid "Reset Code"
+msgstr "Код за възстановяване"
+
+msgid "Restart"
+msgstr "Рестартирам"
+
+msgid "Restart \"%s\" failed"
+msgstr "Рестартирането \"%s\" неуспешно"
+
+msgid "Restore"
+msgstr "Възстанови "
+
+msgid "Restore All"
+msgstr "Възобнови всичко"
+
+msgid "Restrict access to read-only for other administrators"
+msgstr "Ограничаване на достъпа до четене само за други администратори"
+
+msgid "Role"
+msgstr "Права"
+
+msgid "Run Command"
+msgstr "Изпълни команда"
+
+msgid "Runtime"
+msgstr "Времетраене"
+
+msgid "SSH Access"
+msgstr "SSH достъп"
+
+msgid "SSL Certificate"
+msgstr "SSL сертификат"
+
+msgid "SSL Certificate Authority / Intermediate"
+msgstr "SSL сертификат / средно ниво"
+
+msgid "SSL Domains"
+msgstr "SSL Домейн"
+
+msgid "Saturday"
+msgstr "Събота"
+
+msgid "Save"
+msgstr "Запази"
+
+msgid "Search"
+msgstr "Търси"
+
+msgid "Search Results"
+msgstr "Търси резултати"
+
+msgid "Security"
+msgstr "Защита"
+
+msgid "Select"
+msgstr "Изберете"
+
+msgid "Select all"
+msgstr "Избери всички"
+
+msgid "Send FTP credentials to email"
+msgstr "Изпращай информация относно FTP на email"
+
+msgid "Send welcome email"
+msgstr "Изпратете имейл за добре дошли"
+
+msgid "Sep"
+msgstr "Септември"
+
+msgid "Service"
+msgstr "Обслужване"
+
+msgid "Set as default language for all users"
+msgstr "Задайте като език по подразбиране на всички потребители"
+
+msgid "Set as selected theme for all users"
+msgstr "Задайте като избрана тема за всички потребители"
+
+msgid "Setup"
+msgstr "Настройвам"
+
+msgid "Shared"
+msgstr "Споделен"
+
+msgid "Shell"
+msgstr "Шел"
+
+msgid "Shortcuts"
+msgstr "Преки пътища"
+
+msgid "Show Certificate"
+msgstr "Покажи Сертификат"
+
+msgid "Size"
+msgstr "размер"
+
+msgid "Sort items"
+msgstr "Сортиране на елементи"
+
+msgid "Start \"%s\" failed"
+msgstr "Стартирането \"%s\" неуспешно"
+
+msgid "State"
+msgstr "Щат"
+
+msgid "State / Province"
+msgstr "Щат / Провинция"
+
+msgid "Statistics"
+msgstr "Статистика"
+
+msgid "Statistics Authorization"
+msgstr "Идентификация за статистики"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Status code"
+msgstr "Статус на кода"
+
+msgid "Stop \"%s\" failed"
+msgstr "Спирането \"%s\" неуспешно"
+
+msgid "Strict"
+msgstr "Строг"
+
+msgid "Submit"
+msgstr "Изпрати"
+
+msgid "Sunday"
+msgstr "Неделя"
+
+msgid "Suspended"
+msgstr "Прекратени"
+
+msgid "System"
+msgstr "Система"
+
+msgid "System Administrator account"
+msgstr "Потебител на Системен Администатор"
+
+msgid "System Protection"
+msgstr "Защита на системата"
+
+msgid "Target domain or URL"
+msgstr "Домейн таргет или универсален указател на ресурс(URL)"
+
+msgid "Template"
+msgstr "Шаблон"
+
+msgid "The system is going down for reboot NOW!"
+msgstr "Системата ще бъде спряна за да се рестарти СЕГА!"
+
+msgid "Theme"
+msgstr "Външния вид"
+
+msgid "There are currently no IP lists defined."
+msgstr "В момента няма дефинирани IP списъци."
+
+msgid "There are currently no banned IP addresses."
+msgstr "Понастоящем няма забранени IP адреси."
+
+msgid "Thursday"
+msgstr "Четвъртък"
+
+msgid "Time"
+msgstr "Време"
+
+msgid "Time Zone"
+msgstr "Часова зона"
+
+msgid "Top"
+msgstr "Нагоре"
+
+msgid "Tuesday"
+msgstr "Вторник"
+
+msgid "Type"
+msgstr "Въведи"
+
+msgid "USER"
+msgstr "ПОТРЕБИТЕЛ"
+
+msgid "Unlimited"
+msgstr "Неограничен"
+
+msgid "Updates"
+msgstr "Обновления"
+
+msgid "Uptime"
+msgstr "Време на работа"
+
+msgid "Use IP address allow list for login attempts"
+msgstr "Използвайте IP адрес за разрешаване на списък за опити за вход"
+
+msgid "User"
+msgstr "Потребител"
+
+msgid "Username"
+msgstr "Потребителско име"
+
+msgid "Users"
+msgstr "Потребители"
+
+msgid "Value"
+msgstr "стойност"
+
+msgid "Version"
+msgstr "Версия"
+
+msgid "View"
+msgstr "Изглед"
+
+msgid "WEB"
+msgstr "УЕБ"
+
+msgid "Web"
+msgstr "Уеб"
+
+msgid "Web Aliases"
+msgstr "Уеб наименувания"
+
+msgid "Web Domains"
+msgstr "Уеб домейни"
+
+msgid "Web Server"
+msgstr "Уеб сървър"
+
+msgid "Web Statistics"
+msgstr "Уеб статистики"
+
+msgid "Web Template"
+msgstr "Уеб шаблон"
+
+msgid "Webmail Client"
+msgstr "Уебмейл Клиент"
+
+msgid "Wednesday"
+msgstr "Сряда"
+
+msgid "Weekly"
+msgstr "Всяка седмица"
+
+msgid "Welcome"
+msgstr "Добре дошли"
+
+msgid "YYYY-MM-DD"
+msgstr "ГГГГ-ММ-ДД"
+
+msgid "Yearly"
+msgstr "Всяка година"
+
+msgid "Yes"
+msgstr "Да"
+
+msgid "Your password must have at least"
+msgstr "Паролата ви трябва да има поне"
+
+msgid "backend server"
+msgstr "бекенд сървър"
+
+msgid "database server"
+msgstr "базаданни"
+
+msgid "dns server"
+msgstr "ДНС сървър"
+
+msgid "firewall"
+msgstr "Защитна стена"
+
+msgid "ftp server"
+msgstr "Фпт сървър"
+
+msgid "mail server"
+msgstr "мейл сървър"
+
+msgid "one or more email addresses"
+msgstr "един или повече email адреса"
+
+msgid "per domain"
+msgstr "на домейн"
+
+msgid "phpMyAdmin Single Sign On"
+msgstr "Еднократен вхов в phpMyAdmin "
+
+msgid "url, script or file"
+msgstr "адрес, скрипт или файл"
+
+msgid "web server"
+msgstr "уеб сървър"
+
+msgid "zstd only"
+msgstr "Само zstd"

@@ -293,7 +293,7 @@
 						<?php } ?>
 					<?php } ?>
 					<?php if (!empty($_SESSION["WEB_BACKEND"])) { ?>
-						<div class="u-mt10">
+						<div class="u-mt20">
 							<label for="v_php_default_version" class="form-label">
 								<?= _("System PHP Version") ?>
 							</label>
@@ -309,6 +309,18 @@
 									<?php } ?>
 								<?php } ?>
 							</select>
+						</div>
+						<div class="form-check u-mb5 u-mt10">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								name="v_use_php_selector"
+								id="v_use_php_selector"
+								<?= $_SESSION["PHP_SELECTOR"] == "yes" ? "checked" : "" ?>
+							>
+							<label for="v_use_php_selector">
+								<?= _("Use PHP cli selector") ?>
+							</label>
 						</div>
 					<?php } ?>
 				</div>

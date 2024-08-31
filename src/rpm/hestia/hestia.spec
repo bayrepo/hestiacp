@@ -2,7 +2,7 @@
 %global _hardened_build 1
 
 Name:              hestia
-Version:           1.8.4
+Version:           1.8.5
 Release:           1%{dist}.bayrepo.1
 Summary:           Hestia Control Panel
 Group:             System Environment/Base
@@ -26,6 +26,7 @@ Requires:          util-linux
 Requires:          zstd
 Requires:          jq
 Requires:          util-linux-user
+Requires:          hestiacp-php-selector
 Requires(post):    systemd
 Requires(preun):   systemd
 Requires(postun):  systemd
@@ -178,6 +179,10 @@ fi
 %{_tmpfilesdir}/%{name}.conf
 
 %changelog
+* Fri Aug 30 2024 Alexey Berezhok <a@bayrepo.ru> - 1.8.5-1.bayrepo.1
+- Added php cli selector support
+- Move mo/po files local
+
 * Fri Apr 5 2024 Alexey Berezhok <a@bayrepo.ru> - 1.8.1-1.bayrepo.2
 - Added fixes in rpm based installation
 - Added MSVSphere 9/8 support

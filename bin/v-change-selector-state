@@ -1,0 +1,56 @@
+#!/bin/bash
+# info: Change php selector state
+# options: STATUS
+
+# STATUS can be yes or no
+# example: v-change-selector-state yes
+
+status=$1
+
+# Includes
+# shellcheck source=/etc/hestiacp/hestia.conf
+source /etc/hestiacp/hestia.conf
+# shellcheck source=/usr/local/hestia/func/main.sh
+source $HESTIA/func/main.sh
+# load config file
+source_conf "$HESTIA/conf/hestia.conf"
+
+#----------------------------------------------------------#
+#                Variables & Functions                     #
+#----------------------------------------------------------#
+
+check_args '1' "$#" 'STATUS'
+
+if [ -f /etc/redhat-release ]; then
+	:
+else
+	log_event "$OK" "$ARGUMENTS"
+    exit 0
+fi
+
+# Perform verification if read-only mode is enabled
+check_hestia_demo_mode
+
+#----------------------------------------------------------#
+#                       Action                             #
+#----------------------------------------------------------#
+
+
+
+if [ "$status" == "yes" ]; then
+    update-alternatives --set php /usr/bin/hestiacp-php-selector
+    if [ $? -ne 0 ]; then
+        update-alternatives --install /usr/bin/php php /usr/bin/hestiacp-php-selector 1
+	    update-alternatives --set php /usr/bin/hestiacp-php-selector
+    fi
+    change_sys_value "PHP_SELECTOR" "yes"
+else
+    /usr/local/hestia_php_selector/hestiacp_php_selector_installer off
+    change_sys_value "PHP_SELECTOR" "no"
+fi
+
+#----------------------------------------------------------#
+#                       Hestia                             #
+#----------------------------------------------------------#
+
+log_event "$OK" "$ARGUMENTS"

@@ -2089,7 +2089,7 @@ if [ "$iptables" = 'yes' ]; then
 fi
 
 # Get public IP
-pub_ipv4="$(curl -fsLm5 --retry 2 --ipv4 https://ip.hestiacp.com/)"
+pub_ipv4="$(curl -fsLm5 --retry 2 --ipv4 -H "Simple-Hestiacp: yes" https://hestiaip.brepo.ru/)"
 if [ -n "$pub_ipv4" ] && [ "$pub_ipv4" != "$ip" ]; then
 	if [ -e /etc/rc.local ]; then
 		sed -i '/exit 0/d' /etc/rc.local

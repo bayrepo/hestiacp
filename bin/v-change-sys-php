@@ -83,6 +83,11 @@ if [ -f '/etc/redhat-release' ]; then
 fi
 
 update-alternatives --set php /usr/bin/php$version
+if [ $? -eq 0 ]; then
+	update-alternatives --install /usr/bin/php php /usr/bin/php$version 1
+	update-alternatives --set php /usr/bin/php$version
+fi
+/usr/bin/hestiacp-php-admin system $version
 
 #----------------------------------------------------------#
 #                       Hestia                             #

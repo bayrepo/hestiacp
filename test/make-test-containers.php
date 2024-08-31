@@ -259,7 +259,7 @@ function getHestiaVersion($branch) {
 		$control_file = file_get_contents(SHARED_HOST_FOLDER . "/hestiacp/src/rpm/hestia/control");
 	} else {
 		$control_file = file_get_contents(
-			"https://dev.putey.net/bayrepo/hestiacp/raw/branch/master/src/rpm/hestia/control",
+			"https://dev.brepo.ru/bayrepo/hestiacp/raw/branch/master/src/rpm/hestia/control",
 		);
 	}
 

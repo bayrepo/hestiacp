@@ -1,0 +1,858 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hestiacp\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-06 11:26\n"
+"Last-Translator: \n"
+"Language-Team: Czech\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\n"
+"X-Crowdin-Project: hestiacp\n"
+"X-Crowdin-Project-ID: 587405\n"
+"X-Crowdin-Language: cs\n"
+"X-Crowdin-File: hestiacp.pot\n"
+"X-Crowdin-File-ID: 3\n"
+
+msgid "%d DNS record"
+msgid_plural "%d DNS records"
+msgstr[0] "%d DNS záznam"
+msgstr[1] "%d DNS záznamy"
+msgstr[2] "%d DNS záznamů"
+msgstr[3] ""
+
+msgid "%d DNS zone"
+msgid_plural "%d DNS zones"
+msgstr[0] "%d DNS zóna"
+msgstr[1] "%d DNS zóny"
+msgstr[2] "%d DNS zón"
+msgstr[3] ""
+
+msgid "%d IP address"
+msgid_plural "%d IP addresses"
+msgstr[0] "%d IP adresa"
+msgstr[1] "%d IP adresy"
+msgstr[2] "%d IP adres"
+msgstr[3] ""
+
+msgid "%d backup"
+msgid_plural "%d backups"
+msgstr[0] "%d záloha"
+msgstr[1] "%d zálohy"
+msgstr[2] "%d záloh"
+msgstr[3] ""
+
+msgid "%d banned IP address"
+msgid_plural "%d banned IP addresses"
+msgstr[0] "%d zabanovaných adres IP"
+msgstr[1] "%d zabanované adresy IP"
+msgstr[2] "%d zabanovaných adres IP"
+msgstr[3] ""
+
+msgid "%d cron job"
+msgid_plural "%d cron jobs"
+msgstr[0] "%d cron úloha"
+msgstr[1] "%d cron úlohy"
+msgstr[2] "%d cron úloh"
+msgstr[3] ""
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d den"
+msgstr[1] "%d dny"
+msgstr[2] "%d dní"
+msgstr[3] ""
+
+msgid "%d firewall rule"
+msgid_plural "%d firewall rules"
+msgstr[0] "%d pravidlo brány firewall"
+msgstr[1] "%d pravidla brány firewall"
+msgstr[2] "%d pravidel brány firewall"
+msgstr[3] ""
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d hodina"
+msgstr[1] "%d hodiny"
+msgstr[2] "%d hodin"
+msgstr[3] ""
+
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d položka"
+msgstr[1] "%d položky"
+msgstr[2] "%d položek"
+msgstr[3] ""
+
+msgid "%d log record"
+msgid_plural "%d log records"
+msgstr[0] "%d výpis záznamů"
+msgstr[1] "%d výpisy záznamů"
+msgstr[2] "%d výpisů záznamů"
+msgstr[3] ""
+
+msgid "%d mail account"
+msgid_plural "%d mail accounts"
+msgstr[0] "%d mail účet"
+msgstr[1] "%d mail účty"
+msgstr[2] "%d mail účtů"
+msgstr[3] ""
+
+msgid "%d mail domain"
+msgid_plural "%d mail domains"
+msgstr[0] "%d mail doména"
+msgstr[1] "%d mail domény"
+msgstr[2] "%d mail domén"
+msgstr[3] ""
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minuta"
+msgstr[1] "%d minuty"
+msgstr[2] "%d minut"
+msgstr[3] ""
+
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d měsíc"
+msgstr[1] "%d měsíce"
+msgstr[2] "%d měsíců"
+msgstr[3] ""
+
+msgid "%d object"
+msgid_plural "%d objects"
+msgstr[0] "%d objekt"
+msgstr[1] "%d objekty"
+msgstr[2] "%d objektů"
+msgstr[3] ""
+
+msgid "%d package"
+msgid_plural "%d packages"
+msgstr[0] "%d balíček"
+msgstr[1] "%d balíčky"
+msgstr[2] "%d balíčků"
+msgstr[3] ""
+
+msgid "%d user account"
+msgid_plural "%d user accounts"
+msgstr[0] "%d uživatelský účet"
+msgstr[1] "%d uživatelské účty"
+msgstr[2] "%d uživatelských účtů"
+msgstr[3] ""
+
+msgid "%d web domain"
+msgid_plural "%d web domains"
+msgstr[0] "%d web doména"
+msgstr[1] "%d web domény"
+msgstr[2] "%d web domén"
+msgstr[3] ""
+
+msgid "1 number"
+msgstr "1 číslo"
+
+msgid "1 uppercase & 1 lowercase character"
+msgstr "1 velké a 1 malé písmeno"
+
+msgid "2FA Reset Code"
+msgstr "Account Recovery Code"
+
+msgid "2FA Token"
+msgstr "OTP PIN"
+
+msgid "8 characters long"
+msgstr "Délku 8 znaků"
+
+msgid "Access Key"
+msgstr "Přístupový klíč"
+
+msgid "Access Keys"
+msgstr "Přístupové klíče"
+
+msgid "Access Log"
+msgstr "Záznam přístupů"
+
+msgid "Account"
+msgstr "Účet"
+
+msgid "Account has been suspended"
+msgstr "Účet byl pozastaven"
+
+msgid "Accounts"
+msgstr "Účty"
+
+msgid "Action"
+msgstr "Akce"
+
+msgid "Add Access Key"
+msgstr "Přidat přístupový klíč"
+
+msgid "Add Cron Job"
+msgstr "Přidat Cron Job"
+
+msgid "Add DNS Domain"
+msgstr "Přidat DNS doménu"
+
+msgid "Add DNS Record"
+msgstr "Přidat záznam DNS"
+
+msgid "Add Database"
+msgstr "Přidat Databázi"
+
+msgid "Add Mail Account"
+msgstr "Přidat Mail účet"
+
+msgid "Add Mail Domain"
+msgstr "Přidat Mail doménu"
+
+msgid "Add Package"
+msgstr "Přidat balíček"
+
+msgid "Add Rule"
+msgstr "Přidat pravidlo"
+
+msgid "Add SSH Key"
+msgstr "Add SSH key"
+
+msgid "Add User"
+msgstr "Přidat uživatele"
+
+msgid "Add Web Domain"
+msgstr "Přidat web. doménu"
+
+msgid "Administrator"
+msgstr "Administrátor"
+
+msgid "Aliases"
+msgstr "Aliasy"
+
+msgid "All ports: 0, Range: 80-82, List: 80,443,8080,8443"
+msgstr "Všechny porty: 0, Rozsah: 80-82, Seznam: 80,443,8080,8443"
+
+msgid "Allow suspended users to log in with read-only access"
+msgstr ""
+"Povolit pozastaveným uživatelům přihlásit se v režimu zobrazení bez úprav"
+
+msgid "Allow users to change templates when editing DNS zones"
+msgstr "Povolit uživatelům změnu šablony DNS zón"
+
+msgid "Allow users to change templates when editing web domains"
+msgstr "Povolit uživatelům změnu šablon webových domén"
+
+msgid "Allow users to delete log history"
+msgstr "Povolit uživatelům mazat historii záznamů"
+
+msgid "Allow users to edit their account details"
+msgstr "Povolit uživatelům změnu vlastních údajů"
+
+msgid "Allow users to reset their passwords"
+msgstr "Povolit uživatelům resetování hesla"
+
+msgid "Allow users to view action and login history logs"
+msgstr "Povolit uživatelům vidět záznamy přihlašování a aktivit"
+
+msgid "Allowed IP addresses for API"
+msgstr "Povolené IP adresy pro API"
+
+msgid "An internal error occurred"
+msgstr "Nastala interní chyba"
+
+msgid "Back"
+msgstr "Zpátky"
+
+msgid "Backend Template"
+msgstr "Backend šablona"
+
+msgid "Backups"
+msgstr "Zálohy"
+
+msgid "Ban IP Address"
+msgstr "Blokovat IP"
+
+msgid "Browser"
+msgstr "Prohlížeč"
+
+msgid "Cache Duration"
+msgstr "Životnost cache"
+
+msgid "Category"
+msgstr "Kategorie"
+
+msgid "Charset"
+msgstr "Znaková sada"
+
+msgid "City"
+msgstr "Město"
+
+msgid "City / Locality"
+msgstr "Město / Obec"
+
+msgid "Code has been expired"
+msgstr "Kód vyexpiroval"
+
+msgid "Command"
+msgstr "Příkaz"
+
+msgid "Comment"
+msgstr "Komentář"
+
+msgid "Compression"
+msgstr "Komprese"
+
+msgid "Configure"
+msgstr "Konfigurovat"
+
+msgid "Confirm"
+msgstr "Potvrdit"
+
+msgid "Confirm Password"
+msgstr "Potvrdit heslo"
+
+msgid "Continue"
+msgstr "Pokračovat"
+
+msgid "Country"
+msgstr "Země"
+
+msgid "Create Backup"
+msgstr "Vytvořit zálohu"
+
+msgid "Custom document root"
+msgstr "Vlastní kořenový adresář"
+
+msgid "DKIM Support"
+msgstr "DKIM podpora"
+
+msgid "DNS Records"
+msgstr "Záznamy DNS"
+
+msgid "DNS Support"
+msgstr "DNS podpora"
+
+msgid "DNS Template"
+msgstr "DNS šablona"
+
+msgid "Daily"
+msgstr "Denně"
+
+msgid "Database"
+msgstr "Databáze"
+
+msgid "Databases"
+msgstr "Databáze"
+
+msgid "Day"
+msgstr "Den"
+
+msgid "Default"
+msgstr "Výchozí"
+
+msgid "Default Name Servers"
+msgstr "Výchozí název serveru"
+
+msgid "Details"
+msgstr "Detaily"
+
+msgid "Disabled"
+msgstr "Zakázáno"
+
+msgid "Discard all mail"
+msgstr "Zahození veškeré emaily"
+
+msgid "Do not allow other administrators to access Server Settings"
+msgstr "Zakázat ostatním administrátorům přístup k nastavení serveru"
+
+msgid "Do not allow user to log in to Control Panel"
+msgstr "Zakázat uživateli přihlásit se do administrace"
+
+msgid "Do not store forwarded mail"
+msgstr "neukládat odeslané e-maily"
+
+msgid "Domain"
+msgstr "Doména"
+
+msgid "Domains"
+msgstr "Domény"
+
+msgid "Download"
+msgstr "Stáhnout"
+
+msgid "Edit Package"
+msgstr "Upravit balíček"
+
+msgid "Enable API access"
+msgstr "Povolit přístup k API"
+
+msgid "Enable debug mode"
+msgstr "Povolit ladící mód"
+
+msgid "Enable domain redirection"
+msgstr "Povolit přesměrování domény"
+
+msgid "Enable legacy API access"
+msgstr "Povolit 'legacy API' přístup"
+
+msgid "Enable preview features"
+msgstr "Povolit předběžný přístup k funkcím"
+
+msgid "Enabled"
+msgstr "Povoleno"
+
+msgid "Enabled for admin"
+msgstr "Povoleno pro administrátory"
+
+msgid "Enabled for all users"
+msgstr "Povoleno pro všechny uživatele"
+
+msgid "Enforce subdomain ownership"
+msgstr "Vynutit vlastnictví subdomén"
+
+msgid "Error Log"
+msgstr "Záznam chyb"
+
+msgid "Error: Hestia did not return any output."
+msgstr "Chyba: Hestia nevrátila žádný výstup."
+
+msgid "Expiration Date"
+msgstr "Platnost"
+
+msgid "Expire"
+msgstr "expirace"
+
+msgid "Field \"%s\" can not be blank."
+msgstr "Pole \"%s\" nesmí být prázdné."
+
+msgid "Forward to"
+msgstr "Předat dál"
+
+msgid "Forwarding"
+msgstr "Přeposílání"
+
+msgid "Global SMTP Relay"
+msgstr "Globální SMTP Relay"
+
+msgid "Hide account from other administrators"
+msgstr "Schovat účty před ostatními administrátory"
+
+msgid "Hour"
+msgstr "Hod"
+
+msgid "IP or Value"
+msgstr "IP nebo hodnota"
+
+msgid "IPs"
+msgstr "IP adresy"
+
+msgid "Inactive session timeout"
+msgstr "Doba neaktivního sezení"
+
+msgid "Interface"
+msgstr "Rozhraní"
+
+msgid "Invalid or missing 2FA token"
+msgstr "Špatný nebo nevyplněný 2FA token"
+
+msgid "Invalid username or code"
+msgstr "Neplatné uživatelské jméno nebo kód"
+
+msgid "Invalid username or password"
+msgstr "Neplatné uživatelské jméno nebo heslo"
+
+msgid "Jobs"
+msgstr "Úlohy"
+
+msgid "Language"
+msgstr "Jazyk"
+
+msgid "Last 70 lines of %s.%s.log"
+msgstr "Posledních 70 řádků %s.%s.log"
+
+msgid "Load Average"
+msgstr "Průměrné zatížení"
+
+msgid "Log in"
+msgstr "Přihlásit se"
+
+msgid "Log out"
+msgstr "Odhlásit"
+
+msgid "Logged in as"
+msgstr "Přihlášen jako"
+
+msgid "Login"
+msgstr "Přihlášení"
+
+msgid "Login screen style"
+msgstr "Styl přihlašovací obrazovky"
+
+msgid "Logs"
+msgstr "Záznamy"
+
+msgid "Mail Accounts"
+msgstr "Mailové účty"
+
+msgid "Mail Domains"
+msgstr "Mailové domény"
+
+msgid "Mail Support"
+msgstr "Mail podpora"
+
+msgid "Memory"
+msgstr "Pamět"
+
+msgid "Message"
+msgstr "Zpráva"
+
+msgid "Minute"
+msgstr "Minuta"
+
+msgid "Month"
+msgstr "Měsíc"
+
+msgid "Monthly"
+msgstr "Měsíčně"
+
+msgid "More info"
+msgstr "Více informací"
+
+msgid "Name"
+msgstr "Jméno"
+
+msgid "Network"
+msgstr "Síť"
+
+msgid "New Password"
+msgstr "Nové heslo"
+
+msgid "Next"
+msgstr "Dalši"
+
+msgid "No"
+msgstr "Ne"
+
+msgid "Old Style"
+msgstr "Starý styl"
+
+msgid "Operating System"
+msgstr "Operační systém"
+
+msgid "Options"
+msgstr "Možnosti"
+
+msgid "Organization"
+msgstr "Organizace"
+
+msgid "Overall Statistics"
+msgstr "Celkové statistiky"
+
+msgid "Owner"
+msgstr "Vlastník"
+
+msgid "Package"
+msgstr "Balíček"
+
+msgid "Package Name"
+msgstr "Název balíčku"
+
+msgid "Packages"
+msgstr "Balíčky"
+
+msgid "Password"
+msgstr "Heslo"
+
+msgid "Permissions"
+msgstr "Oprávnění"
+
+msgid "Please make sure ~/web/%s/public_html is empty!"
+msgstr "Prosíme aby adresář ~/web%s/public_html byl prázdný!"
+
+msgid "Point to"
+msgstr "Odkazuje na"
+
+msgid "Policies"
+msgstr "Politiky"
+
+msgid "Policy"
+msgstr "Politika"
+
+msgid "Prefix %s will be added to username automatically"
+msgstr "Prefix %s bude automaticky přidán ke jménu uživatele"
+
+msgid ""
+"Prefix %s will be automatically added to database name and database user"
+msgstr "Prefix %s bude automaticky přidán k názvu a uživateli databáze"
+
+msgid "Prevent CSRF"
+msgstr "Zabránit CSRF"
+
+msgid "Preview"
+msgstr "Náhled"
+
+msgid "Priority"
+msgstr "Priorita"
+
+msgid "Protocol"
+msgstr "Protokol"
+
+msgid "Proxy Extensions"
+msgstr "Proxy rozšíření"
+
+msgid "Proxy Support"
+msgstr "Proxy podpora"
+
+msgid "Proxy Template"
+msgstr "Proxy šablona"
+
+msgid "Quick App Installer"
+msgstr "Rychlá instalace webu"
+
+msgid "Quota"
+msgstr "Kvóta"
+
+msgid "RAM"
+msgstr "Paměť RAM"
+
+msgid "Record"
+msgstr "Záznam"
+
+msgid "Records"
+msgstr "záznamy"
+
+msgid "Redirect visitors to %s"
+msgstr "Přesměrovat návštěvníky na %s"
+
+msgid "Redirect visitors to a custom domain or web address"
+msgstr "Přesměrovat návštěvníky na vlastní doménu či webovou adresu"
+
+msgid "Reset"
+msgstr "Obnovit"
+
+msgid "Reset Code"
+msgstr "Obnovit kód"
+
+msgid "Restart \"%s\" failed"
+msgstr "Restartování \"%s\" selhalo"
+
+msgid "Restore"
+msgstr "Obnovit"
+
+msgid "Restore All"
+msgstr "Obnovit vše"
+
+msgid "Restrict access to read-only for other administrators"
+msgstr "Omezit přístup na zobrazení bez úprav pro ostatní administrátory"
+
+msgid "SSH Access"
+msgstr "SSH přístup"
+
+msgid "SSL CSR"
+msgstr "CSR zádost"
+
+msgid "SSL Certificate"
+msgstr "SSL certifikát"
+
+msgid "SSL Certificate Authority / Intermediate"
+msgstr "SSL Certifikační autorita / Intermediate"
+
+msgid "SSL Domains"
+msgstr "SSL Domény"
+
+msgid "Save"
+msgstr "Uložit"
+
+msgid "Search"
+msgstr "Vyhledat"
+
+msgid "Search Results"
+msgstr "Výsledky vyhledávání"
+
+msgid "Secret Key"
+msgstr "Tajný klíč"
+
+msgid "Security"
+msgstr "Zabezpečení"
+
+msgid "Select"
+msgstr "Vybrat"
+
+msgid "Select all"
+msgstr "Vybrat vše"
+
+msgid "Send FTP credentials to email"
+msgstr "Poslat FTP přihlašovací údaje na e-mail"
+
+msgid "Send welcome email"
+msgstr "Zaslat uvítací email"
+
+msgid "Set as default language for all users"
+msgstr "Nastavit jako výchozí jak pro všechny uživatele"
+
+msgid "Set as selected theme for all users"
+msgstr "Nastavit jako výchozí vzhled pro všechny uživatele"
+
+msgid "Show Certificate"
+msgstr "Zobrazit certifikát"
+
+msgid "Sort items"
+msgstr "Seřadit položky"
+
+msgid "Start \"%s\" failed"
+msgstr "Spuštění \"%s\" selhalo"
+
+msgid "State"
+msgstr "Stát"
+
+msgid "State / Province"
+msgstr "Kraj"
+
+msgid "Statistics"
+msgstr "Statistika"
+
+msgid "Statistics Authorization"
+msgstr "Statistiky autorizace"
+
+msgid "Status code"
+msgstr "Kód stavu"
+
+msgid "Stop \"%s\" failed"
+msgstr "Zastavení \"%s\" selhalo"
+
+msgid "Strict"
+msgstr "Striktní"
+
+msgid "Submit"
+msgstr "Odeslat"
+
+msgid "Suspended"
+msgstr "Suspendován"
+
+msgid "System"
+msgstr "Systém"
+
+msgid "System Administrator account"
+msgstr "Účet systémového administrátora"
+
+msgid "System Protection"
+msgstr "Ochrana systému"
+
+msgid "Target domain or URL"
+msgstr "Cílová doména nebo URL"
+
+msgid "Template"
+msgstr "Šablona"
+
+msgid "The system is going down for reboot NOW!"
+msgstr "Systém se NYNÍ restartuje!"
+
+msgid "Theme"
+msgstr "Vzhled"
+
+msgid "There are currently no banned IP addresses."
+msgstr "V současné době neexistují žádné zablokované IP adresy."
+
+msgid ""
+"To enable Let's Encrypt SSL, ensure that DNS records exist for mail.%s and "
+"%s!"
+msgstr ""
+"Chcete-li povolit Let's Encrypt SSL, zajistěte, aby existovaly DNS záznamy "
+"pro mail.%s a %s!"
+
+msgid "Top"
+msgstr "Nahoru"
+
+msgid "Type"
+msgstr "Typ"
+
+msgid "Unable to add database!"
+msgstr "Nelze přidat databázi!"
+
+msgid "Unable to add database! Limit reached!"
+msgstr "Nelze přidat databázi z důvodu dosaženého limitu!"
+
+msgid "Unlimited"
+msgstr "Neomezené"
+
+msgid "Unsupported hash method"
+msgstr "Nepodporovaná metoda hash"
+
+msgid "Updates"
+msgstr "Aktualizace"
+
+msgid "Use IP address allow list for login attempts"
+msgstr "Povolit přihlášení pouze z určitých IP adres"
+
+msgid "User"
+msgstr "Uživatel"
+
+msgid "Username"
+msgstr "Uživatelské jméno"
+
+msgid "Users"
+msgstr "Uživatelé"
+
+msgid "Version"
+msgstr "Verze"
+
+msgid "View"
+msgstr "Zobrazit"
+
+msgid "Web Aliases"
+msgstr "Webové aliasy"
+
+msgid "Web Domains"
+msgstr "Webové domény"
+
+msgid "Web Statistics"
+msgstr "Webové statistiky"
+
+msgid "Web Template"
+msgstr "Webová šablona"
+
+msgid "Webmail Client"
+msgstr "Webmail klient"
+
+msgid "Weekly"
+msgstr "Týdně"
+
+msgid "Welcome"
+msgstr "Vítejte!"
+
+msgid "YYYY-MM-DD"
+msgstr "DD-MM-YYYY"
+
+msgid "Yearly"
+msgstr "Ročně"
+
+msgid "Yes"
+msgstr "Ano"
+
+msgid "Your password must have at least"
+msgstr "Vaše heslo musí mít alespoň"
+
+msgid "database server"
+msgstr "databázový server"
+
+msgid "job scheduler"
+msgstr "plánovač úloh"
+
+msgid "mail server"
+msgstr "email server"
+
+msgid "one or more email addresses"
+msgstr "jeden nebo více e-mailových adres"
+
+msgid "per domain"
+msgstr "podle domény"
+
+msgid "phpMyAdmin Single Sign On"
+msgstr "Jednorázové přihlášení do phpMyAdmin"
+
+msgid "reverse proxy"
+msgstr "reverzní proxy"
+
+msgid "url, script or file"
+msgstr "url, skript nebo soubor"
+
+msgid "zstd only"
+msgstr "pouze zstd"

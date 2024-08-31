@@ -1,0 +1,2351 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hestiacp\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-06 11:26\n"
+"Last-Translator: \n"
+"Language-Team: Portuguese\n"
+"Language: pt_PT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: hestiacp\n"
+"X-Crowdin-Project-ID: 587405\n"
+"X-Crowdin-Language: pt-PT\n"
+"X-Crowdin-File: hestiacp.pot\n"
+"X-Crowdin-File-ID: 3\n"
+
+msgid "%d DNS record"
+msgid_plural "%d DNS records"
+msgstr[0] "%d registo DNS"
+msgstr[1] "%d registos DNS"
+
+msgid "%d DNS zone"
+msgid_plural "%d DNS zones"
+msgstr[0] "%d zona DNS"
+msgstr[1] "%d zonas DNS"
+
+msgid "%d IP address"
+msgid_plural "%d IP addresses"
+msgstr[0] "%d endereço IP"
+msgstr[1] "%d endereços IP"
+
+msgid "%d IP list"
+msgid_plural "%d IP lists"
+msgstr[0] "%d Lista de IPs"
+msgstr[1] "%d Listas de IPs"
+
+msgid "%d SSH key"
+msgid_plural "%d SSH keys"
+msgstr[0] "%d chave SSH"
+msgstr[1] "%d chaves SSH"
+
+msgid "%d access key"
+msgid_plural "%d access keys"
+msgstr[0] "%d chave de acesso"
+msgstr[1] "%d chaves de acesso"
+
+msgid "%d backup"
+msgid_plural "%d backups"
+msgstr[0] "%d cópia de segurança"
+msgstr[1] "%d cópias de segurança"
+
+msgid "%d banned IP address"
+msgid_plural "%d banned IP addresses"
+msgstr[0] "%d endereço IP banido"
+msgstr[1] "%d endereços IP banidos"
+
+msgid "%d cron job"
+msgid_plural "%d cron jobs"
+msgstr[0] "%d cron tarefa"
+msgstr[1] "%d tarefas Cronológicas"
+
+msgid "%d database"
+msgid_plural "%d databases"
+msgstr[0] "%d base de dados"
+msgstr[1] "%d bases de dados"
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d dia"
+msgstr[1] "%d dias"
+
+msgid "%d firewall rule"
+msgid_plural "%d firewall rules"
+msgstr[0] "%d regra de firewall"
+msgstr[1] "%d regras de firewall"
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d hora"
+msgstr[1] "%d horas"
+
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d item"
+msgstr[1] "%d itens"
+
+msgid "%d log record"
+msgid_plural "%d log records"
+msgstr[0] "%d registo de histórico"
+msgstr[1] "%d registos de histórico"
+
+msgid "%d mail account"
+msgid_plural "%d mail accounts"
+msgstr[0] "%d conta de Email"
+msgstr[1] "%d contas de Email"
+
+msgid "%d mail domain"
+msgid_plural "%d mail domains"
+msgstr[0] "%d domínio de Email"
+msgstr[1] "%d domínios de Email"
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minuto"
+msgstr[1] "%d minutos"
+
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d mês"
+msgstr[1] "%d meses"
+
+msgid "%d object"
+msgid_plural "%d objects"
+msgstr[0] "%d objeto"
+msgstr[1] "%d objetos"
+
+msgid "%d package"
+msgid_plural "%d packages"
+msgstr[0] "%d pacote"
+msgstr[1] "%d pacotes"
+
+msgid "%d user account"
+msgid_plural "%d user accounts"
+msgstr[0] "%d conta de utilizador"
+msgstr[1] "%d conta de utilizadores"
+
+msgid "%d web domain"
+msgid_plural "%d web domains"
+msgstr[0] "%d domínio web"
+msgstr[1] "%d domínios web"
+
+msgid "%s installed successfully."
+msgstr "%s instalado com sucesso."
+
+msgid "%s installer missing."
+msgstr "Instalador %s faltando."
+
+msgid "1 number"
+msgstr "1 número"
+
+msgid "1 uppercase & 1 lowercase character"
+msgstr "e os caracteres devem ter 1 maiúsculo e 1 minúsculo"
+
+msgid "2FA QR Code"
+msgstr "Código QR 2FA"
+
+msgid "2FA Reset Code"
+msgstr "Código de recuperação 2FA"
+
+msgid "2FA Token"
+msgstr "Código 2FA"
+
+msgid "8 characters long"
+msgstr "8 caracteres de comprimento"
+
+msgid "ACCEPT"
+msgstr "ACEITAR"
+
+msgid "API"
+msgstr "API"
+
+msgid "Access Key"
+msgstr "Chave de acesso"
+
+msgid "Access Key ID"
+msgstr "ID de chave de acesso"
+
+msgid "Access Keys"
+msgstr "Chaves de acesso"
+
+msgid "Access Log"
+msgstr "Histórico de acesso"
+
+msgid "Access key {%s} has been created successfully."
+msgstr "A chave de acesso {%s} foi criada com sucesso."
+
+msgid "Account"
+msgstr "Conta"
+
+msgid "Account Recovery Code"
+msgstr "Código de Recuperação de Conta"
+
+msgid "Account Unlocked"
+msgstr "Conta Desbloqueada"
+
+msgid "Account has been suspended"
+msgstr "Conta foi suspensa"
+
+msgid "Accounts"
+msgstr "Contas"
+
+msgid "Action"
+msgstr "Ação"
+
+msgid "Add Access Key"
+msgstr "Adicionar chave de acesso"
+
+msgid "Add Cron Job"
+msgstr "Adicionar Tarefa Cronológica"
+
+msgid "Add DNS Domain"
+msgstr "Adicionar Domínio DNS"
+
+msgid "Add DNS Record"
+msgstr "Adicionar Registo DNS"
+
+msgid "Add DNS Zone"
+msgstr "Adicionar zona DNS"
+
+msgid "Add Database"
+msgstr "Adicionar Base de Dados"
+
+msgid "Add FTP account"
+msgstr "Adicionar conta FTP"
+
+msgid "Add Firewall Rule"
+msgstr "Adicionar Regra da Firewall"
+
+msgid "Add IP Address"
+msgstr "Adicionar endereço IP"
+
+msgid "Add IP Address to Banlist"
+msgstr "Adicionar o endereço IP à lista de banimentos"
+
+msgid "Add IP list"
+msgstr "Adicionar lista de IP's"
+
+msgid "Add IPset IP List for Firewall"
+msgstr "Adicionar lista IPset à Firewall"
+
+msgid "Add Mail Account"
+msgstr "Adicionar Conta de Email"
+
+msgid "Add Mail Domain"
+msgstr "Adicionar Domínio de Email"
+
+msgid "Add Name Server"
+msgstr "Adicionar Nome de Servidor"
+
+msgid "Add Package"
+msgstr "Adicionar Pacote"
+
+msgid "Add Record"
+msgstr "Adicionar Registo"
+
+msgid "Add Rule"
+msgstr "Adicionar Regra"
+
+msgid "Add SSH Key"
+msgstr "Adicionar chave SSH"
+
+msgid "Add User"
+msgstr "Adicionar Utilizador"
+
+msgid "Add Web Domain"
+msgstr "Adicionar Domínio Web"
+
+msgid "Add new object"
+msgstr "Adicionar um novo objeto"
+
+msgid "Additional FTP account(s)"
+msgstr "Conta(s) adicionais de FTP"
+
+msgid "Administrator"
+msgstr "Administrador"
+
+msgid "Advanced Details"
+msgstr "Detalhes Avançados"
+
+msgid "Advanced Options"
+msgstr "Opções Avançadas"
+
+msgid "Algorithm"
+msgstr "Algoritmo"
+
+msgid "Aliases"
+msgstr "Apelidos"
+
+msgid "All ports: 0, Range: 80-82, List: 80,443,8080,8443"
+msgstr "Todas as portas: 0, Intervalo: 80-82, Lista: 80,443,8080,8443"
+
+msgid "Allow suspended users to log in with read-only access"
+msgstr ""
+"Permitir que utilizadores suspensos façam login com acesso somente de leitura"
+
+msgid "Allow users to change templates when editing DNS zones"
+msgstr "Permitir que os utilizadores alterem os modelos ao editar as zonas DNS"
+
+msgid "Allow users to change templates when editing web domains"
+msgstr "Permitir que os utilizadores alterem os modelos ao editar domínios web"
+
+msgid "Allow users to delete log history"
+msgstr "Permitir que utilizadores apaguem o histórico de registos"
+
+msgid "Allow users to edit their account details"
+msgstr "Permitir que os utilizadores editem os detalhes das suas contas"
+
+msgid "Allow users to reset their passwords"
+msgstr "Permitir que os utilizadores redefinam as suas palavras passe"
+
+msgid "Allow users to view action and login history logs"
+msgstr ""
+"Permitir que os utilizadores vejam registos do histórico de ações e "
+"autenticação"
+
+msgid "Allowed IP addresses for API"
+msgstr "Permitir endereço IP para API"
+
+msgid "Alternate"
+msgstr "Alternar"
+
+msgid ""
+"An existing restoration task is already running. Please wait for it to "
+"finish before launching it again."
+msgstr ""
+"Uma tarefa de restauração existente já está em execução. Por favor, espere "
+"que a mesma termine antes de refazer o pedido."
+
+msgid "An internal error occurred"
+msgstr "Ocorreu um erro interno"
+
+msgid "Anti-Virus"
+msgstr "Anti-Vírus"
+
+msgid "Application Name"
+msgstr "Nome da Aplicação"
+
+msgid "Apply to selected"
+msgstr "Aplicar aos selecionados"
+
+msgid "Apr"
+msgstr "Abr"
+
+msgid "Are you sure you want to delete %s?"
+msgstr "Tem a certeza que quer apagar %s?"
+
+msgid "Are you sure you want to delete IP address %s?"
+msgstr "Tem a certeza de que deseja eliminar este endereço IP %s?"
+
+msgid "Are you sure you want to delete IP list %s?"
+msgstr "Tem a certeza de que quer eliminar a lista de IP %s?"
+
+msgid "Are you sure you want to delete SSH key %s?"
+msgstr "Tem a certeza que pretende eliminar a chave SSH %s?"
+
+msgid "Are you sure you want to delete access key %s?"
+msgstr "Tem a certeza que pretende eliminar a chave de acesso %s?"
+
+msgid "Are you sure you want to delete backup %s?"
+msgstr "Tem a certeza que pretende eliminar a cópias de segurança %s?"
+
+msgid "Are you sure you want to delete database %s?"
+msgstr "Tem certeza que gostaria de apagar a base de dados %s?"
+
+msgid "Are you sure you want to delete domain %s?"
+msgstr "Tem certeza que gostaria de apagar o domínio %s?"
+
+msgid "Are you sure you want to delete package %s?"
+msgstr "Tem certeza que gostaria de apagar o pacote %s?"
+
+msgid "Are you sure you want to delete record %s?"
+msgstr "Tem a certeza que quer eliminar o registo %s?"
+
+msgid "Are you sure you want to delete rule %s"
+msgstr "Tem certeza que deseja excluir a regra %s"
+
+msgid "Are you sure you want to delete the logs?"
+msgstr "Tem a certeza de que pretende eliminar os logs?"
+
+msgid "Are you sure you want to delete this cron job?"
+msgstr "Tem a certeza que deseja remover esta tarefa cronológica?"
+
+msgid "Are you sure you want to delete user %s?"
+msgstr "Tem a certeza de que pretende eliminar o utilizador %s?"
+
+msgid "Are you sure you want to leave the page?"
+msgstr "Tem a certeza que quer sair desta página?"
+
+msgid "Are you sure you want to restart %s?"
+msgstr "Tem a certeza de que pretende reiniciar %s?"
+
+msgid "Are you sure you want to start service %s?"
+msgstr "Tem a certeza que deseja iniciar o serviço %s?"
+
+msgid "Are you sure you want to stop service %s?"
+msgstr "Tem a certeza que deseja parar o serviço %s?"
+
+msgid "Are you sure you want to suspend %s?"
+msgstr "Tem certeza que quer suspender %s?"
+
+msgid "Are you sure you want to suspend database %s?"
+msgstr "Tem certeza que quer de suspender a base de dados %s?"
+
+msgid "Are you sure you want to suspend domain %s?"
+msgstr "Tem certeza que quer suspender do domínio %s?"
+
+msgid "Are you sure you want to suspend rule #%s?"
+msgstr "Tem certeza que quer suspender a regra #%s?"
+
+msgid "Are you sure you want to suspend this cron job?"
+msgstr "Tem certeza que quer suspender esta tarefa cronológica?"
+
+msgid "Are you sure you want to suspend user %s?"
+msgstr "Tem certeza que quer suspender do utilizador %s?"
+
+msgid "Are you sure you want to unsuspend %s?"
+msgstr "Tem certeza que quer de cancelar a suspensão %s?"
+
+msgid "Are you sure you want to unsuspend database %s?"
+msgstr "Tem certeza que quer de cancelar a suspensão da base de dados %s?"
+
+msgid "Are you sure you want to unsuspend domain %s?"
+msgstr "Tem certeza que quer de cancelar a suspensão do domínio %s?"
+
+msgid "Are you sure you want to unsuspend rule #%s?"
+msgstr "Tem certeza que quer de cancelar a suspensão da regra #%s?"
+
+msgid "Are you sure you want to unsuspend this cron job?"
+msgstr ""
+"Tem certeza que gostaria de cancelar a suspensão dessa tarefa cronológica?"
+
+msgid "Are you sure you want to unsuspend user %s?"
+msgstr "Tem certeza que quer de cancelar a suspensão do utilizador %s?"
+
+msgid "Assigned Domain"
+msgstr "Domínio Atribuído"
+
+msgid "Assigned User"
+msgstr "Utilizador atribuído"
+
+msgid "Aug"
+msgstr "Ago"
+
+msgid "Authentication"
+msgstr "Autenticação"
+
+msgid "Auto Reply"
+msgstr "Resposta automática"
+
+msgid "Auto Update"
+msgstr "Atualizar Automaticamente"
+
+msgid "BACKUP"
+msgstr "Cópias de Segurança"
+
+msgid "BLACKLIST"
+msgstr "LISTA NEGRA"
+
+msgid "Back"
+msgstr "Voltar"
+
+msgid "Backend Pool Mode"
+msgstr "Modo de Backend Pool"
+
+msgid "Backend Server"
+msgstr "Servidor Backend"
+
+msgid "Backend Template"
+msgstr "Modelo Backend"
+
+msgid "Backup Exclusions"
+msgstr "Exclusões de Backup"
+
+msgid "Backups"
+msgstr "Cópias de Segurança"
+
+msgid "Ban IP Address"
+msgstr "Bloquear Endereço IP"
+
+msgid "Bandwidth"
+msgstr "Largura de Banda"
+
+msgid "Banlist"
+msgstr "Lista Negra"
+
+msgid "Basic Options"
+msgstr "Opções Básicas"
+
+msgid "Block Malicious IPs"
+msgstr "Bloquear IPs maliciosos"
+
+msgid "Browser"
+msgstr "Navegador"
+
+msgid "CPU"
+msgstr "CPU"
+
+msgid "CRON"
+msgstr "Tarefa Cronológica"
+
+msgid "Cache Duration"
+msgstr "Duração de cache"
+
+msgid "Catch-All Email"
+msgstr "E-mail captura-tudo"
+
+msgid "Category"
+msgstr "Categoria"
+
+msgid "Certificate has been generated successfully."
+msgstr "O Certificado foi gerado com sucesso."
+
+msgid "Changes have been saved."
+msgstr "As alterações foram guardadas."
+
+msgid "Charset"
+msgstr "Codificação"
+
+msgid "City"
+msgstr "Cidade"
+
+msgid "City / Locality"
+msgstr "Cidade / Localidade"
+
+msgid "Clear"
+msgstr "Limpar"
+
+msgid "Close debug panel"
+msgstr "Fechar painel de depuração"
+
+msgid "Close menu"
+msgstr "Fechar menu"
+
+msgid "Code has been expired"
+msgstr "Código expirou"
+
+msgid "Collapse main menu"
+msgstr "Ocultar menu principal"
+
+msgid "Command"
+msgstr "Comando"
+
+msgid "Comment"
+msgstr "Comentário"
+
+msgid "Common Account Settings"
+msgstr "Configurações comuns da conta"
+
+msgid "Compression"
+msgstr "Compressão"
+
+msgid "Compression Level"
+msgstr "Nível de compressão"
+
+msgid "Configure"
+msgstr "Configurar"
+
+msgid "Configure Server"
+msgstr "Configurar Servidor"
+
+msgid "Confirm"
+msgstr "Confirmar"
+
+msgid "Confirm Password"
+msgstr "Confirmar senha"
+
+msgid "Contact Name"
+msgstr "Nome de Contacto"
+
+msgid "Continue"
+msgstr "Continuar"
+
+msgid "Country"
+msgstr "País"
+
+msgid "Create Backup"
+msgstr "Criar Backup"
+
+msgid "Cron Jobs"
+msgstr "Tarefas CRON"
+
+msgid "Cron job email reporting has been successfully disabled."
+msgstr ""
+"O relatório de e-mail dos trabalhos Cronológicos foi desativado com sucesso."
+
+msgid "Cron job email reporting has been successfully enabled."
+msgstr ""
+"O relatório de e-mail dos trabalhos Cronológicos foi ativado com sucesso."
+
+msgid "Cron job has been created successfully."
+msgstr "A tarefa Cronológica foi criada com sucesso."
+
+msgid "Current Number of Databases"
+msgstr "Número atual de Bases de dados"
+
+msgid "Custom Logo"
+msgstr "Logotipo personalizado"
+
+msgid "Custom document root"
+msgstr "Raiz do documento personalizado"
+
+msgid "Custom logo"
+msgstr "Logotipo personalizado"
+
+msgid "DB"
+msgstr "BD"
+
+msgid "DKIM"
+msgstr "DKIM"
+
+msgid "DKIM Support"
+msgstr "Suporte a DKIM"
+
+msgid "DNS"
+msgstr "DNS"
+
+msgid "DNS Cluster"
+msgstr "Grupo DNS"
+
+msgid "DNS Records"
+msgstr "Registos DNS"
+
+msgid "DNS Server"
+msgstr "Server DNS"
+
+msgid "DNS Support"
+msgstr "Suporte DNS"
+
+msgid "DNS Sync User"
+msgstr "Utilizador de Sincronização DNS"
+
+msgid "DNS Template"
+msgstr "Modelo do DNS"
+
+msgid "DNS Zone"
+msgstr "Zona DNS"
+
+msgid "DNS Zones"
+msgstr "Zonas DNS"
+
+msgid "DNS zone {%s} has been created successfully."
+msgstr "A Zona DNS {%s} foi criada com sucesso."
+
+msgid "DNSKEY Record"
+msgstr "Registo DNSKEY"
+
+msgid "DNSSEC"
+msgstr "DNSSEC"
+
+msgid "DROP"
+msgstr "APAGAR"
+
+msgid "DS Record"
+msgstr "Registo DS"
+
+msgid "Daily"
+msgstr "Diariamente"
+
+msgid "Data Loss Warning!"
+msgstr "Aviso de perda de dados!"
+
+msgid "Data Source"
+msgstr "Fonte de dados"
+
+msgid "Database"
+msgstr "Base de Dados"
+
+msgid "Database Credentials: %s"
+msgstr "Credenciais da Base de Dados: %s"
+
+msgid ""
+"Database has been created.\n"
+"\n"
+"Database: {{database}}\n"
+"Username: {{username}}\n"
+"Password: {{password}}\n"
+"SQL Manager: {{dbadmin}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"A Base de dados foi criada.\n"
+"\n"
+"Base de dados: {{database}}\n"
+"Utilizador: {{username}}\n"
+"Palavra-passe: {{password}}\n"
+"Gestor SQL: {{dbadmin}}\n"
+"\n"
+"Com os melhores cumprimentos,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Database {%s} has been created successfully. / {Open %s}"
+msgstr "A Base de dados {%s} foi criada com sucesso. / {Abrir %s}"
+
+msgid "Databases"
+msgstr "Base de Dados"
+
+msgid "Date"
+msgstr "Data"
+
+msgid "Day"
+msgstr "Dia"
+
+msgid "Day of Week"
+msgstr "Dia da Semana"
+
+msgid "Dec"
+msgstr "Dez"
+
+msgid "Default"
+msgstr "Padrão"
+
+msgid "Default Language"
+msgstr "Idioma padrão"
+
+msgid "Default List Sort Order"
+msgstr "Ordem de Classificação padrão da lista"
+
+msgid "Default Name Servers"
+msgstr "Name Servers padrão"
+
+msgid "Delete"
+msgstr "Apagar"
+
+msgid "Delete all notifications"
+msgstr "Apagar todas as notificações"
+
+msgid "Delete notification"
+msgstr "Apagar notificação"
+
+msgid "Description"
+msgstr "Descrição"
+
+msgid "Details"
+msgstr "Detalhes"
+
+msgid "Directory"
+msgstr "Diretório"
+
+msgid "Disable Automatic Updates"
+msgstr "Desativar Atualizações Automáticas"
+
+msgid "Disable Notifications"
+msgstr "Desativar Notificações"
+
+msgid "Disabled"
+msgstr "Desativado"
+
+msgid "Discard all mail"
+msgstr "Descartar todos os Emails"
+
+msgid "Disk"
+msgstr "Disco"
+
+msgid "Display / Hide shortcuts"
+msgstr "Mostrar / Esconder atalhos"
+
+msgid "Do not allow other administrators to access Server Settings"
+msgstr ""
+"Não permitir que outros administradores acedam às configurações do servidor"
+
+msgid "Do not allow user to log in to Control Panel"
+msgstr "Não permitir que o utilizador faça login no Painel de Controle"
+
+msgid "Do not store forwarded mail"
+msgstr "Não armazenar email encaminhado"
+
+msgid "Domain"
+msgstr "Domínio"
+
+msgid "Domain {%s} has been created successfully."
+msgstr "O domínio {%s} foi criado com sucesso."
+
+msgid "Domains"
+msgstr "Domínios"
+
+msgid "Download"
+msgstr "Descarregar"
+
+msgid "Download Database"
+msgstr "Descarregar Base de Dados"
+
+msgid "Download of remote backup file has been scheduled."
+msgstr ""
+"O Descarregamento do arquivo de cópia de segurança remoto foi agendado."
+
+msgid "Duplicate"
+msgstr "Duplicar"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Edit Backup Exclusions"
+msgstr "Editar Exclusões de Cópia de Segurança"
+
+msgid "Edit Cron Job"
+msgstr "Editar Tarefa Cronológica"
+
+msgid "Edit DNS Domain"
+msgstr "Editar Domínio DNS"
+
+msgid "Edit DNS Record"
+msgstr "Editar Registo DNS"
+
+msgid "Edit Database"
+msgstr "Editar Base de dados"
+
+msgid "Edit Domain"
+msgstr "Editar Domínio"
+
+msgid "Edit Firewall Rule"
+msgstr "Editar Regra da Firewall"
+
+msgid "Edit IP Address"
+msgstr "Editar endereço IP"
+
+msgid "Edit Mail Account"
+msgstr "Editar Conta de E-mail"
+
+msgid "Edit Mail Domain"
+msgstr "Editar Domínio de E-mail"
+
+msgid "Edit Package"
+msgstr "Editar pacote"
+
+msgid "Edit User"
+msgstr "Editar Utilizador"
+
+msgid "Edit Web Domain"
+msgstr "Editar Domínio Web"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Email Credentials: %s@%s"
+msgstr "Credenciais de e-mail: %s@%s"
+
+msgid "Email Subject"
+msgstr "Assunto do E-mail"
+
+msgid "Email login credentials to:"
+msgstr "Enviar Credenciais de login para o email:"
+
+msgid "Enable API access"
+msgstr "Permite acesso da API  "
+
+msgid "Enable Automatic Updates"
+msgstr "Ativar Atualizações Automáticas"
+
+msgid "Enable DNSSEC"
+msgstr "Ativar DNSSEC"
+
+msgid "Enable FastCGI cache"
+msgstr "Ativar cache FastCGI"
+
+msgid "Enable HTTP Strict Transport Security (HSTS)"
+msgstr "Ativar HTTP Strict Transport Security (HSTS)"
+
+msgid "Enable Notifications"
+msgstr "Ativar Notificações"
+
+msgid "Enable SSL for this domain"
+msgstr "Ativar SSL para este domínio"
+
+msgid "Enable automatic HTTPS redirection"
+msgstr "Ativar redirecionamento automático de HTTPS"
+
+msgid "Enable debug mode"
+msgstr "Ativar modo de depuração"
+
+msgid "Enable domain redirection"
+msgstr "Ativar redirecionamento de domínio"
+
+msgid "Enable legacy API access"
+msgstr "Ativar acesso à API antiga"
+
+msgid "Enable preview features"
+msgstr "Ativar recursos de antevisão"
+
+msgid "Enable two-factor authentication"
+msgstr "Ativar a autenticação de dois fatores"
+
+msgid "Enabled"
+msgstr "Ativo"
+
+msgid "Enabled PHP Versions"
+msgstr "Versões do PHP Ativas"
+
+msgid "Enabled for admin"
+msgstr "Ativado para admin"
+
+msgid "Enabled for all users"
+msgstr "Ativado para todos os utilizadores"
+
+msgid "Enforce subdomain ownership"
+msgstr "Forçar a propriedade do subdomínio "
+
+msgid "Enter focused element"
+msgstr "Insira o elemento focado"
+
+msgid "Error Log"
+msgstr "Registo de Erros"
+
+msgid "Error code: %s"
+msgstr "Código de Erro: %s"
+
+msgid "Error: %s update failed."
+msgstr "Erro: Atualização %s falhou."
+
+msgid "Error: Hestia did not return any output."
+msgstr "Erro: O painel Hestia não retornou nenhum valor."
+
+msgid "Error: unable to copy package."
+msgstr "Erro: não foi possível copiar o pacote."
+
+msgid "Error: unknown record ID."
+msgstr "Erro: ID de registro desconhecido."
+
+msgid "Every %s days"
+msgstr "A cada %s dias"
+
+msgid "Every %s hours"
+msgstr "A cada %s horas"
+
+msgid "Every %s minutes"
+msgstr "A cada %s minutos"
+
+msgid "Every %s months"
+msgstr "A cada %s meses"
+
+msgid "Every day"
+msgstr "Diariamente"
+
+msgid "Every even day"
+msgstr "Todos os dias pares"
+
+msgid "Every even month"
+msgstr "A cada mês par"
+
+msgid "Every hour"
+msgstr "A cada hora"
+
+msgid "Every minute"
+msgstr "A cada minuto"
+
+msgid "Every month"
+msgstr "Todos os meses"
+
+msgid "Every odd day"
+msgstr "Todos os dias ímpares"
+
+msgid "Every odd month"
+msgstr "A cada mês Ímpar"
+
+msgid "Expand main menu"
+msgstr "Expandir menu principal"
+
+msgid "Expiration Date"
+msgstr "Data até Expirar"
+
+msgid "Expire"
+msgstr "Expira"
+
+msgid "FTP"
+msgstr "FTP"
+
+msgid "FTP Account Credentials: %s"
+msgstr "Credenciais Conta FTP: %s"
+
+msgid ""
+"FTP account has been created and ready to use.\n"
+"\n"
+"Hostname: {{domain}}\n"
+"Username: {{username}}\n"
+"Password: {{password}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"A conta FTP foi criada com sucesso e está prota a usar.\n"
+"\n"
+"Nome do Domínio: {{domain}}\n"
+"Utilizador: {{username}}\n"
+"Palavra-passe: {{password}}\n"
+"\n"
+"Com os melhores Cumprimentos,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Failed"
+msgstr "Falhou"
+
+msgid "Feb"
+msgstr "Fev"
+
+msgid "Field \"%s\" can not be blank."
+msgstr "O Campo \"%s\" não pode estar vazio."
+
+msgid "File Manager"
+msgstr "Gestor de Ficheiros"
+
+msgid "File Name"
+msgstr "Nome do ficheiro"
+
+msgid "File System Disk Quota"
+msgstr "Quota do Disco de Sistema de Ficheiros"
+
+msgid "File manager"
+msgstr "Gestor de Ficheiros"
+
+msgid "Firewall"
+msgstr "Firewall"
+
+msgid "Focus on search"
+msgstr "Foco na pesquisa"
+
+msgid "For example"
+msgstr "Por Exemplo"
+
+msgid "Forgot Password"
+msgstr "Esqueci-me da senha"
+
+msgid "Forgot Token"
+msgstr "Esqueci o Token"
+
+msgid "Forward to"
+msgstr "Encaminhar para"
+
+msgid "Forwarding"
+msgstr "Encaminhar"
+
+msgid "Friday"
+msgstr "Sexta"
+
+msgid "General"
+msgstr "Geral"
+
+msgid "Generate"
+msgstr "Criar"
+
+msgid "Generate Self-Signed SSL Certificate"
+msgstr "Criar um Certificado assinado por si"
+
+msgid "Global SMTP Relay"
+msgstr "Redireccionamento global de SMTP"
+
+msgid "Go to BACKUP list"
+msgstr "Ir para a lista de BACKUP"
+
+msgid "Go to CRON list"
+msgstr "Ir para a lista de tarefas Cronológicas"
+
+msgid "Go to DB list"
+msgstr "Ir para a lista de Bases de Dados"
+
+msgid "Go to DNS list"
+msgstr "Ir para a lista de DNS"
+
+msgid "Go to MAIL list"
+msgstr "Ir para a lista de EMAIL"
+
+msgid "Go to WEB list"
+msgstr "Ir para a lista WEB"
+
+msgid "HESTIA"
+msgstr "HestiaCP"
+
+msgid ""
+"Hello {{name}},\n"
+"\n"
+"To reset your {{appname}} password, please follow this link:\n"
+"https://{{hostname}}/reset/?action=confirm&user={{user}}&code={{resetcode}}\n"
+"\n"
+"Alternatively, you may go to https://{{hostname}}/reset/?"
+"action=code&user={{user}} and enter the following reset code:\n"
+"{{resetcode}}\n"
+"\n"
+"If you did not request password reset, please ignore this message and accept "
+"our apologies.\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"Olá {{name}},\n"
+"\n"
+"Para redefinir a sua palavra-passe da aplicação {{appname}}, por favor siga "
+"este endereço:\n"
+"https://{{hostname}}/reset/?action=confirm&user={{user}}&code={{resetcode}}\n"
+"\n"
+"Alternativamente, pode ir ao endereço https://{{hostname}}/reset/?"
+"action=code&user={{user}} e colocar o código de redefinição de palavra-"
+"passe:\n"
+"{{resetcode}}\n"
+"\n"
+"Se não pediu a redefinição da palavra-passe, por favor ignore esta mensagem "
+"e aceite as nossas sinceras desculpas.\n"
+"\n"
+"Com os melhores cumprimentos,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid ""
+"Hello {{name}},\n"
+"\n"
+"Your account has been created and ready to use.\n"
+"\n"
+"https://{{hostname}}/login/\n"
+"Username: {{user}}\n"
+"Password: {{password}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"Olá {{name}},\n"
+"\n"
+"A sua conta foi criada e está pronta a ser usada.\n"
+"\n"
+"https://{{hostname}}/login/\n"
+"Utilizador: {{user}}\n"
+"Palavra-passe: {{password}}\n"
+"\n"
+"Com os melhores cumprimentos,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Help"
+msgstr "Ajuda"
+
+msgid "Hestia Control Panel"
+msgstr "Painel de Controlo Hestia"
+
+msgid "Hestia core package"
+msgstr "Servidor principal Hestia"
+
+msgid "Hestia internal php interpreter"
+msgstr "Servidor PHP interno Hestia"
+
+msgid "Hestia internal web server"
+msgstr "Servidor Web interno Hestia"
+
+msgid "Hide Certificate"
+msgstr "Ocultar certificado"
+
+msgid "Hide account from other administrators"
+msgstr "Ocultar conta de outros administradores"
+
+msgid "Hide link to Documentation"
+msgstr "Ocultar o endereço para a documentação"
+
+msgid "Host"
+msgstr "Anfitrião"
+
+msgid "Hostname"
+msgstr "Nome de Servidor"
+
+msgid "Hour"
+msgstr "Hora"
+
+msgid "Hourly"
+msgstr "A cada hora"
+
+msgid "IMAP Settings"
+msgstr "Definições de IMAP"
+
+msgid "IP Address"
+msgstr "Endereço de IP"
+
+msgid "IP Address / IPset IP List"
+msgstr "Endereço IP / Lista de IPset"
+
+msgid "IP List Name"
+msgstr "Nome da lista de IPs"
+
+msgid "IP Version"
+msgstr "Versão do IP"
+
+msgid "IP address has been banned successfully."
+msgstr "O Endereço IP foi banido com sucesso."
+
+msgid "IP address {%s} has been created successfully."
+msgstr "Endereço IP {%s} foi criada com sucesso."
+
+msgid "IP list has been created successfully."
+msgstr "A lista de IPs foi criada com sucesso."
+
+msgid "IP or Value"
+msgstr "IP ou Valor"
+
+msgid "IPVERSE"
+msgstr "IPVERSE"
+
+msgid "IPs"
+msgstr "IP's"
+
+msgid "IPset IP Lists"
+msgstr "Listas IP do IPset"
+
+msgid "ISO 3166-1 alpha-2 two-letter code"
+msgstr "ISO 3166-1 alpha-2 código de duas letras"
+
+msgid ""
+"If the aliases changes, Let's Encrypt will obtain a new SSL certificate."
+msgstr ""
+"Se os alias web mudarem, o Let's Encrypt obterá um novo certificado SSL."
+
+msgid "Inactive session timeout"
+msgstr "Tempo limite de sessão expirado"
+
+msgid "Inactive session timeout can not lower than 1 minute."
+msgstr "O Tempo limite de sessão inativa não pode ser inferior a 1 minuto."
+
+msgid "Info (read-only mode): Crontab can only be edited via SSH."
+msgstr "Informação (modo de leitura): Crontab só pode ser editado via SSH."
+
+msgid "Install %s"
+msgstr "Instalar %s"
+
+msgid "Interface"
+msgstr "Interface"
+
+msgid "Invalid or missing 2FA token"
+msgstr "Código 2FA inválido ou ausente"
+
+msgid "Invalid username or code"
+msgstr "Utilizador ou código inválidos"
+
+msgid "Invalid username or password"
+msgstr "Utilizador ou senha inválidos"
+
+msgid "Issued By"
+msgstr "Emitido Por"
+
+msgid "Issued To"
+msgstr "Emitido para"
+
+msgid ""
+"It is strongly advised to {create a standard user account} before adding %s "
+"to the server due to the increased privileges the admin account possesses "
+"and potential security risks."
+msgstr ""
+"É fortemente recomendável {create a standard user account} antes de "
+"adicionar %s ao servidor devido ao aumento dos privilégios que a conta de "
+"administrador possui e potenciais riscos de segurança."
+
+msgid ""
+"It may take a few minutes to save your changes. Please wait until the "
+"process has completed and do not refresh the page."
+msgstr ""
+"Pode demorar alguns minutos para salvar as suas alterações. Por favor, "
+"aguarde até que o processo esteja concluído e não atualize a página."
+
+msgid "Jan"
+msgstr "Jan"
+
+msgid "Jobs"
+msgstr "Trabalhos"
+
+msgid "Jul"
+msgstr "Jul"
+
+msgid "Jun"
+msgstr "Jun"
+
+msgid "Key Size"
+msgstr "Tamanho da chave"
+
+msgid "Language"
+msgstr "Linguagem"
+
+msgid "Last 70 lines of %s.%s.log"
+msgstr "Últimas 70 linhas de %s.%s.log"
+
+msgid "Limit"
+msgstr "Limite"
+
+msgid "Load Average"
+msgstr "Carga Média"
+
+msgid "Local Backup"
+msgstr "Cópia de Segurança Local"
+
+msgid "Log in"
+msgstr "Entrar"
+
+msgid "Log in as"
+msgstr "Sessão iniciada como"
+
+msgid "Log out"
+msgstr "Sair"
+
+msgid "Logged in as"
+msgstr "Autenticado como"
+
+msgid "Login"
+msgstr "Efetuar autenticação"
+
+msgid "Login History"
+msgstr "Histórico de início de sessão"
+
+msgid "Login screen style"
+msgstr "Estilo de ecrã de autenticação"
+
+msgid "Logs"
+msgstr "Histórico"
+
+msgid "MAIL"
+msgstr "EMAIL"
+
+msgid "MB"
+msgstr "MB"
+
+msgid "Mail"
+msgstr "Email"
+
+msgid "Mail Accounts"
+msgstr "Contas de Email"
+
+msgid "Mail Domain"
+msgstr "Domínio de E-mail"
+
+msgid "Mail Domains"
+msgstr "Domínios de Email"
+
+msgid "Mail Server"
+msgstr "Servidor de Email"
+
+msgid "Mail Support"
+msgstr "Suporte a Email"
+
+msgid ""
+"Mail account has been created.\n"
+"\n"
+"Common Account Settings:\n"
+"Username: {{account}}@{{domain}}\n"
+"Password: {{password}}\n"
+"Webmail: {{webmail}}\n"
+"Hostname: {{hostname}}\n"
+"\n"
+"IMAP Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 993\n"
+"STARTTLS: Port 143\n"
+"No encryption: Port 143\n"
+"\n"
+"POP3 Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 995\n"
+"STARTTLS: Port 110\n"
+"No encryption: Port 110\n"
+"\n"
+"SMTP Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 465\n"
+"STARTTLS: Port 587\n"
+"No encryption: Port 25\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"A conta de e-mail foi criada.\n"
+"\n"
+"Definições comuns de conta:\n"
+"Utilizador: {{account}}@{{domain}}\n"
+"Palavra-passe: {{password}}\n"
+"Webmail: {{webmail}}\n"
+"Nome do domínio: {{hostname}}\n"
+"\n"
+"Definições de IMAP\n"
+"Autenticação: Palavra-passe normal\n"
+"SSL/TLS: Porta 993\n"
+"STARTTLS: Porta 143\n"
+"Sem encriptação: Porta 143\n"
+"\n"
+"Definições de POP3\n"
+"Autenticação: Palavra-passe normal\n"
+"SSL/TLS: Porta 995\n"
+"STARTTLS: Porta 110\n"
+"Sem encriptação: Porta 110\n"
+"\n"
+"Definições de SMTP\n"
+"Autenticação: Palavra-passe normal\n"
+"SSL/TLS: Porta 465\n"
+"STARTTLS: Porta 587\n"
+"Sem encriptação: Porta 25\n"
+"\n"
+"Com os melhores cumprimentos,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Mail account {%s@%s} has been created successfully."
+msgstr "A Conta de e-mail {%s@%s} foi criado com sucesso."
+
+msgid "Mail domain {%s} has been created successfully."
+msgstr "O domínio de e-mail {%s} foi criado com sucesso."
+
+msgid "Manage SSH Keys"
+msgstr "Gerir chaves SSH"
+
+msgid "Mar"
+msgstr "Mar"
+
+msgid "Maximum %s characters length, including prefix"
+msgstr "Tamanho máximo de %s caracteres, incluindo o prefixo"
+
+msgid "Maximum Number of Databases"
+msgstr "Número máximo de Bases de dados"
+
+msgid "May"
+msgstr "Mai"
+
+msgid "Memory"
+msgstr "Memória"
+
+msgid "Message"
+msgstr "Mensagem"
+
+msgid "Minute"
+msgstr "Minuto"
+
+msgid "Minutes"
+msgstr "Minutos"
+
+msgid "Monday"
+msgstr "Segunda"
+
+msgid "Month"
+msgstr "Mês"
+
+msgid "Monthly"
+msgstr "Mensalmente"
+
+msgid "More info"
+msgstr "Mais informações"
+
+msgid "Move backward through top menu"
+msgstr "Mover para trás através do menu superior"
+
+msgid "Move down through elements list"
+msgstr "Mover para baixo na lista de elementos"
+
+msgid "Move forward through top menu"
+msgstr "Mover para a frente através do menu superior"
+
+msgid "Move up through elements list"
+msgstr "Mover para cima na lista de elementos"
+
+msgid "MySQL Support"
+msgstr "Suporte MySQL"
+
+msgid "NAT IP Association"
+msgstr "Associação de IP NAT"
+
+msgid "NGINX cache has been purged successfully."
+msgstr "A Cache do servidor NGINX foi apagada com sucesso."
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Name Servers"
+msgstr "Servidores de Nomes"
+
+msgid "Nameserver 1"
+msgstr "Servidor de nome 1"
+
+msgid "Nameserver 2"
+msgstr "Servidor de nome 2"
+
+msgid "Netmask"
+msgstr "Máscara de Rede"
+
+msgid "Network"
+msgstr "Rede"
+
+msgid "New Password"
+msgstr "Nova senha"
+
+msgid "Next"
+msgstr "Próximo"
+
+msgid "No"
+msgstr "Não"
+
+msgid "No encryption"
+msgstr "Sem criptografia"
+
+msgid "No exclusions"
+msgstr "Sem exclusões"
+
+msgid "No notifications"
+msgstr "Sem notificações"
+
+msgid "Normal password"
+msgstr "Senha normal"
+
+msgid "Not After"
+msgstr "Não após"
+
+msgid "Not Before"
+msgstr "Não antes"
+
+msgid "Notifications"
+msgstr "Notificações"
+
+msgid "Nov"
+msgstr "Nov"
+
+msgid "Oct"
+msgstr "Out"
+
+msgid "Old Style"
+msgstr "Estilo antigo"
+
+msgid "One or more email addresses"
+msgstr "Um ou mais endereços de e-mail"
+
+msgid "Open Webmail"
+msgstr "Abrir o Webmail"
+
+msgid "Open debug panel"
+msgstr "Abrir painel de depuração"
+
+msgid "Open menu"
+msgstr "Abrir menu"
+
+msgid "Operating System"
+msgstr "Sistema Operativo"
+
+msgid "Optional"
+msgstr "Opcional"
+
+msgid "Options"
+msgstr "Opções"
+
+msgid "Organization"
+msgstr "Organização"
+
+msgid "Overall Statistics"
+msgstr "Estatísticas Gerais"
+
+msgid "Owner"
+msgstr "Dono"
+
+msgid "PHP CLI Version"
+msgstr "Versão PHP CLI"
+
+msgid "POP3 Settings"
+msgstr "Definições POP3"
+
+msgid "Package"
+msgstr "Pacote"
+
+msgid "Package Name"
+msgstr "Nome do Pacote"
+
+msgid "Package Names"
+msgstr "Nomes do Pacote"
+
+msgid "Package {%s} has been created successfully."
+msgstr "O Pacote {%s} foi criado com sucesso."
+
+msgid "Packages"
+msgstr "Pacotes"
+
+msgid "Partially implemented"
+msgstr "Parcialmente implementado"
+
+msgid "Password"
+msgstr "Senha"
+
+msgid "Password Reset at %s"
+msgstr "Redefinição da palavra-passe em %s"
+
+msgid "Password does not match the minimum requirements."
+msgstr "A Palavra-passe não corresponde com os critérios mínimos."
+
+msgid "Password reset code has been sent to your email address"
+msgstr ""
+"O código de redefinição de palavra-passe foi enviado para o seu endereço de "
+"e-mail"
+
+msgid ""
+"Password reset instructions have been sent to the email address associated "
+"with this account."
+msgstr ""
+"Instruções para repôr senha, foram enviadas para o endereço de email "
+"associado a esta conta"
+
+msgid "Passwords do not match"
+msgstr "As palavras-passe não coincidem"
+
+msgid "Path"
+msgstr "Caminho"
+
+msgid "Permissions"
+msgstr "Permissões"
+
+msgid "Please enter a valid contact name."
+msgstr "Por favor, insira um nome de contacto válido."
+
+msgid "Please enter a valid email address."
+msgstr "Por favor, insira um endereço de e-mail válido."
+
+msgid "Please make sure ~/web/%s/public_html is empty!"
+msgstr "Por favor, verifique se a pasta ~/web/%s/public_html está vazia!"
+
+msgid "Please scan the code below in your 2FA application"
+msgstr "Por favor, digitalize o código abaixo no seu aplicativo 2FA"
+
+msgid "Please wait 15 minutes before sending a new request."
+msgstr "Por favor, aguarde 15 minutos antes de enviar um novo pedido."
+
+msgid "Plugins"
+msgstr "Plugins"
+
+msgid "Point to"
+msgstr "Apontar para"
+
+msgid "Policies"
+msgstr "Políticas"
+
+msgid "Policy"
+msgstr "Política"
+
+msgid "Port"
+msgstr "Porta"
+
+msgid "PostgreSQL Support"
+msgstr "Suporte PostgreSQL"
+
+msgid "Prefix %s will be added to username automatically"
+msgstr "Prefixo %s será adicionado ao utilizador automaticamente"
+
+msgid ""
+"Prefix %s will be automatically added to database name and database user"
+msgstr ""
+"Prefixo %s será adicionado automaticamente ao nome da base de dados e ao "
+"utilizador da base de dados"
+
+msgid "Prevent CSRF"
+msgstr "Prevenir CSRF"
+
+msgid "Preview"
+msgstr "Pré visualização"
+
+msgid "Priority"
+msgstr "Prioridade"
+
+msgid "Production Release"
+msgstr "Versão de Produção"
+
+msgid "Protocol"
+msgstr "Protocolo"
+
+msgid "Proxy Extensions"
+msgstr "Extenções do Proxy"
+
+msgid "Proxy Server"
+msgstr "Servidor Proxy"
+
+msgid "Proxy Support"
+msgstr "Suporte ao Proxy"
+
+msgid "Proxy Template"
+msgstr "Modelo Proxy"
+
+msgid "Public Key"
+msgstr "Chave pública"
+
+msgid "Purge NGINX Cache"
+msgstr "Limpar a cache do Servidor NGINX"
+
+msgid "Quick App Installer"
+msgstr "Instalador rápido de aplicações"
+
+msgid "Quick Install App"
+msgstr "Instalação rápida de Aplicação"
+
+msgid "Quota"
+msgstr "Cota"
+
+msgid "RAM"
+msgstr "RAM"
+
+msgid "Ranges and lists are acceptable"
+msgstr "Intervalos e listas são aceitáveis"
+
+msgid "Rate Limit"
+msgstr "Taxa Limite"
+
+msgid "Rebuild"
+msgstr "Reconstruir"
+
+msgid "Rebuild All"
+msgstr "Reconstruir Todos"
+
+msgid "Rebuild Cron Jobs"
+msgstr "Reconstruir Tarefas Cronológicas"
+
+msgid "Rebuild DNS Zones"
+msgstr "Reconstruir Zonas DNS"
+
+msgid "Rebuild Databases"
+msgstr "Reconstruir a Base de Dados"
+
+msgid "Rebuild Mail Domains"
+msgstr "Reconstruir Domínios de E-mail"
+
+msgid "Rebuild User Profile"
+msgstr "Reconstruir Perfil de Utilizador"
+
+msgid "Rebuild Web Domains"
+msgstr "Reconstruir Domínios Web"
+
+msgid "Record"
+msgstr "Registo"
+
+msgid "Record {%s.%s} has been created successfully."
+msgstr "O Registo {%s.%s} foi criado com sucesso."
+
+msgid "Records"
+msgstr "Registos"
+
+msgid "Redirect visitors to %s"
+msgstr "Redireciona visitas para %s"
+
+msgid "Redirect visitors to a custom domain or web address"
+msgstr "Redireciona visitas para um domínio personalizado ou endereço web"
+
+msgid "Refresh"
+msgstr "Actualizar"
+
+msgid "Reject Spam"
+msgstr "Rejeitar Spam"
+
+msgid "Release"
+msgstr "Lançamento"
+
+msgid "Remote Backup"
+msgstr "Cópia de segurança remota"
+
+msgid "Reset"
+msgstr "Redefinir"
+
+msgid "Reset Code"
+msgstr "Código de Redefinição"
+
+msgid "Restart"
+msgstr "Reiniciar"
+
+msgid "Restart \"%s\" failed"
+msgstr "Reinicio de \"%s\" falhou"
+
+msgid "Restore"
+msgstr "Restaurar"
+
+msgid "Restore All"
+msgstr "Restaurar Tudo"
+
+msgid "Restrict access to read-only for other administrators"
+msgstr "Restringir o acesso somente a leitura para outros administradores"
+
+msgid "Role"
+msgstr "Regra"
+
+msgid "Rule has been created successfully."
+msgstr "A regra foi criada com êxito."
+
+msgid "Run Command"
+msgstr "Correr comando"
+
+msgid "Runtime"
+msgstr "Tempo de execução"
+
+msgid "SMTP Relay"
+msgstr "Redireccionamento SMTP"
+
+msgid "SMTP Settings"
+msgstr "Definições de SMTP"
+
+msgid "SOA"
+msgstr "SOA"
+
+msgid "SSH"
+msgstr "SSH"
+
+msgid "SSH Access"
+msgstr "servidor SSH"
+
+msgid "SSH ID"
+msgstr "SSH ID"
+
+msgid "SSH Key"
+msgstr "Chave SSH"
+
+msgid "SSH Key already exists."
+msgstr "A chave SSH já existe."
+
+msgid "SSH Key has been created successfully."
+msgstr "A Chave SSH foi criada com sucesso."
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "SSL CSR"
+msgstr "SSL SAC"
+
+msgid "SSL Certificate"
+msgstr "Certificado SSL"
+
+msgid "SSL Certificate Authority / Intermediate"
+msgstr "Autoridade Certificadora SSL / Intermediária"
+
+msgid "SSL Domains"
+msgstr "Domínios SSL"
+
+msgid "SSL Private Key"
+msgstr "Chave Privada SSL"
+
+msgid "Saturday"
+msgstr "Sábado"
+
+msgid "Save"
+msgstr "Guardar"
+
+msgid "Save form"
+msgstr "Guardar formulário"
+
+msgid "Search"
+msgstr "Procurar"
+
+msgid "Search Results"
+msgstr "Resultados de pesquisa"
+
+msgid "Secret Key"
+msgstr "Chave secreta"
+
+msgid "Security"
+msgstr "Segurança"
+
+msgid "Select"
+msgstr "Selecionar"
+
+msgid "Select all"
+msgstr "Selecionar todos"
+
+msgid "Send FTP credentials to email"
+msgstr "Enviar credenciais do FTP via email"
+
+msgid "Send email notification when an update has been installed"
+msgstr "Enviar notificação por e-mail quando uma atualização for instalada"
+
+msgid "Send update installation log by email"
+msgstr "Enviar log da atualização por e-mail"
+
+msgid "Send welcome email"
+msgstr "Enviar email de boas-vindas"
+
+msgid "Sender Email Address"
+msgstr "Endereço de E-mail do Remetente"
+
+msgid "Sender Name"
+msgstr "Nome do remetente"
+
+msgid "Sep"
+msgstr "Set"
+
+msgid "Server settings"
+msgstr "Configurações de Servidor"
+
+msgid "Service"
+msgstr "Serviço"
+
+msgid "Set as default language for all users"
+msgstr "Definir como idioma padrão para todos os utilizadores"
+
+msgid "Set as selected theme for all users"
+msgstr "Definir tema selecionado para todos os utilizadores"
+
+msgid "Setup"
+msgstr "Instalar"
+
+msgid "Shared"
+msgstr "Partilhado"
+
+msgid "Shell"
+msgstr "Linha de comandos"
+
+msgid "Shortcuts"
+msgstr "Atalhos"
+
+msgid "Show Certificate"
+msgstr "Mostrar Certificado"
+
+msgid "Show Per User"
+msgstr "Mostrar por Utilizador"
+
+msgid "Signature"
+msgstr "Assinatura"
+
+msgid "Size"
+msgstr "Tamanho"
+
+msgid "Sort by"
+msgstr "Ordenar por"
+
+msgid "Sort items"
+msgstr "Ordenar itens"
+
+msgid "Spam Filter"
+msgstr "Filtro De Spam"
+
+msgid "Start"
+msgstr "Iniciar"
+
+msgid "Start \"%s\" failed"
+msgstr "Inicio de \"%s\" falhou"
+
+msgid "State"
+msgstr "Estado|Região"
+
+msgid "State / Province"
+msgstr "Estado / Província / Região"
+
+msgid "Statistics"
+msgstr "Estatísticas"
+
+msgid "Statistics Authorization"
+msgstr "Autorização de Estatísticas"
+
+msgid "Status"
+msgstr "Estado"
+
+msgid "Status code"
+msgstr "Código de estado"
+
+msgid "Stop"
+msgstr "Parar"
+
+msgid "Stop \"%s\" failed"
+msgstr "Parar \"%s\" falhou"
+
+msgid "Strict"
+msgstr "Rigoroso"
+
+msgid "Submit"
+msgstr "Enviar"
+
+msgid "Success"
+msgstr "Sucesso"
+
+msgid "Sunday"
+msgstr "Domingo"
+
+msgid "Support CIDR format"
+msgstr "Suporte ao formato CIDR"
+
+msgid "Supported variables"
+msgstr "Variáveis suportadas"
+
+msgid "Suspend"
+msgstr "Suspender"
+
+msgid "Suspend All"
+msgstr "Suspender todos"
+
+msgid "Suspended"
+msgstr "Suspenso"
+
+msgid "Sync Error document templates on user rebuild"
+msgstr "Erro de Sincronização de modelos na recriação do utilizador"
+
+msgid "Sync Skeleton templates"
+msgstr "Sincronizar modelos Base"
+
+msgid "System"
+msgstr "Sistema"
+
+msgid "System Administrator account"
+msgstr "Conta de administrador do sistema"
+
+msgid "System PHP Version"
+msgstr "Versão do PHP do sistema"
+
+msgid "System Protection"
+msgstr "Proteção de Sistema"
+
+msgid "TTL"
+msgstr "TTL"
+
+msgid "Target domain or URL"
+msgstr "Domínio alvo ou URL"
+
+msgid "Task Monitor"
+msgstr "Monitor de Tarefas"
+
+msgid ""
+"Task has been added to the queue. You will receive an email notification "
+"when your backup is ready for download."
+msgstr ""
+"A Tarefa foi adicionada à fila. Irá receber uma notificação por e-mail "
+"quando a sua cópia de segurança estiver pronta para ser descarregada."
+
+msgid ""
+"Task has been added to the queue. You will receive an email notification "
+"when your restore has been completed."
+msgstr ""
+"A Tarefa foi adicionada à fila. Irá receber uma notificação por e-mail "
+"quando a restauração estiver concluída."
+
+msgid "Template"
+msgstr "Modelo"
+
+msgid "The system is going down for reboot NOW!"
+msgstr "O sistema irá ficar em baixo para reiniciar AGORA!"
+
+msgid "Theme"
+msgstr "Aparência"
+
+msgid "There are currently no IP lists defined."
+msgstr "Atualmente não há listas de IP definidas."
+
+msgid "There are currently no banned IP addresses."
+msgstr "Atualmente não existem endereços IP bloqueados."
+
+msgid "Thursday"
+msgstr "Quinta"
+
+msgid "Time"
+msgstr "Hora"
+
+msgid "Time Zone"
+msgstr "Fuso horário"
+
+msgid "Title"
+msgstr "Título"
+
+msgid ""
+"To enable Let's Encrypt SSL, ensure that DNS records exist for mail.%s and "
+"%s!"
+msgstr ""
+"Para ativar Let's Encrypt SSL, confirme que existem registos DNS para mail."
+"%s e %s!"
+
+msgid "Top"
+msgstr "Subir"
+
+msgid "Tuesday"
+msgstr "Terça"
+
+msgid "Two-factor Authentication"
+msgstr "Autenticação de dois fatores"
+
+msgid ""
+"Two-factor authentication is now turned off for your account.<br><br>You may "
+"now proceed to log in."
+msgstr ""
+"A autenticação de dois fatores foi desativada na sua conta.<br><br>Agora, já "
+"pode iniciar a sessão."
+
+msgid "Type"
+msgstr "Tipo"
+
+msgid "Type directory name, one per line. To exlude all dirs use *"
+msgstr ""
+"Digite o nome da pasta, uma por linha. Para excluir todas as pastas, use *"
+
+msgid ""
+"Type domain name, one per line. To exclude all domains use *. To exclude "
+"specific accounts use following format: domain.tld:info:support:postmaster"
+msgstr ""
+"Digite um nome de domínio por linha. Para excluir todos os domínios use *. "
+"Para excluir contas específicas use o seguinte formato: domain.tld:info:"
+"support:postmaster"
+
+msgid ""
+"Type domain name, one per line. To exclude all domains use *. To exclude "
+"specific dirs use following format: domain.tld:public_html/cache:public_html/"
+"tmp"
+msgstr ""
+"Digite o nome de domínio, um por linha. Para excluir todos os domínios, use "
+"*. Para excluir pastas especificas use o seguinte formato: domain.tld:"
+"public_html/cache:public_html/tmp"
+
+msgid "Type full database name, one per line. To exclude all databases use *"
+msgstr ""
+"Digite o nome completo da base de dados, uma por linha. Para excluir todas "
+"as bases de dados, use *"
+
+msgid "USER"
+msgstr "UTILIZADOR"
+
+msgid "Unable to add database!"
+msgstr "Não Foi possivel adicionar a base de dados!"
+
+msgid "Unable to add database! Limit reached!"
+msgstr "Não Foi possivel adicionar a base de dados! Limite atingido!"
+
+msgid "Unable to install %s, %s is not available."
+msgstr "Não foi possível instalar %s, %s não está disponível."
+
+msgid "Unlimited"
+msgstr "Ilimitado"
+
+msgid "Unlock Account"
+msgstr "Desbloquear Conta"
+
+msgid "Unsave form"
+msgstr "Não salvar formulário"
+
+msgid "Unsupported hash method"
+msgstr "Método de hash não suportado"
+
+msgid "Unsuspend"
+msgstr "Reativar"
+
+msgid "Unsuspend All"
+msgstr "Cancelar suspensão de todos"
+
+msgid "Update Usage Counters"
+msgstr "Atualizar Contadores de Uso"
+
+msgid "Update logo"
+msgstr "Atualizar logotipo"
+
+msgid "Updates"
+msgstr "Atualizações"
+
+msgid "Upload the files to %s"
+msgstr "Enviar os arquivos para %s"
+
+msgid "Uptime"
+msgstr "Tempo de Atividade"
+
+msgid "Use IP address allow list for login attempts"
+msgstr "Use a lista de permissões de endereços IP para tentativas de login "
+
+msgid "Use Let's Encrypt to obtain SSL certificate"
+msgstr "Utilize o Let's Encrypt para obter o certificado SSL"
+
+msgid "Use local-part without domain name"
+msgstr "Usar parte local sem o nome de domínio"
+
+msgid "User"
+msgstr "Utilizador"
+
+msgid "User Directory"
+msgstr "Diretoria do Utilizador"
+
+msgid "User {%s} has been created successfully. / {Log in as %s}"
+msgstr "O utilizador {%s} foi criado com sucesso. / {iniciar sessão como %s}"
+
+msgid "Username"
+msgstr "Utilizador"
+
+msgid "Users"
+msgstr "Utilizadores"
+
+msgid "Value"
+msgstr "Valor"
+
+msgid "Version"
+msgstr "Versão"
+
+msgid "View"
+msgstr "Visualizar"
+
+msgid "View Public DNSSEC Key"
+msgstr "Ver chave DNSSEC pública"
+
+msgid "Visit"
+msgstr "Visitar"
+
+msgid "WEB"
+msgstr "WEB"
+
+msgid "Warning! Last chance to save secret key!"
+msgstr "Aviso! Última hipótese para salvar a chave secreta!"
+
+msgid "Web"
+msgstr "Web"
+
+msgid "Web Aliases"
+msgstr "Apelidos Web"
+
+msgid "Web Domain"
+msgstr "Dominio Web"
+
+msgid "Web Domains"
+msgstr "Domínios Web"
+
+msgid "Web Server"
+msgstr "Servidor Web"
+
+msgid "Web Statistics"
+msgstr "Estatísticas Web"
+
+msgid "Web Template"
+msgstr "Modelo Web"
+
+msgid "Webmail"
+msgstr "Webmail"
+
+msgid "Webmail Alias"
+msgstr "Alias do webmail"
+
+msgid "Webmail Client"
+msgstr "Cliente de Webmail"
+
+msgid "Wednesday"
+msgstr "Quarta"
+
+msgid "Weekdays (5 days)"
+msgstr "Dias úteis (5 dias)"
+
+msgid "Weekend (2 days)"
+msgstr "Fim de semana (2 dias)"
+
+msgid "Weekly"
+msgstr "Semanalmente"
+
+msgid "Welcome"
+msgstr "Bem-vindo"
+
+msgid "Welcome to %s"
+msgstr "Bem-vindo a %s"
+
+msgid "White Label"
+msgstr "Mudança de Marca"
+
+msgid "White Label Options"
+msgstr "Opções de Mudança de Marca"
+
+msgid "YYYY-MM-DD"
+msgstr "AAAA-MM-DD"
+
+msgid "Yearly"
+msgstr "Anualmente"
+
+msgid "Yes"
+msgstr "Sim"
+
+msgid "You are logged out, please log in again."
+msgstr "Está com a sessão terminada, por favor, inicie sessão novamente."
+
+msgid "Your password must have at least"
+msgstr "A sua senha deve ter pelo menos"
+
+msgid ""
+"Your web folder already has files uploaded to it. The installer will "
+"overwrite your files and/or the installation might fail."
+msgstr ""
+"A sua pasta web já possui arquivos enviados. O instalador irá sobrescrever "
+"os seus arquivos e/ou a instalação pode falhar."
+
+msgid "Zones"
+msgstr "Zonas"
+
+msgid "a database"
+msgstr "uma base de Dados"
+
+msgid "a dns domain"
+msgstr "um domínio dns"
+
+msgid "a mail domain"
+msgstr "um domínio de e-mail"
+
+msgid "a web domain"
+msgstr "um domínio web"
+
+msgid "backend server"
+msgstr "servidor de backend"
+
+msgid "brute-force protection"
+msgstr "Proteção contra ataques de força bruta"
+
+msgid "database server"
+msgstr "servidor de bases de dados"
+
+msgid "dns server"
+msgstr "servidor de DNS"
+
+msgid "email / hour"
+msgstr "e-mail / hora"
+
+msgid "email / hour / account"
+msgstr "e-mail / hora / conta"
+
+msgid "email anti-virus"
+msgstr "antivírus de e-mail"
+
+msgid "email spam filter"
+msgstr "Filtro de spam de e-mail"
+
+msgid "firewall"
+msgstr "firewall"
+
+msgid "ftp server"
+msgstr "servidor FTP"
+
+msgid "imap/pop3 server"
+msgstr "Servidor Imap/POP3"
+
+msgid "in MB"
+msgstr "em MB"
+
+msgid "job scheduler"
+msgstr "agendamento de tarefa"
+
+msgid "mail server"
+msgstr "servidor de email"
+
+msgid "one or more email addresses"
+msgstr "um ou mais endereços de email"
+
+msgid "per account / hour"
+msgstr "por conta/hora"
+
+msgid "per domain"
+msgstr "por domínio"
+
+msgid "phpMyAdmin Alias"
+msgstr "Alias do phpMyAdmin"
+
+msgid "phpMyAdmin Single Sign On"
+msgstr "PHPMyAdmin Autenticação Simples"
+
+msgid "phpPgAdmin Alias"
+msgstr "Alias do phpPgAdmin"
+
+msgid "reverse proxy"
+msgstr "proxy reverso"
+
+msgid "ssh server"
+msgstr "Servidor SSH"
+
+msgid "url, script or file"
+msgstr "url, script ou ficheiro"
+
+msgid "web server"
+msgstr "servidor web"
+
+msgid "zstd only"
+msgstr "Apenas zstd"

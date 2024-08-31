@@ -1,0 +1,2410 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hestiacp\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-10 05:51\n"
+"Last-Translator: \n"
+"Language-Team: Dutch\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: hestiacp\n"
+"X-Crowdin-Project-ID: 587405\n"
+"X-Crowdin-Language: nl\n"
+"X-Crowdin-File: hestiacp.pot\n"
+"X-Crowdin-File-ID: 3\n"
+
+msgid "%d DNS record"
+msgid_plural "%d DNS records"
+msgstr[0] "%d DNS-record"
+msgstr[1] "%d DNS-records"
+
+msgid "%d DNS zone"
+msgid_plural "%d DNS zones"
+msgstr[0] "%d DNS zone"
+msgstr[1] "%d DNS zones"
+
+msgid "%d IP address"
+msgid_plural "%d IP addresses"
+msgstr[0] "%d IP adress"
+msgstr[1] "%d IP adressen"
+
+msgid "%d IP list"
+msgid_plural "%d IP lists"
+msgstr[0] "%d IP lijst"
+msgstr[1] "%d IP lijsten"
+
+msgid "%d SSH key"
+msgid_plural "%d SSH keys"
+msgstr[0] "%d SSH sleutel"
+msgstr[1] "%d SSH sleutel"
+
+msgid "%d access key"
+msgid_plural "%d access keys"
+msgstr[0] "%d toegangs sleutel"
+msgstr[1] "%d toegangs sleutels"
+
+msgid "%d backup"
+msgid_plural "%d backups"
+msgstr[0] "%d backup"
+msgstr[1] "%d backups"
+
+msgid "%d banned IP address"
+msgid_plural "%d banned IP addresses"
+msgstr[0] "%d geblokeerde IP address"
+msgstr[1] "%d geblokeerde IP addressen"
+
+msgid "%d cron job"
+msgid_plural "%d cron jobs"
+msgstr[0] "%d cron job"
+msgstr[1] "%d cron jobs"
+
+msgid "%d database"
+msgid_plural "%d databases"
+msgstr[0] "%d database"
+msgstr[1] "%d databases"
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d dag"
+msgstr[1] "%d dagen"
+
+msgid "%d firewall rule"
+msgid_plural "%d firewall rules"
+msgstr[0] "%d firewall regel"
+msgstr[1] "%d firewall regels"
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d uur"
+msgstr[1] "%d uren"
+
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d item"
+msgstr[1] "%d items"
+
+msgid "%d log record"
+msgid_plural "%d log records"
+msgstr[0] "%d logboekrecord"
+msgstr[1] "%d logboekrecords"
+
+msgid "%d mail account"
+msgid_plural "%d mail accounts"
+msgstr[0] "%d email account"
+msgstr[1] "%d email accounts"
+
+msgid "%d mail domain"
+msgid_plural "%d mail domains"
+msgstr[0] "%d mail domein"
+msgstr[1] "%d mail domeinen"
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minuut"
+msgstr[1] "%d minuten"
+
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d maand"
+msgstr[1] "%d maanden"
+
+msgid "%d object"
+msgid_plural "%d objects"
+msgstr[0] "%d object"
+msgstr[1] "%d objecten"
+
+msgid "%d package"
+msgid_plural "%d packages"
+msgstr[0] "%d pakket"
+msgstr[1] "%d pakketen"
+
+msgid "%d user account"
+msgid_plural "%d user accounts"
+msgstr[0] "%d gebruikers account"
+msgstr[1] "%d gebruikers accounts"
+
+msgid "%d web domain"
+msgid_plural "%d web domains"
+msgstr[0] "%d web domein"
+msgstr[1] "%d web domeinen"
+
+msgid "%s installed successfully."
+msgstr "%s met success geïnstalleerd"
+
+msgid "%s installer missing."
+msgstr "%s installatieprogramma ontbreekt"
+
+msgid "1 number"
+msgstr "1 nummer"
+
+msgid "1 uppercase & 1 lowercase character"
+msgstr "1 hoofdletter & 1 kleine letter"
+
+msgid "2FA QR Code"
+msgstr "2FA QR code"
+
+msgid "2FA Reset Code"
+msgstr "Account Herstel Code"
+
+msgid "2FA Token"
+msgstr "OTP Pincode"
+
+msgid "8 characters long"
+msgstr "8 karakters lang"
+
+msgid "ACCEPT"
+msgstr "ACCEPT"
+
+msgid "API"
+msgstr "API"
+
+msgid "Access Key"
+msgstr "Toegangs sleutel"
+
+msgid "Access Key ID"
+msgstr "Toegangs sleutel id"
+
+msgid "Access Keys"
+msgstr "Toegang sleutels"
+
+msgid "Access Log"
+msgstr "Toegangs log"
+
+msgid "Access key {%s} has been created successfully."
+msgstr "Access key {%s} is met success aangemaakt"
+
+msgid "Account"
+msgstr "Account"
+
+msgid "Account Recovery Code"
+msgstr "Account herstelcode"
+
+msgid "Account Unlocked"
+msgstr "Account ontgrendeld"
+
+msgid "Account has been suspended"
+msgstr "Account is opgeschort"
+
+msgid "Accounts"
+msgstr "Accounts"
+
+msgid "Action"
+msgstr "Actie"
+
+msgid "Add Access Key"
+msgstr "Voeg toegangs sleutel toe"
+
+msgid "Add Cron Job"
+msgstr "Nieuwe Cronjob"
+
+msgid "Add DNS Domain"
+msgstr "Domein toevoegen"
+
+msgid "Add DNS Record"
+msgstr "DNS Record toevoegen"
+
+msgid "Add DNS Zone"
+msgstr "Voeg DNS Zone toe"
+
+msgid "Add Database"
+msgstr "Nieuwe database"
+
+msgid "Add FTP account"
+msgstr "Nieuw FTP-account"
+
+msgid "Add Firewall Rule"
+msgstr "Firewall Regel Toevoegen"
+
+msgid "Add IP Address"
+msgstr "IP-adres toevoegen"
+
+msgid "Add IP Address to Banlist"
+msgstr "IP-adres Toevoegen aan Banlijst"
+
+msgid "Add IP list"
+msgstr "voeg IP lijst toe"
+
+msgid "Add IPset IP List for Firewall"
+msgstr "Voeg IPset IP-lijst toe voor Firewall"
+
+msgid "Add Mail Account"
+msgstr "Account Toevoegen"
+
+msgid "Add Mail Domain"
+msgstr "Domein toevoegen"
+
+msgid "Add Name Server"
+msgstr "Voeg Naam Server toe"
+
+msgid "Add Package"
+msgstr "Pakket toevoegen"
+
+msgid "Add Record"
+msgstr "Voeg Record Toe"
+
+msgid "Add Rule"
+msgstr "Regel toevoegen"
+
+msgid "Add SSH Key"
+msgstr "Voeg SSH sleutel toe"
+
+msgid "Add User"
+msgstr "Gebruiker toevoegen"
+
+msgid "Add Web Domain"
+msgstr "Domein toevoegen"
+
+msgid "Add new object"
+msgstr "Een object toevoegen"
+
+msgid "Additional FTP account(s)"
+msgstr "Extra FTP account(s)"
+
+msgid "Administrator"
+msgstr "Beheerder"
+
+msgid "Advanced Details"
+msgstr "Extra Details"
+
+msgid "Advanced Options"
+msgstr "Geavanceerde Opties"
+
+msgid "Algorithm"
+msgstr "Algoritme"
+
+msgid "Aliases"
+msgstr "Aliassen"
+
+msgid "Aliases used"
+msgstr "Aliassen gebruikt"
+
+msgid "All ports: 0, Range: 80-82, List: 80,443,8080,8443"
+msgstr "Alle porten: 0, Range: 80-82, Lijst: 80,443,8080,8443"
+
+msgid "Allow suspended users to create new backups"
+msgstr "Sta opgeschorte gebruikers toe om nieuwe back-ups te maken"
+
+msgid "Allow suspended users to log in with read-only access"
+msgstr ""
+"Sta opgeschorte gebruikers toe om in te loggen met alleen-lezen toegang"
+
+msgid "Allow users to change templates when editing DNS zones"
+msgstr "Sta gebruikers om templates te wijzigen tijdens wijzig DNS zones"
+
+msgid "Allow users to change templates when editing web domains"
+msgstr "Sta gebruikers om templates te wijzigen tijdens wijzig web domein"
+
+msgid "Allow users to delete log history"
+msgstr "Sta gebruikers toe om geschiedenis te wissen"
+
+msgid "Allow users to edit their account details"
+msgstr "Sta gebruikers om hun account details te wijzigen"
+
+msgid "Allow users to reset their passwords"
+msgstr "Sta gebruikers toe om wachtwoord te herstellen"
+
+msgid "Allow users to view action and login history logs"
+msgstr "Sta gebruikers toe om logs te bekijken"
+
+msgid "Allowed IP addresses for API"
+msgstr "IP adressen toegestaan voor gebruik van api"
+
+msgid "Alternate"
+msgstr "Alternatief"
+
+msgid ""
+"An existing backup task is already running, please wait for it to complete."
+msgstr ""
+"Er is al een bestaande back-up taak actief, wacht tot deze is voltooid."
+
+msgid ""
+"An existing restoration task is already running. Please wait for it to "
+"finish before launching it again."
+msgstr ""
+"Er is al een bestaande hersteltaak in uitvoering. Wacht tot deze is voltooid "
+"voordat u deze opnieuw opstart."
+
+msgid "An internal error occurred"
+msgstr "Er is een interne error opgetreden"
+
+msgid "Anti-Virus"
+msgstr "Antivirus"
+
+msgid "Application Name"
+msgstr "Applicatienaam"
+
+msgid "Apply to selected"
+msgstr "Toepassen op selectie"
+
+msgid "Apr"
+msgstr "Apr"
+
+msgid "Are you sure you want to delete %s?"
+msgstr "Weet u zeker dat u %s wilt verwijderen?"
+
+msgid "Are you sure you want to delete IP address %s?"
+msgstr "Weet u zeker dat u de IP adres {%s} wilt verwijderen?"
+
+msgid "Are you sure you want to delete IP list %s?"
+msgstr "Weet u zeker dat u de IP lijst {%s} wilt verwijderen?"
+
+msgid "Are you sure you want to delete SSH key %s?"
+msgstr "Weet u zeker dat u SSH sleutel %s wilt verwijderen?"
+
+msgid "Are you sure you want to delete access key %s?"
+msgstr "Weet u zeker dat u toegangs sleutel %s wilt verwijderen?"
+
+msgid "Are you sure you want to delete backup %s?"
+msgstr "Weet je zeker dat je reserve kopie {%s} wilt verwijderen?"
+
+msgid "Are you sure you want to delete database %s?"
+msgstr "Weet je zeker dat je database %s wilt verwijderen?"
+
+msgid "Are you sure you want to delete domain %s?"
+msgstr "Weet je zeker dat je domain %s wilt verwijderen?"
+
+msgid "Are you sure you want to delete package %s?"
+msgstr "Weet je zeker dat je pakket {%s} wilt verwijderen?"
+
+msgid "Are you sure you want to delete record %s?"
+msgstr "Weet u zeker dat u record %s wilt verwijderen?"
+
+msgid "Are you sure you want to delete rule %s"
+msgstr "Weet u zeker dat u regel %s wilt verwijderen"
+
+msgid "Are you sure you want to delete the logs?"
+msgstr "Weet u zeker dat u dit log wilt wissen?"
+
+msgid "Are you sure you want to delete this cron job?"
+msgstr "Weet u zeker dat u wilt verwijderen cron job?"
+
+msgid "Are you sure you want to delete user %s?"
+msgstr "Weet u zeker dat u gebruiker %s wilt verwijderen?"
+
+msgid "Are you sure you want to leave the page?"
+msgstr "Bent u zeker dat u deze pagina wilt verlaten?"
+
+msgid "Are you sure you want to restart %s?"
+msgstr "Weet je server dat je %s wilt op nieuw opstarten?"
+
+msgid "Are you sure you want to start service %s?"
+msgstr "Weet je het zerk dat je deze %s wilt stoppen?"
+
+msgid "Are you sure you want to stop service %s?"
+msgstr "Weet je zeker de %s wilt stoppen?"
+
+msgid "Are you sure you want to suspend %s?"
+msgstr "Bent u zeker dat u op te schorten %s?"
+
+msgid "Are you sure you want to suspend database %s?"
+msgstr "Weet je zeker dat je database %s wilt opschorten?"
+
+msgid "Are you sure you want to suspend domain %s?"
+msgstr "Weet je zeker dat je domain %s wilt opschorten?"
+
+msgid "Are you sure you want to suspend rule #%s?"
+msgstr "Weet je zeker dat je regel #%s wilt opschorten?"
+
+msgid "Are you sure you want to suspend this cron job?"
+msgstr "Weet je zeker dat je cron job %s wilt opschorten?"
+
+msgid "Are you sure you want to suspend user %s?"
+msgstr "Weet je zeker dat je gebruiker %s wilt opschorten?"
+
+msgid "Are you sure you want to unsuspend %s?"
+msgstr "Bent u zeker dat u op te schorten %s?"
+
+msgid "Are you sure you want to unsuspend database %s?"
+msgstr "Weet je zeker dat je de database %s wilt activeren?"
+
+msgid "Are you sure you want to unsuspend domain %s?"
+msgstr "Weet je zeker dat je de domein %s wilt activeren?"
+
+msgid "Are you sure you want to unsuspend rule #%s?"
+msgstr "Weet je zeker dat je de regel #%s wilt activeren?"
+
+msgid "Are you sure you want to unsuspend this cron job?"
+msgstr "Weet je zeker dat je de cron job %s wilt activeren?"
+
+msgid "Are you sure you want to unsuspend user %s?"
+msgstr "Weet je zeker dat je de gebruiker %s wilt activeren?"
+
+msgid "Assigned Domain"
+msgstr "Toegewezen domein"
+
+msgid "Assigned User"
+msgstr "Toegewezen gebruiker"
+
+msgid "Aug"
+msgstr "Aug"
+
+msgid "Auth Log"
+msgstr "Authenticatie log"
+
+msgid "Authentication"
+msgstr "Authenticatie"
+
+msgid "Auto Reply"
+msgstr "Automatisch antwoord"
+
+msgid "Auto Update"
+msgstr "Automatische update"
+
+msgid "BACKUP"
+msgstr "Back-up"
+
+msgid "BLACKLIST"
+msgstr "BLACKLIST"
+
+msgid "Back"
+msgstr "Terug"
+
+msgid "Backend Pool Mode"
+msgstr "Backend Pool Stand"
+
+msgid "Backend Server"
+msgstr "Backend Server"
+
+msgid "Backend Template"
+msgstr "Backend Sjabloon"
+
+msgid "Backup Details"
+msgstr "Back-up details"
+
+msgid "Backup Exclusions"
+msgstr "Backup Uitsluitingen"
+
+msgid "Backups"
+msgstr "Back-ups"
+
+msgid "Ban IP Address"
+msgstr "IP toevoegen"
+
+msgid "Bandwidth"
+msgstr "Bandbreedte"
+
+msgid "Banlist"
+msgstr "Banlijst"
+
+msgid "Banned IP Addresses"
+msgstr "Geblokeerde IP addressen"
+
+msgid "Basic Options"
+msgstr "Basis Options"
+
+msgid "Biennially"
+msgstr "Tweejaarlijks"
+
+msgid "Block Malicious IPs"
+msgstr "Blokkeer schadelijke IP's"
+
+msgid "Browser"
+msgstr "Browser"
+
+msgid "CPU"
+msgstr "CPU"
+
+msgid "CRON"
+msgstr "Cron"
+
+msgid "Cache Duration"
+msgstr "Cache duur"
+
+msgid "Catch-All Email"
+msgstr "Catch-all e-mail"
+
+msgid "Category"
+msgstr "Catergorie"
+
+msgid "Certificate has been generated successfully."
+msgstr "Certificaat is met success geneneerd."
+
+msgid "Changes have been saved."
+msgstr "Wijzigingen zijn opgeslagen."
+
+msgid "Charset"
+msgstr "Karakterset"
+
+msgid "City"
+msgstr "Plaats"
+
+msgid "City / Locality"
+msgstr "Plaats"
+
+msgid "Clear"
+msgstr "Verwijder"
+
+msgid "Close debug panel"
+msgstr "Sluit debug panel"
+
+msgid "Close menu"
+msgstr "Sluit menu"
+
+msgid "Code has been expired"
+msgstr "Code is verlopen"
+
+msgid "Collapse main menu"
+msgstr "Sla menu in"
+
+msgid "Command"
+msgstr "Commando"
+
+msgid "Comment"
+msgstr "Commentaar"
+
+msgid "Common Account Settings"
+msgstr "Algemene account instellingen"
+
+msgid "Compression"
+msgstr "Compressie"
+
+msgid "Compression Level"
+msgstr "Compressie Level"
+
+msgid "Configure"
+msgstr "Configureren"
+
+msgid "Configure Server"
+msgstr "Server configureren"
+
+msgid "Confirm"
+msgstr "Bevestig"
+
+msgid "Confirm Password"
+msgstr "Bevestig wachtwoord"
+
+msgid "Contact Name"
+msgstr "Naam contactpersoon"
+
+msgid "Continue"
+msgstr "Doorgaan met"
+
+msgid "Country"
+msgstr "Land"
+
+msgid "Create Backup"
+msgstr "Maak back-up"
+
+msgid "Cron Jobs"
+msgstr "Cron Jobs"
+
+msgid "Cron job email reporting has been successfully disabled."
+msgstr "E-mailrapportage van cronjob is succesvol uitgeschakeld"
+
+msgid "Cron job email reporting has been successfully enabled."
+msgstr "E-mailrapportage van cronjob is succesvol ingeschakeld"
+
+msgid "Cron job has been created successfully."
+msgstr "Cron job is met success aangemaakt"
+
+msgid "Current Number of Databases"
+msgstr "Huidige aantal Databases"
+
+msgid "Custom Logo"
+msgstr "Eigen logo"
+
+msgid "Custom document root"
+msgstr "Aangepast document root"
+
+msgid "Custom logo"
+msgstr "Eigen logo"
+
+msgid "DB"
+msgstr "Databases"
+
+msgid "DKIM"
+msgstr "DKIM"
+
+msgid "DKIM Support"
+msgstr "DKIM Ondersteuning"
+
+msgid "DNS"
+msgstr "DNS"
+
+msgid "DNS Cluster"
+msgstr "DNS Cluster"
+
+msgid "DNS Records"
+msgstr "DNS records"
+
+msgid "DNS Server"
+msgstr "DNS server"
+
+msgid "DNS Support"
+msgstr "DNS Ondersteuning"
+
+msgid "DNS Sync User"
+msgstr "DNS Sync gebruiker"
+
+msgid "DNS Template"
+msgstr "DNS Sjabloon"
+
+msgid "DNS Zone"
+msgstr "DNS zones"
+
+msgid "DNS Zones"
+msgstr "DNS zones"
+
+msgid "DNS zone {%s} has been created successfully."
+msgstr "DNS domein {%s} is met success aangemaakt."
+
+msgid "DNSKEY Record"
+msgstr "DNSKEY Record"
+
+msgid "DNSSEC"
+msgstr "DNSSEC"
+
+msgid "DROP"
+msgstr "DROP"
+
+msgid "DS Record"
+msgstr "DS Record"
+
+msgid "Daily"
+msgstr "Dagelijks"
+
+msgid "Data Loss Warning!"
+msgstr "Data verlies waarschuwing!"
+
+msgid "Data Source"
+msgstr "Bron"
+
+msgid "Database"
+msgstr "Database"
+
+msgid "Database Credentials: %s"
+msgstr "Database Gegevens %s"
+
+msgid ""
+"Database has been created.\n"
+"\n"
+"Database: {{database}}\n"
+"Username: {{username}}\n"
+"Password: {{password}}\n"
+"SQL Manager: {{dbadmin}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"Database is aangemaakt.\n"
+"\n"
+"Database: {{database}}\n"
+"Gebruikersnaam: {{username}}\n"
+"Wachtwoord: {{password}}\n"
+"SQL Manager: {{dbadmin}}\n"
+"\n"
+"Met vriendelijke groet,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Database {%s} has been created successfully. / {Open %s}"
+msgstr "Database {%s} is succesvol gemaakt. / {Open %s}"
+
+msgid "Databases"
+msgstr "Databases"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Day"
+msgstr "Dag"
+
+msgid "Day of Week"
+msgstr "Dag van de Week"
+
+msgid "Dec"
+msgstr "Dec"
+
+msgid "Default"
+msgstr "Standaard"
+
+msgid "Default Language"
+msgstr "Standaard Taal"
+
+msgid "Default List Sort Order"
+msgstr "Standaard Lijst Sorteer Order"
+
+msgid "Default Name Servers"
+msgstr "Standaard Naamservers"
+
+msgid "Delete"
+msgstr "Verwijder"
+
+msgid "Delete all notifications"
+msgstr "Verwijder alle notificaties"
+
+msgid "Delete notification"
+msgstr "Verwijder notificatie"
+
+msgid "Description"
+msgstr "Omschrijving"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Directory"
+msgstr "Map"
+
+msgid "Disable Automatic Updates"
+msgstr "Schakel automatisch updates uit"
+
+msgid "Disable Notifications"
+msgstr "Meldingen uitschakelen"
+
+msgid "Disabled"
+msgstr "Uitgeschakeld"
+
+msgid "Discard all mail"
+msgstr "Wis alle inkomende email"
+
+msgid "Disk"
+msgstr "Schijfruimte"
+
+msgid "Display / Hide shortcuts"
+msgstr "Beschikbare sneltoetsen weergeven"
+
+msgid "Do not allow other administrators to access Server Settings"
+msgstr "Geef andere beheerders geen toegang tot de serverinstellingen"
+
+msgid "Do not allow user to log in to Control Panel"
+msgstr "Blokeer toegang tot Control panel voor deze user"
+
+msgid "Do not store forwarded mail"
+msgstr "Doorgestuurde e-mail niet opslaan"
+
+msgid "Domain"
+msgstr "Domein"
+
+msgid "Domain {%s} has been created successfully."
+msgstr "Domein {%s} is met success aangemaakt."
+
+msgid "Domains"
+msgstr "Domeinen"
+
+msgid "Download"
+msgstr "Download"
+
+msgid "Download Database"
+msgstr "Download de database"
+
+msgid "Download of remote backup file has been scheduled."
+msgstr "Download van externe back-up bestand is gepland."
+
+msgid "Duplicate"
+msgstr "Kopieer"
+
+msgid "Edit"
+msgstr "Bewerken"
+
+msgid "Edit Backup Exclusions"
+msgstr "Bewerk Back-up Uitsluitingen"
+
+msgid "Edit Cron Job"
+msgstr "Cronjob bewerken"
+
+msgid "Edit DNS Domain"
+msgstr "DNS Domein bewerken"
+
+msgid "Edit DNS Record"
+msgstr "DNS record bewerken"
+
+msgid "Edit Database"
+msgstr "Bewerk database"
+
+msgid "Edit Domain"
+msgstr "Domein bewerken"
+
+msgid "Edit Firewall Rule"
+msgstr "Firewall regel bewerken"
+
+msgid "Edit IP Address"
+msgstr "IP-Adres Bewerken"
+
+msgid "Edit Mail Account"
+msgstr "E-mailaccount Aanpassen"
+
+msgid "Edit Mail Domain"
+msgstr "Wijzig e-maildomein"
+
+msgid "Edit Package"
+msgstr "Wijzig pakket"
+
+msgid "Edit User"
+msgstr "Gebruiker bewerken"
+
+msgid "Edit Web Domain"
+msgstr "Wijzig Web Domein"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Email Credentials: %s@%s"
+msgstr "E-mail aanmeldgegevens: %s@%s"
+
+msgid "Email Subject"
+msgstr "Email onderwerp"
+
+msgid "Email login credentials to:"
+msgstr "E-mail inloggegevens naar:"
+
+msgid "Enable API access"
+msgstr "Schakel API toegang in"
+
+msgid "Enable Automatic Updates"
+msgstr "Schakel automatisch updates in"
+
+msgid "Enable DNSSEC"
+msgstr "Schakkel DNSSEC"
+
+msgid "Enable FastCGI cache"
+msgstr "Schakel FastCGI Cache in"
+
+msgid "Enable HTTP Strict Transport Security (HSTS)"
+msgstr "Inschakelen van HTTP strikte Transport Security (HSTS)"
+
+msgid "Enable Notifications"
+msgstr "Meldingen inschakelen"
+
+msgid "Enable SSL for this domain"
+msgstr "SSL voor dit domein inschakelen"
+
+msgid "Enable automatic HTTPS redirection"
+msgstr "Automatische HTTPS omleiding inschakelen"
+
+msgid "Enable debug mode"
+msgstr "Schakel debug mode in"
+
+msgid "Enable domain redirection"
+msgstr "Schakel domain doorsturing in"
+
+msgid "Enable legacy API access"
+msgstr "Schakel Legacy API toegang in"
+
+msgid "Enable preview features"
+msgstr "Schakel preview features in"
+
+msgid "Enable two-factor authentication"
+msgstr "Schakel tweestapsverificatie in"
+
+msgid "Enabled"
+msgstr "Ingeschakeld "
+
+msgid "Enabled PHP Versions"
+msgstr "Ingeschakelde PHP Versies"
+
+msgid "Enabled for admin"
+msgstr "Ingeschakeld voor admin"
+
+msgid "Enabled for all users"
+msgstr "Ingeschakeld voor alle gebruikers"
+
+msgid "Enforce subdomain ownership"
+msgstr "Dwing eigendom van het subdomein af"
+
+msgid "Enter focused element"
+msgstr "Enter gefocust element"
+
+msgid "Error"
+msgstr "Foutmelding"
+
+msgid "Error Log"
+msgstr "Fouten Log"
+
+msgid "Error code: %s"
+msgstr "Foutcode: %s"
+
+msgid "Error: %s update failed."
+msgstr "Error: %s update mislukt"
+
+msgid "Error: Hestia did not return any output."
+msgstr "Foutmelding: Hestia gaf geen melding"
+
+msgid "Error: unable to copy package."
+msgstr "Fout: kan pakket niet kopiëren."
+
+msgid "Error: unknown record ID."
+msgstr "Fout: onbekende record ID."
+
+msgid "Every %s days"
+msgstr "Alle %s dagen"
+
+msgid "Every %s hours"
+msgstr "Elke %s uren"
+
+msgid "Every %s minutes"
+msgstr "Elke %s minuten"
+
+msgid "Every %s months"
+msgstr "Iedere %s maanden"
+
+msgid "Every day"
+msgstr "Elke dag"
+
+msgid "Every even day"
+msgstr "Elke even dag"
+
+msgid "Every even month"
+msgstr "Elke even maand"
+
+msgid "Every hour"
+msgstr "Elk uur"
+
+msgid "Every minute"
+msgstr "Elke minuut"
+
+msgid "Every month"
+msgstr "Elke maand"
+
+msgid "Every odd day"
+msgstr "Elke oneven dag"
+
+msgid "Every odd month"
+msgstr "Elke oneven maand"
+
+msgid "Expand main menu"
+msgstr "Klap menu uit"
+
+msgid "Expiration Date"
+msgstr "Vervaldatum"
+
+msgid "Expire"
+msgstr "Loopt af"
+
+msgid "FTP"
+msgstr "FTP"
+
+msgid "FTP Account Credentials: %s"
+msgstr "FTP accountaanmeldgegevens: %s"
+
+msgid ""
+"FTP account has been created and ready to use.\n"
+"\n"
+"Hostname: {{domain}}\n"
+"Username: {{username}}\n"
+"Password: {{password}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"FTP account is aangemaakt en klaar voor gebruik.\n"
+"\n"
+"Hostname: {{domain}}\n"
+"Gebruikersnaam: {{username}}\n"
+"Wachtwoord: {{password}}\n"
+"\n"
+"Met vriendelijke groet,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Failed"
+msgstr "Mislukt"
+
+msgid "Feb"
+msgstr "Feb"
+
+msgid "Field \"%s\" can not be blank."
+msgstr "Veld \"%s\" kan niet leeg zijn."
+
+msgid "File Manager"
+msgstr "Bestandsbeheer"
+
+msgid "File Name"
+msgstr "Bestandsnaam"
+
+msgid "File System Disk Quota"
+msgstr "Bestandssysteem schijfquotum"
+
+msgid "File manager"
+msgstr "Bestand beheer"
+
+msgid "Firewall"
+msgstr "Firewall"
+
+msgid "Firewall Rules"
+msgstr "Firewall regels"
+
+msgid "Flag"
+msgstr "Flag"
+
+msgid "Focus on search"
+msgstr "Focus op zoek"
+
+msgid "For example"
+msgstr "Bijvoorbeeld"
+
+msgid "Forgot Password"
+msgstr "Wachtwoord Vergeten"
+
+msgid "Forgot Token"
+msgstr "Verwijder token"
+
+msgid "Forward to"
+msgstr "Doorsturen naar"
+
+msgid "Forwarding"
+msgstr "Doorsturen"
+
+msgid "Friday"
+msgstr "Vrijdag"
+
+msgid "General"
+msgstr "Algemeen"
+
+msgid "Generate"
+msgstr "Genereren"
+
+msgid "Generate Self-Signed SSL Certificate"
+msgstr "Genereer Self-Signed SSL-certificaat"
+
+msgid "Global SMTP Relay"
+msgstr "Globale SMTP relay"
+
+msgid "Go to BACKUP list"
+msgstr "Ga naar BACKUP lijst"
+
+msgid "Go to CRON list"
+msgstr "Ga naar CRON lijst"
+
+msgid "Go to DB list"
+msgstr "Ga naar DATABASES lijst"
+
+msgid "Go to DNS list"
+msgstr "Ga naar DNS lijst"
+
+msgid "Go to MAIL list"
+msgstr "Ga naar MAIL lijst"
+
+msgid "Go to WEB list"
+msgstr "Ga naar WEBSITES lijst"
+
+msgid "HESTIA"
+msgstr "HESTIA"
+
+msgid ""
+"Hello {{name}},\n"
+"\n"
+"To reset your {{appname}} password, please follow this link:\n"
+"https://{{hostname}}/reset/?action=confirm&user={{user}}&code={{resetcode}}\n"
+"\n"
+"Alternatively, you may go to https://{{hostname}}/reset/?"
+"action=code&user={{user}} and enter the following reset code:\n"
+"{{resetcode}}\n"
+"\n"
+"If you did not request password reset, please ignore this message and accept "
+"our apologies.\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"Hallo {{name}},\n"
+"\n"
+"Om het {{appname}} wachtwoord te resetten, volg de volgende link:\n"
+"https://{{hostname}}/reset/?action=confirm&user={{user}}&code={{resetcode}}\n"
+"\n"
+"Als alternatief kun je naar https://{{hostname}}/reset/?"
+"action=code&user={{user}} en voer de volgende reset code in:\n"
+"{{resetcode}}\n"
+"\n"
+"Als je geen wachtwoord hebt aangevraagd, negeer dit bericht en accepteer "
+"onze excuses.\n"
+"\n"
+"Met vriendelijke groet,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid ""
+"Hello {{name}},\n"
+"\n"
+"Your account has been created and ready to use.\n"
+"\n"
+"https://{{hostname}}/login/\n"
+"Username: {{user}}\n"
+"Password: {{password}}\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"Hallo {{name}},\n"
+"\n"
+"Je account is aangemaakt en klaar voor gebruik.\n"
+"\n"
+"https://{{hostname}}/login/\n"
+"Gebruikersnaam: {{user}}\n"
+"Wachtwoord: {{password}}\n"
+"\n"
+"Met vriendelijke groet,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Help"
+msgstr "Hulp"
+
+msgid "Hestia Control Panel"
+msgstr "Hestia Control Panel"
+
+msgid "Hestia core package"
+msgstr "Hestia kern pakket"
+
+msgid "Hestia internal php interpreter"
+msgstr "Hestia internal php interpreter"
+
+msgid "Hestia internal web server"
+msgstr "Hestia internal web server"
+
+msgid "Hide Certificate"
+msgstr "Verberg Certificaat"
+
+msgid "Hide account from other administrators"
+msgstr "Verberg account voor andere adminstrators"
+
+msgid "Hide link to Documentation"
+msgstr "Verberg link naar documentatie"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Hostname"
+msgstr "Hostnaam"
+
+msgid "Hour"
+msgstr "Uur"
+
+msgid "Hourly"
+msgstr "Ieder uur"
+
+msgid "IMAP Settings"
+msgstr "IMAP instellingen"
+
+msgid "IP Address"
+msgstr "IP adres"
+
+msgid "IP Address / IPset IP List"
+msgstr "IP Adres / IPset IP lijst"
+
+msgid "IP Addresses"
+msgstr "IP Adressen"
+
+msgid "IP List Name"
+msgstr "IP List Naam"
+
+msgid "IP Version"
+msgstr "IP Versie"
+
+msgid "IP address has been banned successfully."
+msgstr "IP adres is succesvol geblokeerd."
+
+msgid "IP address {%s} has been created successfully."
+msgstr "Ip address {%s} is met success aangemaakt."
+
+msgid "IP list has been created successfully."
+msgstr "IP list is met success aangemaakt."
+
+msgid "IP or Value"
+msgstr "IP of Waarde"
+
+msgid "IPVERSE"
+msgstr "IPVERSE"
+
+msgid "IPs"
+msgstr "IP's"
+
+msgid "IPset IP Lists"
+msgstr "IPset IP-lijsten"
+
+msgid "ISO 3166-1 alpha-2 two-letter code"
+msgstr "ISO 3166-1 alpha-2 twee-letterige code"
+
+msgid ""
+"If the aliases changes, Let's Encrypt will obtain a new SSL certificate."
+msgstr ""
+"Als de aliassen veranderen, Zal er via Let's Encrypt een nieuw SSL-"
+"certificaat verkrijgen."
+
+msgid "Inactive session timeout"
+msgstr "Time-out voor inactieve sessie "
+
+msgid "Inactive session timeout can not lower than 1 minute."
+msgstr "Time-out voor inactieve sessie mag niet korter zijn dan 1 minuut"
+
+msgid "Info (read-only mode): Crontab can only be edited via SSH."
+msgstr "Info (modus alleen-lezen): Crontab kan alleen worden bewerkt via SSH."
+
+msgid "Information"
+msgstr "Informatie"
+
+msgid "Install %s"
+msgstr "Installeer %s"
+
+msgid "Interface"
+msgstr "Interface"
+
+msgid "Invalid or missing 2FA token"
+msgstr "Ongeldige of missende 2FA token"
+
+msgid "Invalid username or code"
+msgstr "Verkeerde gebruikersnaam of code"
+
+msgid "Invalid username or password"
+msgstr "Verkeerde gebruikersnaam en/of wachtwoord"
+
+msgid "Issued By"
+msgstr "Uitgegeven door"
+
+msgid "Issued To"
+msgstr "Uitgegeven aan"
+
+msgid ""
+"It is strongly advised to {create a standard user account} before adding %s "
+"to the server due to the increased privileges the admin account possesses "
+"and potential security risks."
+msgstr ""
+"Het wordt ten zeerste aangeraden om {create a standard user account} voor "
+"het toevoegen van %s aan de server door de toegenomen privileges die de "
+"beheerdersaccount heeft en potentiële beveiligingsrisico's."
+
+msgid ""
+"It may take a few minutes to save your changes. Please wait until the "
+"process has completed and do not refresh the page."
+msgstr ""
+"Het kan een paar minuten duren om uw wijzigingen op te slaan. Wacht tot het "
+"proces is voltooid en ververs de pagina niet."
+
+msgid "Jan"
+msgstr "Jan"
+
+msgid "Jobs"
+msgstr "Taken"
+
+msgid "Jul"
+msgstr "Jul"
+
+msgid "Jun"
+msgstr "Jun"
+
+msgid "Key Size"
+msgstr "Sleutelgrootte"
+
+msgid "Key Tag"
+msgstr "Key Tag"
+
+msgid "Key Type / Flag"
+msgstr "Key Type / Vlag"
+
+msgid "Language"
+msgstr "Taal"
+
+msgid "Last 70 lines of %s.%s.log"
+msgstr "Laatste 70 lijnen van %s.%s.log"
+
+msgid "Limit"
+msgstr "Limiet"
+
+msgid "Load Average"
+msgstr "Gemiddelde Belasting"
+
+msgid "Loading..."
+msgstr "Laden..."
+
+msgid "Local Backup"
+msgstr "Lokale Backup"
+
+msgid "Log in"
+msgstr "Inloggen"
+
+msgid "Log in as"
+msgstr "Log in als"
+
+msgid "Log out"
+msgstr "Uitloggen"
+
+msgid "Logged in as"
+msgstr "Ingelogd in als "
+
+msgid "Login"
+msgstr "Inloggen"
+
+msgid "Login History"
+msgstr "Login Geschiedenis"
+
+msgid "Login screen style"
+msgstr "Login scherm stijl"
+
+msgid "Logs"
+msgstr "Geschiedenis"
+
+msgid "MAIL"
+msgstr "E-mail"
+
+msgid "MB"
+msgstr "MB"
+
+msgid "Mail"
+msgstr "E-mail"
+
+msgid "Mail Accounts"
+msgstr "E-mail Accounts"
+
+msgid "Mail Domain"
+msgstr "Email Domein"
+
+msgid "Mail Domains"
+msgstr "E-mail Domeinen"
+
+msgid "Mail Server"
+msgstr "Mail server"
+
+msgid "Mail Support"
+msgstr "Mail Ondersteuning"
+
+msgid ""
+"Mail account has been created.\n"
+"\n"
+"Common Account Settings:\n"
+"Username: {{account}}@{{domain}}\n"
+"Password: {{password}}\n"
+"Webmail: {{webmail}}\n"
+"Hostname: {{hostname}}\n"
+"\n"
+"IMAP Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 993\n"
+"STARTTLS: Port 143\n"
+"No encryption: Port 143\n"
+"\n"
+"POP3 Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 995\n"
+"STARTTLS: Port 110\n"
+"No encryption: Port 110\n"
+"\n"
+"SMTP Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 465\n"
+"STARTTLS: Port 587\n"
+"No encryption: Port 25\n"
+"\n"
+"Best regards,\n"
+"\n"
+"--\n"
+"{{appname}}"
+msgstr ""
+"Email account is aangemaakt.\n"
+"\n"
+"Algemene Account Instellingen:\n"
+"Gebruikersnaam: {{account}}@{{domain}}\n"
+"Wachwoord: {{password}}\n"
+"Webmail: {{webmail}}\n"
+"Hostnaam: {{hostname}}\n"
+"\n"
+"IMAP Instellingen\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 993\n"
+"STARTTLS: Port 143\n"
+"Geen encryptie: Port 143\n"
+"\n"
+"POP3 Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 995\n"
+"STARTTLS: Port 110\n"
+"Geen encryptie: Port 110\n"
+"\n"
+"SMTP Settings\n"
+"Authentication: Normal Password\n"
+"SSL/TLS: Port 465\n"
+"STARTTLS: Port 587\n"
+"Geen encryptie: Port 25\n"
+"\n"
+"Met vriendelijke groet,\n"
+"\n"
+"--\n"
+"{{appname}}"
+
+msgid "Mail account {%s@%s} has been created successfully."
+msgstr "Mail account {%s@%s} is aangemaakt."
+
+msgid "Mail domain {%s} has been created successfully."
+msgstr "Mail domein {%s} is met success aangemaakt."
+
+msgid "Manage SSH Keys"
+msgstr "Beheer SSH Sleutels"
+
+msgid "Mar"
+msgstr "Mrt"
+
+msgid "Maximum %s characters length, including prefix"
+msgstr "Maximaal %s karakters lang, inclusief prefix"
+
+msgid "Maximum Number of Databases"
+msgstr "Maximale aantal Databases"
+
+msgid "May"
+msgstr "Mei"
+
+msgid "Memory"
+msgstr "Geheugen"
+
+msgid "Message"
+msgstr "Bericht"
+
+msgid "Minute"
+msgstr "Minuut"
+
+msgid "Minutes"
+msgstr "Minuten"
+
+msgid "Monday"
+msgstr "Maandag"
+
+msgid "Month"
+msgstr "Maand"
+
+msgid "Monthly"
+msgstr "Maandelijks"
+
+msgid "More info"
+msgstr "Meer informatie"
+
+msgid "Move backward through top menu"
+msgstr "Beweeg terug door topmenu"
+
+msgid "Move down through elements list"
+msgstr "Beweeg omlaag door elementen lijst"
+
+msgid "Move forward through top menu"
+msgstr "Beweeg vooruit door topmenu"
+
+msgid "Move up through elements list"
+msgstr "Beweeg omhoog door elementen lijst"
+
+msgid "MySQL Support"
+msgstr "MySQL Ondersteuning"
+
+msgid "NAT IP Association"
+msgstr "NAT IP-associatie"
+
+msgid "NGINX cache has been purged successfully."
+msgstr "NGINX cache is met success verwijderd"
+
+msgid "Name"
+msgstr "Naam"
+
+msgid "Name Servers"
+msgstr "Naam Servers"
+
+msgid "Nameserver 1"
+msgstr "Naamserver 1"
+
+msgid "Nameserver 2"
+msgstr "Naamserver 2"
+
+msgid "Netmask"
+msgstr "Netmasker"
+
+msgid "Network"
+msgstr "Netwerk"
+
+msgid "New Password"
+msgstr "Nieuw wachtwoord"
+
+msgid "Next"
+msgstr "Volgende"
+
+msgid "No"
+msgstr "Nee"
+
+msgid "No aliases"
+msgstr "Geen aliassen"
+
+msgid "No encryption"
+msgstr "Geen encryptie"
+
+msgid "No exclusions"
+msgstr "Geen uitsluitingen"
+
+msgid "No notifications"
+msgstr "Geen meldingen"
+
+msgid "Normal password"
+msgstr "Normaal wachtwoord"
+
+msgid "Not After"
+msgstr "Niet na"
+
+msgid "Not Before"
+msgstr "Niet voor"
+
+msgid "Notifications"
+msgstr "Meldingen"
+
+msgid "Nov"
+msgstr "Nov"
+
+msgid "Oct"
+msgstr "Okt"
+
+msgid "Old Style"
+msgstr "Oude stijl"
+
+msgid "One or more email addresses"
+msgstr "Eén of meerdere e-mailadressen"
+
+msgid "Open Webmail"
+msgstr "Open Webmail"
+
+msgid "Open debug panel"
+msgstr "Open debug paneel"
+
+msgid "Open menu"
+msgstr "Open menu"
+
+msgid "Operating System"
+msgstr "Besturing Systeem"
+
+msgid "Optional"
+msgstr "Optioneel"
+
+msgid "Options"
+msgstr "Opties"
+
+msgid "Organization"
+msgstr "Organisatie"
+
+msgid "Overall Statistics"
+msgstr "Alle Statistieken"
+
+msgid "Owner"
+msgstr "Eigenaar"
+
+msgid "PHP CLI Version"
+msgstr "PHP CLI versie"
+
+msgid "POP3 Settings"
+msgstr "POP3 instellingen"
+
+msgid "Package"
+msgstr "Pakket"
+
+msgid "Package Name"
+msgstr "Pakketnaam"
+
+msgid "Package Names"
+msgstr "Pakket namen"
+
+msgid "Package {%s} has been created successfully."
+msgstr "Paket {%s} is met success aangemaakt."
+
+msgid "Packages"
+msgstr "Pakketten"
+
+msgid "Partially implemented"
+msgstr "Gedeeltelijk geïmplementeerd"
+
+msgid "Password"
+msgstr "Wachtwoord"
+
+msgid "Password Reset at %s"
+msgstr "Wachtwoord reset om %s"
+
+msgid "Password does not match the minimum requirements."
+msgstr "Het wachtwoord komt voldoet niet aan de minimumvereisten."
+
+msgid "Password reset code has been sent to your email address"
+msgstr "Wachtwoord herstel koppeling is verzonden naar uw e-mailadres"
+
+msgid ""
+"Password reset instructions have been sent to the email address associated "
+"with this account."
+msgstr ""
+"Wachtwoord reset instructies zijn verzonden naar het email adress gelinkt "
+"met did account"
+
+msgid "Passwords do not match"
+msgstr "Wachtwoorden komen niet overeen"
+
+msgid "Path"
+msgstr "Pad"
+
+msgid "Permissions"
+msgstr "Rechten"
+
+msgid "Please enter a valid contact name."
+msgstr "Voer een geldige naam in."
+
+msgid "Please enter a valid email address."
+msgstr "Vul een geldig e-mailadres in."
+
+msgid "Please make sure ~/web/%s/public_html is empty!"
+msgstr "Controleer of ~/web/%s/public_html leeg is"
+
+msgid "Please scan the code below in your 2FA application"
+msgstr "Scan de onderstaande code in uw 2FA-applicatie"
+
+msgid "Please wait 15 minutes before sending a new request."
+msgstr "Wacht 15 minuten voor het versturen van een nieuwe aanvraag"
+
+msgid "Plugins"
+msgstr "Plugins"
+
+msgid "Point to"
+msgstr "Wijs naar"
+
+msgid "Policies"
+msgstr "Beleid"
+
+msgid "Policy"
+msgstr "Beleid"
+
+msgid "Port"
+msgstr "Poort"
+
+msgid "PostgreSQL Support"
+msgstr "PostgreSQL ondersteuning"
+
+msgid "Prefix %s will be added to username automatically"
+msgstr "Voorvoegsel %s wordt automatisch toegevoegd aan gebruikersnaam"
+
+msgid ""
+"Prefix %s will be automatically added to database name and database user"
+msgstr ""
+"Voorvoegsel %s zal automatisch worden toegevoegd aan de database naam en "
+"gebruiker"
+
+msgid "Prevent CSRF"
+msgstr "Voorkom CSRF"
+
+msgid "Preview"
+msgstr "Bezichtiging"
+
+msgid "Preview Features"
+msgstr "Beta functies"
+
+msgid "Priority"
+msgstr "Prioriteit"
+
+msgid "Production Release"
+msgstr "Productie-release"
+
+msgid "Protocol"
+msgstr "Protocol"
+
+msgid "Proxy Extensions"
+msgstr "Proxy Extensies"
+
+msgid "Proxy Server"
+msgstr "Proxy Server"
+
+msgid "Proxy Support"
+msgstr "Proxy Ondersteuning"
+
+msgid "Proxy Template"
+msgstr "Proxy Sjabloon"
+
+msgid "Public Key"
+msgstr "Publieke sleutel"
+
+msgid "Purge NGINX Cache"
+msgstr "Wis NGINX Cache"
+
+msgid "Quick App Installer"
+msgstr "Quick App Installer"
+
+msgid "Quick Install App"
+msgstr "Snelle Installatie App"
+
+msgid "Quota"
+msgstr "Quotum"
+
+msgid "RAM"
+msgstr "Geheugen"
+
+msgid "Ranges and lists are acceptable"
+msgstr "Bereiken en lijsten zijn toegestaan"
+
+msgid "Rate Limit"
+msgstr "Rate Limiet"
+
+msgid "Rebuild"
+msgstr "Herbouwen"
+
+msgid "Rebuild All"
+msgstr "Herbouw alles"
+
+msgid "Rebuild Cron Jobs"
+msgstr "Herbouw Cron Jobs"
+
+msgid "Rebuild DNS Zones"
+msgstr "Herbouw DNS Zones"
+
+msgid "Rebuild Databases"
+msgstr "Herbouw Databases"
+
+msgid "Rebuild Mail Domains"
+msgstr "Herbouw Mail Domeinen"
+
+msgid "Rebuild User Profile"
+msgstr "Herbouw Gebruikers Profiel"
+
+msgid "Rebuild Web Domains"
+msgstr "Herbouw Web Domeinen"
+
+msgid "Record"
+msgstr "Record"
+
+msgid "Record {%s.%s} has been created successfully."
+msgstr "Record {%s.%s} is aangemaakt."
+
+msgid "Records"
+msgstr "Records"
+
+msgid "Redirect visitors to %s"
+msgstr "Stuur bezoeker to naar %s"
+
+msgid "Redirect visitors to a custom domain or web address"
+msgstr "Stuur bezoekers door naar een aangepast domain of web adres"
+
+msgid "Refresh"
+msgstr "Ververs"
+
+msgid "Refresh IP Addresses"
+msgstr "Verniew IP adressen"
+
+msgid "Reject Spam"
+msgstr "Weiger Spam"
+
+msgid "Release"
+msgstr "Uitgave"
+
+msgid "Remote Backup"
+msgstr "Externe Backup"
+
+msgid "Reset"
+msgstr "Herstellen"
+
+msgid "Reset Code"
+msgstr "Herstelcode"
+
+msgid "Restart"
+msgstr "Herstart"
+
+msgid "Restart \"%s\" failed"
+msgstr "Herstart \"%s\" mislukt"
+
+msgid "Restore"
+msgstr "Herstel"
+
+msgid "Restore All"
+msgstr "Herstel alles"
+
+msgid "Restrict access to read-only for other administrators"
+msgstr "Beperk toegang tot read-only voor andere administrators"
+
+msgid "Role"
+msgstr "Rol"
+
+msgid "Rule has been created successfully."
+msgstr "Regel is met success aangemaakt."
+
+msgid "Run Command"
+msgstr "Voer commando uit"
+
+msgid "Runtime"
+msgstr "looptijd"
+
+msgid "SMTP Relay"
+msgstr "SMTP Relay"
+
+msgid "SMTP Settings"
+msgstr "SMTP instellingen"
+
+msgid "SOA"
+msgstr "SOA"
+
+msgid "SSH"
+msgstr "SSH"
+
+msgid "SSH Access"
+msgstr "SSH Toegang"
+
+msgid "SSH ID"
+msgstr "SSH ID"
+
+msgid "SSH Key"
+msgstr "SSH sleutels"
+
+msgid "SSH Key already exists."
+msgstr "SSH sleutel bestaal al"
+
+msgid "SSH Key has been created successfully."
+msgstr "SSH Sleutel is met success aangemaakt."
+
+msgid "SSH Keys"
+msgstr "SSH-sleutels"
+
+msgid "SSL"
+msgstr "SSL"
+
+msgid "SSL CSR"
+msgstr "SSL CSR"
+
+msgid "SSL Certificate"
+msgstr "SSL Certificaat"
+
+msgid "SSL Certificate Authority / Intermediate"
+msgstr "SSL Certificeringsinstantie / Tussenpersoon"
+
+msgid "SSL Domains"
+msgstr "SSL domein"
+
+msgid "SSL Private Key"
+msgstr "SSL Privé sleutel"
+
+msgid "Saturday"
+msgstr "Zaterdag"
+
+msgid "Save"
+msgstr "Opslaan"
+
+msgid "Save form"
+msgstr "Formulier opslaan"
+
+msgid "Search"
+msgstr "Zoeken"
+
+msgid "Search Results"
+msgstr "Zoekresultaten"
+
+msgid "Secret Key"
+msgstr "Geheime toegangs sleutel"
+
+msgid "Security"
+msgstr "Beveiliging"
+
+msgid "Select"
+msgstr "Selecteer"
+
+msgid "Select all"
+msgstr "Selecteer alles"
+
+msgid "Send FTP credentials to email"
+msgstr "Stuur FTP inloggegevens naar e-mailadres"
+
+msgid "Send email notification when an update has been installed"
+msgstr "Stun een email notification waneer een update is geïnstalleerd"
+
+msgid "Send update installation log by email"
+msgstr "Verstuur installatielogboek via e-mail na de update"
+
+msgid "Send welcome email"
+msgstr "Verstuur welkom email"
+
+msgid "Sender Email Address"
+msgstr "E-mailadres van afzender"
+
+msgid "Sender Name"
+msgstr "Afzendernaam"
+
+msgid "Sep"
+msgstr "Sep"
+
+msgid "Server settings"
+msgstr "Server instellingen"
+
+msgid "Service"
+msgstr "Dienst"
+
+msgid "Services"
+msgstr "Diensten"
+
+msgid "Set as default language for all users"
+msgstr "Stel in als standaardtaal voor alle gebruikers"
+
+msgid "Set as selected theme for all users"
+msgstr "Stel in als standaard thema voor alle gebruikers"
+
+msgid "Setup"
+msgstr "Installeer"
+
+msgid "Shared"
+msgstr "Gedeeld"
+
+msgid "Shell"
+msgstr "Shell"
+
+msgid "Shortcuts"
+msgstr "Snelkoppelingen"
+
+msgid "Show Certificate"
+msgstr "Laat certificaat zien"
+
+msgid "Show Per User"
+msgstr "Toon Per Gebruiker"
+
+msgid "Signature"
+msgstr "Handtekening"
+
+msgid "Size"
+msgstr "Groote"
+
+msgid "Sort by"
+msgstr "Sorteer op"
+
+msgid "Sort items"
+msgstr "Sorteer items"
+
+msgid "Spam Filter"
+msgstr "Spam Filter"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "Start \"%s\" failed"
+msgstr "Start \"%s\" mislukt"
+
+msgid "State"
+msgstr "Staat / Provincie"
+
+msgid "State / Province"
+msgstr "Staat / Provincie"
+
+msgid "Statistics"
+msgstr "Statistieken"
+
+msgid "Statistics Authorization"
+msgstr "Vereis Autorisatie webstatistieken"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Status code"
+msgstr "Statuscode"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "Stop \"%s\" failed"
+msgstr "Stop %s mislukt"
+
+msgid "Strict"
+msgstr "Streng"
+
+msgid "Submit"
+msgstr "Versturen"
+
+msgid "Success"
+msgstr "Succes"
+
+msgid "Sunday"
+msgstr "Zondag"
+
+msgid "Support CIDR format"
+msgstr "Ondersteuning CIDR formaat"
+
+msgid "Supported variables"
+msgstr "Ondersteunde variabelen"
+
+msgid "Suspend"
+msgstr "Opschorten"
+
+msgid "Suspend All"
+msgstr "Alles stoppen"
+
+msgid "Suspended"
+msgstr "Opgeschort"
+
+msgid "Sync Error document templates on user rebuild"
+msgstr "Sync Foutdocumentsjablonen bij de wederopbouw van de gebruiker"
+
+msgid "Sync Skeleton templates"
+msgstr "Synchroniseer Skelet templates"
+
+msgid "System"
+msgstr "Systeem"
+
+msgid "System Administrator account"
+msgstr "Systeem Administrator account"
+
+msgid "System PHP Version"
+msgstr "Systeem PHP versie"
+
+msgid "System Protection"
+msgstr "Systeem berscherming"
+
+msgid "TTL"
+msgstr "TTL"
+
+msgid "Target domain or URL"
+msgstr "Doel domein of URL"
+
+msgid "Task Monitor"
+msgstr "Taak monitor"
+
+msgid ""
+"Task has been added to the queue. You will receive an email notification "
+"when your backup is ready for download."
+msgstr ""
+"Taak is toegevoegd aan de wachtrij. U zult een e-mail ontvangen wanneer uw "
+"backup is voltooid."
+
+msgid ""
+"Task has been added to the queue. You will receive an email notification "
+"when your restore has been completed."
+msgstr ""
+"Taak is toegevoegd aan de wachtrij. U zult een e-mail ontvangen wanneer uw "
+"herstel is voltooid."
+
+msgid "Template"
+msgstr "Sjabloon"
+
+msgid "The system is going down for reboot NOW!"
+msgstr "Het systeem gaat NU herstarten!"
+
+msgid "Theme"
+msgstr "Thema"
+
+msgid "There are currently no IP lists defined."
+msgstr "Er zijn op dit moment geen ip lijsten gedefineerd"
+
+msgid "There are currently no banned IP addresses."
+msgstr "Er zijn momenteel geen geblokeerde IP adressen."
+
+msgid "Thursday"
+msgstr "Donderdag"
+
+msgid "Time"
+msgstr "Tijd"
+
+msgid "Time Zone"
+msgstr "Tijdzone"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid ""
+"To enable Let's Encrypt SSL, ensure that DNS records exist for mail.%s and "
+"%s!"
+msgstr ""
+"Om Lets Encrypt SSL te activeer controleer or DNS records bestaan voor mail."
+"%s en %s!"
+
+msgid "Top"
+msgstr "Top"
+
+msgid "Triennially"
+msgstr "Driejaarlijks"
+
+msgid "Tuesday"
+msgstr "Dinsdag"
+
+msgid "Two-factor Authentication"
+msgstr "Twee-factor-authenticatie"
+
+msgid ""
+"Two-factor authentication is now turned off for your account.<br><br>You may "
+"now proceed to log in."
+msgstr ""
+"Tweestapsverificatie is nu uitgeschakeld voor uw account.<br><br>U kunt nu "
+"doorgaan met inloggen."
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Type directory name, one per line. To exlude all dirs use *"
+msgstr ""
+"Typ de map naam één per regel. Om alle mappen uit te sluiten, gebruik *"
+
+msgid ""
+"Type domain name, one per line. To exclude all domains use *. To exclude "
+"specific accounts use following format: domain.tld:info:support:postmaster"
+msgstr ""
+"Type domeinnaam, één per regel. Om alle domeinen uit te sluiten, gebruik *. "
+"Om specifieke account uit te sluiten: domain.tld:info:support:postmaster"
+
+msgid ""
+"Type domain name, one per line. To exclude all domains use *. To exclude "
+"specific dirs use following format: domain.tld:public_html/cache:public_html/"
+"tmp"
+msgstr ""
+"Type domeinnaam, één per regel. Om alle domeinen uit te sluiten, gebruik *. "
+"Om specifieke schrijfformaten uit te sluiten: domain.tld:public_html/cache:"
+"public_html/tmp"
+
+msgid "Type full database name, one per line. To exclude all databases use *"
+msgstr ""
+"Typ de volledige databasenaam één per regel. Om alle databases uit te "
+"sluiten, gebruik *"
+
+msgid "USER"
+msgstr "Gebruiker"
+
+msgid "Unable to add database!"
+msgstr "Het is niet mogelijk om nog een database toe te voegen!"
+
+msgid "Unable to add database! Limit reached!"
+msgstr ""
+"Limiet bereikt! Het is niet mogelijk om nog een database toe te voegen!"
+
+msgid "Unable to install %s, %s is not available."
+msgstr "Niet instaat om %s te installeren, %s is niet beschikbaar"
+
+msgid "Unlimited"
+msgstr "Onbeperkt"
+
+msgid "Unlock Account"
+msgstr "Ontgrendel Account"
+
+msgid "Unsave form"
+msgstr "Formulier ongedaan maken"
+
+msgid "Unsupported hash method"
+msgstr "Niet ondersteunde hash methode"
+
+msgid "Unsuspend"
+msgstr "Heractiveren"
+
+msgid "Unsuspend All"
+msgstr "Alles ongedaan maken"
+
+msgid "Update Usage Counters"
+msgstr "Update gebruik tellers"
+
+msgid "Update logo"
+msgstr "Logo bijwerken"
+
+msgid "Updates"
+msgstr "Updates"
+
+msgid "Upload the files to %s"
+msgstr "Bestanden uploaden naar %s"
+
+msgid "Uptime"
+msgstr "Up-time"
+
+msgid "Use IP address allow list for login attempts"
+msgstr "Beperk toegang ip adressen voor login pogingen"
+
+msgid "Use Let's Encrypt to obtain SSL certificate"
+msgstr "Gebruik Let's Encrypt om een SSL-certificaat te verkrijgen"
+
+msgid "Use local-part without domain name"
+msgstr "Gebruik lokaal deel zonder domeinnaam"
+
+msgid "User"
+msgstr "Gebruiker"
+
+msgid "User Directory"
+msgstr "Gebruikersdirectory"
+
+msgid "User {%s} has been created successfully. / {Log in as %s}"
+msgstr "Gebruiker {%s} is met success aangemaakt. / {Login als %s}"
+
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+msgid "Users"
+msgstr "Gebruikers"
+
+msgid "Value"
+msgstr "Waarde"
+
+msgid "Version"
+msgstr "Versie"
+
+msgid "View"
+msgstr "Bekijk"
+
+msgid "View Public DNSSEC Key"
+msgstr "Bekijk Publieke DNSSEC Sleutel"
+
+msgid "Visit"
+msgstr "Bezoek"
+
+msgid "WEB"
+msgstr "WEBSITES"
+
+msgid "Warning"
+msgstr "Waarschuwing"
+
+msgid "Warning! Last chance to save secret key!"
+msgstr ""
+"Waarschuwing! Laatste kans om the geheime toegangs sleutel op te slaan!"
+
+msgid "Web"
+msgstr "Web"
+
+msgid "Web Aliases"
+msgstr "Web Aliassen"
+
+msgid "Web Domain"
+msgstr "Web Domein"
+
+msgid "Web Domains"
+msgstr "Web Domeinen"
+
+msgid "Web Server"
+msgstr "Web server"
+
+msgid "Web Statistics"
+msgstr "Web Statistieken"
+
+msgid "Web Template"
+msgstr "Web Sjabloon"
+
+msgid "Webmail"
+msgstr "Webmail"
+
+msgid "Webmail Alias"
+msgstr "Webmail Alias"
+
+msgid "Webmail Client"
+msgstr "Webmail client"
+
+msgid "Wednesday"
+msgstr "Woensdag"
+
+msgid "Weekdays (5 days)"
+msgstr "Weekdagen (5 dagen)"
+
+msgid "Weekend (2 days)"
+msgstr "Weekend (2 dagen)"
+
+msgid "Weekly"
+msgstr "Wekelijks"
+
+msgid "Welcome"
+msgstr "Welkom"
+
+msgid "Welcome to %s"
+msgstr "Welkom bij %s"
+
+msgid "White Label"
+msgstr "White label"
+
+msgid "White Label Options"
+msgstr "White Label-instellingen"
+
+msgid "YYYY-MM-DD"
+msgstr "DD-MM-YYYY"
+
+msgid "Yearly"
+msgstr "Jaarlijks"
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "You are logged out, please log in again."
+msgstr "U bent uitgelogd. Gelieve opnieuw in te loggen."
+
+msgid "Your password must have at least"
+msgstr "Je wachtwoord moet minimaal voldoen aa"
+
+msgid ""
+"Your web folder already has files uploaded to it. The installer will "
+"overwrite your files and/or the installation might fail."
+msgstr ""
+"Je web map bevat al geüploade bestanden. De installer zal deze bestanden "
+"overschrijven en/of the installatie kan mislukken"
+
+msgid "Zones"
+msgstr "Zones"
+
+msgid "a database"
+msgstr "een database"
+
+msgid "a dns domain"
+msgstr "een dns domain"
+
+msgid "a mail domain"
+msgstr "een email domein"
+
+msgid "a web domain"
+msgstr "een web domein"
+
+msgid "backend server"
+msgstr "backend server"
+
+msgid "brute-force protection"
+msgstr "brute force bescherming"
+
+msgid "database server"
+msgstr "database server"
+
+msgid "dns server"
+msgstr "dns server"
+
+msgid "email / hour"
+msgstr "email / hour"
+
+msgid "email / hour / account"
+msgstr "e-mail / uur / account"
+
+msgid "email anti-virus"
+msgstr "email anti-virus"
+
+msgid "email spam filter"
+msgstr "e-mail spam filter"
+
+msgid "firewall"
+msgstr "firewall"
+
+msgid "ftp server"
+msgstr "ftp server"
+
+msgid "imap/pop3 server"
+msgstr "imap/pop3 server"
+
+msgid "in MB"
+msgstr "in MB"
+
+msgid "job scheduler"
+msgstr "Cron planner"
+
+msgid "mail server"
+msgstr "mail server"
+
+msgid "one or more email addresses"
+msgstr "Eén of meerdere e-mailadressen"
+
+msgid "per account / hour"
+msgstr "per account / uur"
+
+msgid "per domain"
+msgstr "per domein"
+
+msgid "phpMyAdmin Alias"
+msgstr "phpMyAdmin Alias"
+
+msgid "phpMyAdmin Single Sign On"
+msgstr "phpMyAdmin automatische inlog"
+
+msgid "phpPgAdmin Alias"
+msgstr "phpPgAdmin Alias"
+
+msgid "reverse proxy"
+msgstr "reverse proxy"
+
+msgid "ssh server"
+msgstr "ssh server"
+
+msgid "url, script or file"
+msgstr "url, script of file"
+
+msgid "web server"
+msgstr "web server"
+
+msgid "zstd only"
+msgstr "Alleen zstd"

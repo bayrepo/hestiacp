@@ -39,9 +39,9 @@ check_hestia_demo_mode
 if [ "$status" = "enable" ]; then
 	if [ ! -f "$HESTIA/web/api/index.php" ]; then
 		# Avoid useng RELEASE_BRANCH
-		wget -q https://dev.putey.net/bayrepo/hestiacp/raw/branch/master/web/api/index.php -O $HESTIA/web/api/index.php
+		wget -q https://dev.brepo.ru/bayrepo/hestiacp/raw/branch/master/web/api/index.php -O $HESTIA/web/api/index.php
 		if [ ! -s "$HESTIA/web/api/index.php" ]; then
-			wget -q https://dev.putey.net/bayrepo/hestiacp/raw/branch/master/web/api/index.php -O $HESTIA/web/api/index.php
+			wget -q https://dev.brepo.ru/bayrepo/hestiacp/raw/branch/master/web/api/index.php -O $HESTIA/web/api/index.php
 			if [ ! -s "$HESTIA/web/api/index.php" ]; then
 				# Throw error message to user
 				echo "ERROR: API installation failed."

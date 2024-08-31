@@ -782,8 +782,13 @@ if [ "$HESTIA_B" = true ]; then
 				popd || { echo "Can't restore directory from $SRC_DIR, javascript rebuild aborted"; exit 1; }
 			fi
 
+			#Prepare mo files
+			pushd ../web/locale
+			./hst_convert_po2mo.sh
+			popd
+
 			# Generate source tar.gz
-			tar -h --exclude=".git" --exclude=".github" --exclude=".husky" --exclude=".vscode" --exclude="node_modules" --exclude="src/archive" -czf $BUILD_DIR/hestia-$BUILD_VER.tar.gz -C $SRC_DIR/.. hestiacp
+			tar -h --exclude=".git" --exclude=".github" --exclude=".husky" --exclude=".vscode" --exclude="node_modules" --exclude="src/archive" --exclude="*.po" --exclude="*.mo.orig" -czf $BUILD_DIR/hestia-$BUILD_VER.tar.gz -C $SRC_DIR/.. hestiacp
 
 			# Build RPM package
 			echo Building Hestia RPM

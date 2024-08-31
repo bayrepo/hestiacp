@@ -171,7 +171,7 @@ if [ -e $HESTIA/conf/nopublickip ]; then
 	ip="$(ls -t $HESTIA/data/ips/ | head -n1)"
 	$BIN/v-change-sys-ip-nat "$ip" "$ip"
 else
-	pub_ipv4="$(curl -fsLm5 --retry 2 --ipv4 https://ip.hestiacp.com/)"
+	pub_ipv4="$(curl -fsLm5 --retry 2 --ipv4 -H "Simple-Hestiacp: yes" https://hestiaip.brepo.ru/)"
 	if [ ! -e "$HESTIA/data/ips/$pub_ipv4" ]; then
 		if [ -z "$(grep -R "$pub_ipv4" $HESTIA/data/ips/)" ]; then
 			ip="$(ls -t $HESTIA/data/ips/ | head -n1)"

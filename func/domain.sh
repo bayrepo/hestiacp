@@ -108,8 +108,12 @@ prepare_web_backend() {
 		pool=$(find -L /etc/php/ -name "$domain.conf" -exec dirname {} \;)
 	fi
 	# Check if multiple-PHP installed
-	regex="socket-(\d+)_(\d+)"
-	if [[ $backend_template =~ ^.*PHP-([0-9])\_([0-9])$ ]]; then
+	if [ -f "/etc/redhat-release" ]; then
+		regex="^.*PHP-([0-9])([0-9])$"
+	else
+		regex="^.*PHP-([0-9])\_([0-9])$"
+	fi
+	if [[ $backend_template =~ $regex ]]; then
 		if [ -f "/etc/redhat-release" ]; then
 			backend_version="${BASH_REMATCH[1]}${BASH_REMATCH[2]}"
 			pool=$(find -L /etc/opt/remi/php$backend_version -type d \( -name "pool.d" -o -name "*fpm.d" \))

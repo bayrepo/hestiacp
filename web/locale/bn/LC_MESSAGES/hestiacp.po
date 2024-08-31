@@ -1,0 +1,1179 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hestiacp\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-06 11:25\n"
+"Last-Translator: \n"
+"Language-Team: Bengali\n"
+"Language: bn_BD\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: hestiacp\n"
+"X-Crowdin-Project-ID: 587405\n"
+"X-Crowdin-Language: bn\n"
+"X-Crowdin-File: hestiacp.pot\n"
+"X-Crowdin-File-ID: 3\n"
+
+msgid "%d DNS record"
+msgid_plural "%d DNS records"
+msgstr[0] "%d টি DNS রেকর্ড"
+msgstr[1] "%d টি DNS রেকর্ড"
+
+msgid "%d DNS zone"
+msgid_plural "%d DNS zones"
+msgstr[0] "%d টি ডিএনএস জোন"
+msgstr[1] "%d টি ডিএনএস জোন"
+
+msgid "%d IP address"
+msgid_plural "%d IP addresses"
+msgstr[0] "%d টি আইপি ঠিকানা"
+msgstr[1] "%d টি আইপি ঠিকানা"
+
+msgid "%d backup"
+msgid_plural "%d backups"
+msgstr[0] "%d টি ব্যাকআপ"
+msgstr[1] "%d টি ব্যাকআপ"
+
+msgid "%d banned IP address"
+msgid_plural "%d banned IP addresses"
+msgstr[0] "%d টি নিষিদ্ধ আইপি ঠিকানা"
+msgstr[1] "%d টি নিষিদ্ধ আইপি ঠিকানা"
+
+msgid "%d cron job"
+msgid_plural "%d cron jobs"
+msgstr[0] "%d টি ক্রোন জব"
+msgstr[1] "%d টি ক্রোন জব"
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d দিন"
+msgstr[1] "%d দিন"
+
+msgid "%d firewall rule"
+msgid_plural "%d firewall rules"
+msgstr[0] "%d টি ফায়ারওয়ালের নিয়ম"
+msgstr[1] "%d টি ফায়ারওয়ালের নিয়ম"
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d ঘন্টা"
+msgstr[1] "%d ঘন্টা"
+
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d টি আইটেম"
+msgstr[1] "%d টি আইটেম"
+
+msgid "%d log record"
+msgid_plural "%d log records"
+msgstr[0] "%d টি লগ রেকর্ড"
+msgstr[1] "%d টি লগ রেকর্ড"
+
+msgid "%d mail account"
+msgid_plural "%d mail accounts"
+msgstr[0] "%d টি মেইল অ্যাকাউন্ট"
+msgstr[1] "%d টি মেইল অ্যাকাউন্ট"
+
+msgid "%d mail domain"
+msgid_plural "%d mail domains"
+msgstr[0] "%d টি মেইল ডোমেইন"
+msgstr[1] "%d টি মেইল ডোমেইন"
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d মিনিট"
+msgstr[1] "%d মিনিট"
+
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d মাস"
+msgstr[1] "%d মাস"
+
+msgid "%d object"
+msgid_plural "%d objects"
+msgstr[0] "%d টি অবজেক্ট"
+msgstr[1] "%d টি অবজেক্ট"
+
+msgid "%d package"
+msgid_plural "%d packages"
+msgstr[0] "%d টি প্যাকেজ"
+msgstr[1] "%d টি প্যাকেজ"
+
+msgid "%d user account"
+msgid_plural "%d user accounts"
+msgstr[0] "%d টি ব্যবহারকারীর অ্যাকাউন্ট"
+msgstr[1] "%d টি ব্যবহারকারীর অ্যাকাউন্ট"
+
+msgid "%d web domain"
+msgid_plural "%d web domains"
+msgstr[0] "%d টি ওয়েব ডোমেইন"
+msgstr[1] "%d টি ওয়েব ডোমেইন"
+
+msgid "1 number"
+msgstr "১ টি সংখ্যা"
+
+msgid "1 uppercase & 1 lowercase character"
+msgstr "১ টি বড় হাতের এবং ১ টি ছোট হাতের অক্ষর৷"
+
+msgid "2FA QR Code"
+msgstr "2FA কিউআর কোড"
+
+msgid "2FA Reset Code"
+msgstr "2FA রিসেট কোড"
+
+msgid "2FA Token"
+msgstr "2FA টোকেন"
+
+msgid "8 characters long"
+msgstr "8 অক্ষর দীর্ঘ"
+
+msgid "Access Key"
+msgstr "অ্যাক্সেস কী"
+
+msgid "Access Keys"
+msgstr "অ্যাক্সেস কী"
+
+msgid "Access Log"
+msgstr "প্রবেশ লগ"
+
+msgid "Account"
+msgstr "হিসাব"
+
+msgid "Account has been suspended"
+msgstr "অ্যাকাউন্ট স্থগিত করা হয়েছে"
+
+msgid "Accounts"
+msgstr "হিসাব"
+
+msgid "Action"
+msgstr "ক্রিয়া"
+
+msgid "Add Access Key"
+msgstr "অ্যাক্সেস কী যোগ করুন"
+
+msgid "Add Cron Job"
+msgstr "ক্রোন জব যোগ করুন"
+
+msgid "Add DNS Domain"
+msgstr "DNS ডোমেইন যোগ করুন"
+
+msgid "Add DNS Record"
+msgstr "DNS রেকর্ড যোগ করুন"
+
+msgid "Add Database"
+msgstr "ডাটাবেস যোগ করুন"
+
+msgid "Add IP list"
+msgstr "আইপি তালিকা যোগ করুন"
+
+msgid "Add Mail Account"
+msgstr "মেইল অ্যাকাউন্ট যোগ করুন"
+
+msgid "Add Mail Domain"
+msgstr "মেইল ডোমেইন যোগ করুন"
+
+msgid "Add Name Server"
+msgstr "নাম সার্ভার যোগ করুন"
+
+msgid "Add Package"
+msgstr "প্যাকেজ যোগ করুন"
+
+msgid "Add Record"
+msgstr "রেকর্ড যোগ করুন"
+
+msgid "Add Rule"
+msgstr "নিয়ম যোগ করুন"
+
+msgid "Add SSH Key"
+msgstr "SSH কী যোগ করুন"
+
+msgid "Add User"
+msgstr "ব্যবহারকারী যোগ করুন"
+
+msgid "Add Web Domain"
+msgstr "ওয়েব ডোমেইন যোগ করুন"
+
+msgid "Administrator"
+msgstr "প্রশাসক"
+
+msgid "Algorithm"
+msgstr "অ্যালগরিদম"
+
+msgid "Aliases"
+msgstr "উপনাম"
+
+msgid "All ports: 0, Range: 80-82, List: 80,443,8080,8443"
+msgstr "সমস্ত পোর্ট: 0, পরিসর: 80-82, তালিকা: 80,443,8080,8443"
+
+msgid "Allow suspended users to log in with read-only access"
+msgstr "স্থগিত ব্যবহারকারীদের শুধুমাত্র-পঠন অ্যাক্সেস দিয়ে লগ ইন করার অনুমতি দিন"
+
+msgid "Allow users to change templates when editing DNS zones"
+msgstr "DNS জোন সম্পাদনা করার সময় ব্যবহারকারীদের টেমপ্লেট পরিবর্তন করার অনুমতি দিন"
+
+msgid "Allow users to change templates when editing web domains"
+msgstr ""
+"ওয়েব ডোমেন সম্পাদনা করার সময় ব্যবহারকারীদের টেমপ্লেট পরিবর্তন করার অনুমতি দিন"
+
+msgid "Allow users to delete log history"
+msgstr "ব্যবহারকারীদের লগের ইতিহাস মুছে ফেলার অনুমতি দিন"
+
+msgid "Allow users to edit their account details"
+msgstr "ব্যবহারকারীদের তাদের অ্যাকাউন্টের বিবরণ সম্পাদনা করার অনুমতি দিন"
+
+msgid "Allow users to reset their passwords"
+msgstr "ব্যবহারকারীদের তাদের পাসওয়ার্ড রিসেট করার অনুমতি দিন"
+
+msgid "Allow users to view action and login history logs"
+msgstr "ব্যবহারকারীদের কর্ম এবং লগইন ইতিহাস লগ দেখতে অনুমতি দিন"
+
+msgid "Allowed IP addresses for API"
+msgstr "API-এর জন্য অনুমোদিত আইপি ঠিকানা"
+
+msgid "An internal error occurred"
+msgstr "একটি অভ্যন্তরীণ ত্রুটি (error) ঘটেছে"
+
+msgid "Apr"
+msgstr "এপ্রিল"
+
+msgid "Aug"
+msgstr "আগস্ট"
+
+msgid "Authentication"
+msgstr "প্রমাণীকরণ"
+
+msgid "Back"
+msgstr "ফিরুন"
+
+msgid "Backend Pool Mode"
+msgstr "ব্যাকএন্ড পুল মোড"
+
+msgid "Backend Server"
+msgstr "ব্যাকএন্ড সার্ভার"
+
+msgid "Backend Template"
+msgstr "ব্যাকএন্ড টেমপ্লেট"
+
+msgid "Backups"
+msgstr "ব্যাকআপ"
+
+msgid "Ban IP Address"
+msgstr "আইপি ঠিকানা নিষিদ্ধ করুন"
+
+msgid "Bandwidth"
+msgstr "ব্যান্ডউইথ"
+
+msgid "Banlist"
+msgstr "ব্যানলিস্ট"
+
+msgid "Browser"
+msgstr "ব্রাউজার"
+
+msgid "CPU"
+msgstr "Процесор"
+
+msgid "Cache Duration"
+msgstr "ক্যাশ সময়কাল"
+
+msgid "Category"
+msgstr "ক্যাটাগরি (বিভাগ)"
+
+msgid "City"
+msgstr "শহর"
+
+msgid "City / Locality"
+msgstr "শহর / এলাকা"
+
+msgid "Clear"
+msgstr "সাফ"
+
+msgid "Close debug panel"
+msgstr "ডিবাগ প্যানেল বন্ধ করুন"
+
+msgid "Close menu"
+msgstr "মেনু বন্ধ করুন"
+
+msgid "Code has been expired"
+msgstr "কোডের মেয়াদ শেষ হয়ে গেছে"
+
+msgid "Collapse main menu"
+msgstr "প্রধান মেনু সঙ্কুচিত করুন"
+
+msgid "Command"
+msgstr "আদেশ"
+
+msgid "Comment"
+msgstr "মন্তব্য করুন"
+
+msgid "Compression"
+msgstr "কম্প্রেশন"
+
+msgid "Configure"
+msgstr "সজ্জিত করা"
+
+msgid "Confirm"
+msgstr "নিশ্চিত করুন"
+
+msgid "Confirm Password"
+msgstr "পাসওয়ার্ড নিশ্চিত করুন"
+
+msgid "Continue"
+msgstr "চালিয়ে যান"
+
+msgid "Country"
+msgstr "দেশ"
+
+msgid "Create Backup"
+msgstr "ব্যাকআপ তৈরি"
+
+msgid "Cron Jobs"
+msgstr "ক্রোন জবস"
+
+msgid "Custom document root"
+msgstr "কাস্টম ডকুমেন্ট রুট (root)"
+
+msgid "DKIM Support"
+msgstr "DKIM সমর্থন"
+
+msgid "DNS Cluster"
+msgstr "DNS ক্লাস্টার"
+
+msgid "DNS Records"
+msgstr "DNS রেকর্ডস"
+
+msgid "DNS Server"
+msgstr "DNS সার্ভার"
+
+msgid "DNS Support"
+msgstr "DNS সমর্থন"
+
+msgid "DNS Template"
+msgstr "DNS টেমপ্লেট"
+
+msgid "Daily"
+msgstr "দৈনিক"
+
+msgid "Data Source"
+msgstr "তথ্যের উৎস"
+
+msgid "Database"
+msgstr "ডাটাবেস"
+
+msgid "Databases"
+msgstr "ডেটাবেস"
+
+msgid "Date"
+msgstr "তারিখ"
+
+msgid "Day"
+msgstr "দিন"
+
+msgid "Dec"
+msgstr "ডিসেম্বর"
+
+msgid "Default"
+msgstr "ডিফল্ট"
+
+msgid "Default Language"
+msgstr "নির্ধারিত ভাষা"
+
+msgid "Default Name Servers"
+msgstr "ডিফল্ট নেম সার্ভার"
+
+msgid "Delete"
+msgstr "মুছুন"
+
+msgid "Delete all notifications"
+msgstr "সমস্ত বিজ্ঞপ্তি মুছুন"
+
+msgid "Delete notification"
+msgstr "বিজ্ঞপ্তি মুছুন"
+
+msgid "Description"
+msgstr "বর্ণনা"
+
+msgid "Details"
+msgstr "বিস্তারিত"
+
+msgid "Directory"
+msgstr "ডিরেক্টরি"
+
+msgid "Disabled"
+msgstr "অক্ষম"
+
+msgid "Discard all mail"
+msgstr "সমস্ত মেল বাতিল করুন"
+
+msgid "Disk"
+msgstr "ডিস্ক"
+
+msgid "Do not allow other administrators to access Server Settings"
+msgstr "অন্যান্য প্রশাসকদের সার্ভার সেটিংস অ্যাক্সেস করার অনুমতি দেবেন না"
+
+msgid "Do not allow user to log in to Control Panel"
+msgstr "ব্যবহারকারীকে কন্ট্রোল প্যানেলে লগ ইন করতে দেবেন না"
+
+msgid "Do not store forwarded mail"
+msgstr "ফরোয়ার্ড করা মেইল সংরক্ষণ করবেন না"
+
+msgid "Domain"
+msgstr "ডোমেইন"
+
+msgid "Domains"
+msgstr "ডোমেইন"
+
+msgid "Download"
+msgstr "ডাউনলোড"
+
+msgid "Edit Package"
+msgstr "প্যাকেজ সম্পাদনা করুন"
+
+msgid "Email"
+msgstr "ইমেইল"
+
+msgid "Enable API access"
+msgstr "API অ্যাক্সেস সক্ষম / সক্রিয় করুন"
+
+msgid "Enable DNSSEC"
+msgstr "DNSSEC সক্ষম করুন৷"
+
+msgid "Enable debug mode"
+msgstr "ডিবাগ মোড সক্ষম করুন"
+
+msgid "Enable domain redirection"
+msgstr "ডোমেন পুনঃনির্দেশ সক্রিয় করুন"
+
+msgid "Enable legacy API access"
+msgstr "লিগ্যাসি API অ্যাক্সেস সক্ষম করুন"
+
+msgid "Enable preview features"
+msgstr "পূর্বরূপ বৈশিষ্ট্য সক্রিয় করুন"
+
+msgid "Enabled"
+msgstr "সক্রিয়"
+
+msgid "Enabled for admin"
+msgstr "অ্যাডমিনের জন্য সক্ষম"
+
+msgid "Enabled for all users"
+msgstr "সমস্ত ব্যবহারকারীদের জন্য সক্রিয়"
+
+msgid "Enforce subdomain ownership"
+msgstr "সাবডোমেন মালিকানা প্রয়োগ করুন"
+
+msgid "Enter focused element"
+msgstr "ফোকাস করা উপাদান লিখুন"
+
+msgid "Error Log"
+msgstr "ত্রুটি লগ"
+
+msgid "Error: Hestia did not return any output."
+msgstr "ত্রুটি: হেস্টিয়া কোনো আউটপুট ফেরত দেয়নি।"
+
+msgid "Expand main menu"
+msgstr "প্রধান মেনু প্রসারিত করুন"
+
+msgid "Expiration Date"
+msgstr "মেয়াদ উত্তীর্ণের তারিখ"
+
+msgid "Expire"
+msgstr "মেয়াদ উত্তীর্ণ"
+
+msgid "Feb"
+msgstr "ফেব্রুয়ারী"
+
+msgid "Field \"%s\" can not be blank."
+msgstr "\"%s\" ঘরটি ফাঁকা রাখা যাবে না।"
+
+msgid "File Name"
+msgstr "ফাইলের নাম"
+
+msgid "File manager"
+msgstr "নথি ব্যবস্থাপক"
+
+msgid "Firewall"
+msgstr "ফায়ারওয়াল"
+
+msgid "Focus on search"
+msgstr "অনুসন্ধানে মনোযোগ দিন"
+
+msgid "Forgot Password"
+msgstr "পাসওয়ার্ড ভুলে গেছেন"
+
+msgid "Forward to"
+msgstr "অগ্রবর্তীকরণ"
+
+msgid "Forwarding"
+msgstr "ফরোয়ার্ডিং"
+
+msgid "Friday"
+msgstr "শুক্রবার"
+
+msgid "Global SMTP Relay"
+msgstr "গ্লোবাল SMTP রিলে"
+
+msgid "Go to BACKUP list"
+msgstr "ব্যাকআপ তালিকাতে যান"
+
+msgid "Go to CRON list"
+msgstr "CRON তালিকায় যান"
+
+msgid "Go to DB list"
+msgstr "ডিবি তালিকায় যান"
+
+msgid "Go to DNS list"
+msgstr "DNS তালিকায় যান"
+
+msgid "Go to MAIL list"
+msgstr "মেইল  তালিকায় যান"
+
+msgid "Go to WEB list"
+msgstr "ওয়েব তালিকায় যান"
+
+msgid "Help"
+msgstr "সাহায্য"
+
+msgid "Hestia Control Panel"
+msgstr "হেস্টিয়া কন্ট্রোল প্যানেল"
+
+msgid "Hide Certificate"
+msgstr "শংসাপত্র লুকান"
+
+msgid "Hide account from other administrators"
+msgstr "অন্যান্য প্রশাসকদের থেকে অ্যাকাউন্ট লুকান"
+
+msgid "Host"
+msgstr "হোস্ট"
+
+msgid "Hostname"
+msgstr "হোস্টনেম"
+
+msgid "Hour"
+msgstr "ঘন্টা"
+
+msgid "Hourly"
+msgstr "ঘণ্টায়"
+
+msgid "IP Address"
+msgstr "আইপি ঠিকানা"
+
+msgid "IP or Value"
+msgstr "আইপি অথবা মান (Value)"
+
+msgid "IPs"
+msgstr "আইপি গুলি"
+
+msgid "Inactive session timeout"
+msgstr "নিষ্ক্রিয় সেশনের সময়সীমা"
+
+msgid "Install %s"
+msgstr "%s ইনস্টল করুন"
+
+msgid "Interface"
+msgstr "ইন্টারফেস"
+
+msgid "Invalid or missing 2FA token"
+msgstr "অবৈধ বা অনুপস্থিত 2FA টোকেন"
+
+msgid "Invalid username or code"
+msgstr "অকেজো ব্যবহারকারীর নাম বা কোড"
+
+msgid "Invalid username or password"
+msgstr "অবৈধ ব্যবহারকারীর নাম বা পাসওয়ার্ড"
+
+msgid "Jan"
+msgstr "জানুয়ারী"
+
+msgid "Jobs"
+msgstr "জবস"
+
+msgid "Jul"
+msgstr "জুলাই"
+
+msgid "Jun"
+msgstr "জুন"
+
+msgid "Language"
+msgstr "ভাষা"
+
+msgid "Last 70 lines of %s.%s.log"
+msgstr "%s.%s.log-এর শেষ ৭০টি লাইন"
+
+msgid "Limit"
+msgstr "লিমিট"
+
+msgid "Load Average"
+msgstr "গড় লোড"
+
+msgid "Log in"
+msgstr "প্রবেশ করুন"
+
+msgid "Log out"
+msgstr "প্রস্থান"
+
+msgid "Logged in as"
+msgstr "হিসাবে লগ ইন করা হয়েছে"
+
+msgid "Login"
+msgstr "প্রবেশ করুন"
+
+msgid "Login screen style"
+msgstr "লগইন পর্দা শৈলী"
+
+msgid "Logs"
+msgstr "লগগুলি"
+
+msgid "Mail"
+msgstr "মেইল"
+
+msgid "Mail Accounts"
+msgstr "মেইল অ্যাকাউন্ট"
+
+msgid "Mail Domains"
+msgstr "মেইল ডোমেন"
+
+msgid "Mail Server"
+msgstr "মেইল সার্ভার"
+
+msgid "Mail Support"
+msgstr "মেইল সাপোর্ট"
+
+msgid "Mar"
+msgstr "মার্চ"
+
+msgid "May"
+msgstr "মে"
+
+msgid "Memory"
+msgstr "মেমরি"
+
+msgid "Message"
+msgstr "বার্তা"
+
+msgid "Minute"
+msgstr "মিনিট"
+
+msgid "Minutes"
+msgstr "মিনিট"
+
+msgid "Monday"
+msgstr "সোমবার"
+
+msgid "Month"
+msgstr "মাস"
+
+msgid "Monthly"
+msgstr "মাসিক"
+
+msgid "More info"
+msgstr "আরো তথ্য"
+
+msgid "Move backward through top menu"
+msgstr "শীর্ষ মেনু পিছনে সরান"
+
+msgid "Move down through elements list"
+msgstr "উপাদান তালিকা মাধ্যমে নিচে সরান"
+
+msgid "Move forward through top menu"
+msgstr "শীর্ষ মেনু সম্মুখে সরান"
+
+msgid "Move up through elements list"
+msgstr "উপাদান তালিকার মাধ্যমে উপরে যান"
+
+msgid "MySQL Support"
+msgstr "মাইএসকিউএল (MySQL) সাপোর্ট"
+
+msgid "Name"
+msgstr "নাম"
+
+msgid "Netmask"
+msgstr "নেটমাস্ক"
+
+msgid "Network"
+msgstr "নেটওয়ার্ক"
+
+msgid "New Password"
+msgstr "নতুন পাসওয়ার্ড"
+
+msgid "Next"
+msgstr "পরবর্তী"
+
+msgid "No"
+msgstr "না"
+
+msgid "No encryption"
+msgstr "কোনো এনক্রিপশন নেই"
+
+msgid "Normal password"
+msgstr "সাধারণ পাসওয়ার্ড"
+
+msgid "Notifications"
+msgstr "বিজ্ঞপ্তি"
+
+msgid "Nov"
+msgstr "নভেম্বর"
+
+msgid "Oct"
+msgstr "অক্টোবর"
+
+msgid "Old Style"
+msgstr "পুরানো শৈলী"
+
+msgid "Open debug panel"
+msgstr "ডিবাগ প্যানেল খুলুন"
+
+msgid "Open menu"
+msgstr "মেনু খুলুন"
+
+msgid "Operating System"
+msgstr "অপারেটিং সিস্টেম"
+
+msgid "Options"
+msgstr "অপশন"
+
+msgid "Organization"
+msgstr "সংগঠন"
+
+msgid "Overall Statistics"
+msgstr "সামগ্রিক পরিসংখ্যান"
+
+msgid "Owner"
+msgstr "মালিক"
+
+msgid "PHP CLI Version"
+msgstr "PHP CLI সংস্করণ"
+
+msgid "Package"
+msgstr "প্যাকেজ"
+
+msgid "Package Name"
+msgstr "প্যাকেজের নাম"
+
+msgid "Packages"
+msgstr "প্যাকেজ"
+
+msgid "Password"
+msgstr "পাসওয়ার্ড"
+
+msgid ""
+"Password reset instructions have been sent to the email address associated "
+"with this account."
+msgstr ""
+"পাসওয়ার্ড রিসেট নির্দেশাবলী এই অ্যাকাউন্টের সাথে যুক্ত ইমেল ঠিকানায় পাঠানো হয়েছে।"
+
+msgid "Path"
+msgstr "পথ (Path)"
+
+msgid "Permissions"
+msgstr "অনুমতি"
+
+msgid "Please make sure ~/web/%s/public_html is empty!"
+msgstr "দয়া করে নিশ্চিত করুন ~/web/%s/public_html ফোল্ডার  ফাঁকা!"
+
+msgid "Point to"
+msgstr "নির্দেশ করা (Point to)"
+
+msgid "Policies"
+msgstr "নীতিমালা"
+
+msgid "Policy"
+msgstr "নীতি"
+
+msgid "Port"
+msgstr "পোর্ট (Port)"
+
+msgid "PostgreSQL Support"
+msgstr "PostgreSQL সাপোর্ট"
+
+msgid "Prefix %s will be added to username automatically"
+msgstr "উপসর্গ %s স্বয়ংক্রিয়ভাবে ব্যবহারকারীর নামের সাথে যুক্ত হবে"
+
+msgid ""
+"Prefix %s will be automatically added to database name and database user"
+msgstr ""
+"উপসর্গ (Prefix) %s স্বয়ংক্রিয়ভাবে ডাটাবেসের নাম এবং ডাটাবেস ব্যবহারকারীর সাথে "
+"যুক্ত হবে"
+
+msgid "Prevent CSRF"
+msgstr "CSRF প্রতিরোধ করুন"
+
+msgid "Preview"
+msgstr "পূর্বরূপ"
+
+msgid "Priority"
+msgstr "অগ্রাধিকার"
+
+msgid "Protocol"
+msgstr "প্রোটোকল"
+
+msgid "Proxy Extensions"
+msgstr "প্রক্সি এক্সটেনশন"
+
+msgid "Proxy Server"
+msgstr "প্রক্সি সার্ভার"
+
+msgid "Proxy Support"
+msgstr "প্রক্সি সমর্থন"
+
+msgid "Proxy Template"
+msgstr "প্রক্সি টেমপ্লেট"
+
+msgid "Quick App Installer"
+msgstr "দ্রুত অ্যাপ ইনস্টলার"
+
+msgid "Quick Install App"
+msgstr "দ্রুত অ্যাপ ইনস্টল করুন"
+
+msgid "Quota"
+msgstr "কোটা"
+
+msgid "RAM"
+msgstr "Рам Памет"
+
+msgid "Record"
+msgstr "রেকর্ড"
+
+msgid "Records"
+msgstr "রেকর্ড"
+
+msgid "Redirect visitors to %s"
+msgstr "দর্শকদের %s-এ পুনঃনির্দেশিত করুন"
+
+msgid "Redirect visitors to a custom domain or web address"
+msgstr "একটি কাস্টম ডোমেন বা ওয়েব ঠিকানায় দর্শকদের পুনর্নির্দেশ করুন৷"
+
+msgid "Refresh"
+msgstr "রিফ্রেশ"
+
+msgid "Release"
+msgstr "বিমুক্ত"
+
+msgid "Reset"
+msgstr "পুন:স্থাপন করা"
+
+msgid "Reset Code"
+msgstr "কোড পুন:স্থাপন করুন"
+
+msgid "Restart"
+msgstr "রিস্টার্ট"
+
+msgid "Restart \"%s\" failed"
+msgstr "\"%s\" ব্যর্থ হয়েছে৷"
+
+msgid "Restore"
+msgstr "পুনরুদ্ধার"
+
+msgid "Restore All"
+msgstr "সমস্ত পুনরুদ্ধার করুন"
+
+msgid "Restrict access to read-only for other administrators"
+msgstr "অন্যান্য প্রশাসকদের জন্য শুধুমাত্র-পঠন অ্যাক্সেস সীমাবদ্ধ করুন"
+
+msgid "Role"
+msgstr "ভূমিকা (রোল)"
+
+msgid "Run Command"
+msgstr "আপনার আদেশ প্রদান করুন"
+
+msgid "Runtime"
+msgstr "রানটাইম"
+
+msgid "SMTP Relay"
+msgstr "SMTP রিলে"
+
+msgid "SSH Access"
+msgstr "SSH অ্যাক্সেস"
+
+msgid "SSL Certificate"
+msgstr "SSL সার্টিফিকেট"
+
+msgid "SSL Certificate Authority / Intermediate"
+msgstr "SSL সার্টিফিকেট অথরিটি/ ইন্টারমিডিয়েট"
+
+msgid "SSL Domains"
+msgstr "SSL ডোমেইন"
+
+msgid "Saturday"
+msgstr "শনিবার"
+
+msgid "Save"
+msgstr "সংরক্ষণ"
+
+msgid "Search"
+msgstr "অনুসন্ধান করুন"
+
+msgid "Search Results"
+msgstr "অনুসন্ধানের ফলাফল"
+
+msgid "Secret Key"
+msgstr "গোপন চাবি"
+
+msgid "Security"
+msgstr "নিরাপত্তা"
+
+msgid "Select"
+msgstr "নির্বাচন করুন"
+
+msgid "Select all"
+msgstr "সব নির্বাচন করুন"
+
+msgid "Send FTP credentials to email"
+msgstr "FTP পরিচয়-পত্র ইমেইলে পাঠান"
+
+msgid "Send welcome email"
+msgstr "স্বাগত ইমেইল পাঠান"
+
+msgid "Sep"
+msgstr "সেপ্টেম্বর"
+
+msgid "Server settings"
+msgstr "সার্ভার সেটিংস"
+
+msgid "Service"
+msgstr "সেবা"
+
+msgid "Set as default language for all users"
+msgstr "সমস্ত ব্যবহারকারীর জন্য ডিফল্ট ভাষা হিসাবে সেট করুন"
+
+msgid "Set as selected theme for all users"
+msgstr "সমস্ত ব্যবহারকারীদের জন্য নির্বাচিত থিম হিসাবে সেট করুন"
+
+msgid "Setup"
+msgstr "সেটআপ"
+
+msgid "Shared"
+msgstr "শেয়ার করা হয়েছে"
+
+msgid "Shell"
+msgstr "শেল"
+
+msgid "Shortcuts"
+msgstr "শর্টকাট"
+
+msgid "Show Certificate"
+msgstr "সার্টিফিকেট দেখাও"
+
+msgid "Size"
+msgstr "আকার"
+
+msgid "Sort items"
+msgstr "সর্ট আইটেম"
+
+msgid "Start \"%s\" failed"
+msgstr "\"%s\" শুরু করতে ব্যর্থ হয়েছে৷"
+
+msgid "State"
+msgstr "বিভাগ"
+
+msgid "State / Province"
+msgstr "রাজ্য/প্রদেশ/বিভাগ"
+
+msgid "Statistics"
+msgstr "পরিসংখ্যান"
+
+msgid "Statistics Authorization"
+msgstr "পরিসংখ্যান অনুমোদন"
+
+msgid "Status"
+msgstr "স্ট্যাটাস"
+
+msgid "Status code"
+msgstr "স্ট্যাটাস কোড"
+
+msgid "Stop \"%s\" failed"
+msgstr "থামুন \"%s\" ব্যর্থ হয়েছে৷"
+
+msgid "Strict"
+msgstr "কঠোর"
+
+msgid "Submit"
+msgstr "জমা দিন"
+
+msgid "Sunday"
+msgstr "রবিবার"
+
+msgid "Suspended"
+msgstr "স্থগিত"
+
+msgid "System"
+msgstr "সিস্টেম"
+
+msgid "System Administrator account"
+msgstr "সিস্টেম অ্যাডমিনিস্ট্রেটর অ্যাকাউন্ট"
+
+msgid "System Protection"
+msgstr "সিস্টেম সুরক্ষা"
+
+msgid "Target domain or URL"
+msgstr "টার্গেট ডোমেইন বা URL"
+
+msgid "Template"
+msgstr "টেমপ্লেট"
+
+msgid "The system is going down for reboot NOW!"
+msgstr "সিস্টেম এখন রিবুট করার জন্য বন্ধ হচ্ছে!"
+
+msgid "Theme"
+msgstr "থিম"
+
+msgid "There are currently no IP lists defined."
+msgstr "বর্তমানে কোন আইপি তালিকা নির্ধারিত নেই।"
+
+msgid "There are currently no banned IP addresses."
+msgstr "বর্তমানে কোনো নিষিদ্ধ আইপি ঠিকানা নেই।"
+
+msgid "Thursday"
+msgstr "বৃহস্পতিবার"
+
+msgid "Time"
+msgstr "সময়"
+
+msgid "Time Zone"
+msgstr "টাইম জোন"
+
+msgid ""
+"To enable Let's Encrypt SSL, ensure that DNS records exist for mail.%s and "
+"%s!"
+msgstr ""
+"লেটস এনক্রিপ্ট এসএসএল সক্ষম করতে, নিশ্চিত করুন যে মেইল %s এবং %s এর জন্য DNS রেকর্ড "
+"রয়েছে!"
+
+msgid "Top"
+msgstr "চূড়া"
+
+msgid "Tuesday"
+msgstr "মঙ্গলবার"
+
+msgid "Type"
+msgstr "টাইপ"
+
+msgid "Unable to add database!"
+msgstr "ডাটাবেস যোগ করতে অক্ষম!"
+
+msgid "Unable to add database! Limit reached!"
+msgstr "ডাটাবেস যোগ করতে অক্ষম! সীমা অতিক্রম!"
+
+msgid "Unlimited"
+msgstr "আনলিমিটেড"
+
+msgid "Unsupported hash method"
+msgstr "অসমর্থিত হ্যাশ পদ্ধতি"
+
+msgid "Updates"
+msgstr "হাল নাগাদ করা"
+
+msgid "Uptime"
+msgstr "আপটাইম"
+
+msgid "Use IP address allow list for login attempts"
+msgstr "লগইন প্রচেষ্টার জন্য IP ঠিকানা অনুমতি তালিকা ব্যবহার করুন"
+
+msgid "User"
+msgstr "ব্যবহারকারী"
+
+msgid "Username"
+msgstr "ব্যবহারকারীর নাম"
+
+msgid "Users"
+msgstr "ব্যবহারকারীরা"
+
+msgid "Value"
+msgstr "মান"
+
+msgid "Version"
+msgstr "সংস্করণ"
+
+msgid "View"
+msgstr "দেখা"
+
+msgid "Web"
+msgstr "ওয়েব"
+
+msgid "Web Aliases"
+msgstr "ওয়েব উপনাম"
+
+msgid "Web Domains"
+msgstr "ওয়েব ডোমেইন"
+
+msgid "Web Server"
+msgstr "ওয়েব সার্ভার"
+
+msgid "Web Statistics"
+msgstr "ওয়েব পরিসংখ্যান"
+
+msgid "Web Template"
+msgstr "ওয়েব টেমপ্লেট"
+
+msgid "Webmail"
+msgstr "ওয়েবমেইল"
+
+msgid "Webmail Client"
+msgstr "ওয়েবমেইল ক্লায়েন্ট"
+
+msgid "Wednesday"
+msgstr "বুধবার"
+
+msgid "Weekly"
+msgstr "সাপ্তাহিক"
+
+msgid "Welcome"
+msgstr "স্বাগত"
+
+msgid "YYYY-MM-DD"
+msgstr "বছর-মাস-দিন"
+
+msgid "Yearly"
+msgstr "বার্ষিক"
+
+msgid "Yes"
+msgstr "হ্যাঁ"
+
+msgid "Your password must have at least"
+msgstr "আপনার পাসওয়ার্ড তালিকায় সবচেয়ে বেশি আছে"
+
+msgid "backend server"
+msgstr "ব্যাকএন্ড সার্ভার"
+
+msgid "database server"
+msgstr "ডাটাবেস সার্ভার"
+
+msgid "dns server"
+msgstr "dns সার্ভার"
+
+msgid "firewall"
+msgstr "ফায়ারওয়াল"
+
+msgid "ftp server"
+msgstr "এফটিপি সার্ভার"
+
+msgid "job scheduler"
+msgstr "কাজের সময়সূচী"
+
+msgid "mail server"
+msgstr "মেইল সার্ভার"
+
+msgid "one or more email addresses"
+msgstr "এক বা একাধিক ইমেইল ঠিকানা"
+
+msgid "per account / hour"
+msgstr "প্রতি অ্যাকাউন্ট / ঘন্টা"
+
+msgid "per domain"
+msgstr "প্রতি ডোমেইন"
+
+msgid "phpMyAdmin Single Sign On"
+msgstr "phpMyAdmin একক সাইন অন"
+
+msgid "reverse proxy"
+msgstr "রিভার্স প্রক্সি"
+
+msgid "url, script or file"
+msgstr "ইউআরএল, স্ক্রিপ্ট অথবা ফাইল"
+
+msgid "web server"
+msgstr "ওয়েব সার্ভার"
+
+msgid "zstd only"
+msgstr "শুধুমাত্র zstd"

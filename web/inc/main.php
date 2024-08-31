@@ -19,7 +19,14 @@ try {
 
 define("HESTIA_DIR_BIN", "/usr/local/hestia/bin/");
 define("HESTIA_CMD", "/usr/bin/sudo /usr/local/hestia/bin/");
-define("DEFAULT_PHP_VERSION", "php-" . exec('php -r "echo substr(phpversion(),0,3);"'));
+exec(HESTIA_CMD . "v-check-rhel-utility", $output, $return_var);
+$is_rhel_detect = str_contains(implode("", $output), "+");
+unset($output);
+if ($is_rhel_detect) {
+	define("DEFAULT_PHP_VERSION", "php-" . exec('php -r "echo str_replace(\'.\', \'\', substr(phpversion(),0,3));"'));
+} else {
+	define("DEFAULT_PHP_VERSION", "php-" . exec('php -r "echo substr(phpversion(),0,3);"'));
+}
 
 // Load Hestia Config directly
 load_hestia_config();

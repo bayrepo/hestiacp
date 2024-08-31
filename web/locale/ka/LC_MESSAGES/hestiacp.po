@@ -1,0 +1,1257 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hestiacp\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-06 11:26\n"
+"Last-Translator: \n"
+"Language-Team: Georgian\n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: hestiacp\n"
+"X-Crowdin-Project-ID: 587405\n"
+"X-Crowdin-Language: ka\n"
+"X-Crowdin-File: hestiacp.pot\n"
+"X-Crowdin-File-ID: 3\n"
+
+msgid "%d DNS record"
+msgid_plural "%d DNS records"
+msgstr[0] "%d DNS ჩანაწერი"
+msgstr[1] ""
+
+msgid "%d DNS zone"
+msgid_plural "%d DNS zones"
+msgstr[0] "%d DNS ზონა"
+msgstr[1] ""
+
+msgid "%d IP address"
+msgid_plural "%d IP addresses"
+msgstr[0] "%d IP მისამართი"
+msgstr[1] ""
+
+msgid "%d backup"
+msgid_plural "%d backups"
+msgstr[0] "%d მარქაფი"
+msgstr[1] ""
+
+msgid "%d banned IP address"
+msgid_plural "%d banned IP addresses"
+msgstr[0] "%d ბლოკირებული IP მისამართი"
+msgstr[1] ""
+
+msgid "%d cron job"
+msgid_plural "%d cron jobs"
+msgstr[0] "%d ქრონის ამოცანა"
+msgstr[1] ""
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d დღე"
+msgstr[1] ""
+
+msgid "%d firewall rule"
+msgid_plural "%d firewall rules"
+msgstr[0] "%d ფაირვოლის წესი"
+msgstr[1] ""
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d საათი"
+msgstr[1] ""
+
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d ჩანაწერი"
+msgstr[1] ""
+
+msgid "%d log record"
+msgid_plural "%d log records"
+msgstr[0] "%d ჩანაწერი ლოგში"
+msgstr[1] ""
+
+msgid "%d mail account"
+msgid_plural "%d mail accounts"
+msgstr[0] "%d ელ.ფოსტის ანგარიში"
+msgstr[1] ""
+
+msgid "%d mail domain"
+msgid_plural "%d mail domains"
+msgstr[0] "%d ელ.ფოსტის დომენი"
+msgstr[1] ""
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d წუთი"
+msgstr[1] ""
+
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d თვე"
+msgstr[1] ""
+
+msgid "%d object"
+msgid_plural "%d objects"
+msgstr[0] "%d ობიექტი"
+msgstr[1] ""
+
+msgid "%d package"
+msgid_plural "%d packages"
+msgstr[0] "%d პაკეტი"
+msgstr[1] ""
+
+msgid "%d user account"
+msgid_plural "%d user accounts"
+msgstr[0] "%d მომხმარებლის ანგარიში"
+msgstr[1] ""
+
+msgid "%d web domain"
+msgid_plural "%d web domains"
+msgstr[0] "%d ვებ დომენი"
+msgstr[1] ""
+
+msgid "1 number"
+msgstr "1 ციფრი"
+
+msgid "1 uppercase & 1 lowercase character"
+msgstr "1 მაღალი რეგისტრის და 1 დაბალი რეგისტრის სიმბოლო"
+
+msgid "2FA QR Code"
+msgstr "2FA QR კოდი"
+
+msgid "2FA Reset Code"
+msgstr "Account Recovery Code"
+
+msgid "2FA Token"
+msgstr "OTP PIN"
+
+msgid "8 characters long"
+msgstr "8 სიმბოლო"
+
+msgid "ACCEPT"
+msgstr "მიღება"
+
+msgid "Access Key"
+msgstr "დაშვების გასაღები"
+
+msgid "Access Keys"
+msgstr "წვდომის გასაღებები"
+
+msgid "Access Log"
+msgstr "მიმართვის ლოგი"
+
+msgid "Account"
+msgstr "ანგარიში"
+
+msgid "Account Unlocked"
+msgstr "ანგარიში განიბლოკა"
+
+msgid "Account has been suspended"
+msgstr "ანგარიში დაპაუზდა"
+
+msgid "Accounts"
+msgstr "ანგარიშები"
+
+msgid "Action"
+msgstr "მოქმედება"
+
+msgid "Add Access Key"
+msgstr "წვდომის გასაღების დამატება"
+
+msgid "Add Cron Job"
+msgstr "კრონის დავალების დამატება"
+
+msgid "Add DNS Domain"
+msgstr "DNS დომენის დამატება"
+
+msgid "Add DNS Record"
+msgstr "DNS ჩანაწერის დამატება"
+
+msgid "Add Database"
+msgstr "ბაზის დამატება"
+
+msgid "Add IP Address"
+msgstr "IP მისამართის დამატება"
+
+msgid "Add Mail Account"
+msgstr "ელფოსტის ანგარიშის დამატება"
+
+msgid "Add Mail Domain"
+msgstr "ელფოსტის დომენის დამატება"
+
+msgid "Add Name Server"
+msgstr "სახელის სერვერის დამატება"
+
+msgid "Add Package"
+msgstr "პაკეტის დამატება"
+
+msgid "Add Rule"
+msgstr "წესის დამატება"
+
+msgid "Add SSH Key"
+msgstr "Add SSH key"
+
+msgid "Add User"
+msgstr "კლიენტის დამატება"
+
+msgid "Add Web Domain"
+msgstr "ვებ დომენის დამატება"
+
+msgid "Administrator"
+msgstr "ადმინისტრატორი"
+
+msgid "Advanced Details"
+msgstr "დამატებითი დეტალები"
+
+msgid "Algorithm"
+msgstr "ალგორითმი"
+
+msgid "Aliases"
+msgstr "ალიასები"
+
+msgid "All ports: 0, Range: 80-82, List: 80,443,8080,8443"
+msgstr "ყველა პორტი: 0, დიაპაზონი: 80-82, სია: 80,443,8080,8443"
+
+msgid "Allow suspended users to log in with read-only access"
+msgstr "ნება დართე დაპაუზებულ მომხმარებლებს შევიდნენ მხოლოდ წაკითხვის რეჟიმში"
+
+msgid "Allow users to change templates when editing DNS zones"
+msgstr "ნება დართე მომხმარებლებს შეცვალონ შაბლონები DNS ზონების რედაქტირებისას"
+
+msgid "Allow users to change templates when editing web domains"
+msgstr ""
+"ნება დართე მომხმარებლებს შეცვალონ შაბლონები ვებ დომენების რედაქტირებისას"
+
+msgid "Allow users to delete log history"
+msgstr "მიეცით მომხმარებლებს ლოგების ისტორიის წაშლის უფლება"
+
+msgid "Allow users to edit their account details"
+msgstr "ნება დართე მომხმარებლებს შეცვალონ მათი ანგარიშის დეტალები"
+
+msgid "Allow users to reset their passwords"
+msgstr "ნება დართე მომხმარებლებს დაარესეტოს პაროლები"
+
+msgid "Allow users to view action and login history logs"
+msgstr "ნება დართე მომხმარებლებს ნახონ შესვლის ისტორია"
+
+msgid "Allowed IP addresses for API"
+msgstr "API-ზე ნებართვის მქონე IP მისამართები"
+
+msgid "An internal error occurred"
+msgstr "დაფიქსირდა შიდა შეცდომა"
+
+msgid "Application Name"
+msgstr "აპლიკაციის სახელი"
+
+msgid "Apr"
+msgstr "აპრ"
+
+msgid "Are you sure you want to delete IP address %s?"
+msgstr "ნამდვილად გსურთ წაშალოთ IP მისამართი %s?"
+
+msgid "Are you sure you want to suspend this cron job?"
+msgstr "დარწმუნებული ხართ, რომ გსურთ შეაჩეროთ ეს cron job?"
+
+msgid "Are you sure you want to unsuspend this cron job?"
+msgstr "დარწმუნებული ხართ, რომ გსურთ მოხსნათ შეჩერება ამ cron job-ს?"
+
+msgid "Assigned Domain"
+msgstr "მიმაგრებული დომენი"
+
+msgid "Assigned User"
+msgstr "მიმაგრებული მომხმარებელი"
+
+msgid "Aug"
+msgstr "აგვ"
+
+msgid "Authentication"
+msgstr "აუთენტიფიკაცია"
+
+msgid "Auto Update"
+msgstr "ავტომატური განახლება"
+
+msgid "BACKUP"
+msgstr "მარქაფი"
+
+msgid "Back"
+msgstr "უკან"
+
+msgid "Backend Pool Mode"
+msgstr "ბექენდის პულის რეჟიმი"
+
+msgid "Backend Server"
+msgstr "ბექენდ სერვერი"
+
+msgid "Backend Template"
+msgstr "ბექენდის შაბლონი"
+
+msgid "Backups"
+msgstr "მარქაფები"
+
+msgid "Ban IP Address"
+msgstr "IP მისამართის დაბლოკვა"
+
+msgid "Bandwidth"
+msgstr "ტრაფიკი"
+
+msgid "Banlist"
+msgstr "ბლოკირების სია"
+
+msgid "Browser"
+msgstr "ბრაუზერი"
+
+msgid "CRON"
+msgstr "კრონი"
+
+msgid "Cache Duration"
+msgstr "ქეშირების ინტერვალი"
+
+msgid "Category"
+msgstr "კატეგორია"
+
+msgid "Charset"
+msgstr "კოდირება"
+
+msgid "City"
+msgstr "ქალაქი"
+
+msgid "City / Locality"
+msgstr "ქალაქი / ლოკაცია"
+
+msgid "Clear"
+msgstr "სერტიფიკატის დამალვა"
+
+msgid "Close debug panel"
+msgstr "დებაგ პანელის დახურვა"
+
+msgid "Close menu"
+msgstr "მენიუს დახურვა"
+
+msgid "Code has been expired"
+msgstr "კოდს ვადა გაუვიდა"
+
+msgid "Collapse main menu"
+msgstr "მთავარი მენიუს აკეცვა"
+
+msgid "Command"
+msgstr "ბრძანება"
+
+msgid "Comment"
+msgstr "კომენტარი"
+
+msgid "Compression"
+msgstr "შეკუმშვა"
+
+msgid "Configure"
+msgstr "კონფიგურაცია"
+
+msgid "Confirm"
+msgstr "დამოწმება"
+
+msgid "Confirm Password"
+msgstr "პაროლის დამოწმება"
+
+msgid "Continue"
+msgstr "გაგრძელება"
+
+msgid "Country"
+msgstr "ქვეყანა"
+
+msgid "Create Backup"
+msgstr "მარქაფის შექმნა"
+
+msgid "Cron Jobs"
+msgstr "კრონის დავალებები"
+
+msgid "Custom document root"
+msgstr "მორგებული დოკუმენტების საწყისი"
+
+msgid "DB"
+msgstr "ბაზები"
+
+msgid "DKIM Support"
+msgstr "DKIM მხარდაჭერა"
+
+msgid "DNS"
+msgstr "დომენები"
+
+msgid "DNS Cluster"
+msgstr "DNS კლასტერი"
+
+msgid "DNS Records"
+msgstr "DNS ჩანაწერები"
+
+msgid "DNS Server"
+msgstr "DNS სერვერი"
+
+msgid "DNS Support"
+msgstr "DNS-ის მხარდაჭერა"
+
+msgid "DNS Template"
+msgstr "DNS-ის შაბლონი"
+
+msgid "DNS Zones"
+msgstr "DNS ზონები"
+
+msgid "DROP"
+msgstr "გადაგდება"
+
+msgid "Daily"
+msgstr "ყოველდღიური"
+
+msgid "Data Source"
+msgstr "მონაცემთა წყარო"
+
+msgid "Database"
+msgstr "ბაზა"
+
+msgid "Databases"
+msgstr "ბაზები"
+
+msgid "Date"
+msgstr "თარიღით"
+
+msgid "Day"
+msgstr "დღე"
+
+msgid "Dec"
+msgstr "დეკ"
+
+msgid "Default"
+msgstr "ნაგულისხმები"
+
+msgid "Default Language"
+msgstr "ნაგულისხმევი ენა"
+
+msgid "Default Name Servers"
+msgstr "ნაგულისხმევი Name Server-ები"
+
+msgid "Delete"
+msgstr "წაშლა"
+
+msgid "Delete all notifications"
+msgstr "ყველა შეტყობინების წაშლა"
+
+msgid "Delete notification"
+msgstr "შეტყობინების წაშლა"
+
+msgid "Details"
+msgstr "დეტალები"
+
+msgid "Directory"
+msgstr "დირექტორია"
+
+msgid "Disabled"
+msgstr "გამორთულია"
+
+msgid "Discard all mail"
+msgstr "მთელი ფოსტის უკუგდება"
+
+msgid "Disk"
+msgstr "დისკი"
+
+msgid "Do not allow other administrators to access Server Settings"
+msgstr "ნება არ მისცე სხვა ადმინისტრატორებს მიწვდნენ სერვერის პარამეტრებს"
+
+msgid "Do not allow user to log in to Control Panel"
+msgstr "არ მისცეთ მომხმარებელს მართვის პანელში შესვლის უფლება"
+
+msgid "Do not store forwarded mail"
+msgstr "არ შეინახო გადაგზავნილი ელფოსტა"
+
+msgid "Domain"
+msgstr "დომენი"
+
+msgid "Domains"
+msgstr "დომენები"
+
+msgid "Download"
+msgstr "ჩამოტვირთვა"
+
+msgid "Edit"
+msgstr "რედაქტირება"
+
+msgid "Edit Backup Exclusions"
+msgstr "მარქაფიდან გამონაკლისების რედაქტირება"
+
+msgid "Edit Cron Job"
+msgstr "ქრონის დავალების რედაქტირება"
+
+msgid "Edit Mail Domain"
+msgstr "ელფოსტის დომენის რედაქტირება"
+
+msgid "Edit Package"
+msgstr "პაკეტის რედაქტირება"
+
+msgid "Email"
+msgstr "ელფოსტა"
+
+msgid "Email Subject"
+msgstr "ელფოსტის თემა"
+
+msgid "Enable API access"
+msgstr "API-ზე წვდომის ჩართვა"
+
+msgid "Enable DNSSEC"
+msgstr "DNSSEC-ის ჩართვა"
+
+msgid "Enable debug mode"
+msgstr "დებაგ რეჟიმის ჩართვა"
+
+msgid "Enable domain redirection"
+msgstr "დომენის გადამისამართების ჩართვა"
+
+msgid "Enable legacy API access"
+msgstr "მოძველებულ API-ზე წვდომის ჩართვა"
+
+msgid "Enable preview features"
+msgstr "წინასწარი დათვალიერების ფუნქციონალის ჩართვა"
+
+msgid "Enabled"
+msgstr "ჩართულია"
+
+msgid "Enabled for admin"
+msgstr "ჩართულია amin-ისთვის"
+
+msgid "Enabled for all users"
+msgstr "ჩართულია ყველა მომხმარებლისთვის"
+
+msgid "Enforce subdomain ownership"
+msgstr "ქვედომენების მფლობელობის იძულება"
+
+msgid "Enter focused element"
+msgstr "ფოკუსირებულ ელემენტზე გადასვლა"
+
+msgid "Error Log"
+msgstr "შეცდომების ლოგი"
+
+msgid "Error: Hestia did not return any output."
+msgstr "შეცდომა: ჰესთიამ არ დააბრუნა არანაირი პასუხი."
+
+msgid "Every month"
+msgstr "ყოველ თვე"
+
+msgid "Expand main menu"
+msgstr "მთავარი მენიუს გაშლა"
+
+msgid "Expiration Date"
+msgstr "ვადის გასვლის დრო"
+
+msgid "Expire"
+msgstr "ვადა"
+
+msgid "FTP"
+msgstr "FTP"
+
+msgid "Feb"
+msgstr "თებ"
+
+msgid "Field \"%s\" can not be blank."
+msgstr "ველი: \"%s\" არ შეიძლება იყოს ცარიელი."
+
+msgid "File manager"
+msgstr "ფაილების მენეჯერი"
+
+msgid "Firewall"
+msgstr "ფაირვოლი"
+
+msgid "Focus on search"
+msgstr "ძიაბაზე ფოკუსირება"
+
+msgid "Forward to"
+msgstr "გადაგზავნა"
+
+msgid "Friday"
+msgstr "პარასკევი"
+
+msgid "General"
+msgstr "ზოგადი"
+
+msgid "Global SMTP Relay"
+msgstr "გლობალური SMTP რილეი"
+
+msgid "Go to BACKUP list"
+msgstr "მარქაფების სიაზე გადასვლა"
+
+msgid "Go to CRON list"
+msgstr "კრონის სიაზე გადასვლა"
+
+msgid "Go to DB list"
+msgstr "ბაზების სიაზე გადასვლა"
+
+msgid "Go to DNS list"
+msgstr "დომენების სიაზე გადასვლა"
+
+msgid "Go to MAIL list"
+msgstr "ელფოსტის სიაზე გადასვლა"
+
+msgid "Go to WEB list"
+msgstr "ვების სიაზე გადასვლა"
+
+msgid "HESTIA"
+msgstr "HESTIA"
+
+msgid "Hide Certificate"
+msgstr "სერტიფიკატის დამალვა"
+
+msgid "Hide account from other administrators"
+msgstr "ანგარიშის დამალვა სხვა ადმინისტრატორებისთვის"
+
+msgid "Hide link to Documentation"
+msgstr "დოკუმენტაციაზე ბმულის დამალვა"
+
+msgid "Hostname"
+msgstr "ჰოსტის სახელი"
+
+msgid "Hour"
+msgstr "საათი"
+
+msgid "Hourly"
+msgstr "საათობრივი"
+
+msgid "IP Address"
+msgstr "IP მისამართი"
+
+msgid "IP Version"
+msgstr "IP ვერსია"
+
+msgid "IP or Value"
+msgstr "IP ან მნიშვნელობა"
+
+msgid "IPs"
+msgstr "IP-ები"
+
+msgid "Inactive session timeout"
+msgstr "არააქტიური სესიის ვადა"
+
+msgid "Install %s"
+msgstr "%s ინსტალაცია"
+
+msgid "Interface"
+msgstr "ინტერფეისი"
+
+msgid "Invalid or missing 2FA token"
+msgstr "არასწორი ან ცარიელი 2FA თოკენი"
+
+msgid "Invalid username or code"
+msgstr "არასწორი მომხმარებლის სახელი ან კოდი."
+
+msgid "Invalid username or password"
+msgstr "არასწორი მომხამრებლის სახელი ან პაროლი."
+
+msgid "Jan"
+msgstr "იან"
+
+msgid "Jobs"
+msgstr "ამოცანები"
+
+msgid "Jul"
+msgstr "ივლ"
+
+msgid "Jun"
+msgstr "ივნ"
+
+msgid "Language"
+msgstr "ენა"
+
+msgid "Last 70 lines of %s.%s.log"
+msgstr "ბოლო 70 ხაზი  %s.%s.log - დან"
+
+msgid "Limit"
+msgstr "ლიმიტი"
+
+msgid "Load Average"
+msgstr "საშუალო დატვირთვა"
+
+msgid "Log in"
+msgstr "შესვლა"
+
+msgid "Log out"
+msgstr "გამოსვლა"
+
+msgid "Logged in as"
+msgstr "შესული ხართ როგორც"
+
+msgid "Login"
+msgstr "შესვლა"
+
+msgid "Login History"
+msgstr "შესვლების ისტორია"
+
+msgid "Login screen style"
+msgstr "შესვლის ეკრანის სტილი"
+
+msgid "Logs"
+msgstr "ლოგები"
+
+msgid "MAIL"
+msgstr "ფოსტა"
+
+msgid "Mail"
+msgstr "ელფოსტა"
+
+msgid "Mail Accounts"
+msgstr "ელფოსტის ანგარიშები"
+
+msgid "Mail Domains"
+msgstr "ელფოსტის დომენები"
+
+msgid "Mail Support"
+msgstr "Mail-ის მხარდაჭერა"
+
+msgid "Mar"
+msgstr "მარ"
+
+msgid "May"
+msgstr "მაი"
+
+msgid "Memory"
+msgstr "მეხსიერება"
+
+msgid "Message"
+msgstr "შეტყობინება"
+
+msgid "Minute"
+msgstr "წუთი"
+
+msgid "Minutes"
+msgstr "წუთი"
+
+msgid "Monday"
+msgstr "ორშაბათი"
+
+msgid "Month"
+msgstr "თვე"
+
+msgid "Monthly"
+msgstr "ყოველთვიური"
+
+msgid "More info"
+msgstr "მეტი ინფო"
+
+msgid "Move backward through top menu"
+msgstr "უკან გადასვლა მთავარ მენიუში"
+
+msgid "Move down through elements list"
+msgstr "ელემენტების სიაში ზევით გადასვლა"
+
+msgid "Move forward through top menu"
+msgstr "წინ გადასვლა მთავარ მენიუში"
+
+msgid "Move up through elements list"
+msgstr "ელემენტების სიაში ზევით გადასვლა"
+
+msgid "MySQL Support"
+msgstr "MySQL-ის მხარდაჭერა"
+
+msgid "NAT IP Association"
+msgstr "NAT IP ასოციაცია"
+
+msgid "Name"
+msgstr "სახელი"
+
+msgid "Netmask"
+msgstr "მასკა"
+
+msgid "Network"
+msgstr "ქსელი"
+
+msgid "New Password"
+msgstr "ახალი პაროლი"
+
+msgid "Next"
+msgstr "შემდეგი"
+
+msgid "No"
+msgstr "არა"
+
+msgid "Normal password"
+msgstr "ჩვეულებრივი პაროლი"
+
+msgid "Nov"
+msgstr "ნოე"
+
+msgid "Oct"
+msgstr "ოქტ"
+
+msgid "Old Style"
+msgstr "ძველი სტილი"
+
+msgid "Open debug panel"
+msgstr "დებაგ პანელის გახსნა"
+
+msgid "Open menu"
+msgstr "მენიუს გახსნა"
+
+msgid "Operating System"
+msgstr "საოპერაციო სისტემა"
+
+msgid "Optional"
+msgstr "არასავალდებულო"
+
+msgid "Options"
+msgstr "პარამეტრები"
+
+msgid "Organization"
+msgstr "ორგანიზაცია"
+
+msgid "Overall Statistics"
+msgstr "საერთო სტატისტიკა"
+
+msgid "Owner"
+msgstr "მფლობელი"
+
+msgid "Package"
+msgstr "პაკეტი"
+
+msgid "Package Name"
+msgstr "პაკეტის სახელი"
+
+msgid "Packages"
+msgstr "პაკეტები"
+
+msgid "Password"
+msgstr "პაროლი"
+
+msgid ""
+"Password reset instructions have been sent to the email address associated "
+"with this account."
+msgstr ""
+"პაროლის აღდგენის ინსტრუქციები გაიგზავნა ანგარიშთან ასოცირებლ ელფოსტის "
+"მისამართზე."
+
+msgid "Path"
+msgstr "გზა"
+
+msgid "Permissions"
+msgstr "უფლებები"
+
+msgid "Please make sure ~/web/%s/public_html is empty!"
+msgstr "დარწმუნდით, რომ  ~/web/%s/public_html ცარიელია!"
+
+msgid "Point to"
+msgstr "მიმართავს"
+
+msgid "Policies"
+msgstr "პოლიტიკები"
+
+msgid "Policy"
+msgstr "პოლიტიკა"
+
+msgid "Port"
+msgstr "პორტი"
+
+msgid "PostgreSQL Support"
+msgstr "PostgreSQL-ის მხარდაჭერა"
+
+msgid "Prefix %s will be added to username automatically"
+msgstr "პრეფიქსი %s ავტომატურად დაემატება მომხმარებლის სახელს"
+
+msgid ""
+"Prefix %s will be automatically added to database name and database user"
+msgstr ""
+"პრეფიქსი %s ავტომატურად დაემატება მონაცემთა ბაზის სახელსა და მოხმარებელს"
+
+msgid "Prevent CSRF"
+msgstr "CSRF პრევენცია"
+
+msgid "Preview"
+msgstr "წინასწარ დათვალიერება"
+
+msgid "Priority"
+msgstr "პრიორიტეტი"
+
+msgid "Protocol"
+msgstr "პროტოკოლი"
+
+msgid "Proxy Extensions"
+msgstr "პროქსის გაფართოებები"
+
+msgid "Proxy Server"
+msgstr "პროქსი სერვერი"
+
+msgid "Proxy Support"
+msgstr "პროქსის მხარდაჭერა"
+
+msgid "Proxy Template"
+msgstr "პროქსის შაბლონი"
+
+msgid "Quick App Installer"
+msgstr "სწრაფი აპლიკაციების ინსტალატორი"
+
+msgid "Quota"
+msgstr "კვოტა"
+
+msgid "Record"
+msgstr "ჩანაწერი"
+
+msgid "Records"
+msgstr "ჩანაწერები"
+
+msgid "Redirect visitors to %s"
+msgstr "ვიზიტორების %s-ზე გადამისამართება"
+
+msgid "Redirect visitors to a custom domain or web address"
+msgstr "ვიზიტორების გადამისამართება მორგებულ დომენზე ან ვებ მისამართზე"
+
+msgid "Release"
+msgstr "რელიზი"
+
+msgid "Reset"
+msgstr "ჩამოყრა"
+
+msgid "Reset Code"
+msgstr "ჩამოსაყრელი კოკი"
+
+msgid "Restart \"%s\" failed"
+msgstr "ხელახლა გაშვება \"%s\" ჩაიშალა"
+
+msgid "Restore"
+msgstr "აღდგენა"
+
+msgid "Restore All"
+msgstr "ყველას აღდგენა"
+
+msgid "Restrict access to read-only for other administrators"
+msgstr "მხოლოდ წაკითხვის რეჟიმში დაშვება სხვა ადმინისტრატორებისთვის"
+
+msgid "Role"
+msgstr "როლი"
+
+msgid "Run Command"
+msgstr "ბრძანების გაშვება"
+
+msgid "SSH"
+msgstr "SSH"
+
+msgid "SSH Access"
+msgstr "SSH წვდომა"
+
+msgid "SSL Certificate"
+msgstr "SSL სერტიფიკატები"
+
+msgid "SSL Certificate Authority / Intermediate"
+msgstr "SSL სერტიფიკატების ავტორიტეტი / შუამავალი"
+
+msgid "SSL Domains"
+msgstr "SSL დომენები"
+
+msgid "Saturday"
+msgstr "შაბათი"
+
+msgid "Save"
+msgstr "შენახვა"
+
+msgid "Search"
+msgstr "ძიება"
+
+msgid "Search Results"
+msgstr "ძიების შედეგები"
+
+msgid "Secret Key"
+msgstr "საიდუმლო გასაღები"
+
+msgid "Security"
+msgstr "უსაფრთხოება"
+
+msgid "Select"
+msgstr "არჩევა"
+
+msgid "Select all"
+msgstr "ყველას არჩევა"
+
+msgid "Send FTP credentials to email"
+msgstr "FTP ანგარიშის დეტალების ელფოსტაზე გაგზავნა"
+
+msgid "Send welcome email"
+msgstr "მისალმების ელფოსტის გაგზავნა"
+
+msgid "Sender Email Address"
+msgstr "გამგზავნის ელფოსტის მისამართი"
+
+msgid "Sender Name"
+msgstr "გამგზავნის სახელი"
+
+msgid "Sep"
+msgstr "სექ"
+
+msgid "Server settings"
+msgstr "სერვერის პარამეტრები"
+
+msgid "Set as default language for all users"
+msgstr "ნაგულისხმევი ენა ყველა მომხმარებლისთვის"
+
+msgid "Set as selected theme for all users"
+msgstr "ნაგილისხმევი თემა ყველა მომხმარებლისთვის"
+
+msgid "Shared"
+msgstr "გაზიარებული"
+
+msgid "Shell"
+msgstr "შელი"
+
+msgid "Shortcuts"
+msgstr "მალსახმობები"
+
+msgid "Show Certificate"
+msgstr "სერტიფიკატის ნახვა"
+
+msgid "Size"
+msgstr "ზომა"
+
+msgid "Sort items"
+msgstr "სორტირება"
+
+msgid "Start \"%s\" failed"
+msgstr "გაშვება \"%s\" ჩაიშალა"
+
+msgid "State"
+msgstr "მდგომარეობა"
+
+msgid "State / Province"
+msgstr "შტატი / პროვინცია"
+
+msgid "Statistics"
+msgstr "სტატისტიკა"
+
+msgid "Statistics Authorization"
+msgstr "სტატისტიკის ავტორიზაცია"
+
+msgid "Status"
+msgstr "სტატუსი"
+
+msgid "Status code"
+msgstr "სტატუსის კოდი"
+
+msgid "Stop \"%s\" failed"
+msgstr "შეჩერება \"%s\" ჩაიშალა"
+
+msgid "Strict"
+msgstr "მკაცრი"
+
+msgid "Submit"
+msgstr "გადაცემა"
+
+msgid "Sunday"
+msgstr "კვირა"
+
+msgid "Supported variables"
+msgstr "მხარდაჭერილი ცვლადები"
+
+msgid "Suspend"
+msgstr "შეჩერება"
+
+msgid "Suspend All"
+msgstr "ყველას შეჩერება"
+
+msgid "Suspended"
+msgstr "დაპაუზებული"
+
+msgid "System"
+msgstr "სისტემა"
+
+msgid "System Administrator account"
+msgstr "სისტემის ადმინისტრატორის ანგარიში"
+
+msgid "System Protection"
+msgstr "სისტემის დაცვა"
+
+msgid "TTL"
+msgstr "TTL"
+
+msgid "Target domain or URL"
+msgstr "სამიზნე დომენი ან URL"
+
+msgid "Template"
+msgstr "შაბლონი"
+
+msgid "The system is going down for reboot NOW!"
+msgstr "სიტემა ითიშება გადატვირთვის მიზნით, ახლა!"
+
+msgid "Theme"
+msgstr "თემა"
+
+msgid "There are currently no banned IP addresses."
+msgstr "ახლა არ არის დაბლოკილი IP მისამართები."
+
+msgid "Thursday"
+msgstr "ხუთშაბათი"
+
+msgid "Time"
+msgstr "დრო"
+
+msgid "Time Zone"
+msgstr "სასაათო სარტყელი"
+
+msgid "Title"
+msgstr "სათაური"
+
+msgid ""
+"To enable Let's Encrypt SSL, ensure that DNS records exist for mail.%s and "
+"%s!"
+msgstr ""
+"Let's Encrypt SSL-ის ჩასართავად, დარწმუნდით, რომ  DNS ჩანაწერები არსებობს "
+"mail.%s and %s!"
+
+msgid "Top"
+msgstr "თავში"
+
+msgid "Tuesday"
+msgstr "სამშაბათი"
+
+msgid "Type"
+msgstr "ტიპი"
+
+msgid "USER"
+msgstr "კლიენტი"
+
+msgid "Unable to add database!"
+msgstr "შეუძლებელია მონაცემთა ბაზის დამატება!"
+
+msgid "Unable to add database! Limit reached!"
+msgstr "ვერ დაემატა მონაცემთა ბაზა! მიღწეულია ლიმიტი!"
+
+msgid "Unlimited"
+msgstr "ულიმიტო"
+
+msgid "Unsupported hash method"
+msgstr "მხარდაუჭერელი ჰეშირების მეთოდი"
+
+msgid "Unsuspend"
+msgstr "შეჩერების მოხსნა"
+
+msgid "Unsuspend All"
+msgstr "ყველას შეჩერების გაუქმება"
+
+msgid "Updates"
+msgstr "განახლება"
+
+msgid "Uptime"
+msgstr "აფთაიმი"
+
+msgid "Use IP address allow list for login attempts"
+msgstr "გამოიყენეთ IP მისამართების დაშვების სია შემოსვლის მცდელობებისთვის"
+
+msgid "User"
+msgstr "მომხმარებელი"
+
+msgid "User Directory"
+msgstr "მომხმარებლის დირექტორია"
+
+msgid "Username"
+msgstr "მომხმარებლის სახელი"
+
+msgid "Users"
+msgstr "მომხმარებლები"
+
+msgid "Value"
+msgstr "მნიშვნელობა"
+
+msgid "Version"
+msgstr "ვერსია"
+
+msgid "View"
+msgstr "ნახვა"
+
+msgid "WEB"
+msgstr "ვები"
+
+msgid "Web"
+msgstr "ვები"
+
+msgid "Web Aliases"
+msgstr "Web ალიასები"
+
+msgid "Web Domains"
+msgstr "ვებ დომენები"
+
+msgid "Web Server"
+msgstr "ვებ სერვერი"
+
+msgid "Web Statistics"
+msgstr "ვებ სტატისტიკა"
+
+msgid "Web Template"
+msgstr "ვების შაბლონი"
+
+msgid "Webmail"
+msgstr "ვებფოსტა"
+
+msgid "Webmail Client"
+msgstr "ვებფოსტის კლიენტი"
+
+msgid "Wednesday"
+msgstr "ოთხშაბათი"
+
+msgid "Weekdays (5 days)"
+msgstr "კვირის დღეები (5 დღე)"
+
+msgid "Weekend (2 days)"
+msgstr "დასვენების დღეები (2 დღე)"
+
+msgid "Weekly"
+msgstr "ყოველკვირეული"
+
+msgid "Welcome"
+msgstr "გამარჯობა"
+
+msgid "White Label Options"
+msgstr "რებრენდინგის პარამეტრები"
+
+msgid "YYYY-MM-DD"
+msgstr "წწწწ-თთ-დდ"
+
+msgid "Yearly"
+msgstr "ყოველწლიური"
+
+msgid "Yes"
+msgstr "კი"
+
+msgid "Your password must have at least"
+msgstr "თქვენი პაროლი უნდა შედგებოდეს მინიმუმ"
+
+msgid "backend server"
+msgstr "ბექენდ სერვერი"
+
+msgid "database server"
+msgstr "მონაცემთა ბაზების სერვერი"
+
+msgid "dns server"
+msgstr "dns სერვერი"
+
+msgid "firewall"
+msgstr "ფაირვოლი"
+
+msgid "ftp server"
+msgstr "ftp სერვერი"
+
+msgid "job scheduler"
+msgstr "ამოცანების განრიგი"
+
+msgid "mail server"
+msgstr "ელ-ფოსტის სერვერი"
+
+msgid "one or more email addresses"
+msgstr "ერთი ან მეტი ელფოსტის მისამართი"
+
+msgid "per account / hour"
+msgstr "ანგარიშზე / საათში"
+
+msgid "per domain"
+msgstr "დომენზე"
+
+msgid "phpMyAdmin Single Sign On"
+msgstr "phpMyAdmin-ზე Single Sign On"
+
+msgid "reverse proxy"
+msgstr "რევერს პროქსი"
+
+msgid "url, script or file"
+msgstr "ბმული, სკრიპტი ან ფაილი"
+
+msgid "web server"
+msgstr "ვებ სერვერი"
+
+msgid "zstd only"
+msgstr "მხოლოდ zstd"

@@ -1,0 +1,607 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: hestiacp\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-06 11:25\n"
+"Last-Translator: \n"
+"Language-Team: Catalan\n"
+"Language: ca_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: hestiacp\n"
+"X-Crowdin-Project-ID: 587405\n"
+"X-Crowdin-Language: ca\n"
+"X-Crowdin-File: hestiacp.pot\n"
+"X-Crowdin-File-ID: 3\n"
+
+msgid "%d DNS record"
+msgid_plural "%d DNS records"
+msgstr[0] "%d registre DNS"
+msgstr[1] "%d registres DNS"
+
+msgid "%d DNS zone"
+msgid_plural "%d DNS zones"
+msgstr[0] "%d zona DNS"
+msgstr[1] "%d zones DNS"
+
+msgid "%d IP address"
+msgid_plural "%d IP addresses"
+msgstr[0] "%d adreça IP"
+msgstr[1] "%d adreces IP"
+
+msgid "%d backup"
+msgid_plural "%d backups"
+msgstr[0] "%d còpia de seguretat"
+msgstr[1] "%d còpies de seguretat"
+
+msgid "%d cron job"
+msgid_plural "%d cron jobs"
+msgstr[0] "%d tasca cron"
+msgstr[1] "%d tasques cron"
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d dia"
+msgstr[1] "%d dies"
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d hora"
+msgstr[1] "%d hores"
+
+msgid "%d mail account"
+msgid_plural "%d mail accounts"
+msgstr[0] "%d compte de correu"
+msgstr[1] "%d comptes de correu"
+
+msgid "%d mail domain"
+msgid_plural "%d mail domains"
+msgstr[0] "%d domini de correu"
+msgstr[1] "%d dominis de correu"
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minut"
+msgstr[1] "%d minuts"
+
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d mes"
+msgstr[1] "%d mesos"
+
+msgid "%d object"
+msgid_plural "%d objects"
+msgstr[0] "%d objecte"
+msgstr[1] "%d objectes"
+
+msgid "%d package"
+msgid_plural "%d packages"
+msgstr[0] "%d paquet"
+msgstr[1] "%d paquets"
+
+msgid "%d user account"
+msgid_plural "%d user accounts"
+msgstr[0] "%d compte d'usuari"
+msgstr[1] "%d comptes d'usuari"
+
+msgid "%d web domain"
+msgid_plural "%d web domains"
+msgstr[0] "%d domini web"
+msgstr[1] "%d dominis web"
+
+msgid "1 number"
+msgstr "1 nombre"
+
+msgid "1 uppercase & 1 lowercase character"
+msgstr "1 majúscula & 1 caràcter minúscula"
+
+msgid "2FA QR Code"
+msgstr "Codi 2FA QR"
+
+msgid "2FA Reset Code"
+msgstr "Codi de restabliment 2FA"
+
+msgid "8 characters long"
+msgstr "8 caràcters de llarg"
+
+msgid "Access Key"
+msgstr "Clau d'accés"
+
+msgid "Access Keys"
+msgstr "Claus d'accés"
+
+msgid "Access Log"
+msgstr "Registre d'accés"
+
+msgid "Account has been suspended"
+msgstr "S'ha suspès el compte"
+
+msgid "Accounts"
+msgstr "Comptes"
+
+msgid "Add Access Key"
+msgstr "Afegeix una clau d'accés"
+
+msgid "Add Mail Domain"
+msgstr "Afegeix un domini de correu"
+
+msgid "Add Name Server"
+msgstr "Afegeix el nom del servidor"
+
+msgid "Add Package"
+msgstr "Afegeix un paquet"
+
+msgid "Add User"
+msgstr "Afegeix un usuari"
+
+msgid "Administrator"
+msgstr "Administrador"
+
+msgid "Algorithm"
+msgstr "Algoritme"
+
+msgid "All ports: 0, Range: 80-82, List: 80,443,8080,8443"
+msgstr "Tots els ports: 0, Interval: 80-82, Llista: 80,443,8080,8443"
+
+msgid "Allow suspended users to log in with read-only access"
+msgstr ""
+"Permet als usuaris suspesos iniciar la sessió amb accés de només lectura"
+
+msgid "Allow users to change templates when editing DNS zones"
+msgstr "Permet als usuaris canviar les plantilles en editar zones DNS"
+
+msgid "Allow users to change templates when editing web domains"
+msgstr "Permet als usuaris canviar les plantilles en editar dominis web"
+
+msgid "Allow users to delete log history"
+msgstr "Permet als usuaris suprimir l'historial de registres"
+
+msgid "Allow users to edit their account details"
+msgstr "Permet als usuaris editar els detalls del seu compte"
+
+msgid "Allow users to reset their passwords"
+msgstr "Permet als usuaris restablir les contrasenyes"
+
+msgid "Allow users to view action and login history logs"
+msgstr ""
+"Permet als usuaris veure els registres de l'historial d'accions i d'inici de "
+"sessió"
+
+msgid "Allowed IP addresses for API"
+msgstr "Adreces IP permeses per a l'API"
+
+msgid "Authentication"
+msgstr "Autenticació"
+
+msgid "BACKUP"
+msgstr "CÒPIA DE SEGURETAT"
+
+msgid "Ban IP Address"
+msgstr "Prohibeix l'adreça IP"
+
+msgid "Browser"
+msgstr "Navegador"
+
+msgid "Cache Duration"
+msgstr "Durada de la memòria cau (Caché)"
+
+msgid "Category"
+msgstr "Categoria"
+
+msgid "Close debug panel"
+msgstr "Tanca el panell de depuració"
+
+msgid "Close menu"
+msgstr "Tanca el menú"
+
+msgid "Collapse main menu"
+msgstr "Redueix el menú principal"
+
+msgid "Compression"
+msgstr "Compressió"
+
+msgid "Continue"
+msgstr "Continua"
+
+msgid "Custom document root"
+msgstr "Arrel del document personalitzat"
+
+msgid "DNS Template"
+msgstr "Plantilla DNS"
+
+msgid "Delete all notifications"
+msgstr "Suprimeix totes les notificacions"
+
+msgid "Delete notification"
+msgstr "Suprimeix la notificació"
+
+msgid "Disabled"
+msgstr "Desactivat"
+
+msgid "Discard all mail"
+msgstr "Descarta tots els correus"
+
+msgid "Do not allow other administrators to access Server Settings"
+msgstr ""
+"No permetis que altres administradors accedeixin a la configuració del "
+"servidor"
+
+msgid "Do not allow user to log in to Control Panel"
+msgstr "No permetis que l'usuari iniciï sessió al panell de control"
+
+msgid "Domains"
+msgstr "Dominis"
+
+msgid "Download"
+msgstr "Descarrega"
+
+msgid "Edit Package"
+msgstr "Edita el paquet"
+
+msgid "Enable API access"
+msgstr "Activa l'accés a l'API"
+
+msgid "Enable DNSSEC"
+msgstr "Activa DNSSEC"
+
+msgid "Enable debug mode"
+msgstr "Activa el mode de depuració"
+
+msgid "Enable domain redirection"
+msgstr "Activa la redirecció de domini"
+
+msgid "Enable legacy API access"
+msgstr "Activa l'accés a l'API antiga"
+
+msgid "Enable preview features"
+msgstr "Activa les funcions de vista prèvia"
+
+msgid "Enabled"
+msgstr "Activat"
+
+msgid "Enabled for admin"
+msgstr "Activat per als administradors"
+
+msgid "Enabled for all users"
+msgstr "Activat per a tots els usuaris"
+
+msgid "Enforce subdomain ownership"
+msgstr "Força la propietat del subdomini"
+
+msgid "Enter focused element"
+msgstr "Introduïu l'element amb el focus"
+
+msgid "Error: Hestia did not return any output."
+msgstr "Error: Hestia no ha retornat cap sortida."
+
+msgid "Expand main menu"
+msgstr "Expandeix el menú principal"
+
+msgid "File manager"
+msgstr "Gestor de fitxers"
+
+msgid "Focus on search"
+msgstr "Focus en la cerca"
+
+msgid "Global SMTP Relay"
+msgstr "Retransmisió SMTP global"
+
+msgid "Go to BACKUP list"
+msgstr "Ves a la llista de còpies de seguretat"
+
+msgid "Go to CRON list"
+msgstr "Ves a la llista de CRON"
+
+msgid "Go to DB list"
+msgstr "Ves a la llista de BD"
+
+msgid "Go to DNS list"
+msgstr "Ves a la llista DNS"
+
+msgid "Go to MAIL list"
+msgstr "Ves a la llista de correu"
+
+msgid "Go to WEB list"
+msgstr "Ves a la llista web"
+
+msgid "Hide account from other administrators"
+msgstr "Amaga el compte d'altres administradors"
+
+msgid "Inactive session timeout"
+msgstr "Temps d'espera de la sessió inactiva"
+
+msgid "Install %s"
+msgstr "Instal·la %s"
+
+msgid "Invalid or missing 2FA token"
+msgstr "Token 2FA no vàlid o mancant"
+
+msgid "Invalid username or password"
+msgstr "Nom d'usuari o contrasenya no vàlids"
+
+msgid "Jobs"
+msgstr "Tasques"
+
+msgid "Limit"
+msgstr "Límit"
+
+msgid "Log in"
+msgstr "Inicia la sessió"
+
+msgid "Logged in as"
+msgstr "Inici de sessió com"
+
+msgid "Login"
+msgstr "Inici de sessió"
+
+msgid "Login screen style"
+msgstr "Estil de pantalla d'inici de sessió"
+
+msgid "Logs"
+msgstr "Registres"
+
+msgid "Mail"
+msgstr "Correu electrònic"
+
+msgid "Message"
+msgstr "Missatge"
+
+msgid "More info"
+msgstr "Més informació"
+
+msgid "Move backward through top menu"
+msgstr "Mou cap enrere a través del menú superior"
+
+msgid "Move down through elements list"
+msgstr "Mou avall a través de la llista d'elements"
+
+msgid "Move forward through top menu"
+msgstr "Mou endavant a través del menú superior"
+
+msgid "Move up through elements list"
+msgstr "Mou amunt a través de la llista d'elements"
+
+msgid "Network"
+msgstr "Xarxa"
+
+msgid "Next"
+msgstr "Següent"
+
+msgid "Old Style"
+msgstr "Estil antic"
+
+msgid "Open debug panel"
+msgstr "Obre el panell de depuració"
+
+msgid "Open menu"
+msgstr "Obre el menú"
+
+msgid "Options"
+msgstr "Opcions"
+
+msgid "Package Name"
+msgstr "Nom del paquet"
+
+msgid "Packages"
+msgstr "Paquets"
+
+msgid ""
+"Password reset instructions have been sent to the email address associated "
+"with this account."
+msgstr ""
+"S'han enviat instruccions de restabliment de contrasenya a l'adreça de "
+"correu electrònic associada amb aquest compte."
+
+msgid "Permissions"
+msgstr "Permisos"
+
+msgid "Please make sure ~/web/%s/public_html is empty!"
+msgstr "Assegureu-vos que~/web/%s/public_html iés buit!"
+
+msgid "Point to"
+msgstr "Apunta a"
+
+msgid "Policies"
+msgstr "Polítiques"
+
+msgid "Policy"
+msgstr "Política"
+
+msgid "Prefix %s will be added to username automatically"
+msgstr "El prefix %s s'afegirà automàticament al nom d'usuari"
+
+msgid ""
+"Prefix %s will be automatically added to database name and database user"
+msgstr ""
+"El prefix %s s'afegirà automàticament al nom de la base de dades i a "
+"l'usuari de la base de dades"
+
+msgid "Prevent CSRF"
+msgstr "Evita CSRF"
+
+msgid "Preview"
+msgstr "Previsualitza"
+
+msgid "Quick App Installer"
+msgstr "Instal·lador d'aplicacions ràpides"
+
+msgid "Redirect visitors to %s"
+msgstr "Redirigeix els visitants a %s"
+
+msgid "Redirect visitors to a custom domain or web address"
+msgstr "Redirigeix els visitants a un domini personalitzat o a una adreça web"
+
+msgid "Restart \"%s\" failed"
+msgstr "No s'ha pogut reiniciar «%s»"
+
+msgid "Restrict access to read-only for other administrators"
+msgstr "Restringeix l'accés a només lectura per a altres administradors"
+
+msgid "Role"
+msgstr "Rol"
+
+msgid "SMTP Relay"
+msgstr "Retransmisió SMTP"
+
+msgid "SSL Domains"
+msgstr "Dominis SSL"
+
+msgid "Search"
+msgstr "Cerca"
+
+msgid "Secret Key"
+msgstr "Clau secreta"
+
+msgid "Security"
+msgstr "Seguretat"
+
+msgid "Select"
+msgstr "Selecciona"
+
+msgid "Select all"
+msgstr "Selecciona-ho tot"
+
+msgid "Send welcome email"
+msgstr "Envia un correu electrònic de benvinguda"
+
+msgid "Server settings"
+msgstr "Paràmetres del servidor"
+
+msgid "Set as default language for all users"
+msgstr "Estableix com a llengua per defecte per a tots els usuaris"
+
+msgid "Set as selected theme for all users"
+msgstr "Estableix com a tema seleccionat per a tots els usuaris"
+
+msgid "Shell"
+msgstr "Intèrpret"
+
+msgid "Shortcuts"
+msgstr "Dreceres"
+
+msgid "Show Certificate"
+msgstr "Mostra el certificat"
+
+msgid "Sort items"
+msgstr "Ordena els elements"
+
+msgid "Start \"%s\" failed"
+msgstr "Ha fallat l'inici de «%s»"
+
+msgid "Status code"
+msgstr "Codi d'estat"
+
+msgid "Stop \"%s\" failed"
+msgstr "Ha fallat l'aturada de «%s»"
+
+msgid "Strict"
+msgstr "Estricte"
+
+msgid "Submit"
+msgstr "Envia"
+
+msgid "Suspended"
+msgstr "Suspès"
+
+msgid "System"
+msgstr "Sistema"
+
+msgid "System Administrator account"
+msgstr "Compte d'administrador del sistema"
+
+msgid "System Protection"
+msgstr "Protecció del sistema"
+
+msgid "Target domain or URL"
+msgstr "Domini o URL de destinació"
+
+msgid "The system is going down for reboot NOW!"
+msgstr "El sistema s'està aturant per reiniciar ARA!"
+
+msgid ""
+"To enable Let's Encrypt SSL, ensure that DNS records exist for mail.%s and "
+"%s!"
+msgstr ""
+"Per habilitar Let's Encrypt SSL, assegureu-vos que hi ha registres DNS per "
+"al correu.%s i %s!"
+
+msgid "Top"
+msgstr "A dalt"
+
+msgid "Unable to add database!"
+msgstr "No s'ha pogut afegir la base de dades!"
+
+msgid "Unable to add database! Limit reached!"
+msgstr "No s'ha pogut afegir la base de dades! S'ha arribat al límit!"
+
+msgid "Unlimited"
+msgstr "Sense límit"
+
+msgid "Unsupported hash method"
+msgstr "Mètode hash no suportat"
+
+msgid "Use IP address allow list for login attempts"
+msgstr ""
+"Utilitza l'adreça IP per permetre la llista d'intents d'inici de sessió"
+
+msgid "Users"
+msgstr "Usuaris"
+
+msgid "View"
+msgstr "Veure"
+
+msgid "Webmail Client"
+msgstr "Client Webmail"
+
+msgid "Welcome"
+msgstr "Benvingut"
+
+msgid "Yearly"
+msgstr "Anual"
+
+msgid "Yes"
+msgstr "Si"
+
+msgid "Your password must have at least"
+msgstr "La contrasenya ha de tenir com a mínim"
+
+msgid "backend server"
+msgstr "backend servidor"
+
+msgid "database server"
+msgstr "Servidor de base de dades"
+
+msgid "dns server"
+msgstr "servidor DNS"
+
+msgid "firewall"
+msgstr "Tallafocs"
+
+msgid "ftp server"
+msgstr "servidor ftp"
+
+msgid "job scheduler"
+msgstr "planificador de tasques"
+
+msgid "mail server"
+msgstr "servidor correu"
+
+msgid "per account / hour"
+msgstr "per compte / hora"
+
+msgid "per domain"
+msgstr "per domini"
+
+msgid "phpMyAdmin Single Sign On"
+msgstr "Inici de sessió únic de phpMyAdmin"
+
+msgid "reverse proxy"
+msgstr "Proxy invers"
+
+msgid "web server"
+msgstr "servidor web"
+
+msgid "zstd only"
+msgstr "només zstd"
