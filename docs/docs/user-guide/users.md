@@ -1,72 +1,75 @@
-# Users
+# Пользователи
 
-To manage users, log in as an **administrator** and navigate to the **Users <i class="fas fa-fw fa-users"></i>** tab.
+Чтобы управлять пользователями, войдите в систему как **администратор** и перейдите на вкладку **Пользователи <i class="fas fa-fw fa-users"></i>**.
 
-## Adding a user
+## Добавление пользователя
 
-1. Click the **<i class="fas fa-fw fa-plus-circle"></i> Add User** button.
-2. Fill out the fields.
-3. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
+1. Нажмите кнопку **<i class="fas fa-fw fa-plus-circle"></i> Добавить пользователя**.
 
-## Impersonating a user
+2. Заполните поля.
 
-1. Hover over the user you want to login as.
-2. Click the <i class="fas fa-fw fa-sign-in-alt"><span class="visually-hidden">login as</span></i> icon on the right of the user’s name and email.
-3. You are now logged in as the user. As such, any action you perform will be done as this user.
+3. Нажмите кнопку **<i class="fas fa-fw fa-save"></i> Сохранить** в правом верхнем углу.
 
-## Editing a user
+## Выдача себя за пользователя
 
-The settings specified below are only available to administrators. For the regular settings, you can refer to the [Account Management](../user-guide/account.md) documentation.
+1. Наведите указатель мыши на пользователя, под которым вы хотите войти.
+2. Нажмите значок <i class="fas fa-fw fa-sign-in-alt"><span class="visually-hidden">войти как</span></i> справа от имени пользователя и адреса электронной почты.
 
-To edit a user you can either impersonate them and click the <i class="fas fa-lg fa-fw fa-user-circle"><span class="visually-hidden">user</span></i> icon in the top right, or follow these steps:
+3. Теперь вы вошли в систему как пользователь. Таким образом, любое действие, которое вы выполните, будет выполнено от имени этого пользователя.
 
-1. Hover over the user you want to edit.
-2. Click the <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">edit</span></i> icon on the right of the user’s name and email.
+## Редактирование пользователя
 
-## Suspending a user
+Указанные ниже настройки доступны только администраторам. Обычные настройки см. в документации [Управление учетными записями](../user-guide/account.md).
 
-1. Hover over the user you want to suspend.
-2. Click the <i class="fas fa-fw fa-pause"><span class="visually-hidden">suspend</span></i> icon on the right of the user’s name and email.
+Чтобы отредактировать пользователя, вы можете либо выдать себя за него и нажать на значок <i class="fas fa-lg fa-fw fa-user-circle"><span class="visually-hidden">пользователя</span></i> в правом верхнем углу, либо выполнить следующие действия:
 
-## Deleting a user
+1. Наведите указатель мыши на пользователя, которого вы хотите отредактировать.
+2. Нажмите на значок <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">редактировать</span></i> справа от имени пользователя и адреса электронной почты.
 
-1. Hover over the user you want to delete.
-2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> icon on the right of the user’s name and email.
+## Приостановка пользователя
 
-## User configuration
+1. Наведите указатель мыши на пользователя, которого вы хотите приостановить.
+2. Щелкните значок <i class="fas fa-fw fa-pause"><span class="visually-hidden">приостановить</span></i> справа от имени пользователя и адреса электронной почты.
 
-### Disabling control panel access
+## Удаление пользователя
 
-To remove Control Panel access from a user, check the box labelled: **Do not allow user to log in to Control Panel**.
+1. Наведите указатель мыши на пользователя, которого хотите удалить.
+2. Щелкните значок <i class="fas fa-fw fa-trash"><span class="visually-hidden">удалить</span></i> справа от имени пользователя и адреса электронной почты.
 
-### Changing role
+## Конфигурация пользователя
 
-To change a user’s role change the **Role** value from the dropdown.
+### Отключение доступа к панели управления
+
+Чтобы лишить пользователя доступа к панели управления, установите флажок: **Не разрешать пользователю входить в панель управления**.
+
+### Изменение роли
+
+Чтобы изменить роль пользователя, измените значение **Роль** в раскрывающемся списке.
 
 ::: warning
-Assigning the **Administrator** role to a user will enable them to see and edit other users. They will not be able to edit the **admin** user, but will be able to see them, unless disabled in the server settings.
+Назначение роли **Администратор** пользователю позволит ему видеть и редактировать других пользователей. Они не смогут редактировать пользователя **admin**, но смогут видеть его, если это не отключено в настройках сервера.
 :::
 
-### Changing package
+### Изменение пакета
 
-To change a user’s package, change the **Package** value from the dropdown.
+Чтобы изменить пакет пользователя, измените значение **Package** в раскрывающемся списке.
 
-### Changing SSH access
+### Изменение доступа SSH
 
-To change a user’s SSH access, click the **Advanced Options** button, then change the **SSH Access** value from the dropdown.
+Чтобы изменить доступ пользователя SSH, нажмите кнопку **Advanced Options**, затем измените значение **SSH Access** в раскрывающемся списке.
 
 ::: warning
-Using the **nologin** shell will _not_ disable SFTP access.
+Использование оболочки **nologin** _не_ отключит доступ SFTP.
 :::
 
-### Changing PHP CLI version
+### Изменение версии PHP CLI
 
-To change a user’s PHP CLI version, click the **Advanced Options** button, then change the **PHP CLI Version** value from the dropdown.
+Чтобы изменить версию PHP CLI пользователя, нажмите кнопку **Advanced Options**, затем измените значение **PHP CLI Version** в раскрывающемся списке.
 
-### Changing default name servers
+### Изменение серверов имен по умолчанию
 
-To change a user’s default name servers, click the **Advanced Options** button, then edit the **Default Name Servers** fields.
+Чтобы изменить серверы имен пользователя по умолчанию, нажмите кнопку **Advanced Options**, затем измените поля **Default Name Servers**.
 
 ::: warning
-At least 2 default name servers are necessary. This is to provide redundancy, in case one of them fails to answer. In fact, it is suggested that both name servers be on separate servers, for better resilience. If you are the system administrator and would like to set this up, refer to our [DNS Cluster documentation](../server-administration/dns.md#dns-cluster-setup).
+Необходимо как минимум 2 сервера имен по умолчанию. Это необходимо для обеспечения избыточности в случае, если один из них не ответит. Фактически, предлагается, чтобы оба сервера имен находились на отдельных серверах для лучшей устойчивости. Если вы системный администратор и хотите настроить это, обратитесь к нашей [документации по кластеру DNS](../server-administration/dns.md#dns-cluster-setup).
 :::

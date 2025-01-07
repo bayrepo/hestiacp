@@ -111,6 +111,7 @@ $BIN/v-add-fs-directory "$user" "$HOMEDIR/$user/web/$domain/cgi-bin"
 $BIN/v-add-fs-directory "$user" "$HOMEDIR/$user/web/$domain/private"
 $BIN/v-add-fs-directory "$user" "$HOMEDIR/$user/web/$domain/stats"
 $BIN/v-add-fs-directory "$user" "$HOMEDIR/$user/web/$domain/logs"
+$BIN/v-add-fs-directory "$user" "$HOMEDIR/$user/web/$domain/private/tmp"
 
 # Creating domain logs
 touch /var/log/$WEB_SYSTEM/domains/$domain.bytes \

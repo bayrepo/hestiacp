@@ -79,7 +79,7 @@ get_branch_file() {
 			cp -f "$SRC_DIR/$filename" "$destination"
 		fi
 	else
-		download_file "https://raw.githubusercontent.com/$REPO/$branch/$filename" "$destination" $3
+		download_file "https://dev.brepo.ru/bayrepo/$REPO/raw/branch/$branch/$filename" "$destination" $3
 	fi
 }
 

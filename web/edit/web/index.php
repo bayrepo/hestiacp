@@ -83,6 +83,7 @@ if (empty($v_nginx_cache_duration)) {
 $v_proxy = $data[$v_domain]["PROXY"];
 $v_proxy_template = $data[$v_domain]["PROXY"];
 $v_proxy_ext = str_replace(",", ", ", $data[$v_domain]["PROXY_EXT"]);
+$v_proxy_port = $data[$v_domain]["PROXY_PORT_INTERNAL"];
 $v_stats = $data[$v_domain]["STATS"];
 $v_stats_user = $data[$v_domain]["STATS_USER"];
 $v_stats_password = "";
@@ -182,6 +183,34 @@ exec(HESTIA_CMD . "v-list-web-stats json", $output, $return_var);
 $stats = json_decode(implode("", $output), true);
 unset($output);
 
+//Check if passenger enabled
+$ruby_enabled = false;
+$passenger_state = "disabled";
+exec(HESTIA_CMD . "v-ext-modules state passenger_manager json", $output, $return_var);
+$check_passenger_enabled = json_decode(implode("", $output), true);
+unset($output);
+if (($return_var == 0) && (!empty($check_passenger_enabled)) && ($check_passenger_enabled[0]["STATE"] == "enabled")){
+	$passenger_state = "enabled";
+	exec(HESTIA_CMD . "v-ext-modules-run passenger_manager get_rubys json", $output, $return_var);
+	$rubys = json_decode(implode("", $output), true);
+	unset($output);
+	if ($return_var != 0){
+		$passenger_state = "disabled";
+	} else {
+		$ruby_domain = quoteshellarg($v_domain);
+		exec(HESTIA_CMD . "v-ext-modules-run passenger_manager get_user_ruby " . $ruby_domain . " json", $output, $return_var);
+		$domain_ruby = json_decode(implode("", $output), true);
+		unset($output);
+		if ($return_var != 0){
+			$passenger_state = "disabled";
+		} else {
+			if (trim($domain_ruby[0]["RUBY"]) != ""){
+				$ruby_enabled = true;
+			}
+		}
+	}
+}
+
 // Check POST request
 if (!empty($_POST["save"])) {
 	$v_domain = $_POST["v_domain"];
@@ -194,6 +223,50 @@ if (!empty($_POST["save"])) {
 	// Change web domain IP
 	$v_newip = "";
 	$v_newip_public = "";
+
+	$changed_ruby = false;
+	$ruby_tpl = "default";
+
+	// Save ruby setting for domain
+	if (!empty($_POST["v_passenger_enabled"])){
+		$v_ruby_path = $_POST["v_ruby_path"];
+		$v_ruby_log = !empty($_POST["v_passenger_logging"])?"on":"off";
+		if ($v_ruby_path != $domain_ruby[0]["RUBY"] || $v_ruby_log != $domain_ruby[0]["LOG"]){
+			exec(HESTIA_CMD . "v-ext-modules-run passenger_manager set_user_ruby " . quoteshellarg($v_domain) . " ". quoteshellarg($v_ruby_path) . " ". $v_ruby_log, $output, $return_var);
+			check_return_code($return_var, $output);
+			$restart_web = "yes";
+			$restart_proxy = "yes";
+			unset($output);
+			$changed_ruby = true;
+			$ruby_tpl = "passenger";
+		}
+	} else {
+		if ($passenger_state == "enabled"){
+			if ($domain_ruby[0]["RUBY"] != ""){
+				exec(HESTIA_CMD . "v-ext-modules-run passenger_manager disable_user " . quoteshellarg($v_domain), $output, $return_var);
+				check_return_code($return_var, $output);
+				$restart_web = "yes";
+				$restart_proxy = "yes";
+				unset($output);
+				$changed_ruby = true;
+			}
+		}
+	}
+
+	if ($changed_ruby == true){
+		exec(HESTIA_CMD . "v-update-web-domain " . 
+				$user .
+				" " .
+				quoteshellarg($v_domain) . 
+				" " .
+				quoteshellarg($ruby_tpl),
+				$output, $return_var);
+		check_return_code($return_var, $output);
+		$restart_web = "yes";
+		$restart_proxy = "yes";
+		unset($output);
+		$changed_ruby = true;
+	}
 
 	if (!empty($_POST["v_ip"])) {
 		$v_newip = $_POST["v_ip"];
@@ -383,6 +456,7 @@ if (!empty($_POST["save"])) {
 		}
 
 		// Delete proxy support
+		if (!$ruby_enabled) {
 		if (
 			!empty($_SESSION["PROXY_SYSTEM"]) &&
 			!empty($v_proxy) &&
@@ -422,6 +496,10 @@ if (!empty($_POST["save"])) {
 				if (!empty($_POST["v_proxy_template"])) {
 					$v_proxy_template = $_POST["v_proxy_template"];
 				}
+				$v_proxy_port = "0";
+				if (!empty($_POST["v_proxy_port"])) {
+					$v_proxy_port = $_POST["v_proxy_port"];
+				}
 				exec(
 					HESTIA_CMD .
 						"v-change-web-domain-proxy-tpl " .
@@ -432,7 +510,9 @@ if (!empty($_POST["save"])) {
 						quoteshellarg($v_proxy_template) .
 						" " .
 						quoteshellarg($ext) .
-						" 'no'",
+						" 'no'" .
+						" " .
+						quoteshellarg($v_proxy_port),
 					$output,
 					$return_var,
 				);
@@ -459,6 +539,9 @@ if (!empty($_POST["save"])) {
 				$ext = str_replace(" ", ",", $ext);
 				$v_proxy_ext = str_replace(",", ", ", $ext);
 			}
+			if (!empty($_POST["v_proxy_port"])) {
+				$v_proxy_port = $_POST["v_proxy_port"];
+			}
 			exec(
 				HESTIA_CMD .
 					"v-add-web-domain-proxy " .
@@ -469,13 +552,16 @@ if (!empty($_POST["save"])) {
 					quoteshellarg($v_proxy_template) .
 					" " .
 					quoteshellarg($ext) .
-					" 'no'",
+					" 'no'" .
+					" " .
+					quoteshellarg($v_proxy_port),
 				$output,
 				$return_var,
 			);
 			check_return_code($return_var, $output);
 			unset($output);
 			$restart_proxy = "yes";
+		}
 		}
 	}
 	// Change aliases

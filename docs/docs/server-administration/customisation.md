@@ -1,58 +1,58 @@
-# Customisation
+# Настройка
 
 ::: warning
-We currently only support changing the layout via CSS. You can customise HTML files and templates, but they **will** be overwritten during updates, so make sure to [set up hooks](#running-commands-before-and-after-updates) to restore your changes after an update.
+В настоящее время мы поддерживаем изменение макета только через CSS. Вы можете настраивать файлы и шаблоны HTML, но они **будут** перезаписаны во время обновлений, поэтому не забудьте [настроить хуки](#running-commands-before-and-after-updates), чтобы восстановить изменения после обновления.
 :::
 
-## Adding a new theme
+## Добавление новой темы
 
-Create a new theme in `/usr/local/hestia/web/css/theme/custom/my_theme.css`
+Создайте новую тему в `/usr/local/hestia/web/css/theme/custom/my_theme.css`
 
 ```css
 .body-login,
 .body-reset {
-	height: auto;
-	padding-top: 10%;
-	background: rgb(231, 102, 194) !important;
-	background: radial-gradient(circle, rgba(231, 102, 197, 1), rgba(174, 43, 177, 1)) !important;
+height: auto;
+padding-top: 10%;
+background: rgb(231, 102, 194) !important;
+background: radiatle-gradient(circle, rgba(231, 102, 197, 1), rgba(174, 43, 177, 1)) !important;
 }
 ```
 
-## Customising a default theme
+## Настройка темы по умолчанию
 
-Changes to default themes are always overwritten during updates. Custom CSS files can be uploaded to `/usr/local/hestia/web/css/custom` in `.css` or `.min.css` format.
+Изменения тем по умолчанию всегда перезаписываются во время обновлений. Пользовательские файлы CSS можно загрузить в `/usr/local/hestia/web/css/custom` в формате `.css` или `.min.css`.
 
-Please note that `default.css` base theme is always loaded. Other default and custom themes override the rules in this file.
+Обратите внимание, что базовая тема `default.css` всегда загружается. Другие темы по умолчанию и пользовательские темы переопределяют правила в этом файле.
 
-## Customising the _Domain not found_ page
+## Настройка страницы _Домен не найден_
 
-The _Domain not found_ page is located in `/var/www/html/index.html`. You can edit it using the following command:
+Страница _Домен не найден_ находится в `/var/www/html/index.html`. Вы можете отредактировать его с помощью следующей команды:
 
 ```bash
 nano /var/www/html/index.html
 ```
 
-## Customising the default domain skeleton structure
+## Настройка структуры скелета домена по умолчанию
 
-The default structure that will be added to a domain when it gets created is located in `/usr/local/hestia/data/templates/web/skel/public_html`.
+Структура по умолчанию, которая будет добавлена ​​к домену при его создании, находится в `/usr/local/hestia/data/templates/web/skel/public_html`.
 
-## Running commands before and after updates
+## Выполнение команд до и после обновлений
 
-With the release of Hestia 1.4.6 we have added pre-install and post-install hooks. For example, you can use hooks to:
+С выпуском Hestia 1.4.6 мы добавили предустановочные и послеустановочные хуки. Например, вы можете использовать хуки для:
 
-- Disable and enable demo mode before and after an update.
-- Restore a customised skeleton page.
+- Отключения и включения демонстрационного режима до и после обновления.
+- Восстановления настроенной страницы скелета.
 
-Hooks are located in one of the following files:
+Хуки находятся в одном из следующих файлов:
 
 - `/etc/hestiacp/hooks/pre_install.sh`
 - `/etc/hestiacp/hooks/post_install.sh`
 
 ::: tip
-Don’t forget to make the file executable by running `chmod +x /etc/hestiacp/hooks/[file].sh`.
+Не забудьте сделать файл исполняемым, выполнив `chmod +x /etc/hestiacp/hooks/[file].sh`.
 :::
 
-For example, to disable demo mode on pre-install:
+Например, чтобы отключить демонстрационный режим при предварительной установке:
 
 ```bash /etc/hestiacp/hooks/pre_install.sh
 #!/bin/bash
@@ -60,5 +60,5 @@ sed -i "s|^DEMO_MODE=.*'|DEMO_MODE='no'|g" $HESTIA/conf/hestia.conf
 ```
 
 ::: warning
-If you use custom error documents you will have to rebuild all websites again!
+Если вы используете пользовательские документы ошибок, вам придется пересобрать все веб-сайты заново!
 :::

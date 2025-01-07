@@ -193,6 +193,7 @@ prepare_web_domain_values() {
 	fi
 	group="$user"
 	docroot="$HOMEDIR/$user/web/$domain/public_html"
+	docrtpriv="$HOMEDIR/$user/web/$domain/private"
 	sdocroot="$docroot"
 	if [ "$SSL_HOME" = 'single' ]; then
 		sdocroot="$HOMEDIR/$user/web/$domain/public_shtml"
@@ -254,9 +255,24 @@ prepare_web_domain_values() {
 	fi
 }
 
+convert_proxy_ngix_internal_redirect(){
+    proxy_port="$1"
+    if [[ "$proxy_port" =~ ^[0-9]+$ ]];then
+        echo "localhost:${proxy_port}"
+        return 0
+    fi
+    if [[ "$proxy_port" =~ ^/ ]];then
+        echo "unix:${proxy_port}"
+        return 0
+    fi
+    echo "localhost:9999"
+    return 1
+}
+
 # Add web config
 add_web_config() {
 	# Check if folder already exists
+	TPLNM="$2"
 	if [ "$1" = "httpd" ]; then
 		confd="conf.h.d"
 	else
@@ -267,8 +283,30 @@ add_web_config() {
 		mkdir -p "$HOMEDIR/$user/conf/web/$domain/"
 	fi
 
+	PASS_TPL=""
+	if [[ "$TPLNM" =~ ^passenger ]]; then
+		#Passenger generator
+		if [ -e /usr/local/hestia/bin/v-ext-modules ]; then
+			res=$(/usr/local/hestia/bin/v-ext-modules state passenger_manager csv | tail -n 1 | /usr/bin/xargs | cut -d"," -f6 )
+			if [ -n "$res" ]; then
+				enabled=$(echo "$res" | grep enabled)
+				if [ -n "$enabled" ]; then
+					RUBY_RES=$(/usr/local/hestia/bin/v-ext-modules-run passenger_manager get_user_ruby "$domain" csv | tail -n1 | /usr/bin/xargs | cut -d"," -f1)
+					RUBY_RES_LOG=$(/usr/local/hestia/bin/v-ext-modules-run passenger_manager get_user_ruby "$domain" csv | tail -n1 | /usr/bin/xargs | cut -d"," -f2)
+					if [ -n "$RUBY_RES" ]; then
+						pass_tpl_dir=$(/usr/local/hestia/bin/v-ext-modules-run passenger_manager get_tpl_path | tail -n1 | /usr/bin/xargs)
+						if [ -n "$pass_tpl_dir" ]; then
+							pass_tpl_dir=${pass_tpl_dir%/}
+							PASS_TPL="$pass_tpl_dir"
+						fi
+					fi
+				fi
+			fi
+		fi
+	fi
+
 	conf="$HOMEDIR/$user/conf/web/$domain/$1.conf"
-	if [[ "$2" =~ stpl$ ]]; then
+	if [[ "$TPLNM" =~ stpl$ ]]; then
 		conf="$HOMEDIR/$user/conf/web/$domain/$1.ssl.conf"
 	fi
 
@@ -277,17 +315,21 @@ add_web_config() {
 
 	WEBTPL_LOCATION="$WEBTPL/$1"
 	if [ "$1" != "$PROXY_SYSTEM" ] && [ -n "$WEB_BACKEND" ] && [ -d "$WEBTPL_LOCATION/$WEB_BACKEND" ]; then
-		if [ -f "$WEBTPL_LOCATION/$WEB_BACKEND/$2" ]; then
+		if [ -f "$WEBTPL_LOCATION/$WEB_BACKEND/$TPLNM" ]; then
 			# check for backend specific template
 			WEBTPL_LOCATION="$WEBTPL/$1/$WEB_BACKEND"
 		fi
+	fi
+
+	if [[ "$TPLNM" =~ ^passenger ]] && [ -n "$PASS_TPL" ]; then
+		WEBTPL_LOCATION="$PASS_TPL"
 	fi
 
 	# Note: Removing or renaming template variables will lead to broken custom templates.
 	#   -If possible custom templates should be automatically upgraded to use the new format
 	#   -Alternatively a depreciation period with proper notifications should be considered
 
-	cat "${WEBTPL_LOCATION}/$2" \
+	cat "${WEBTPL_LOCATION}/$TPLNM" \
 		| sed -e "s|%ip%|$local_ip|g" \
 			-e "s|%domain%|$domain|g" \
 			-e "s|%domain_idn%|$domain_idn|g" \
@@ -315,14 +357,31 @@ add_web_config() {
 			-e "s|%ssl_pem%|$ssl_pem|g" \
 			-e "s|%ssl_ca_str%|$ssl_ca_str|g" \
 			-e "s|%ssl_ca%|$ssl_ca|g" \
+			-e "s|%docrtpriv%|$docrtpriv|g" \
 			> $conf
+	
+	if [ "$TPLNM" == "srvproxy.tpl" -o "$TPLNM" == "srvproxy.stpl" ];then
+		proxy_backend_port_internal=$(convert_proxy_ngix_internal_redirect "$3")
+		cat "$conf" \
+		| sed -e "s|%proxy_backend_srv_port%|$proxy_backend_port_internal|g" \
+			> $conf.tmp
+		mv -f ${conf}.tmp $conf
+	fi
+
+	if [[ "$TPLNM" =~ ^passenger ]] && [ -n "$PASS_TPL" ]; then
+		cat "$conf" \
+		| sed -e "s|%rubypath%|$RUBY_RES|g" \
+			-e "s|%rubylog%|$RUBY_RES_LOG|g" \
+			> $conf.tmp
+		mv -f ${conf}.tmp $conf
+	fi
 
 	process_http2_directive "$conf"
 
 	chown root:$user $conf
 	chmod 640 $conf
 
-	if [[ "$2" =~ stpl$ ]]; then
+	if [[ "$TPLNM" =~ stpl$ ]]; then
 		rm -f /etc/$1/$confd/domains/$domain.ssl.conf
 		ln -s $conf /etc/$1/$confd/domains/$domain.ssl.conf
 
@@ -360,7 +419,7 @@ add_web_config() {
 		done
 	fi
 
-	trigger="${2/.*pl/.sh}"
+	trigger="${TPLNM/.*pl/.sh}"
 	if [ -x "${WEBTPL_LOCATION}/$trigger" ]; then
 		$WEBTPL_LOCATION/$trigger \
 			$user $domain $local_ip $HOMEDIR \

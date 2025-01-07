@@ -6,41 +6,31 @@ titleTemplate: Open-source web server control panel.
 
 hero:
   name: Hestia Control Panel
-  text: Open-source web server control panel
-  tagline: Fast, reliable, open-source. The control panel you’ve always wanted is just a command away.
+  text: Панель управления сервером
+  tagline: Для RPM based ОС. Быстрая, надежная, с открытым исходным кодом. Панель управления, о которой вы всегда мечтали, находится всего в нескольких шагах.
   image:
     src: /logo.svg
     alt: Hestia Logo
   actions:
     - theme: brand
-      text: Get started
+      text: Начало работы
       link: /docs/introduction/getting-started
     - theme: alt
-      text: Try the demo
-      link: https://demo.hestiacp.com:8083/
+      text: RPM версия
+      link: https://dev.brepo.ru/bayrepo/hestiacp
     - theme: alt
-      text: View on GitHub
+      text: Оригинальная панель для Debian/Ubuntu
       link: https://github.com/hestiacp/hestiacp
 
 features:
   - icon: 🚀
-    title: Fast & easy to learn
-    details: Hestia is made with ease of use in mind. Creating a user or a website is as easy as clicking a button and filling out a couple of fields, while advanced features are easily accessible.
+    title: Быстро и легко обучиться
+    details: Hestia создана с учетом простоты использования. Создать пользователя или веб-сайт так же просто, как нажать кнопку и заполнить пару полей, при этом расширенные функции легко доступны.
     link: /docs/introduction/getting-started
-    linkText: Documentation
-  - icon: ❤️
-    title: Made with love & pride
-    details: Hestia is open-source software that is built by passionate people from around the world. This means that the code is reviewed by multiple people and that anybody can contribute to it!
-    link: /team
-    linkText: See the team
+    linkText: Документация
   - icon: 🛠️
-    title: Extendable & powerful
-    details: Hestia is extendable while being easy to learn. You can build your own themes, web templates, quick install applications and can interact with it using third party software via its API.
+    title: Мощная и расширяемая
+    details: Hestia расширяема и проста в освоении. Вы можете создавать свои собственные темы, веб-шаблоны, быстро устанавливать приложения и взаимодействовать с ней с помощью программного обеспечения сторонних производителей через ее API.
     link: /docs/contributing/development
-    linkText: Help develop Hestia
-  - icon: 🤝
-    title: Supported by the community
-    details: Hestia has a great support community - join the forum! To keep the project running, we rely on donations, which can be made via PayPal or cryptocurrency.
-    link: /donate
-    linkText: Donate
+    linkText: Помощь в разработке Hestia
 ---

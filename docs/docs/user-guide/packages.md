@@ -1,124 +1,125 @@
-# Packages
+# Пакеты
 
-To manage packages, log in as an **administrator** and navigate to the **Users <i class="fas fa-fw fa-users"></i>** tab.
+Чтобы управлять пакетами, войдите в систему как **администратор** и перейдите на вкладку **Пользователи <i class="fas fa-fw fa-users"></i>**.
 
-## Adding a new package
+## Добавление нового пакета
 
-1. Click the **<i class="fas fa-fw fa-plus-circle"></i> Add Package** button.
-2. Fill out the form. When clicking on <i class="fas fa-fw fa-infinity"><span class="visually-hidden">unlimited</span></i> icon, the limits will be set to unlimited.
-3. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
+1. Нажмите кнопку **<i class="fas fa-fw fa-plus-circle"></i> Добавить пакет**.
 
-## Copying a package
+2. Заполните форму. При нажатии на значок <i class="fas fa-fw fa-infinity"><span class="visually-hidden">неограниченный</span></i> лимиты будут установлены на неограниченный.
+3. Нажмите кнопку **<i class="fas fa-fw fa-save"></i> Сохранить** в правом верхнем углу.
 
-1. Hover over the package you want to copy.
-2. Click the <i class="fas fa-fw fa-clone"><span class="visually-hidden">copy</span></i> icon on the right of the package name.
+## Копирование пакета
 
-## Editing a package
+1. Наведите указатель мыши на пакет, который вы хотите скопировать.
+2. Щелкните значок <i class="fas fa-fw fa-clone"><span class="visually-hidden">копировать</span></i> справа от имени пакета.
 
-::: info
-The **system** package can’t be edited or renamed.
-:::
-
-1. Hover over the package you want to edit.
-2. Click the <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">edit</span></i> icon on the right of the package name.
-
-## Deleting a package
+## Редактирование пакета
 
 ::: info
-The **system** package can’t be deleted.
+Пакет **system** нельзя редактировать или переименовывать.
 :::
 
-1. Hover over the package you want to delete.
-2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> icon on the right of the package name.
+1. Наведите указатель мыши на пакет, который вы хотите редактировать.
+2. Щелкните значок <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">редактировать</span></i> справа от имени пакета.
 
-## Importing existing packages from a different server
-
-Packages are stored in `/usr/local/hestia/data/packages` as `package-name.pkg`. Simply copy these package files to other servers.
-
-## Package configuration
+## Удаление пакета
 
 ::: info
-Some options may not be available depending on your setup.
+Пакет **system** нельзя удалить.
 :::
 
-### Quota
+1. Наведите указатель мыши на пакет, который вы хотите удалить.
+2. Щелкните значок <i class="fas fa-fw fa-trash"><span class="visually-hidden">удалить</span></i> справа от имени пакета.
 
-Total available storage space including the websites, email accounts, databases and the home folder. If you have enabled **File Quotas** during install or in the server settings, this value enforces the quota limit on websites, email accounts and the home folder. Databases are excluded.
+## Импорт существующих пакетов с другого сервера
 
-### Bandwidth
+Пакеты хранятся в `/usr/local/hestia/data/packages` как `package-name.pkg`. Просто скопируйте эти файлы пакетов на другие серверы.
 
-Allocated bandwidth. Only outgoing traffic over web is accounted for.
+## Конфигурация пакета
 
-There’s currently no methods of auto-suspending available.
+::: info
+Некоторые параметры могут быть недоступны в зависимости от ваших настроек.
+:::
 
-### Backups
+### Квота
 
-Maximum number of backups that can be stored.
+Общее доступное пространство для хранения, включая веб-сайты, учетные записи электронной почты, базы данных и домашнюю папку. Если вы включили **Квоты файлов** во время установки или в настройках сервера, это значение устанавливает ограничение квоты на веб-сайты, учетные записи электронной почты и домашнюю папку. Базы данных исключаются.
 
-## Web domains
+### Пропускная способность
 
-### Web domains
+Выделенная пропускная способность. Учитывается только исходящий трафик через Интернет.
 
-Maximum number of web domains that can be created.
+В настоящее время нет доступных методов автоматической приостановки.
 
-### Aliases
+### Резервные копии
 
-Maximum number of aliases that can be added per domain.
+Максимальное количество резервных копий, которые можно сохранить.
 
-### Proxy Template
+## Веб-домены
 
-Default proxy template for created domains.
+### Веб-домены
 
-### Web Template
+Максимальное количество веб-доменов, которые можно создать.
 
-Default web template for created domains.
+### Псевдонимы
+
+Максимальное количество псевдонимов, которые можно добавить на домен.
+
+### Шаблон прокси-сервера
+
+Шаблон прокси-сервера по умолчанию для созданных доменов.
+
+### Веб-шаблон
+
+Шаблон веб-сервера по умолчанию для созданных доменов.
 
 ## DNS
 
-### DNS Template
+## Шаблон DNS
 
-Default DNS template that get assigned on domain creation.
+Шаблон DNS по умолчанию, который назначается при создании домена.
 
-### DNS Domains
+### Домены DNS
 
-Maximum number of DNS domains that can be created.
+Максимальное количество доменов DNS, которые можно создать.
 
-### DNS records
+### Записи DNS
 
-Maximum number of DNS records that can be added per domain.
+Максимальное количество записей DNS, которые можно добавить на домен.
 
-### Name Servers
+### Серверы имен
 
-Default name servers to be used by the user. Up to 8 different name servers can be added.
+Серверы имен по умолчанию, которые должен использовать пользователь. Можно добавить до 8 различных серверов имен.
 
-## Mail
+## Почта
 
-### Mail Domains
+### Почтовые домены
 
-Maximum number of mail domains that can be created.
+Максимальное количество почтовых доменов, которые можно создать.
 
-### Mail accounts
+### Почтовые аккаунты
 
-Maximum number of mail accounts that can be added per domain.
+Максимальное количество почтовых аккаунтов, которые можно добавить на домен.
 
-### Rate limit
+### Ограничение скорости
 
-Maximum number of emails that accounts can send per hour.
+Максимальное количество писем, которые аккаунты могут отправлять в час.
 
-## Databases
+## Базы данных
 
-Maximum number of databases that can be created.
+Максимальное количество баз данных, которые можно создать.
 
-## System
+## Система
 
-### Cron jobs
+### Задания Cron
 
-Maximum number of cron jobs that can be created.
+Максимальное количество заданий cron, которые можно создать.
 
-### Shell access
+### Доступ к оболочке
 
-Select the shell that will be shown to the user when logging in via SSH.
+Выберите оболочку, которая будет показана пользователю при входе через SSH.
 
 ::: warning
-When set to `nologin`, SSH access is disabled but SFTP access is still allowed.
+Если установлено значение `nologin`, доступ по SSH отключен, но доступ по SFTP по-прежнему разрешен.
 :::

@@ -1,34 +1,35 @@
-# Databases
+# Базы данных
 
-To manage your databases, navigate to the **DB <i class="fas fa-fw fa-database"></i>** tab.
+Чтобы управлять базами данных, перейдите на вкладку **DB <i class="fas fa-fw fa-database"></i>**.
 
-## Adding a database
+## Добавление базы данных
 
-1. Click the **<i class="fas fa-fw fa-plus-circle"></i> Add Database** button.
-2. Fill out the fields. The name and username will be prefixed with `user_`.
-3. Optionally, provide an email address where the login details will be sent.
-4. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
+1. Нажмите кнопку **<i class="fas fa-fw fa-plus-circle"></i> Добавить базу данных**.
 
-Under **Advanced Options**, you are able to select the host (`localhost` by default) and charset (`utf8` by default).
+2. Заполните поля. Имя и имя пользователя будут иметь префикс `user_`.
+3. При желании укажите адрес электронной почты, на который будут отправлены данные для входа.
+4. Нажмите кнопку **<i class="fas fa-fw fa-save"></i> Сохранить** в правом верхнем углу.
 
-## Editing a database
+В разделе **Дополнительные параметры** вы можете выбрать хост (`localhost` по умолчанию) и кодировку (`utf8` по умолчанию).
 
-1. Hover over the database you want to edit.
-2. Click the <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">edit</span></i> icon on the right of the database’s name. If you don’t want to change the password, keep the password field empty.
+## Редактирование базы данных
 
-## Accessing a database
+1. Наведите указатель мыши на базу данных, которую хотите отредактировать.
+2. Щелкните значок <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">редактировать</span></i> справа от имени базы данных. Если вы не хотите менять пароль, оставьте поле пароля пустым.
 
-By default, **phpMyAdmin** and **phpPgAdmin** are accessible at `https://hostname.domain.tld/phpmyadmin` and `https://hostname.domain.tld/phppgadmin` respectively. You can also click the **<i class="fas fa-fw fa-database"></i> phpMyAdmin** and **<i class="fas fa-fw fa-database"></i> phpPgAdmin** buttons in the **DB <i class="fas fa-fw fa-database"></i>** tab.
+## Доступ к базе данных
 
-For MySQL databases, if **phpMyAdmin Single Sign On** is enabled, hovering a database will show an <i class="fas fa-fw fa-sign-in-alt"><span class="visually-hidden">phpMyAdmin</span></i> icon. Click it to login to **phpMyAdmin** directly.
+По умолчанию **phpMyAdmin** и **phpPgAdmin** доступны по адресу `https://hostname.domain.tld/phpmyadmin` и `https://hostname.domain.tld/phppgadmin` соответственно. Вы также можете нажать кнопки **<i class="fas fa-fw fa-database"></i> phpMyAdmin** и **<i class="fas fa-fw fa-database"></i> phpPgAdmin** на вкладке **DB <i class="fas fa-fw fa-database"></i>**.
 
-## Suspending a database
+Для баз данных MySQL, если включен **phpMyAdmin Single Sign On**, при наведении на базу данных будет отображаться значок <i class="fas fa-fw fa-sign-in-alt"><span class="visually-hidden">phpMyAdmin</span></i>. Щелкните его, чтобы войти в **phpMyAdmin** напрямую.
 
-1. Hover over the database you want to suspend.
-2. Click the <i class="fas fa-fw fa-pause"><span class="visually-hidden">suspend</span></i> icon on the right of the database’s name.
-3. To unsuspend it, click the <i class="fas fa-fw fa-play"><span class="visually-hidden">unsuspend</span></i> icon on the right of the database’s name.
+## Приостановка базы данных
 
-## Deleting a database
+1. Наведите указатель мыши на базу данных, которую вы хотите приостановить.
+2. Щелкните значок <i class="fas fa-fw fa-pause"><span class="visually-hidden">suspend</span></i> справа от имени базы данных.
+3. Чтобы разблокировать ее, щелкните значок <i class="fas fa-fw fa-play"><span class="visually-hidden">unsuspend</span></i> справа от имени базы данных.
 
-1. Hover over the database you want to delete.
-2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> icon on the right of the database’s name. Both the database user and the database will get deleted.
+## Удаление базы данных
+
+1. Наведите указатель мыши на базу данных, которую вы хотите удалить.
+2. Щелкните значок <i class="fas fa-fw fa-trash"><span class="visually-hidden">удалить</span></i> справа от имени базы данных. Будут удалены как пользователь базы данных, так и сама база данных.

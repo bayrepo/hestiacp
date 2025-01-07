@@ -13,7 +13,7 @@ title: Install
 
 <InstallPage>
   <InstallPageTitle>
-	<template #title>Install</template>
+	<template #title>Генератор установочной команды</template>
   </InstallPageTitle>
   <InstallOptionsSection>
   	<template #list>

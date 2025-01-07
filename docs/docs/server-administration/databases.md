@@ -1,125 +1,126 @@
-# Database & phpMyAdmin SSO
+# База данных и phpMyAdmin SSO
 
-## How to setup a remote database server
+## Как настроить удаленный сервер базы данных
 
-1. It is assumed you already have your second server up and running.
-2. On your Hestia server run the following command (`mysql` may be replaced by `postgresql`):
+1. Предполагается, что у вас уже есть второй сервер, который работает.
+2. На сервере Hestia выполните следующую команду (`mysql` можно заменить на `postgresql`):
 
 ```bash
 v-add-database-host mysql new-server.com root password
 ```
 
-To make sure the host has been added, run the following command:
+Чтобы убедиться, что хост добавлен, выполните следующую команду:
 
 ```bash
 v-list-database-hosts
 ```
 
-## Why I can’t use `http://ip/phpmyadmin/`
+## Почему я не могу использовать `http://ip/phpmyadmin/`
 
-For security reasons, we have decided to disable this option. Please use `https://host.domain.tld/phpmyadmin/` instead.
+В целях безопасности мы решили отключить эту опцию. Вместо этого используйте `https://host.domain.tld/phpmyadmin/`.
 
-## How can I enable access to `http://ip/phpmyadmin/`
+## Как включить доступ к `http://ip/phpmyadmin/`
 
-### For Apache2
+### Для Apache2
 
 ```bash
 nano /etc/apache2/conf.d/ip.conf
 
-# Add the following code before both </VirtualHost> closing tags
+# Добавьте следующий код перед обоими закрывающимися тегами </VirtualHost>
 IncludeOptional /etc/apache2/conf.d/*.inc
 
-# Restart apache2
+# Перезапустите apache2
 systemctl restart apache2
 
-# You can also add the following in /etc/apache2.conf instead
+# Вы также можете добавить следующее в /etc/apache2.conf вместо этого
 IncludeOptional /etc/apache2/conf.d/*.inc
 ```
 
-### For httpd
+### Для httpd
 
 ```bash
 nano /etc/httpd/conf.h.d/ip.conf
 
-# Add the following code before both </VirtualHost> closing tags
+# Добавьте следующий код перед обоими закрывающимися тегами </VirtualHost>
 IncludeOptional /etc/httpd/conf.h.d/*.inc
 
-# Restart apache2
+# Перезапустите apache2
 systemctl restart httpd
 
-# You can also add the following in /etc/apache2.conf instead
+# Вы также можете добавить следующее в /etc/apache2.conf вместо этого
 IncludeOptional /etc/httpd/conf.h.d/*.inc
 ```
 
-### For Nginx
+### Для Nginx
 
 ```bash
 nano /etc/nginx/conf.d/ip.conf
 
-# Replace the following
+# Замените следующее
 location /phpmyadmin/ {
-  alias /var/www/document_errors/;
-  return 404;
+alias /var/www/document_errors/;
+return 404;
 }
 location /phppgadmin/ {
-  alias /var/www/document_errors/;
-  return 404;
+alias /var/www/document_errors/;
+return 404;
 }
 
-# With the following
-include     /etc/nginx/conf.d/phpmyadmin.inc*;
-include     /etc/nginx/conf.d/phppgadmin.inc*;
+# На следующее
+include /etc/nginx/conf.d/phpmyadmin.inc*;
+include /etc/nginx/conf.d/phppgadmin.inc*;
 ```
 
-## How can I connect from a remote location to the database
+## Как подключиться из удаленного расположения к базе данных
 
-By default, connections to port 3306 are disabled in the firewall. Open
-port 3306 in the firewall ([documentation](./firewall.md)), then edit `/etc/mysql/mariadb.conf.d/50-server.cnf`:
+По умолчанию соединения с портом 3306 отключены в брандмауэре. Откройте
+порт 3306 в брандмауэре ([документация](./firewall.md)), затем отредактируйте `/etc/mysql/mariadb.conf.d/50-server.cnf`:
 
 ```bash
 nano /etc/mysql/mariadb.conf.d/50-server.cnf
 
-# Set bind-address to one of the following
+# Установите bind-address на одно из следующих значений
 bind-address = 0.0.0.0
 bind-address = "your.server.ip.address"
 ```
 
 ## PhpMyAdmin Single Sign On
 
-### Unable to activate phpMyAdmin Single Sign on
+### Не удалось активировать phpMyAdmin Single Sign on
 
-Make sure the API is enabled and working properly. Hestia’s PhpMyAdmin Single Sign On function connects over the Hestia API.
+Убедитесь, что API включен и работает правильно. Функция единого входа PhpMyAdmin Hestia подключается через API Hestia.
 
-### When clicking the phpMyAdmin Single Sign On button, I am forwarded to the login page of phpMyAdmin
+### При нажатии кнопки единого входа phpMyAdmin я перенаправляюсь на страницу входа в phpMyAdmin
 
-Automated can sometimes cause issues. Login via SSH and open `/var/log/{webserver}/domains/{hostname.domain.tld.error.log` and look for one of the following error messages:
+Иногда автоматизация может вызывать проблемы. Войдите через SSH и откройте `/var/log/{webserver}/domains/{hostname.domain.tld.error.log` и найдите одно из следующих сообщений об ошибке:
 
-- `Unable to connect over API, please check API connection`
-  1. Check if the api has been enabled.
-  2. Add the public IP of your server to the allowed IPs in the **Server settings**.
-- `Access denied: There is a security token mismatch`
-  1. Disable and then enable the phpMyAdmin SSO. This will refresh both keys.
-  2. If you are behind a firewall or proxy, you may want to disable it and try again.
-- `Link has expired`
-  1. Refresh the database page and try again.
+- `Невозможно подключиться через API, проверьте подключение API`
 
-## Remote databases
+1. Проверьте, включен ли API.
+2. Добавьте публичный IP вашего сервера в разрешенные IP в **Настройках сервера**.
+- `Отказано в доступе: несоответствие токена безопасности`
+1. Отключите и снова включите единый вход phpMyAdmin. Это обновит оба ключа.
+2. Если вы находитесь за брандмауэром или прокси-сервером, вы можете отключить его и повторить попытку.
+- `Срок действия ссылки истек`
+1. Обновите страницу базы данных и повторите попытку.
 
-If needed you can simply host Mysql or Postgresql on a remote server.
+## Удаленные базы данных
 
-To add a remote database:
+При необходимости вы можете просто разместить Mysql или Postgresql на удаленном сервере.
+
+Чтобы добавить удаленную базу данных:
 
 ```bash
 v-add-database-host TYPE HOST DBUSER DBPASS [MAX_DB] [CHARSETS] [TPL] [PORT]
 ```
 
-For example:
+Например:
 
 ```bash
 v-add-database-host mysql db.hestiacp.com root mypassword 500
 ```
 
-If you want you can setup phpMyAdmin on the host server to allow to connect to the database. Create a copy of `01-localhost` file in /etc/phpmyadmin/conf.d and change:
+Если хотите, вы можете настроить phpMyAdmin на хост-сервере, чтобы разрешить подключение к базе данных. Создайте копию файла `01-localhost` в /etc/phpmyadmin/conf.d и измените:
 
 ```php
 $cfg["Servers"][$i]["host"] = "localhost";
@@ -130,6 +131,6 @@ $cfg["Servers"][$i]["controlpass"] = "random password";
 $cfg["Servers"][$i]["bookmarktable"] = "pma__bookmark";
 ```
 
-Please make sure to create aswell the phpmyadmin user and database.
+Обязательно создайте также пользователя и базу данных phpmyadmin.
 
-See `/usr/local/hestia/install/deb/phpmyadmin/pma.sh`
+См. `/usr/local/hestia/install/deb/phpmyadmin/pma.sh`

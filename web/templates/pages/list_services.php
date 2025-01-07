@@ -27,6 +27,9 @@
 			>
 				<i class="fas fa-arrow-rotate-left icon-red"></i><?= _("Restart") ?>
 			</a>
+			<a href="/list/extmodules/" class="button button-secondary">
+				<i class="fas fa-hashtag icon-lightblue"></i><?= _("ExtModules") ?>
+			</a>
 		</div>
 		<div class="toolbar-right">
 			<form x-data x-bind="BulkEdit" action="/bulk/service/" method="post">

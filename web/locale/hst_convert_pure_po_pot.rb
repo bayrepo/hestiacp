@@ -103,6 +103,13 @@ else
       else
         if msgid_id == ""
           msgid_tmp += line
+        else
+          if line.strip != ""
+            post_msgid[msgid_id] << line
+          else
+            msgid_id = ""
+            msgid_tmp = ""
+          end
         end
       end
     end
@@ -132,8 +139,10 @@ else
           if post_msgid[msgid_id].nil?
             f.puts line
           else
-            post_msgid[msgid_id].each do |item|
-              f.puts item
+            if msgid_id.strip.gsub("\n", "") != "\"\""
+              post_msgid[msgid_id].each do |item|
+                f.puts item
+              end
             end
           end
         end

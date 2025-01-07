@@ -53,6 +53,7 @@ export default function handleEditWebListeners() {
 	// show "Purge Nginx Cache" button if "caching" selected
 	const proxyTemplateSelect = document.querySelector('.js-proxy-template-select');
 	const clearCacheButton = document.querySelector('.js-clear-cache-button');
+	const proxyConnect = document.querySelector('.js-proxy-connect')
 	if (proxyTemplateSelect && clearCacheButton) {
 		proxyTemplateSelect.addEventListener('change', () => {
 			// NOTE: Match "caching" and "caching-*" values
@@ -62,5 +63,17 @@ export default function handleEditWebListeners() {
 				clearCacheButton.classList.add('u-hidden');
 			}
 		});
+	}
+	if (proxyTemplateSelect && proxyConnect) {
+		proxyTemplateSelect.addEventListener('change', () => {
+			if (proxyTemplateSelect.value === "srvproxy") {
+				proxyConnect.style.display = 'block';
+			} else {
+				proxyConnect.style.display = 'none';
+			}
+		});
+	}
+	if (proxyTemplateSelect.value === "srvproxy") {
+		proxyConnect.style.display = 'block';
 	}
 }

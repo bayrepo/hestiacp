@@ -1,129 +1,144 @@
-# Web Domains
+# Веб-домены
 
-To manage your web domains, navigate to the **Web <i class="fas fa-fw fa-globe-americas"></i>** tab.
+Чтобы управлять веб-доменами, перейдите на вкладку **Веб <i class="fas fa-fw fa-globe-americas"></i>**.
 
-## Adding a web domain
+## Добавление веб-домена
 
-1. Click the **<i class="fas fa-fw fa-plus-circle"></i> Add Web Domain** button.
-2. Enter the domain name in the **Domain** field.
-   - If you wish to manage this domain’s DNS in Hestia, check the box labeled **Create DNS zone**
-   - If you wish to enable mail for this domain, check the box labeled **Enable mail for this domain**.
-3. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
+1. Нажмите кнопку **<i class="fas fa-fw fa-plus-circle"></i> Добавить веб-домен**.
 
-## Installing an app
+2. Введите доменное имя в поле **Домен**.
+- Если вы хотите управлять DNS этого домена в Hestia, установите флажок **Создать зону DNS**
+- Если вы хотите включить почту для этого домена, установите флажок **Включить почту для этого домена**.
 
-1. Click the domain name or the <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">edit</span></i> icon that appears on hover.
-2. Click the **<i class="fas fa-fw fa-magic"></i> Quick install App** button in the top right.
-3. Select the application you want to install and click the **Setup** button.
-4. Fill out the fields. If the app uses a database, you will have the option to auto-create a database or use an existing one.
-5. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
+3. Нажмите кнопку **<i class="fas fa-fw fa-save"></i> Сохранить** в правом верхнем углу.
 
-::: warning
-Depending on the application you chose to install, this can take 30 seconds or longer. Do not reload or close the tab!
-:::
+## Установка приложения
 
-## Editing a web domain
-
-1. Click the domain name or the <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">edit</span></i> icon that appears on hover.
-2. Make your changes. The options are explained below.
-3. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
-
-## Viewing access and error logs
-
-1. Hover over the domain whose logs you want to view.
-2. Click the <i class="fas fa-fw fa-binoculars"><span class="visually-hidden">logs</span></i> icon.
-3. At the top of the page, you have the possibility to download the logs or view the error logs instead.
-
-## Suspending a web domain
-
-1. Hover over the domain you want to suspend.
-2. Click the <i class="fas fa-fw fa-pause"><span class="visually-hidden">suspend</span></i> icon on the right of the web domain.
-
-## Deleting a web domain
-
-1. Hover over the domain you want to delete.
-2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete user</span></i> icon on the right of the web domain. **Both** the web domain and the linked FTP accounts will get deleted.
-
-## Web domain configuration
-
-### Enabling statistics
-
-1. Chose **awstats** in the selection boxed labelled **Web Statistics**.
-2. If desired, enter a username and password.
-3. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
-4. Navigate to `https://domain.tld/vstats/` to view the stats.
-
-### Managing redirections
-
-1. Check the **Enable domain redirection** box.
-2. Select the option you want. When selecting **Redirect visitors to a custom domain or web address** you have to option to select the HTTP status code (301 by default).
+1. Щелкните имя домена или значок <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">редактирования</span></i>, который появляется при наведении.
+2. Щелкните кнопку **<i class="fas fa-fw fa-magic"></i> Быстрая установка приложения** в правом верхнем углу.
+3. Выберите приложение, которое хотите установить, и щелкните кнопку **Настройка**.
+4. Заполните поля. Если приложение использует базу данных, у вас будет возможность автоматически создать базу данных или использовать существующую.
+5. Щелкните кнопку **<i class="fas fa-fw fa-save"></i> Сохранить** в правом верхнем углу.
 
 ::: warning
-If your domain is an [internationalized domain name (IDN)](https://en.wikipedia.org/wiki/Internationalized_domain_name) containing special characters, even if you select `www.domain.tld` or `domain.tld`, it will convert the domain to [punycode](https://en.wikipedia.org/wiki/Punycode) and select **Redirect visitors to a custom domain or web address**.
+В зависимости от выбранного вами приложения для установки это может занять 30 секунд или больше. Не перезагружайте и не закрывайте вкладку!
 :::
 
-### Enabling SSL
+## Редактирование веб-домена
 
-1. Check the **Enable SSL for this domain** box.
-2. Check the **Use Let’s Encrypt to obtain SSL certificate** box to use Let’s Encrypt.
-3. Depending on your requirements, you can enable **Enable automatic HTTPS redirection** or **Enable HTTP Strict Transport Security (HSTS)**.
-4. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
+1. Щелкните имя домена или значок <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">редактирования</span></i>, который появляется при наведении.
+2. Внесите изменения. Ниже описаны параметры.
+3. Щелкните кнопку **<i class="fas fa-fw fa-save"></i> Сохранить** в правом верхнем углу.
 
-If you want to use your own SSL certificate you can enter the SSL certificate in the text area.
+## Просмотр журналов доступа и ошибок
 
-If you are having issues with enabling Let’s Encrypt, please refer to our [SSL certificates](../server-administration/ssl-certificates.md) documentation.
+1. Наведите указатель мыши на домен, журналы которого вы хотите просмотреть.
+2. Щелкните значок <i class="fas fa-fw fa-binoculars"><span class="visually-hidden">журналов</span></i>.
+3. В верхней части страницы у вас есть возможность загрузить журналы или просмотреть журналы ошибок.
 
-### Changing PHP version
+## Приостановка веб-домена
+
+1. Наведите указатель мыши на домен, который вы хотите приостановить.
+2. Нажмите значок <i class="fas fa-fw fa-pause"><span class="visually-hidden">приостановить</span></i> справа от веб-домена.
+
+## Удаление веб-домена
+
+1. Наведите указатель мыши на домен, который вы хотите удалить.
+2. Нажмите значок <i class="fas fa-fw fa-trash"><span class="visually-hidden">удалить пользователя</span></i> справа от веб-домена. **Будут удалены** веб-домен и связанные учетные записи FTP.
+
+## Конфигурация веб-домена
+
+### Включение статистики
+
+1. Выберите **awstats** в поле выбора с надписью **Веб-статистика**.
+2. При желании введите имя пользователя и пароль.
+3. Нажмите кнопку **<i class="fas fa-fw fa-save"></i> Сохранить** в правом верхнем углу.
+4. Перейдите на `https://domain.tld/vstats/`, чтобы просмотреть статистику.
+
+### Управление перенаправлениями
+
+1. Отметьте поле **Включить перенаправление домена**.
+
+2. Выберите нужный параметр. При выборе **Перенаправлять посетителей на пользовательский домен или веб-адрес** у вас есть возможность выбрать код статуса HTTP (по умолчанию 301).
+
+::: warning
+Если ваш домен — это [интернационализированное доменное имя (IDN)](https://en.wikipedia.org/wiki/Internationalized_domain_name), содержащее специальные символы, даже если вы выберете `www.domain.tld` или `domain.tld`, он преобразует домен в [punycode](https://en.wikipedia.org/wiki/Punycode) и выберите **Перенаправлять посетителей на пользовательский домен или веб-адрес**.
+
+:::
+
+### Включение SSL
+
+1. Установите флажок **Включить SSL для этого домена**.
+
+2. Установите флажок **Использовать Let’s Encrypt для получения сертификата SSL**, чтобы использовать Let’s Encrypt.
+3. В зависимости от ваших требований вы можете включить **Включить автоматическое перенаправление HTTPS** или **Включить HTTP Strict Transport Security (HSTS)**.
+4. Нажмите кнопку **<i class="fas fa-fw fa-save"></i> Сохранить** в правом верхнем углу.
+
+Если вы хотите использовать собственный сертификат SSL, вы можете ввести его в текстовое поле.
+
+Если у вас возникли проблемы с включением Let’s Encrypt, обратитесь к нашей документации [SSL-сертификаты](../server-administration/ssl-certificates.md).
+
+### Изменение версии PHP
 
 ::: info
-This option is not always available. It may be disabled in the server settings. Please contact your server administrator for more information.
+Эта опция не всегда доступна. Она может быть отключена в настройках сервера. За дополнительной информацией обратитесь к администратору сервера.
+
 :::
 
-1. Select the desired PHP version in the **Backend Template** field.
+1. Выберите нужную версию PHP в поле **Шаблон бэкенда**.
 
-### Using a different root directory
+### Использование другого корневого каталога
 
-1. Check the **Custom document root** box.
-2. Select the domain name where you want this domain to point.
-3. Select the path. For example, `/public/` will link to `/home/user/web/domain.tld/public_html/public/`.
+1. Установите флажок **Пользовательский корень документа**.
 
-### Additional FTP accounts
+2. Выберите доменное имя, на которое должен указывать этот домен.
 
-1. Check the **Additional FTP accounts** box.
-2. Enter a username and a password (or generate one). The username will be prefixed by `user_`.
-3. Enter the path the account will be able to access.
-4. Optionally, provide an email address where the login details will be sent.
+3. Выберите путь. Например, `/public/` будет ссылаться на `/home/user/web/domain.tld/public_html/public/`.
 
-To add another FTP account, click the **Add FTP account** button, then click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
+### Дополнительные учетные записи FTP
 
-To delete an FTP account, click the **DELETE** link on the right of its name, then click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
+1. Установите флажок **Дополнительные учетные записи FTP**.
 
-To change the password, update the password field, then click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
+2. Введите имя пользователя и пароль (или сгенерируйте его). Имя пользователя будет иметь префикс `user_`.
 
-### Proxy templates
+3. Введите путь, к которому учетная запись сможет получить доступ.
+
+4. При желании укажите адрес электронной почты, на который будут отправлены данные для входа.
+
+Чтобы добавить еще одну учетную запись FTP, нажмите кнопку **Добавить учетную запись FTP**, затем нажмите кнопку **<i class="fas fa-fw fa-save"></i> Сохранить** в правом верхнем углу.
+
+Чтобы удалить учетную запись FTP, нажмите ссылку **УДАЛИТЬ** справа от ее имени, затем нажмите кнопку **<i class="fas fa-fw fa-save"></i> Сохранить** в правом верхнем углу.
+
+Чтобы измените пароль, обновите поле пароля, затем нажмите кнопку **<i class="fas fa-fw fa-save"></i> Сохранить** в правом верхнем углу.
+
+### Шаблоны прокси
 
 ::: info
-Depending on the server setup, this option may not be available.
+В зависимости от настроек сервера эта опция может быть недоступна.
 :::
 
-- **default**: All purpose template. Suitable for most usecases.
-- **caching**: Template with proxy cache enabled. Suitable for mostly static content, for example: blogs or news websites.
-- **hosting**: Similar to default.
+- **default**: универсальный шаблон. Подходит для большинства случаев использования.
+- **caching**: шаблон с включенным кэшем прокси. Подходит для большинства статичных материалов, например: блогов или новостных сайтов.
+- **hosting**: аналогично default.
 
-Any custom templates will also show up here.
+Здесь также будут отображаться любые пользовательские шаблоны.
+
+- **srvproxy**: шаблон для конфигурации прокси для любого внутреннего сервиса, например gitea, который запускается и присоединеятся к порту или создает unix-сокет. При выборе данного шаблона, появляется дополнительное поле `Установить порт для локального сервиса`, в котором нужно указать путь к unix-сокету или порт внутреннего сервиса. В качестве шаблона Backend в данном случае можно выбрать `no-php`, т.к. в данном случае бакэндом будет сервис.
+
+![domain_proxy](/images/proxy_domain.png)
 
 ::: tip
-Any custom templates starting with `caching-` will allow the use of the **<i class="fas fa-fw fa-trash"></i> Purge Nginx Cache** button. Make sure a `.sh` file exists for `caching-my-template` with at least [this content](https://github.com/hestiacp/hestiacp/blob/main/install/deb/templates/web/nginx/caching.sh)
+Любые пользовательские шаблоны, начинающиеся с `caching-`, позволят использовать кнопку **<i class="fas fa-fw fa-trash"></i> Очистить кэш Nginx**. Убедитесь, что файл `.sh` существует для `caching-my-template` с как минимум [этим содержимым](https://dev.brepo.ru/bayrepo/hestiacp/raw/branch/master/install/rpm/templates/web/nginx/caching.sh)
 :::
 
-### Web templates
+### Веб-шаблоны
 
-For servers running Apache2 and Nginx, the **default** template will work fine.
+Для серверов, работающих под управлением Apache2 и Nginx, подойдет шаблон **default**.
 
-For servers running Nginx only, pick the template matching the app name you are going to use.
+Для серверов, работающих только под управлением Nginx, выберите шаблон, соответствующий имени приложения, которое вы собираетесь использовать.
 
-### Managing Nginx caching
+### Управление кэшированием Nginx
 
-When Nginx caching is enabled (using FastCGI cache or with a caching-enabled template), you can purge the cache via the **<i class="fas fa-fw fa-trash"></i> Purge Nginx Cache** button.
+Когда включено кэширование Nginx (с использованием кэша FastCGI или с шаблоном с поддержкой кэширования), вы можете очистить кэш с помощью кнопки **<i class="fas fa-fw fa-trash"></i> Очистить кэш Nginx**.
 
-When using Nginx only, you can enable FastCGI caching using the **Enable FastCGI Cache** box. When checked, an option is shown to determine for how long the cache is considered valid.
+При использовании только Nginx вы можете включить кэширование FastCGI с помощью поля **Включить кэш FastCGI**. Если этот флажок установлен, отображается опция, позволяющая определить, в течение какого времени кэш считается действительным.

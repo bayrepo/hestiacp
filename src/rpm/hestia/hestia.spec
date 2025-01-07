@@ -2,8 +2,8 @@
 %global _hardened_build 1
 
 Name:              hestia
-Version:           1.8.5
-Release:           1%{dist}.bayrepo.1
+Version:           1.9.3
+Release:           1%{dist}
 Summary:           Hestia Control Panel
 Group:             System Environment/Base
 License:           GPLv3
@@ -27,9 +27,17 @@ Requires:          zstd
 Requires:          jq
 Requires:          util-linux-user
 Requires:          hestiacp-php-selector
+Requires:          alt-brepo-ruby33
+Requires:          alt-brepo-ruby33-libs
+Requires:          alt-brepo-ruby33-rubygems
+Requires:          alt-brepo-ruby33-rubygem-rake
+Requires:          alt-brepo-ruby33-rubygem-bundler
 Requires(post):    systemd
 Requires(preun):   systemd
 Requires(postun):  systemd
+Requires:          ruby
+Requires:          puppet
+Requires:          puppet-stdlib
 
 Provides:          hestia = %{version}-%{release}
 Conflicts:         redhat-release < 8
@@ -129,9 +137,6 @@ if [ -e "/usr/local/hestia/data/users/admin" ]; then
     # Upgrade Roundcube if applicable
     upgrade_roundcube | tee -a $LOG
 
-    # Upgrade PHPMailer if applicable
-    upgrade_phpmailer | tee -a $LOG
-
     # Update Cloudflare IPs if applicable
     upgrade_cloudflare_ip | tee -a $LOG
 
@@ -179,6 +184,18 @@ fi
 %{_tmpfilesdir}/%{name}.conf
 
 %changelog
+* Sun Jan 05 2025 Alexey Berezhok <a@bayrepo.ru> - 1.9.3-1
+- Added minor fixes
+- Added authorization fix for rhel 9.5
+
+* Mon Dec 30 2024 Alexey Berezhok <a@bayrepo.ru> - 1.9.1-1
+- Added port specification ofor local services on domain editing
+- Added support extended modules
+- Added support passenger with nginx and ruby
+
+* Thu Sep 05 2024 Alexey Berezhok <a@bayrepo.ru> - 1.8.6-1
+- Fixed firewall rules restoring on system reboot
+
 * Fri Aug 30 2024 Alexey Berezhok <a@bayrepo.ru> - 1.8.5-1.bayrepo.1
 - Added php cli selector support
 - Move mo/po files local

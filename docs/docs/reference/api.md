@@ -1,36 +1,36 @@
 # API
 
 ::: info
-This page is work in progress. A lot of information will be missing.
+Эта страница находится в разработке. Много информации будет отсутствовать.
 :::
 
-## Examples
+## Примеры
 
-Examples can be found in a separate [repo](https://github.com/hestiacp/hestiacp-api-examples).
+Примеры можно найти в отдельном [репозитории](https://dev.brepo.ru/brepo/hestiacp-api-examples).
 
-## Upgrading from username/password authentication to access/secret keys
+## Обновление с аутентификации по имени пользователя/паролю на доступ/секретные ключи
 
-Replace the following code:
+Замените следующий код:
 
 ```php
-// Prepare POST query
+// Подготовка запроса POST
 $postvars = [
-	"user" => $hst_username,
-	"password" => $hst_password,
-	"returncode" => $hst_returncode,
-	"cmd" => $hst_command,
-	"arg1" => $username,
+"user" => $hst_username,
+"password" => $hst_password,
+"returncode" => $hst_returncode,
+"cmd" => $hst_command,
+"arg1" => $username,
 ];
 ```
 
-With the following:
+С помощью следующего:
 
 ```php
-// Prepare POST query
+// Подготовить запрос POST
 $postvars = [
-	"hash" => "access_code:secret_code",
-	"returncode" => $hst_returncode,
-	"cmd" => $hst_command,
-	"arg1" => $username,
+"hash" => "access_code:secret_code",
+"returncode" => $hst_returncode,
+"cmd" => $hst_command,
+"arg1" => $username,
 ];
 ```

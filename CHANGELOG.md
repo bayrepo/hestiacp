@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.9.2.rpm] - Alpha release
+
+- Forked from 1.8.6 alpha and reworked for rpm based systems support
+- Added passenger support (https://hestiadocs.brepo.ru/docs/extensions/extended-modules.html#passenger-manager)
+- Added unified proxy templates support (https://hestiadocs.brepo.ru/docs/user-guide/web-domains.html#шаблоны-прокси)
+- Added php-cli-selector (https://hestiadocs.brepo.ru/docs/extensions/php-cli-selector.html#php-cli-selector)
+- Added alternative extensions support (https://hestiadocs.brepo.ru/docs/extensions/php-cli-selector.html#php-cli-selector)
+- Added russian documentation (https://hestiadocs.brepo.ru/docs/introduction/getting-started.html)
+
+## [1.8.6] - Alpha release
+
+- Added rpm systems support
+- Added MSVSphere support
+- Added php cli selector
+
 ## [1.8.2] - Service release
 
 - Added more files to default proxy extensions (#3768)

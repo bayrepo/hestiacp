@@ -1,121 +1,116 @@
-# Server configuration
+# Конфигурация сервера
 
-## I am not able to login
+## Я не могу войти
 
-For installing dependencies we use Composer. As are currently not able
-to run it under hestia-php version. We install it via /usr/bin/php. Make
-sure proc_open is allowed in the main php version. In the future we look
-in methods to allow install via composer via hestia-php.
+Для установки зависимостей мы используем Composer. Поскольку в настоящее время мы не можем запустить его под версией hestia-php. Мы устанавливаем его через /usr/bin/php. Убедитесь, что proc_open разрешен в основной версии php. В будущем мы рассмотрим методы, позволяющие установку через composer через hestia-php.
 
-## Where can I find more information about the config files?
+## Где я могу найти более подробную информацию о файлах конфигурации?
 
-A good starting point for every software is to check the official docs:
+Хорошей отправной точкой для любого программного обеспечения является проверка официальной документации:
 
-- For Nginx: [NGINX Docs](https://nginx.org/en/docs/)
-- For Apache2: [Apache Docs](http://httpd.apache.org/docs/2.4/)
-- For PHP-FPM: [PHP Docs](https://www.php.net/manual/en/install.fpm.configuration.php)
+- Для Nginx: [NGINX Docs](https://nginx.org/en/docs/)
+- Для Apache2: [Apache Docs](http://httpd.apache.org/docs/2.4/)
+- Для PHP-FPM: [PHP Docs](https://www.php.net/manual/en/install.fpm.configuration.php)
 
-You could also try [our Forum](https://forum.hestiacp.com)
+## Могу ли я использовать HestiaCP за Cloudflare CDN?
 
-## Can I use HestiaCP behind Cloudflare CDN?
-
-By default the [Cloudflare Proxy](https://developers.cloudflare.com/fundamentals/get-started/reference/network-ports/) supports only a limited number of ports. This means that Cloudflare will not forward port 8083, which is the default port for Hestia. To change the Hestia port to one that Cloudflare will forward, run this command:
+По умолчанию [Cloudflare Proxy](https://developers.cloudflare.com/fundamentals/get-started/reference/network-ports/) поддерживает только ограниченное количество портов. Это означает, что Cloudflare не будет перенаправлять порт 8083, который является портом по умолчанию для Hestia. Чтобы изменить порт Hestia на тот, который будет перенаправлять Cloudflare, выполните следующую команду:
 
 ```bash
 v-change-sys-port 2083
 ```
 
-You can also disable Cloudflare proxy feature.
+Вы также можете отключить функцию прокси-сервера Cloudflare.
 
-## How to remove unused ethernet ports from RRD?
+## Как удалить неиспользуемые порты Ethernet из RRD?
 
 ```bash
 nano /usr/local/hestia/conf/hestia.conf
 ```
 
-Add the following line:
+Добавьте следующую строку:
 
 ```bash
 RRD_IFACE_EXCLUDE='lo'
 ```
 
-Add network ports as comma separated list
+Добавьте сетевые порты в виде списка, разделенного запятыми
 
 ```bash
 rm /usr/local/hestia/web/rrd/net/*
 systemctl restart hestia
 ```
 
-## What does the “Enforce subdomain ownership” policy mean?
+## Что означает политика «Принудительное владение поддоменом»?
 
-In Hestia <=1.3.5 and Vesta, it was possible for users to create subdomains from domains that were owned by other users. For example, user Bob could create `bob.alice.com`, even if `alice.com` is owned by Alice. This could cause security issues and therefor we have decided to add a policy to control this behaviour. By default, the policy is enabled.
+В Hestia <=1.3.5 и Vesta пользователи могли создавать поддомены из доменов, которыми владели другие пользователи. Например, пользователь Боб может создать `bob.alice.com`, даже если `alice.com` принадлежит Алисе. Это может вызвать проблемы безопасности, поэтому мы решили добавить политику для управления этим поведением. По умолчанию политика включена.
 
-You can tweak the policy for a specific domain and user, for example for a domain that has been used for testing:
+Вы можете настроить политику для определенного домена и пользователя, например, для домена, который использовался для тестирования:
 
 ```bash
-# to enable
+# для включения
 v-add-web-domain-allow-users user domain.tld
-# to disable
+# для отключения
 v-delete-web-domain-allow-users user domain.tld
 ```
 
-## Can I restrict access to the `admin` account?
+## Могу ли я ограничить доступ к учетной записи `admin`?
 
-In Hestia 1.3, we have made it possible to give another user Administrator access. In 1.4, we have given system administrators the option to limit access to the main **System Administrator** account to improve security.
+В Hestia 1.3 мы сделали возможным предоставление другому пользователю прав администратора. В 1.4 мы предоставили системным администраторам возможность ограничить доступ к основной учетной записи **Системного администратора** для повышения безопасности.
 
-## My server IP has changed, what do I need to do?
+## Мой IP-адрес сервера изменился, что мне нужно сделать?
 
-When a server IP changes, you need to run the following command, which will rebuild all config files:
+При изменении IP-адреса сервера необходимо выполнить следующую команду, которая перестроит все файлы конфигурации:
 
 ```bash
 v-update-sys-ip
 ```
 
-## Unable to bind address
+## Невозможно привязать адрес
 
-In rare cases the network service might be slower than Apache2 and or Nginx. In that case, Nginx or Apache2 will refuse to successfully start. You can verify that this is the case by looking at the service’s status:
+В редких случаях сетевая служба может работать медленнее, чем Apache2 и/или Nginx. В этом случае Nginx или Apache2 откажутся успешно запуститься. Вы можете убедиться в этом, посмотрев на статус службы:
 
 ```bash
 systemctl status nginx
 
-# Output
-nginx: [emerg] bind to x.x.x.x:80 failed (99: cannot assign requested address)
+# Вывод
+nginx: [emerg] bind to x.x.x.x:80 failed (99: cannot assign asked address)
 ```
 
-Or, in case of Apache2:
+Или, в случае Apache2:
 
 ```bash
 systemctl status httpd
 
-# Output
-(99)Cannot assign requested address: AH00072: make_sock: could not bind to address x.x.x.x:8443
+# Вывод
+(99)Cannot assign asked address: AH00072: make_sock: couldn't bind to address x.x.x.x:8443
 ```
 
-The following command should allow services to assign to non existing IP addresses:
+Следующая команда должна разрешить службам назначать несуществующие IP-адреса:
 
 ```bash
 sysctl -w net.ipv4.ip_nonlocal_bind=1
 ```
 
-## I am unable to monitor processes with Zabbix
+## Я не могу отслеживать процессы с помощью Zabbix
 
-For security reasons, users are not allowed to monitor processes from other users by default.
+Из соображений безопасности пользователям по умолчанию не разрешено отслеживать процессы других пользователей.
 
-To solve the issue if you use monitoring via Zabbix, edit `/etc/fstab` and modify it to the following, then reboot the server or remount `/proc`:
+Чтобы решить проблему, если вы используете мониторинг через Zabbix, отредактируйте `/etc/fstab` и измените его следующим образом, затем перезагрузите сервер или перемонтируйте `/proc`:
 
 ```bash
 proc /proc proc defaults,hidepid=2,gid=zabbix 0 0
 ```
 
-## Error: 24: Too many open files
+## Ошибка: 24: Слишком много открытых файлов
 
-If you see an error similar to this:
+Если вы видите ошибку, похожую на эту:
 
 ```bash
 2022/02/21 15:04:38 [emerg] 51772#51772: open() "/var/log/apache2/domains/domain.tld.error.log" failed (24: Too many open files)
 ```
 
-It means that there are too many open files with Nginx. To resolve this issue, edit the Nginx daemon config, then reload the daemons by running `systemctl daemon-reload`:
+Это означает, что слишком много открытых файлов с Nginx. Чтобы решить эту проблему, отредактируйте конфигурацию демона Nginx, затем перезагрузите демоны, выполнив `systemctl daemon-reload`:
 
 ```bash
 # /etc/systemd/system/nginx.service.d/override.conf
@@ -123,14 +118,14 @@ It means that there are too many open files with Nginx. To resolve this issue, e
 LimitNOFILE=65536
 ```
 
-Add this to the Nginx config file (Needs to be smaller or equal to `LimitNOFILE`)
+Добавьте это в файл конфигурации Nginx (должен быть меньше или равен `LimitNOFILE`)
 
 ```bash
 # /etc/nginx/nginx.conf
 worker_rlimit_nofile 16384
 ```
 
-Restart Nginx with `systemctl restart nginx`, and verify the new limits by running:
+Перезапустите Nginx с помощью `systemctl restart nginx` и проверьте новые ограничения, выполнив:
 
 ```bash
 cat /proc/ < nginx-pid > /limits.

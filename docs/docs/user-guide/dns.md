@@ -1,101 +1,108 @@
 # DNS
 
-To manage your DNS zones and records, navigate to the **DNS <i class="fas fa-fw fa-atlas"></i>** tab.
+Чтобы управлять зонами и записями DNS, перейдите на вкладку **DNS <i class="fas fa-fw fa-atlas"></i>**.
 
-## Adding a DNS zone
+## Добавление зоны DNS
 
-1. Click the **<i class="fas fa-fw fa-plus-circle"></i> Add DNS Zone** button.
-2. Enter the domain name in the **Domain** field.
-   - Choose the appropriate template for the zone.
-   - If the domain requires different name servers, change them in the **Advanced Options** section.
-3. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
+1. Нажмите кнопку **<i class="fas fa-fw fa-plus-circle"></i> Добавить зону DNS**.
 
-## Editing a DNS zone
+2. Введите доменное имя в поле **Домен**.
+- Выберите подходящий шаблон для зоны.
+- Если для домена требуются другие серверы имен, измените их в разделе **Дополнительные параметры**.
 
-1. Hover over the zone you want to edit.
-2. Click the <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">edit</span></i> icon on the right of the zone’s domain.
-3. Make the desired changes.
-4. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
+3. Нажмите кнопку **<i class="fas fa-fw fa-save"></i> Сохранить** в правом верхнем углу.
 
-## Viewing DNSSEC public keys
+## Редактирование зоны DNS
 
-1. Hover over the zone whose DNSSEC keys you want to see.
-2. Click the <i class="fas fa-fw fa-key"><span class="visually-hidden">DNSSEC</span></i> icon on the right of the zone’s domain.
+1. Наведите указатель мыши на зону, которую хотите изменить.
+2. Щелкните значок <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">редактирования</span></i> справа от домена зоны.
 
-## Suspending a DNS zone
+3. Внесите необходимые изменения.
 
-1. Hover over the zone you want to suspend.
-2. Click the <i class="fas fa-fw fa-pause"><span class="visually-hidden">suspend</span></i> icon on the right of the zone’s domain.
-3. To unsuspend it, click the <i class="fas fa-fw fa-play"><span class="visually-hidden">unsuspend</span></i> icon on the right of the zone’s domain.
+4. Щелкните кнопку **<i class="fas fa-fw fa-save"></i> сохранения** в правом верхнем углу.
 
-## Deleting a DNS zone
+## Просмотр открытых ключей DNSSEC
 
-1. Hover over the zone you want to delete.
-2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> icon on the right of the zone’s domain.
+1. Наведите указатель мыши на зону, ключи DNSSEC которой вы хотите увидеть.
+2. Щелкните значок <i class="fas fa-fw fa-key"><span class="visually-hidden">DNSSEC</span></i> справа от домена зоны.
 
-## DNS zone configuration
+## Приостановка зоны DNS
 
-### IP address
+1. Наведите указатель мыши на зону, которую вы хотите приостановить.
+2. Щелкните значок <i class="fas fa-fw fa-pause"><span class="visually-hidden">suspend</span></i> справа от домена зоны.
 
-IP address that should be used for the root domain.
+3. Чтобы отменить приостановку, щелкните значок <i class="fas fa-fw fa-play"><span class="visually-hidden">unsuspend</span></i> справа от домена зоны.
 
-### Template
+## Удаление зоны DNS
 
-- **default**: Standard DNS template. Suitable for most usecases.
-- **default-nomail**: Standard DNS template. Suitable for most usecases when you don’t want to host mail on Hestia.
-- **gmail**: When your email provider is Google Workspace.
-- **office365**: When your email provider is Microsoft 365 (Exchange).
-- **zoho**: When your email provider is Zoho.
-- **child-ns**: When you are going to use the domain as a name server.
+1. Наведите указатель мыши на зону, которую хотите удалить.
 
-### Expiration date
+2. Щелкните значок <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> справа от домена зоны.
 
-This date is not used by Hestia, but can be used as a reminder.
+## Конфигурация зоны DNS
+
+### IP-адрес
+
+IP-адрес, который следует использовать для корневого домена.
+
+### Шаблон
+
+- **default**: Стандартный шаблон DNS. Подходит для большинства вариантов использования.
+- **default-nomail**: Стандартный шаблон DNS. Подходит для большинства вариантов использования, когда вы не хотите размещать почту на Hestia.
+- **gmail**: Когда ваш поставщик электронной почты — Google Workspace.
+- **office365**: Когда ваш поставщик электронной почты — Microsoft 365 (Exchange).
+- **zoho**: Когда ваш поставщик электронной почты — Zoho.
+- **child-ns**: Когда вы собираетесь использовать домен в качестве сервера имен.
+
+### Дата истечения срока действия
+
+Эта дата не используется Hestia, но может использоваться в качестве напоминания.
 
 ### SOA
 
-A Start of Authority (SOA) record includes administrative information about your zone, as defined by the domain name system (DNS).
+Запись начала полномочий (SOA) включает административную информацию о вашей зоне, как определено системой доменных имен (DNS).
 
 ### TTL
 
-Adjust the default time-to-live. A shorter TTL means faster changes, but results in more requests to the server. If you are going to change the IP, it might be helpful to decrease it to 300 seconds (5 min).
+Настройте время жизни по умолчанию. Более короткий TTL означает более быстрые изменения, но приводит к большему количеству запросов к серверу. Если вы собираетесь изменить IP, может быть полезно уменьшить его до 300 секунд (5 мин).
 
 ### DNSSEC
 
-Enable DNSSEC to improve security. However, this setting requires some changes to at your domain registrar before it is active. For more information, see the [DNS cluster](../server-administration/dns.md) documentation.
+Включите DNSSEC для повышения безопасности. Однако этот параметр требует некоторых изменений у вашего регистратора домена, прежде чем он станет активным. Для получения дополнительной информации см. документацию [DNS-кластера](../server-administration/dns.md).
 
-## Adding a DNS record to a zone
+## Добавление записи DNS в зону
 
-1. Click the **<i class="fas fa-fw fa-plus-circle"></i> Add Record** button.
-2. Fill out the fields.
-3. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
+1. Нажмите кнопку **<i class="fas fa-fw fa-plus-circle"></i> Добавить запись**.
 
-## Editing a DNS record
+2. Заполните поля.
+3. Нажмите кнопку **<i class="fas fa-fw fa-save"></i> Сохранить** в правом верхнем углу.
 
-1. Click the recordor the <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">edit</span></i> icon that appears on hover.
-2. Make the desired changes.
-3. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
+## Редактирование записи DNS
 
-## Suspending a DNS record
+1. Щелкните запись или значок <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">редактирования</span></i>, который появляется при наведении.
+2. Внесите необходимые изменения.
+3. Щелкните кнопку **<i class="fas fa-fw fa-save"></i> Сохранить** в правом верхнем углу.
 
-1. Hover over the record you want to suspend.
-2. Click the <i class="fas fa-fw fa-pause"><span class="visually-hidden">suspend</span></i> icon on the right of the record’s domain.
-3. To unsuspend it, click the <i class="fas fa-fw fa-play"><span class="visually-hidden">unsuspend</span></i> icon on the right of the record’s domain.
+## Приостановка записи DNS
 
-## Deleting a DNS record
+1. Наведите указатель мыши на запись, которую хотите приостановить.
+2. Щелкните значок <i class="fas fa-fw fa-pause"><span class="visually-hidden">приостановки</span></i> справа от домена записи.
+3. Чтобы разблокировать ее, нажмите значок <i class="fas fa-fw fa-play"><span class="visually-hidden">разблокировать</span></i> справа от домена записи.
 
-1. Hover over the record you want to delete.
-2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> icon on the right of the record’s domain.
+## Удаление записи DNS
 
-## DNS record configuration
+1. Наведите указатель мыши на запись, которую хотите удалить.
+2. Нажмите значок <i class="fas fa-fw fa-trash"><span class="visually-hidden">удалить</span></i> справа от домена записи.
 
-### Record
+## Конфигурация записи DNS
 
-The record name. `record`.domain.tld. Use `@` for root.
+### Запись
 
-### Type
+Имя записи. `record`.domain.tld. Используйте `@` для root.
 
-The following record types are supported:
+### Тип
+
+Поддерживаются следующие типы записей:
 
 - A
 - AAAA
@@ -112,14 +119,14 @@ The following record types are supported:
 - TLSA
 - TXT
 
-### IP or value
+### IP или значение
 
-IP or value of the record you want to use.
+IP или значение записи, которую вы хотите использовать.
 
-### Priority
+### Приоритет
 
-Priority of the record. Only used for MX records
+Приоритет записи. Используется только для записей MX
 
 ### TTL
 
-Adjust the default time-to-live. A shorter TTL means faster changes, but results in more requests to the server. If you are going to change the IP, it might be helpful to decrease it to 300 seconds (5 min).
+Настройте время жизни по умолчанию. Более короткий TTL означает более быстрые изменения, но приводит к большему количеству запросов к серверу. Если вы собираетесь изменить IP, может быть полезно уменьшить его до 300 секунд (5 мин).

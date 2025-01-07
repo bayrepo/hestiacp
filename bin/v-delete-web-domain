@@ -146,6 +146,18 @@ if [[ $BACKEND =~ ^.*PHP-([0-9])\_([0-9])$ ]]; then
 else
 	version=$(multiphp_default_version)
 fi
+
+# Delete ruby if exists
+if [ -e /usr/local/hestia/bin/v-ext-modules ]; then
+	res=$(/usr/local/hestia/bin/v-ext-modules state passenger_manager csv | tail -n 1 | /usr/bin/xargs | cut -d"," -f6 )
+	if [ -n "$res" ]; then
+		enabled=$(echo "$res" | grep enabled)
+		if [ -n "$enabled" ]; then
+			/usr/local/hestia/bin/v-ext-modules-run passenger_manager disable_user "$domain"
+		fi
+	fi
+fi
+
 # Restarting web server
 $BIN/v-restart-web "$restart"
 check_result $? "Web restart failed" > /dev/null

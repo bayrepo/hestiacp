@@ -1,0 +1,152 @@
+#!/opt/brepo/ruby33/bin/ruby
+# info: action with extended modules
+# options: COMMAND [COMMAND_OPTION | FORMAT] [FORMAT]
+#
+# example: v-ext-modules list json
+#
+# This function enables and disables additional modules
+
+#----------------------------------------------------------#
+#                Variables & Functions                     #
+#----------------------------------------------------------#
+
+# Argument definition
+v_command = ARGV[0]
+v_ext_option = ARGV[1]
+v_format = ARGV[2]
+
+require "/usr/local/hestia/func_ruby/global_options"
+
+load_ruby_options_defaults
+$HESTIA = load_hestia_default_path_from_env
+
+require "main"
+require "modules"
+
+hestia_check_privileged_user
+
+load_global_bash_variables "/etc/hestiacp/hestia.conf"
+if $HESTIA.nil?
+  hestia_print_error_message_to_cli "Can't find HESTIA base path"
+  exit 1
+end
+
+load_global_bash_variables "#{$HESTIA}/conf/hestia.conf"
+
+#----------------------------------------------------------#
+#                    Verifications                         #
+#----------------------------------------------------------#
+
+check_args 1, ARGV, "COMMAND [COMMAND_OPTION] [ACTION]"
+
+# Perform verification if read-only mode is enabled
+check_hestia_demo_mode
+
+#----------------------------------------------------------#
+#                       Action                             #
+#----------------------------------------------------------#
+
+case v_command.to_sym
+when :list, :state
+  info = []
+  pm = PluginManager.new
+  if v_command.to_sym == :state
+    if v_ext_option.nil?
+      hestia_print_error_message_to_cli "no module name specified"
+      log_event E_ARGS, $ARGUMENTS
+      exit 1
+    end
+    load_module = v_ext_option.to_s.strip.split(",")[0].to_s.strip
+    pm.load_plugins(nil, load_module)
+  else
+    pm.load_plugins
+  end
+  pm.get_loaded_plugins.each_key do |mod|
+    next if mod == "default"
+
+    inst = pm.get_instance(mod)
+    if inst.key != pm.get_key
+      hestia_print_error_message_to_cli "incorrect module with incorrect rights #{mod}"
+      log_event E_ARGS, $ARGUMENTS
+      exit 1
+    end
+    info_result = inst.info
+    info_result[:STATE] = hestia_ext_module_state_in_conf(info_result[:NAME], :get)
+    info << info_result
+  end
+  result_arr = info.sort do |a, b|
+    if a[:ID] < b[:ID]
+      -1
+    elsif a[:ID] > b[:ID]
+      1
+    else
+      a[:ID] < b[:ID]
+    end
+  end
+  if v_command.to_sym == :state
+    format = (v_format.nil? ? "shell" : v_format.strip)
+  else
+    format = (v_ext_option.nil? ? "shell" : v_ext_option.strip)
+  end
+  hestia_print_array_of_hashes(result_arr, format, "ID, NAME, DESCR, STATE, REQ, CONF")
+when :enable
+  if v_ext_option.nil?
+    hestia_print_error_message_to_cli "no module name specified"
+    log_event E_ARGS, $ARGUMENTS
+    exit 1
+  end
+  pm = PluginManager.new
+  load_module = v_ext_option.to_s.strip.split(",")[0].to_s.strip
+  pm.load_plugins(nil, load_module)
+  if pm.get_loaded_plugins.key? load_module
+    if hestia_ext_module_state_in_conf(load_module, :get) == "disabled"
+      inst = pm.get_instance(load_module)
+      result = inst.enable()
+      if result == ""
+        hestia_ext_module_state_in_conf(load_module, :enable)
+        log_event OK, $ARGUMENTS
+      else
+        hestia_print_error_message_to_cli "module #{load_module} return error #{result}"
+        log_event E_MODULE, $ARGUMENTS
+        exit 1
+      end
+    end
+  else
+    hestia_print_error_message_to_cli "no module with name #{load_module} found"
+    log_event E_INVALID, $ARGUMENTS
+    exit 1
+  end
+when :disable
+  if v_ext_option.nil?
+    hestia_print_error_message_to_cli "no module name specified"
+    log_event E_ARGS, $ARGUMENTS
+    exit 1
+  end
+  pm = PluginManager.new
+  load_module = v_ext_option.to_s.strip.split(",")[0].to_s.strip
+  pm.load_plugins(nil, load_module)
+  if pm.get_loaded_plugins.key? load_module
+    if hestia_ext_module_state_in_conf(load_module, :get) == "enabled"
+      inst = pm.get_instance(load_module)
+      result = inst.disable()
+      if result == ""
+        hestia_ext_module_state_in_conf(load_module, :disable)
+        log_event OK, $ARGUMENTS
+      else
+        hestia_print_error_message_to_cli "module #{load_module} return error #{result}"
+        log_event E_MODULE, $ARGUMENTS
+        exit 1
+      end
+    end
+  else
+    hestia_print_error_message_to_cli "no module with name #{load_module} found"
+    log_event E_INVALID, $ARGUMENTS
+    exit 1
+  end
+else
+  hestia_print_error_message_to_cli "unknown command"
+  log_event E_INVALID, $ARGUMENTS
+  exit 1
+end
+
+exit 0

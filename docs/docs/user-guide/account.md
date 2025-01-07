@@ -1,100 +1,105 @@
-# Account
+# Учетная запись
 
-To access your account settings, click the <i class="fas fa-lg fa-fw fa-user-circle"><span class="visually-hidden">user</span></i> button in the top right.
+Чтобы получить доступ к настройкам учетной записи, нажмите кнопку <i class="fas fa-lg fa-fw fa-user-circle"><span class="visually-hidden">пользователь</span></i> в правом верхнем углу.
 
-## Security
+## Безопасность
 
-### Password
+### Пароль
 
-The password requirements are as follows:
+Требования к паролю следующие:
 
-- At least 8 characters, 14 or more are recommended.
-- At least 1 number.
-- At least 1 capital letter and 1 lowercase letter.
+- Не менее 8 символов, рекомендуется 14 или более.
+- Не менее 1 цифры.
+- Не менее 1 заглавной буквы и 1 строчной буквы.
 
-If you want to generate a secure password, you can use [1Password’s generator](https://1password.com/password-generator/).
+Если вы хотите создать надежный пароль, вы можете использовать [генератор 1Password](https://1password.com/password-generator/).
 
-### Two-factor authentication (2FA)
+### Двухфакторная аутентификация (2FA)
 
-1. In your account settings, check the box labeled **Enable two-factor authentication**.
-2. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
-3. Scan the QR code using an authentication app.
-4. Save your **Account Recovery Code** somewhere safe, in case you lose access to your authenticator.
+1. В настройках учетной записи установите флажок **Включить двухфакторную аутентификацию**.
+2. Нажмите кнопку **<i class="fas fa-fw fa-save"></i> Сохранить** в правом верхнем углу.
 
-::: details Need a 2FA app?
-If you do not have an authenticator app, here are a couple of recommendations.
+3. Отсканируйте QR-код с помощью приложения для аутентификации.
+4. Сохраните свой **Код восстановления учетной записи** в надежном месте на случай, если вы потеряете доступ к своему аутентификатору.
 
-- iCloud Keychain – [Windows](https://9to5mac.com/2022/07/25/icloud-passwords-windows-2fa-code/), [macOS](https://9to5mac.com/2021/11/16/use-safari-password-manager-and-2fa-autofill/), [iOS](https://9to5mac.com/2022/03/07/use-ios-15-2fa-code-generator-plus-autofill-iphone/)
-- [Tofu Authenticator](https://www.tofuauth.com/) – Open-source, iOS only
-- [Aegis Authenticator](https://getaegis.app/) – Open-source, Android only
-- [Raivo OTP](https://github.com/raivo-otp/) – Open-source, iOS and macOS only
+::: details Нужно приложение 2FA?
+Если у вас нет приложения для аутентификации, вот несколько рекомендаций.
+
+- Связка ключей iCloud – [Windows](https://9to5mac.com/2022/07/25/icloud-passwords-windows-2fa-code/), [macOS](https://9to5mac.com/2021/11/16/use-safari-password-manager-and-2fa-autofill/), [iOS](https://9to5mac.com/2022/03/07/use-ios-15-2fa-code-generator-plus-autofill-iphone/)
+- [Tofu Authenticator](https://www.tofuauth.com/) – С открытым исходным кодом, только для iOS
+- [Aegis Authenticator](https://getaegis.app/) – С открытым исходным кодом, только для Android
+- [Raivo OTP](https://github.com/raivo-otp/) – Открытый исходный код, только для iOS и macOS
 - [Google Authenticator](https://googleauthenticator.net/)
 - [Microsoft Authenticator](https://www.microsoft.com/en-ca/security/mobile-authenticator-app)
-- [Authy](https://authy.com/) – Free, has a cloud sync feature
-- [1Password](https://1password.com/) – Paid password manager
-- [Bitwarden](https://bitwarden.com/) – Password manager. 2FA in premium plan only
+- [Authy](https://authy.com/) — бесплатно, есть функция синхронизации с облаком
+- [1Password](https://1password.com/) — платный менеджер паролей
+- [Bitwarden](https://bitwarden.com/) — менеджер паролей. 2FA только в премиум-плане
 
 :::
 
-### Login restrictions
+### Ограничения на вход
 
-Hestia has the following options to help you secure your account:
+Hestia предлагает следующие возможности, которые помогут вам защитить свою учетную запись:
 
-- Disable login into the account.
-- Whitelist your IP address to login into your account.
+- Отключить вход в учетную запись.
+- Добавить свой IP-адрес в белый список для входа в учетную запись.
 
-### Security logs
+### Журналы безопасности
 
-The security logs contain various information, such as: changes to web domains, API access, backup creation, etc. Click the **<i class="fas fa-fw fa-history"></i> Logs** button to view them.
+Журналы безопасности содержат различную информацию, например: изменения в веб-доменах, доступ к API, создание резервных копий и т. д. Нажмите кнопку **<i class="fas fa-fw fa-history"></i> Журналы**, чтобы просмотреть их.
 
-### Login history
+### История входов
 
-On the security logs page, click the **<i class="fas fa-fw fa-binoculars"></i> Login history** button to see the login history. The history contains the time of login, IP address, and user agent of the browser that was used.
+На странице журналов безопасности нажмите кнопку **<i class="fas fa-fw fa-binoculars"></i> История входов**, чтобы просмотреть историю входов. История содержит время входа, IP-адрес и пользовательский агент браузера, который использовался.
 
-## SSH keys
+## Ключи SSH
 
-Click the **<i class="fas fa-fw fa-key"></i> Manage SSH keys** button to view the installed keys.
+Нажмите кнопку **<i class="fas fa-fw fa-key"></i> Управление ключами SSH**, чтобы просмотреть установленные ключи.
 
-### Adding an SSH key
+### Добавление ключа SSH
 
-1. Click the **<i class="fas fa-fw fa-plus-circle"></i> Add SSH key** button.
-2. Copy your public key in the text area.
-3. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
+1. Нажмите кнопку **<i class="fas fa-fw fa-plus-circle"></i> Добавить ключ SSH**.
 
-### Deleting an SSH key
+2. Скопируйте свой открытый ключ в текстовую область.
+3. Нажмите кнопку **<i class="fas fa-fw fa-save"></i> Сохранить** в правом верхнем углу.
 
-1. Hover over the SSH key you want to delete.
-2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> icon on the right of the SSH ID.
+### Удаление ключа SSH
 
-::: details Need to generate a key?
-If you do not have an SSH key, here are a couple of ways to generate one.
+1. Наведите указатель мыши на ключ SSH, который вы хотите удалить.
 
-- For Windows: [Putty](https://www.ssh.com/academy/ssh/putty/windows/puttygen#running-puttygen).
-- For macOS and Linux use `ssh-keygen`.
+2. Нажмите значок <i class="fas fa-fw fa-trash"><span class="visually-hidden">удалить</span></i> справа от идентификатора SSH.
 
-You can also use an app to manage them:
+::: details Нужно сгенерировать ключ?
+Если у вас нет ключа SSH, вот несколько способов его сгенерировать.
+
+- Для Windows: [Putty](https://www.ssh.com/academy/ssh/putty/windows/puttygen#running-puttygen).
+- Для macOS и Linux используйте `ssh-keygen`.
+
+Вы также можете использовать приложение для управления ими:
 
 - [1Password](https://developer.1password.com/docs/ssh/manage-keys/)
 - [Termius](https://www.termius.com/)
 
 :::
 
-## API access keys
+## Ключи доступа API
 
 ::: info
-This option is disabled by default for standard users. An administrator needs to enable it in the server settings.
+Эта опция отключена по умолчанию для обычных пользователей. Администратор должен включить ее в настройках сервера.
 :::
 
-Click the **<i class="fas fa-fw fa-key"></i> Access Keys** button to view the access keys. Access keys are used for the API to autenticate instead of using the username and password.
+Нажмите кнопку **<i class="fas fa-fw fa-key"></i> Ключи доступа**, чтобы просмотреть ключи доступа. Ключи доступа используются для аутентификации API вместо использования имени пользователя и пароля.
 
-### Creating an access key
+### Создание ключа доступа
 
-1. Click the **<i class="fas fa-fw fa-plus-circle"></i> Add Access key** button.
-2. Select the permission sets you want to enable.
-3. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
-4. Copy the access key and the secret key. Make sure to save the secret key somewhere safe as it **cannot** be viewed once the page is closed.
+1. Нажмите кнопку **<i class="fas fa-fw fa-plus-circle"></i> Добавить ключ доступа**.
 
-### Deleting an access key
+2. Выберите наборы разрешений, которые вы хотите включить.
+3. Нажмите кнопку **<i class="fas fa-fw fa-save"></i> Сохранить** в правом верхнем углу.
 
-1. Hover over the access key you want to delete.
-2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> icon on the right of the access key.
+4. Скопируйте ключ доступа и секретный ключ. Обязательно сохраните секретный ключ в надежном месте, так как его **нельзя** просмотреть после закрытия страницы.
+
+### Удаление ключа доступа
+
+1. Наведите указатель мыши на ключ доступа, который вы хотите удалить.
+2. Нажмите значок <i class="fas fa-fw fa-trash"><span class="visually-hidden">удалить</span></i> справа от ключа доступа.

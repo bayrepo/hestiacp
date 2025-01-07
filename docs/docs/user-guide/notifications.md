@@ -1,5 +1,5 @@
-# Notifications
+# Уведомления
 
-To view your notifications, click the <i class="fas fa-lg fa-fw fa-bell"><span class="visually-hidden">notification</span></i> icon in the top right.
+Чтобы просмотреть уведомления, нажмите на значок <i class="fas fa-lg fa-fw fa-bell"><span class="visually-hidden">уведомления</span></i> в правом верхнем углу.
 
-You can dismiss a notification by clicking the small red circle on its right.
+Вы можете отклонить уведомление, нажав на маленький красный кружок справа от него.

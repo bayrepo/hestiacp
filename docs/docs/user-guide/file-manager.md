@@ -1,5 +1,5 @@
-# File Manager
+# Файловый менеджер
 
-To access the file manager, click the **<i class="fas fa-fw fa-folder-open"></i> Files** button in the top left.
+Чтобы получить доступ к файловому менеджеру, нажмите кнопку **<i class="fas fa-fw fa-folder-open"></i> Файлы** в левом верхнем углу.
 
-The file manager Hestia uses is called FileGator. You can find more information about it on [their website](https://filegator.io/).
+Файловый менеджер, который использует Hestia, называется FileGator. Вы можете найти больше информации о нем на [их веб-сайте](https://filegator.io/).

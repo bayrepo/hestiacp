@@ -1,0 +1,82 @@
+#!/opt/brepo/ruby33/bin/ruby
+# info: action with extended modules
+# options: MODULE_ID [MODULE_RELATED_COMMNDS]
+#
+# example: v-ext-modules list json
+#
+# This function enables and disables additional modules
+
+#----------------------------------------------------------#
+#                Variables & Functions                     #
+#----------------------------------------------------------#
+
+# Argument definition
+v_id = ARGV[0]
+
+require "/usr/local/hestia/func_ruby/global_options"
+
+load_ruby_options_defaults
+$HESTIA = load_hestia_default_path_from_env
+
+require "main"
+require "modules"
+
+hestia_check_privileged_user
+
+load_global_bash_variables "/etc/hestiacp/hestia.conf"
+if $HESTIA.nil?
+  hestia_print_error_message_to_cli "Can't find HESTIA base path"
+  exit 1
+end
+
+load_global_bash_variables "#{$HESTIA}/conf/hestia.conf"
+
+#----------------------------------------------------------#
+#                    Verifications                         #
+#----------------------------------------------------------#
+
+check_args 1, ARGV, "MODULE_ID [MODULE_RELATED_COMMNDS]"
+
+# Perform verification if read-only mode is enabled
+check_hestia_demo_mode
+
+#----------------------------------------------------------#
+#                       Action                             #
+#----------------------------------------------------------#
+
+if v_id.nil?
+  hestia_print_error_message_to_cli "no module name specified"
+  log_event E_ARGS, $ARGUMENTS
+  exit 1
+end
+pm = PluginManager.new
+load_module = v_id.strip
+pm.load_plugins(nil, load_module)
+if pm.get_loaded_plugins.key? load_module
+  if hestia_ext_module_state_in_conf(load_module, :get) == "enabled"
+    inst = pm.get_instance(load_module)
+    NEW_ARGV = if ARGV.length > 0
+        ARGV.drop(1)
+      else
+        ARGV
+      end
+    result = inst.command(NEW_ARGV)
+    if result == ""
+      log_event OK, $ARGUMENTS
+    else
+      hestia_print_error_message_to_cli "module #{load_module} return error #{result}"
+      log_event E_MODULE, $ARGUMENTS
+      exit 1
+    end
+  else
+    hestia_print_error_message_to_cli "module #{load_module} disabled"
+    log_event E_INVALID, $ARGUMENTS
+    exit 1
+  end
+else
+  hestia_print_error_message_to_cli "no module with name #{load_module} found"
+  log_event E_INVALID, $ARGUMENTS
+  exit 1
+end
+
+exit 0

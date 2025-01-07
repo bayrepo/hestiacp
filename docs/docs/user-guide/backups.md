@@ -1,81 +1,81 @@
-# Backups
+# Резервные копии
 
-To manage your backups, navigate to the **Backups <i class="fas fa-fw fa-file-archive"></i>** tab.
+Чтобы управлять резервными копиями, перейдите на вкладку **Резервные копии <i class="fas fa-fw fa-file-archive"></i>**.
 
-## Manually creating a backup
+## Создание резервной копии вручную
 
-Click the **<i class="fas fa-fw fa-plus-circle"></i> Create backup** button.
+Нажмите кнопку **<i class="fas fa-fw fa-plus-circle"></i> Создать резервную копию**.
 
-A popup will be shown with the following message:
+Появится всплывающее окно со следующим сообщением:
 
-**Task has been added to the queue. You will receive an email notification when your backup is ready for download.**
+**Задача добавлена ​​в очередь. Вы получите уведомление по электронной почте, когда резервная копия будет готова к загрузке.**
 
-## Downloading a backup
+## Загрузка резервной копии
 
-1. Hover over the backup you want to download.
-2. Click the <i class="fas fa-fw fa-file-download"><span class="visually-hidden">Download</span></i> icon on the right of the backup’s filename.
+1. Наведите указатель мыши на резервную копию, которую хотите загрузить.
+2. Нажмите значок <i class="fas fa-fw fa-file-download"><span class="visually-hidden">Загрузить</span></i> справа от имени файла резервной копии.
 
-If the backup is stored on a remote server, the file is downloaded to the server and you will get notified by email when the download is available.
+Если резервная копия хранится на удаленном сервере, файл загружается на сервер, и вы получите уведомление по электронной почте, когда загрузка станет доступна.
 
-## Restoring a backup
+## Восстановление резервной копии
 
-1. Hover over the backup you want to restore.
-2. Click the backup’s filename or the <i class="fas fa-fw fa-undo"><span class="visually-hidden">Restore</span></i> icon on the right of the backup’s filename.
-3. Restore the backup in one of the following ways:
-   1. You can restore the whole backup by clicking the **<i class="fas fa-fw fa-undo"></i> Restore backup** button on the top right.
-   2. Restore multiple parts of the backup, by selecting them, then selecting **Restore** in the **Apply to selected** menu in the top right and clicking on the <i class="fas fa-fw fa-arrow-right"><span class="visually-hidden">Apply</span></i> button.
-   3. Restore one part of the backup by hovering over it and clicking the <i class="fas fa-fw fa-undo"><span class="visually-hidden">Restore</span></i> icon on the right.
+1. Наведите указатель мыши на резервную копию, которую вы хотите восстановить.
+2. Щелкните имя файла резервной копии или значок <i class="fas fa-fw fa-undo"><span class="visually-hidden">Восстановить</span></i> справа от имени файла резервной копии.
+3. Восстановите резервную копию одним из следующих способов:
+1. Вы можете восстановить всю резервную копию, нажав кнопку **<i class="fas fa-fw fa-undo"></i> Восстановить резервную копию** в правом верхнем углу.
+2. Восстановите несколько частей резервной копии, выбрав их, затем выбрав **Восстановить** в меню **Применить к выбранному** в правом верхнем углу и нажав кнопку <i class="fas fa-fw fa-arrow-right"><span class="visually-hidden">Применить</span></i>.
+3. Восстановите одну часть резервной копии, наведя на нее курсор и нажав на значок <i class="fas fa-fw fa-undo"><span class="visually-hidden">Восстановить</span></i> справа.
 
-## Deleting a backup
+## Удаление резервной копии
 
-1. Hover over the backup you want to delete.
-2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> icon on the right of the backup’s filename.
+1. Наведите курсор на резервную копию, которую хотите удалить.
+2. Нажмите на значок <i class="fas fa-fw fa-trash"><span class="visually-hidden">удалить</span></i> справа от имени файла резервной копии.
 
-## Excluding components from backups
+## Исключение компонентов из резервных копий
 
-1. Click the **<i class="fas fa-fw fa-folder-minus"></i> Backup Exclusion** button.
-2. Click the **<i class="fas fa-fw fa-pencil-alt"></i> Edit backup exclusions** button.
+1. Нажмите кнопку **<i class="fas fa-fw fa-folder-minus"></i> Исключение резервной копии**.
+2. Нажмите кнопку **<i class="fas fa-fw fa-pencil-alt"></i> Изменить исключения резервной копии**.
 
-### Excluding a web domain
+### Исключение веб-домена
 
-In the box labeled **Web Domains**, enter each domain you want to exclude, one per line.
+В поле с надписью **Веб-домены** введите каждый домен, который вы хотите исключить, по одному в каждой строке.
 
-To exclude a specific folder from a domain use the following syntax:
+Чтобы исключить определенную папку из домена, используйте следующий синтаксис:
 
 ```bash
 domain.tld:public_html/wp-content/uploads:public_html/cache
 ```
 
-This will excude both `public_html/wp-content/uploads/` and `public_html/cache/` from that domain.
+Это исключит и `public_html/wp-content/uploads/`, и `public_html/cache/` из этого домена.
 
-To exclude all domains, use `*`.
+Чтобы исключить все домены, используйте `*`.
 
-### Excluding a mail domain
+### Исключение почтового домена
 
-In the box labeled **Mail Domains**, enter each domain you want to exclude, one per line.
+В поле с надписью **Почтовые домены** введите каждый домен, который вы хотите исключить, по одному в каждой строке.
 
-To exclude only one or multiple mail account use the following syntax:
+Чтобы исключить только одну или несколько учетных записей электронной почты, используйте следующий синтаксис:
 
 ```bash
 domain.tld:info:support
 ```
 
-This will excude both `info@domain.tld` and `support@domain.tld`.
+Это исключит и `info@domain.tld`, и `support@domain.tld`.
 
-To exclude all domains, use `*`.
+Чтобы исключить все домены, используйте `*`.
 
-### Excluding a database
+### Исключение базы данных
 
-In the box labeled **Databases**, enter the name of each database you want to exclude, one per line.
+В поле с надписью **Базы данных** введите имя каждой базы данных, которую вы хотите исключить, по одному в каждой строке.
 
-To exclude all databases, use `*`.
+Чтобы исключить все базы данных, используйте `*`.
 
-### Excluding a user directory
+### Исключение каталога пользователя
 
-In the box labeled **User Directories**, enter the name of each directory you want to exclude, one per line.
+В поле с надписью **Каталоги пользователя** введите имя каждого каталога, которую вы хотите исключить, по одному в каждой строке.
 
-To exclude all directories, use `*`.
+Чтобы исключить все каталоги, используйте `*`.
 
-## Editing the number of backups
+## Изменение количества резервных копий
 
-To edit the number of backups, please read the [Packages](../user-guide/packages.md) and [Users](../user-guide/users.md) documentation. You will need to create or edit a package, and assign it to the desired user.
+Чтобы изменить количество резервных копий, прочтите документацию [Пакеты](../user-guide/packages.md) и [Пользователи](../user-guide/users.md). Вам нужно будет создать или изменить пакет и назначить его нужному пользователю.

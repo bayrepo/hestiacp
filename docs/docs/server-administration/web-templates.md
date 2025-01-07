@@ -1,31 +1,31 @@
-# Web Templates and FastCGI/Proxy Cache
+# Веб-шаблоны и кэш FastCGI/Proxy
 
-## How do web templates work?
+## Как работают веб-шаблоны?
 
 ::: warning
-Modifying templates could cause errors on the server and may cause some services to not be able to reload or start.
+Изменение шаблонов может вызвать ошибки на сервере и привести к тому, что некоторые службы не смогут перезагрузиться или запуститься.
 :::
 
-Every time you rebuild the user or domain, the config files of the domain are overwritten by the new templates.
+Каждый раз, когда вы перестраиваете пользователя или домен, файлы конфигурации домена перезаписываются новыми шаблонами.
 
-This happens when:
+Это происходит, когда:
 
-- HestiaCP is updated.
-- The admin initiates it.
-- The user modifies settings.
+- HestiaCP обновляется.
+- Администратор инициирует это.
+- Пользователь изменяет настройки.
 
-The templates can be found in `/usr/local/hestia/data/templates/web/`.
+Шаблоны можно найти в `/usr/local/hestia/data/templates/web/`.
 
-| Service                 | Location                                              |
+| Служба | Расположение |
 | ----------------------- | ----------------------------------------------------- |
-| Nginx (Proxy)           | /usr/local/hestia/data/templates/web/nginx/           |
-| Nginx - PHP FPM         | /usr/local/hestia/data/templates/web/nginx/php-fpm/   |
-| Apache2 (Legacy/modphp) | /usr/local/hestia/data/templates/web/apache2/         |
-| Apache2 - PHP FPM       | /usr/local/hestia/data/templates/web/apache2/php-fpm/ |
-| PHP-FPM                 | /usr/local/hestia/data/templates/web/php-fpm/         |
+| Nginx (Proxy) | /usr/local/hestia/data/templates/web/nginx/ |
+| Nginx - PHP FPM | /usr/local/hestia/data/templates/web/nginx/php-fpm/ |
+| Apache2 (Legacy/modphp) | /usr/local/hestia/data/templates/web/apache2/ |
+| Apache2 - PHP FPM | /usr/local/hestia/data/templates/web/apache2/php-fpm/ |
+| PHP-FPM | /usr/local/hestia/data/templates/web/php-fpm/ |
 
 ::: warning
-Avoid modifying default templates as they are overwritten by updates. To prevent that, copy them instead:
+Избегайте изменения шаблонов по умолчанию, так как они перезаписываются обновлениями. Чтобы этого не произошло, скопируйте их:
 
 ```bash
 cp original.tpl new.tpl
@@ -35,127 +35,121 @@ cp original.sh new.sh
 
 :::
 
-When you are done editing your template, enable it for the desired domain from the control panel.
+Завершив редактирование шаблона, включите его для нужного домена в панели управления.
 
-After modifying an existing template, you need to rebuild the user configuration. This can be done using the [v-rebuild-user](../reference/cli.md#v-rebuild-user) command or the bulk operation in the web interface..
+После изменения существующего шаблона необходимо перестроить конфигурацию пользователя. Это можно сделать с помощью команды [v-rebuild-user](../reference/cli.md#v-rebuild-user) или массовой операции в веб-интерфейсе..
 
-### Available variables
+### Доступные переменные
 
-| Name                 | Description                                           | Example                                    |
+| Имя | Описание | Пример |
 | -------------------- | ----------------------------------------------------- | ------------------------------------------ |
-| `%ip%`               | IP Address of Server                                  | `123.123.123.123`                          |
-| `%proxy_port%`       | Port of Proxy                                         | `80`                                       |
-| `%proxy_port_ssl%`   | Port of Proxy (SSL)                                   | `443`                                      |
-| `%web_port%`         | Port of Webserver                                     | `8080`                                     |
-| `%web_ssl_port%`     | Port of Webserver (SSL)                               | `8443`                                     |
-| `%domain%`           | Domain                                                | `domain.tld`                               |
-| `%domain_idn%`       | Domain (Internationalised)                            | `domain.tld`                               |
-| `%alias_idn%`        | Alias Domain (Internationalised)                      | `alias.domain.tld`                         |
-| `%docroot%`          | Document root of domain                               | `/home/username/web/public_html/`          |
-| `%sdocroot%`         | Private root of domain                                | `/home/username/web/public_shtml/`         |
-| `%ssl_pem%`          | Location of SSL Certificate                           | `/usr/local/hestia/data/user/username/ssl` |
-| `%ssl_key%`          | Location of SSL Key                                   | `/usr/local/hestia/data/user/username/ssl` |
-| `%web_system%`       | Software used as web server                           | `Nginx`                                    |
-| `%home%`             | Default home directory                                | `/home`                                    |
-| `%user%`             | Username of current user                              | `username`                                 |
-| `%backend_lsnr%`     | Your default FPM Server                               | `proxy:fcgi://127.0.0.1:9000`              |
-| `%proxy_extentions%` | Extensions that should be handled by the proxy server | A list of extensions                       |
+| `%ip%` | IP-адрес сервера | `123.123.123.123` |
+| `%proxy_port%` | Порт прокси | `80` |
+| `%proxy_port_ssl%` | Порт прокси (SSL) | `443` |
+| `%web_port%` | Порт веб-сервера | `8080` |
+| `%web_ssl_port%` | Порт веб-сервера (SSL) | `8443` |
+| `%domain%` | Домен | `domain.tld` |
+| `%domain_idn%` | Домен (интернационализированный) | `domain.tld` |
+| `%alias_idn%` | Псевдоним домена (интернационализированный) | `alias.domain.tld` |
+| `%docroot%` | Корневой каталог документов домена | `/home/username/web/public_html/` |
+| `%sdocroot%` | Частный корень домена | `/home/username/web/public_shtml/` |
+| `%ssl_pem%` | Расположение SSL-сертификата | `/usr/local/hestia/data/user/username/ssl` |
+| `%ssl_key%` | Расположение SSL-ключа | `/usr/local/hestia/data/user/username/ssl` |
+| `%web_system%` | Программное обеспечение, используемое в качестве веб-сервера | `Nginx` |
+| `%home%` | Домашний каталог по умолчанию | `/home` |
+| `%user%` | Имя текущего пользователя | `username` |
+| `%backend_lsnr%` | Ваш сервер FPM по умолчанию | `proxy:fcgi://127.0.0.1:9000` |
+| `%proxy_extentions%` | Расширения, которые должен обрабатывать прокси-сервер | Список расширений |
 
 ::: tip
-`%sdocroot%` can also be set to `%docroot%` with settings
+`%sdocroot%` также можно установить на `%docroot%` с помощью настроек
 :::
 
-## How can I change settings for a specific domain
+## Как изменить настройки для определенного домена
 
-With the switch to PHP-FPM there are currently 2 different ways:
+С переходом на PHP-FPM в настоящее время есть 2 разных способа:
 
-1. Using `.user.ini` in the home directory `/home/user/web/domain.tld/public_html`.
-2. Via the PHP-FPM pool config.
+1. С помощью `.user.ini` в домашнем каталоге `/home/user/web/domain.tld/public_html`.
+2. Через конфигурацию пула PHP-FPM.
 
-Config templates for the PHP pool can be found in `/usr/local/hestia/data/templates/web/php-fpm/`.
+Шаблоны конфигурации для пула PHP можно найти в `/usr/local/hestia/data/templates/web/php-fpm/`.
 
 ::: warning
-Due to the fact we use multi PHP we need to recognise the PHP version to be used. Therefore we use the following naming scheme: `YOURNAME-PHP-X_Y.tpl`, where X_Y is your PHP version.
+Поскольку мы используем несколько PHP, нам необходимо распознавать используемую версию PHP. Поэтому мы используем следующую схему именования: `YOURNAME-PHP-X_Y.tpl`, где X_Y — ваша версия PHP.
 
-For example a PHP 8.1 template would be `YOURNAME-PHP-8_1.tpl`.
+Например, шаблон PHP 8.1 будет `YOURNAME-PHP-8_1.tpl`.
 :::
 
-## Installing PHP modules
+## Установка модулей PHP
 
 ```bash
-apt install php-package-name
+dnf install php-package-name
 ```
 
-For example, the following command will install `php-memcached` and `php-redis`, including the required additional packages for PHP.
+Например, следующая команда установит `php-memcached` и `php-redis`, включая необходимые дополнительные пакеты для PHP.
 
 ```bash
-apt install php-memcached php-redis
+dnf install php-memcached php-redis
 ```
 
 ## Nginx FastCGI Cache
 
 ::: tip
-FastCGI only applies for Nginx + PHP-FPM servers. If you use Nginx + Apache2 + PHP-FPM, this will not apply to you!
+FastCGI применяется только для сервера Nginx + PHP-FPM. Если вы используете Nginx + Apache2 + PHP-FPM, это к вам не применимо!
 :::
 
-FastCGI cache is an option within Nginx allowing to cache the output of FastCGI (in this case PHP). It will temporarily create a file with the contents of the output. If another user requests the same page, Nginx will check if the age of the cached file is still valid and if it is, then it will send the cached file to the user, instead of requesting it to FastCGI.
+Кэш FastCGI — это опция в Nginx, позволяющая кэшировать вывод FastCGI (в данном случае PHP). Он временно создаст файл с содержимым вывода. Если другой пользователь запрашивает ту же страницу, Nginx проверит, действителен ли возраст кэшированного файла, и если да, то отправит кэшированный файл пользователю, вместо того чтобы запрашивать его в FastCGI.
 
-FastCGI cache works best for sites get a lot of request and where the pages don’t change that often, for example a news site. For more dynamic sites, changes might be required to the configuration or it might require totally disabling it.
+Кэш FastCGI лучше всего подходит для сайтов, получающих много запросов и страницы которых не так часто меняются, например, новостной сайт. Для более динамичных сайтов могут потребоваться изменения в конфигурации или полное его отключение.
 
-### Why does software package x and y not work with FastCGI cache
+### Как включить кэш FastCGI для моего пользовательского шаблона
 
-As we have over 20 different templates and we don’t use them all, we have decided to stop releasing new ones the future and hope the community helps improving the templates by [submitting a Pull Request](https://github.com/hestiacp/hestiacp/pulls).
-
-If you want to add support to a certain template, follow the instructions below.
-
-### How do I enable FastCGI cache for my custom template
-
-Locate the block where you call `fastcgi_pass`:
+Найдите блок, в котором вы вызываете `fastcgi_pass`:
 
 ```bash
 location ~ [^/]\.php(/|$) {
-    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-    try_files $uri =404;
-    fastcgi_pass    %backend_lsnr%;
-    fastcgi_index   index.php;
-    include         /etc/nginx/fastcgi_params;
+fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+try_files $uri =404;
+fastcgi_pass %backend_lsnr%;
+fastcgi_index index.php;
+include /etc/nginx/fastcgi_params;
 }
 ```
 
-Add the following lines under `include /etc/nginx/fastcgi_params;`:
+Добавьте следующие строки под `include /etc/nginx/fastcgi_params;`:
 
 ```bash
 include %home%/%user%/conf/web/%domain%/nginx.fastcgi_cache.conf*;
 
 if ($request_uri ~* "/path/with/exceptions/regex/whatever") {
-    set $no_cache 1;
+set $no_cache 1;
 }
 ```
 
-### How can I clear the cache?
+### Как очистить кэш?
 
-When FastCGI cache is enabled a **<i class="fas fa-fw fa-trash"></i> Purge Nginx Cache** button is added to the web domain’s **Edit** page. You can also use the API, or the following command:
+Когда включен кэш FastCGI, на страницу **Изменить** веб-домена добавляется кнопка **<i class="fas fa-fw fa-trash"></i> Очистить кэш Nginx**. Вы также можете использовать API или следующую команду:
 
 ```bash
 v-purge-nginx-cache user domain.tld
 ```
 
-### Why don’t I have the option to use FastCGI cache
+### Почему у меня нет возможности использовать кэш FastCGI
 
-FastCGI cache is an option for Nginx mode only. If you are using Nginx + Apache2, you can select the proxy caching template and proxy cache will be enabled. It is functionally almost the same. In fact, the proxy caching will also work if you use a Docker image or a Node.js app.
+Кэш FastCGI доступен только для режима Nginx. Если вы используете Nginx + Apache2, вы можете выбрать шаблон кэширования прокси, и кэш прокси будет включен. Функционально это почти то же самое. Фактически, кэширование прокси также будет работать, если вы используете образ Docker или приложение Node.js.
 
-To write custom caching templates, use the following naming scheme:
+Для написания пользовательских шаблонов кэширования используйте следующую схему именования:
 
-`caching-yourname.tpl`, `caching-yourname.stpl` and `caching-yourname.sh`
+`caching-yourname.tpl`, `caching-yourname.stpl` и `caching-yourname.sh`
 
-### Does Hestia support Web socket support
+### Поддерживает ли Hestia поддержку веб-сокетов
 
-Yes, Hestia works fine with Web sockets how ever our default templates include on default:
+Да, Hestia отлично работает с веб-сокетами, однако наши шаблоны по умолчанию включают по умолчанию:
 
 ```bash
 proxy_hide_header Upgrade
 ```
 
-This resolved an issue with Safari from loading websites.
+Это решило проблему с загрузкой веб-сайтов Safari.
 
-To allow the use of Web sockets remove this line. Other wise Web sockets will not work
+Чтобы разрешить использование веб-сокетов, удалите эту строку. В противном случае веб-сокеты работать не будут

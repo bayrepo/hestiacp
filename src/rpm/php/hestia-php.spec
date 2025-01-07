@@ -3,7 +3,7 @@
 
 Name:           hestia-php
 Version:        8.2.23
-Release:        1%{dist}
+Release:        2%{dist}
 Summary:        Hestia internal PHP
 Group:          System Environment/Base
 URL:            https://www.hestiacp.com

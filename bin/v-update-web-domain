@@ -1,0 +1,84 @@
+#!/bin/bash
+# info: update configs for web domain
+# options: USER DOMAIN TEMPLATE [RESTART]
+#
+# example: v-unpdate-web-domain admin acme.com test_template
+#
+# This function of updating of the domain's configs and set template or notemplate if just update of configs
+
+#----------------------------------------------------------#
+#                Variables & Functions                     #
+#----------------------------------------------------------#
+
+# Argument definition
+user=$1
+domain=$2
+domain_idn=$2
+template=$3
+restart=$4
+
+# Includes
+# shellcheck source=/etc/hestiacp/hestia.conf
+source /etc/hestiacp/hestia.conf
+# shellcheck source=/usr/local/hestia/func/main.sh
+source $HESTIA/func/main.sh
+# shellcheck source=/usr/local/hestia/func/domain.sh
+source $HESTIA/func/domain.sh
+# shellcheck source=/usr/local/hestia/func/ip.sh
+source $HESTIA/func/ip.sh
+# load config file
+source_conf "$HESTIA/conf/hestia.conf"
+
+# Additional argument formatting
+format_domain
+format_domain_idn
+# TODO: $domain_idn not used in this script - maybe $domain should be converted to $doman_idn ?
+
+#----------------------------------------------------------#
+#                    Verifications                         #
+#----------------------------------------------------------#
+
+check_args '3' "$#" 'USER DOMAIN TEMPLATE [RESTART]'
+is_format_valid 'user' 'domain'
+is_system_enabled "$WEB_SYSTEM" 'WEB_SYSTEM'
+is_object_valid 'user' 'USER' "$user"
+is_object_valid 'web' 'DOMAIN' "$domain"
+
+# Perform verification if read-only mode is enabled
+check_hestia_demo_mode
+
+#----------------------------------------------------------#
+#                       Action                             #
+#----------------------------------------------------------#
+
+# Parsing domain values
+get_domain_values 'web'
+local_ip=$(get_real_ip $IP)
+
+# Preparing domain values for the template substitution
+prepare_web_domain_values
+
+if [ "$template" != "notemplate" ]; then
+    update_object_value 'web' 'DOMAIN' "$domain" '$PROXY' "$template"
+	$BIN/v-log-action "system" "Info" "Web" "Set new template=$template for $PROXY (User: $user, Domain: $domain)."
+fi
+
+#----------------------------------------------------------#
+#                       Hestia                             #
+#----------------------------------------------------------#
+
+# Update global configuration files
+$BIN/v-rebuild-web-domain "$user" "$domain" 'no'
+
+# Restarting web server
+$BIN/v-restart-web "$restart"
+check_result $? "Web restart failed" > /dev/null
+
+$BIN/v-restart-proxy "$restart"
+check_result $? "Proxy restart failed" > /dev/null
+
+# Logging
+$BIN/v-log-action "system" "Info" "Web" "Updated web domain (User: $user, Domain: $domain)."
+log_event "$OK" "$ARGUMENTS"
+
+exit

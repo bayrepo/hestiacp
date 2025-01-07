@@ -1,47 +1,48 @@
-# SSL Certificates
+# SSL-сертификаты
 
-## How to setup Let’s Encrypt for the control panel
+## Как настроить Let’s Encrypt для панели управления
 
-Make sure the hostname of the server is pointed to the server’s IP address and that you set the hostname correctly.
+Убедитесь, что имя хоста сервера указывает на IP-адрес сервера и что вы правильно указали имя хоста.
 
-Running the following commands will change the hostname and generate a Let’s Encrypt certificate for the control panel:
+Выполнение следующих команд изменит имя хоста и сгенерирует сертификат Let’s Encrypt для панели управления:
 
 ```bash
 v-change-sys-hostname host.domain.tld
 v-add-letsencrypt-host
 ```
 
-## Common errors using Let’s Encrypt
+## Распространенные ошибки при использовании Let’s Encrypt
 
 ::: info
-Due to changes in the code, the error message has been changed. The following list will be extended in the future.
+Из-за изменений в коде сообщение об ошибке было изменено. Следующий список будет расширен в будущем.
 :::
 
-| Error         | Message                                                                                                                                              |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `rateLimited` | The rate limit of the maximum requests have been passed. Please check [https://crt.sh](https://crt.sh) to see how many active certificates you have. |
+| Ошибка | Сообщение |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `rateLimited` | Превышен предел скорости максимального количества запросов. Проверьте [https://crt.sh](https://crt.sh), чтобы узнать, сколько у вас активных сертификатов. |
 
-### Let’s Encrypt validation status 400
+### Let’s Encrypt статус проверки 400
 
-When requesting an SSL certificate, you may encounter the following error:
+При запросе SSL-сертификата вы можете столкнуться со следующей ошибкой:
 
 ```bash
-Error: Let’s Encrypt validation status 400. Details: Unable to update challenge :: authorisation must be pending
+Ошибка: Let’s Encrypt статус проверки 400. Подробности: Невозможно обновить вызов :: авторизация должна быть в ожидании
 ```
 
-This could mean multiple things:
+Это может означать несколько вещей:
 
-1. Cloudflare’s proxy is enabled and the **SSL/TLS** setting is set to **Full (strict)**.
-2. Nginx or Apache is not reloading correctly.
-3. IPv6 is setup. Disable IPv6 in DNS.
-4. There is an issue with a template.
+1. Прокси-сервер Cloudflare включен, а настройка **SSL/TLS** установлена ​​на **Полный (строгий)**.
 
-In the future we hope to improve debugging, but currently the easiest way to debug this issue is to navigate to `/var/log/hestia/` and inspect the desired log file (`LE-{user}-{domain}.log`), which should appear after requesting a certificate.
+2. Nginx или Apache не перезагружаются правильно.
+3. IPv6 настроен. Отключите IPv6 в DNS.
+4. Возникла проблема с шаблоном.
 
-Find **Step 5**, where you will see something similar to the following:
+В будущем мы надеемся улучшить отладку, но в настоящее время самый простой способ отладки этой проблемы — перейти в `/var/log/hestia/` и проверить нужный файл журнала (`LE-{user}-{domain}.log`), который должен появиться после запроса сертификата.
+
+Найдите **Шаг 5**, где вы увидите что-то похожее на следующее:
 
 ```bash
-==[Step 5]==
+==[Шаг 5]==
 - status: 200
 - nonce: 0004EDQMty6_ZOb1BdRQSc-debiHXGXaXbZuyySFU2xoogk
 - validation: pending
@@ -55,44 +56,45 @@ boulder-requester: 80260362
 cache-control: public, max-age=0, no-cache
 link: <https://acme-v02.api.letsencrypt.org/directory>;rel="index"
 link: <https://acme-v02.api.letsencrypt.org/acme/authz-v3/12520447717>;rel="up"
-location: https://acme-v02.api.letsencrypt.org/acme/chall-v3/12520447717/scDRXA
+расположение: https://acme-v02.api.letsencrypt.org/acme/chall-v3/12520447717/scDRXA
 replay-nonce: 0004EDQMty6_ZOb1BdRQSc-debiHXGXaXbZuyySFU2xoogk
-x-frame-options: DENY
+x-frame-options: ЗАПРЕТИТЬ
 strict-transport-security: max-age=604800
 
 {
-  "type": "http-01",
-  "status": "pending",
-  "url": "https://acme-v02.api.letsencrypt.org/acme/chall-v3/12520447717/scDRXA",
-  "token": "9yriok5bpLtV__m-rZ8f2tQmrfeQli0tCxSj4iNkv2Y"
+"type": "http-01",
+"status": "pending",
+"url": "https://acme-v02.api.letsencrypt.org/acme/chall-v3/12520447717/scDRXA",
+"token": "9yriok5bpLtV__m-rZ8f2tQmrfeQli0tCxSj4iNkv2Y"
 }
 ```
 
-By following the URL in the JSON response, you will get more info about what went wrong.
+Перейдя по URL в ответе JSON, вы получите больше информации о том, что пошло не так.
 
-### Other tips for debugging Let’s Encrypt
+### Другие советы по отладке Let’s Encrypt
 
-Try to use [Let’s Debug](https://letsdebug.net):
+Попробуйте использовать [Let’s Debug](https://letsdebug.net):
 
-1. Enter your domain name.
-2. Make sure HTTP-01 is selected
-3. Run the test
+1. Введите свое доменное имя.
+2. Убедитесь, что выбран HTTP-01
+3. Запустите тест
 
-Once the test is completed, it will show an error or a success message, containing more information.
+После завершения теста будет показано сообщение об ошибке или успешном выполнении, содержащее дополнительную информацию.
 
-## Can I enable Cloudflare’s proxy with Let’s Encrypt?
+## Могу ли я включить прокси Cloudflare с Let’s Encrypt?
 
-Yes, you are able to use Let’s Encrypt certificates with Cloudflare’s proxy, however you need to follow some special steps:
+Да, вы можете использовать сертификаты Let’s Encrypt с прокси Cloudflare, однако вам необходимо выполнить некоторые специальные шаги:
 
-1. Disable Cloudflare’s proxy for the desired domain.
-2. Wait at least 5 minutes, for DNS caches to expire.
-3. Request the certificate via the control panel or use the CLI command.
-4. Reenable the proxy.
-5. In the **SSL/TLS** tab, switch over to **Full (strict)**.
+1. Отключите прокси Cloudflare для нужного домена.
 
-## Can I use a Cloudflare Origin CA SSL Certificate?
+2. Подождите не менее 5 минут, пока не истечет срок действия кэшей DNS.
+3. Запросите сертификат через панель управления или используйте команду CLI.
+4. Повторно включите прокси-сервер.
+5. На вкладке **SSL/TLS** переключитесь на **Полный (строгий)**.
 
-1. Create an Origin CA certificate by [following these steps](https://developers.cloudflare.com/ssl/origin-configuration/origin-ca#1-create-an-origin-ca-certificate).
-2. Once generated, enter your SSL keys in the **Edit Web Domain** page.
-3. In the **SSL Certificate Authority / Intermediate** box, enter [this certificate](https://developers.cloudflare.com/ssl/static/origin_ca_rsa_root.pem).
-4. In Cloudflare’s **SSL/TLS** tab, switch over to **Full (strict)**.
+## Могу ли я использовать SSL-сертификат Cloudflare Origin CA?
+
+1. Создайте сертификат Origin CA, [выполнив следующие шаги](https://developers.cloudflare.com/ssl/origin-configuration/origin-ca#1-create-an-origin-ca-certificate).
+2. После создания введите ключи SSL на странице **Изменить веб-домен**.
+3. В поле **Центр сертификации SSL / промежуточный** введите [этот сертификат](https://developers.cloudflare.com/ssl/static/origin_ca_rsa_root.pem).
+4. На вкладке **SSL/TLS** в Cloudflare переключитесь на **Полный (строгий)**.

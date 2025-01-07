@@ -118,11 +118,6 @@ upgrade_complete_message() {
 	echo "============================================================================="
 	echo
 	echo "Upgrade complete! If you encounter any issues or find a bug,                 "
-	echo "please take a moment to report it to us on GitHub at the URL below:          "
-	echo "https://github.com/hestiacp/hestiacp/issues                                  "
-	echo
-	echo "Read the release notes to learn about new fixes and features:                "
-	echo "https://github.com/hestiacp/hestiacp/blob/release/CHANGELOG.md               "
 	echo
 	echo "We hope that you enjoy using this version of Hestia Control Panel,           "
 	echo "have a wonderful day!                                                        "
@@ -130,13 +125,6 @@ upgrade_complete_message() {
 	echo "Sincerely,                                                                   "
 	echo "The Hestia Control Panel development team                                    "
 	echo
-	echo "Web:      https://www.hestiacp.com/                                          "
-	echo "Docs:     https://docs.hestiacp.com/										   "
-	echo "Forum:    https://forum.hestiacp.com/                                        "
-	echo "GitHub:   https://github.com/hestiacp/hestiacp/                              "
-	echo
-	echo "Help support the Hestia Control Panel project by donating via PayPal:        "
-	echo "https://www.hestiacp.com/donate                                              "
 	echo
 	echo "Made with love & pride by the open-source community around the world.        "
 	echo
@@ -148,8 +136,6 @@ upgrade_complete_message_log() {
 	echo
 	echo "============================================================================="
 	echo "UPGRADE COMPLETE.                                                            "
-	echo "Please report any issues on GitHub:                                          "
-	echo "https://github.com/hestiacp/hestiacp/issues                                  "
 	echo "============================================================================="
 	echo
 	$BIN/v-log-action "system" "Info" "Updates" "Update installed (Version: $new_version)."
@@ -218,17 +204,6 @@ upgrade_send_notification_to_email() {
 			echo "===================================================" >> $message_tmp_file
 			echo "" >> $message_tmp_file
 		fi
-
-		echo "What's new: https://github.com/hestiacp/hestiacp/blob/$RELEASE_BRANCH/CHANGELOG.md" >> $message_tmp_file
-		echo >> $message_tmp_file
-		echo "What to do if you run into issues:" >> $message_tmp_file
-		echo "- Check our forums for possible solutions: https://forum.hestiacp.com" >> $message_tmp_file
-		echo "- File an issue report on GitHub: https://github.com/hestiacp/hestiacp/issues" >> $message_tmp_file
-		echo "" >> $message_tmp_file
-		echo "Help support the Hestia Control Panel project by donating via PayPal: https://www.hestiacp.com/donate" >> $message_tmp_file
-		echo "===================================================" >> $message_tmp_file
-		echo "Have a wonderful day," >> $message_tmp_file
-		echo "The Hestia Control Panel development team" >> $message_tmp_file
 
 		# Read back message from file and pass through to sendmail
 		cat $message_tmp_file | $send_mail -s "Update Installed - v${new_version}" $admin_email

@@ -1,100 +1,98 @@
-# Troubleshooting
+# Устранение неполадок
 
-## Command not found when I try to run a v-command as root
+## Команда не найдена при попытке запустить v-команду как root
 
-Add to /root/.bashrc the following code:
+Добавьте в /root/.bashrc следующий код:
 
 ```bash
 if [ "${PATH#*/usr/local/hestia/bin*}" = "$PATH" ]; then
-	. /etc/profile.d/hestia.sh
+. /etc/profile.d/hestia.sh
 fi
 ```
 
-And logout and login again.
+И выйдите из системы и войдите снова.
 
-After that you are able to run any v-command you want.
+После этого вы сможете запустить любую v-команду, которую захотите.
 
-## Disabling “Use IP address allow list for login attempts” via command line
+## Отключение «Использовать список разрешенных IP-адресов для попыток входа» через командную строку
 
-With the introduction of Hestia v1.4.0 we have added certain security features, including the possibility to limit login to certain IP addresses. If your IP address changes, you will not able to login anymore. To disable this feature, run the following commands:
+С выпуском Hestia v1.4.0 мы добавили определенные функции безопасности, включая возможность ограничить вход определенными IP-адресами. Если ваш IP-адрес изменится, вы больше не сможете войти. Чтобы отключить эту функцию, выполните следующие команды:
 
 ```bash
-# Disable the feature
+# Отключить функцию
 v-change-user-config-value admin LOGIN_USE_IPLIST 'no'
-# Remove listed IP addresses
+# Удалить перечисленные IP-адреса
 v-change-user-config-value admin LOGIN_ALLOW_IPS ''
 ```
 
-## Can I update my cronjobs via `crontab -e`?
+## Могу ли я обновить свои cronjobs через `crontab -e`?
 
-No, you cannot. When you update HestiaCP, the crontab will simply get overwritten. The changes will not get saved in backups either.
+Нет, не можете. При обновлении HestiaCP crontab просто перезапишется. Изменения также не будут сохранены в резервных копиях.
 
-## After update Apache2 I am not able to restart Apache2 or Nginx
+## После обновления Apache2 я не могу перезапустить Apache2 или Nginx
 
-The error message states (98) Address already in use: AG0072: make_sock: could not bind to address 0.0.0.0:80
+В сообщении об ошибке указано (98) Адрес уже используется: AG0072: make_sock: не удалось привязаться к адресу 0.0.0.0:80
 
-When a package update sometimes comes with a new config and probally it has been overwritten...
+Когда обновление пакета иногда приходит с новой конфигурацией, и, вероятно, она была перезаписана...
 
 ```bash
-Configuration file '/etc/apache2/apache2.conf'
- ==> Modified (by you or by a script) since installation.
- ==> Package distributor has shipped an updated version.
-   What would you like to do about it ?  Your options are:
-	Y or I  : install the package maintainer's version
-	N or O  : keep your currently-installed version
-	  D     : show the differences between the versions
-	  Z     : start a shell to examine the situation
- The default action is to keep your current version.
+Файл конфигурации '/etc/apache2/apache2.conf'
+==> Изменен (вами или скриптом) с момента установки.
+==> Дистрибьютор пакета отправил обновленную версию.
+Что вы хотите с этим сделать? Возможны следующие варианты:
+Y или I: установить версию сопровождающего пакета
+N или O: сохранить текущую установленную версию
+D: показать различия между версиями
+Z: запустить оболочку для изучения ситуации
+Действие по умолчанию — сохранить текущую версию.
 *** apache2.conf (Y/I/N/O/D/Z) [default=N] ?
 ```
 
-If you see this message **ALWAYS** press "N" or **ENTER** to select the default value!
+Если вы видите это сообщение **ВСЕГДА** нажмите "N" или **ENTER**, чтобы выбрать значение по умолчанию!
 
-How ever if you entered Y or I. Then replace the config that can be found in /root/hst_backups/xxxxx/conf/apache2/ folder and copy over apache2.conf and ports.conf to /etc/apache2/ folder
+Однако если вы ввели Y или I. Затем замените конфигурацию, которая находится в папке /root/hst_backups/xxxxx/conf/apache2/, и скопируйте apache2.conf и ports.conf в папку /etc/apache2/
 
-xxxxxx is the date/time the backup is made during the last update of HestiaCP
+xxxxxx — это дата/время создания резервной копии во время последнего обновления HestiaCP
 
-If you don't have have a backup made you can also copy the config in /usr/local/hestia/install/deb/apache2/apache2.conf to /etc/apache2.conf and also empty /etc/apache2/ports.conf
+Если у вас нет резервной копии, вы также можете скопировать конфигурацию из /usr/local/hestia/install/deb/apache2/apache2.conf в /etc/apache2.conf, а также пустой /etc/apache2/ports.conf
 
-## Unable to bind adress
+## Невозможно привязать адрес
 
-In rare cases the network service might be slower than Apache2 and or Nginx. In that case Nginx or Apache2 will refuse to start up successfully start.
-
-```bash
+В редких случаях сетевая служба может работать медленнее, чем Apache2 и/или Nginx. В этом случае Nginx или Apache2 откажутся запуститься. ```bash
 systemctl status nginx
 ```
 
-Will create the error an error
+Создаст ошибку error
 
 ```bash
-nginx: [emerg] bind to x.x.x.x:80 failed (99: cannot assign requested address)
+nginx: [emerg] bind to x.x.x.x:80 failed (99: не удалось назначить запрошенный адрес)
 ```
 
-or in case of Aapche2
+или в случае Aapche2
 
 ```bash
-(99)Cannot assign requested address: AH00072: make_sock: could not bind to address x.x.x.x:8443
+(99)Не удалось назначить запрошенный адрес: AH00072: make_sock: не удалось привязаться к адресу x.x.x.x:8443
 ```
 
-The following command should allow services to assign to non existing ip addresses
+Следующая команда должна разрешить службам назначать несуществующие IP-адреса
 
 ```bash
 sysctl -w net.ipv4.ip_nonlocal_bind=1
 ```
 
-## Error: 24: Too many open files
+## Ошибка: 24: Слишком много открытых файлов
 
 ```bash
-2022/02/21 15:04:38 [emerg] 51772#51772: open() "/var/log/apache2/domains/<redactedforprivacy>.error.log" failed (24: Too many open files)
+2022/02/21 15:04:38 [emerg] 51772#51772: open() "/var/log/apache2/domains/<redactedforprivacy>.error.log" не удалось (24: слишком много открытых файлов)
 ```
 
-or
+или
 
 ```bash
-2022/02/21 15:04:38 [emerg] 2724394#2724394: open() "/var/log/nginx/domains/xxx.error.log" failed (24: Too many open files)
+2022/02/21 15:04:38 [emerg] 2724394#2724394: open() "/var/log/nginx/domains/xxx.error.log" не удалось (24: слишком много открытых файлов)
 ```
 
-This error means that there are to many open files with Nginx. To resolve this issue:
+Эта ошибка означает, что в Nginx слишком много открытых файлов. Чтобы решить эту проблему:
 
 /etc/systemd/system/nginx.service.d/override.conf
 
@@ -103,21 +101,21 @@ This error means that there are to many open files with Nginx. To resolve this i
 LimitNOFILE=65536
 ```
 
-Then run:
+Затем выполните:
 
 ```bash
 systemctl daemon-reload
 ```
 
-Add this to the Nginx config file (Needs to be smaller or equal to LimitNOFILE!)
+Добавьте это в файл конфигурации Nginx (должен быть меньше или равен LimitNOFILE!)
 
 ```bash
 worker_rlimit_nofile 16384
 ```
 
-And then restart nginx with systemctl restart nginx
+Затем перезапустите nginx с помощью systemctl restart nginx
 
-To verifiy run:
+Чтобы проверить, выполните:
 
 ```bash
 cat /proc/ < nginx-pid > /limits

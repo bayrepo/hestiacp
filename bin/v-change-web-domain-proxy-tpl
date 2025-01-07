@@ -1,6 +1,6 @@
 #!/bin/bash
 # info: change web domain proxy template
-# options: USER DOMAIN TEMPLATE [EXTENTIONS] [RESTART]
+# options: USER DOMAIN TEMPLATE [EXTENTIONS] [RESTART] [PORT]
 #
 # example: v-change-web-domain-proxy-tpl admin domain.tld hosting
 #
@@ -19,6 +19,7 @@ default_extentions="jpg,jpeg,gif,png,ico,svg,css,zip,tgz,gz,rar,bz2,doc,xls,\
 exe,pdf,ppt,txt,odt,ods,odp,odf,tar,wav,bmp,rtf,js,mp3,avi,mpeg,flv,html,htm"
 extentions=${4-$default_extentions}
 restart="$5"
+proxy_port_internal=${6-"0"}
 
 # Includes
 # shellcheck source=/etc/hestiacp/hestia.conf
@@ -41,7 +42,7 @@ format_domain_idn
 #                    Verifications                         #
 #----------------------------------------------------------#
 
-check_args '3' "$#" 'USER DOMAIN TEMPLATE [EXTENTIONS] [RESTART]'
+check_args '3' "$#" 'USER DOMAIN TEMPLATE [EXTENTIONS] [RESTART] [PORT]'
 is_format_valid 'user' 'domain' 'template'
 is_system_enabled "$PROXY_SYSTEM" 'PROXY_SYSTEM'
 is_object_valid 'user' 'USER' "$user"
@@ -71,11 +72,12 @@ fi
 # Add new vhost
 PROXY="$template"
 PROXY_EXT="$extentions"
+PROXY_PORT_INTERNAL="$proxy_port_internal"
 
 prepare_web_domain_values
-add_web_config "$PROXY_SYSTEM" "$PROXY.tpl"
+add_web_config "$PROXY_SYSTEM" "$PROXY.tpl" "$PROXY_PORT_INTERNAL"
 if [ "$SSL" = 'yes' ]; then
-	add_web_config "$PROXY_SYSTEM" "$PROXY.stpl"
+	add_web_config "$PROXY_SYSTEM" "$PROXY.stpl" "$PROXY_PORT_INTERNAL"
 fi
 
 #----------------------------------------------------------#
@@ -85,13 +87,15 @@ fi
 # Updating config
 update_object_value 'web' 'DOMAIN' "$domain" '$PROXY' "$PROXY"
 update_object_value 'web' 'DOMAIN' "$domain" '$PROXY_EXT' "$extentions"
+[ -z "$PROXY_PORT_INTERNAL" ] && add_object_key 'web' 'DOMAIN' "$domain" 'PROXY_PORT_INTERNAL' 'PROXY'
+update_object_value 'web' 'DOMAIN' "$domain" '$PROXY_PORT_INTERNAL' "$proxy_port_internal"
 
 # Restarting proxy
 $BIN/v-restart-proxy "$restart"
 check_result $? "Proxy restart failed" > /dev/null
 
 # Logging
-$BIN/v-log-action "$user" "Info" "Web" "Proxy template changed (Domain: $domain, Template: $template)."
+$BIN/v-log-action "$user" "Info" "Web" "Proxy template changed (Domain: $domain, Template: $template, Port: $proxy_port_internal)."
 log_event "$OK" "$ARGUMENTS"
 
 exit

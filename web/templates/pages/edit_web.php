@@ -33,6 +33,13 @@
 			letsEncryptEnabled: <?= $v_letsencrypt == "yes" || $v_letsencrypt == "on" ? "true" : "false" ?>,
 			showCertificates: <?= $v_letsencrypt == "yes" || $v_letsencrypt == "on" ? "false" : "true" ?>,
 			showAdvanced: false,
+<?php
+if ($passenger_state == "enabled") {
+?>
+			showPassenger: false,
+<?php
+}
+?>
 			nginxCacheEnabled: <?= $v_nginx_cache == "yes" ? "true" : "false" ?>,
 			proxySupportEnabled: <?= !empty($v_proxy) ? "true" : "false" ?>,
 			customDocumentRootEnabled: <?= !empty($v_custom_doc_root) ? "true" : "false" ?>
@@ -347,6 +354,19 @@
 									?>
 								</select>
 							</div>
+							<div class="u-mb10 js-proxy-connect" style="<?php 
+							if ($v_proxy_template != "srvproxy") { 
+								echo "display:none;"; 
+							} else { 
+								echo "display:block;"; 
+							} ?>">
+								<div>
+									<label for="v_proxy_port" class="form-lable">
+										<?= _("Set port for internal service") ?>
+									</label>
+									<input type="input" name="v_proxy_port" id="v_proxy_port" value="<?= htmlentities($v_proxy_port) ?>">
+								</div>
+							</div>
 							<div class="u-mb10">
 								<label for="v_proxy_ext" class="form-label"><?= _("Proxy Extensions") ?></label>
 								<textarea class="form-control" name="v_proxy_ext" id="v_proxy_ext"><?php if (!empty($v_proxy_ext)) { echo htmlentities(trim($v_proxy_ext, "'"));} else { echo 'jpg, jpeg, gif, png, ico, svg, css, zip, tgz, gz, rar, bz2, exe, pdf, doc, xls, ppt, txt, odt, ods, odp, odf, tar, bmp, rtf, js, mp3, avi, mpeg, flv, html, htm'; } ?></textarea>
@@ -444,6 +464,59 @@
 					</button>
 				<?php } ?>
 			</div>
+<?php
+if ($passenger_state == "enabled") {
+?>
+			<div class="u-mt15 u-mb20">
+				<button x-on:click="showPassenger = !showPassenger" type="button" class="button button-secondary">
+					<?= _("Passenger options") ?>
+				</button>
+			</div>
+			<div x-cloak x-show="showPassenger">
+				<?php if ($_SESSION["userContext"] === "admin") { ?>
+					<div class="form-check u-mb10">
+						<input class="form-check-input" type="checkbox" name="v_passenger_enabled" id="v_passenger_enabled" 
+						<?php 
+						if ($domain_ruby[0]["RUBY"] != "") {
+							echo "checked";
+						}
+						?> >
+						<label for="v_passenger_enabled">
+							<?= _("Enable passenger for domain") ?>
+						</label>
+					</div>
+					<div class="u-mb10">
+						<label for="v_ruby_path" class="form-label">
+							<?= _("Set ruby path for domain") ?>
+						</label>
+						<select class="form-select" name="v_ruby_path" id="v_ruby_path">
+							<?php
+								foreach ($rubys as $key => $value) {
+									echo "\t\t\t\t<option value=\"".htmlentities($value["RUBY"])."\"";
+									if ((!empty($domain_ruby)) && ( $value["RUBY"] == $domain_ruby[0]["RUBY"] )){
+										echo ' selected' ;
+									}
+									echo ">".htmlentities($value["RUBY"])."</option>\n";
+								}
+							?>
+						</select>
+					</div>
+					<div class="form-check u-mb10">
+						<input class="form-check-input" type="checkbox" name="v_passenger_logging" id="v_passenger_logging" 
+						<?php 
+						if ($domain_ruby[0]["LOG"] == "on") {
+							echo "checked";
+						}
+						?> >
+						<label for="v_passenger_logging">
+							<?= _("Enable logging to browser for domain") ?>
+						</label>
+					</div>
+				<?php } ?>
+			</div>
+<?php
+}
+?>
 		</div>
 
 	</form>

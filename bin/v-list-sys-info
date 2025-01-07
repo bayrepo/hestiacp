@@ -69,8 +69,8 @@ HOSTNAME=$(hostname)
 # Check OS/Release
 if [ -d '/etc/sysconfig' ]; then
 	if [ -e '/etc/redhat-release' ]; then
-		OS='CentOS'
-		VERSION=$(cat /etc/redhat-release | tr ' ' '\n' | grep [0-9])
+		OS=$(cat /etc/redhat-release | cut -d' ' -f1)
+		VERSION=$(cat /etc/redhat-release | tr ' ' '\n' | grep -P "\d+(\.\d+)?")
 	else
 		OS="Amazon"
 		VERSION=$(cat /etc/issue | tr ' ' '\n' | grep [0-9])

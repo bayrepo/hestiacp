@@ -47,15 +47,12 @@ $v_php_versions = [
 
 if ($is_rhel){
 	$v_php_versions = [
-		"php-56",
-		"php-70",
-		"php-71",
-		"php-72",
-		"php-73",
 		"php-74",
 		"php-80",
 		"php-81",
 		"php-82",
+		"php-83",
+		"php-84",
 	];
 }
 

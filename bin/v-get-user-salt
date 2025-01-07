@@ -36,7 +36,8 @@ json_list() {
         "METHOD": "'$method'",
         "SALT": "'$salt'",
         "TIME": "'$time'",
-        "DATE": "'$date'"
+        "DATE": "'$date'",
+        "ROUND":"'$round'"
         }'
 	echo '}'
 }
@@ -45,17 +46,18 @@ json_list() {
 shell_list() {
 	echo "METHOD:         $method"
 	echo "SALT:           $salt"
+	echo "ROUND:          $round"
 }
 
 # PLAIN list function
 plain_list() {
-	echo -e "$method\t$salt"
+	echo -e "$method\t$salt\t$round"
 }
 
 # CSV list function
 csv_list() {
-	echo "METHOD,SALT"
-	echo "$method, $salt"
+	echo "METHOD,SALT,ROUND"
+	echo "$method, $salt, $round"
 }
 
 #----------------------------------------------------------#
@@ -81,6 +83,11 @@ shadow=$(grep "^$user:" /etc/shadow | cut -f 2 -d :)
 
 if echo "$shadow" | grep -qE '^\$[0-9a-z]+\$[^\$]+\$'; then
 	salt=$(echo "$shadow" | cut -f 3 -d \$)
+	round=""
+	if [[ "$salt" =~ ^rounds= ]]; then
+		round=$salt
+		salt=$(echo "$shadow" | cut -f 4 -d \$)
+	fi
 	method=$(echo "$shadow" | cut -f 2 -d \$)
 	if [ "$method" = "y" ]; then
 		method='yescrypt'

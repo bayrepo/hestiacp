@@ -145,13 +145,18 @@ function authenticate_user($user, $password, $twofa = "") {
 		} else {
 			$salt = $pam[$user]["SALT"];
 			$method = $pam[$user]["METHOD"];
+			$round = $pam[$user]["ROUND"];
 
 			if ($method == "md5") {
 				$hash = crypt($password, '$1$' . $salt . '$');
 			}
 			if ($method == "sha-512") {
-				$hash = crypt($password, '$6$rounds=5000$' . $salt . '$');
-				$hash = str_replace('$rounds=5000', "", $hash);
+				if ($round == "") {
+					$hash = crypt($password, '$6$rounds=5000$' . $salt . '$');
+					$hash = str_replace('$rounds=5000', "", $hash);
+				} else {
+					$hash = crypt($password, '$6$' . $round . '$' . $salt . '$');
+				}
 			}
 			if ($method == "yescrypt") {
 				$fp = tmpfile();

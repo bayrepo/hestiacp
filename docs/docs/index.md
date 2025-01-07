@@ -1,57 +1,62 @@
-# Documentation
+# Документация
 
-## Getting started
+## Начало работы
 
-- [Getting started](/docs/introduction/getting-started.md)
-- [Best practices](/docs/introduction/best-practices.md)
+- [С чего начать](/docs/introduction/getting-started.md)
+- [Рекомендации](/docs/introduction/best-practices.md)
 
-## User Guide
+## Инструкция пользователя
 
-- [Account](/docs/user-guide/account.md)
-- [Backups](/docs/user-guide/backups.md)
-- [Cron jobs](/docs/user-guide/cron-jobs.md)
-- [Databases](/docs/user-guide/databases.md)
+- [Аккаунт](/docs/user-guide/account.md)
+- [Резервные копии](/docs/user-guide/backups.md)
+- [Cron задачи](/docs/user-guide/cron-jobs.md)
+- [Базы данных](/docs/user-guide/databases.md)
 - [DNS](/docs/user-guide/dns.md)
-- [File manager](/docs/user-guide/file-manager.md)
-- [Mail domains](/docs/user-guide/mail-domains.md)
-- [Notifications](/docs/user-guide/notifications.md)
-- [Packages](/docs/user-guide/packages.md)
-- [Statistics](/docs/user-guide/statistics.md)
-- [Users](/docs/user-guide/users.md)
-- [Web domains](/docs/user-guide/web-domains.md)
+- [Менеджер файлов](/docs/user-guide/file-manager.md)
+- [Почтовые домены](/docs/user-guide/mail-domains.md)
+- [Оповещения](/docs/user-guide/notifications.md)
+- [Пакеты](/docs/user-guide/packages.md)
+- [Статистика](/docs/user-guide/statistics.md)
+- [Пользователи](/docs/user-guide/users.md)
+- [Веб домены](/docs/user-guide/web-domains.md)
 
-## Server administration
+## Администрирование сервера
 
-- [Backup & restore](/docs/server-administration/backup-restore.md)
-- [Configuration](/docs/server-administration/configuration.md)
-- [Customisation](/docs/server-administration/customisation.md)
-- [Databases & phpMyAdmin](/docs/server-administration/databases.md)
-- [DNS clusters & DNSSEC](/docs/server-administration/dns.md)
+- [Создание резервных копий и восстановление](/docs/server-administration/backup-restore.md)
+- [Конфигурация](/docs/server-administration/configuration.md)
+- [Настройка](/docs/server-administration/customisation.md)
+- [БД и phpMyAdmin](/docs/server-administration/databases.md)
+- [DNS кластеры & DNSSEC](/docs/server-administration/dns.md)
 - [Email](/docs/server-administration/email.md)
-- [File manager](/docs/server-administration/file-manager.md)
+- [Менеджер файлов](/docs/server-administration/file-manager.md)
 - [Firewall](/docs/server-administration/firewall.md)
-- [OS upgrades](/docs/server-administration/os-upgrades.md)
+- [Обновление ОС](/docs/server-administration/os-upgrades.md)
 - [Rest API](/docs/server-administration/rest-api.md)
-- [SSL certificates](/docs/server-administration/ssl-certificates.md)
-- [Web templates & caching](/docs/server-administration/web-templates.md)
+- [SSL сертификаты](/docs/server-administration/ssl-certificates.md)
+- [Веб шаблоны и кеш](/docs/server-administration/web-templates.md)
 - [Troubleshooting](/docs/server-administration/troubleshooting.md)
 
-## Contributing
+## Содействие в разработке
 
-- [Building Packages](/docs/contributing/building.md)
-- [Development](/docs/contributing/development.md)
-- [Documentation](/docs/contributing/documentation.md)
-- [Quick install app](/docs/contributing/quick-install-app.md)
-- [Testing](/docs/contributing/testing.md)
-- [Translations](/docs/contributing/translations.md)
+- [Сборка пакетов](/docs/contributing/building.md)
+- [Разработка](/docs/contributing/development.md)
+- [Документация](/docs/contributing/documentation.md)
+- [Установка приложений](/docs/contributing/quick-install-app.md)
+- [Тестирование](/docs/contributing/testing.md)
+- [Переводы](/docs/contributing/translations.md)
 
-## Community
+## Сообщество
 
 - [Hestia Nginx Cache](/docs/community/hestia-nginx-cache.md)
 - [Ioncube installer for Hestia](/docs/community/ioncube-hestia-installer.md)
 - [Install script generator](/docs/community/install-script-generator.md)
 
-## Reference
+## Ссылки
 
 - [API](/docs/reference/api.md)
 - [CLI](/docs/reference/cli.md)
+
+## Дополнения
+
+- [PHP cli селектор](/docs/extensions/php-cli-selector.md)
+- [Расширенные модули](/docs/extensions/extended-modules.md)

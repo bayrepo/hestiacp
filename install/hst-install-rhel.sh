@@ -679,7 +679,8 @@ echo
 # Installing Nginx repo
 
 echo "[ * ] NGINX"
-dnf config-manager --add-repo https://dev.brepo.ru/bayrepo/hestiacp/raw/branch/master/install/rpm/nginx/nginx.repo
+#dnf config-manager --add-repo https://dev.brepo.ru/bayrepo/hestiacp/raw/branch/master/install/rpm/nginx/nginx.repo
+#nginx will be installed from hestia.repo
 
 # Installing Remi PHP repo
 echo "[ * ] PHP"
@@ -705,7 +706,6 @@ dnf config-manager --add-repo https://dev.brepo.ru/bayrepo/hestiacp/raw/branch/m
 rpm --import https://repo.brepo.ru/repo/gpgkeys/repo.brepo.ru.pub
 check_result $? "rpm import brepo.ru GPG key failed"
 mkdir /var/cache/hestia-nginx/
-chown admin:admin /var/cache/hestia-nginx/
 
 # Installing PostgreSQL repo
 if [ "$postgresql" = 'yes' ]; then
@@ -1257,6 +1257,7 @@ $HESTIA/bin/v-change-user-shell admin nologin
 $HESTIA/bin/v-change-user-role admin admin
 $HESTIA/bin/v-change-user-language admin $lang
 $HESTIA/bin/v-change-sys-config-value 'POLICY_SYSTEM_PROTECTED_ADMIN' 'yes'
+chown admin:admin /var/cache/hestia-nginx/
 
 locale-gen "en_US.utf8" > /dev/null 2>&1
 
@@ -2025,7 +2026,7 @@ write_config_value "POLICY_SYSTEM_PROTECTED_ADMIN" "no"
 write_config_value "POLICY_SYSTEM_PASSWORD_RESET" "yes"
 write_config_value "POLICY_SYSTEM_HIDE_SERVICES" "no"
 write_config_value "POLICY_SYSTEM_ENABLE_BACON" "no"
-write_config_value "PLUGIN_APP_INSTALLER" "true"
+write_config_value "PLUGIN_APP_INSTALLER" "false"
 write_config_value "DEBUG_MODE" "no"
 write_config_value "ENFORCE_SUBDOMAIN_OWNERSHIP" "yes"
 write_config_value "USE_SERVER_SMTP" "false"
@@ -2072,25 +2073,19 @@ fi
 echo -e -n " 	Username:   admin
 	Password:   $displaypass
 
-Thank you for choosing Hestia Control Panel to power your full stack web server,
+Thank you for choosing Hestia Control Panel(RPM edition) to power your full stack web server,
 we hope that you enjoy using it as much as we do!
 
-Please feel free to contact us at any time if you have any questions,
-or if you encounter any bugs or problems:
-
-Documentation:  https://docs.hestiacp.com/
+Documentation:  https://hestiadocs.brepo.ru/
 Forum:          https://forum.hestiacp.com/
-GitHub:         https://www.github.com/hestiacp/hestiacp
+GitHub:         https://github.com/bayrepo/hestiacp or development storage https://dev.brepo.ru/bayrepo/hestiacp
 
 Note: Automatic updates are enabled by default. If you would like to disable them,
 please log in and navigate to Server > Updates to turn them off.
 
-Help support the Hestia Control Panel project by donating via PayPal:
-https://www.hestiacp.com/donate
-
 --
 Sincerely yours,
-The Hestia Control Panel development team
+The Hestia Control Panel(RPM edition) development team
 
 Made with love & pride by the open-source community around the world.
 " >> $tmpfile
@@ -2104,7 +2099,7 @@ cat $tmpfile
 rm -f $tmpfile
 
 # Add welcome message to notification panel
-$HESTIA/bin/v-add-user-notification admin 'Welcome to Hestia Control Panel!' '<p>You are now ready to begin adding <a href="/add/user/">user accounts</a> and <a href="/add/web/">domains</a>. For help and assistance, <a href="https://hestiacp.com/docs/" target="_blank">view the documentation</a> or <a href="https://forum.hestiacp.com/" target="_blank">visit our forum</a>.</p><p>Please <a href="https://github.com/hestiacp/hestiacp/issues" target="_blank">report any issues via GitHub</a>.</p><p class="u-text-bold">Have a wonderful day!</p><p><i class="fas fa-heart icon-red"></i> The Hestia Control Panel development team</p>'
+$HESTIA/bin/v-add-user-notification admin 'Добро пожаловать в HestiaCP' '<p>Перйдите по ссылке для добавления <a href="/add/user/">пользователя</a> и <a href="/add/web/">домена</a>. Для получения информации ознакомтесь с <a href="https://hestiadocs.brepo.ru/docs/" target="_blank">документацией</a>.</p><p class="u-text-bold">Желаем удачного дня!</p><p><i class="fas fa-heart icon-red"></i> Команда разработчиков HestiaCP</p>'
 
 # Clean-up
 # Sort final configuration file

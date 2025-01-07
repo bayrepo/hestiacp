@@ -26,4 +26,8 @@
 ```
 получаем файл ru/LC_MESSAGES/hestiacp.po.new
 
+## Обновление mo файла после добавления локализации
 
+```
+./hst_convert_po2mo.sh ru
+```

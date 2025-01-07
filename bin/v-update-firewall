@@ -185,7 +185,7 @@ if [ -n "$FIREWALL_EXTENSION" ]; then
 fi
 
 # Clean up and saving rules to the master iptables file
-if [ -d "/etc/sysconfig" ]; then
+if [ -d "/etc/sysconfig" ] && [ ! -e /etc/redhat-release ]; then
 	/sbin/iptables-save | sed -e 's/[[0-9]\+:[0-9]\+]/[0:0]/g' -e '/^-A fail2ban-[A-Z]\+ -s .\+$/d' > /etc/sysconfig/iptables
 else
 	/sbin/iptables-save | sed -e 's/[[0-9]\+:[0-9]\+]/[0:0]/g' -e '/^-A fail2ban-[A-Z]\+ -s .\+$/d' > /etc/iptables.rules

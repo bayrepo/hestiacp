@@ -1,16 +1,16 @@
-# Statistics
+# Статистика
 
-To access the statistics, click the **<i class="fas fa-fw fa-chart-line"></i> Statistics** button in the top left.
+Чтобы получить доступ к статистике, нажмите кнопку **<i class="fas fa-fw fa-chart-line"></i> Статистика** в левом верхнем углу.
 
-This page will show the current user’s statistics, grouped per month. Here are the available statistics:
+На этой странице будет показана статистика текущего пользователя, сгруппированная по месяцам. Вот доступная статистика:
 
-- Bandwidth usage
-- Assigned IP addresses
-- Disk usage, split by component
-- Number of web domains and aliases
-- Number of domains using SSL
-- Number of DNS zones and records
-- Number of mail domains and accounts
-- Number of databases
-- Number of cron jobs
-- Number of backups
+- Использование полосы пропускания
+- Назначенные IP-адреса
+- Использование диска, разделенное по компонентам
+- Количество веб-доменов и псевдонимов
+- Количество доменов, использующих SSL
+- Количество зон и записей DNS
+- Количество почтовых доменов и учетных записей
+- Количество баз данных
+- Количество заданий cron
+- Количество резервных копий

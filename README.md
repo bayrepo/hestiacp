@@ -1,35 +1,22 @@
-<h1 align="center"><a href="https://www.hestiacp.com/">Hestia Control Panel</a></h1>
-
-![HestiaCP Web Interface screenshot](https://storage.hestiacp.com/hestiascreen.png)
+<h1 align="center">Hestia Control Panel</h1>
 
 <h2 align="center">Lightweight and powerful control panel for the modern web</h2>
 
-<p align="center"><strong>Latest stable release:</strong> Version 1.8.2 | <a href="https://github.com/hestiacp/hestiacp/blob/release/CHANGELOG.md">View Changelog</a></p>
-
-<p align="center">
-	<a href="https://www.hestiacp.com/">HestiaCP.com</a> |
+<p align="center"><strong>Original project:</strong> | <a href="https://github.com/hestiacp/hestiacp/blob/release/CHANGELOG.md">View Changelog</a> |
+<a href="https://www.hestiacp.com/">HestiaCP.com</a> |
 	<a href="https://docs.hestiacp.com/">Documentation</a> |
 	<a href="https://forum.hestiacp.com/">Forum</a>
-	<br/><br/>
-	<a href="https://drone.hestiacp.com/hestiacp/hestiacp">
-		<img src="https://drone.hestiacp.com/api/badges/hestiacp/hestiacp/status.svg?ref=refs/heads/main" alt="Drone Status"/>
-	</a>
-	<a href="https://github.com/hestiacp/hestiacp/actions/workflows/lint.yml">
-		<img src="https://github.com/hestiacp/hestiacp/actions/workflows/lint.yml/badge.svg" alt="Lint Status"/>
-	</a>
+	<br/><br/></p>
+
+
+<p align="center">
+	<strong>RPM support project:</strong> |
+	<a href="https://hestiadocs.brepo.ru/">Documentation for version with RPM support</a>
 </p>
 
 ## **Welcome!**
 
 Hestia Control Panel is designed to provide administrators an easy to use web and command line interface, enabling them to quickly deploy and manage web domains, mail accounts, DNS zones, and databases from one central dashboard without the hassle of manually deploying and configuring individual components or services.
-
-## Donate
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ST87LQH2CHGLA)<br /><br />
-Bitcoin : bc1q48jt5wg5jaj8g9zy7c3j03cv57j2m2u5anlutu<br>
-Ethereum : 0xfF3Dd2c889bd0Ff73d8085B84A314FC7c88e5D51<br>
-Binance: bnb1l4ywvw5ejfmsgjdcx8jn5lxj7zsun8ktfu7rh8<br>
-Smart Chain: 0xfF3Dd2c889bd0Ff73d8085B84A314FC7c88e5D51<br>
 
 ## Features and Services
 
@@ -43,8 +30,11 @@ Smart Chain: 0xfF3Dd2c889bd0Ff73d8085B84A314FC7c88e5D51<br>
 
 ## Supported platforms and operating systems
 
-- **Debian:** 12, 11, or 10
-- **Ubuntu:** 22.04 LTS, 20.04 LTS
+- **MSVSphere:** 9
+- **AlmaLinux:** 9
+- **RockyLinux:** 9
+
+Currently stayed support of Debian and Ubuntu, but new functional will be available only for RPM based systems. For full supportin of Debian and Ubuntu use original [HestiaCP](https://github.com/hestiacp/hestiacp)
 
 **NOTES:**
 
@@ -76,7 +66,7 @@ wget https://dev.brepo.ru/bayrepo/hestiacp/raw/branch/master/install/hst-install
 If the download fails due to an SSL validation error, please be sure you've installed the ca-certificate package on your system - you can do this with the following command:
 
 ```bash
-apt-get update && apt-get install ca-certificates
+yum update
 ```
 
 ### Step 3: Run
@@ -97,41 +87,23 @@ You may specify a number of various flags during installation to only install th
 bash hst-install.sh -h
 ```
 
-Alternatively, You can use <https://hestiacp.com/install.html> which allows you to easily generate the installation command via GUI.
-
 ## How to upgrade an existing installation
 
-Automatic Updates are enabled by default on new installations of Hestia Control Panel and can be managed from **Server Settings > Updates**. To manually check for and install available updates, use the apt package manager:
+Automatic Updates are enabled by default on new installations of Hestia Control Panel and can be managed from **Server Settings > Updates**. To manually check for and install available updates, use the system package manager:
 
 ```bash
-apt-get update
-apt-get upgrade
+dnf update
 ```
 
 ## Issues & Support Requests
 
-- If you encounter a general problem while using Hestia Control Panel and need help, please [visit our forum](https://forum.hestiacp.com/) to search for potential solutions or post a new thread where community members can assist.
-- Bugs and other reproducible issues should be filed via GitHub by [creating a new issue report](https://github.com/hestiacp/hestiacp/issues) so that our developers can investigate further. Please note that requests for support will be redirected to our forum.
+- If you encounter a general problem while using Hestia Control Panel for RPM based system use [issue report](https://github.com/bayrepo/hestiacp/issues)
 
-**IMPORTANT: We _cannot_ provide support for requests that do not describe the troubleshooting steps that have already been performed, or for third-party applications not related to Hestia Control Panel (such as WordPress). Please make sure that you include as much information as possible in your forum posts or issue reports!**
-
-## Contributions
-
-If you would like to contribute to the project, please [read our Contribution Guidelines](https://github.com/hestiacp/hestiacp/blob/release/CONTRIBUTING.md) for a brief overview of our development process and standards.
+For original HestiaCP for Debian and Ubuntu use [original version](https://github.com/hestiacp/hestiacp):
 
 ## Copyright
 
-"Hestia Control Panel", "HestiaCP", and the Hestia logo are original copyright of hestiacp.com and the following restrictions apply:
-
-**You are allowed to:**
-
-- use the names "Hestia Control Panel", "HestiaCP", or the Hestia logo in any context directly related to the application or the project. This includes the application itself, local communities and news or blog posts.
-
-**You are not allowed to:**
-
-- sell or redistribute the application under the name "Hestia Control Panel", "HestiaCP", or similar derivatives, including the use of the Hestia logo in any brand or marketing materials related to revenue generating activities,
-- use the names "Hestia Control Panel", "HestiaCP", or the Hestia logo in any context that is not related to the project,
-- alter the name "Hestia Control Panel", "HestiaCP", or the Hestia logo in any way.
+See original copyright of [HestiaCP](https://github.com/hestiacp/hestiacp)
 
 ## License
 

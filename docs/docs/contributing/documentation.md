@@ -1,15 +1,15 @@
-# Contributing to Hestia’s documentation
+# Внесение вклада в документацию Hestia
 
-The documentation is built using [VitePress](https://vitepress.vuejs.org). There are a couple of requirements to contribute to it.
+Документация создана с использованием [VitePress](https://vitepress.vuejs.org). Для внесения вклада есть несколько требований.
 
-## Requirements
+## Требования
 
-- Node.js 16 or higher
-- A code editor with Vue and Markdown support. We suggest [Visual Studio Code](https://code.visualstudio.com).
+- Node.js 16 или выше
+- Редактор кода с поддержкой Vue и Markdown. Мы рекомендуем [Visual Studio Code](https://code.visualstudio.com).
 
-## Viewing your changes locally
+## Просмотр изменений локально
 
-1. Open the project folder in your terminal.
-2. If the dependencies are not installed yet, install them by running `npm install`.
-3. Run `npm run docs:dev`.
-4. Navigate to `http://localhost:5173` in your browser.
+1. Откройте папку проекта в терминале.
+2. Если зависимости еще не установлены, установите их, запустив `npm install`.
+3. Запустите `npm run docs:dev`.
+4. Перейдите по адресу `http://localhost:5173` в браузере.

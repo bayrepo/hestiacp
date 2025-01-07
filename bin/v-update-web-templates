@@ -50,9 +50,9 @@ for webtpl_folder in $(ls $HESTIA_INSTALL_DIR/templates/web/* -d 2> /dev/null | 
 	cp -rf "${webtpl_folder}" "${WEBTPL}/"
 done
 
-versions_list=$(ls -d /etc/php/*)
+versions_list=$(ls -d /etc/opt/remi/php*)
 for php_ver in $versions_list; do
-	[ ! -d "/etc/php/$php_ver/fpm/pool.d/" ] && continue
+	[ ! -d "$php_ver/fpm/pool.d/" ] && continue
 	cp -f $HESTIA_INSTALL_DIR/php-fpm/multiphp.tpl ${WEBTPL}/php-fpm/PHP-${php_ver/\./_}.tpl
 done
 
