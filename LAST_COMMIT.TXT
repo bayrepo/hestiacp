@@ -1,5 +1,5 @@
-commit be4171edb0b40245c08c4afd27aac0139f092026 (HEAD -> master, origin/master, origin/HEAD)
+commit 95a0e8727164d67d18a875cdd5c8b3cac8da1cab (HEAD -> devel, origin/master, origin/devel, origin/HEAD, master)
 Author: Alexey Berezhok <a@bayrepo.ru>
-Date:   Sat Aug 31 11:28:51 2024 +0300
+Date:   Tue Jan 7 15:27:17 2025 +0300
 
-    Add requires to selector
+    Added sha-512 authorization fix
