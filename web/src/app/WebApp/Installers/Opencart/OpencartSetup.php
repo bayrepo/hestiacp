@@ -34,7 +34,7 @@ class OpencartSetup extends BaseSetup {
 				"template" => "opencart",
 			],
 			"php" => [
-				"supported" => ["7.4", "8.0", "8.1", "8.2"],
+				"supported" => ["74", "80", "81", "82"],
 			],
 		],
 	];

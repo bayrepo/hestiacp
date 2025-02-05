@@ -60,3 +60,4 @@
 
 - [PHP cli селектор](/docs/extensions/php-cli-selector.md)
 - [Расширенные модули](/docs/extensions/extended-modules.md)
+- [Настройка Local PHP](/docs/extensions/local-php.md)

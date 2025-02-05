@@ -1,110 +1,102 @@
-<h1 align="center">Hestia Control Panel</h1>
+<h1 align="center">Hestia Control Panel (RPM Edition)</h1>
 
-<h2 align="center">Lightweight and powerful control panel for the modern web</h2>
+<h2 align="center">Легкая и мощная панель управления для современного сервера. Организуй собственный сервер в два счета.</h2>
 
-<p align="center"><strong>Original project:</strong> | <a href="https://github.com/hestiacp/hestiacp/blob/release/CHANGELOG.md">View Changelog</a> |
-<a href="https://www.hestiacp.com/">HestiaCP.com</a> |
-	<a href="https://docs.hestiacp.com/">Documentation</a> |
-	<a href="https://forum.hestiacp.com/">Forum</a>
-	<br/><br/></p>
-
+<p align="center"><strong>Ссылки на оригинальный проект для Ubuntu и Debian:</strong> | <a href="https://www.hestiacp.com/">HestiaCP.com</a> |
+</p>
 
 <p align="center">
-	<strong>RPM support project:</strong> |
+	<strong>Информация по RPM Edition сборке:</strong> |
 	<a href="https://hestiadocs.brepo.ru/">Documentation for version with RPM support</a>
 </p>
 
-## **Welcome!**
+Hestia Control Panel (RPM Edition) поддерживается и дорабатывается отдельной командой связанной с RPM Based операционными системаи, с момента форка от оригинального, данный проект включил изменения, которые не позволяют просто подтягивать доработки из оригинального проекта (и не все доработки Ubuntu и Debian нужны в RPM Based системах). Поэтому все изменения из оригинальной Hestia CP не подтягиваются автоматически, поэтому о найденных ошибках в текущей реализации необходимо репортить в текущий проект.
 
-Hestia Control Panel is designed to provide administrators an easy to use web and command line interface, enabling them to quickly deploy and manage web domains, mail accounts, DNS zones, and databases from one central dashboard without the hassle of manually deploying and configuring individual components or services.
+Ниже общее описание панели.
 
-## Features and Services
+## **Добро пожаловать!**
 
-- Apache2 and NGINX with PHP-FPM
-- Multiple PHP versions (5.6 - 8.2, 8.0 as default)
-- DNS Server (Bind) with clustering capabilities
-- POP/IMAP/SMTP mail services with Anti-Virus, Anti-Spam, and Webmail (ClamAV, SpamAssassin, Sieve, Roundcube)
-- MariaDB/MySQL and/or PostgreSQL databases
-- Let's Encrypt SSL support with wildcard certificates
-- Firewall with brute-force attack detection and IP lists (iptables, fail2ban, and ipset).
+Панель управления Hestia предназначена для предоставления администраторам простого в использовании веб-интерфейса и интерфейса командной строки, что позволяет им быстро развертывать веб-домены, почтовые аккаунты, зоны DNS и базы данных и управлять ими с единой центральной панели без необходимости вручную развертывать и настраивать отдельные компоненты или сервисы.
 
-## Supported platforms and operating systems
+## Функции и сервисы
+
+- Apache2 и NGINX с PHP-FPM
+- Несколько версий PHP (7.4 — 8.2, 8.0 по умолчанию, как из Remi репозитория, так и дополнительная самостоятельная сборка PHP пакетов)
+- DNS-сервер (Bind)
+- почтовые сервисы POP/IMAP/SMTP с защитой от вирусов, спама и веб-почтой (ClamAV, SpamAssassin, Sieve, Roundcube)
+- базы данных MariaDB/MySQL и/или PostgreSQL
+- поддержка SSL Let's Encrypt
+- брандмауэр с защитой от атак методом перебора и списками IP (iptables, fail2ban и ipset).
+
+## Поддерживаемые ОС
 
 - **MSVSphere:** 9
 - **AlmaLinux:** 9
 - **RockyLinux:** 9
 
-Currently stayed support of Debian and Ubuntu, but new functional will be available only for RPM based systems. For full supportin of Debian and Ubuntu use original [HestiaCP](https://github.com/hestiacp/hestiacp)
+**ПРИМЕЧАНИЯ:**
 
-**NOTES:**
+- Панель управления Hestia не поддерживает 32-разрядные операционные системы!
+- Панель управления Hestia в сочетании с OpenVZ 7 или более ранними версиями может иметь проблемы с DNS и/или брандмауэром. Если вы используете виртуальный частный сервер, мы настоятельно рекомендуем использовать что-то на основе KVM или LXC!
 
-- Hestia Control Panel does not support 32 bit operating systems!
-- Hestia Control Panel in combination with OpenVZ 7 or lower might have issues with DNS and/or firewall. If you use a Virtual Private Server we strongly advice you to use something based on KVM or LXC!
+## Установка панели управления Hestia
 
-## Installing Hestia Control Panel
+- **ПРИМЕЧАНИЕ:** для обеспечения правильной работы необходимо установить панель управления Hestia поверх новой операционной системы.
 
-- **NOTE:** You must install Hestia Control Panel on top of a fresh operating system installation to ensure proper functionality.
+Несмотря на то, что мы приложили все усилия, чтобы сделать процесс установки и интерфейс панели управления максимально удобными (даже для новых пользователей), предполагается, что вы уже обладаете некоторыми базовыми знаниями и пониманием того, как настроить сервер Linux, прежде чем продолжить.
 
-While we have taken every effort to make the installation process and the control panel interface as friendly as possible (even for new users), it is assumed that you will have some prior knowledge and understanding in the basics how to set up a Linux server before continuing.
+### Шаг 1. Войдите в систему
 
-### Step 1: Log in
-
-To start the installation, you will need to be logged in as **root** or a user with super-user privileges. You can perform the installation either directly from the command line console or remotely via SSH:
+Чтобы начать установку, вам нужно войти в систему как **root** или пользователь с правами суперпользователя. Вы можете выполнить установку непосредственно из командной строки или удалённо через SSH:
 
 ```bash
 ssh root@your.server
 ```
 
-### Step 2: Download
+### Шаг 2. Загрузка
 
-Download the installation script for the latest release:
+Загрузите установочный скрипт для последней версии:
 
 ```bash
 wget https://dev.brepo.ru/bayrepo/hestiacp/raw/branch/master/install/hst-install.sh
 ```
 
-If the download fails due to an SSL validation error, please be sure you've installed the ca-certificate package on your system - you can do this with the following command:
+### Шаг 3: Запустите
 
-```bash
-yum update
-```
-
-### Step 3: Run
-
-To begin the installation process, simply run the script and follow the on-screen prompts:
+Чтобы начать процесс установки, просто запустите скрипт и следуйте инструкциям на экране:
 
 ```bash
 bash hst-install.sh
 ```
 
-You will receive a welcome email at the address specified during installation (if applicable) and on-screen instructions after the installation is completed to log in and access your server.
+После завершения установки вы получите приветственное электронное письмо на адрес, указанный во время установки (если применимо), и инструкции на экране для входа в систему и доступа к вашему серверу.
 
-### Custom installation
+### Пользовательская установка
 
-You may specify a number of various flags during installation to only install the features in which you need. To view a list of available options, run:
+Во время установки вы можете указать несколько различных флагов, чтобы установить только те функции, которые вам нужны. Чтобы просмотреть список доступных опций, выполните:
 
 ```bash
 bash hst-install.sh -h
 ```
 
-## How to upgrade an existing installation
+## Как обновить существующую установку
 
-Automatic Updates are enabled by default on new installations of Hestia Control Panel and can be managed from **Server Settings > Updates**. To manually check for and install available updates, use the system package manager:
+Автоматические обновления включены по умолчанию в новых установках Hestia Control Panel, и ими можно управлять из **Server Settings > Updates**. Чтобы вручную проверить наличие доступных обновлений и установить их, воспользуйтесь системным менеджером пакетов:
 
 ```bash
 dnf update
 ```
 
-## Issues & Support Requests
+## Проблемы и запросы в службу поддержки
 
-- If you encounter a general problem while using Hestia Control Panel for RPM based system use [issue report](https://github.com/bayrepo/hestiacp/issues)
+- Если вы столкнулись с общей проблемой при использовании Hestia Control Panel для системы на основе RPM, воспользуйтесь [отчётом о проблеме](https://github.com/bayrepo/hestiacp-rpm/issues)
 
-For original HestiaCP for Debian and Ubuntu use [original version](https://github.com/hestiacp/hestiacp):
+ Для оригинальной HestiaCP для Debian и Ubuntu используйте [оригинальную версию](https://github.com/hestiacp/hestiacp):
 
-## Copyright
+## Авторские права
 
-See original copyright of [HestiaCP](https://github.com/hestiacp/hestiacp)
+Ознакомьтесь с оригинальными авторскими правами [HestiaCP](https://github.com/hestiacp/hestiacp)
 
-## License
+## Лицензия
 
-Hestia Control Panel is licensed under [GPL v3](https://github.com/hestiacp/hestiacp/blob/release/LICENSE) license, and is based on the [VestaCP](https://vestacp.com/) project.<br>
+Панель управления Hestia распространяется по лицензии [GPL v3](https://github.com/hestiacp/hestiacp/blob/release/LICENSE) и основана на проекте [VestaCP](https://vestacp.com/).<br>

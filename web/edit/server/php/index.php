@@ -11,10 +11,31 @@ if ($_SESSION["userContext"] != "admin") {
 	exit();
 }
 
+$php_version = "default";
+if (!empty($_GET["vers"])){
+	$php_version_tmp = trim(urldecode($_GET["vers"]));
+	if (preg_match('/^\d+$/', $php_version_tmp) === 1){
+		exec(HESTIA_CMD . "v-list-sys-php json", $output, $return_var);
+		$php = json_decode(implode("", $output), true);
+		unset($output);
+		foreach ($php as $version) {
+			if ($version == $php_version_tmp){
+				$php_version = $php_version_tmp;
+				break;
+			}
+		}
+	}
+}
+
 // Check POST request
 if (!empty($_POST["save"])) {
 	// Check token
 	verify_csrf($_POST);
+
+	$php_save = "php";
+	if ($php_version != "default"){
+		$php_save .= $php_version;
+	}
 
 	// Set restart flag
 	$v_restart = "yes";
@@ -30,7 +51,7 @@ if (!empty($_POST["save"])) {
 		fwrite($fp, str_replace("\r\n", "\n", $_POST["v_config"]));
 		fclose($fp);
 		exec(
-			HESTIA_CMD . "v-change-sys-service-config " . $new_conf . " php " . $v_restart,
+			HESTIA_CMD . "v-change-sys-service-config " . $new_conf . " " . $php_save . " " . $v_restart,
 			$output,
 			$return_var,
 		);
@@ -46,7 +67,7 @@ if (!empty($_POST["save"])) {
 }
 
 // List config
-exec(HESTIA_CMD . "v-list-sys-php-config json", $output, $return_var);
+exec(HESTIA_CMD . "v-list-sys-php-config " . $php_version . " json", $output, $return_var);
 $data = json_decode(implode("", $output), true);
 unset($output);
 $v_memory_limit = $data["CONFIG"]["memory_limit"];

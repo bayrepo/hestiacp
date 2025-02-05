@@ -8,7 +8,7 @@ class NextcloudSetup extends BaseSetup {
 	protected $appInfo = [
 		"name" => "Nextcloud",
 		"group" => "cloud",
-		"enabled" => true,
+		"enabled" => false,
 		"version" => "latest",
 		"thumbnail" => "nextcloud-thumb.png",
 	];
@@ -29,7 +29,7 @@ class NextcloudSetup extends BaseSetup {
 				"template" => "owncloud",
 			],
 			"php" => [
-				"supported" => ["8.0", "8.1", "8.2"],
+				"supported" => ["80", "81", "82"],
 			],
 		],
 	];

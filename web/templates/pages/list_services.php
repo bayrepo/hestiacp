@@ -126,15 +126,16 @@
 					$spnd_icon_class = 'icon-green';
 					$state_icon = 'fa-circle-minus icon-red';
 				}
+				$vers="";
 				if (in_array($key, $phpfpm)){
 					$edit_url="php";
+					preg_match('/\d+/', $key, $matches);
+					$vers=$matches[0] ?? '82';;
 				} else {
 					$edit_url=$key;
 				}
 				if (in_array($key, $clamav_names)){
 					$edit_url="clamav-daemon";
-				} else {
-					$edit_url=$key;
 				}
 
 				$cpu = $data[$key]['CPU'] / 10;
@@ -155,7 +156,11 @@
 				<div class="units-table-cell units-table-heading-cell u-text-bold">
 					<span class="u-hide-desktop"><?= _("Service") ?>:</span>
 					<i class="fas <?= $state_icon ?> u-mr5"></i>
-					<a href="/edit/server/<? echo $edit_url ?>/" title="<?= _("Edit") ?>: <?= $key ?>">
+					<a href="/edit/server/<? echo $edit_url ?>/<?php
+						if ($vers!=""){
+							echo "?vers=" . urlencode($vers);
+						} 
+						?>" title="<?= _("Edit") ?>: <?= $key ?>">
 						<?= $key ?>
 					</a>
 				</div>
@@ -164,7 +169,11 @@
 						<li class="units-table-row-action shortcut-enter" data-key-action="href">
 							<a
 								class="units-table-row-action-link"
-								href="/edit/server/<? echo $edit_url ?>/"
+								href="/edit/server/<? echo $edit_url ?>/<?php
+								if ($vers!=""){
+									echo "?vers=". urlencode($vers);
+								} 
+								?>"
 								title="<?= _("Edit") ?>"
 							>
 								<i class="fas fa-pencil icon-orange"></i>

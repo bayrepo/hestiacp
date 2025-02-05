@@ -123,6 +123,9 @@ if (!empty($installer)) {
 				$appInstallerInfo = $app_installer->info();
 				$supported = false;
 				$supported_versions = [];
+				if ($appInstallerInfo["enabled"] != true) {
+					continue;
+				}
 				foreach ($php_versions as $version) {
 					if (in_array($version, $appInstallerInfo["php_support"])) {
 						$supported = true;

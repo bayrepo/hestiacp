@@ -4,45 +4,36 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd5fba3223573f480531e48f5e3ce14e",
+    "content-hash": "134682d586741e300ffeae0ccfb99351",
     "packages": [
         {
-            "name": "hestiacp/phpquoteshellarg",
-            "version": "v1.0.2",
+            "name": "brepo/phpquoteshellarg",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/hestiacp/phpquoteshellarg.git",
-                "reference": "7fd1a3a648cdc39a3fe2aab78a1a3a0267f92f49"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hestiacp/phpquoteshellarg/zipball/7fd1a3a648cdc39a3fe2aab78a1a3a0267f92f49",
-                "reference": "7fd1a3a648cdc39a3fe2aab78a1a3a0267f92f49",
-                "shasum": ""
+                "url": "https://dev.brepo.ru/brepo/phpquoteshellarg.git",
+                "reference": "943298a03acc3ff7a89eff948534f90d1c6ba950"
             },
             "require": {
-                "php": ">=7.2"
+                "php": ">=8.0"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
                     "src/Hestiacp/quoteshellarg/quoteshellarg.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Unlicense"
             ],
             "description": "Improved escape shell arguments for support of special charactars",
-            "homepage": "https://github.com/hestiacp",
+            "homepage": "https://dev.brepo.ru/bayrepo/hestiacp",
             "keywords": [
                 "escapeshellarg",
                 "quoteshellarg"
             ],
-            "support": {
-                "source": "https://github.com/hestiacp/phpquoteshellarg/tree/v1.0.2"
-            },
-            "time": "2023-07-23T09:16:27+00:00"
+            "time": "2025-02-03T20:07:58+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -209,10 +200,13 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "brepo/phpquoteshellarg": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }
+

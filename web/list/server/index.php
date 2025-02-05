@@ -126,6 +126,7 @@ $phpfpm = [];
 foreach ($php as $version) {
 	$phpfpm[] = "php" . $version . "-fpm";
 	$phpfpm[] = "php" . $version . "-php-fpm";
+	$phpfpm[] = "brepo-php-fpm" . $version;
 }
 $clamav_names = [];
 $clamav_names[] = "clamav-daemon";

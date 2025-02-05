@@ -8,7 +8,7 @@ class SymfonySetup extends BaseSetup {
 	protected $appInfo = [
 		"name" => "Symfony",
 		"group" => "framework",
-		"enabled" => true,
+		"enabled" => false,
 		"version" => "latest",
 		"thumbnail" => "symfony-thumb.png",
 	];
@@ -26,7 +26,7 @@ class SymfonySetup extends BaseSetup {
 				"template" => "symfony4-5",
 			],
 			"php" => [
-				"supported" => ["8.1", "8.2"],
+				"supported" => ["81", "82"],
 			],
 		],
 	];

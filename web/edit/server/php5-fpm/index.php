@@ -36,7 +36,7 @@ if (!empty($_POST["save"])) {
 		);
 		check_return_code($return_var, $output);
 		unset($output);
-		unlink($new_conf);
+		//unlink($new_conf);
 	}
 
 	// Set success message
@@ -46,7 +46,7 @@ if (!empty($_POST["save"])) {
 }
 
 // List config
-exec(HESTIA_CMD . "v-list-sys-php-config json", $output, $return_var);
+exec(HESTIA_CMD . "v-list-sys-php-config default json", $output, $return_var);
 $data = json_decode(implode("", $output), true);
 unset($output);
 $v_memory_limit = $data["CONFIG"]["memory_limit"];

@@ -38,20 +38,20 @@ abstract class BaseSetup implements InstallerInterface {
 	}
 
 	public function info() {
-		$this->appInfo["enabled"] = true;
+		//$this->appInfo["enabled"] = true;
 		if (isset($this->config["server"]["php"]["supported"])) {
 			$this->appInfo["php_support"] = $this->config["server"]["php"]["supported"];
 		} else {
 			$this->appInfo["php_support"] = [
-				"5.6",
-				"7.0",
-				"7.1",
-				"7.2",
-				"7.3",
-				"7.4",
-				"8.0",
-				"8.1",
-				"8.2",
+				"56",
+				"70",
+				"71",
+				"72",
+				"73",
+				"74",
+				"80",
+				"81",
+				"82",
 			];
 		}
 		return $this->appInfo;

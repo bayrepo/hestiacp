@@ -8,7 +8,7 @@ class PrestashopSetup extends BaseSetup {
 	protected $appInfo = [
 		"name" => "Prestashop",
 		"group" => "ecommerce",
-		"enabled" => true,
+		"enabled" => false,
 		"version" => "8.1.0",
 		"thumbnail" => "prestashop-thumb.png",
 	];
@@ -35,7 +35,7 @@ class PrestashopSetup extends BaseSetup {
 				"template" => "prestashop",
 			],
 			"php" => [
-				"supported" => ["8.0", "8.1"],
+				"supported" => ["80", "81"],
 			],
 		],
 	];

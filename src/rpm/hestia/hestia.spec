@@ -2,7 +2,7 @@
 %global _hardened_build 1
 
 Name:              hestia
-Version:           1.9.3
+Version:           1.9.5
 Release:           1%{dist}
 Summary:           Hestia Control Panel
 Group:             System Environment/Base
@@ -184,6 +184,14 @@ fi
 %{_tmpfilesdir}/%{name}.conf
 
 %changelog
+* Sun Jan 19 2025 Alexey Berezhok <a@bayrepo.ru> - 1.9.5-1
+- Added support alternative php
+- Fixed php.ini editing
+- Restore supporting some webapplications setup
+
+* Sat Jan 11 2025 Alexey Berezhok <a@bayrepo.ru> - 1.9.4-1
+- Added quota support in rpm for xfs and ext4
+
 * Sun Jan 05 2025 Alexey Berezhok <a@bayrepo.ru> - 1.9.3-1
 - Added minor fixes
 - Added authorization fix for rhel 9.5

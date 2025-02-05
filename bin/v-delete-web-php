@@ -32,26 +32,20 @@ if [ -z "$WEB_BACKEND" ]; then
 fi
 
 # Set file locations
-if [ -f /etc/redhat-release ]; then
-	php_fpm="/usr/lib/systemd/system/php$version-php-fpm.service"
+php_fpm=""
+if [ "$LOCAL_PHP" == "yes" ]; then
+	php_fpm="/usr/lib/systemd/system/brepo-php-fpm$version.service"
 else
-	php_fpm="/etc/init.d/php$version-fpm"
+	php_fpm="/usr/lib/systemd/system/php$version-php-fpm.service"
 fi
 
 # Verify php version format
-if [ -f /etc/redhat-release ]; then
-	if [[ ! $version =~ ^[0-9][0-9]+ ]]; then
-		echo "The PHP version format is invalid, it should look like [0-9][0-9]."
-		echo "Example: 70, 74, 80"
-		exit "$E_INVALID"
-	fi
-else
-	if [[ ! $version =~ ^[0-9].[0-9]+ ]]; then
-		echo "The PHP version format is invalid, it should look like [0-9].[0-9]."
-		echo "Example: 7.0, 7.4, 8.0"
-		exit "$E_INVALID"
-	fi
+if [[ ! $version =~ ^[0-9][0-9]+ ]]; then
+	echo "The PHP version format is invalid, it should look like [0-9][0-9]."
+	echo "Example: 70, 74, 80"
+	exit "$E_INVALID"
 fi
+
 
 # Remove backend template
 [ -f $HESTIA/data/templates/web/php-fpm/PHP-${version/\./_}.tpl ] && rm -f $HESTIA/data/templates/web/php-fpm/PHP-${version/\./_}.tpl
@@ -70,38 +64,33 @@ check_hestia_demo_mode
 #                       Action                             #
 #----------------------------------------------------------#
 
-mph="php$version-common php$version-mbstring php$version-bcmath php$version-cli php$version-curl
- php$version-fpm php$version-gd php$version-intl php$version-mysql
- php$version-soap php$version-xml php$version-zip php$version-mbstring
- php$version-json php$version-bz2 php$version-pspell php$version-imagick php$version-pgsql
- php$version-imap php$version-ldap"
-
- if [ -f /etc/redhat-release ]; then
-  # Packages in Remi repo have names with php$version-php- prefixes
-  mph="php$version-php-fpm php$version-php-cgi php$version-php-mysqlnd php$version-php-pgsql 
-       php$version-php-pdo php$version-php-common php$version-php-pecl-imagick php$version-php-imap 
-       php$version-php-ldap php$version-php-pecl-apcu php$version-php-pecl-zip php$version-php-cli 
-       php$version-php-opcache php$version-php-xml php$version-php-gd php$version-php-intl 
-       php$version-php-mbstring php$version-php-pspell php$version-php-readline"
-fi
-
-# Check is version is 7.1 or below to add mcrypt
-if [ -f /etc/redhat-release ]; then
-if [[ $(echo "$version 72" | awk '{print ($1 < $2)}') == 1 ]]; then
-	mph="$mph php$version-php-mcrypt"
-fi
+mph=""
+if [ "$LOCAL_PHP" == "yes" ]; then
+	mph="brepo-php$version brepo-php$version-fpm"
 else
-if [[ $(echo "$version 7.2" | awk '{print ($1 < $2)}') == 1 ]]; then
-	mph="$mph php$version-mcrypt"
-fi
+	mph="php$version-common php$version-mbstring php$version-bcmath php$version-cli php$version-curl
+	php$version-fpm php$version-gd php$version-intl php$version-mysql
+	php$version-soap php$version-xml php$version-zip php$version-mbstring
+	php$version-json php$version-bz2 php$version-pspell php$version-imagick php$version-pgsql
+	php$version-imap php$version-ldap"
+
+	# Packages in Remi repo have names with php$version-php- prefixes
+	mph="php$version-php-fpm php$version-php-cgi php$version-php-mysqlnd php$version-php-pgsql 
+		php$version-php-pdo php$version-php-common php$version-php-pecl-imagick php$version-php-imap 
+		php$version-php-ldap php$version-php-pecl-apcu php$version-php-pecl-zip php$version-php-cli 
+		php$version-php-opcache php$version-php-xml php$version-php-gd php$version-php-intl 
+		php$version-php-mbstring php$version-php-pspell php$version-php-readline"
+
+
+	# Check is version is 7.1 or below to add mcrypt
+	if [[ $(echo "$version 72" | awk '{print ($1 < $2)}') == 1 ]]; then
+		mph="$mph php$version-php-mcrypt"
+	fi
 fi
 
 # Purge php packages
-if [ -f '/etc/redhat-release' ]; then
-	dnf remove -y $mph > /dev/null 2>&1 &
-else
-	apt-get -y purge $mph > /dev/null 2>&1 &
-fi
+dnf remove -y $mph > /dev/null 2>&1 &
+
 BACK_PID=$!
 
 # Check if package removal is done, print a spinner
@@ -119,40 +108,36 @@ echo
 # Check if installation was successfully
 if [ -f "$php_fpm" ]; then
 	echo "ERROR: Uninstallation failed, please run the following command manually for debugging:"
-	if [ -f '/etc/redhat-release' ]; then
-		echo "dnf remove $mph"
-	else
-		echo "apt-get purge $mph"
-	fi
+	echo "dnf remove $mph"
 	exit 1
 fi
 
 # Cleanup php folder
-if [ -f '/etc/redhat-release' ]; then
-	[[ -d /etc/opt/remi/php$version ]] && rm -rf "/etc/opt/remi/php$version"
+if [ "$LOCAL_PHP" == "yes" ]; then
+	[[ -d /opt/brepo/php$version ]] && rm -rf "/opt/brepo/php$version"
 else
-	[[ -d /etc/php/$version ]] && rm -rf "/etc/php/$version"
+	[[ -d /etc/opt/remi/php$version ]] && rm -rf "/etc/opt/remi/php$version"
 fi
 
-if [ -f '/etc/redhat-release' ]; then
+if [ "$LOCAL_PHP" == "yes" ]; then
+	if [ "$WEB_BACKEND" = "php-fpm" ]; then
+		conf=$(find /opt/brepo/php* -name www.conf)
+		# Check if www.conf exists
+		if [ -z "$conf" ]; then
+			# If not grab the "last php version
+			last=$($BIN/v-list-sys-php "shell" | tail -n1)
+			cp -f $HESTIA/install/rpm/php-fpm/www.conf /opt/brepo/php$last/etc/php-fpm.d/www.conf
+			$BIN/v-restart-web-backend
+		fi
+	fi
+else
 	if [ "$WEB_BACKEND" = "php-fpm" ]; then
 		conf=$(find /etc/opt/remi/php* -name www.conf)
 		# Check if www.conf exists
 		if [ -z "$conf" ]; then
 			# If not grab the "last php version
 			last=$($BIN/v-list-sys-php "shell" | tail -n1)
-			cp -f $HESTIA/install/rpm/php-fpm/www.conf /etc/opt/remi/php$version/php-fpm.d/www.conf
-			$BIN/v-restart-web-backend
-		fi
-	fi
-else
-	if [ "$WEB_BACKEND" = "php-fpm" ]; then
-		conf=$(find /etc/php* -name www.conf)
-		# Check if www.conf exists
-		if [ -z "$conf" ]; then
-			# If not grab the "last php version
-			last=$($BIN/v-list-sys-php "shell" | tail -n1)
-			cp -f $HESTIA/install/deb/php-fpm/www.conf /etc/php/$last/fpm/pool.d/www.conf
+			cp -f $HESTIA/install/rpm/php-fpm/www.conf /etc/opt/remi/php$last/php-fpm.d/www.conf
 			$BIN/v-restart-web-backend
 		fi
 	fi

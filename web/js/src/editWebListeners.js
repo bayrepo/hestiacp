@@ -73,7 +73,7 @@ export default function handleEditWebListeners() {
 			}
 		});
 	}
-	if (proxyTemplateSelect.value === "srvproxy") {
+	if (proxyTemplateSelect !== null && proxyTemplateSelect !== undefined && proxyTemplateSelect.value === "srvproxy") {
 		proxyConnect.style.display = 'block';
 	}
 }

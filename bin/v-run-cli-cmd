@@ -43,6 +43,15 @@ if [ "$clicmd" = "wp" ]; then
 	clicmd="$homedir/.wp-cli/wp"
 fi
 
+if [[ "$clicmd" =~ php[0-9][0-9] ]]; then
+	php_ver=$(echo "$clicmd" | grep -oP "\d+")
+	if [ "$LOCAL_PHP" == "yes" ]; then
+		clicmd="/opt/brepo/php${php_ver}/bin/php"
+	else
+		clicmd="/usr/bin/php${php_ver}"
+	fi
+fi
+
 if [ -z "$(which "$clicmd")" ]; then
 	check_result "$E_NOTEXIST" "Cli command does not exist $clicmd"
 fi
@@ -61,15 +70,6 @@ if [ "$basecmd" != 'ps' -a \
 	"$basecmd" != 'egrep' -a \
 	"$basecmd" != 'sed' -a \
 	"$basecmd" != 'cat' -a \
-	"$basecmd" != 'php5.6' -a \
-	"$basecmd" != 'php7.0' -a \
-	"$basecmd" != 'php7.1' -a \
-	"$basecmd" != 'php7.2' -a \
-	"$basecmd" != 'php7.3' -a \
-	"$basecmd" != 'php7.4' -a \
-	"$basecmd" != 'php8.0' -a \
-	"$basecmd" != 'php8.1' -a \
-	"$basecmd" != 'php8.2' -a \
 	"$basecmd" != 'php' -a \
 	"$basecmd" != "wp" -a \
 	"$basecmd" != 'composer' ]; then

@@ -2,7 +2,7 @@
 # info: action with extended modules
 # options: MODULE_ID [MODULE_RELATED_COMMNDS]
 #
-# example: v-ext-modules list json
+# example: v-ext-modules passenger_manager list json
 #
 # This function enables and disables additional modules
 

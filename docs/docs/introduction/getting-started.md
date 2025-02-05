@@ -101,6 +101,7 @@ bash hst-install.sh -h
   -l, --lang              Default language                      default: en
   -y, --interactive       Interactive install        [yes|no]   default: yes
   -I, --nopublicip        Use local ip               [yes|no]   default: yes
+  -u, --uselocalphp       Use PHP from local repo    [yes|no]   default: yes
   -s, --hostname          Set hostname
   -e, --email             Set admin email
   -p, --password          Set admin password
@@ -118,14 +119,14 @@ bash hst-install.sh \
 	--hostname host.domain.tld \
 	--email email@domain.tld \
 	--password p4ssw0rd \
-	--lang fr \
+	--lang ru \
 	--apache no \
 	--named no \
 	--clamav no \
 	--spamassassin no
 ```
 
-Эта команда установит Hestia на французском с такой конфигурацией:
+Эта команда установит Hestia на русском с такой конфигурацией:
 
 - Nginx веб сервер
 - PHP-FPM сервер приложений
@@ -140,3 +141,11 @@ bash hst-install.sh \
 К настоящему моменту у вас должна быть установлена ​​Hestia на вашем сервере. Вы готовы добавлять новых пользователей, чтобы вы (или они) могли добавлять новые веб-сайты на вашем сервере.
 
 Чтобы получить доступ к панели управления, перейдите по адресу `https://host.domain.tld:8083` или `http://your.public.ip.address:8083`
+
+## Расширенные опции RPM версии
+
+Данная реадкция HestiaCP RPM Edition включает дополнительные оции такие как:
+
+- `-I, --nopublicip` - если установлена данная опция, то установщик панели не получает внешний IP адрес сервера, где контрольная панель устанавливается (на случай если ваш сервер за NAT). Данную опцию можно включать, если у вас на сервере публичный IP или необходима внутрисетевая установка без внешнего доступа.
+
+- `-u, --uselocalphp` - включить установку пакетов PHP из того-же репозитория, откуда ставится HestiaCP RPM Edition. Если не включать данную опцию, то PHP пакеты будут установлены из репозитория Remi. Если включить, то будет произведена так называемая установка локальных пакетов. Есть отличия в способе упаковке Local PHP и Remi PHP. Если сервера требуется расширенный набор PHP из Remi репозитория, то данную опцию лучше отключить, т.е задать `--uselocalphp no`. Local PHP более простая сборка с меньшим числом поддерживаемых модулей PHP, но подходит для большинства конфигураций CMS и имеет [страницу настройки подключаемых модулей](/docs/extensions/local-php.md)

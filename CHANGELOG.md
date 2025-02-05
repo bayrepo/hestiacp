@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.9.2.rpm] - Alpha release
+## [1.9.5.rpm] - Release
+
+- Added support installation of alternative php not only remi
+- Fixed separate edition of php.ini in multiphp mode
+
+## [1.9.4.rpm] - Release
+
+- Fixed sha-512 auth in hestiacp
+- Added quota support for rpm based os
+
+## [1.9.2.rpm] - Release
 
 - Forked from 1.8.6 alpha and reworked for rpm based systems support
 - Added passenger support (https://hestiadocs.brepo.ru/docs/extensions/extended-modules.html#passenger-manager)

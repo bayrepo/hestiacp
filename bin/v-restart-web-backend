@@ -58,20 +58,20 @@ tmpfile=$(mktemp)
 if [ -z "$version" ]; then
 	# Substitute php-fpm service name formats
 	for version in $($BIN/v-list-sys-php plain); do
-		if [ -f /etc/redhat-release ]; then
-			v_php="php$version-php-fpm"
+		if [ "$LOCAL_PHP" == "yes" ]; then
+			v_php="brepo-php-fpm$version"
 		else
-			v_php="php$version-fpm"
+			v_php="php$version-php-fpm"
 		fi
-		if [ -f /etc/redhat-release ]; then
+		if [ "$LOCAL_PHP" == "yes" ]; then
+			if [ ! -f "/opt/brepo/php${version}/etc/php-fpm.d/dummy.conf" ]; then
+				cp -f $HESTIA_INSTALL_DIR/php-fpm/dummy.conf /opt/brepo/php${version}/etc/php-fpm.d/
+				sed -i "s/9999/99$v_tpl/g" /opt/brepo/php${version}/etc/php-fpm.d/dummy.conf
+			fi
+		else
 			if [ ! -f "/etc/opt/remi/php${version}/php-fpm.d/dummy.conf" ]; then
 				cp -f $HESTIA_INSTALL_DIR/php-fpm/dummy.conf /etc/opt/remi/php${version}/php-fpm.d/
 				sed -i "s/9999/99$v_tpl/g" /etc/opt/remi/php${version}/php-fpm.d/dummy.conf
-			fi
-		else
-			if [ ! -f "/etc/php/${version}/fpm/pool.d/dummy.conf" ]; then
-				cp -f "$HESTIA_INSTALL_DIR/php-fpm/dummy.conf" "/etc/php/${version}/fpm/pool.d/"
-				sed -i "s/9999/99${version//./}/g" "/etc/php/${version}/fpm/pool.d/dummy.conf"
 			fi
 		fi
 
@@ -82,10 +82,10 @@ if [ -z "$version" ]; then
 		fi
 	done
 else
-	if [ -f /etc/redhat-release ]; then
-		v_php="php$version-php-fpm"
+	if [ "$LOCAL_PHP" == "yes" ]; then
+		v_php="brepo-php-fpm$version"
 	else
-		v_php="php$version-fpm"
+		v_php="php$version-php-fpm"
 	fi
 	$BIN/v-restart-service "$v_php" "$restart"
 	if [ $? -ne 0 ]; then

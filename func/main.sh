@@ -1449,6 +1449,56 @@ check_backup_conditions() {
 	done
 }
 
+fn_get_link_name(){
+    str_result=""
+    ext_name=$1
+    pattern=("01-ioncube.ini" "10-opcache.ini" "20-bcmath.ini" "20-bz2.ini" "20-calendar.ini" "20-ctype.ini" "20-curl.ini" "20-dba.ini" "20-dom.ini" "20-enchant.ini" "20-exif.ini" "20-ffi.ini" "20-fileinfo.ini" "20-ftp.ini" "20-gd.ini" "20-gettext.ini" "20-gmp.ini" "20-iconv.ini" "20-imap.ini" "20-intl.ini" "20-ldap.ini" "20-mbstring.ini" "20-mysqlnd.ini" "20-odbc.ini" "20-pdo.ini" "20-phar.ini" "20-posix.ini" "20-pspell.ini" "20-shmop.ini" "20-simplexml.ini" "20-sockets.ini" "20-sqlite3.ini" "20-sysvmsg.ini" "20-sysvsem.ini" "20-sysvshm.ini" "20-tokenizer.ini" "20-xml.ini" "20-xmlwriter.ini" "20-xsl.ini" "30-mysqli.ini" "30-pdo_dblib.ini" "30-pdo_firebird.ini" "30-pdo_mysql.ini" "30-pdo_odbc.ini" "30-pdo_sqlite.ini" "30-xmlreader.ini" "30-zip.ini" "40-apcu.ini" "40-ast.ini" "40-bolt.ini" "40-brotli.ini" "40-geos.ini" "40-imagick.ini" "40-libvirt-php.ini" "40-lz4.ini" "40-pdlib.ini")
+    check="^[0-9]+-${ext_name}.ini"
+    for str in ${pattern[@]}; do
+	if [[ $str =~ $check ]]; then
+	    str_result="$str"
+	    break
+	fi
+    done
+    if [ -z "$str_result" ]; then
+	echo "50-${ext_name}.ini"
+    else
+	echo "$str_result"
+    fi
+}
+
+
+fn_enable_local_php_extension(){
+	vers=$1
+	ext_name=$2
+	ext_nm=$(fn_get_link_name "$ext_name")
+	if [ -e "/opt/brepo/php${vers}/etc/php.d/" ]; then
+		if [ ! -e "/opt/brepo/php${vers}/etc/php.d/${ext_nm}" -a -e "/opt/brepo/php${vers}/etc/mod-installed/${ext_name}.ini" ]; then
+			pushd "/opt/brepo/php${vers}/etc/php.d/"
+			ln -s ../mod-installed/${ext_name}.ini /opt/brepo/php${vers}/etc/php.d/${ext_nm}
+			popd
+		fi
+	fi
+}
+
+fn_disable_local_php_extension(){
+	vers=$1
+	ext_name=$2
+	ext_nm=$(fn_get_link_name "$ext_name")
+	if [ -e "/opt/brepo/php${vers}/etc/php.d/" ]; then
+		if [ -e "/opt/brepo/php${vers}/etc/php.d/${ext_nm}" ]; then
+			rm -f "/opt/brepo/php${vers}/etc/php.d/${ext_nm}"
+		fi
+	fi
+}
+
+fn_enable_mod_php(){
+	vers=$1
+	if [ -e "/etc/httpd/conf.d.prep/php${vers}.conf" ]; then
+		ln -s /etc/httpd/conf.d.prep/php${vers}.conf /etc/httpd/conf.h.d/mod_php${vers}.conf
+	fi
+}
+
 # Define download function
 download_file() {
 	local url=$1
@@ -1511,9 +1561,16 @@ multiphp_count() {
 multiphp_versions() {
 	local -a php_versions_list
 	local php_ver
+	local php_type_internal=$(cat "$HESTIA/conf/hestia.conf" | grep "LOCAL_PHP" | grep "yes")
+	local pool_internal=""
 	if [ "$(multiphp_count)" -gt 0 ]; then
 		for php_ver in $($BIN/v-list-sys-php plain); do
-			[ ! -d "/etc/php/$php_ver/fpm/pool.d/" ] && continue
+			if [ -n "$php_type_internal" ]; then
+				pool_internal="/opt/brepo/php$php_ver/etc/php-fpm.d"
+			else
+				pool_internal="/etc/opt/remi/php$php_ver/php-fpm.d"
+			fi
+			[ ! -d "$pool_internal" ] && continue
 			php_versions_list+=($php_ver)
 		done
 		echo "${php_versions_list[@]}"
@@ -1522,11 +1579,19 @@ multiphp_versions() {
 
 multiphp_default_version() {
 	# Get system wide default php version (set by update-alternatives)
-	local sys_phpversion=$(php -r "echo substr(phpversion(),0,3);")
+	local sys_phpversion_l=$(php -r "echo substr(phpversion(),0,3);")
+	local sys_phpversion="${sys_phpversion_l//./}"
+	local php_type_internal=$(cat "$HESTIA/conf/hestia.conf" | grep "LOCAL_PHP" | grep "yes")
+	local pool_internal=""
+	if [ -n "$php_type_internal" ]; then
+		pool_internal="/opt/brepo/php$sys_phpversion/etc/php-fpm.d"
+	else
+		pool_internal="/etc/opt/remi/php$sys_phpversion/php-fpm.d"
+	fi
 
 	# Check if the system php also has php-fpm enabled, otherwise return
 	# the most recent php version which does have it installed.
-	if [ ! -d "/etc/php/$sys_phpversion/fpm/pool.d/" ]; then
+	if [ ! -d "$pool_internal" ]; then
 		local all_versions="$(multiphp_versions)"
 		if [ -n "$all_versions" ]; then
 			sys_phpversion="${all_versions##*\ }"
@@ -1730,4 +1795,31 @@ get_conf_d_name(){
 	else
 		echo "conf.d"
 	fi
+}
+
+# Get default php version
+# hestia.conf should be enabled before function
+get_system_default_php(){
+	declare -a local_versions
+	if [ "$LOCAL_PHP" == "yes" ]; then
+		for version in /opt/brepo/php*/etc/php-fpm.d/www.conf; do
+			local_ver=$(echo "$version" | awk -F"/" '{ print $4 }' | sed  "s/php\([[:digit:]]\+\)/\1/g")
+			if [ "$local_ver" != "php*" ]; then
+				local_versions+=("$local_ver")
+			fi
+		done
+	else
+		for version in /etc/opt/remi/php*/php-fpm.d/www.conf; do
+			local_ver=$(echo "$version" | awk -F"/" '{ print $5 }' | sed  "s/php\([[:digit:]]\+\)/\1/g")
+			if [ "$local_ver" != "php*" ]; then
+				local_versions+=("$local_ver")
+			fi
+		done
+	fi
+	if [ ${#local_versions[@]} -eq 0 ]; then
+		local_php_ver="82"
+	else
+		local_php_ver="${local_versions[0]}"
+	fi
+	echo "$local_php_ver"
 }

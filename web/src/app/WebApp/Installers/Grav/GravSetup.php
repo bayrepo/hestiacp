@@ -32,7 +32,7 @@ class GravSetup extends BaseSetup {
 				"template" => "grav",
 			],
 			"php" => [
-				"supported" => ["7.4", "8.0", "8.1"],
+				"supported" => ["74", "80", "81"],
 			],
 		],
 	];

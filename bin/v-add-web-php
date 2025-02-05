@@ -22,11 +22,11 @@ source $HESTIA/func/main.sh
 source_conf "$HESTIA/conf/hestia.conf"
 source_conf "$HESTIA/install/upgrade/upgrade.conf"
 
-if [ -f /etc/redhat-release ]; then
-	for elem in "${!multiphp_v[@]}"; do
-		multiphp_v[$elem]=$(convert_dot_version_to_non_dot "${multiphp_v[$elem]}")
-	done
-fi
+
+for elem in "${!multiphp_v[@]}"; do
+	multiphp_v[$elem]=$(convert_dot_version_to_non_dot "${multiphp_v[$elem]}")
+done
+
 #----------------------------------------------------------#
 #                    Verifications                         #
 #----------------------------------------------------------#
@@ -38,26 +38,21 @@ if [ -z "$WEB_BACKEND" ]; then
 fi
 
 # Set file locations
-if [ -f /etc/redhat-release ]; then
-	php_fpm="/usr/lib/systemd/system/php$version-php-fpm.service"
+php_fpm=""
+if [ "$LOCAL_PHP" == "yes" ]; then
+	php_fpm="/usr/lib/systemd/system/brepo-php-fpm$version.service"
 else
-	php_fpm="/etc/init.d/php$version-fpm"
+	php_fpm="/usr/lib/systemd/system/php$version-php-fpm.service"
 fi
 
+
 # Verify php version format
-if [ -f /etc/redhat-release ]; then
-	if [[ ! $version =~ ^[0-9][0-9]+ ]]; then
-		echo "The specified PHP version format is invalid, it should look like [0-9][0-9]."
-		echo "Example: 70, 74, 80"
-		exit "$E_INVALID"
-	fi
-else
-	if [[ ! $version =~ ^[0-9].[0-9]+ ]]; then
-		echo "The specified PHP version format is invalid, it should look like [0-9].[0-9]."
-		echo "Example: 7.0, 7.4, 8.0"
-		exit "$E_INVALID"
-	fi
+if [[ ! $version =~ ^[0-9][0-9]+ ]]; then
+	echo "The specified PHP version format is invalid, it should look like [0-9][0-9]."
+	echo "Example: 70, 74, 80"
+	exit "$E_INVALID"
 fi
+
 
 # Check if php version already exists
 if [ -f "$php_fpm" ] && [ -f "$HESTIA/data/templates/web/php-fpm/PHP-${version/\./_}.tpl" ]; then
@@ -77,48 +72,48 @@ check_hestia_demo_mode
 #----------------------------------------------------------#
 #                       Action                             #
 #----------------------------------------------------------#
+mph=""
+php_modules_install="mysqlnd mysqli pdo_mysql pgsql pdo sqlite pdo_sqlite pdo_pgsql imap ldap zip opcache xmlwriter xmlreader gd intl pspell"
+php_modules_disable=""
+if [ "$LOCAL_PHP" == "yes" ]; then
+	mph="brepo-php$version brepo-php$version-fpm"
+	if ! echo "$DB_SYSTEM" | grep -w 'pgsql' > /dev/null; then
+		php_modules_install=$(echo "$php_modules_install" | sed -e "s/pgsql//")
+		php_modules_install=$(echo "$php_modules_install" | sed -e "s/pdo_pgsql//")
+		php_modules_disable="$php_modules_disable pgsql pdo_pgsql"
+	fi
+else
+	# Packages in Remi repo have names with php$version-php- prefixes
+	mph="php$version-php-fpm php$version-php-cgi php$version-php-mysqlnd php$version-php-pgsql 
+		php$version-php-pdo php$version-php-common php$version-php-pecl-imagick php$version-php-imap 
+		php$version-php-ldap php$version-php-pecl-apcu php$version-php-pecl-zip php$version-php-cli 
+		php$version-php-opcache php$version-php-xml php$version-php-gd php$version-php-intl 
+		php$version-php-mbstring php$version-php-pspell php$version-php-readline"
+	if [ "$version" = "56" ]; then
+		mph=$(sed -e "s/php$version-php-pecl-apcu//")
+	fi
 
-mph="php$version-common php$version-mbstring php$version-bcmath php$version-cli php$version-curl 
-     php$version-fpm php$version-gd php$version-intl php$version-mysql
-     php$version-soap php$version-xml php$version-zip php$version-json php$version-bz2
-     php$version-pspell php$version-imagick php$version-pgsql php$version-imap php$version-ldap"
-if [ -f /etc/redhat-release ]; then
-  # Packages in Remi repo have names with php$version-php- prefixes
-  mph="php$version-php-fpm php$version-php-cgi php$version-php-mysqlnd php$version-php-pgsql 
-       php$version-php-pdo php$version-php-common php$version-php-pecl-imagick php$version-php-imap 
-       php$version-php-ldap php$version-php-pecl-apcu php$version-php-pecl-zip php$version-php-cli 
-       php$version-php-opcache php$version-php-xml php$version-php-gd php$version-php-intl 
-       php$version-php-mbstring php$version-php-pspell php$version-php-readline"
-	   if [ "$version" = "56" ]; then
-           mph=$(sed -e "s/php$version-php-pecl-apcu//")
-       fi
-fi
+	# Check is version is 7.1 or below to add mcrypt
+	if [[ $(echo "$version 7.2" | awk '{print ($1 < $2)}') == 1 ]]; then
+		mph="$mph php$version-mcrypt"
+	fi
 
-# Check is version is 7.1 or below to add mcrypt
-if [[ $(echo "$version 7.2" | awk '{print ($1 < $2)}') == 1 ]]; then
-	mph="$mph php$version-mcrypt"
-fi
+	# Check if version is 8.0 or higher and drop php json.
+	if [[ ${version:0:1} == "8" ]]; then
+		mph=$(echo "$mph" | sed -e "s/php$version\(-php\)\{0,1\}-json//")
+	fi
 
-# Check if version is 8.0 or higher and drop php json.
-if [[ ${version:0:1} == "8" ]]; then
-	mph=$(echo "$mph" | sed -e "s/php$version\(-php\)\{0,1\}-json//")
-fi
+	if ! echo "$DB_SYSTEM" | grep -w 'mysql' > /dev/null; then
+		mph=$(echo "$mph" | sed -e "s/php$version\(-php\)\{0,1\}-mysql//")
+	fi
 
-if ! echo "$DB_SYSTEM" | grep -w 'mysql' > /dev/null; then
-	mph=$(echo "$mph" | sed -e "s/php$version\(-php\)\{0,1\}-mysql//")
-fi
-
-if ! echo "$DB_SYSTEM" | grep -w 'pgsql' > /dev/null; then
-	mph=$(echo "$mph" | sed -e "s/php$version\(-php\)\{0,1\}-pgsql//")
+	if ! echo "$DB_SYSTEM" | grep -w 'pgsql' > /dev/null; then
+		mph=$(echo "$mph" | sed -e "s/php$version\(-php\)\{0,1\}-pgsql//")
+	fi
 fi
 
 # Install php packages
-if [ -f '/etc/redhat-release' ]; then
-	dnf install -q -y $mph > /dev/null 2>&1 &
-else
-	apt-get -qq update
-	apt-get -y -qq -o Dpkg::Options::="--force-confold" install $mph > /dev/null 2>&1 &
-fi
+dnf install -q -y $mph > /dev/null 2>&1 &
 BACK_PID=$!
 
 # Check if package installation is done, print a spinner
@@ -133,17 +128,27 @@ done
 # Do a blank echo to get the \n back
 echo
 
+if [ "$LOCAL_PHP" == "yes" ]; then
+	for mod in $php_modules_install; do
+		enable_local_php_extension "$version" "$mod"
+	done
+	for mod in $php_modules_disable; do
+		disable_local_php_extension "$version" "$mod"
+	done
+fi
+
 # Check if installation was successful
 if [ ! -f "$php_fpm" ]; then
 	echo "ERROR: Installation failed, please run the following command manually for debugging:"
-	if [ -f '/etc/redhat-release' ]; then
-		echo "dnf install $mph"
-	else
-		echo "apt-get install $mph"
-	fi
+	echo "dnf install $mph"
 fi
 
-if [ -f '/etc/redhat-release' ]; then
+if [ "$LOCAL_PHP" == "yes" ]; then
+	result_alt_php=$(alternatives --display php | grep /opt/brepo/php${version}/bin/php)
+	if [ -z "$result_alt_php" ]; then
+		alternatives --install /usr/bin/php php /opt/brepo/php${version}/bin/php 1 > /dev/null 2>&1
+	fi
+else
 	result_alt_php=$(alternatives --display php | grep /usr/bin/php$version)
 	if [ -z "$result_alt_php" ]; then
 		alternatives --install /usr/bin/php php /usr/bin/php$version 1 > /dev/null 2>&1
@@ -173,7 +178,17 @@ fi
 
 # Configure fpm
 v_tpl=${version//./}
-if [ -f /etc/redhat-release ]; then
+if [ "$LOCAL_PHP" == "yes" ]; then
+	systemctl enable brepo-php-fpm${version}.service
+	rm -f /opt/brepo/php${version}/etc/php-fpm.d/*
+	cp -f $HESTIA_INSTALL_DIR/php-fpm/dummy.conf /opt/brepo/php${version}/etc/php-fpm.d/
+	sed -i "s/9999/99$v_tpl/g" /opt/brepo/php${version}/etc/php-fpm.d/dummy.conf
+
+	# Increase max upload and max post size
+	sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 100M/g" /opt/brepo/php${version}/etc/php.ini
+	sed -i "s/post_max_size = 8M/post_max_size = 100M/g" /opt/brepo/php${version}/etc/php.ini
+	sed -i "s/max_execution_time = 30/max_execution_time = 60/g" /opt/brepo/php${version}/etc/php.ini
+else
 	systemctl enable php${version}-php-fpm
 	rm -f /etc/opt/remi/php${version}/php-fpm.d/*
 	cp -f $HESTIA_INSTALL_DIR/php-fpm/dummy.conf /etc/opt/remi/php${version}/php-fpm.d/
@@ -183,19 +198,8 @@ if [ -f /etc/redhat-release ]; then
 	sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 100M/g" /etc/opt/remi/php${version}/php.ini
 	sed -i "s/post_max_size = 8M/post_max_size = 100M/g" /etc/opt/remi/php${version}/php.ini
 	sed -i "s/max_execution_time = 30/max_execution_time = 60/g" /etc/opt/remi/php${version}/php.ini
-else
-	update-rc.d php$version-fpm defaults > /dev/null 2>&1
-	rm -f /etc/php/$version/fpm/pool.d/*
-	cp -f $HESTIA_INSTALL_DIR/php-fpm/dummy.conf /etc/php/$version/fpm/pool.d/
-	sed -i "s/9999/99$v_tpl/g" /etc/php/$version/fpm/pool.d/dummy.conf
-	cp -f $HESTIA_INSTALL_DIR/php-fpm/php-fpm.conf /etc/php/$version/fpm/
-	sed -i "s/fpm_v/$version/g" /etc/php/$version/fpm/php-fpm.conf
-
-	# Increase max upload and max post size
-	sed -i "s/upload_max_filesize = 2M/upload_max_filesize = 100M/g" /etc/php/$version/fpm/php.ini
-	sed -i "s/post_max_size = 8M/post_max_size = 100M/g" /etc/php/$version/fpm/php.ini
-	sed -i "s/max_execution_time = 30/max_execution_time = 60/g" /etc/php/$version/fpm/php.ini
 fi
+
 # Install backend template
 cp -f $HESTIA_INSTALL_DIR/php-fpm/multiphp.tpl \
 	$HESTIA/data/templates/web/php-fpm/PHP-${version/\./_}.tpl

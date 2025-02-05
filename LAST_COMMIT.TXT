@@ -1,5 +1,5 @@
-commit 95a0e8727164d67d18a875cdd5c8b3cac8da1cab (HEAD -> devel, origin/master, origin/devel, origin/HEAD, master)
-Author: Alexey Berezhok <a@bayrepo.ru>
-Date:   Tue Jan 7 15:27:17 2025 +0300
+commit e991cf47974bf02f6d9301476b24f53c1954452b (HEAD -> master, tag: 1.9.5.rpm, origin/master, origin/devel, origin/HEAD, devel)
+Author: a@bayrepo.ru
+Date:   Tue Feb 4 23:41:46 2025 +0300
 
-    Added sha-512 authorization fix
+    Fixed changelog

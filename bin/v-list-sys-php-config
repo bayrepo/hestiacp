@@ -1,6 +1,6 @@
 #!/bin/bash
 # info: list php config parameters
-# options: [FORMAT]
+# options: [VERSION] [FORMAT]
 #
 # example: v-list-sys-php-config
 #
@@ -11,7 +11,8 @@
 #----------------------------------------------------------#
 
 # Argument definition
-format=${1-shell}
+php_ver=${1-default}
+format=${2-shell}
 
 # Includes
 # shellcheck source=/etc/hestiacp/hestia.conf
@@ -61,24 +62,53 @@ csv_list() {
 #----------------------------------------------------------#
 #                       Action                             #
 #----------------------------------------------------------#
+declare -a versions
+if [ "$php_ver" == "default" ]; then
+	# List through /etc/php
+	if [ "$LOCAL_PHP" == "yes" ]; then
+		for version in /opt/brepo/php*/etc/php-fpm.d/www.conf; do
+			ver=$(echo "$version" | awk -F"/" '{ print $4 }' | sed  "s/php\([[:digit:]]\+\)/\1/g")
+			if [ "$ver" != "php*" ]; then
+				versions+=("$ver")
+			fi
+		done
+	else
+		for version in /etc/opt/remi/php*/php-fpm.d/www.conf; do
+			ver=$(echo "$version" | awk -F"/" '{ print $5 }' | sed  "s/php\([[:digit:]]\+\)/\1/g")
+			if [ "$ver" != "php*" ]; then
+				versions+=("$ver")
+			fi
+		done
+	fi
+else
+	ver=$(echo "$php_ver" | sed  "s/php\([[:digit:]]\+\)/\1/g")
+	versions+=("$ver")
+fi
+
+if [ ${#versions[@]} -eq 0 ]; then
+    php_ver="82"
+else
+    php_ver="${versions[0]}"
+fi
 
 # Defining config path
-if [ -f /etc/redhat-release ]; then
-	config_path=$(find /etc/opt/remi/php* -name php.ini)
+if [ "$LOCAL_PHP" == "yes" ]; then
+	config_path=$(find /opt/brepo/php${php_ver}/* -name php.ini)
 else
-	config_path=$(find /etc/php* -name php.ini)
+	config_path=$(find /etc/opt/remi/php${php_ver}/* -name php.ini)
 fi
+
 config_count=$(echo "$config_path" | wc -l)
 if [ "$config_count" -gt 1 ]; then
-	if [ -f /etc/redhat-release ]; then
-		multiphp_versions=$(ls -d /etc/opt/remi/php*/php-fpm.d 2> /dev/null | wc -l)
+	if [ "$LOCAL_PHP" == "yes" ]; then
+		multiphp_versions=$(ls -d /opt/brepo/php*/etc/php-fpm.d 2> /dev/null | wc -l)
 	else
-		multiphp_versions=$(ls -d /etc/php/*/fpm/pool.d 2> /dev/null | wc -l)
+		multiphp_versions=$(ls -d /etc/opt/remi/php*/php-fpm.d 2> /dev/null | wc -l)
 	fi
 	if [ "$WEB_BACKEND" = 'php-fpm' ] || [ "$multiphp_versions" -gt 0 ]; then
-		config_path=$(echo "$config_path" | grep fpm)
+		config_path=$(echo "$config_path" | grep "php")
 	else
-		config_path=$(echo "$config_path" | grep apache)
+		config_path=$(echo "$config_path" | grep httpd)
 	fi
 fi
 
@@ -88,7 +118,7 @@ keys="$keys |upload_max_filesize |post_max_size"
 keys="$keys |display_errors |error_reporting "
 
 # Reading config
-config=$(cat $config_path | grep -v "^;")
+config=$(cat "$config_path" | grep -v "^;")
 
 # Listing data
 case $format in

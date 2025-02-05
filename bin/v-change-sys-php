@@ -21,18 +21,10 @@ source_conf "$HESTIA/conf/hestia.conf"
 check_args '1' "$#" 'VERSION'
 
 # Verify php version format
-if [ -f /etc/redhat-release ]; then
-	if [[ ! $version =~ ^[0-9][0-9]+ ]]; then
-		echo "The specified PHP version format is invalid, it should look like [0-9][0-9]."
-		echo "Example: 70, 74, 80"
-		exit "$E_INVALID"
-	fi
-else
-	if [[ ! $version =~ ^[0-9].[0-9]+ ]]; then
-		echo "The specified PHP version format is invalid, it should look like [0-9].[0-9]."
-		echo "Example: 7.0, 7.4, 8.0"
-		exit "$E_INVALID"
-	fi
+if [[ ! $version =~ ^[0-9][0-9]+ ]]; then
+	echo "The specified PHP version format is invalid, it should look like [0-9][0-9]."
+	echo "Example: 70, 74, 80"
+	exit "$E_INVALID"
 fi
 
 # Check if php version exists
@@ -50,18 +42,19 @@ check_hestia_demo_mode
 #----------------------------------------------------------#
 
 # Set file locations
-if [ -f /etc/redhat-release ]; then
-	php_fpm="/usr/lib/systemd/system/php$version-php-fpm.service"
+php_fpm=""
+if [ "$LOCAL_PHP" == "yes" ]; then
+	php_fpm="/usr/lib/systemd/system/brepo-php-fpm$version.service"
 else
-	php_fpm="/etc/init.d/php$version-fpm"
+	php_fpm="/usr/lib/systemd/system/php$version-php-fpm.service"
 fi
 
-if [ -f /etc/redhat-release ]; then
+if [ "$LOCAL_PHP" == "yes" ]; then
+	rm -f /opt/brepo/php*/etc/php-fpm.d/www.conf
+	cp -f $HESTIA/install/rpm/php-fpm/www.conf /opt/brepo/php${version}/etc/php-fpm.d/www.conf
+else
 	rm -f /etc/opt/remi/php*/php-fpm.d/www.conf
 	cp -f $HESTIA/install/rpm/php-fpm/www.conf /etc/opt/remi/php$version/php-fpm.d/www.conf
-else
-	rm -f /etc/php/*/fpm/pool.d/www.conf
-	cp -f $HESTIA/install/deb/php-fpm/www.conf /etc/php/$version/fpm/pool.d/www.conf
 fi
 
 for user in $($BIN/v-list-sys-users plain); do
@@ -75,17 +68,30 @@ $BIN/v-restart-web-backend
 $BIN/v-restart-web
 $BIN/v-restart-proxy
 
-if [ -f '/etc/redhat-release' ]; then
+if [ "$LOCAL_PHP" == "yes" ]; then
+	result_alt_php=$(alternatives --display php | grep /opt/brepo/php${version}/bin/php)
+	if [ -z "$result_alt_php" ]; then
+		alternatives --install /usr/bin/php php /opt/brepo/php${version}/bin/php 1 > /dev/null 2>&1
+	fi
+else
 	result_alt_php=$(alternatives --display php | grep /usr/bin/php$version)
 	if [ -z "$result_alt_php" ]; then
 		alternatives --install /usr/bin/php php /usr/bin/php$version 1 > /dev/null 2>&1
 	fi
 fi
 
-update-alternatives --set php /usr/bin/php$version
-if [ $? -eq 0 ]; then
-	update-alternatives --install /usr/bin/php php /usr/bin/php$version 1
+if [ "$LOCAL_PHP" == "yes" ]; then
+	update-alternatives --set php /opt/brepo/php${version}/bin/php
+	if [ $? -eq 0 ]; then
+		update-alternatives --install /usr/bin/php php /opt/brepo/php${version}/bin/php 1
+		update-alternatives --set php /opt/brepo/php${version}/bin/php
+	fi
+else
 	update-alternatives --set php /usr/bin/php$version
+	if [ $? -eq 0 ]; then
+		update-alternatives --install /usr/bin/php php /usr/bin/php$version 1
+		update-alternatives --set php /usr/bin/php$version
+	fi
 fi
 /usr/bin/hestiacp-php-admin system $version
 

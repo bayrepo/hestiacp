@@ -10,7 +10,7 @@ class DrupalSetup extends BaseSetup {
 	protected $appInfo = [
 		"name" => "Drupal",
 		"group" => "cms",
-		"enabled" => "yes",
+		"enabled" => false,
 		"version" => "latest",
 		"thumbnail" => "drupal-thumb.png",
 	];
@@ -30,7 +30,7 @@ class DrupalSetup extends BaseSetup {
 				"template" => "drupal-composer",
 			],
 			"php" => [
-				"supported" => ["8.1", "8.2"],
+				"supported" => ["81", "82"],
 			],
 		],
 	];

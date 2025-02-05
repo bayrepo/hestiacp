@@ -40,6 +40,28 @@ check_hestia_demo_mode
 #----------------------------------------------------------#
 #                       Action                             #
 #----------------------------------------------------------#
+php_v="82"
+if [[ "$service" =~ ^php ]];then
+	ver_php=$(echo "$service" | grep -Po "\d+")
+	if [ -z "$ver_php" ]; then
+		php_v=$(get_system_default_php)
+	else
+		if [ "$LOCAL_PHP" == "yes" ]; then
+			if [ -e "/opt/brepo/php${ver_php}" ]; then
+				php_v="$ver_php"
+			else
+				php_v=$(get_system_default_php)
+			fi
+		else
+			if [ -e "/etc/opt/remi/php${ver_php}" ]; then
+				php_v="$ver_php"
+			else
+				php_v=$(get_system_default_php)
+			fi
+		fi
+	fi
+	service="php"
+fi
 
 # Defining dst config path
 case $service in
@@ -50,7 +72,13 @@ case $service in
 	exim4) dst='/etc/exim4/exim4.conf.template' ;;
 	vsftpd) dst=$(find /etc/vsftpd* -name 'vsftpd.conf') ;;
 	proftpd) dst=$(find /etc/proftpd* -name 'proftpd.conf') ;;
-	php) dst=$(find /etc/php* -name php.ini) ;;
+	php) 
+		if [ "$LOCAL_PHP" == "yes" ]; then
+			dst=$(find /opt/brepo/php${php_v} -name php.ini) 
+		else
+			dst=$(find /etc/opt/remi/php${php_v} -name php.ini) 
+		fi
+	;;
 	mysql) dst=$(find /etc/my* -name my.cnf) ;;
 	mysqld) dst=$(find /etc/my* -name my.cnf) ;;
 	mariadb) dst=$(find /etc/my* -name my.cnf) ;;
@@ -103,7 +131,7 @@ if [ "$update" = 'yes' ] && [ "$restart" != 'no' ]; then
 	if [ "$service" = 'php' ]; then
 		if [ "$(multiphp_count)" -gt 0 ]; then
 			service="php-fpm"
-		elif [ "$WEB_SYSTEM" = 'apache2' ]; then
+		elif [ "$WEB_SYSTEM" = 'httpd' ]; then
 			service="$WEB_SYSTEM"
 		fi
 	fi

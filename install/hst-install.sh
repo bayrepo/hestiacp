@@ -4,13 +4,11 @@
 #
 # Hestia Control Panel Installation Routine
 # Automatic OS detection wrapper
-# https://www.hestiacp.com/
+# https://hestiadocs.brepo.ru/
 #
-# Currently Supported Operating Systems:
+# Supported Operating Systems:
 #
-# Debian 10, 11
-# Ubuntu 20.04, 22.04
-# AlmaLinux, EuroLinux, Red Hat EnterPrise Linux, Rocky Linux 8, 9
+# AlmaLinux, EuroLinux, Red Hat EnterPrise Linux, Rocky Linux, MSVSphere 9
 #
 # ======================================================== #
 
@@ -42,21 +40,7 @@ fi
 
 # Detect OS
 if [ -e "/etc/os-release" ] && [ ! -e "/etc/redhat-release" ]; then
-	type=$(grep "^ID=" /etc/os-release | cut -f 2 -d '=')
-	if [ "$type" = "ubuntu" ]; then
-		# Check if lsb_release is installed
-		if [ -e '/usr/bin/lsb_release' ]; then
-			release="$(lsb_release -s -r)"
-			VERSION='ubuntu'
-		else
-			echo "lsb_release is currently not installed, please install it:"
-			echo "apt-get update && apt-get install lsb-release"
-			exit 1
-		fi
-	elif [ "$type" = "debian" ]; then
-		release=$(cat /etc/debian_version | grep -o "[0-9]\{1,2\}" | head -n1)
-		VERSION='debian'
-	fi
+	type="NoSupport"
 elif [ -e "/etc/os-release" ] && [ -e "/etc/redhat-release" ]; then
 	type=$(grep "^ID=" /etc/os-release | cut -f 2 -d '"')
 	VERSION=$type
@@ -71,13 +55,10 @@ fi
 no_support_message() {
 	echo "****************************************************"
 	echo "Your operating system (OS) is not supported by"
-	echo "Hestia Control Panel. Officially supported releases:"
+	echo "Hestia Control Panel (RPM edition). Officially supported releases:"
 	echo "****************************************************"
-	echo "  Debian 10, 11"
-	echo "  Ubuntu 20.04, 22.04 LTS"
-	# Commenting this out for now
-	echo "  Red Hat Enterprise Linux 8, 9 and related versions of"
-	echo "  AlmaLinux, Rocky Linux, Oracle Linux Server and EuroLinux"
+	echo "  Red Hat Enterprise Linux 9 and related versions of"
+	echo "  AlmaLinux, Rocky Linux, Oracle Linux Server and EuroLinux, MSVSphere"
 	echo ""
 	exit 1
 }

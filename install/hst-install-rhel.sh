@@ -3,7 +3,7 @@
 # ======================================================== #
 #
 # Hestia Control Panel Installer for RHEL based OS
-# https://www.hestiacp.com/
+# https://hestiadocs.brepo.ru/
 #
 # Currently Supported Versions:
 # Red Hat Enterprise Linux based distros
@@ -14,8 +14,6 @@
 #                  Variables&Functions                     #
 #----------------------------------------------------------#
 export PATH=$PATH:/sbin
-RHOST='rpm.hestiacp.com'
-GPG='gpg.hestiacp.com'
 VERSION='rhel'
 HESTIA='/usr/local/hestia'
 LOG="/root/hst_install_backups/hst_install-$(date +%d%m%Y%H%M).log"
@@ -40,25 +38,21 @@ HESTIA_COMMON_DIR="$HESTIA/install/common"
 VERBOSE='no'
 
 # Define software versions
-HESTIA_INSTALL_VER='1.9.0~alpha'
+HESTIA_INSTALL_VER='1.9.4.rpm~alpha'
 
 # Dependencies
 mariadb_v="10.11"
-if [ "$release" -lt 9 ]; then
-multiphp_v=("72" "73" "74" "80" "81" "82" "83")
-else
 multiphp_v=("74" "80" "81" "82" "83")
-fi
 
 # default PHP version
 php_v="82"
 
+php_modules_install="mysqlnd mysqli pdo_mysql pgsql pdo sqlite pdo_sqlite pdo_pgsql imap ldap zip opcache xmlwriter xmlreader gd intl pspell"
+php_modules_disable=""
+mod_php="enable"
+
 software="nginx
   httpd.${arch} httpd-tools httpd-itk mod_fcgid mod_suphp mod_ssl
-  php${php_v}-php.${arch} php${php_v}-php-cgi.${arch} php${php_v}-php-mysqlnd.${arch} php${php_v}-php-pgsql.${arch}
-  php${php_v}-php-pdo php${php_v}-php-common php${php_v}-php-pecl-imagick php${php_v}-php-imap php${php_v}-php-ldap
-  php${php_v}-php-pecl-apcu php${php_v}-php-pecl-zip php${php_v}-php-cli php${php_v}-php-opcache php${php_v}-php-xml
-  php${php_v}-php-gd php${php_v}-php-intl php${php_v}-php-mbstring php${php_v}-php-pspell php${php_v}-php-readline
   MariaDB-client MariaDB-common MariaDB-server
   mysql.${arch} mysql-common mysql-server
   postgresql-server postgresql sqlite.${arch}
@@ -97,6 +91,7 @@ help() {
   -l, --lang              Default language                      default: en
   -y, --interactive       Interactive install        [yes|no]   default: yes
   -I, --nopublicip        Use local ip               [yes|no]   default: yes
+  -u, --uselocalphp       Use PHP from local repo    [yes|no]   default: yes
   -s, --hostname          Set hostname
   -e, --email             Set admin email
   -p, --password          Set admin password
@@ -208,6 +203,56 @@ validate_email() {
 	fi
 }
 
+get_link_name(){
+    str_result=""
+    ext_name=$1
+    pattern=("01-ioncube.ini" "10-opcache.ini" "20-bcmath.ini" "20-bz2.ini" "20-calendar.ini" "20-ctype.ini" "20-curl.ini" "20-dba.ini" "20-dom.ini" "20-enchant.ini" "20-exif.ini" "20-ffi.ini" "20-fileinfo.ini" "20-ftp.ini" "20-gd.ini" "20-gettext.ini" "20-gmp.ini" "20-iconv.ini" "20-imap.ini" "20-intl.ini" "20-ldap.ini" "20-mbstring.ini" "20-mysqlnd.ini" "20-odbc.ini" "20-pdo.ini" "20-phar.ini" "20-posix.ini" "20-pspell.ini" "20-shmop.ini" "20-simplexml.ini" "20-sockets.ini" "20-sqlite3.ini" "20-sysvmsg.ini" "20-sysvsem.ini" "20-sysvshm.ini" "20-tokenizer.ini" "20-xml.ini" "20-xmlwriter.ini" "20-xsl.ini" "30-mysqli.ini" "30-pdo_dblib.ini" "30-pdo_firebird.ini" "30-pdo_mysql.ini" "30-pdo_odbc.ini" "30-pdo_sqlite.ini" "30-xmlreader.ini" "30-zip.ini" "40-apcu.ini" "40-ast.ini" "40-bolt.ini" "40-brotli.ini" "40-geos.ini" "40-imagick.ini" "40-libvirt-php.ini" "40-lz4.ini" "40-pdlib.ini")
+    check="^[0-9]+-${ext_name}.ini"
+    for str in ${pattern[@]}; do
+	if [[ $str =~ $check ]]; then
+	    str_result="$str"
+	    break
+	fi
+    done
+    if [ -z "$str_result" ]; then
+	echo "50-${ext_name}.ini"
+    else
+	echo "$str_result"
+    fi
+}
+
+
+enable_local_php_extension(){
+	vers=$1
+	ext_name=$2
+	ext_nm=$(get_link_name "$ext_name")
+	if [ -e "/opt/brepo/php${vers}/etc/php.d/" ]; then
+		if [ ! -e "/opt/brepo/php${vers}/etc/php.d/${ext_nm}" -a -e "/opt/brepo/php${vers}/etc/mod-installed/${ext_name}.ini" ]; then
+			pushd "/opt/brepo/php${vers}/etc/php.d/"
+			ln -s ../mod-installed/${ext_name}.ini /opt/brepo/php${vers}/etc/php.d/${ext_nm}
+			popd
+		fi
+	fi
+}
+
+disable_local_php_extension(){
+	vers=$1
+	ext_name=$2
+	ext_nm=$(get_link_name "$ext_name")
+	if [ -e "/opt/brepo/php${vers}/etc/php.d/" ]; then
+		if [ -e "/opt/brepo/php${vers}/etc/php.d/${ext_nm}" ]; then
+			rm -f "/opt/brepo/php${vers}/etc/php.d/${ext_nm}"
+		fi
+	fi
+}
+
+enable_mod_php(){
+	vers=$1
+	if [ -e "/etc/httpd/conf.d.prep/php${vers}.conf" ]; then
+		ln -s /etc/httpd/conf.d.prep/php${vers}.conf /etc/httpd/conf.h.d/mod_php${vers}.conf
+	fi
+}
+
 #----------------------------------------------------------#
 #                    Verifications                         #
 #----------------------------------------------------------#
@@ -247,6 +292,7 @@ for arg; do
 		--with-debs) args="${args}-D " ;;
 		--help) args="${args}-h " ;;
 		--nopublicip) args="${args}-I " ;;
+		--uselocalphp) args="${args}-u" ;;
 		*)
 			[[ "${arg:0:1}" == "-" ]] || delim="\""
 			args="${args}${delim}${arg}${delim} "
@@ -256,7 +302,7 @@ done
 eval set -- "$args"
 
 # Parsing arguments
-while getopts "I:a:w:v:j:k:m:M:g:d:x:z:Z:c:t:i:b:r:o:q:l:y:s:e:p:R:fh" Option; do
+while getopts "u:I:a:w:v:j:k:m:M:g:d:x:z:Z:c:t:i:b:r:o:q:l:y:s:e:p:R:fh" Option; do
 	case $Option in
 		a) apache=$OPTARG ;;       # Apache
 		w) phpfpm=$OPTARG ;;       # PHP-FPM
@@ -286,6 +332,7 @@ while getopts "I:a:w:v:j:k:m:M:g:d:x:z:Z:c:t:i:b:r:o:q:l:y:s:e:p:R:fh" Option; d
 		f) force='yes' ;;          # Force install
 		h) help ;;                 # Help
 		I) nopublicip=$OPTARG ;;   # NoPublicIP
+		u) uselocalphp=$OPTARG ;;  # UseLocalPHP
 		*) help ;;                 # Print help (default)
 	esac
 done
@@ -322,6 +369,7 @@ set_default_value 'api' 'yes'
 set_default_value 'nopublicip' 'yes'
 set_default_port '8083'
 set_default_lang 'en'
+set_default_value 'uselocalphp' 'yes'
 
 # Checking software conflicts
 if [ "$proftpd" = 'yes' ]; then
@@ -462,23 +510,23 @@ esac
 install_welcome_message() {
 	DISPLAY_VER=$(echo $HESTIA_INSTALL_VER | sed "s|~alpha||g" | sed "s|~beta||g")
 	echo
-	echo '                _   _           _   _        ____ ____                  '
-	echo '               | | | | ___  ___| |_(_) __ _ / ___|  _ \                 '
-	echo '               | |_| |/ _ \/ __| __| |/ _` | |   | |_) |                '
-	echo '               |  _  |  __/\__ \ |_| | (_| | |___|  __/                 '
-	echo '               |_| |_|\___||___/\__|_|\__,_|\____|_|                    '
+	echo '          _   _           _   _        ____ ____                        '
+	echo '         | | | | ___  ___| |_(_) __ _ / ___|  _ \   _  _ .  .           '
+	echo '         | |_| |/ _ \/ __| __| |/ _` | |   | |_) | | \| \|\/|           '
+	echo '         |  _  |  __/\__ \ |_| | (_| | |___|  __/  |_/|_/|  |           '
+	echo '         |_| |_|\___||___/\__|_|\__,_|\____|_|     | \|  |  |           '
 	echo "                                                                        "
-	echo "                          Hestia Control Panel                          "
+	echo "                  Hestia Control Panel(rpm edition)                     "
 	if [[ "$HESTIA_INSTALL_VER" =~ "beta" ]]; then
 		echo "                              BETA RELEASE                          "
 	fi
 	if [[ "$HESTIA_INSTALL_VER" =~ "alpha" ]]; then
 		echo "                          DEVELOPMENT SNAPSHOT                      "
-		echo "                    NOT INTENDED FOR PRODUCTION USE                 "
 		echo "                          USE AT YOUR OWN RISK                      "
 	fi
 	echo "                                  ${DISPLAY_VER}                        "
-	echo "                            www.hestiacp.com                            "
+	echo "                          hestiadocs.brepo.ru                           "
+	echo "                  Original: www.hestiacp.com                            "
 	echo
 	echo "========================================================================"
 	echo
@@ -684,7 +732,19 @@ echo "[ * ] NGINX"
 
 # Installing Remi PHP repo
 echo "[ * ] PHP"
-dnf install -y https://rpms.remirepo.net/enterprise/remi-release-$release.rpm
+php_pkgs_lst=""
+if [ "$uselocalphp" == "yes" ]; then
+	write_config_value "LOCAL_PHP" "yes"
+	php_pkgs_lst="brepo-php${php_v} brepo-php${php_v}-mod-apache"
+else
+	write_config_value "LOCAL_PHP" "no"
+	php_pkgs_lst="php${php_v}-php.${arch} php${php_v}-php-cgi.${arch} php${php_v}-php-mysqlnd.${arch} php${php_v}-php-pgsql.${arch}
+  php${php_v}-php-pdo php${php_v}-php-common php${php_v}-php-pecl-imagick php${php_v}-php-imap php${php_v}-php-ldap
+  php${php_v}-php-pecl-apcu php${php_v}-php-pecl-zip php${php_v}-php-cli php${php_v}-php-opcache php${php_v}-php-xml
+  php${php_v}-php-gd php${php_v}-php-intl php${php_v}-php-mbstring php${php_v}-php-pspell php${php_v}-php-readline"
+	dnf install -y https://rpms.remirepo.net/enterprise/remi-release-$release.rpm
+fi
+software="$software $php_pkgs_lst"
 
 # Installing MariaDB repo
 if [ "$mysql" = 'yes' ]; then
@@ -805,10 +865,14 @@ rm -rf $HESTIA > /dev/null 2>&1
 #----------------------------------------------------------#
 
 if [ "$phpfpm" = 'yes' ]; then
-	fpm="php${php_v}-php-fpm php${php_v}-php-cgi.${arch} php${php_v}-php-mysqlnd.${arch} php${php_v}-php-pgsql.${arch}
-		php${php_v}-php-pdo php${php_v}-php-common php${php_v}-php-pecl-imagick php${php_v}-php-imap php${php_v}-php-ldap
-		php${php_v}-php-pecl-apcu php${php_v}-php-pecl-zip php${php_v}-php-cli php${php_v}-php-opcache php${php_v}-php-xml
-		php${php_v}-php-gd php${php_v}-php-intl php${php_v}-php-mbstring php${php_v}-php-pspell php${php_v}-php-readline"
+	if [ "$uselocalphp" == "yes" ]; then
+		fpm="brepo-php${php_v}-fpm"
+	else
+		fpm="php${php_v}-php-fpm php${php_v}-php-cgi.${arch} php${php_v}-php-mysqlnd.${arch} php${php_v}-php-pgsql.${arch}
+			php${php_v}-php-pdo php${php_v}-php-common php${php_v}-php-pecl-imagick php${php_v}-php-imap php${php_v}-php-ldap
+			php${php_v}-php-pecl-apcu php${php_v}-php-pecl-zip php${php_v}-php-cli php${php_v}-php-opcache php${php_v}-php-xml
+			php${php_v}-php-gd php${php_v}-php-intl php${php_v}-php-mbstring php${php_v}-php-pspell php${php_v}-php-readline"
+	fi
 	software="$software $fpm"
 fi
 
@@ -825,6 +889,8 @@ if [ "$apache" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/mod_fcgid//")
 	software=$(echo "$software" | sed -e "s/mod_ssl//")
 	software=$(echo "$software" | sed -e "s/php${php_v}-php.${arch}//")
+	software=$(echo "$software" | sed -e "s/brepo-php${php_v}-mod-apache//")
+	mod_php="disable"
 fi
 if [ "$vsftpd" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/vsftpd//")
@@ -873,6 +939,9 @@ if [ "$postgresql" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/postgresql-server//")
 	software=$(echo "$software" | sed -e "s/php${php_v}-php-pgsql.${arch}//")
 	software=$(echo "$software" | sed -e "s/phppgadmin//")
+	php_modules_install=$(echo "$php_modules_install" | sed -e "s/pgsql//")
+	php_modules_install=$(echo "$php_modules_install" | sed -e "s/pdo_pgsql//")
+	php_modules_disable="$php_modules_disable pgsql pdo_pgsql"
 fi
 if [ "$fail2ban" = 'no' ]; then
 	software=$(echo "$software" | sed -e "s/fail2ban//")
@@ -888,6 +957,8 @@ if [ "$phpfpm" = 'yes' ]; then
 	software=$(echo "$software" | sed -e "s/mod_suphp//")
 	software=$(echo "$software" | sed -e "s/mod_fcgid//")
 	software=$(echo "$software" | sed -e "s/php${php_v}-php.${arch}//")
+	software=$(echo "$software" | sed -e "s/brepo-php${php_v}-mod-apache//")
+	mod_php="disable"
 fi
 if [ -d "$withrpms" ]; then
 	software=$(echo "$software" | sed -e "s/hestia-nginx//")
@@ -935,7 +1006,21 @@ echo "========================================================================"
 echo
 
 # Create PHP symlink
-alternatives --install /usr/bin/php php /opt/remi/php${php_v}/root/usr/bin/php 1
+if [ "$uselocalphp" == "yes" ]; then
+	alternatives --install /usr/bin/php php /opt/brepo/php${php_v}/bin/php 1
+	echo "[ * ] Configuring php settings..."
+	for mod in $php_modules_install; do
+		enable_local_php_extension "${php_v}" "$mod"
+	done
+	for mod in $php_modules_disable; do
+		disable_local_php_extension "${php_v}" "$mod"
+	done
+	if [ "$mod_php" == "enable" ]; then
+		enable_mod_php "${php_v}"
+	fi
+else
+	alternatives --install /usr/bin/php php /opt/remi/php${php_v}/root/usr/bin/php 1
+fi
 
 # Install Hestia packages from local folder
 if [ -n "$withrpms" ] && [ -d "$withrpms" ]; then
@@ -1065,6 +1150,12 @@ chmod 660 $HESTIA/conf/hestia.conf
 # Write default port value to hestia.conf
 # If a custom port is specified it will be set at the end of the installation process.
 write_config_value "BACKEND_PORT" "8083"
+
+if [ "$uselocalphp" == "yes" ]; then
+	write_config_value "LOCAL_PHP" "yes"
+else
+	write_config_value "LOCAL_PHP" "no"
+fi
 
 # Web stack
 if [ "$apache" = 'yes' ]; then
@@ -1332,15 +1423,22 @@ if [ "$apache" = 'yes' ]; then
 
 	# Enable needed modules
 	if [ "$nginx" = "no" ]; then
-		dnf install -y mod_ssl mod_h2
+		dnf install -y mod_ssl mod_http2
 	fi
 
 	# IDK why those modules still here, but ok. if they are disabled by default
-	sed 's/^LoadModule suexec_module/#LoadModule suexec_module/' -i /etc/httpd/conf.modules.d/01-suexec.conf
-	sed 's/^LoadModule fcgid_module/#LoadModule fcgid_module/' -i /etc/httpd/conf.modules.d/10-fcgid.conf
+
+	if [ -e /etc/httpd/conf.modules.d/01-suexec.conf ]; then
+		sed 's/^LoadModule suexec_module/#LoadModule suexec_module/' -i /etc/httpd/conf.modules.d/01-suexec.conf
+	fi
+	if [ -e /etc/httpd/conf.modules.d/10-fcgid.conf ]; then
+		sed 's/^LoadModule fcgid_module/#LoadModule fcgid_module/' -i /etc/httpd/conf.modules.d/10-fcgid.conf
+	fi
 
 	# Switch status loader to custom one
-	sed 's/^LoadModule status_module/#LoadModule status_module/' -i /etc/httpd/conf.modules.d/00-base.conf
+	if [ -e /etc/httpd/conf.modules.d/00-base.conf ]; then
+		sed 's/^LoadModule status_module/#LoadModule status_module/' -i /etc/httpd/conf.modules.d/00-base.conf
+	fi
 	echo 'LoadModule status_module modules/mod_status.so' > /etc/httpd/conf.modules.d/00-hestia-status.conf
 
 	if [ "$phpfpm" = 'yes' ]; then
@@ -1386,12 +1484,21 @@ if [ "$phpfpm" = "yes" ]; then
 
 	echo "[ * ] Configuring PHP $php_v..."
 	# Create www.conf for webmail and php(*)admin
-	cp -f $HESTIA_INSTALL_DIR/php-fpm/www.conf /etc/opt/remi/php${php_v}/php-fpm.d
-	systemctl enable php${php_v}-php-fpm --now >> $LOG
-	check_result $? "php-fpm start failed"
-	# Set default php version to $php_v
-	alternatives --install /usr/bin/php php /usr/bin/php$php_v 1 > /dev/null 2>&1
-	alternatives --set php /usr/bin/php$php_v > /dev/null 2>&1
+	if [ "$uselocalphp" == "yes" ]; then
+		cp -f $HESTIA_INSTALL_DIR/php-fpm/www.conf /opt/brepo/php${php_v}/etc/php-fpm.d
+		systemctl enable brepo-php-fpm${php_v}.service --now >> $LOG
+		check_result $? "php-fpm start failed"
+		# Set default php version to $php_v
+		alternatives --install /usr/bin/php php /opt/brepo/php${php_v}/bin/php 1 > /dev/null 2>&1
+		alternatives --set php /opt/brepo/php${php_v}/bin/php > /dev/null 2>&1 
+	else
+		cp -f $HESTIA_INSTALL_DIR/php-fpm/www.conf /etc/opt/remi/php${php_v}/php-fpm.d
+		systemctl enable php${php_v}-php-fpm --now >> $LOG
+		check_result $? "php-fpm start failed"
+		# Set default php version to $php_v
+		alternatives --install /usr/bin/php php /usr/bin/php$php_v 1 > /dev/null 2>&1
+		alternatives --set php /usr/bin/php$php_v > /dev/null 2>&1
+	fi
 fi
 
 #----------------------------------------------------------#
@@ -1399,14 +1506,24 @@ fi
 #----------------------------------------------------------#
 
 echo "[ * ] Configuring PHP..."
+# Set system php for selector
+hestiacp-php-admin system "$php_v"
+
 ZONE=$(timedatectl > /dev/null 2>&1 | grep Timezone | awk '{print $2}')
 if [ -z "$ZONE" ]; then
 	ZONE='UTC'
 fi
-for pconf in $(find /etc/opt/remi/php* -name php.ini); do
-	sed -i "s%;date.timezone =%date.timezone = $ZONE%g" $pconf
-	sed -i 's%_open_tag = Off%_open_tag = On%g' $pconf
-done
+if [ "$uselocalphp" == "yes" ]; then
+	for pconf in $(find /opt/brepo/php* -name php.ini); do
+		sed -i "s%;date.timezone =%date.timezone = $ZONE%g" $pconf
+		sed -i 's%_open_tag = Off%_open_tag = On%g' $pconf
+	done
+else
+	for pconf in $(find /etc/opt/remi/php* -name php.ini); do
+		sed -i "s%;date.timezone =%date.timezone = $ZONE%g" $pconf
+		sed -i 's%_open_tag = Off%_open_tag = On%g' $pconf
+	done
+fi
 
 # Cleanup php session files not changed in the last 7 days (60*24*7 minutes)
 echo '#!/bin/sh' > /etc/cron.daily/php-session-cleanup
@@ -2026,7 +2143,7 @@ write_config_value "POLICY_SYSTEM_PROTECTED_ADMIN" "no"
 write_config_value "POLICY_SYSTEM_PASSWORD_RESET" "yes"
 write_config_value "POLICY_SYSTEM_HIDE_SERVICES" "no"
 write_config_value "POLICY_SYSTEM_ENABLE_BACON" "no"
-write_config_value "PLUGIN_APP_INSTALLER" "false"
+write_config_value "PLUGIN_APP_INSTALLER" "true"
 write_config_value "DEBUG_MODE" "no"
 write_config_value "ENFORCE_SUBDOMAIN_OWNERSHIP" "yes"
 write_config_value "USE_SERVER_SMTP" "false"
@@ -2078,7 +2195,7 @@ we hope that you enjoy using it as much as we do!
 
 Documentation:  https://hestiadocs.brepo.ru/
 Forum:          https://forum.hestiacp.com/
-GitHub:         https://github.com/bayrepo/hestiacp or development storage https://dev.brepo.ru/bayrepo/hestiacp
+GitHub:         https://github.com/bayrepo/hestiacp-rpm or development storage https://dev.brepo.ru/bayrepo/hestiacp
 
 Note: Automatic updates are enabled by default. If you would like to disable them,
 please log in and navigate to Server > Updates to turn them off.

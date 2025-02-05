@@ -9,7 +9,7 @@ class DokuWikiSetup extends BaseSetup {
 	protected $appInfo = [
 		"name" => "DokuWiki",
 		"group" => "wiki",
-		"enabled" => true,
+		"enabled" => false,
 		"version" => "2023-04-04a",
 		"thumbnail" => "dokuwiki-logo.svg",
 	];
@@ -57,7 +57,7 @@ class DokuWikiSetup extends BaseSetup {
 				"template" => "default",
 			],
 			"php" => [
-				"supported" => ["7.3", "7.4", "8.0", "8.1"],
+				"supported" => ["73", "74", "80", "81"],
 			],
 		],
 	];

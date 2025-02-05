@@ -9,7 +9,7 @@ class MediaWikiSetup extends BaseSetup {
 	protected $appInfo = [
 		"name" => "MediaWiki",
 		"group" => "cms",
-		"enabled" => true,
+		"enabled" => false,
 		"version" => "1.40.0",
 		"thumbnail" => "MediaWiki-2020-logo.svg", //Max size is 300px by 300px
 	];
@@ -34,7 +34,7 @@ class MediaWikiSetup extends BaseSetup {
 				"template" => "default",
 			],
 			"php" => [
-				"supported" => ["7.4", "8.0"],
+				"supported" => ["74", "80"],
 			],
 		],
 	];

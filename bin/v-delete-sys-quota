@@ -30,31 +30,53 @@ check_hestia_demo_mode
 #----------------------------------------------------------#
 
 # Deleting group and user quota on /home partition
+file_system=$(df -T /home | tail -n1 | awk '{print $2}')
 mnt=$(df -P /home | awk '{print $6}' | tail -n1)
 lnr=$(cat -n /etc/fstab | awk '{print $1,$3}' | grep "$mnt$" | cut -f 1 -d ' ')
 opt=$(sed -n ${lnr}p /etc/fstab | awk '{print $4}')
-fnd='usrquota\|grpquota\|usrjquota=\|grpjquota=\|jqfmt='
-if [ -n "$(echo $opt | grep $fnd)" ]; then
-	rep=$(echo $(echo $opt | tr ',' '\n' | grep -v $fnd) | tr ' ' ',')
-	sed -i "$lnr s/$opt/$rep/" /etc/fstab
-	mount -o remount "$mnt"
-fi
-
-# Disabling group and user quota
-quotaoff=$(which --skip-alias --skip-functions quotaoff 2> /dev/null)
-if [ $? -eq 0 ]; then
-	if [ -n "$(quotaon -pa | grep " $mnt " | grep 'user\|group' | grep 'is on')" ]; then
-		$quotaoff $mnt
+if [ "$file_system" == "xfs" ]; then
+	fnd='usrquota\|grpquota'
+	if [ -n "$(echo $opt | grep $fnd)" ]; then
+		rep=$(echo $(echo $opt | tr ',' '\n' | grep -v $fnd) | tr ' ' ',')
+		sed -i "$lnr s/$opt/$rep/" /etc/fstab
+		mount -o remount "$mnt"
 	fi
+	if [ "$mnt" == "/" ]; then
+		check_args=$(grubby --info=`grubby --default-kernel` | grep -oP "rootflags=[^\"]*" | head -n1)
+		if [ "$check_args" != "rootflags=uquota,pquota" ]; then
+			RED='\033[0;31m'
+			NC='\033[0m'
+			YELLOW='\033[1;33m'
+			printf "${RED}!!!!!!!Delete uquota,pquota from grub!!!!!!!${NC}\n"
+			echo "${YELLOW}Delete manualy 'uquota,pquota' and reboot the system${NC}\n"
+		else
+			grubby --remove-args="rootflags=uquota,pquota" --update-kernel=ALL
+		fi
+	fi
+else
+	fnd='usrquota\|grpquota\|usrjquota=\|grpjquota=\|jqfmt='
+	if [ -n "$(echo $opt | grep $fnd)" ]; then
+		rep=$(echo $(echo $opt | tr ',' '\n' | grep -v $fnd) | tr ' ' ',')
+		sed -i "$lnr s/$opt/$rep/" /etc/fstab
+		mount -o remount "$mnt"
+	fi
+
+	# Disabling group and user quota
+	quotaoff=$(which --skip-alias --skip-functions quotaoff 2> /dev/null)
+	if [ $? -eq 0 ]; then
+		if [ -n "$(quotaon -pa | grep " $mnt " | grep 'user\|group' | grep 'is on')" ]; then
+			$quotaoff $mnt
+		fi
+	fi
+
+	# Deleting v1 + v2 group and user quota index
+	for idx in $(echo 'quota.user quota.group aquota.user aquota.group'); do
+		[ -e "$mnt/$idx" ] && rm -f "$mnt/$idx"
+	done
+
+	# Deleting cron job
+	rm -f /etc/cron.daily/quotacheck
 fi
-
-# Deleting v1 + v2 group and user quota index
-for idx in $(echo 'quota.user quota.group aquota.user aquota.group'); do
-	[ -e "$mnt/$idx" ] && rm -f "$mnt/$idx"
-done
-
-# Deleting cron job
-rm -f /etc/cron.daily/quotacheck
 
 # Updating hestia.conf value
 if [ -z "$(grep DISK_QUOTA $HESTIA/conf/hestia.conf)" ]; then

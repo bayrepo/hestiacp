@@ -101,34 +101,33 @@ is_web_alias_new() {
 prepare_web_backend() {
 	# Accept first function argument as backend template otherwise fallback to $template global variable
 	local backend_template=${1:-$template}
-
-	if [ -f "/etc/redhat-release" ]; then
-		pool=$(find -L /etc/opt/remi/php80/ -name "$domain.conf" -exec dirname {} \; 2>/dev/null)
+	php_type=$(cat "$HESTIA/conf/hestia.conf" | grep "LOCAL_PHP" | grep "yes")
+	
+	if [ -n "$php_type" ]; then
+		pool=$(find -L /opt/brepo/ -name "$domain.conf" -exec dirname {} \; 2>/dev/null)
 	else
-		pool=$(find -L /etc/php/ -name "$domain.conf" -exec dirname {} \;)
+		pool=$(find -L /etc/opt/remi/php80/ -name "$domain.conf" -exec dirname {} \; 2>/dev/null)
 	fi
 	# Check if multiple-PHP installed
-	if [ -f "/etc/redhat-release" ]; then
-		regex="^.*PHP-([0-9])([0-9])$"
-	else
-		regex="^.*PHP-([0-9])\_([0-9])$"
-	fi
+	regex="^.*PHP-([0-9])([0-9])$"
+
 	if [[ $backend_template =~ $regex ]]; then
-		if [ -f "/etc/redhat-release" ]; then
+		if [ -n "$php_type" ]; then
+			backend_version="${BASH_REMATCH[1]}${BASH_REMATCH[2]}"
+			pool=$(find -L /opt/brepo/php$backend_version -type d \( -name "pool.d" -o -name "*fpm.d" \))
+		else
 			backend_version="${BASH_REMATCH[1]}${BASH_REMATCH[2]}"
 			pool=$(find -L /etc/opt/remi/php$backend_version -type d \( -name "pool.d" -o -name "*fpm.d" \))
-		else
-			backend_version="${BASH_REMATCH[1]}.${BASH_REMATCH[2]}"
-			pool=$(find -L /etc/php/$backend_version -type d \( -name "pool.d" -o -name "*fpm.d" \))
 		fi
 	else
 		backend_version=$(multiphp_default_version)
 		if [ -z "$pool" ] || [ -z "$BACKEND" ]; then
-			if [ -f "/etc/redhat-release" ]; then
+			if [ -n "$php_type" ]; then
+				m_backend_version="${backend_version//./}"
+				pool=$(find -L /opt/brepo/php$m_backend_version -type d \( -name "pool.d" -o -name "*fpm.d" \))
+			else
 				m_backend_version="${backend_version//./}"
 				pool=$(find -L /etc/opt/remi/php$m_backend_version -type d \( -name "pool.d" -o -name "*fpm.d" \))
-			else
-				pool=$(find -L /etc/php/$backend_version -type d \( -name "pool.d" -o -name "*fpm.d" \))
 			fi
 		fi
 	fi
@@ -151,11 +150,12 @@ prepare_web_backend() {
 
 # Delete web backend
 delete_web_backend() {
-if [ -f "/etc/redhat-release" ]; then
-	find -L /etc/opt/remi/ -name "$backend_type.conf" -exec rm -f {} \;
-else
-	find -L /etc/php/ -type f -name "$backend_type.conf" -exec rm -f {} \;
-fi
+	php_type=$(cat "$HESTIA/conf/hestia.conf" | grep "LOCAL_PHP" | grep "yes")
+	if [ -n "$php_type" ]; then
+		find -L /opt/brepo/php* -name "$backend_type.conf" -exec rm -f {} \;
+	else
+		find -L /etc/opt/remi/ -name "$backend_type.conf" -exec rm -f {} \;
+	fi
 }
 
 # Prepare web aliases

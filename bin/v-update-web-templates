@@ -50,11 +50,22 @@ for webtpl_folder in $(ls $HESTIA_INSTALL_DIR/templates/web/* -d 2> /dev/null | 
 	cp -rf "${webtpl_folder}" "${WEBTPL}/"
 done
 
-versions_list=$(ls -d /etc/opt/remi/php*)
-for php_ver in $versions_list; do
-	[ ! -d "$php_ver/fpm/pool.d/" ] && continue
-	cp -f $HESTIA_INSTALL_DIR/php-fpm/multiphp.tpl ${WEBTPL}/php-fpm/PHP-${php_ver/\./_}.tpl
-done
+versions_list=""
+if [ "$LOCAL_PHP" == "yes" ]; then
+	versions_list=$(ls -d /opt/brepo/php*)
+	for php_ver in $versions_list; do
+		[ ! -d "$php_ver/etc/php-fpm.d" ] && continue
+		vers=$(echo "$php_ver" | awk -F"/" '{ print $4 }' | sed  "s/php\([[:digit:]]\+\)/\1/g")
+		cp -f $HESTIA_INSTALL_DIR/php-fpm/multiphp.tpl ${WEBTPL}/php-fpm/PHP-${vers/\./_}.tpl
+	done
+else
+	versions_list=$(ls -d /etc/opt/remi/php*)
+	for php_ver in $versions_list; do
+		[ ! -d "$php_ver/php-fpm.d" ] && continue
+		vers=$(echo "$php_ver" | awk -F"/" '{ print $5 }' | sed  "s/php\([[:digit:]]\+\)/\1/g")
+		cp -f $HESTIA_INSTALL_DIR/php-fpm/multiphp.tpl ${WEBTPL}/php-fpm/PHP-${vers/\./_}.tpl
+	done
+fi
 
 if [ -n "$awstats_patch" ]; then
 	# restore LoadPlugin variable

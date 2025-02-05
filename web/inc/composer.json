@@ -1,7 +1,13 @@
 {
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://dev.brepo.ru/brepo/phpquoteshellarg.git"
+        }
+    ],
     "require": {
         "phpmailer/phpmailer": "6.8.0",
-        "hestiacp/phpquoteshellarg": "1.0.2",
+        "brepo/phpquoteshellarg": "dev-master",
         "robthree/twofactorauth": "2.0.0"
     }
 }

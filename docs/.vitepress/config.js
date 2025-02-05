@@ -24,7 +24,7 @@ export default defineConfig({
 
 		socialLinks: [
 			{ icon: 'github', link: 'https://dev.brepo.ru/bayrepo/hestiacp' },
-			{ icon: 'github', link: 'https://github.com/bayrepo/hestiacp' },
+			{ icon: 'github', link: 'https://github.com/bayrepo/hestiacp-rpm' },
 			{ icon: 'github', link: 'https://github.com/hestiacp/hestiacp' },
 		],
 
@@ -151,6 +151,7 @@ function sidebarDocs() {
 			items: [
 				{ text: 'PHP cli селектор', link: '/docs/extensions/php-cli-selector.md' },
 				{ text: 'Расширенные модули', link: '/docs/extensions/extended-modules.md' },
+				{ text: 'Настройка Local PHP', link: '/docs/extensions/local-php.md' },
 			],
 		},
 	];
